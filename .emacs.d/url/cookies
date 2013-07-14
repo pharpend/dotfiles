@@ -1,0 +1,22 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".questionablecontent.net"
+  [url-cookie "__cfduid" "d0c1f941cb41496f36b0c410a9985bd761369704318" "23-Dec-2019 23:50:00.00 GMT" "/" ".questionablecontent.net" nil])
+ (".forgifs.com"
+  [url-cookie "__cfduid" "d5c6b90373717f25792397288630a10c91369718171" "23-Dec-2019 23:50:00.00 GMT" "/" ".forgifs.com" nil])
+ ("marmalade-repo.org"
+  [url-cookie "connect.sid" "y93DVBSyCBg22ENWKglYSnYB.rrseznjTsAPSVQXrvfH2%2FkIqVuX6OvycIbN%2BdsVVoAc" "Thu, 27 Jun 2013 20:40:44 GMT" "/" "marmalade-repo.org" nil]
+  [url-cookie "httpOnly" nil "Thu, 27 Jun 2013 20:40:44 GMT" "/" "marmalade-repo.org" nil])
+ (".google.com"
+  [url-cookie "NID" "67=Tz7gv1VQcN9_Vl_CpP0nHtlvSVv_6NCrW-u7ZXVhYM1W5rn527p9QMT2MNWHv7Pif_8GffnCu9yp5FWK6ytUMf7n2eAX3UHRQP1N5yGiV-3x5yf2W3yKz-jZoztRhFoH" "01-Nov-2013 20:58:57.00 GMT" "/" ".google.com" nil]
+  [url-cookie "PREF" "ID=4e8f0be6fc9d5ebd:U=629bf8a39e7f02c9:FF=0:TM=1367528337:LM=1367528337:S=dIKcofe7mubc0Q1B" "02-May-2015 20:58:57.00 GMT" "/" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

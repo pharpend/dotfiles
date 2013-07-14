@@ -1,0 +1,19 @@
+!! Keycodes
+!! Left control = 37 = 0x25
+!! Caps lock = 66 = 0x42
+!! Left alt = 64 = 0x40
+
+! Unbind everything
+remove Lock = Caps_Lock
+remove Control = Control_L
+remove Mod1 = Alt_L       
+
+! Shuffle up the keys
+keycode 0x42 = Control_L  
+keycode 0x25 = Control_L      
+keycode 0x40 = Alt_L      
+
+! Rebind everything
+!add Lock = Caps_Lock      
+add Control = Control_L   
+add Mod1 = Alt_L          

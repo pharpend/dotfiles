@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+package=dictionary
+DESTDIR=debian/$(package)
+
+build:
+	dh_testdir
+
+	touch build
+
+clean:
+	dh_testdir
+	dh_clean
+	rm -f build
+
+binary-arch: build
+	dh_testdir
+	dh_testroot
+
+	dh_install
+
+	install -m 755 -D debian/install.debian \
+                $(DESTDIR)/usr/lib/emacsen-common/packages/install/dictionary
+	install -m 755 -D debian/remove.debian \
+                $(DESTDIR)/usr/lib/emacsen-common/packages/remove/dictionary
+
+	dh_installdocs README
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-arch
+
+.PHONY: binary binary-arch clean
