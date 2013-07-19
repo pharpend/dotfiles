@@ -82,7 +82,7 @@ get_git_dirty() {
 # variables
 setopt prompt_subst
 CONFIG="~/.config"
-EDITOR="zile"
+EDITOR="nano"
 PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}$%f%b '
 REPORTTIME=3
 # RPROMPT='%B[%b%F{magenta}%*%f%B]%b'
