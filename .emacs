@@ -511,16 +511,16 @@ With a prefix argument, insert a newline above the current line."
 
 (add-hook 'ruby-mode-hook
       (lambda ()
-		(setq line-spacing 1)
-        (setq tab-width 2)
-        (setq python-indent-offset 2)
-        (setq ruby-indent-level 2)
-        (setq evil-shift-width 2)
-        (setq fill-column 80)
+		(setq-local line-spacing 1)
+        (setq-local tab-width 2)
+        (setq-local python-indent-offset 2)
+        (setq-local ruby-indent-level 2)
+        (setq-local evil-shift-width 2)
+        (setq-local fill-column 80)
         (auto-fill-mode 1)
 		(autopair-mode 1)
 		(auto-complete-mode 1)
-        (setq tab-stop-list (number-sequence 2 200 2))
+        (setq-local tab-stop-list (number-sequence 2 200 2))
         (define-key (current-local-map) (kbd "C-m") 'newline-and-indent)))
 
               
@@ -751,6 +751,6 @@ With a prefix argument, insert a newline above the current line."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Inconsolata" :foundry "unknown" :slant normal :weight normal :height 123 :width normal)))))
+ '(default ((t (:family "Monospace" :foundry "unknown" :slant normal :weight normal :height 103 :width normal)))))
 (linum-relative-toggle)
 (linum-relative-toggle)
