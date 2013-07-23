@@ -18,7 +18,7 @@
 
 (load-file "~/.emacs.d/dictionary-el/dictionary-init.el")
 (load-file "~/.emacs.d/color-theme-github/color-theme-github.el")
-(load-file "~/.emacs.d/yari.el/yari.el")
+;;(load-file "~/.emacs.d/yari.el/yari.el")
 
 ;; Imports
 (require 'auto-complete)
@@ -26,15 +26,15 @@
 (require 'color-theme)
 (require 'elpy)
 (require 'evil)
-(require 'haskell-mode)
+;;(require 'haskell-mode)
 (require 'jabber-autoloads)
 (require 'jedi)
 (require 'linum)
 (require 'linum-relative)
-(require 'magit)
+;;(require 'magit)
 (require 'markdown-mode)
 (require 'multiple-cursors)
-(require 'pymacs)
+;(require 'pymacs)
 (require 'rect-mark)
 (require 'smartparens)
 (require 'smtpmail)
@@ -108,7 +108,7 @@
   (interactive)
   (when (eq window-system 'x)
     (set-frame-parameter
-     nil 'fullnnscreen
+     nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
 ;;
@@ -434,7 +434,7 @@ With a prefix argument, insert a newline above the current line."
 (column-number-mode t)
 (display-time)
 (elpy-enable)
-(fullscreen)
+;(fullscreen)
 (global-linum-mode 1)
 (menu-bar-mode -1)						;kill the menu bar, scroll bar, and tool bar
 (scroll-bar-mode -1)
@@ -751,6 +751,6 @@ With a prefix argument, insert a newline above the current line."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monospace" :foundry "unknown" :slant normal :weight normal :height 103 :width normal)))))
+ '(default ((t (:family "Droid Sans Mono" :foundry "unknown" :slant normal :weight normal :height 103 :width normal)))))
 (linum-relative-toggle)
 (linum-relative-toggle)
