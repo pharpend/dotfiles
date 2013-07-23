@@ -43,6 +43,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-eclipse/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-railscasts/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized/")
+(load-file "~/.emacs.d/color-theme-railscasts/color-theme-railscasts.el")
 
 
 ;; 5 Lines Down - Go five lines downwards
