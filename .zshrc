@@ -21,7 +21,7 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
-alias pacman='sudo pacman'
+alias pacman='sudo pacman -y'
 alias winmods='xmodmap ~/.Xmodmap'
 alias dud='du --max-depth=1 -B 1024M'
 alias cpuinfo='cat /proc/cpuinfo | grep MHz'
@@ -33,6 +33,8 @@ alias c='cd'
 alias irb='irb --simple-prompt'
 alias pb='pastebinit'
 alias sysd='sudo systemctl'
+alias anx='git annex'
+alias yaourt='yaourt -y'
 
 # cdl - cd and ls
 cdl () {
@@ -69,7 +71,7 @@ colemods() {
 }
 
 # Syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # get the name of the branch we are on
 git_prompt_info() { 
