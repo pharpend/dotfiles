@@ -1,0 +1,55 @@
+# Tipo de letra por defecto.
+use_xft yes
+xftfont Droid Sans:size=9
+override_utf8_locale yes
+
+# Configuración de rendimiento.
+update_interval 1
+total_run_times 0
+double_buffer yes
+no_buffers yes
+net_avg_samples 2
+text_buffer_size 1024
+
+# Ejecutarlo en su propia ventana en lugar de usar el escritorio.
+own_window yes
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Borde.
+draw_borders no
+border_margin 1
+
+# Color por defecto del fondo de la ventana
+own_window_colour 393834
+
+# Color por defecto.
+#default_color B7B2AD
+default_color FFFFFF
+
+# Dibuja marco.
+draw_shades no
+
+# Colores de trabajo.
+#color0 DD3A21
+color0 A9B7C4
+# Dimensiones mínimas.
+minimum_size 1440 0
+
+# Posición de Conky.
+alignment bottom_left
+gap_x 0
+gap_y 4
+
+# Texto
+TEXT
+${image ~/.conkytheme/pix/framearchb.png -p 0,0 -s 1280x180}
+${voffset 24}${font Droid Sans:style=Bold:size=12}${color0}${goto 256}Discos:${goto 512}Red:${goto 768}Temperaturas:${goto 1024}Fecha:${font}${color}
+${voffset 8}${goto 256}Sistema (/):${goto 380}${fs_used /} / ${fs_size /}${goto 512}Envío: ${goto 612}${upspeedgraph eth0 10,100 B7B2AD B7B2AD}${font Droid Sans:style=Bold:size=9}  ${upspeed eth0}${font}${goto 768}CPU: ${goto 868}${execi 4 sensors | grep -A 0 'temp2' | cut -c15-18} ºC${goto 1024}${time %H:%M}  ${time %d/%m/%Y}
+${goto 16}Kernel: ${goto 100}${kernel}${goto 380}${fs_bar 10,100 /}${goto 512}Recibo: ${goto 612}${downspeedgraph eth0 10,100 B7B2AD B7B2AD}${font Droid Sans:style=Bold:size=9}  ${downspeed eth0}${font}${goto 768}Disco duro: ${goto 868}${execi 4 sensors | grep -A 0 'temp1' | cut -c15-18} ºC${goto 1024}${time %A}, ${time %d} de ${time %B} del ${time %Y}
+${goto 16}CPU: ${goto 100}${cpubar cpu1 10,100}${font Droid Sans:style=Bold:size=9}  ${cpu cpu1}%${font}${goto 256}Usuario (/Home):${goto 380}${fs_free /home} / ${fs_size /home}${goto 512}Enviado: ${goto 612}${totalup eth0}
+${goto 16}RAM: ${goto 100}${membar 10,100}${font Droid Sans:style=Bold:size=9}  $memperc%${font}${goto 380}${fs_bar 10,100 /home}${goto 512}Recibido: ${goto 612}${totaldown eth0}
+${goto 16}SWAP:${goto 100}${swapbar 10,100}${font Droid Sans:style=Bold:size=9}  $swapperc%${font}${goto 512}Ip Local: ${goto 612}${addr eth0}
+${goto 15}Actividad: ${goto 100}${uptime}${goto 512}Ip Pública: ${goto 612}${execi 10800 ~/.scripts/ip.sh}
+

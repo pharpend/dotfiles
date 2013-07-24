@@ -1,0 +1,60 @@
+# — SETTINGS — #
+background yes
+update_interval 1
+cpu_avg_samples 2
+net_avg_samples 2
+double_buffer yes
+no_buffers yes
+text_buffer_size 1024
+
+# — WINDOW — #
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+
+# — BORDER — #
+#border_inner_margin 1
+#border_outer_margin 1
+
+# — SIZE — #
+minimum_size 150 60
+maximum_width 150
+
+# — ALIGNMENT — #
+alignment top_right
+gap_x 5
+gap_y 610
+
+# — GRAPHIC — #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# — TEXT — #
+use_xft yes
+xftfont Laconic:size=10
+xftalpha 0.8
+uppercase no
+override_utf8_locale yes
+default_color 777
+
+# — LUA — #
+#lua_load 
+#lua_draw_hook_pre 
+
+# — Colors — #
+color1 ffb321
+
+own_window_argb_visual yes
+own_window_colour 000000
+own_window_argb_value 0
+TEXT
+#${font Ubuntu:style=Bold:size=8}RED $stippled_hr${font}
+${if_up eth0}
+${font Orore:size=20}I${font}${goto 35}${voffset -5}$color eth0 » $color1${addr eth0}$color
+${voffset 5}${font Orore:size=20}J${font}${goto 40}${voffset -12}${downspeed eth0}
+${goto 40}${voffset -1}${font Laconic:size=10:condensed:bold}${color1}${totaldown eth0}$font${goto 92}${voffset -9}${downspeedgraph eth0 15,30}$color
+${font Orore:size=20}K${font}${goto 40}${voffset -12}${upspeed eth0}${alignr 5}
+${goto 40}${voffset -1}${font Laconic:size=10:condensed:bold}${color1}${totalup eth0}$font${goto 92}${voffset -9}${upspeedgraph eth0 15,30}$color${endif}

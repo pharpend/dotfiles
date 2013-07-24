@@ -1,0 +1,10 @@
+Nota:
+
+* Para que todo funcione correctamente deberás de copiar los archivos .conkytheme, .conkyrc y .init-conky a tu carpeta de usuario (/home/NOMBREDEUSUARIO), los archivos anteriormente mencionados están ocultos.
+
+* Para cambiar de fondo edita el archivo .conkyrc y modifica/cambia el nombre que aparece en la línea: ${image ~/.conkytheme/pix/framearchb.png -p 0,0 -s 1280x180} por el del nuevo fondo.
+
+
+
+
+
