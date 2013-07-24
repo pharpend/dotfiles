@@ -35,6 +35,7 @@ alias pb='pastebinit'
 alias sysd='sudo systemctl'
 alias anx='git annex'
 alias yaourt='yaourt -y'
+alias conkystart='source ~/.conky/conkyrings/startconky.sh'
 
 # cdl - cd and ls
 cdl () {
