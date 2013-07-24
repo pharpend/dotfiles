@@ -17,7 +17,7 @@
 (package-initialize)
 
 (load-file "~/.emacs.d/dictionary-el/dictionary-init.el")
-(load-file "~/.emacs.d/color-theme-github/color-theme-github.el")
+;;(load-file "~/.emacs.d/color-theme-github/color-theme-github.el")
 ;;(load-file "~/.emacs.d/yari.el/yari.el")
 
 ;; Imports
@@ -43,7 +43,6 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-eclipse/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-railscasts/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized/")
-(load-file "~/.emacs.d/color-theme-railscasts/color-theme-railscasts.el")
 
 
 ;; 5 Lines Down - Go five lines downwards
@@ -755,3 +754,4 @@ With a prefix argument, insert a newline above the current line."
  '(default ((t (:family "Droid Sans Mono" :foundry "unknown" :slant normal :weight normal :height 103 :width normal)))))
 (linum-relative-toggle)
 (linum-relative-toggle)
+(load-file "~/.emacs.d/color-theme-railscasts/color-theme-railscasts.el")
