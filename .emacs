@@ -28,7 +28,7 @@
 (require 'evil)
 ;;(require 'haskell-mode)
 (require 'jabber-autoloads)
-(require 'jedi)
+;;(require 'jedi)
 (require 'linum)
 (require 'linum-relative)
 (require 'magit)
@@ -506,8 +506,10 @@ With a prefix argument, insert a newline above the current line."
         (setq fill-column 80)
         (setq python-indent-offset 4)
         (auto-fill-mode 1)
-        (define-key (current-local-map) (kbd "<backtab>") 'python-indent-shift-left)
-        (define-key (current-local-map) (kbd "<tab>") 'python-indent-shift-right)))
+		(define-key elpy-mode-map (kbd "M-n") 'vi-open-line-below)
+		(define-key elpy-mode-map (kbd "M-e") 'vi-open-line-above)
+        (define-key python-mode-map (kbd "<backtab>") 'python-indent-shift-left)
+        (define-key python-mode-map (kbd "<tab>") 'python-indent-shift-right)))
 
 (add-hook 'ruby-mode-hook
       (lambda ()
@@ -549,11 +551,7 @@ With a prefix argument, insert a newline above the current line."
 		(setq python-indent-offset 4)
 		(setq comment-start "#"
 			  comment- "")
-		(autopair-mode 1)
-		(jedi:setup)
-		(define-key elpy-mode-map (kbd "C-c d") 'elpy-lookup)
-		(define-key elpy-mode-map (kbd "M-n") 'vi-open-line-below)
-		(define-key elpy-mode-map (kbd "M-e") 'vi-open-line-above)))
+		(define-key elpy-mode-map (kbd "C-c d") 'elpy-lookup)))
 
 (add-hook 'html-mode-hook
 	  (lambda()
@@ -576,6 +574,16 @@ With a prefix argument, insert a newline above the current line."
 		(yas/minor-mode)
 		(auto-fill-mode)
 		(setq python-indent-offset 4)))
+
+(add-hook 'nxml-mode-hook
+	  (lambda()
+		(autopair-mode 1)
+		(auto-complete-mode 1)
+		(yas/minor-mode)
+		(auto-fill-mode)
+		(setq-local fill-column 80)
+		(indent-tabs-mode -1)
+		(define-key nxml-mode-map (kbd "M-h") 'backward-char)))
 
 ;; My custom keybindings
 (load-library "python")

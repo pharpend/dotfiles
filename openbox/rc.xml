@@ -35,14 +35,14 @@
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
     <primaryMonitor>1</primaryMonitor>
-    <!-- The monitor where Openbox should place popup dialogs such as the
-       focus cycling popup, or the desktop switch popup.  It can be an index
+    <!-- The monitor where Openbox should plac
+		                focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
        following: 'Mouse' - where the mouse is, or
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Nova-Blue</name>
+    <name>Shiki-Nouveau-Winedust</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -179,92 +179,111 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="C-A-Left">
+    <keybind key="W-Left">
       <action name="GoToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Right">
+    <keybind key="W-Right">
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
+    <keybind key="W-Up">
       <action name="GoToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Down">
+    <keybind key="W-Down">
       <action name="GoToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="W-S-Left">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="W-S-Right">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="W-S-Up">
       <action name="SendToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="W-S-Down">
       <action name="SendToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-F1">
+	<keybind key="C-S-A-h">
+	  <action name="MoveResizeTo">
+		<x>0</x>
+		<y>0</y>
+		<width>800</width>
+		<height>848</height>
+	  </action>
+	</keybind>
+	<keybind key="C-S-A-i">
+	  <action name="MoveResizeTo">
+		<x>800</x>
+		<y>0</y>
+		<width>800</width>
+		<height>848</height>
+	  </action>
+	</keybind>
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-F2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-F3">
+    <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
-    </keybind>
+    <!-- <keybind key="W-d"> -->
+    <!--   <action name="ToggleShowDesktop"/> -->
+    <!-- </keybind> -->
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
-    <keybind key="A-Escape">
+    <keybind key="A-F3">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="A-F2">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
-      <action name="ShowMenu">
-        <menu>client-menu</menu>
-      </action>
-    </keybind>
-    <!-- Keybindings for window switching -->
+    <!-- <keybind key="A-space"> -->
+    <!--   <action name="ShowMenu"> -->
+    <!--     <menu>client-menu</menu> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+	<!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
@@ -295,26 +314,75 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    <keybind key="C-W-Right">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="C-W-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="C-W-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="C-W-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
+	<!-- Keybindings for moving windows. -->
+	<keybind key="C-W-h">		<!--Move window 80px left-->
+	  <action name="MoveRelative">
+		<x>-80</x>
+		<y>0</y>
+	  </action>
+	</keybind>
+	<keybind key="C-W-i">		<!--Move window 80px right-->
+	  <action name="MoveRelative">
+		<x>80</x>
+		<y>0</y>
+	  </action>
+	</keybind>
+	<keybind key="C-W-n">		<!--Move window 45px down-->
+	  <action name="MoveRelative">
+		<x>0</x>
+		<y>45</y>
+	  </action>
+	</keybind>
+	<keybind key="C-W-e">		<!--Move window 45px up-->
+	  <action name="MoveRelative">
+		<x>0</x>
+		<y>-45</y>
+	  </action>
+	</keybind>
+	<keybind key="C-A-W-h">		<!--Move window 240px left-->
+	  <action name="MoveRelative">
+		<x>-240</x>
+		<y>0</y>
+	  </action>
+	</keybind>
+	<keybind key="C-A-W-i">		<!--Move window 240px right-->
+	  <action name="MoveRelative">
+		<x>240</x>
+		<y>0</y>
+	  </action>
+	</keybind>
+	<keybind key="C-A-W-n">		<!--Move window 135px down-->
+	  <action name="MoveRelative">
+		<x>0</x>
+		<y>135</y>
+	  </action>
+	</keybind>
+	<keybind key="C-A-W-e">		<!--Move window 135px up-->
+	  <action name="MoveRelative">
+		<x>0</x>
+		<y>-135</y>
+	  </action>
+	</keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-s">
       <action name="Execute">
@@ -325,6 +393,9 @@
         <command>synapse</command>
       </action>
     </keybind>
+	<keybind key="W-r">
+	  <action name="Reconfigure"/>
+	</keybind>
     <keybind key="W-t">
       <action name="Execute">
         <startupnotify>
@@ -332,6 +403,15 @@
           <name>lxterminal</name>
         </startupnotify>
         <command>lxterminal</command>
+      </action>
+    </keybind>
+    <keybind key="W-d">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>dired</name>
+        </startupnotify>
+        <command>lxterminal -e "emacs -nw -f dired"</command>
       </action>
     </keybind>
     <keybind key="W-f">
@@ -417,7 +497,7 @@
       </action>
     </keybind>
     <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="XF86WudioRaiseVolume">
       <action name="Execute">
         <command>amixer set Master 10%+</command>
       </action>

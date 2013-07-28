@@ -16,12 +16,14 @@
 		evil-forward-char
 		evil-insert
 		evil-normal-state
+		keyboard-escape-quit
 		markdown-dedent-or-delete
 		markdown-exdent-or-delete
 		python-indent-electric-colon
 		python-indent-shift-left
 		python-indent-shift-right
 		toggle-comment
+		toggle-fullscreen
 		vi-open-line-above
 		))
 

@@ -21,7 +21,6 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
-alias pacman='sudo pacman -y'
 alias winmods='xmodmap ~/.Xmodmap'
 alias dud='du --max-depth=1 -B 1024M'
 alias cpuinfo='cat /proc/cpuinfo | grep MHz'
@@ -34,8 +33,9 @@ alias irb='irb --simple-prompt'
 alias pb='pastebinit'
 alias sysd='sudo systemctl'
 alias anx='git annex'
-alias yaourt='yaourt -y'
 alias conkystart='source ~/.conky/conkyrings/startconky.sh'
+alias pd='pandoc'
+alias pm='sudo pacman'
 
 # cdl - cd and ls
 cdl () {
