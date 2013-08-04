@@ -20,10 +20,11 @@ compton ~/.config/compton.conf &
 # Thunar is run in daemon-mode to enable auto-mounting of removable media
 (sleep 1s && pnmixer) &
 (sleep 1s && xfce4-power-manager) &
-#(sleep 1s && xscreensaver -no-splash) &
 (sleep 1s && thunar --daemon) &
 (sleep 1s && numlockx) &
 (sleep 1s && synapse) &
+(sleep 1s && guake) &
+(sleep 1s && pidgin) &
 
 
 ## Optional: enable clipboard and/or disable touchpad
@@ -32,3 +33,6 @@ compton ~/.config/compton.conf &
 
 ## Caps Lock as Control
 xmodmap ~/.Xmodmap &
+
+## Disable touchpad while typing
+(sleep 1s && syndaemon -i 2 -d) &
