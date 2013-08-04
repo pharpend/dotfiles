@@ -36,6 +36,8 @@ alias anx='git annex'
 alias conkystart='source ~/.conky/conkyrings/startconky.sh'
 alias pd='pandoc'
 alias pm='sudo pacman'
+alias obreconf='killall -USR2 openbox'
+alias obrecstart='killall -USR1 openbox'
 
 # cdl - cd and ls
 cdl () {
