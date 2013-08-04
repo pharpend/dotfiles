@@ -383,6 +383,14 @@
 		<y>-135</y>
 	  </action>
 	</keybind>
+	<keybind key="F7">
+	  <action name="Move">
+	  </action>
+	</keybind>
+	<keybind key="F8">
+	  <action name="Resize">
+	  </action>
+	</keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-s">
       <action name="Execute">
