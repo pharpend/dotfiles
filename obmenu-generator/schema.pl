@@ -55,8 +55,10 @@ our $SCHEMA = [
 #             COMMAND                 	LABEL          		ICON
    {item => ['thunar',      		'Thunar FM','Thunar']},
    {item => ['lxterminal',   	 	'Terminal','lxterminal']},
-   {item => ['nitrogen',     		'Nitrogen','nitrogen']},
-   {item => ['gnome-screenshot --interactive', 'Screenshot','gnome-screenshot']},
+   {item => ['firefox',				'Firefox','firefox']},
+   {item => ['thunderbird',			'Thunderbird','thunderbird']},
+   {item => ['pidgin',				'Pidgin','pidgin']},
+   {item => ['pithos',				'Pithos','pithos']},
 
     {sep => undef},
 
