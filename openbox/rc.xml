@@ -481,9 +481,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>gnome-screenshot</name>
+          <name>deepin-screenshot</name>
         </startupnotify>
-        <command>gnome-screenshot</command>
+        <command>deepin-screenshot</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
