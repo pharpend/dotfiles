@@ -5,14 +5,15 @@
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.css.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '(".gitlog" . magit-log-edit-mode))
+(add-to-list 'auto-mode-alist '(".txtl" . textile-mode))
 
 ;; Load files
+(add-to-list 'load-path "~/.emacs.d/textile-mode/")
 (add-to-list 'load-path "~/.emacs.d/elpa/")
 (add-to-list 'load-path "~/.emacs.d/dictionary-el/")
 (add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0/")
 (add-to-list 'load-path "~/.emacs.d/haskell-mode/")
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(add-to-list 'load-path "~/.emacs.d/weblogger-el/")
 
 (package-initialize)
 
@@ -26,7 +27,7 @@
 (require 'color-theme)
 (require 'elpy)
 (require 'evil)
-;;(require 'haskell-mode)
+(require 'haskell-mode)
 (require 'jabber-autoloads)
 ;;(require 'jedi)
 (require 'linum)
@@ -126,6 +127,10 @@
              (string-equal (substring s 0 (length arg)) arg))
             (t nil)))
 
+;; Intelligent Deletion
+;; Wrote this one myself
+;; (defun delete-backward-dwim
+
 ;;
 ;; Go to a relative line
 ;; Wrote myself
@@ -150,7 +155,7 @@
   will move the cursor to the specified line."
   (interactive "sGo to line relative to point: ")
   (setq i 0)
-  
+
   (cond
    ((equal (string-match "+[0-9]+" n) 0)
     (dotimes (i (string-to-number (substring n 1)))
@@ -291,116 +296,7 @@ With a prefix argument, insert a newline above the current line."
   (interactive)
   (kill-emacs))
 
-;;; ; Vi Keybindings
-;; (define-key evil-normal-state-map (kbd "=") 'toggle-comment)
-;; (define-key evil-normal-state-map (kbd "+") 'comment-dwim)
-;; (define-key evil-normal-state-map (kbd "'") 'goto-line-relative)
-;; (define-key evil-normal-state-map (kbd "k") 'evil-delete)
-;; (define-key evil-normal-state-map (kbd "<tab>") 'next-buffer)
-;; (define-key evil-normal-state-map (kbd "<S-iso-lefttab>") 'previous-buffer)
-;; (define-key evil-normal-state-map (kbd "x") ctl-x-map)
-;; (define-key evil-normal-state-map (kbd "SPC") 'set-mark-command)
-;; (define-key evil-normal-state-map (kbd "v") 'scroll-up-command)
-;; (define-key evil-normal-state-map (kbd "V") 'scroll-down-command)
-;; (define-key evil-normal-state-map (kbd "u") 'evil-insert)
-;; (define-key evil-normal-state-map (kbd "U") 'evil-insert-line)
-;; (define-key evil-normal-state-map (kbd "l") 'recenter-top-bottom)
-;; (define-key evil-normal-state-map (kbd "?") 'evil-search-forward)
-;; (define-key evil-normal-state-map (kbd "C-?") 'evil-search-backward)
-;; (define-key evil-normal-state-map (kbd "M-n") 'evil-open-below)
-;; (define-key evil-normal-state-map (kbd "M-e") 'evil-open-above)
-;; (define-key evil-normal-state-map (kbd ";") 'execute-extended-command)
-;; (define-key evil-normal-state-map (kbd "f") 'evil-forward-word-end)
-;; (define-key evil-normal-state-map (kbd "F") 'evil-forward-WORD-end)
-;; (define-key evil-normal-state-map (kbd "l") 'undo-tree-undo)
-
-;; (define-key evil-visual-state-map (kbd "=") 'toggle-comment)
-;; (define-key evil-visual-state-map (kbd "+") 'comment-dwim)
-;; (define-key evil-visual-state-map (kbd "'") 'goto-line-relative)
-;; (define-key evil-visual-state-map (kbd "k") 'evil-delete)
-;; (define-key evil-visual-state-map (kbd "<tab>") 'next-buffer)
-;; (define-key evil-visual-state-map (kbd "<S-iso-lefttab>") 'previous-buffer)
-;; (define-key evil-visual-state-map (kbd "b") 'switch-to-buffer)
-;; (define-key evil-visual-state-map (kbd "x") ctl-x-map)
-;; (define-key evil-visual-state-map (kbd "SPC") 'set-mark-command)
-;; (define-key evil-visual-state-map (kbd "v") 'scroll-up-command)
-;; (define-key evil-visual-state-map (kbd "V") 'scroll-down-command)
-;; (define-key evil-visual-state-map (kbd "/") 'undo-tree-undo)
-;; (define-key evil-visual-state-map (kbd "u") 'evil-insert)
-;; (define-key evil-visual-state-map (kbd "U") 'evil-insert-line)
-;; (define-key evil-visual-state-map (kbd "p") 'evil-yank)
-;; (define-key evil-visual-state-map (kbd "?") 'evil-search-forward)
-;; (define-key evil-visual-state-map (kbd "C-?") 'evil-search-backward)
-
-;; (define-key evil-operator-state-map (kbd "=") 'toggle-comment)
-;; (define-key evil-operator-state-map (kbd "+") 'comment-dwim)
-;; (define-key evil-operator-state-map (kbd "'") 'goto-line-relative)
-;; (define-key evil-operator-state-map (kbd "k") 'evil-delete)
-;; (define-key evil-operator-state-map (kbd "<tab>") 'next-buffer)
-;; (define-key evil-operator-state-map (kbd "<S-iso-lefttab>") 'previous-buffer)
-;; (define-key evil-operator-state-map (kbd "x") ctl-x-map)
-;; (define-key evil-operator-state-map (kbd "SPC") 'set-mark-command)
-;; (define-key evil-operator-state-map (kbd "v") 'scroll-up-command)
-;; (define-key evil-operator-state-map (kbd "V") 'scroll-down-command)
-;; (define-key evil-operator-state-map (kbd "/") 'undo-tree-undo)
-;; (define-key evil-operator-state-map (kbd "u") 'evil-insert)
-;; (define-key evil-operator-state-map (kbd "U") 'evil-insert-line)
-;; (define-key evil-operator-state-map (kbd "y") 'yank)
-;; (define-key evil-operator-state-map (kbd "l") 'recenter-top-bottom)
-;; (define-key evil-operator-state-map (kbd "p") 'evil-yank)
-;; (define-key evil-operator-state-map (kbd "?") 'evil-search-forward)
-;; (define-key evil-operator-state-map (kbd "C-?") 'evil-search-backward)
-
-;; (define-key evil-normal-state-map (kbd "h") 'backward-char)
-;; (define-key evil-normal-state-map (kbd "i") 'forward-char)
-;; (define-key evil-normal-state-map (kbd "C-S-h") 'beginning-of-line)
-;; (define-key evil-normal-state-map (kbd "H-S-i") 'end-of-line)
-;; (define-key evil-normal-state-map (kbd "n") 'next-line)
-;; (define-key evil-normal-state-map (kbd "e") 'previous-line)
-;; (define-key evil-normal-state-map (kbd "C-n") 'next-line)
-;; (define-key evil-normal-state-map (kbd "C-e") 'previous-line)
-;; (define-key evil-normal-state-map (kbd "C-h") 'backward-word)
-;; (define-key evil-normal-state-map (kbd "H-i") 'forward-word)
-;; (define-key evil-normal-state-map (kbd "H") 'backward-word)
-;; (define-key evil-normal-state-map (kbd "I") 'forward-word)
-
-;; (define-key evil-visual-state-map (kbd "h") 'backward-char)
-;; (define-key evil-visual-state-map (kbd "i") 'forward-char)
-;; (define-key evil-visual-state-map (kbd "C-S-h") 'beginning-of-line)
-;; (define-key evil-visual-state-map (kbd "H-S-i") 'end-of-line)
-;; (define-key evil-visual-state-map (kbd "n") 'next-line)
-;; (define-key evil-visual-state-map (kbd "e") 'previous-line)
-;; (define-key evil-visual-state-map (kbd "C-n") 'next-line)
-;; (define-key evil-visual-state-map (kbd "C-e") 'previous-line)
-;; (define-key evil-visual-state-map (kbd "C-h") 'backward-word)
-;; (define-key evil-visual-state-map (kbd "H-i") 'forward-word)
-;; (define-key evil-visual-state-map (kbd "H") 'backward-word)
-;; (define-key evil-visual-state-map (kbd "I") 'forward-word)
-
-;; (define-key evil-operator-state-map (kbd "h") 'backward-char)
-;; (define-key evil-operator-state-map (kbd "i") 'forward-char)
-;; (define-key evil-operator-state-map (kbd "C-S-h") 'beginning-of-line)
-;; (define-key evil-operator-state-map (kbd "H-S-i") 'end-of-line)
-;; (define-key evil-operator-state-map (kbd "n") 'next-line)
-;; (define-key evil-operator-state-map (kbd "e") 'previous-line)
-;; (define-key evil-operator-state-map (kbd "C-n") 'next-line)
-;; (define-key evil-operator-state-map (kbd "C-e") 'previous-line)
-;; (define-key evil-operator-state-map (kbd "C-h") 'backward-word)
-;; (define-key evil-operator-state-map (kbd "H-i") 'forward-word)
-;; (define-key evil-operator-state-map (kbd "H") 'backward-word)
-;; (define-key evil-operator-state-map (kbd "I") 'forward-word)
-
-;; (define-key evil-normal-state-map (kbd "C-.") 'mc/mark-next-like-this)
-;; (define-key evil-normal-state-map (kbd "C-,") 'mc/mark-previous-like-this)
-
-;; (define-key ctl-x-map (kbd "f") 'find-file)
-;; (define-key ctl-x-map (kbd "s") 'save-buffer)
-
-;; ;; my delqs and setqs
-;; (setq-default evil-move-cursor-back nil) ;don't move cursor between insert/normal state
-;; (setq-default evil-shift-width 4)
-;; (
- ;; setq default-indent-tabs-mode nil)
+(setq default-indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq-default fill-column 72)
 (setq display-time-day-and-date t)
@@ -465,12 +361,20 @@ With a prefix argument, insert a newline above the current line."
 
 (add-hook 'haskell-mode-hook
       (lambda()
+		(auto-complete-mode 1)
+		(autopair-mode 1)
+		(abbrev-mode 1)
         (auto-fill-mode 1)
-        (setq fill-column 80)
-        (setq python-indent-offset 4)
-        (define-key (current-local-map) (kbd "<backtab>") 'python-indent-shift-left)
-        (define-key (current-local-map) (kbd "<tab>") 'python-indent-shift-right)
-        (turn-on-haskell-indentation)))
+        (setq-local fill-column 80)
+        (setq-local indent-tabs-mode nil)
+		(setq-local tab-stop-list (number-sequence 2 400 2))
+        (setq-local python-indent-offset 2)
+        (turn-on-haskell-indentation)
+        (define-key haskell-mode-map (kbd "<backtab>") 'python-indent-shift-left)
+        (define-key haskell-mode-map (kbd "<tab>") 'tab-to-tab-stop)
+        (define-key haskell-mode-map (kbd "C-,") 'python-indent-shift-left)
+        (define-key haskell-mode-map (kbd "C-.") 'python-indent-shift-right)
+        (define-key haskell-indentation-mode-map (kbd "C-d") 'kill-word)))
 
 (add-hook 'java-mode-hook
       (lambda()
@@ -525,7 +429,7 @@ With a prefix argument, insert a newline above the current line."
         (setq-local tab-stop-list (number-sequence 2 200 2))
         (define-key (current-local-map) (kbd "C-m") 'newline-and-indent)))
 
-              
+
 (add-hook 'shell-mode-hook
       (lambda ()
         (define-key (current-local-map) (kbd "<tab>") 'shell-dynamic-complete-filename)))
@@ -558,6 +462,7 @@ With a prefix argument, insert a newline above the current line."
 		(setq python-indent-offset 2)
 		(yas/minor-mode)
 		(autopair-mode)
+		(abbrev-mode 1)
 		(setq fill-column 80)
 		(auto-complete-mode 1)))
 
@@ -572,6 +477,10 @@ With a prefix argument, insert a newline above the current line."
 		(autopair-mode 1)
 		(auto-complete-mode 1)
 		(yas/minor-mode)
+		(indent-tabs-mode -1)
+		(setq python-indent-offset 2)
+		(setq css-indent-offset 2)
+		(setq tab-width 2)
 		(auto-fill-mode)
 		(setq python-indent-offset 4)))
 
@@ -585,6 +494,22 @@ With a prefix argument, insert a newline above the current line."
 		(indent-tabs-mode -1)
 		(define-key nxml-mode-map (kbd "M-h") 'backward-char)))
 
+(add-hook 'rst-mode-hook
+	  (lambda ()
+		(autopair-mode 1)
+		(auto-complete-mode 1)
+		(setq indent-tabs-mode nil)
+		(setq python-indent-offset 2)
+		(setq tab-width 2)
+		(auto-fill-mode)
+		(setq-local fill-column 80)))
+
+(autoload 'expand-abbrev-hook "expand")
+(define-abbrev-table 'html-mode-abbrev-table '(
+  ("%%" ["<%  %>" 3 () nil] expand-abbrev-hook 0)))
+(define-abbrev-table 'html-mode-abbrev-table '(
+  ("%e" ["<%=  %>" 3 () nil] expand-abbrev-hook 0)))
+
 ;; My custom keybindings
 (load-library "python")
 (load-library "dired")
@@ -592,7 +517,7 @@ With a prefix argument, insert a newline above the current line."
 
 (global-unset-key (kbd "<backtab>"))
 (global-unset-key (kbd "<tab>"))
-(global-unset-key (kbd "C-x C-c"))
+;; (global-unset-key (kbd "C-x C-c"))
 (global-unset-key (kbd "C-h"))
 (global-unset-key (kbd "C-n"))
 (global-unset-key (kbd "C-e"))
@@ -646,7 +571,7 @@ With a prefix argument, insert a newline above the current line."
 (global-set-key (kbd "M-c") 'compile)
 (global-set-key (kbd "C-x r") 'rename-buffer)
 (global-set-key (kbd "C-x y") 'yari)
-(global-set-key (kbd "C-x a") 'mark-whole-buffer)
+;; (global-set-key (kbd "C-x a") 'mark-whole-buffer)
 (global-set-key (kbd "C-x h") help-map)
 (global-set-key (kbd "C-x l") 'dictionary-lookup-definition)
 (global-set-key (kbd "C-S-f") 'toggle-fullscreen)
@@ -661,7 +586,6 @@ With a prefix argument, insert a newline above the current line."
 (global-set-key (kbd "C-e") 'previous-line)
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
 (global-set-key (kbd "C-M-i") 'kill-word)
-(global-set-key (kbd "C-b") 'eval-buffer)
 (global-set-key (kbd "C-d") 'kill-word)
 (global-set-key (kbd "C-S-d") 'backward-kill-word)
 (global-set-key (kbd "M-S-d") 'delete-backward-char)
@@ -682,13 +606,13 @@ With a prefix argument, insert a newline above the current line."
 (global-set-key (kbd "<mouse-3>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "<f12>") 'compile)
 (global-set-key (kbd "C-S-SPC") 'rm-set-mark)
-(global-set-key (kbd "C-w")  
-  '(lambda(b e) (interactive "r") 
-     (if rm-mark-active 
+(global-set-key (kbd "C-w")
+  '(lambda(b e) (interactive "r")
+     (if rm-mark-active
        (rm-kill-region b e) (kill-region b e))))
-(global-set-key (kbd "M-w")  
-  '(lambda(b e) (interactive "r") 
-     (if rm-mark-active 
+(global-set-key (kbd "M-w")
+  '(lambda(b e) (interactive "r")
+     (if rm-mark-active
        (rm-kill-ring-save b e) (kill-ring-save b e))))
 (global-set-key (kbd "C-S-'") 'mc/mark-all-like-this-dwim)
 (global-set-key (kbd "C-f") 'nonincremental-re-search-forward)
@@ -709,9 +633,12 @@ With a prefix argument, insert a newline above the current line."
 (global-set-key (kbd "C-x v") 'set-variable)
 (global-set-key (kbd "M-SPC") 'mc/mark-all-like-this-dwim)
 (global-set-key (kbd "C-o") 'execute-extended-command)
-;; (global-set-key (kbd "C-x C-x")  
-  ;; '(lambda(&optional p) (interactive "p") 
-     ;; (if rm-mark-active 
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+(global-set-key (kbd "C-b") 'switch-to-buffer)
+(global-set-key (kbd "C-x b") 'bury-buffer)
+;; (global-set-key (kbd "C-x C-x")
+  ;; '(lambda(&optional p) (interactive "p")
+     ;; (if rm-mark-active
        ;; (rm-exchange-point-and-mark p) (exchange-point-and-mark p))))
 
 
@@ -763,3 +690,4 @@ With a prefix argument, insert a newline above the current line."
 (linum-relative-toggle)
 (linum-relative-toggle)
 (load-file "~/.emacs.d/color-theme-railscasts/color-theme-railscasts.el")
+(put 'upcase-region 'disabled nil)

@@ -53,12 +53,14 @@ require '/home/pete/.config/obmenu-generator/config.pl';
 
 our $SCHEMA = [
 #             COMMAND                 	LABEL          		ICON
+   {item => ['emacs',				'Emacs','emacs']},
    {item => ['thunar',      		'Thunar FM','Thunar']},
-   {item => ['lxterminal',   	 	'Terminal','lxterminal']},
-   {item => ['firefox',				'Firefox','firefox']},
    {item => ['thunderbird',			'Thunderbird','thunderbird']},
+   {item => ['firefox',				'Firefox','firefox']},
+   {item => ['lxterminal',   	 	'Terminal','lxterminal']},
    {item => ['pidgin',				'Pidgin','pidgin']},
    {item => ['pithos',				'Pithos','pithos']},
+   {item => ['nitrogen',			'Nitrogen','nitrogen']},
 
     {sep => undef},
 
@@ -76,24 +78,24 @@ our $SCHEMA = [
 ## Custom "Advanced Menu"
 
    {begin_cat => ['Advanced Settings',  'gnome-settings']},
-   {item => ['geany -m ~/.config/compton.conf','Compton Compositor','geany']},
-   {item => ['geany -m ~/.conkyrc','Conky RC','geany']},
-   {item => ['geany -m ~/.config/tint2/tint2rc','Tint2 Panel','geany']},
+   {item => ['emacs ~/.config/compton.conf','Compton Compositor','emacs']},
+   {item => ['emacs ~/.conkyrc','Conky RC','emacs']},
+   {item => ['emacs ~/.config/tint2/tint2rc','Tint2 Panel','emacs']},
    {begin_cat => ['Obmenu-Generator', '/usr/share/icons/Faenza/apps/48/menu-editor.png']},
-		{item => ['geany -m ~/.config/obmenu-generator/schema.pl','Pipe Menu Schema','geany']},
-		{item => ['geany -m ~/.config/obmenu-generator/config.pl','Pipe Menu Config','geany']},
+		{item => ['emacs ~/.config/obmenu-generator/schema.pl','Pipe Menu Schema','emacs']},
+		{item => ['emacs ~/.config/obmenu-generator/config.pl','Pipe Menu Config','emacs']},
 		{item => ['obmenu-generator -d','Refresh Icon Set','/usr/share/icons/logo5.png']},
    {end_cat   => undef},
    {begin_cat => ['Openbox',  'openbox']},
 		{item => ['openbox --reconfigure','Reconfigure Openbox','openbox']},
-		{item => ['geany -m ~/.config/openbox/autostart','Openbox Autostart','geany']},
-		{item => ['geany -m ~/.config/openbox/rc.xml','Openbox RC','geany']},
-		{item => ['geany -m ~/.config/openbox/menu.xml','Openbox Menu','geany']},
-		{item => ['gksu geany /etc/oblogout.conf','Openbox Logout','geany']},
+		{item => ['emacs ~/.config/openbox/autostart','Openbox Autostart','emacs']},
+		{item => ['emacs ~/.config/openbox/rc.xml','Openbox RC','emacs']},
+		{item => ['emacs ~/.config/openbox/menu.xml','Openbox Menu','emacs']},
+		{item => ['gksu emacs /etc/oblogout.conf','Openbox Logout','emacs']},
    {end_cat   => undef},
    {begin_cat => ['Pacman / Servers', '/usr/share/icons/Faenza/apps/48/package-manager-icon.png']},
-		{item => ['gksu geany /etc/pacman.conf','Pacman Config','geany']},
-		{item => ['gksu geany /etc/pacman.d/mirrorlist','Pacman Mirrorlist','geany']},
+		{item => ['gksu emacs --no-init-file -u pete /etc/pacman.conf','Pacman Config','emacs']},
+		{item => ['gksu emacs --no-init-file -u pete /etc/pacman.d/mirrorlist','Pacman Mirrorlist','emacs']},
    {end_cat   => undef},
    {end_cat   => undef},
 

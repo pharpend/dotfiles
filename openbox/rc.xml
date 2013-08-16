@@ -227,7 +227,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-	<keybind key="C-S-A-h">
+	<keybind key="C-S-A-M-h">
 	  <action name="MoveResizeTo">
 		<x>0</x>
 		<y>0</y>
@@ -235,7 +235,7 @@
 		<height>848</height>
 	  </action>
 	</keybind>
-	<keybind key="C-S-A-i">
+	<keybind key="C-S-A-M-i">
 	  <action name="MoveResizeTo">
 		<x>800</x>
 		<y>0</y>
@@ -323,6 +323,47 @@
         <direction>down</direction>
       </action>
     </keybind>
+	<!-- Keybindings for resizing windows -->
+    <keybind key="C-A-h">         <!--Shrink 10px width-->
+      <action name="ResizeRelative">
+        <right>-10</right>
+      </action>
+    </keybind>
+    <!-- <keybind key="C-A-S-h">         <\!-\-Shrink 20px width-\-> -->
+    <!--   <action name="ResizeRelative"> -->
+    <!--     <right>-20</right> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <keybind key="C-A-i">         <!--Enlargen 10px width-->
+      <action name="ResizeRelative">
+        <right>10</right>
+      </action>
+    </keybind>
+    <!-- <keybind key="C-A-S-i">         <\!-\-Enlargen 20px width-\-> -->
+    <!--   <action name="ResizeRelative"> -->
+    <!--     <right>20</right> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <keybind key="C-A-n">         <!--Enlargen 10px height-->
+      <action name="ResizeRelative">
+        <bottom>10</bottom>
+      </action>
+    </keybind>
+    <keybind key="C-A-S-n">         <!--Enlargen 20px height-->
+      <action name="ResizeRelative">
+        <bottom>20</bottom>
+      </action>
+    </keybind>
+    <keybind key="C-A-e">         <!--Shrink 10px height-->
+      <action name="ResizeRelative">
+        <bottom>-10</bottom>
+      </action>
+    </keybind>
+    <keybind key="C-A-S-e">         <!--Shrink 20px height-->
+      <action name="ResizeRelative">
+        <bottom>-20</bottom>
+      </action>
+    </keybind>
 	<!-- Keybindings for moving windows. -->
 	<keybind key="C-W-h">		<!--Move window 80px left-->
 	  <action name="MoveRelative">
@@ -348,25 +389,25 @@
 		<y>-45</y>
 	  </action>
 	</keybind>
-	<keybind key="C-A-W-h">		<!--Move window 240px left-->
+	<keybind key="C-S-W-h">		<!--Move window 240px left-->
 	  <action name="MoveRelative">
 		<x>-240</x>
 		<y>0</y>
 	  </action>
 	</keybind>
-	<keybind key="C-A-W-i">		<!--Move window 240px right-->
+	<keybind key="C-S-W-i">		<!--Move window 240px right-->
 	  <action name="MoveRelative">
 		<x>240</x>
 		<y>0</y>
 	  </action>
 	</keybind>
-	<keybind key="C-A-W-n">		<!--Move window 135px down-->
+	<keybind key="C-S-W-n">		<!--Move window 135px down-->
 	  <action name="MoveRelative">
 		<x>0</x>
 		<y>135</y>
 	  </action>
 	</keybind>
-	<keybind key="C-A-W-e">		<!--Move window 135px up-->
+	<keybind key="C-S-W-e">		<!--Move window 135px up-->
 	  <action name="MoveRelative">
 		<x>0</x>
 		<y>-135</y>

@@ -13,6 +13,8 @@ nitrogen --restore &
 ## Compositing
 compton ~/.config/compton.conf &
 
+xscreensaver --help &
+
 ## Panel
 (sleep 1s && tint2) &
 
