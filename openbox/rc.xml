@@ -227,7 +227,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-	<keybind key="C-S-A-M-h">
+	<keybind key="C-A-W-h">
 	  <action name="MoveResizeTo">
 		<x>0</x>
 		<y>0</y>
@@ -235,7 +235,7 @@
 		<height>848</height>
 	  </action>
 	</keybind>
-	<keybind key="C-S-A-M-i">
+	<keybind key="C-A-W-i">
 	  <action name="MoveResizeTo">
 		<x>800</x>
 		<y>0</y>
@@ -322,28 +322,28 @@
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
-    </keybind>
+	</keybind> 
 	<!-- Keybindings for resizing windows -->
-    <keybind key="C-A-h">         <!--Shrink 10px width-->
+    <keybind key="C-A-h">         <!--Shrink 25px width-->
       <action name="ResizeRelative">
-        <right>-10</right>
+        <right>-25</right>
       </action>
     </keybind>
-    <!-- <keybind key="C-A-S-h">         <\!-\-Shrink 20px width-\-> -->
-    <!--   <action name="ResizeRelative"> -->
-    <!--     <right>-20</right> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
-    <keybind key="C-A-i">         <!--Enlargen 10px width-->
+    <keybind key="C-A-S-h">         <!--Shrink 50px width-->
       <action name="ResizeRelative">
-        <right>10</right>
+        <right>-50</right>
       </action>
     </keybind>
-    <!-- <keybind key="C-A-S-i">         <\!-\-Enlargen 20px width-\-> -->
-    <!--   <action name="ResizeRelative"> -->
-    <!--     <right>20</right> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
+    <keybind key="C-A-i">         <!--Enlargen 25px width-->
+      <action name="ResizeRelative">
+        <right>25</right>
+      </action>
+    </keybind>
+	<keybind key="C-A-S-i">         <!--Enlargen 50px width-->
+      <action name="ResizeRelative">
+        <right>50</right>
+      </action>
+    </keybind>
     <keybind key="C-A-n">         <!--Enlargen 10px height-->
       <action name="ResizeRelative">
         <bottom>10</bottom>
@@ -413,11 +413,11 @@
 		<y>-135</y>
 	  </action>
 	</keybind>
-	<keybind key="F7">
+	<keybind key="A-F7">
 	  <action name="Move">
 	  </action>
 	</keybind>
-	<keybind key="F8">
+	<keybind key="A-F8">
 	  <action name="Resize">
 	  </action>
 	</keybind>
@@ -438,9 +438,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>lxterminal</name>
+          <name>terminator</name>
         </startupnotify>
-        <command>lxterminal</command>
+        <command>terminator</command>
       </action>
     </keybind>
     <keybind key="W-d">
@@ -486,6 +486,15 @@
           <name>emacs</name>
         </startupnotify>
         <command>emacs</command>
+      </action>
+    </keybind>
+    <keybind key="W-q">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>IPython Qt Console</name>
+        </startupnotify>
+        <command>ipython qtconsole</command>
       </action>
     </keybind>
     <keybind key="W-w">

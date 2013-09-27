@@ -2,49 +2,70 @@
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . common-lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.css.scss\\'" . css-mode))
+;; (add-to-list 'auto-mode-alist '("\\.css.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '(".gitlog" . magit-log-edit-mode))
-(add-to-list 'auto-mode-alist '(".txtl" . textile-mode))
 
 ;; Load files
-(add-to-list 'load-path "~/.emacs.d/textile-mode/")
 (add-to-list 'load-path "~/.emacs.d/elpa/")
 (add-to-list 'load-path "~/.emacs.d/dictionary-el/")
 (add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0/")
 (add-to-list 'load-path "~/.emacs.d/haskell-mode/")
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
 (package-initialize)
 
-(load-file "~/.emacs.d/dictionary-el/dictionary-init.el")
-;;(load-file "~/.emacs.d/color-theme-github/color-theme-github.el")
+;;(load-file "~/.emacs.d/monky/monky.el")
+;;(load-file "~/.emacs.d/dictionary-el/dictionary-init.el")
+;; (load-file "~/.emacs.d/color-theme-github/color-theme-github.el")
 ;;(load-file "~/.emacs.d/yari.el/yari.el")
 
 ;; Imports
+(require 'ahg)
+(require 'ac-slime)
 (require 'auto-complete)
 (require 'autopair)
 (require 'color-theme)
+(require 'color-theme-heroku)
 (require 'elpy)
-(require 'evil)
+(require 'epa-file)
 (require 'haskell-mode)
 (require 'jabber-autoloads)
-;;(require 'jedi)
 (require 'linum)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
+;;(require 'mmm-mode)
 (require 'multiple-cursors)
+(require 'php-mode)
 (require 'pymacs)
 (require 'rect-mark)
+(require 'scss-mode)
 (require 'smartparens)
 (require 'smtpmail)
+(require 'slime)
 (require 'sublime-text-2)
+
+(color-theme-solarized-dark)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-eclipse/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-railscasts/")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized/")
+(add-to-list
+'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized/")
 
+
+(defun increment-number-at-point ()
+     (interactive)
+     (skip-chars-backward "0123456789")
+     (or (looking-at "[0123456789]+")
+         (error "No number at point"))
+     (replace-match (number-to-string (1+ (string-to-number (match-string
+     0))))))
 
 ;; 5 Lines Down - Go five lines downwards
 (defun 5-lines-down ()
@@ -112,6 +133,19 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
+;; Toggle between PHP & HTML Helper mode.  Useful when working on
+;; php files, that can been intertwined with HTML code
+;; http://www.emacswiki.org/emacs/PhpMode
+;; (defun toggle-php-html-mode ()
+;;   "Toggle mode between PHP & HTML modes"
+;;   (interactive)
+;;   (cond ((eql mode-name "PHP")
+;; 		 (insert "HTML MODE FUCK NO")
+;;          (html-mode))
+;;         ((eql (nth 2 mode-name) "HTML") ; '(sgml-xml-mode "XHTML" "HTML"))
+;; 		 (insert "PHP MODE FUCK YEAH")
+;;          (php-mode))))
+
 ;;
 ;; String starts with or ends with
 ;; Found here: http://www.emacswiki.org/emacs/ElispCookbook
@@ -119,7 +153,7 @@
 (defun string/ends-with (s ending)
   "return non-nil if string S ends with ENDING."
   (let ((elength (length ending)))
-	(string= (substring s (- 0 elength)) ending)))
+    (string= (substring s (- 0 elength)) ending)))
 
 (defun string/starts-with (s arg)
       "returns non-nil if string S starts with ARG.  Else nil."
@@ -159,24 +193,24 @@
   (cond
    ((equal (string-match "+[0-9]+" n) 0)
     (dotimes (i (string-to-number (substring n 1)))
-		(next-line)
-	 ); dotimes
+        (next-line)
+     ); dotimes
    ); first condition
 
   ((equal (string-match "[0-9]+" n) 0)
     (dotimes (i (string-to-number n))
-		(next-line)
-	 ); dotimes
+        (next-line)
+     ); dotimes
    ); second condition
 
    ((equal (string-match "-[0-9]+" n) 0) ;if negative argument
     (dotimes (i (string-to-number (substring n 1)))
-		(previous-line)
-	 ); dotimes
+        (previous-line)
+     ); dotimes
    ); equal
 
    ((equal (string-match "=[0-9]+" n) 0) ;equal argument
-	 (goto-line (string-to-number (substring n 1)))	;go to that line
+     (goto-line (string-to-number (substring n 1))) ;go to that line
    ); equal
   ); cond
 );goto-line-relative
@@ -199,9 +233,9 @@
 (defun toggle-maximized ()
   (interactive)
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+                 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+                 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
 )
 
 ;;
@@ -296,6 +330,16 @@ With a prefix argument, insert a newline above the current line."
   (interactive)
   (kill-emacs))
 
+
+;; (defun encaApsulate-region ()
+;;   (interactive)
+;;   (let (beg end)
+;; 	(if (region-active-p)
+;; 		(lambda ()
+;; 		  (point-to-register pt)
+;; 		  (setq beg (region-beginning) end(region-end))
+;; 		  ())))
+
 (setq default-indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq-default fill-column 72)
@@ -305,9 +349,6 @@ With a prefix argument, insert a newline above the current line."
 (setq inhibit-startup-message t)
 (setq linum-format "%d  ")
 (setq mail-from-style 'parens)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 (setq send-mail-function 'smtpmail-send-it
       message-send-mail-function 'smtpmail-send-it
       smtpmail-starttls-credentials
@@ -325,17 +366,24 @@ With a prefix argument, insert a newline above the current line."
 (setq user-full-name "Peter Harpending")
 (setq user-mail-address "peter.harpending@gmail.com")
 (setq local-function-key-map (delq '(kp-tab . [9]) function-key-map))
+(setq TeX-parse-self t)
+(setq inferior-lisp-program "/usr/bin/clisp")
+
 
 ;; Various extraneous variables
 (column-number-mode t)
 (display-time)
-(elpy-enable)
+;;(elpy-enable)
+(epa-file-enable)
 ;(fullscreen)
 (global-linum-mode 1)
-(menu-bar-mode -1)						;kill the menu bar, scroll bar, and tool bar
+(menu-bar-mode -1)                      ;kill the menu bar, scroll bar, and tool bar
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (delq 'highlight-indentation-mode elpy-default-minor-modes) ; no autocomplete
+(delq 'flymake-mode elpy-default-minor-modes) ; no autocomplete
+(slime-setup)
+;; (slime)
 
 ;; Hooks
 (add-hook 'c-mode-hook
@@ -361,17 +409,17 @@ With a prefix argument, insert a newline above the current line."
 
 (add-hook 'haskell-mode-hook
       (lambda()
-		(auto-complete-mode 1)
-		(autopair-mode 1)
-		(abbrev-mode 1)
+        (auto-complete-mode 1)
+        (autopair-mode 1)
+        (abbrev-mode 1)
         (auto-fill-mode 1)
         (setq-local fill-column 80)
         (setq-local indent-tabs-mode nil)
-		(setq-local tab-stop-list (number-sequence 2 400 2))
+        (setq-local tab-stop-list (number-sequence 2 400 2))
         (setq-local python-indent-offset 2)
         (turn-on-haskell-indentation)
         (define-key haskell-mode-map (kbd "<backtab>") 'python-indent-shift-left)
-        (define-key haskell-mode-map (kbd "<tab>") 'tab-to-tab-stop)
+        (define-key haskell-mode-map (kbd "<tab>") 'python-indent-shift-right)
         (define-key haskell-mode-map (kbd "C-,") 'python-indent-shift-left)
         (define-key haskell-mode-map (kbd "C-.") 'python-indent-shift-right)
         (define-key haskell-indentation-mode-map (kbd "C-d") 'kill-word)))
@@ -379,23 +427,33 @@ With a prefix argument, insert a newline above the current line."
 (add-hook 'java-mode-hook
       (lambda()
         (setq fill-column 80)
-	    (setq python-indent-offset 4)
+        (setq python-indent-offset 4)
         (define-key (current-local-map) (kbd "C-c C-c") 'compile)
         (auto-fill-mode 1)))
 
+(add-hook 'TeX-mode-hook
+	  (lambda ()
+		(setq python-indent-offset 2)
+		;; (autopair-mode 1)
+		(setq TeX-newline-function 'newline-and-indent)
+		(local-set-key (kbd "C-t") 'TeX-complete-symbol)))
+
 (add-hook 'latex-mode-hook
       (lambda ()
-        (setq latex-indent 4)
-        (setq python-indent-offset 4)
+        (setq latex-indent 2)
+        (setq python-indent-offset 2)
         (flyspell-mode 1)
         (auto-fill-mode 1)
-        (setq fill-column 72)
+		(setq-local fill-column 78)
+		(autopair-mode 1)
+		(yas/minor-mode)
+		(auto-complete-mode 1)
         (define-key (current-local-map) (kbd "C-c C-c") 'compile)))
 
 (add-hook 'markdown-mode-hook
       (lambda()
         (setq fill-column 72)
-		(define-key (current-local-map) (kbd "M-n") 'vi-open-line-below)
+        (define-key (current-local-map) (kbd "M-n") 'vi-open-line-below)
         (define-key (current-local-map) (kbd "<backtab>") 'python-indent-shift-left)
         (define-key (current-local-map) (kbd "<tab>") 'python-indent-shift-right)))
 
@@ -405,27 +463,29 @@ With a prefix argument, insert a newline above the current line."
 
 (add-hook 'python-mode-hook
       (lambda ()
-		(setq line-spacing 1)
+        (setq line-spacing 1)
         (setq tab-width 4)
         (setq fill-column 80)
         (setq python-indent-offset 4)
         (auto-fill-mode 1)
-		(define-key elpy-mode-map (kbd "M-n") 'vi-open-line-below)
-		(define-key elpy-mode-map (kbd "M-e") 'vi-open-line-above)
+        (abbrev-mode 1)
+		(autopair-mode 1)
+        (define-key elpy-mode-map (kbd "M-n") 'vi-open-line-below)
+        (define-key elpy-mode-map (kbd "M-e") 'vi-open-line-above)
         (define-key python-mode-map (kbd "<backtab>") 'python-indent-shift-left)
         (define-key python-mode-map (kbd "<tab>") 'python-indent-shift-right)))
 
 (add-hook 'ruby-mode-hook
       (lambda ()
-		(setq-local line-spacing 1)
+        (setq-local line-spacing 1)
         (setq-local tab-width 2)
         (setq-local python-indent-offset 2)
         (setq-local ruby-indent-level 2)
         (setq-local evil-shift-width 2)
         (setq-local fill-column 80)
         (auto-fill-mode 1)
-		(autopair-mode 1)
-		(auto-complete-mode 1)
+        (autopair-mode 1)
+        (auto-complete-mode 1)
         (setq-local tab-stop-list (number-sequence 2 200 2))
         (define-key (current-local-map) (kbd "C-m") 'newline-and-indent)))
 
@@ -436,7 +496,7 @@ With a prefix argument, insert a newline above the current line."
 
 (add-hook 'term-mode-hook
       (lambda ()
-		(define-key term-mode-map (kbd "<tab>") 'term-dynamic-complete)))
+        (define-key term-mode-map (kbd "<tab>") 'term-dynamic-complete)))
 
 (add-hook 'text-mode-hook
       (lambda()
@@ -446,62 +506,91 @@ With a prefix argument, insert a newline above the current line."
         (auto-fill-mode 1)))
 
 (add-hook 'dired-mode-hook
-	  (lambda()
-		(define-key dired-mode-map (kbd "C-o") 'execute-extended-command)
+      (lambda()
+        (define-key dired-mode-map (kbd "C-o") 'execute-extended-command)
 ))
 
 (add-hook 'elpy-mode-hook
-	  (lambda()
-		(setq python-indent-offset 4)
-		(setq comment-start "#"
-			  comment- "")
-		(define-key elpy-mode-map (kbd "C-c d") 'elpy-lookup)))
+      (lambda()
+        (setq python-indent-offset 4)
+        (setq comment-start "#"
+              comment- "")
+        (define-key elpy-mode-map (kbd "C-c d") 'elpy-lookup)))
 
 (add-hook 'html-mode-hook
-	  (lambda()
-		(setq python-indent-offset 2)
-		(yas/minor-mode)
-		(autopair-mode)
-		(abbrev-mode 1)
-		(setq fill-column 80)
-		(auto-complete-mode 1)))
+      (lambda()
+        (setq python-indent-offset 2)
+        (yas/minor-mode)
+        (autopair-mode)
+        (abbrev-mode 1)
+        (setq fill-column 80)
+        (auto-complete-mode 1)))
 
 (add-hook 'emacs-lisp-mode-hook
-	  (lambda()
-		(autopair-mode 1)
-		(auto-complete-mode 1)
-		(yas/minor-mode 1)))
+      (lambda()
+        (autopair-mode 1)
+        (auto-complete-mode 1)
+        (yas/minor-mode 1)))
 
-(add-hook 'css-mode-hook
-	  (lambda()
-		(autopair-mode 1)
-		(auto-complete-mode 1)
-		(yas/minor-mode)
-		(indent-tabs-mode -1)
-		(setq python-indent-offset 2)
-		(setq css-indent-offset 2)
-		(setq tab-width 2)
-		(auto-fill-mode)
-		(setq python-indent-offset 4)))
+(add-hook 'scss-mode-hook
+      (lambda()
+        (autopair-mode 1)
+        (yas/minor-mode)
+        (setq-local indent-tabs-mode nil)
+        (setq-local css-indent-offset 4)
+        (setq-local tab-width 4)
+        (auto-fill-mode)
+		(setq-local comment-start "// ")
+		(setq-local comment-end "")
+        (setq-local python-indent-offset 4)))
 
 (add-hook 'nxml-mode-hook
-	  (lambda()
-		(autopair-mode 1)
-		(auto-complete-mode 1)
-		(yas/minor-mode)
-		(auto-fill-mode)
-		(setq-local fill-column 80)
-		(indent-tabs-mode -1)
-		(define-key nxml-mode-map (kbd "M-h") 'backward-char)))
+      (lambda()
+        (autopair-mode 1)
+        (auto-complete-mode 1)
+        (yas/minor-mode)
+        (auto-fill-mode)
+        (setq-local fill-column 80)
+        (indent-tabs-mode -1)
+        (define-key nxml-mode-map (kbd "M-h") 'backward-char)))
 
 (add-hook 'rst-mode-hook
+      (lambda ()
+        (autopair-mode 1)
+        (auto-complete-mode 1)
+        (setq indent-tabs-mode nil)
+        (setq python-indent-offset 2)
+        (setq tab-width 2)
+        (auto-fill-mode)
+        (setq-local fill-column 80)))
+
+(add-hook 'php-mode-hook
+        (lambda ()
+          (autopair-mode 1)
+          (abbrev-mode 1)
+          (setq-local indent-tabs-mode nil)
+          (setq-local python-indent-offset 4)
+          (setq-local fill-column 80)
+          (auto-fill-mode 1)))
+
+(add-hook 'lisp-mode-hook
 	  (lambda ()
-		(autopair-mode 1)
+		(abbrev-mode 1)
 		(auto-complete-mode 1)
-		(setq indent-tabs-mode nil)
-		(setq python-indent-offset 2)
-		(setq tab-width 2)
-		(auto-fill-mode)
+		(auto-fill-mode 1)
+		(autopair-mode 1)
+		(yas/minor-mode)
+		(slime-mode 1)
+		(define-key lisp-mode-map (kbd "<C-S-tab>") 'slime-complete-symbol)
+		(define-key lisp-mode-map (kbd "<C-tab>") 'ac-complete-slime)
+		(define-key lisp-mode-map (kbd "C-c C-c") 'slime-compile-file)
+		;; (define-key lisp-mode-map (kbd "C-c C-e")
+		;;    '(lambda ()
+		;; 	  (if (region-active-p)
+		;; 		  (slime-eval-region)
+		;; 		(slime-eval-print-last-expression))))
+		(setq-local python-indent-offset 2)
+		(setq-local indent-tabs-mode nil)
 		(setq-local fill-column 80)))
 
 (autoload 'expand-abbrev-hook "expand")
@@ -537,6 +626,7 @@ With a prefix argument, insert a newline above the current line."
 (global-unset-key (kbd "C-t"))
 (global-unset-key (kbd "M-SPC"))
 (global-unset-key (kbd "<mouse-3>"))
+(global-unset-key (kbd "C-z"))
 
 ;; Global maps
 (global-set-key (kbd "<S-iso-lefttab>") 'python-indent-shift-left)
@@ -636,13 +726,21 @@ With a prefix argument, insert a newline above the current line."
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-b") 'switch-to-buffer)
 (global-set-key (kbd "C-x b") 'bury-buffer)
-;; (global-set-key (kbd "C-x C-x")
-  ;; '(lambda(&optional p) (interactive "p")
-     ;; (if rm-mark-active
-       ;; (rm-exchange-point-and-mark p) (exchange-point-and-mark p))))
-
-
-;; (global-set-key [backspace] 'delete-backward-char)
+(global-set-key (kbd "C-<") 'python-indent-shift-left)
+(global-set-key (kbd "C->") 'python-indent-shift-right)
+(define-prefix-command 'hg-map)
+(global-set-key (kbd "C-x c") 'hg-map)
+(global-set-key (kbd "C-x c s") 'ahg-status)
+(global-set-key (kbd "C-x c l") 'ahg-log)
+(global-set-key (kbd "C-x c d") 'ahg-diff)
+(global-set-key (kbd "C-x c g") 'ahg-glog)
+(global-set-key (kbd "C-\\") 'dabbrev-expand)
+(global-set-key (kbd "C-t") 'dabbrev-expand)
+(define-prefix-command 'change-mode-map)
+(global-set-key (kbd "C-x j") 'change-mode-map)
+(global-set-key (kbd "C-x j h") 'html-mode)
+(global-set-key (kbd "C-x j p") 'php-mode)
+(global-set-key (kbd "C-x j s") 'sass-mode)
 
 (defun python-insert-class()
   (interactive)
@@ -662,7 +760,7 @@ With a prefix argument, insert a newline above the current line."
 
 ;; Local maps
 ;; (ac-set-trigger-key "C-t")
-(define-key help-map (kbd "m") 'man)	;
+(define-key help-map (kbd "m") 'man)    ;
 (define-key minibuffer-local-map (kbd "<tab>") 'minibuffer-complete)
 (define-key elpy-mode-map (kbd "C-c c") 'python-insert-class)
 (define-key elpy-mode-map (kbd "C-c f") 'python-insert-function)
@@ -686,8 +784,9 @@ With a prefix argument, insert a newline above the current line."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Droid Sans Mono" :foundry "unknown" :slant normal :weight normal :height 103 :width normal)))))
+ '(default ((t (:family "Liberation Mono" :foundry "unknown" :slant normal :weight normal :height 103 :width normal)))))
 (linum-relative-toggle)
 (linum-relative-toggle)
-(load-file "~/.emacs.d/color-theme-railscasts/color-theme-railscasts.el")
+;; (load-file "~/.emacs.d/emacs-color-theme-solarized/emacs-color-theme-solarized.el")
 (put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)

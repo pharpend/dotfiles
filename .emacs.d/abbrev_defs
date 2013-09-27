@@ -3,6 +3,32 @@
 
 (define-abbrev-table 'Custom-mode-abbrev-table '())
 
+(define-abbrev-table 'ahg-command-mode-abbrev-table '())
+
+(define-abbrev-table 'ahg-diff-mode-abbrev-table '())
+
+(define-abbrev-table 'ahg-glog-mode-abbrev-table '())
+
+(define-abbrev-table 'ahg-log-mode-abbrev-table '())
+
+(define-abbrev-table 'ahg-mq-patches-mode-abbrev-table '())
+
+(define-abbrev-table 'ahg-short-log-mode-abbrev-table '())
+
+(define-abbrev-table 'ahg-status-mode-abbrev-table '())
+
+(define-abbrev-table 'awk-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'c++-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'c-mode-abbrev-table
+  '(
+   ))
+
 (define-abbrev-table 'change-log-mode-abbrev-table '())
 
 (define-abbrev-table 'comint-mode-abbrev-table '())
@@ -14,6 +40,10 @@
 (define-abbrev-table 'diff-mode-abbrev-table '())
 
 (define-abbrev-table 'display-time-world-mode-abbrev-table '())
+
+(define-abbrev-table 'docTeX-mode-abbrev-table '())
+
+(define-abbrev-table 'doctex-mode-abbrev-table '())
 
 (define-abbrev-table 'elpy-refactor-mode-abbrev-table '())
 
@@ -27,18 +57,53 @@
 
 (define-abbrev-table 'gfm-mode-abbrev-table '())
 
-(define-abbrev-table 'global-abbrev-table '())
+(define-abbrev-table 'global-abbrev-table
+  '(
+    ("lg" "<>" nil 5)
+    ("mg" "->" nil 21)
+    ("mg " "-> " nil 0)
+    ("rjv " "renderJValue" nil 0)
+    ("s*" "\\section*" nil 0)
+    ("sn{" "\\section{" nil 0)
+    ("ssa" "\\subsection*" nil 2)
+    ("sssa" "\\subsubsection*" nil 2)
+   ))
+
+(define-abbrev-table 'grep-mode-abbrev-table '())
 
 (define-abbrev-table 'haskell-mode-abbrev-table
   '(
-    ("gm" "<-" nil 4)
+    ("cc" "::" nil 5)
+    ("deql" "==" nil 1)
+    ("dpipe" "||" nil 2)
+    ("eql" "=" nil 2)
+    ("gm" "<-" nil 6)
+    ("gt" ">" nil 1)
+    ("lt" "<" nil 1)
+    ("pipe" "|" nil 3)
    ))
 
 (define-abbrev-table 'help-mode-abbrev-table '())
 
-(define-abbrev-table 'html-mode-abbrev-table '())
+(define-abbrev-table 'html-mode-abbrev-table
+  '(
+    ("%%" ["<%  %>" 3 nil nil] expand-abbrev-hook 0)
+    ("%e" ["<%=  %>" 3 nil nil] expand-abbrev-hook 0)
+   ))
+
+(define-abbrev-table 'idl-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-python-mode-abbrev-table '())
+
+(define-abbrev-table 'java-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'latex-mode-abbrev-table
+  '(
+    ("bgn" "\\begin" nil 2)
+    ("sct" "\\section" nil 3)
+   ))
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
 
@@ -64,7 +129,16 @@
 
 (define-abbrev-table 'magit-wazzup-mode-abbrev-table '())
 
-(define-abbrev-table 'markdown-mode-abbrev-table '())
+(define-abbrev-table 'markdown-mode-abbrev-table
+  '(
+    ("det'd" "determined" nil 1)
+   ))
+
+(define-abbrev-table 'nxml-mode-abbrev-table '())
+
+(define-abbrev-table 'objc-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
@@ -74,11 +148,21 @@
 
 (define-abbrev-table 'package-menu-mode-abbrev-table '())
 
+(define-abbrev-table 'php-mode-abbrev-table '())
+
+(define-abbrev-table 'pike-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'plain-tex-mode-abbrev-table '())
+
 (define-abbrev-table 'process-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
-(define-abbrev-table 'python-mode-abbrev-table '())
+(define-abbrev-table 'python-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'rst-mode-abbrev-table '())
 
@@ -86,17 +170,57 @@
 
 (define-abbrev-table 'ruby-mode-abbrev-table '())
 
+(define-abbrev-table 'scss-mode-abbrev-table '())
+
+(define-abbrev-table 'select-tags-table-mode-abbrev-table '())
+
 (define-abbrev-table 'sgml-mode-abbrev-table '())
+
+(define-abbrev-table 'shell-mode-abbrev-table '())
+
+(define-abbrev-table 'sldb-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-breakpoint-control-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-connection-list-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-inspector-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-thread-control-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-xref-mode-abbrev-table '())
+
+(define-abbrev-table 'slitex-mode-abbrev-table '())
 
 (define-abbrev-table 'snippet-mode-abbrev-table '())
 
 (define-abbrev-table 'special-mode-abbrev-table '())
 
+(define-abbrev-table 'speedbar-mode-abbrev-table '())
+
 (define-abbrev-table 'tabulated-list-mode-abbrev-table '())
 
-(define-abbrev-table 'text-mode-abbrev-table '())
+(define-abbrev-table 'tex-mode-abbrev-table '())
+
+(define-abbrev-table 'tex-shell-abbrev-table '())
+
+(define-abbrev-table 'text-mode-abbrev-table
+  '(
+    ("\\`" "acute{" nil 0)
+    ("emygen" "Myriad Genetics" nil 1)
+    ("emygen " "Myriad" nil 0)
+    ("emyriad" "\\emph{Myriad}" nil 3)
+    ("myriad" "myriad" nil 2)
+    ("myriad " "\\emph{Myriad}" nil 0)
+    ("myriadgen " "Myriad" nil 0)
+    ("otnd" "overturned" nil 2)
+    ("otnd " "\\emph{Myriad}" nil 0)
+    ("scotus" "the Supreme Court" nil 3)
+   ))
 
 (define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-hg-log-view-mode-abbrev-table '())
 
