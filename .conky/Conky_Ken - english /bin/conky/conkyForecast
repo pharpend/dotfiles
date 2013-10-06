@@ -1,4 +1,0 @@
-#! /bin/sh
-DIR=$(conky-colors --finddir=~/.bin/conky/conkyForecast.py)
-cd $DIR~/.bin/conky
-$PYTHONPATH /usr/bin/python $DIR~/.bin/conky/conkyForecast.py "$@"

@@ -1,6 +1,0 @@
-Orore Theme - Deep yellow and gray for Conky Manager Theme
-
-By Miguel Angel Romar // e-mail: lxromar-dev@yahoo.com
-
-Depends on: Conky 1.9.0, Conky Manager 1.1, Lm-sensors. 
-            Optional nvidia-settings utility required by nvidia module.
