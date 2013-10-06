@@ -479,6 +479,15 @@
     <!--     <command>pamac-updater</command> -->
     <!--   </action> -->
     <!-- </keybind> -->
+    <keybind key="W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Vi Improved</name>
+        </startupnotify>
+        <command>gvim</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>

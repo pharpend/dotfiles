@@ -57,6 +57,10 @@
 
 (define-abbrev-table 'gfm-mode-abbrev-table '())
 
+(define-abbrev-table 'git-commit-mode-abbrev-table '())
+
+(define-abbrev-table 'git-rebase-mode-abbrev-table '())
+
 (define-abbrev-table 'global-abbrev-table
   '(
     ("lg" "<>" nil 5)
@@ -112,6 +116,8 @@
 (define-abbrev-table 'log-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'magit-branch-manager-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-cherry-mode-abbrev-table '())
 
 (define-abbrev-table 'magit-commit-mode-abbrev-table '())
 
@@ -170,6 +176,11 @@
 
 (define-abbrev-table 'ruby-mode-abbrev-table '())
 
+(define-abbrev-table 'scala-mode-abbrev-table
+  '(
+    ("eg " "=>" nil 0)
+   ))
+
 (define-abbrev-table 'scss-mode-abbrev-table '())
 
 (define-abbrev-table 'select-tags-table-mode-abbrev-table '())
@@ -200,6 +211,8 @@
 
 (define-abbrev-table 'tabulated-list-mode-abbrev-table '())
 
+(define-abbrev-table 'tar-mode-abbrev-table '())
+
 (define-abbrev-table 'tex-mode-abbrev-table '())
 
 (define-abbrev-table 'tex-shell-abbrev-table '())
@@ -207,6 +220,7 @@
 (define-abbrev-table 'text-mode-abbrev-table
   '(
     ("\\`" "acute{" nil 0)
+    ("dlrz " "$z$" nil 0)
     ("emygen" "Myriad Genetics" nil 1)
     ("emygen " "Myriad" nil 0)
     ("emyriad" "\\emph{Myriad}" nil 3)

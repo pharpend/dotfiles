@@ -9,6 +9,7 @@
 		autopair-insert-or-skip-quote
 		autopair-skip-close-maybe
 		comment-dwim
+		dabbrev-expand
 		downcase-region
 		evil-backward-char
 		evil-change

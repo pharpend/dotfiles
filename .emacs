@@ -13,6 +13,8 @@
 (add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0/")
 (add-to-list 'load-path "~/.emacs.d/haskell-mode/")
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/php-mode/")
+;; (add-to-list 'load-path "~/.emacs.d/web-mode/")
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -31,6 +33,7 @@
 (require 'auto-complete)
 (require 'autopair)
 (require 'color-theme)
+;(require 'color-theme-railscasts)
 (require 'color-theme-heroku)
 (require 'elpy)
 (require 'epa-file)
@@ -40,18 +43,19 @@
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
-;;(require 'mmm-mode)
+(require 'mmm-mode)
 (require 'multiple-cursors)
 (require 'php-mode)
 (require 'pymacs)
 (require 'rect-mark)
+(require 'scala-mode2)
 (require 'scss-mode)
 (require 'smartparens)
 (require 'smtpmail)
 (require 'slime)
 (require 'sublime-text-2)
 
-(color-theme-solarized-dark)
+;; (color-theme-solarized-light)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-eclipse/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-railscasts/")
@@ -330,6 +334,12 @@ With a prefix argument, insert a newline above the current line."
   (interactive)
   (kill-emacs))
 
+;; (defun sgml-surround-with-tags (tag)
+;;   (interactive "sTag: ")
+;;   (insert "<")
+;;   (insert tag)
+;;   (insert ">\n  \n"))
+
 
 ;; (defun encaApsulate-region ()
 ;;   (interactive)
@@ -349,6 +359,7 @@ With a prefix argument, insert a newline above the current line."
 (setq inhibit-startup-message t)
 (setq linum-format "%d  ")
 (setq mail-from-style 'parens)
+(setq mmm-global-mode 'maybe)
 (setq send-mail-function 'smtpmail-send-it
       message-send-mail-function 'smtpmail-send-it
       smtpmail-starttls-credentials
@@ -383,6 +394,10 @@ With a prefix argument, insert a newline above the current line."
 (delq 'highlight-indentation-mode elpy-default-minor-modes) ; no autocomplete
 (delq 'flymake-mode elpy-default-minor-modes) ; no autocomplete
 (slime-setup)
+(global-hl-line-mode 1)
+(global-font-lock-mode 1)
+(mmm-add-mode-ext-class 'html-mode "\\.php\\'" 'html-php)
+(add-to-list 'auto-mode-alist '("\\.php\\'" . html-mode))
 ;; (slime)
 
 ;; Hooks
@@ -517,32 +532,12 @@ With a prefix argument, insert a newline above the current line."
               comment- "")
         (define-key elpy-mode-map (kbd "C-c d") 'elpy-lookup)))
 
-(add-hook 'html-mode-hook
-      (lambda()
-        (setq python-indent-offset 2)
-        (yas/minor-mode)
-        (autopair-mode)
-        (abbrev-mode 1)
-        (setq fill-column 80)
-        (auto-complete-mode 1)))
-
 (add-hook 'emacs-lisp-mode-hook
       (lambda()
         (autopair-mode 1)
         (auto-complete-mode 1)
         (yas/minor-mode 1)))
 
-(add-hook 'scss-mode-hook
-      (lambda()
-        (autopair-mode 1)
-        (yas/minor-mode)
-        (setq-local indent-tabs-mode nil)
-        (setq-local css-indent-offset 4)
-        (setq-local tab-width 4)
-        (auto-fill-mode)
-		(setq-local comment-start "// ")
-		(setq-local comment-end "")
-        (setq-local python-indent-offset 4)))
 
 (add-hook 'nxml-mode-hook
       (lambda()
@@ -564,14 +559,46 @@ With a prefix argument, insert a newline above the current line."
         (auto-fill-mode)
         (setq-local fill-column 80)))
 
+(add-hook 'scss-mode-hook
+      (lambda()
+        (autopair-mode 1)
+        (yas/minor-mode)
+        (setq-local indent-tabs-mode nil)
+        (setq-local css-indent-offset 4)
+        (setq-local tab-width 4)
+		(setq-local tab-stop-list (number-sequence 2 200 2))
+        (auto-fill-mode)
+		(setq-local comment-start "// ")
+		(setq-local comment-end "")
+        (setq-local python-indent-offset 4)))
+
+(add-hook 'html-mode-hook
+      (lambda()
+		(mmm-mode-on)
+		(local-set-key (kbd "C-c C-r") 'mmm-parse-buffer)
+        (setq-local python-indent-offset 2)
+        (setq-local tab-width 2)
+        (setq-local tab-stop-list (number-sequence 2 200 2))
+        (setq-local indent-tabs-mode nil)
+        (autopair-mode 1)
+        (abbrev-mode 1)
+        (setq fill-column 80)))
+
 (add-hook 'php-mode-hook
-        (lambda ()
-          (autopair-mode 1)
-          (abbrev-mode 1)
-          (setq-local indent-tabs-mode nil)
-          (setq-local python-indent-offset 4)
-          (setq-local fill-column 80)
-          (auto-fill-mode 1)))
+	  (lambda ()
+		(autopair-mode 1)
+		(abbrev-mode 1)
+		(local-set-key (kbd "M-e") 'vi-open-line-above)
+		(local-set-key (kbd "M-j") 'join-line)
+		(setq-local comment-start "// ")
+		(setq-local comment-end "")
+		(setq-local indent-tabs-mode nil)
+        (setq-local c-basic-offset 2)
+        (setq-local python-indent-offset 4)
+        (setq-local tab-width  4)
+		(setq-local tab-stop-list (number-sequence 4 200 4))
+        (setq-local fill-column 80)
+        (auto-fill-mode 1)))
 
 (add-hook 'lisp-mode-hook
 	  (lambda ()
@@ -591,6 +618,17 @@ With a prefix argument, insert a newline above the current line."
 		;; 		(slime-eval-print-last-expression))))
 		(setq-local python-indent-offset 2)
 		(setq-local indent-tabs-mode nil)
+		(setq-local fill-column 80)))
+
+(add-hook 'scala-mode-hook
+	  (lambda()
+		(abbrev-mode 1)
+		(autopair-mode 1)
+		(auto-complete-mode 1)
+		(auto-fill-mode 1)
+		(setq-local indent-tabs-mode nil)
+		(setq-local tab-width 2)
+		(setq-local python-indent-offset 2)
 		(setq-local fill-column 80)))
 
 (autoload 'expand-abbrev-hook "expand")
@@ -777,6 +815,11 @@ With a prefix argument, insert a newline above the current line."
  '(column-number-mode t)
  '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "dc758223066a28f3c6ef6c42c9136bf4c913ec6d3b710794252dc072a3b92b14" default)))
  '(mail-host-address "locust")
+ '(scala-indent:align-forms t)
+ '(scala-indent:align-parameters t)
+ '(scala-indent:default-run-on-strategy 1)
+ '(scala-indent:indent-value-expression t)
+ '(scala-indent:use-javadoc-style nil)
  '(tool-bar-mode nil)
  '(transient-mark-mode (quote (only . t))))
 (custom-set-faces

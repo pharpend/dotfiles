@@ -2,16 +2,16 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".google.com"
-  [url-cookie "PREF" "ID=4e8f0be6fc9d5ebd:U=629bf8a39e7f02c9:FF=0:TM=1367528337:LM=1367528337:S=dIKcofe7mubc0Q1B" "02-May-2015 20:58:57.00 GMT" "/" ".google.com" nil]
-  [url-cookie "NID" "67=Tz7gv1VQcN9_Vl_CpP0nHtlvSVv_6NCrW-u7ZXVhYM1W5rn527p9QMT2MNWHv7Pif_8GffnCu9yp5FWK6ytUMf7n2eAX3UHRQP1N5yGiV-3x5yf2W3yKz-jZoztRhFoH" "01-Nov-2013 20:58:57.00 GMT" "/" ".google.com" nil])
- ("marmalade-repo.org"
-  [url-cookie "httpOnly" nil "Sun, 15 Sep 2013 06:51:29 GMT" "/" "marmalade-repo.org" nil]
-  [url-cookie "connect.sid" "uhTz3IeMNE8WegPjMZmh6ztL.5ARC6S28ZVWBdDq8McvCM495fUcTuJUdkMRVhr15lfA" "Sun, 15 Sep 2013 06:51:29 GMT" "/" "marmalade-repo.org" nil])
+ '((".questionablecontent.net"
+  [url-cookie "__cfduid" "d0c1f941cb41496f36b0c410a9985bd761369704318" "23-Dec-2019 23:50:00.00 GMT" "/" ".questionablecontent.net" nil])
  (".forgifs.com"
   [url-cookie "__cfduid" "d5c6b90373717f25792397288630a10c91369718171" "23-Dec-2019 23:50:00.00 GMT" "/" ".forgifs.com" nil])
- (".questionablecontent.net"
-  [url-cookie "__cfduid" "d0c1f941cb41496f36b0c410a9985bd761369704318" "23-Dec-2019 23:50:00.00 GMT" "/" ".questionablecontent.net" nil]))
+ ("marmalade-repo.org"
+  [url-cookie "connect.sid" "9H2T3BxAtxW8CRG9k6F6zcoN.H1rvrixdE%2BDZNyPakIh5mPEg8XFdf5wCX9e6eVYdK4s" "Wed, 02 Oct 2013 01:38:01 GMT" "/" "marmalade-repo.org" nil]
+  [url-cookie "httpOnly" nil "Wed, 02 Oct 2013 01:38:01 GMT" "/" "marmalade-repo.org" nil])
+ (".google.com"
+  [url-cookie "NID" "67=Tz7gv1VQcN9_Vl_CpP0nHtlvSVv_6NCrW-u7ZXVhYM1W5rn527p9QMT2MNWHv7Pif_8GffnCu9yp5FWK6ytUMf7n2eAX3UHRQP1N5yGiV-3x5yf2W3yKz-jZoztRhFoH" "01-Nov-2013 20:58:57.00 GMT" "/" ".google.com" nil]
+  [url-cookie "PREF" "ID=4e8f0be6fc9d5ebd:U=629bf8a39e7f02c9:FF=0:TM=1367528337:LM=1367528337:S=dIKcofe7mubc0Q1B" "02-May-2015 20:58:57.00 GMT" "/" ".google.com" nil]))
 )
 (setq url-cookie-secure-storage
  'nil)

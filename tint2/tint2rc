@@ -14,7 +14,7 @@ border_color = #656565 100
 # ID 2
 rounded = 2
 border_width = 0
-background_color = #D4264B 60
+background_color = #777777 60
 border_color = #FFFFFF 40
 
 # ID 3
@@ -26,13 +26,13 @@ border_color = #FFFFFF 60
 # Panel
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 99% 25
-panel_margin = 5 2
-panel_padding = 0 0 5
+panel_size = 100% 25
+panel_margin = 0 0
+panel_padding = 0 0 0
 panel_dock = 0
 wm_menu = 1
 panel_layer = top
-panel_background_id = 0
+panel_background_id = 3
 
 # Panel Autohide
 autohide = 0
