@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Shiki-Nouveau-Winedust</name>
+    <name>Mire_v2_blue</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -227,22 +227,22 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-	<keybind key="C-A-W-h">
-	  <action name="MoveResizeTo">
-		<x>0</x>
-		<y>0</y>
-		<width>800</width>
-		<height>848</height>
-	  </action>
-	</keybind>
-	<keybind key="C-A-W-i">
-	  <action name="MoveResizeTo">
-		<x>800</x>
-		<y>0</y>
-		<width>800</width>
-		<height>848</height>
-	  </action>
-	</keybind>
+    <keybind key="C-A-W-h">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>848</height>
+      </action>
+    </keybind>
+    <keybind key="C-A-W-i">
+      <action name="MoveResizeTo">
+        <x>800</x>
+        <y>0</y>
+        <width>800</width>
+        <height>848</height>
+      </action>
+    </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -270,9 +270,9 @@
       <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="A-F2">
-	  <action name="Iconify" />
+      <action name="Iconify"/>
     </keybind>
-	<!-- Keybindings for window switching -->
+    <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
@@ -322,105 +322,121 @@
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
-	</keybind> 
-	<!-- Keybindings for resizing windows -->
-    <keybind key="C-A-h">         <!--Shrink 25px width-->
+    </keybind>
+    <!-- Keybindings for resizing windows -->
+    <keybind key="C-A-h">
+      <!--Shrink 25px width-->
       <action name="ResizeRelative">
         <right>-25</right>
       </action>
     </keybind>
-    <keybind key="C-A-S-h">         <!--Shrink 50px width-->
+    <keybind key="C-A-S-h">
+      <!--Shrink 50px width-->
       <action name="ResizeRelative">
         <right>-50</right>
       </action>
     </keybind>
-    <keybind key="C-A-i">         <!--Enlargen 25px width-->
+    <keybind key="C-A-i">
+      <!--Enlargen 25px width-->
       <action name="ResizeRelative">
         <right>25</right>
       </action>
     </keybind>
-	<keybind key="C-A-S-i">         <!--Enlargen 50px width-->
+    <keybind key="C-A-S-i">
+      <!--Enlargen 50px width-->
       <action name="ResizeRelative">
         <right>50</right>
       </action>
     </keybind>
-    <keybind key="C-A-n">         <!--Enlargen 10px height-->
+    <keybind key="C-A-n">
+      <!--Enlargen 10px height-->
       <action name="ResizeRelative">
         <bottom>10</bottom>
       </action>
     </keybind>
-    <keybind key="C-A-S-n">         <!--Enlargen 20px height-->
+    <keybind key="C-A-S-n">
+      <!--Enlargen 20px height-->
       <action name="ResizeRelative">
         <bottom>20</bottom>
       </action>
     </keybind>
-    <keybind key="C-A-e">         <!--Shrink 10px height-->
+    <keybind key="C-A-e">
+      <!--Shrink 10px height-->
       <action name="ResizeRelative">
         <bottom>-10</bottom>
       </action>
     </keybind>
-    <keybind key="C-A-S-e">         <!--Shrink 20px height-->
+    <keybind key="C-A-S-e">
+      <!--Shrink 20px height-->
       <action name="ResizeRelative">
         <bottom>-20</bottom>
       </action>
     </keybind>
-	<!-- Keybindings for moving windows. -->
-	<keybind key="C-W-h">		<!--Move window 80px left-->
-	  <action name="MoveRelative">
-		<x>-80</x>
-		<y>0</y>
+    <!-- Keybindings for moving windows. -->
+    <keybind key="C-W-h">
+      <!--Move window 80px left-->
+      <action name="MoveRelative">
+        <x>-80</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="C-W-i">
+      <!--Move window 80px right-->
+      <action name="MoveRelative">
+        <x>80</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="C-W-n">
+      <!--Move window 45px down-->
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>45</y>
+      </action>
+    </keybind>
+    <keybind key="C-W-e">
+      <!--Move window 45px up-->
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-45</y>
+      </action>
+    </keybind>
+    <keybind key="C-S-W-h">
+      <!--Move window 240px left-->
+      <action name="MoveRelative">
+        <x>-240</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="C-S-W-i">
+      <!--Move window 240px right-->
+      <action name="MoveRelative">
+        <x>240</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="C-S-W-n">
+      <!--Move window 135px down-->
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>135</y>
+      </action>
+    </keybind>
+    <keybind key="C-S-W-e">
+      <!--Move window 135px up-->
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-135</y>
+      </action>
+    </keybind>
+    <keybind key="A-F7">
+      <action name="Move">
 	  </action>
-	</keybind>
-	<keybind key="C-W-i">		<!--Move window 80px right-->
-	  <action name="MoveRelative">
-		<x>80</x>
-		<y>0</y>
+    </keybind>
+    <keybind key="A-F8">
+      <action name="Resize">
 	  </action>
-	</keybind>
-	<keybind key="C-W-n">		<!--Move window 45px down-->
-	  <action name="MoveRelative">
-		<x>0</x>
-		<y>45</y>
-	  </action>
-	</keybind>
-	<keybind key="C-W-e">		<!--Move window 45px up-->
-	  <action name="MoveRelative">
-		<x>0</x>
-		<y>-45</y>
-	  </action>
-	</keybind>
-	<keybind key="C-S-W-h">		<!--Move window 240px left-->
-	  <action name="MoveRelative">
-		<x>-240</x>
-		<y>0</y>
-	  </action>
-	</keybind>
-	<keybind key="C-S-W-i">		<!--Move window 240px right-->
-	  <action name="MoveRelative">
-		<x>240</x>
-		<y>0</y>
-	  </action>
-	</keybind>
-	<keybind key="C-S-W-n">		<!--Move window 135px down-->
-	  <action name="MoveRelative">
-		<x>0</x>
-		<y>135</y>
-	  </action>
-	</keybind>
-	<keybind key="C-S-W-e">		<!--Move window 135px up-->
-	  <action name="MoveRelative">
-		<x>0</x>
-		<y>-135</y>
-	  </action>
-	</keybind>
-	<keybind key="A-F7">
-	  <action name="Move">
-	  </action>
-	</keybind>
-	<keybind key="A-F8">
-	  <action name="Resize">
-	  </action>
-	</keybind>
+    </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-s">
       <action name="Execute">
@@ -431,9 +447,9 @@
         <command>synapse</command>
       </action>
     </keybind>
-	<keybind key="W-r">
-	  <action name="Reconfigure"/>
-	</keybind>
+    <keybind key="W-r">
+      <action name="Reconfigure"/>
+    </keybind>
     <keybind key="W-t">
       <action name="Execute">
         <startupnotify>
