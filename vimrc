@@ -1,10 +1,19 @@
+" My .vimrc file
+" Copyright (c) 2013 Peter Harpending. <pharpend2@gmail.com>
+"
+" Packages: 
+"   haskellmode-vim     https://github.com/lukerandall/haskellmode-vim.git
+"   nerdcommenter       git@github.com:scrooloose/nerdcommenter.git
+"   vim-fugitive        git://github.com/tpope/vim-fugitive.git
+"   vim-markdown        https://github.com/plasticboy/vim-markdown.git
+"   vim-scala           https://github.com/derekwyatt/vim-scala 
+
 " Obvious options
 syntax on
 filetype plugin on
 filetype indent on
-colorscheme desert
-"Disable folding in Markdown
-let g:vim_markdown_folding_disabled=1
+
+colorscheme elflord
 
 set autoindent
 set smartindent 
@@ -20,6 +29,12 @@ set incsearch           " Incremental search
 set rnu                 " Relative line numbers
 set splitright          " Split right
 set splitbelow          " Split below
+
+let g:vim_markdown_folding_disabled=1
+let NERDSpaceDelims=1
+" let NERD_haskell_alt_style=1
+let NERD_java_alt_style=1
+let g:haddock_browser='firefox'
 
 "Line breaks
 set lbr
@@ -78,19 +93,19 @@ execute pathogen#infect()
 
 "Paren and bracket matching
 "See http://vim.wikia.com/wiki/Making_Parenthesis_And_Brackets_Handling_Easier
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap [ []<Esc>i
-inoremap () ()
-inoremap {} {}
-inoremap [] []
-inoremap (( (<Esc>a
-inoremap {{ {<Esc>a
-inoremap [[ [<Esc>a
+" inoremap ( ()<Esc>i
+" inoremap { {}<Esc>i
+" inoremap [ []<Esc>i
+" inoremap () ()
+" inoremap {} {}
+" inoremap [] []
+" inoremap (( (<Esc>a
+" inoremap {{ {<Esc>a
+" inoremap [[ [<Esc>a
 inoremap ??? <?php?><Esc>hi<Return><Return><Esc>kA
-"Tilde key for guake
-inoremap <A-'> `
-"inoremap <C-j> <Esc>/[)}"'\]>]<CR>a
+
+" Insert mode map
+" imap <A-'> `
 
 "Surround the text
 vnoremap _( <Esc>`>a)<Esc>`<i(<Esc>
@@ -101,3 +116,8 @@ vnoremap _" <Esc>`>a"<Esc>`<i"<Esc>
 vnoremap _' <Esc>`>a'<Esc>`<i'<Esc>
 vnoremap _""" <Esc>`>a"""<Esc>`<i"""<Esc>
 vnoremap _''' <Esc>`>a'''<Esc>`<i'''<Esc>
+
+" GHCi in Haskell
+command GhciFile ghci
+command GhciRange ghcil
+command GhciReload ghcir
