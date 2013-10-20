@@ -102,5 +102,5 @@ SHELL="/bin/zsh"
 PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 PATH=$PATH:$HOME/bin			# Add my programs
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=/home/pete/.rvm/gems/ruby-2.0.0-p247/bin:/home/pete/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/pete/.rvm/rubies/ruby-2.0.0-p247/bin:/home/pete/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/pete/.gem/ruby/2.0.0/bin:/home/pete/bin:/home/pete/.rvm/bin:/home/pete/.cabal/bin:/home/pete/.cabal/bin
+PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin
 PATH=$PATH:/opt/lampp
