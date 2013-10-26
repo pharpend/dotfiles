@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/pete/code/dotfiles/vim.d/bundle/nerdcommenter'
-let g:netrw_dirhist_2='/home/pete/code/dotfiles/vim.d/bundle/nerdcommenter/plugin'
-let g:netrw_dirhist_3='/home/pete/.vim'
-let g:netrw_dirhist_4='/home/pete/.java'
-let g:netrw_dirhist_5='/home/pete/Documents/todolist'
-let g:netrw_dirhist_6='/home/pete/Documents'
-let g:netrw_dirhist_7='/home/pete/Documents/todolist'
-let g:netrw_dirhist_8='/home/pete/Documents'
-let g:netrw_dirhist_9='/home/pete/code/hsl3'
+let g:netrw_dirhist_cnt =0

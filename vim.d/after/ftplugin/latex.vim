@@ -1,3 +1,4 @@
-setlocal sw=2
+setlocal shiftwidth=2
 setlocal tw=72
-colorsheme elflord
+nmap <F3> :w !detex \| wc -w<CR>
+" setlocal spell spelllang=en_us
