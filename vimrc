@@ -41,10 +41,10 @@ set tw=80
 set wrap
 
 "Keymappings
-nmap <C-n> <C-W>j
-nmap <C-e> <C-W>k
-nmap <C-h> <C-W>h
-nmap <C-i> <C-W>l
+noremap <C-n> <C-W>j
+noremap <C-e> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-i> <C-W>l
 nmap <C-k> <C-d>
 nmap = <Leader>c 
 nmap + <Leader>cA
@@ -121,9 +121,9 @@ command GhciRange ghcil
 command GhciReload ghcir
 
 " Remap Tab to Escape
-noremap <Tab> <Esc>
 vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
 inoremap <Tab> <Esc>`^
 inoremap <Leader><Tab> <Tab>
+inoremap <C-Tab> <Tab>
 inoremap <M-i> <Tab>

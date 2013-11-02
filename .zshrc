@@ -20,7 +20,7 @@ alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nano PKGBUILD'
+alias np='vim PKGBUILD'
 alias winmods='xmodmap ~/.Xmodmap'
 alias dud='du --max-depth=1 -B 1024M'
 alias cpuinfo='cat /proc/cpuinfo | grep MHz'
@@ -92,8 +92,9 @@ get_git_dirty() {
 
 # variables
 setopt prompt_subst
+setopt auto_pushd
 CONFIG="~/.config"
-EDITOR="nano"
+EDITOR="vim"
 PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}$%f%b '
 REPORTTIME=3
 # RPROMPT='%B[%b%F{magenta}%*%f%B]%b'
