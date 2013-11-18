@@ -43,7 +43,8 @@ alias hsrun='./Test'
 alias ipy='ipython'
 alias uncapslock='xmodmap -e "keycode 66 = Control_L"'
 alias capslock='xmodmap -e "keycode 66 = Caps_Lock"'
-
+alias enw='emacs -nw'
+alias rfc='refinerycms'
 
 # cdl - cd and ls
 cdl () {

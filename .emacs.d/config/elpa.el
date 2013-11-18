@@ -7,6 +7,7 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; Elpa packages:
+;;  * auto-complete             (Auto complete)
 ;;  * color-theme-github        (GitHub Color theme)
 ;;  * color-theme-railscasts    (RailsCasts color theme)
 ;;  * evil                      (Vim emulation)
@@ -16,9 +17,8 @@
 ;;  * markdown-mode             (Markdown mode) 
 
 (package-initialize)
-; (require 'color-theme-github)
+(require 'auto-complete)
 (require 'autopair)
-(require 'color-theme-railscasts)
 (require 'evil)
 (require 'evil-nerd-commenter)
 (require 'linum-relative)

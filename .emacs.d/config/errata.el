@@ -1,5 +1,17 @@
 ;; Extraneous stuff
 
+(defun comment-open-below ()
+  "Open comment below"
+  (interactive)
+  (evil-open-below 1)
+  (comment-dwim nil))
+
+(defun comment-open-above ()
+  "Open comment above"
+  (interactive)
+  (evil-open-above 1)
+  (comment-dwim nil))
+
 (defun toggle-fullscreen ()
   "Toggle full screen on X11"
   (interactive)
@@ -20,5 +32,10 @@
 (setq dabbrev-check-other-buffers t)
 
 (global-linum-mode 1)
+(global-hl-line-mode 1)
 (linum-relative-toggle)
 (linum-relative-toggle)
+
+(require 'package)
+(package-initialize)
+(elpy-enable)

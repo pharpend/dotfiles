@@ -125,5 +125,5 @@ vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
 inoremap <Tab> <Esc>`^
 inoremap <Leader><Tab> <Tab>
-inoremap <C-Tab> <Tab>
-inoremap <M-i> <Tab>
+" inoremap <C-Tab> <Tab>
+" inoremap <M-i> <Tab>

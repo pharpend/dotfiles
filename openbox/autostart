@@ -26,6 +26,7 @@ compton ~/.config/compton.conf &
 (sleep 1s && synapse) &
 (sleep 1s && guake) &
 (sleep 1s && pidgin) &
+(speep 1s && deluge) &
 
 
 ## Optional: enable clipboard and/or disable touchpad
