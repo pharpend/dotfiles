@@ -60,3 +60,8 @@
   '(lambda ()
      (comment-dwim)
      (evil-append)))
+
+;; EXTRANEOUS KEYBINDINGS
+(define-key evil-normal-state-map (kbd "C-<tab>") 'other-window)
+(define-key evil-normal-state-map (kbd "C-d") 'dired)
+(define-key evil-normal-state-map (kbd "C-x d") 'diff)

@@ -6,3 +6,6 @@
 (setq indent-tabs-mode nil)
 
 (show-paren-mode 1)
+
+;; Better file and buffer switching
+(ido-mode 1)

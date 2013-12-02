@@ -7,20 +7,48 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; Elpa packages:
-;;  * auto-complete             (Auto complete)
-;;  * color-theme-github        (GitHub Color theme)
-;;  * color-theme-railscasts    (RailsCasts color theme)
-;;  * evil                      (Vim emulation)
-;;  * evil-nerd-commenter       (Nerd commenter for evil)
-;;  * linum-relative            (Relative line numbers)
-;;  * magit                     (Git client)
-;;  * markdown-mode             (Markdown mode) 
+;; * auctex
+;; * auto-complete
+;; * autopair
+;; * color-theme
+;; * color-theme-github
+;; * color-theme-heroku
+;; * color-theme-railscasts
+;; * color-theme-solarized
+;; * direx
+;; * elpy
+;; * evil
+;; * evil-nerd-commenter
+;; * find-file-in-project
+;; * fuzzy
+;; * git-commit-mode
+;; * git-rebase-mode
+;; * haskell-mode
+;; * highlight-indentation
+;; * idomenu
+;; * iedit
+;; * linum-relative
+;; * magit
+;; * markdown-mode
+;; * mmm-mode
+;; * multiple-cursors
+;; * nose
+;; * pandoc-mode
+;; * popup
+;; * popwin
+;; * scss-mode
+;; * undo-tree
+;; * virtualenv
+;; * yasnippet
+
 
 (package-initialize)
 (require 'auto-complete)
 (require 'autopair)
+(require 'direx)
 (require 'evil)
 (require 'evil-nerd-commenter)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
+(require 'popwin)

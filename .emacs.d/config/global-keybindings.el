@@ -31,5 +31,9 @@
 (global-set-key (kbd "C-x g b") 'magit-branch-manager)
 (global-set-key (kbd "M-SPC") 'mc/mark-all-like-this-dwim)
 (global-set-key (kbd "M-m") 'mc/mark-more-like-this-extended)
-
-(define-key evil-normal-state-map (kbd "C-<tab>") 'other-window)
+(global-set-key (kbd "C-x g d") 'magit-diff)
+(global-set-key (kbd "C-x x j") 'direx:jump-to-directory-other-window)
+(global-set-key (kbd "C-x x f") 'direx:find-directory-other-window)
+(global-set-key (kbd "M-d") 'dired)
+(global-set-key (kbd "M-f") 'find-file)
+(global-set-key (kbd "M-b") 'switch-to-buffer)

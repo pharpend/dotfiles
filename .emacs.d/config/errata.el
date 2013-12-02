@@ -31,11 +31,6 @@
 
 (setq dabbrev-check-other-buffers t)
 
-(global-linum-mode 1)
-(global-hl-line-mode 1)
-(linum-relative-toggle)
-(linum-relative-toggle)
-
 (require 'package)
 (package-initialize)
 (elpy-enable)

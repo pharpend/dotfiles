@@ -44,7 +44,20 @@ alias ipy='ipython'
 alias uncapslock='xmodmap -e "keycode 66 = Control_L"'
 alias capslock='xmodmap -e "keycode 66 = Caps_Lock"'
 alias enw='emacs -nw'
-alias rfc='refinerycms'
+alias gf='git flow'
+
+gbs () {
+    git ls-tree -r HEAD |
+    sed -re 's/^.{53}//' |
+    while read filename; do file "$filename"; done |
+    grep -E ': .*text' |
+    sed -r -e 's/: .*//' |
+    while read filename; do git blame -w "$filename"; done |
+    sed -r -e 's/.*\((.*)[0-9]{4}-[0-9]{2}-[0-9]{2} .*/\1/' -e 's/ +$//' |
+    sort |
+    uniq -c
+}
+
 
 # cdl - cd and ls
 cdl () {
@@ -105,4 +118,4 @@ PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 PATH=$PATH:$HOME/bin			# Add my programs
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin
-PATH=$PATH:/opt/lampp
+# PATH=$PATH:/opt/lampp
