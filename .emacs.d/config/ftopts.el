@@ -2,6 +2,7 @@
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . common-lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("i3config" . conf-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()
