@@ -1,12 +1,24 @@
 ;; Functions - my functions in Emacs Lisp. Most of these are just
 ;; shortcuts to other functions.
 
-(defun kb ()
-  "Kill buffer"
-  (interactive)
-  (kill-this-buffer))
-
-(defun kbn (n)
-  "Kill buffer by name"
-  (interactive "sKill buffer: ")
-  (kill-buffer n))
+(defalias 'bb 'ido-switch-buffer)
+(defalias 'bbo 'ido-switch-buffer-other-window)
+(defalias 'bft 'direx:jump-to-directory-other-window)
+(defalias 'bl 'ibuffer)
+(defalias 'dr 'ido-dired)
+(defalias 'dro 'dired-other-window)
+(defalias 'eb 'eval-buffer)
+(defalias 'er 'eval-region)
+(defalias 'ff 'ido-find-file)
+(defalias 'ffo 'ido-find-file-other-window)
+(defalias 'k 'kill-this-buffer)
+(defalias 'kb 'kill-this-buffer)
+(defalias 'kbn 'ido-kill-buffer)
+(defalias 'kow 'delete-other-windows)
+(defalias 'kw 'delete-window)
+(defalias 'ow 'other-window)
+(defalias 'ri 'yari)
+(defalias 'sa 'mark-whole-buffer)
+(defalias 'sp 'split-window-below)
+(defalias 'vsp 'split-window-right)
+(defalias 'xx 'execute-extended-command)

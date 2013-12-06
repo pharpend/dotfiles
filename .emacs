@@ -8,6 +8,7 @@
 (load-file "~/.emacs.d/config/errata.el")                       ; errata
 (load-file "~/.emacs.d/config/global-keybindings.el")           ; Global keybindings
 (load-file "~/.emacs.d/config/ftopts.el")                       ; filetype options
+(load-file "~/.emacs.d/config/functions.el")                    ; functions i've added
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

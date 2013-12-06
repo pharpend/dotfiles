@@ -10,5 +10,5 @@
 (turn-on-pandoc)
 
 (pandoc-set-write "html5")
+;; (pandoc-set-output (format "%s.html" (buffer-file-name)))
 (define-key pandoc-mode-map (kbd "C-c / o") 'pandoc-set-output)
-

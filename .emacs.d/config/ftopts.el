@@ -51,3 +51,6 @@
 (add-hook 'c-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-c.el")))
+(add-hook 'perl-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-perl.el")))

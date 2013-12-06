@@ -16,6 +16,7 @@
         evil-invert-char
         evil-normal-state
         evil-previous-line
+        haskell-indentation-delete-backward-char
         markdown-exdent-or-delete
         ))
 

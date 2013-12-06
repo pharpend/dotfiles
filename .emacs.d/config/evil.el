@@ -50,9 +50,22 @@
 ;;   '(progn
 ;;      (global-set-key (kbd "<tab>") 'evil-force-normal-state)))
 
+;; SWAP : AND o
+;; Normal state
+(define-key evil-normal-state-map (kbd "o") 'evil-ex)
+(define-key evil-normal-state-map (kbd "O") 'execute-extended-command)
+(define-key evil-normal-state-map (kbd ";") 'evil-open-below)
+(define-key evil-normal-state-map (kbd ":") 'evil-open-above)
+;; Visual state
+(define-key evil-visual-state-map (kbd "o") 'evil-ex)
+(define-key evil-visual-state-map (kbd "O") 'execute-extended-command)
+(define-key evil-visual-state-map (kbd ";") 'evil-open-below)
+(define-key evil-visual-state-map (kbd ":") 'evil-open-above)
 
-;; INSERT A TAB KEY
+
+;; KEYBINDINGS SPECIFIC TO INSERT MODE
 (define-key evil-insert-state-map (kbd "C-<tab>") 'tab-to-tab-stop)
+(define-key evil-insert-state-map (kbd "C-y") 'yank)
 
 ;; COMMENT CURRENT LINE
 (define-key evil-normal-state-map (kbd "=") 'evilnc-comment-or-uncomment-lines)

@@ -495,13 +495,13 @@
     <!--     <command>pamac-updater</command> -->
     <!--   </action> -->
     <!-- </keybind> -->
-    <keybind key="W-v">
+    <keybind key="W-c">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Vi Improved</name>
+          <name>Chromium</name>
         </startupnotify>
-        <command>gvim</command>
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="W-e">
