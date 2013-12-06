@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (git-commit-mode) "git-commit-mode" "git-commit-mode.el"
-;;;;;;  (21145 2536 727792 372000))
-;;; Generated autoloads from git-commit-mode.el
+;;;### (autoloads (git-commit-mode) "git-commit-mode" "../../../../../.emacs.d/elpa/git-commit-mode-20131124.2132/git-commit-mode.el"
+;;;;;;  "05494d9d28b8c04255890e2d36a8d24d")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/git-commit-mode-20131124.2132/git-commit-mode.el
 
 (autoload 'git-commit-mode "git-commit-mode" "\
 Major mode for editing git commit messages.
@@ -20,8 +20,9 @@ basic structure of and errors in git commit messages.
 
 ;;;***
 
-;;;### (autoloads nil nil ("git-commit-mode-pkg.el") (21145 2536
-;;;;;;  810752 517000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/git-commit-mode-20131124.2132/git-commit-mode-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/git-commit-mode-20131124.2132/git-commit-mode.el")
+;;;;;;  (21154 14196 47443 96000))
 
 ;;;***
 

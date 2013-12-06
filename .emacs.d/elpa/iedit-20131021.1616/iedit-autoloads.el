@@ -4,8 +4,9 @@
 
 
 ;;;### (autoloads (iedit-mode-toggle-on-function iedit-mode) "iedit"
-;;;;;;  "iedit.el" (21127 56748 718040 633000))
-;;; Generated autoloads from iedit.el
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit.el"
+;;;;;;  "a91dd51312eee88e187b7e5d9c6fa405")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit.el
 
 (autoload 'iedit-mode "iedit" "\
 Toggle Iedit mode.
@@ -69,9 +70,9 @@ Toggle Iedit mode on current function.
 
 ;;;***
 
-;;;### (autoloads (iedit-rectangle-mode) "iedit-rect" "iedit-rect.el"
-;;;;;;  (21127 56748 674706 740000))
-;;; Generated autoloads from iedit-rect.el
+;;;### (autoloads (iedit-rectangle-mode) "iedit-rect" "../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit-rect.el"
+;;;;;;  "f68ee65bf917b867e4e27dd9d334eaf0")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit-rect.el
 
 (autoload 'iedit-rectangle-mode "iedit-rect" "\
 Toggle Iedit-rect mode.
@@ -87,8 +88,11 @@ Commands:
 
 ;;;***
 
-;;;### (autoloads nil nil ("iedit-lib.el" "iedit-pkg.el") (21127
-;;;;;;  56748 761849 284000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit-lib.el"
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit-rect.el"
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20131021.1616/iedit.el")
+;;;;;;  (21154 14184 554889 155000))
 
 ;;;***
 

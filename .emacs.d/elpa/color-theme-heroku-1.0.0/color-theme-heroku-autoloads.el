@@ -3,8 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("color-theme-heroku-pkg.el" "color-theme-heroku.el")
-;;;;;;  (21142 56260 687955 57000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/color-theme-heroku-1.0.0/color-theme-heroku-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-heroku-1.0.0/color-theme-heroku.el")
+;;;;;;  (21154 14162 951600 472000))
 
 ;;;***
 

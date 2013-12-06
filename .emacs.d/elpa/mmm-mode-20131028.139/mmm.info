@@ -1,5 +1,5 @@
-This is /home/melpa/melpa/working/mmm-mode-20131028.139/mmm.info,
-produced by makeinfo version 4.13 from
+This is /tmp/mmm-mode30133Pwi/mmm-mode-20131028.139/mmm.info, produced
+by makeinfo version 4.13 from
 /home/melpa/melpa/working/mmm-mode/mmm.texinfo.
 
 INFO-DIR-SECTION GNU Emacs Lisp
@@ -2036,60 +2036,60 @@ File: mmm.info,  Node: Keystroke Index,  Prev: Function Index,  Up: Indices
 
 
 Tag Table:
-Node: Top1260
-Node: Overview5312
-Ref: Overview-Footnote-17809
-Node: Basic Concepts7929
-Node: Installation10290
-Node: Quick Start12289
-Node: Basics14835
-Node: MMM Minor Mode15521
-Node: Enabling MMM Mode16214
-Node: MMM Mode Keys17486
-Node: Submode Classes19757
-Node: Selecting Classes21109
-Node: File Classes21945
-Node: Mode-Ext Classes22726
-Node: Global Classes24475
-Node: Insertion25991
-Node: Re-parsing28173
-Node: Interactive28425
-Node: Global Mode31024
-Node: Major Mode Hook32990
-Node: Customizing34695
-Node: Region Coloring35435
-Node: Preferred Modes38010
-Node: Mode Line39996
-Node: Key Bindings41552
-Node: Local Variables43299
-Node: Changing Classes45105
-Node: Hooks46147
-Node: Supplied Classes47614
-Node: Mason48484
-Node: File Variables52178
-Node: Here-documents52921
-Node: Javascript54365
-Node: Embedded CSS54894
-Node: Embperl55324
-Node: ePerl55757
-Node: JSP56147
-Node: RPM56532
-Node: Noweb57214
-Node: Writing Classes60026
-Node: Basic Classes61199
-Node: Paired Delimiters63759
-Node: Region Placement65465
-Node: Submode Groups68441
-Node: Calculated Submodes70148
-Node: Calculated Faces72377
-Node: Insertion Commands74028
-Node: Region Names77140
-Node: Other Hooks78495
-Node: Delimiters80542
-Node: Misc Keywords84292
-Node: Indices84694
-Node: Concept Index84986
-Node: Function Index89153
-Node: Keystroke Index91385
+Node: Top1256
+Node: Overview5308
+Ref: Overview-Footnote-17805
+Node: Basic Concepts7925
+Node: Installation10286
+Node: Quick Start12285
+Node: Basics14831
+Node: MMM Minor Mode15517
+Node: Enabling MMM Mode16210
+Node: MMM Mode Keys17482
+Node: Submode Classes19753
+Node: Selecting Classes21105
+Node: File Classes21941
+Node: Mode-Ext Classes22722
+Node: Global Classes24471
+Node: Insertion25987
+Node: Re-parsing28169
+Node: Interactive28421
+Node: Global Mode31020
+Node: Major Mode Hook32986
+Node: Customizing34691
+Node: Region Coloring35431
+Node: Preferred Modes38006
+Node: Mode Line39992
+Node: Key Bindings41548
+Node: Local Variables43295
+Node: Changing Classes45101
+Node: Hooks46143
+Node: Supplied Classes47610
+Node: Mason48480
+Node: File Variables52174
+Node: Here-documents52917
+Node: Javascript54361
+Node: Embedded CSS54890
+Node: Embperl55320
+Node: ePerl55753
+Node: JSP56143
+Node: RPM56528
+Node: Noweb57210
+Node: Writing Classes60022
+Node: Basic Classes61195
+Node: Paired Delimiters63755
+Node: Region Placement65461
+Node: Submode Groups68437
+Node: Calculated Submodes70144
+Node: Calculated Faces72373
+Node: Insertion Commands74024
+Node: Region Names77136
+Node: Other Hooks78491
+Node: Delimiters80538
+Node: Misc Keywords84288
+Node: Indices84690
+Node: Concept Index84982
+Node: Function Index89149
+Node: Keystroke Index91381
 
 End Tag Table

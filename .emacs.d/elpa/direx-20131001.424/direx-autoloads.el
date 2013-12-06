@@ -4,8 +4,9 @@
 
 
 ;;;### (autoloads (direx:jump-to-directory-other-window direx:jump-to-directory)
-;;;;;;  "direx" "direx.el" (21143 45553 470509 235000))
-;;; Generated autoloads from direx.el
+;;;;;;  "direx" "../../../../../.emacs.d/elpa/direx-20131001.424/direx.el"
+;;;;;;  "092e378c65a4400c538e80a766be1ac1")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/direx-20131001.424/direx.el
 
 (autoload 'direx:jump-to-directory "direx" "\
 
@@ -20,9 +21,9 @@
 ;;;***
 
 ;;;### (autoloads (direx-project:jump-to-project-root-other-window
-;;;;;;  direx-project:jump-to-project-root) "direx-project" "direx-project.el"
-;;;;;;  (21143 45553 103842 536000))
-;;; Generated autoloads from direx-project.el
+;;;;;;  direx-project:jump-to-project-root) "direx-project" "../../../../../.emacs.d/elpa/direx-20131001.424/direx-project.el"
+;;;;;;  "ccf52fecfa04e88c0f43d10fd96536d0")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/direx-20131001.424/direx-project.el
 
 (autoload 'direx-project:jump-to-project-root "direx-project" "\
 
@@ -36,7 +37,10 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("direx-pkg.el") (21143 45553 520268 629000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/direx-20131001.424/direx-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/direx-20131001.424/direx-project.el"
+;;;;;;  "../../../../../.emacs.d/elpa/direx-20131001.424/direx.el")
+;;;;;;  (21154 14164 442363 404000))
 
 ;;;***
 

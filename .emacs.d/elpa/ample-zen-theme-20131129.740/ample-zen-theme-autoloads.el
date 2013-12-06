@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "ample-zen-theme" "ample-zen-theme.el" (21145
-;;;;;;  2707 238802 782000))
-;;; Generated autoloads from ample-zen-theme.el
+;;;### (autoloads nil "ample-zen-theme" "../../../../../.emacs.d/elpa/ample-zen-theme-20131129.740/ample-zen-theme.el"
+;;;;;;  "dc499676a1e8165c0e49967f0d0f9935")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/ample-zen-theme-20131129.740/ample-zen-theme.el
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
@@ -13,8 +13,9 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("ample-zen-theme-pkg.el") (21145 2707
-;;;;;;  314534 1000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/ample-zen-theme-20131129.740/ample-zen-theme-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/ample-zen-theme-20131129.740/ample-zen-theme.el")
+;;;;;;  (21154 14136 525256 344000))
 
 ;;;***
 

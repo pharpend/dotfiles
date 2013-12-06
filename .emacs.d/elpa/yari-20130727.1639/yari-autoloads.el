@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (yari yari-helm yari-anything) "yari" "yari.el"
-;;;;;;  (21147 63384 556546 48000))
-;;; Generated autoloads from yari.el
+;;;### (autoloads (yari yari-helm yari-anything) "yari" "../../../../../.emacs.d/elpa/yari-20130727.1639/yari.el"
+;;;;;;  "fc2e9f877eddde50aa40528ff6b3281f")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/yari-20130727.1639/yari.el
 
 (autoload 'yari-anything "yari" "\
 
@@ -24,7 +24,9 @@ Look up Ruby documentation.
 
 ;;;***
 
-;;;### (autoloads nil nil ("yari-pkg.el") (21147 63384 923259 274000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/yari-20130727.1639/yari-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/yari-20130727.1639/yari.el")
+;;;;;;  (21154 14203 132071 728000))
 
 ;;;***
 

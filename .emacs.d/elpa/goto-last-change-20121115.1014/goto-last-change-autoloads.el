@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (goto-last-change) "goto-last-change" "goto-last-change.el"
-;;;;;;  (21145 2537 637797 770000))
-;;; Generated autoloads from goto-last-change.el
+;;;### (autoloads (goto-last-change) "goto-last-change" "../../../../../.emacs.d/elpa/goto-last-change-20121115.1014/goto-last-change.el"
+;;;;;;  "8e6cbc17a86a7e1c3835e713e1375ed2")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/goto-last-change-20121115.1014/goto-last-change.el
 
 (autoload 'goto-last-change "goto-last-change" "\
 Set point to the position of the last change.
@@ -17,8 +17,9 @@ will return point to the current position.
 
 ;;;***
 
-;;;### (autoloads nil nil ("goto-last-change-pkg.el") (21145 2537
-;;;;;;  716310 521000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/goto-last-change-20121115.1014/goto-last-change-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/goto-last-change-20121115.1014/goto-last-change.el")
+;;;;;;  (21154 14186 765278 464000))
 
 ;;;***
 

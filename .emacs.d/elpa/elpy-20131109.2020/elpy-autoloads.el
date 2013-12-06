@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (elpy-mode elpy-disable elpy-enable) "elpy" "elpy.el"
-;;;;;;  (21127 57278 981501 35000))
-;;; Generated autoloads from elpy.el
+;;;### (autoloads (elpy-mode elpy-disable elpy-enable) "elpy" "../../../../../.emacs.d/elpa/elpy-20131109.2020/elpy.el"
+;;;;;;  "a66a643b7e89137b297e777091d936a0")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/elpy-20131109.2020/elpy.el
 
 (autoload 'elpy-enable "elpy" "\
 Enable Elpy in all future Python buffers.
@@ -39,8 +39,10 @@ more structured list.
 
 ;;;***
 
-;;;### (autoloads nil nil ("elpy-pkg.el" "elpy-refactor.el") (21127
-;;;;;;  57279 22752 598000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/elpy-20131109.2020/elpy-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/elpy-20131109.2020/elpy-refactor.el"
+;;;;;;  "../../../../../.emacs.d/elpa/elpy-20131109.2020/elpy.el")
+;;;;;;  (21154 14186 499180 119000))
 
 ;;;***
 

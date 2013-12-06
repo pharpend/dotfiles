@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (lua-mode) "lua-mode" "lua-mode.el" (21148 1620
-;;;;;;  648132 120000))
-;;; Generated autoloads from lua-mode.el
+;;;### (autoloads (lua-mode) "lua-mode" "../../../../../.emacs.d/elpa/lua-mode-20131019.959/lua-mode.el"
+;;;;;;  "82a7a9f45d1151e955be7e88d22a85c8")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/lua-mode-20131019.959/lua-mode.el
 
 (autoload 'lua-mode "lua-mode" "\
 Major mode for editing Lua code.
@@ -18,7 +18,9 @@ Major mode for editing Lua code.
 
 ;;;***
 
-;;;### (autoloads nil nil ("lua-mode-pkg.el") (21148 1621 74581 586000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/lua-mode-20131019.959/lua-mode-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/lua-mode-20131019.959/lua-mode.el")
+;;;;;;  (21154 14195 451434 944000))
 
 ;;;***
 

@@ -3,8 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("color-theme-github-pkg.el" "color-theme-github.el")
-;;;;;;  (21109 20311 373075 352000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/color-theme-github-0.0.3/color-theme-github-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-github-0.0.3/color-theme-github.el")
+;;;;;;  (21154 14162 74088 106000))
 
 ;;;***
 

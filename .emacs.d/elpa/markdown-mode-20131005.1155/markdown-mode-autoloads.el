@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (gfm-mode markdown-mode) "markdown-mode" "markdown-mode.el"
-;;;;;;  (21109 22800 6782 855000))
-;;; Generated autoloads from markdown-mode.el
+;;;### (autoloads (gfm-mode markdown-mode) "markdown-mode" "../../../../../.emacs.d/elpa/markdown-mode-20131005.1155/markdown-mode.el"
+;;;;;;  "beab8c6c7ebdc06d5705095c94244c99")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/markdown-mode-20131005.1155/markdown-mode.el
 
 (autoload 'markdown-mode "markdown-mode" "\
 Major mode for editing Markdown files.
@@ -22,8 +22,9 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;***
 
-;;;### (autoloads nil nil ("markdown-mode-pkg.el") (21109 22802 180927
-;;;;;;  255000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/markdown-mode-20131005.1155/markdown-mode-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/markdown-mode-20131005.1155/markdown-mode.el")
+;;;;;;  (21154 14197 691490 593000))
 
 ;;;***
 

@@ -7,8 +7,9 @@
 ;;;;;;  evilnc-copy-and-comment-lines evilnc-comment-or-uncomment-lines
 ;;;;;;  evilnc-toggle-comment-empty-lines evilnc-comment-or-uncomment-to-the-line
 ;;;;;;  evilnc-comment-or-uncomment-paragraphs) "evil-nerd-commenter"
-;;;;;;  "evil-nerd-commenter.el" (21145 2537 224461 987000))
-;;; Generated autoloads from evil-nerd-commenter.el
+;;;;;;  "../../../../../.emacs.d/elpa/evil-nerd-commenter-20131126.1220/evil-nerd-commenter.el"
+;;;;;;  "f8a54d9cf9d92d4e01909a6770027e7f")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/evil-nerd-commenter-20131126.1220/evil-nerd-commenter.el
 
 (autoload 'evilnc-comment-or-uncomment-paragraphs "evil-nerd-commenter" "\
 Comment or uncomment paragraph(s). A paragraph is a continuation non-empty lines.
@@ -61,8 +62,9 @@ Set the hotkeys of evil-nerd-comment
 
 ;;;***
 
-;;;### (autoloads nil nil ("evil-nerd-commenter-pkg.el") (21145 2537
-;;;;;;  314419 153000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/evil-nerd-commenter-20131126.1220/evil-nerd-commenter-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/evil-nerd-commenter-20131126.1220/evil-nerd-commenter.el")
+;;;;;;  (21154 14191 425685 583000))
 
 ;;;***
 

@@ -3,8 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("linum-relative-pkg.el" "linum-relative.el")
-;;;;;;  (21109 30060 402227 659000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/linum-relative-20130923.1602/linum-relative-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/linum-relative-20130923.1602/linum-relative.el")
+;;;;;;  (21154 14194 905984 56000))
 
 ;;;***
 

@@ -3,8 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("color-theme-railscasts-pkg.el" "color-theme-railscasts.el")
-;;;;;;  (21109 22577 622713 161000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/color-theme-railscasts-0.0.2/color-theme-railscasts-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-railscasts-0.0.2/color-theme-railscasts.el")
+;;;;;;  (21154 14163 513644 810000))
 
 ;;;***
 

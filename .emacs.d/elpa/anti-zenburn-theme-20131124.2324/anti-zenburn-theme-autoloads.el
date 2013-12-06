@@ -3,16 +3,17 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "anti-zenburn-theme" "anti-zenburn-theme.el"
-;;;;;;  (21145 2706 575465 524000))
-;;; Generated autoloads from anti-zenburn-theme.el
+;;;### (autoloads nil "anti-zenburn-theme" "../../../../../.emacs.d/elpa/anti-zenburn-theme-20131124.2324/anti-zenburn-theme.el"
+;;;;;;  "92fcc99140b9ab105c4074daa5153c38")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/anti-zenburn-theme-20131124.2324/anti-zenburn-theme.el
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;;***
 
-;;;### (autoloads nil nil ("anti-zenburn-theme-pkg.el") (21145 2706
-;;;;;;  645654 974000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/anti-zenburn-theme-20131124.2324/anti-zenburn-theme-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/anti-zenburn-theme-20131124.2324/anti-zenburn-theme.el")
+;;;;;;  (21154 14137 621229 156000))
 
 ;;;***
 

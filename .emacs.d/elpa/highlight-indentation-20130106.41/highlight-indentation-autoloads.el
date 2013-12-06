@@ -4,9 +4,9 @@
 
 
 ;;;### (autoloads (highlight-indentation-current-column-mode highlight-indentation-set-offset
-;;;;;;  highlight-indentation-mode) "highlight-indentation" "highlight-indentation.el"
-;;;;;;  (21127 56749 971390 144000))
-;;; Generated autoloads from highlight-indentation.el
+;;;;;;  highlight-indentation-mode) "highlight-indentation" "../../../../../.emacs.d/elpa/highlight-indentation-20130106.41/highlight-indentation.el"
+;;;;;;  "1bf121e2722a8efe23b0be623246bd1d")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/highlight-indentation-20130106.41/highlight-indentation.el
 
 (autoload 'highlight-indentation-mode "highlight-indentation" "\
 Highlight indentation minor mode highlights indentation based
@@ -29,8 +29,9 @@ a vertical bar corresponding to the indentation of the current line
 
 ;;;***
 
-;;;### (autoloads nil nil ("highlight-indentation-pkg.el") (21127
-;;;;;;  56750 61462 155000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/highlight-indentation-20130106.41/highlight-indentation-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/highlight-indentation-20130106.41/highlight-indentation.el")
+;;;;;;  (21154 14185 178453 323000))
 
 ;;;***
 

@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (alect-generate-colors) "alect-themes" "alect-themes.el"
-;;;;;;  (21145 3770 549964 183000))
-;;; Generated autoloads from alect-themes.el
+;;;### (autoloads (alect-generate-colors) "alect-themes" "../../../../../.emacs.d/elpa/alect-themes-20131022.1107/alect-themes.el"
+;;;;;;  "5bf9c164109004c58aa5bdec7d110d68")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/alect-themes-20131022.1107/alect-themes.el
 
 (autoload 'alect-generate-colors "alect-themes" "\
 Return alist of themes suitable for the variable `alect-colors'.
@@ -22,8 +22,11 @@ values should be in matching order).
 
 ;;;***
 
-;;;### (autoloads nil nil ("alect-dark-theme.el" "alect-light-theme.el"
-;;;;;;  "alect-themes-pkg.el") (21145 3770 654517 921000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/alect-themes-20131022.1107/alect-dark-theme.el"
+;;;;;;  "../../../../../.emacs.d/elpa/alect-themes-20131022.1107/alect-light-theme.el"
+;;;;;;  "../../../../../.emacs.d/elpa/alect-themes-20131022.1107/alect-themes-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/alect-themes-20131022.1107/alect-themes.el")
+;;;;;;  (21154 14135 501416 164000))
 
 ;;;***
 

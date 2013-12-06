@@ -4,8 +4,9 @@
 
 
 ;;;### (autoloads (conditionally-turn-on-pandoc turn-on-pandoc pandoc-mode)
-;;;;;;  "pandoc-mode" "pandoc-mode.el" (21120 9260 318946 601000))
-;;; Generated autoloads from pandoc-mode.el
+;;;;;;  "pandoc-mode" "../../../../../.emacs.d/elpa/pandoc-mode-20131021.1946/pandoc-mode.el"
+;;;;;;  "de7d5544612c92ace4fc510f577d62fe")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/pandoc-mode-20131021.1946/pandoc-mode.el
 
 (autoload 'pandoc-mode "pandoc-mode" "\
 Minor mode for interacting with Pandoc.
@@ -25,8 +26,9 @@ This is for use in major mode hooks.
 
 ;;;***
 
-;;;### (autoloads nil nil ("pandoc-mode-pkg.el") (21120 9260 507488
-;;;;;;  780000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/pandoc-mode-20131021.1946/pandoc-mode-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/pandoc-mode-20131021.1946/pandoc-mode.el")
+;;;;;;  (21154 14201 174850 629000))
 
 ;;;***
 

@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (auto-complete) "auto-complete" "auto-complete.el"
-;;;;;;  (21145 2543 351164 997000))
-;;; Generated autoloads from auto-complete.el
+;;;### (autoloads (auto-complete) "auto-complete" "../../../../../.emacs.d/elpa/auto-complete-20131128.233/auto-complete.el"
+;;;;;;  "1346a32ab988aa6b97d876a236bbe39a")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/auto-complete-20131128.233/auto-complete.el
 
 (autoload 'auto-complete "auto-complete" "\
 Start auto-completion at current point.
@@ -14,8 +14,10 @@ Start auto-completion at current point.
 
 ;;;***
 
-;;;### (autoloads nil nil ("auto-complete-config.el" "auto-complete-pkg.el")
-;;;;;;  (21145 2543 430555 335000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/auto-complete-20131128.233/auto-complete-config.el"
+;;;;;;  "../../../../../.emacs.d/elpa/auto-complete-20131128.233/auto-complete-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/auto-complete-20131128.233/auto-complete.el")
+;;;;;;  (21154 14134 950543 637000))
 
 ;;;***
 
