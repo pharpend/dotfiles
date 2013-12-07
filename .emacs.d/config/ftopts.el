@@ -55,3 +55,6 @@
 (add-hook 'perl-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-perl.el")))
+(add-hook 'haskell-cabal-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-cabal.el")))

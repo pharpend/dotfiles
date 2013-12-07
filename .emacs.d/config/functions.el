@@ -5,6 +5,7 @@
 (defalias 'bbo 'ido-switch-buffer-other-window)
 (defalias 'bft 'direx:jump-to-directory-other-window)
 (defalias 'bl 'ibuffer)
+(defalias 'bury 'bury-buffer)
 (defalias 'dr 'ido-dired)
 (defalias 'dro 'dired-other-window)
 (defalias 'eb 'eval-buffer)

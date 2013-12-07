@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Ubuntu Mono 11
+font pango: Ubuntu Bold 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -85,7 +85,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+# bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -149,7 +149,8 @@ bindsym $mod+p mode "resize"
 bar {
     position top
     status_command i3status
-    tray_output LVDS
+    tray_output primary
+    # height 25
     colors{
         background #232323
         statusline #DCDCDC
@@ -162,10 +163,20 @@ bindsym Control+$mod+w exec firefox
 bindsym Control+$mod+c exec chromium
 
 # Autostarted applications
+exec pidgin
 exec guake
+
+# Panel things
+exec nm-applet
+exec parcelite
+exec nitrogen --restore
+exec pnmixer
+# exec --no-startup-id tint2
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
 client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
 client.focused_inactive #333333 #5F676A #ffffff #484e50
 client.unfocused        #333333 #424242 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
+
+focus_follows_mouse no
