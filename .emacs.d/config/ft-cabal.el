@@ -7,4 +7,3 @@
 (setq-local evil-shift-width 2)
 
 (setq-local fill-column 80)
-(turn-on-haskell-indentation)

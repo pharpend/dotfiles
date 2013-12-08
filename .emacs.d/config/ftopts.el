@@ -58,3 +58,6 @@
 (add-hook 'haskell-cabal-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-cabal.el")))
+(add-hook 'conf-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-conf.el")))

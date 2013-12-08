@@ -148,6 +148,7 @@ bindsym $mod+p mode "resize"
 # finds out, if available)
 bar {
     position top
+    # status_command /home/pete/bin/conky-i3bar
     status_command i3status
     tray_output primary
     # height 25
@@ -168,7 +169,7 @@ exec guake
 
 # Panel things
 exec nm-applet
-exec parcelite
+exec parcellite
 exec nitrogen --restore
 exec pnmixer
 # exec --no-startup-id tint2

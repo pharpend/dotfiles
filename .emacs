@@ -34,3 +34,7 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'downcase-region 'disabled nil)
+
+;; (add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp")
+;; (require 'structured-haskell-mode)
+;; (add-hook 'haskell-mode-hook 'structured-haskell-mode)
