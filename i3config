@@ -160,17 +160,25 @@ bar {
 bindsym Control+$mod+e exec emacs
 bindsym Control+$mod+w exec firefox
 bindsym Control+$mod+c exec chromium
+bindsym Control+$mod+f exec thunar
 
 # Autostarted applications
 exec pidgin
 exec guake
+exec deluge
 
 # Panel things
+exec nitrogen --restore
 exec nm-applet
 exec parcellite
-exec nitrogen --restore
 exec pnmixer
-# exec --no-startup-id tint2
+exec xfce4-power-manager
+
+# Non-panel things
+exec synclient TouchpadOff=1
+exec thunar --daemon
+exec xcreensaver -no-splash
+exec xmodmap ~/.Xmodmap
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
 client.focused          #212121 #212121 #00BAA7 #00DA8E
