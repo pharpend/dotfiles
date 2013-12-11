@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Ubuntu Bold 10
+font pango: Source Code Pro 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -148,10 +148,8 @@ bindsym $mod+p mode "resize"
 # finds out, if available)
 bar {
     position top
-    # status_command /home/pete/bin/conky-i3bar
     status_command i3status
     tray_output primary
-    # height 25
     colors{
         background #232323
         statusline #DCDCDC
@@ -175,9 +173,9 @@ exec pnmixer
 # exec --no-startup-id tint2
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
-client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
-client.focused_inactive #333333 #5F676A #ffffff #484e50
-client.unfocused        #333333 #424242 #888888 #292d2e
+client.focused          #212121 #212121 #00BAA7 #00DA8E
+client.focused_inactive #333333 #313131 #19c1ab #484e50
+client.unfocused        #333333 #424242 #557788 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 focus_follows_mouse no
