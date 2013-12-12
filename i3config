@@ -25,7 +25,7 @@ font pango: Source Code Pro 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -36,6 +36,12 @@ bindsym $mod+s exec dmenu_run
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# W-F2 W-F3, W-F4
+bindsym $mod+F2 move container to workspace scratch
+bindsym $mod+F3 fullscreen
+bindsym $mod+F4 kill
+
 
 # change focus
 bindsym $mod+h focus left
@@ -161,6 +167,10 @@ bindsym Control+$mod+e exec emacs
 bindsym Control+$mod+w exec firefox
 bindsym Control+$mod+c exec chromium
 bindsym Control+$mod+f exec thunar
+bindsym Control+$mod+m exec thunderbird
+bindsym Control+$mod+r exec urxvt
+
+bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
 
 # Autostarted applications
 exec pidgin
@@ -175,6 +185,7 @@ exec pnmixer
 exec xfce4-power-manager
 
 # Non-panel things
+exec compton
 exec synclient TouchpadOff=1
 exec thunar --daemon
 exec xcreensaver -no-splash
