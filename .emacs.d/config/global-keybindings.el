@@ -37,6 +37,7 @@
 (global-set-key (kbd "M-d") 'dired)
 (global-set-key (kbd "M-f") 'find-file)
 (global-set-key (kbd "M-b") 'switch-to-buffer)
+(global-set-key (kbd "M-i") 'ibuffer)
 
  ;; C-8 will increase opacity (== decrease transparency)
  ;; C-9 will decrease opacity (== increase transparency

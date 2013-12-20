@@ -26,26 +26,21 @@ alias dud='du --max-depth=1 -B 1024M'
 alias cpuinfo='cat /proc/cpuinfo | grep MHz'
 alias cpuset='sudo cpupower frequency-set'
 alias zi='zile'
-alias colctl='xmodmap -e "keycode 58 = Control_L"'
-alias t='git'
 alias c='cd'
 alias irb='irb --simple-prompt'
 alias pb='pastebinit'
 alias sysd='sudo systemctl'
-alias anx='git annex'
-alias conkystart='source ~/.conky/conkyrings/startconky.sh'
 alias pd='pandoc'
 alias pm='sudo pacman'
-alias obreconf='killall -USR1 openbox'
-alias obrestart='killall -USR2 openbox'
-alias hscomp='ghc --make Test.hs'
-alias hsrun='./Test'
 alias ipy='ipython'
 alias uncapslock='xmodmap -e "keycode 66 = Control_L"'
 alias capslock='xmodmap -e "keycode 66 = Caps_Lock"'
 alias enw='emacs -nw'
 alias gf='git flow'
+alias xmodfix='xmodmap -e "add Control = Control_L"'
 
+# Who has done the most work in a git project? Probably stolen from Stack
+# overflow.
 gbs () {
     git ls-tree -r HEAD |
     sed -re 's/^.{53}//' |
@@ -66,56 +61,28 @@ cdl () {
 }
 alias cd='cdl'
 
-# Emulates openSUSE's cnf (command not found)
-cnf () {
-    for arg in $@; do
-        which $arg
-        yaourt -Ss $arg
-    done
-}
-
 topcmds() {
 	cat ~/.histfile |awk '{print $1}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -rn|head $1
-}
-
-macmods() {
-	xmodmap ~/.Xmacmap
 }
 
 trash() {
     mv $@ ~/.local/share/Trash/files/
 }
-alias del='trash'
+alias rm='trash'
 alias lstrash='ls ~/.local/share/Trash/files/'
-
-colemods() {
-    xmodmap ~/.Xcolemap
-    xmodmap ~/.Xmodmap
-}
 
 # Syntax highlighting
 source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# get the name of the branch we are on
-git_prompt_info() { 
-    git branch | awk '/^\*/ { print $2 }'
-}
-get_git_dirty() { 
-  git diff --quiet || echo '*'
-}
-
-# variables
 setopt prompt_subst
 setopt auto_pushd
 CONFIG="~/.config"
 EDITOR="vim"
 PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}$%f%b '
 REPORTTIME=3
-# RPROMPT='%B[%b%F{magenta}%*%f%B]%b'
 SHELL="/bin/zsh"
 
 PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 PATH=$PATH:$HOME/bin			# Add my programs
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin
-# PATH=$PATH:/opt/lampp

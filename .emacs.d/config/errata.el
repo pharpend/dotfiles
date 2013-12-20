@@ -31,6 +31,8 @@
 
 (setq dabbrev-check-other-buffers t)
 
+(require 'uniquify)                     ;Unique buffer names
+
 (require 'package)
 (package-initialize)
 (elpy-enable)

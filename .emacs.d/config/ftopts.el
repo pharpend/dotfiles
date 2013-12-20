@@ -61,3 +61,6 @@
 (add-hook 'conf-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-conf.el")))
+(add-hook 'vala-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-vala.el")))

@@ -3,7 +3,8 @@
 ;; Make the window look nice
 (if window-system
   (progn
-    (load-theme 'ample-zen t)
+    ;; (load-theme 'ample-zen t)
+    (require 'heroku-theme)
 
     (set-face-attribute 'default nil :font "Source Code Pro-10")
     ))

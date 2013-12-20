@@ -79,3 +79,4 @@
 (require 'magit)
 (require 'markdown-mode)
 (require 'popwin)
+(require 'vala-mode)

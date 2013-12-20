@@ -45,10 +45,7 @@
 (define-key evil-insert-state-map (kbd "<tab>") 'evil-force-normal-state)
 (define-key evil-motion-state-map (kbd "<tab>") 'evil-force-normal-state)
 (define-key evil-normal-state-map (kbd "<tab>") 'evil-force-normal-state)
-;; (setq indent-line-function 'evil-force-normal-state)
-;; (eval-after-load "evil"
-;;   '(progn
-;;      (global-set-key (kbd "<tab>") 'evil-force-normal-state)))
+(setq indent-line-function 'evil-force-normal-state)
 
 ;; SWAP : AND o
 ;; Normal state
@@ -56,6 +53,7 @@
 (define-key evil-normal-state-map (kbd "O") 'execute-extended-command)
 (define-key evil-normal-state-map (kbd ";") 'evil-open-below)
 (define-key evil-normal-state-map (kbd ":") 'evil-open-above)
+
 ;; Visual state
 (define-key evil-visual-state-map (kbd "o") 'evil-ex)
 (define-key evil-visual-state-map (kbd "O") 'execute-extended-command)
