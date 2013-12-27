@@ -38,3 +38,9 @@
           (newalpha (if dec (- oldalpha 10) (+ oldalpha 10))))
     (when (and (>= newalpha frame-alpha-lower-limit) (<= newalpha 100))
       (modify-frame-parameters nil (list (cons 'alpha newalpha))))))
+
+;; Winner mode - save window configurations
+(winner-mode 1)
+
+;; Wrap when moving windows
+(setq windmove-wrap-around t)

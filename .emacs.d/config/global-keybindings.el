@@ -38,6 +38,12 @@
 (global-set-key (kbd "M-f") 'find-file)
 (global-set-key (kbd "M-b") 'switch-to-buffer)
 (global-set-key (kbd "M-i") 'ibuffer)
+(global-set-key (kbd "M-k") 'scroll-up-command)
+(global-set-key (kbd "M-;") 'scroll-down-command)
+(global-set-key (kbd "C-S-h") 'windmove-left)
+(global-set-key (kbd "C-S-n") 'windmove-up)
+(global-set-key (kbd "C-S-e") 'windmove-down)
+(global-set-key (kbd "C-S-i") 'windmove-right)
 
  ;; C-8 will increase opacity (== decrease transparency)
  ;; C-9 will decrease opacity (== increase transparency

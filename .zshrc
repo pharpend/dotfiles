@@ -38,6 +38,8 @@ alias capslock='xmodmap -e "keycode 66 = Caps_Lock"'
 alias enw='emacs -nw'
 alias gf='git flow'
 alias xmodfix='xmodmap -e "add Control = Control_L"'
+alias extmon='xrandr --output VGA2 --left-of LVDS2 --rotate left --auto'
+alias extmoff='xrandr --output VGA2 --off'
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.

@@ -76,3 +76,4 @@
 (define-key evil-normal-state-map (kbd "C-<tab>") 'other-window)
 (define-key evil-normal-state-map (kbd "C-d") 'dired)
 (define-key evil-normal-state-map (kbd "C-x d") 'diff)
+(define-key evil-normal-state-map (kbd "^") 'dired-at-point)
