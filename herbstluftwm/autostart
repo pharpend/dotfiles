@@ -15,13 +15,13 @@ hc keyunbind --all
 
 # keybindings
 # if you have a super key you will be much happier with Mod set to Mod4
-Mod=Mod1    # Use alt as the main modifier
-#Mod=Mod4   # Use the super key as the main modifier
+# Mod=Mod1    # Use alt as the main modifier
+Mod=Mod4   # Use the super key as the main modifier
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn xterm
+hc keybind $Mod-Return spawn terminator
 
 # basic movement
 # focusing clients
@@ -30,9 +30,9 @@ hc keybind $Mod-Down  focus down
 hc keybind $Mod-Up    focus up
 hc keybind $Mod-Right focus right
 hc keybind $Mod-h     focus left
-hc keybind $Mod-j     focus down
-hc keybind $Mod-k     focus up
-hc keybind $Mod-l     focus right
+hc keybind $Mod-n     focus down
+hc keybind $Mod-e     focus up
+hc keybind $Mod-i     focus right
 
 # moving clients
 hc keybind $Mod-Shift-Left  shift left
@@ -40,9 +40,9 @@ hc keybind $Mod-Shift-Down  shift down
 hc keybind $Mod-Shift-Up    shift up
 hc keybind $Mod-Shift-Right shift right
 hc keybind $Mod-Shift-h     shift left
-hc keybind $Mod-Shift-j     shift down
-hc keybind $Mod-Shift-k     shift up
-hc keybind $Mod-Shift-l     shift right
+hc keybind $Mod-Shift-n     shift down
+hc keybind $Mod-Shift-e     shift up
+hc keybind $Mod-Shift-i     shift right
 
 # splitting frames
 # create an empty frame at the specified direction
@@ -54,9 +54,9 @@ hc keybind $Mod-Control-space split explode
 # resizing frames
 resizestep=0.05
 hc keybind $Mod-Control-h       resize left +$resizestep
-hc keybind $Mod-Control-j       resize down +$resizestep
-hc keybind $Mod-Control-k       resize up +$resizestep
-hc keybind $Mod-Control-l       resize right +$resizestep
+hc keybind $Mod-Control-n       resize down +$resizestep
+hc keybind $Mod-Control-e       resize up +$resizestep
+hc keybind $Mod-Control-i       resize right +$resizestep
 hc keybind $Mod-Control-Left    resize left +$resizestep
 hc keybind $Mod-Control-Down    resize down +$resizestep
 hc keybind $Mod-Control-Up      resize up +$resizestep
@@ -98,7 +98,14 @@ hc keybind $Mod-BackSpace   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
-hc keybind $Mod-i jumpto urgent
+hc keybind $Mod-l jumpto urgent
+
+# Applications starts
+hc keybind $Mod-Control-c       spawn chromium
+hc keybind $Mod-Control-m       spawn emacs
+hc keybind $Mod-Control-t       spawn terminator
+hc keybind $Mod-Control-s       spawn dmenu
+hc keybind Print                spawn scrot -e 'mv $f ~/Pictures/screenshots'
 
 # colors
 hc set frame_border_active_color '#222222'
@@ -144,7 +151,22 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # find the panel
 panel=~/.config/herbstluftwm/panel.sh
 [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-    # start it on each monitor
-    "$panel" $monitor &
-done
+# for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+#     # start it on each monitor
+#     "$panel" $monitor &
+# done
+
+# Autostarted programs
+# Applications
+(sleep 1s && guake) &
+# Panel
+(sleep 1s && nitrogen --restore) &
+(sleep 1s && nm-applet) &
+(sleep 1s && pnmixer) &
+(sleep 1s && parcellite) &
+(sleep 1s && xfce4-power-manager) &
+# Non Panel
+(sleep 1s && dunst) &
+(sleep 1s && synclient TouchpadOff=1) &
+(sleep 1s && thunar --daemon) &
+(sleep 10s && xmodmap ~/.Xmodmap) &
