@@ -40,6 +40,8 @@ alias gf='git flow'
 alias xmodfix='xmodmap -e "add Control = Control_L"'
 alias extmon='xrandr --output VGA2 --left-of LVDS2 --rotate left --auto'
 alias extmoff='xrandr --output VGA2 --off'
+alias hc='herbstclient'
+alias hlwm='herbstluftwm'
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
