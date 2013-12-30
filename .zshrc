@@ -42,6 +42,9 @@ alias extmon='xrandr --output VGA2 --left-of LVDS2 --rotate left --auto'
 alias extmoff='xrandr --output VGA2 --off'
 alias hc='herbstclient'
 alias hlwm='herbstluftwm'
+alias lapwp='feh --bg-fill ~/Pictures/wallpaper/train-track-2560x1600.jpg'
+alias horwp='feh --bg-fill ~/Pictures/wallpaper/train-track-2560x1600.jpg'
+alias vertwp='feh --bg-fill ~/Pictures/wallpaper/sunset-1200x1920.jpg'
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
