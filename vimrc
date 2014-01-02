@@ -1,5 +1,5 @@
 " My .vimrc file
-" Copyright (c) 2013 Peter Harpending. <pharpend2@gmail.com>
+" Copyright (c) 2014 Peter Harpending. <pharpend2@gmail.com>
 "
 " Packages: 
 "   haskellmode-vim     https://github.com/lukerandall/haskellmode-vim.git
@@ -13,7 +13,7 @@ syntax on
 filetype plugin on
 filetype indent on
 
-colorscheme elflord
+colorscheme delek
 
 set autoindent
 set smartindent 
