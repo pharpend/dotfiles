@@ -8,7 +8,7 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #1F1F1F 84
+background_color = #1F1F1F 82
 border_color = #656565 100
 
 # ID 2
@@ -66,7 +66,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = Ubuntu 10
+task_font = Droid Sans Bold 10
 task_font_color = #FFFFFF 60
 task_active_font_color = #FFFFFF 80
 task_urgent_font_color = #FFFFFF 80
@@ -83,7 +83,7 @@ systray_icon_asb = 70 0 0
 
 # Clock
 time1_format = %A, %e %B, %H.%M
-time1_font = Ubuntu 10
+time1_font = Droid Sans Bold 10
 clock_font_color = #FFFFFF 100
 clock_padding = 1 0
 clock_background_id = 1

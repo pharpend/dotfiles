@@ -11,12 +11,13 @@ fi
 x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
-panel_height=16
-font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+panel_height=24
+font="-*-fixed-medium-*-*-*-14-*-*-*-*-*-*-*"
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
 selfg='#101010'
 
+# Systemtray
 ####
 # Try to find textwidth binary.
 # In e.g. Ubuntu, this is named dzen2-textwidth.
@@ -182,3 +183,5 @@ hc pad $monitor $panel_height
 } 2> /dev/null | dzen2 -w $panel_width -x $x -y $y -fn "$font" -h $panel_height \
     -e 'button3=' \
     -ta l -bg "$bgcolor" -fg '#efefef'
+
+stalonetray

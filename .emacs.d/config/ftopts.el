@@ -1,6 +1,7 @@
 ;; Filetype options
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . common-lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("i3config" . conf-mode))
 
@@ -64,3 +65,12 @@
 (add-hook 'vala-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-vala.el")))
+(add-hook 'scala-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-scala.el")))
+(add-hook 'nxml-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-nxml.el")))
+(add-hook 'java-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-java.el")))

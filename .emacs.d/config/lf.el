@@ -4,7 +4,9 @@
 (if window-system
   (progn
     ;; (load-theme 'ample-zen t)
-    (require 'heroku-theme)
+    ;; (require 'heroku-theme)
+    (load-file "~/.emacs.d/themes/sunburn.el")
+    (color-theme-sunburn)
 
     (set-face-attribute 'default nil :font "Source Code Pro-10")
     ))
@@ -27,8 +29,8 @@
 (setq line-spacing 1)
 (column-number-mode 1)
 (global-linum-mode 1)
-(linum-relative-toggle)
-(linum-relative-toggle)
+(setq linum-format "%4d ")
+(global-hl-line-mode 1)
 
 (defun djcb-opacity-modify (&optional dec)
   "modify the transparency of the emacs frame; if DEC is t,

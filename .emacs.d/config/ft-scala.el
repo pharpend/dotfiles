@@ -8,4 +8,8 @@
 (setq-local tab-stop-list (number-sequence 2 200 2))
 (setq-local indent-tabs-mode nil)
 
-(rainbow-mode 1)
+;; (linum-mode 1)
+;; (column-number-mode 1)
+
+(setq-local comment-start "// ")
+(setq-local comment-end "")

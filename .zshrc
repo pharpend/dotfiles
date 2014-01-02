@@ -42,9 +42,11 @@ alias extmon='xrandr --output VGA2 --left-of LVDS2 --rotate left --auto'
 alias extmoff='xrandr --output VGA2 --off'
 alias hc='herbstclient'
 alias hlwm='herbstluftwm'
-alias lapwp='feh --bg-fill ~/Pictures/wallpaper/train-track-2560x1600.jpg'
-alias horwp='feh --bg-fill ~/Pictures/wallpaper/train-track-2560x1600.jpg'
-alias vertwp='feh --bg-fill ~/Pictures/wallpaper/sunset-1200x1920.jpg'
+alias wp-train='feh --bg-fill ~/Pictures/wallpaper/train-track-2560x1600.jpg'
+alias wp-cat='feh --bg-fill ~/Pictures/wallpaper/cat-planet-1920x1200.jpg'
+alias wp-frog='feh --bg-fill ~/Pictures/wallpaper/frog-rain-2880x1920.jpg'
+alias wp-obama='feh --bg-fill ~/Pictures/wallpaper/obama-1980x1076.jpg'
+alias wp-vert='feh --bg-fill ~/Pictures/wallpaper/sunset-1200x1920.jpg'
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
@@ -90,6 +92,8 @@ REPORTTIME=3
 SHELL="/bin/zsh"
 
 PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
-PATH=$PATH:$HOME/bin			# Add my programs
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin
+PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin # Haskell
+PATH=$PATH:$HOME/.config/herbstluftwm        # herbstluftwm
+PATH=$PATH:$HOME/code/bin         # Add my programs
+PATH=$PATH:$HOME/code/bleu/bleu   # Add bleu
