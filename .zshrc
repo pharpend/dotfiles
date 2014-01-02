@@ -47,6 +47,7 @@ alias wp-cat='feh --bg-fill ~/Pictures/wallpaper/cat-planet-1920x1200.jpg'
 alias wp-frog='feh --bg-fill ~/Pictures/wallpaper/frog-rain-2880x1920.jpg'
 alias wp-obama='feh --bg-fill ~/Pictures/wallpaper/obama-1980x1076.jpg'
 alias wp-vert='feh --bg-fill ~/Pictures/wallpaper/sunset-1200x1920.jpg'
+alias wp-galaxy='feh --bg-fill ~/Pictures/wallpaper/another-fucking-galaxy-1920x1080.jpg'
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
