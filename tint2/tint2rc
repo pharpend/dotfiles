@@ -9,12 +9,12 @@
 rounded = 1
 border_width = 1
 background_color = #FF007E 0
-border_color = #5A5A5A 16
+border_color = #5A5A5A 9
 
 # ID 2
-rounded = 2
+rounded = 3
 border_width = 0
-background_color = #00FD4C 61
+background_color = #508DBC 63
 border_color = #FFFFFF 100
 
 # ID 3
@@ -24,9 +24,9 @@ background_color = #96FF00 0
 border_color = #FF0000 100
 
 # Panel
-panel_monitor = all
+panel_monitor = 1
 panel_position = top center horizontal
-panel_size = 100% 24
+panel_size = 100% 30
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
@@ -52,7 +52,7 @@ urgent_nb_of_blink = 8
 task_icon = 1
 task_text = 0
 task_centered = 1
-task_maximum_size = 24 24
+task_maximum_size = 30 30
 task_padding = 5 0
 task_background_id = 1
 task_active_background_id = 2
@@ -74,16 +74,18 @@ task_iconified_font_color = #FFFFFF 60
 font_shadow = 0
 
 # System Tray
-systray = 0
+systray = 1
 systray_padding = 5 1 5
 systray_sort = ascending
-systray_background_id = 1
+systray_background_id = 3
 systray_icon_size = 16
-systray_icon_asb = 70 0 0
+systray_icon_asb = 100 0 0
 
 # Clock
-time1_format = %A, %B %e, %Y, %H:%M:%S
+time1_format = %H:%M
 time1_font = Droid Sans Bold 10
+time2_format = %e %^B %Y
+time2_font = Droid Sans Bold 8
 clock_font_color = #FFFFFF 100
 clock_padding = 10 0
 clock_background_id = 0

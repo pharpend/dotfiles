@@ -63,6 +63,12 @@ hc keybind $Mod-Control-Down    resize down +$resizestep
 hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
+# choosing layouts
+hc keybind $Mod-Shift-u   set_layout vertical
+hc keybind $Mod-Shift-o   set_layout horizontal
+hc keybind $Mod-Shift-s   set_layout max
+hc keybind $Mod-Shift-g   set_layout grid
+
 # tags
 tag_names=( {1..9} )
 tag_keys=( {1..9} 0 )
@@ -117,31 +123,34 @@ hc keybind $Mod-F12         spawn amixer set Master 8%+
 hc keybind $Mod+Shift+l     spawn notify-send -u low "$(hc layout)"
 
 # colors
-hc set frame_border_active_color '#222222'
-hc set frame_border_normal_color '#101010'
-hc set frame_bg_normal_color '#0f9072'
-hc set frame_bg_active_color '#54fc64'
-hc set frame_border_width 0
+gap=8
+hc set frame_border_normal_color '#465274'
+hc set frame_border_active_color '#4692a4'
+hc set frame_bg_normal_color '#101010'
+hc set frame_bg_normal_color '#101010'
+hc set frame_border_width 1
 hc set window_border_width 1
-hc set window_border_inner_width 1
-hc set window_border_normal_color '#468294'
-hc set window_border_active_color '#46f2e4'
-hc set always_show_frame 0
+hc set window_border_inner_width 0
+hc set window_border_normal_color '#166294'
+hc set window_border_active_color '#46c2e4'
+hc set always_show_frame 1
 hc set frame_bg_transparent 1
-hc set frame_transparent_width 1
+hc set frame_transparent_width 0
 hc set frame_gap 0
+
 # add overlapping window borders
-hc set window_gap 15
+hc set window_gap $gap
 hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
+
 # rules
 hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
 hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
-hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole|Guake)' focus=on
+hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm.*|Konsole|Guake)' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
@@ -163,21 +172,21 @@ if [ ${EXT_ATTACHED} -gt 1 ]; then
   hc remove_monitor 0
 fi
 
-# find the panel
-# panel=~/.config/herbstluftwm/panel.sh
-# [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-# GUAKE_RUNNING=`ps --no-headers -Cguake | wc -l`
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-    # start it on each monitor
-    hc pad $monitor 26
+   hc keybind $Mod-Control-$((monitor+1)) focus_monitor $monitor
 done
 
+hc pad 0 30 1 1 1
+TINT2_RUNNING=`ps --no-headers -Ctint2 | wc -l`
+if [ ${TINT2_RUNNING} -ge 1 ]; then
+    killall tint2
+fi
 tint2 &
 
 # Autostarted programs
 apptraystart () {
-  (sleep 1s && guake) &
   # Panel
+  (sleep 1s && google-musicmanager) &
   (sleep 1s && nm-applet) &
   (sleep 1s && pnmixer) &
   (sleep 1s && parcellite) &
@@ -191,7 +200,7 @@ apptraystart () {
 
 # Applications
 # run everything - if guake isn't running
-GUAKE_RUNNING=`ps --no-headers -Cguake | wc -l`
-if [ ${GUAKE_RUNNING} -lt 1 ]; then
+DUNST_RUNNING=`ps --no-headers -Cdunst | wc -l`
+if [ ${DUNST_RUNNING} -lt 1 ]; then
     apptraystart
 fi

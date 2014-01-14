@@ -48,6 +48,12 @@ alias wp-frog='feh --bg-fill ~/Pictures/wallpaper/frog-rain-2880x1920.jpg'
 alias wp-obama='feh --bg-fill ~/Pictures/wallpaper/obama-1980x1076.jpg'
 alias wp-vert='feh --bg-fill ~/Pictures/wallpaper/sunset-1200x1920.jpg'
 alias wp-galaxy='feh --bg-fill ~/Pictures/wallpaper/another-fucking-galaxy-1920x1080.jpg'
+alias wp-kitten='feh --bg-fill ~/Pictures/wallpaper/kitten-3600x2019.jpg'
+alias wp-wood='feh --bg-fill ~/Pictures/wallpaper/wood-grain-4493x1310.jpg'
+alias wp-maple='feh --bg-fill ~/Pictures/wallpaper/bigleaf-maple-2000x1333.jpg'
+alias wp-meteor='feh --bg-fill ~/Pictures/wallpaper/meteor-shower-1920x1080.jpg'
+alias wp-star='feh --bg-fill ~/Pictures/wallpaper/star-shower-1920x1080.jpg'
+alias wp-salt='feh --bg-fill ~/Pictures/wallpaper/green-salt-3888x2592.jpg'
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
