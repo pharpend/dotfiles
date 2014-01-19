@@ -4,6 +4,7 @@
 " Packages: 
 "   haskellmode-vim     https://github.com/lukerandall/haskellmode-vim.git
 "   nerdcommenter       git@github.com:scrooloose/nerdcommenter.git
+"   powerline           https://github.com/Lokaltog/powerline.git
 "   vim-fugitive        git://github.com/tpope/vim-fugitive.git
 "   vim-markdown        https://github.com/plasticboy/vim-markdown.git
 "   vim-scala           https://github.com/derekwyatt/vim-scala 

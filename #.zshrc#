@@ -1,0 +1,65 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/pete/.zshrc'
+
+#autoload -U colors && colors
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+source ~/.sh-aliases.sh
+
+# Who has done the most work in a git project? Probably stolen from Stack
+# overflow.
+gbs () {
+    git ls-tree -r HEAD |
+    sed -re 's/^.{53}//' |
+    while read filename; do file "$filename"; done |
+    grep -E ': .*text' |
+    sed -r -e 's/: .*//' |
+    while read filename; do git blame -w "$filename"; done |
+    sed -r -e 's/.*\((.*)[0-9]{4}-[0-9]{2}-[0-9]{2} .*/\1/' -e 's/ +$//' |
+    sort |
+    uniq -c
+}
+
+
+# cdl - cd and ls
+cdl () {
+	cd $@
+	ls
+}
+alias cd='cdl'
+
+topcmds() {
+	cat ~/.histfile |awk '{print $1}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -rn|head $1
+}
+
+trash() {
+    mv $@ ~/.local/share/Trash/files/
+}
+alias rm='trash'
+alias lstrash='ls ~/.local/share/Trash/files/'
+
+# Syntax highlighting
+source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+setopt prompt_subst
+setopt auto_pushd
+CONFIG="~/.config"
+EDITOR="vim"
+PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}$%f%b '
+REPORTTIME=3
+SHELL="/bin/zsh"
+
+PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin # Haskell
+PATH=$PATH:$HOME/.config/herbstluftwm        # herbstluftwm
+PATH=$PATH:$HOME/code/bin         # Add my programs
+PATH=$PATH:$HOME/code/bleu/bleu   # Add bleu

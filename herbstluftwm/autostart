@@ -109,6 +109,7 @@ hc keybind $Mod-l jumpto urgent
 
 # Applications starts
 hc keybind $Mod-Control-c   spawn chromium
+hc keybind $Mod-Control-v   spawn chromium --incognito
 hc keybind $Mod-Control-m   spawn emacs
 hc keybind $Mod-Control-t   spawn xfce4-terminal
 hc keybind $Mod-Control-s   spawn dmenu_run
@@ -122,17 +123,19 @@ hc keybind $Mod-F12         spawn amixer set Master 8%+
 # Information
 hc keybind $Mod+Shift+l     spawn notify-send -u low "$(hc layout)"
 
+# hc set window_border_normal_color '#166294'
+# hc set window_border_active_color '#46c2e4'
 # colors
-gap=8
-hc set frame_border_normal_color '#465274'
-hc set frame_border_active_color '#4692a4'
+gap=2
+hc set frame_border_normal_color '#6652b4'
+hc set frame_border_active_color '#a692e4'
 hc set frame_bg_normal_color '#101010'
 hc set frame_bg_normal_color '#101010'
-hc set frame_border_width 1
+hc set frame_border_width 0
 hc set window_border_width 1
 hc set window_border_inner_width 0
-hc set window_border_normal_color '#166294'
-hc set window_border_active_color '#46c2e4'
+hc set window_border_normal_color '#463294'
+hc set window_border_active_color '#9672d4'
 hc set always_show_frame 1
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
@@ -155,6 +158,8 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule class~'(.*[Dd]menu.*)' manage=off
+# hc rule class~'(.*[Kk]upfer.*)' manage=off
+# hc rule class~'(.*[Kk]upfer.*)' focus=on
 
 # unlock, just to be sure
 hc unlock
@@ -198,9 +203,12 @@ apptraystart () {
   (sleep 10s && xmodmap ~/.Xmodmap) &
 }
 
+
 # Applications
 # run everything - if guake isn't running
 DUNST_RUNNING=`ps --no-headers -Cdunst | wc -l`
 if [ ${DUNST_RUNNING} -lt 1 ]; then
     apptraystart
 fi
+
+feh --bg-fill ~/Pictures/wallpaper/meteor-shower-1920x1080.jpg
