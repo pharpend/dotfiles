@@ -7,20 +7,20 @@
 # Background definitions
 # ID 1
 rounded = 1
-border_width = 1
-background_color = #FF007E 0
-border_color = #5A5A5A 7
+border_width = 0
+background_color = #212121 60
+border_color = #CECECE 40
 
 # ID 2
 rounded = 3
 border_width = 0
-background_color = #508DBC 61
-border_color = #FFFFFF 100
+background_color = #212121 60
+border_color = #414141 47
 
 # ID 3
-rounded = 2
+rounded = 0
 border_width = 0
-background_color = #212121 55
+background_color = #212121 60
 border_color = #FF0000 100
 
 # Panel
@@ -43,7 +43,7 @@ strut_policy = follow_size
 
 # Taskbar
 taskbar_mode = multi_desktop
-taskbar_padding = 3 2 0
+taskbar_padding = 1 1 0
 taskbar_background_id = 0
 #taskbar_active_background_id = 0
 
@@ -51,25 +51,25 @@ taskbar_background_id = 0
 urgent_nb_of_blink = 8
 task_icon = 1
 task_text = 0
-task_centered = 1
+task_centered = 0
 task_maximum_size = 30 30
-task_padding = 5 0
-task_background_id = 1
-task_active_background_id = 2
-task_urgent_background_id = 2
+task_padding = 1 1
+task_background_id = 0
+task_active_background_id = 0
+task_urgent_background_id = 3
 task_iconified_background_id = 3
 
 # Task Icons
-task_icon_asb = 100 0 0
+task_icon_asb = 100 -10 -20
 task_active_icon_asb = 100 0 0
-task_urgent_icon_asb = 100 0 0
-task_iconified_icon_asb = 70 0 0
+task_urgent_icon_asb = 0 0 0
+task_iconified_icon_asb = 0 0 0
 
 # Fonts
 task_font = Droid Sans Bold 10
-task_font_color = #FFFFFF 60
-task_active_font_color = #FFFFFF 80
-task_urgent_font_color = #FFFFFF 80
+task_font_color = #DDDDDD 100
+task_active_font_color = #F0F0F0 100
+task_urgent_font_color = #FF0000 100
 task_iconified_font_color = #FFFFFF 60
 font_shadow = 0
 
@@ -77,7 +77,7 @@ font_shadow = 0
 systray = 1
 systray_padding = 5 1 5
 systray_sort = ascending
-systray_background_id = 3
+systray_background_id = 2
 systray_icon_size = 16
 systray_icon_asb = 100 0 0
 

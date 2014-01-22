@@ -134,8 +134,8 @@ hc set frame_bg_normal_color '#101010'
 hc set frame_border_width 0
 hc set window_border_width 1
 hc set window_border_inner_width 0
-hc set window_border_normal_color '#463294'
-hc set window_border_active_color '#9672d4'
+hc set window_border_normal_color '#367284'
+hc set window_border_active_color '#76c2f4'
 hc set always_show_frame 1
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
@@ -191,7 +191,7 @@ tint2 &
 # Autostarted programs
 apptraystart () {
   # Panel
-  (sleep 1s && google-musicmanager) &
+#  (sleep 1s && google-musicmanager) &
   (sleep 1s && nm-applet) &
   (sleep 1s && pnmixer) &
   (sleep 1s && parcellite) &

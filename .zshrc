@@ -52,8 +52,12 @@ alias wp-kitten='feh --bg-fill ~/Pictures/wallpaper/kitten-3600x2019.jpg'
 alias wp-wood='feh --bg-fill ~/Pictures/wallpaper/wood-grain-4493x1310.jpg'
 alias wp-maple='feh --bg-fill ~/Pictures/wallpaper/bigleaf-maple-2000x1333.jpg'
 alias wp-meteor='feh --bg-fill ~/Pictures/wallpaper/meteor-shower-1920x1080.jpg'
+alias wp-fag='feh --bg-fill ~/Pictures/wallpaper/arch-fag-paper-1920x1080.png'
 alias wp-star='feh --bg-fill ~/Pictures/wallpaper/star-shower-1920x1080.jpg'
 alias wp-salt='feh --bg-fill ~/Pictures/wallpaper/green-salt-3888x2592.jpg'
+alias wp-red='feh --bg-fill ~/Pictures/wallpaper/red-forest-2560x1440.jpg'
+alias irssi='irssi -n l0cust'
+alias screenfetch='screenfetch -D arch' 
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
@@ -93,14 +97,17 @@ source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 setopt prompt_subst
 setopt auto_pushd
 CONFIG="~/.config"
-EDITOR="vim"
 PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}$%f%b '
 REPORTTIME=3
-SHELL="/bin/zsh"
 
-PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin # Haskell
-PATH=$PATH:$HOME/.config/herbstluftwm        # herbstluftwm
-PATH=$PATH:$HOME/code/bin         # Add my programs
-PATH=$PATH:$HOME/code/bleu/bleu   # Add bleu
+export EDITOR="vim"
+export SHELL="/usr/bin/zsh"
+export rvm_ignore_gemrc_issues=1
+
+export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin # Haskell
+export PATH=$PATH:$HOME/.config/herbstluftwm        # herbstluftwm
+export PATH=$PATH:$HOME/code/bin         # Add my programs
+export PATH=$PATH:$HOME/code/bleu/bleu   # Add bleu
+export PATH=$PATH:/opt/android-sdk/platform-tools

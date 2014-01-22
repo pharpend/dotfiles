@@ -3,10 +3,10 @@
 ;; Make the window look nice
 (if window-system
   (progn
-    (load-theme 'ample-zen t)
+    ;; (load-theme 'ample-zen t)
     ;; (require 'heroku-theme)
-    ;; (load-file "~/.emacs.d/themes/sunburn.el")
-    ;; (color-theme-sunburn)
+    (load-file "~/.emacs.d/themes/sunburn.el")
+    (color-theme-sunburn)
 
     (set-face-attribute 'default nil :font "Source Code Pro-10")
     ))
