@@ -15,7 +15,7 @@ border_color = #CECECE 40
 rounded = 4
 border_width = 0
 background_color = #212121 60
-border_color = #414141 45
+border_color = #414141 44
 
 # ID 3
 rounded = 0
@@ -24,7 +24,7 @@ background_color = #212121 60
 border_color = #FF0000 100
 
 # Panel
-panel_monitor = 1
+panel_monitor = 2
 panel_position = top center horizontal
 panel_size = 100% 30
 panel_margin = 0 0
