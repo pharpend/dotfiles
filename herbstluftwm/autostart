@@ -22,7 +22,7 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-k close_or_remove
-hc keybind $Mod-Return spawn xfce4-terminal
+hc keybind $Mod-Return spawn terminator
 
 # basic movement
 # focusing clients
@@ -111,7 +111,7 @@ hc keybind $Mod-l jumpto urgent
 hc keybind $Mod-Control-c   spawn chromium
 hc keybind $Mod-Control-v   spawn chromium --incognito
 hc keybind $Mod-Control-m   spawn emacs
-hc keybind $Mod-Control-t   spawn xfce4-terminal
+hc keybind $Mod-Control-t   spawn terminator
 hc keybind $Mod-Control-s   spawn dmenu_run
 hc keybind $Mod-w           spawn dmenu_run
 hc keybind $Mod-Control-f   spawn thunar
@@ -158,6 +158,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule class~'(.*[Dd]menu.*)' manage=off
+hc rule class~'(.*[Pp]anel.*)' manage=off
 # hc rule class~'(.*[Kk]upfer.*)' manage=off
 # hc rule class~'(.*[Kk]upfer.*)' focus=on
 
@@ -196,10 +197,11 @@ apptraystart () {
   (sleep 1s && pnmixer) &
   (sleep 1s && parcellite) &
   (sleep 1s && xfce4-power-manager) &
+  (sleep 1s && yapan) &
   # Non Panel
   (sleep 1s && dunst) &
   (sleep 1s && synclient TouchpadOff=1) &
-  (sleep 1s && thunar --daemon) &
+  # (sleep 1s && thunar --daemon) &
   (sleep 10s && xmodmap ~/.Xmodmap) &
 }
 
@@ -211,4 +213,4 @@ if [ ${DUNST_RUNNING} -lt 1 ]; then
     apptraystart
 fi
 
-feh --bg-fill ~/Pictures/wallpaper/meteor-shower-1920x1080.jpg
+nitrogen --restore

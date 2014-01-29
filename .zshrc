@@ -59,6 +59,7 @@ alias wp-red='feh --bg-fill ~/Pictures/wallpaper/red-forest-2560x1440.jpg'
 alias wp-green='feh --bg-fill ~/Pictures/wallpaper/green-forest-2048x1365.jpg'
 alias irssi='irssi -n l0cust'
 alias screenfetch='screenfetch -D arch' 
+alias fehb='feh --bg-fill'
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
@@ -74,6 +75,9 @@ gbs () {
     uniq -c
 }
 
+psc () {
+    ps ax | grep $@
+}
 
 # cdl - cd and ls
 cdl () {
