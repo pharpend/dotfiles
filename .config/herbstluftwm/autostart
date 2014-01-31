@@ -191,6 +191,7 @@ tint2 &
 # Autostarted programs
 apptraystart () {
   # Panel
+  (sleep 1s && dropboxd) &
   (sleep 1s && kalu) &
   (sleep 1s && nm-applet) &
   (sleep 1s && pnmixer) &
