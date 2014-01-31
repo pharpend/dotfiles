@@ -6,27 +6,27 @@
 
 # Background definitions
 # ID 1
-rounded = 0
+rounded = 1
 border_width = 0
-background_color = #1F1F1F 85
-border_color = #656565 100
+background_color = #FF0000 60
+border_color = #CECECE 40
 
 # ID 2
-rounded = 2
+rounded = 4
 border_width = 0
-background_color = #777777 60
-border_color = #FFFFFF 40
+background_color = #212121 60
+border_color = #414141 44
 
 # ID 3
-rounded = 2
+rounded = 0
 border_width = 0
-background_color = #0C0C0C 60
-border_color = #FFFFFF 60
+background_color = #000000 39
+border_color = #FF0000 100
 
 # Panel
-panel_monitor = all
+panel_monitor = 2
 panel_position = top center horizontal
-panel_size = 100% 32
+panel_size = 100% 30
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
@@ -42,51 +42,53 @@ autohide_height = 5
 strut_policy = follow_size
 
 # Taskbar
-taskbar_mode = single_desktop
-taskbar_padding = 3 2 5
-taskbar_background_id = 1
+taskbar_mode = multi_desktop
+taskbar_padding = 1 1 0
+taskbar_background_id = 0
 #taskbar_active_background_id = 0
 
 # Tasks
 urgent_nb_of_blink = 8
 task_icon = 1
-task_text = 1
-task_centered = 1
-task_maximum_size = 170 25
-task_padding = 0 1
-task_background_id = 3
-task_active_background_id = 2
-task_urgent_background_id = 2
+task_text = 0
+task_centered = 0
+task_maximum_size = 30 30
+task_padding = 1 1
+task_background_id = 0
+task_active_background_id = 0
+task_urgent_background_id = 3
 task_iconified_background_id = 3
 
 # Task Icons
-task_icon_asb = 70 0 0
+task_icon_asb = 100 -10 -20
 task_active_icon_asb = 100 0 0
-task_urgent_icon_asb = 100 0 0
-task_iconified_icon_asb = 70 0 0
+task_urgent_icon_asb = 0 0 0
+task_iconified_icon_asb = 0 0 0
 
 # Fonts
-task_font = Ubuntu 10
-task_font_color = #FFFFFF 60
-task_active_font_color = #FFFFFF 80
-task_urgent_font_color = #FFFFFF 80
+task_font = Droid Sans Bold 10
+task_font_color = #DDDDDD 100
+task_active_font_color = #F0F0F0 100
+task_urgent_font_color = #FF0000 100
 task_iconified_font_color = #FFFFFF 60
 font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 5 1 5
-systray_sort = left2right
-systray_background_id = 1
+systray_padding = 16 1 8
+systray_sort = ascending
+systray_background_id = 2
 systray_icon_size = 16
-systray_icon_asb = 70 0 0
+systray_icon_asb = 100 0 0
 
 # Clock
-time1_format = %A, %e %B, %H.%M
-time1_font = Ubuntu 10
+time1_format = %H:%M
+time1_font = Source Sans Pro Semi-Bold 10
+time2_format = %^A, %e %^B %Y
+time2_font = Source Sans Pro Semi-Bold 8
 clock_font_color = #FFFFFF 100
-clock_padding = 1 0
-clock_background_id = 1
+clock_padding = 10 0
+clock_background_id = 0
 
 # Tooltips
 tooltip = 0

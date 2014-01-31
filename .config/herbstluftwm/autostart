@@ -172,17 +172,12 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # or simply
 hc detect_monitors
 
-# Delete the laptop monitor if external monitor is attached
-EXT_ATTACHED=`hc list_monitors | wc -l`
-if [ ${EXT_ATTACHED} -gt 1 ]; then
-  hc remove_monitor 0
-fi
-
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
    hc keybind $Mod-Control-$((monitor+1)) focus_monitor $monitor
 done
 
-hc pad 0 30 1 1 1
+hc pad 0 1 1 1 1
+hc pad 1 30 1 1 1
 TINT2_RUNNING=`ps --no-headers -Ctint2 | wc -l`
 if [ ${TINT2_RUNNING} -ge 1 ]; then
     killall tint2
@@ -192,17 +187,22 @@ tint2 &
 # Autostarted programs
 apptraystart () {
   # Panel
-#  (sleep 1s && google-musicmanager) &
+  (sleep 1s && kalu) &
   (sleep 1s && nm-applet) &
   (sleep 1s && pnmixer) &
   (sleep 1s && parcellite) &
   (sleep 1s && xfce4-power-manager) &
-  (sleep 1s && yapan) &
   # Non Panel
   (sleep 1s && dunst) &
   (sleep 1s && synclient TouchpadOff=1) &
-  # (sleep 1s && thunar --daemon) &
-  (sleep 10s && xmodmap ~/.Xmodmap) &
+  (sleep 1s && thunar --daemon) &
+  (sleep 1s && ubuntuone-launch) &
+  (sleep 1s && udiskie --tray) &
+  (sleep 1s && yapan) &
+  # Non Panel
+  (sleep 1s && dunst) &
+  (sleep 1s && thunar --daemon) &
+  (sleep 1s && ubuntuone-launch) &
 }
 
 

@@ -93,7 +93,6 @@ topcmds() {
 trash() {
     mv $@ ~/.local/share/Trash/files/
 }
-alias rm='trash'
 alias lstrash='ls ~/.local/share/Trash/files/'
 
 # Syntax highlighting
