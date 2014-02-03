@@ -13,3 +13,5 @@
 
 (setq-local comment-start "// ")
 (setq-local comment-end "")
+
+(local-set-key (kbd "M-e") 'comment-open-above)
