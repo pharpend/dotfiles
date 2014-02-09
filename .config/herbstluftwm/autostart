@@ -196,6 +196,7 @@ apptraystart () {
   (sleep 1s && nm-applet) &
   (sleep 1s && pnmixer) &
   (sleep 1s && parcellite) &
+  (sleep 1s && xfce4-power-manager) &
   # Non Panel
   (sleep 1s && dunst) &
   (sleep 1s && thunar --daemon) &
