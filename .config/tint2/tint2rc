@@ -15,12 +15,12 @@ border_color = #CECECE 40
 rounded = 4
 border_width = 0
 background_color = #212121 60
-border_color = #414141 42
+border_color = #414141 41
 
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #000000 38
+background_color = #000000 37
 border_color = #FF0000 100
 
 # Panel
@@ -78,7 +78,7 @@ systray = 1
 systray_padding = 16 1 8
 systray_sort = ascending
 systray_background_id = 2
-systray_icon_size = 16
+systray_icon_size = 12
 systray_icon_asb = 100 0 0
 
 # Clock

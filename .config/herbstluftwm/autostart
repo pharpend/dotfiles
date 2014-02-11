@@ -136,9 +136,9 @@ hc set frame_bg_normal_color '#101010'
 hc set frame_border_width 0
 hc set window_border_width 1
 hc set window_border_inner_width 0
-hc set window_border_normal_color '#367284'
-hc set window_border_active_color '#76c2f4'
-hc set always_show_frame 1
+hc set window_border_normal_color '#265264'
+hc set window_border_active_color '#b6e2f4'
+hc set always_show_frame 0
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_gap 0
