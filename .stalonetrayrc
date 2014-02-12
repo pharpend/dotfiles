@@ -13,7 +13,7 @@
 
 # background <color>         # color can be specified as an HTML hex triplet or
                              # as a name from rgb.txt, note that '#' must be quoted
-background "#101010"
+background "#333"
 
 # decorations <decspec>      # set trays window decorations; possible values for
                              # decspec are: all, title, border, none
@@ -30,11 +30,11 @@ dockapp_mode none
                              # can be from 0 (disabled) to 3; this setting works
                              # with tinting and/or transparent and/or pixmap
                              # backgrounds
-fuzzy_edges 0
+fuzzy_edges 2
 
 # geometry <geometry>        # tray's geometry in standard X notation; width and
                              # height are specified in slot_size multiples
-geometry 1x1-170+1
+geometry 1x1-2090+1
 
 # grow_gravity <gravity>     # one of N, S, E, W, NW, NE, SW, SE; tray will grow
                              # in the direction opposite to one specified by
@@ -47,7 +47,7 @@ grow_gravity E
 icon_gravity NW
 
 # icon_size <int>            # specifies dimensions of typical icon slot
-icon_size 16
+icon_size 12
 
 # log_level <level>          # controls the amount of logging output, level can
                              # be err (default), info, or trace (enabled only
@@ -112,7 +112,7 @@ tint_level 0
 
 # transparent [<bool>]       # whether to use root-transparency (background
                              # image must be set with Esetroot or compatible utility)
-transparent false
+transparent true
 
 # vertical [<bool>]          # whether to use vertical layout (horisontal layout
                              # is used by default)

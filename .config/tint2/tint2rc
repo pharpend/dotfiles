@@ -15,18 +15,18 @@ border_color = #CECECE 40
 rounded = 4
 border_width = 0
 background_color = #212121 60
-border_color = #414141 41
+border_color = #414141 40
 
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #000000 37
+background_color = #000000 58
 border_color = #FF0000 100
 
 # Panel
 panel_monitor = 1
 panel_position = top center horizontal
-panel_size = 100% 24
+panel_size = 100% 20
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
@@ -52,7 +52,7 @@ urgent_nb_of_blink = 8
 task_icon = 1
 task_text = 0
 task_centered = 0
-task_maximum_size = 24 24
+task_maximum_size = 20 20
 task_padding = 1 1
 task_background_id = 0
 task_active_background_id = 0
@@ -75,7 +75,7 @@ font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 16 1 8
+systray_padding = 12 1 8
 systray_sort = ascending
 systray_background_id = 2
 systray_icon_size = 12
@@ -85,11 +85,12 @@ systray_icon_asb = 100 0 0
 time1_format = %H:%M
 time1_font = Source Sans Pro Semi-Bold 10
 clock_font_color = #FFFFFF 100
+clock_tooltip = %a %d %b
 clock_padding = 10 0
 clock_background_id = 0
 
 # Tooltips
-tooltip = 0
+tooltip = 1
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3

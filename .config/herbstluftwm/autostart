@@ -128,7 +128,7 @@ hc keybind $Mod+Shift+l     spawn notify-send -u low "$(hc layout)"
 # hc set window_border_normal_color '#166294'
 # hc set window_border_active_color '#46c2e4'
 # colors
-gap=2
+gap=0
 hc set frame_border_normal_color '#6652b4'
 hc set frame_border_active_color '#a692e4'
 hc set frame_bg_normal_color '#101010'
@@ -136,7 +136,7 @@ hc set frame_bg_normal_color '#101010'
 hc set frame_border_width 0
 hc set window_border_width 1
 hc set window_border_inner_width 0
-hc set window_border_normal_color '#265264'
+hc set window_border_normal_color '#333333'
 hc set window_border_active_color '#b6e2f4'
 hc set always_show_frame 0
 hc set frame_bg_transparent 1
@@ -161,6 +161,7 @@ hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule class~'(.*[Dd]menu.*)' manage=off
 hc rule class~'(.*[Pp]anel.*)' manage=off
+hc rule class~'(.*[Tt]ray.*)' manage=off
 # hc rule class~'(.*[Kk]upfer.*)' manage=off
 # hc rule class~'(.*[Kk]upfer.*)' focus=on
 
@@ -182,7 +183,7 @@ done
 
 hc pad 0 24 1 1 1
 hc pad 1 1 1 1 1
-TINT2_RUNNING=`ps --no-headers -Ctint2 | wc -l`
+TINT2_RUNNING=`ps --no-headers -Cpanel | wc -l`
 if [ ${TINT2_RUNNING} -ge 1 ]; then
     killall tint2
 fi

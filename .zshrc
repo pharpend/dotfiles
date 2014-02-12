@@ -57,7 +57,6 @@ alias wp-star='feh --bg-fill ~/Pictures/wallpaper/star-shower-1920x1080.jpg'
 alias wp-salt='feh --bg-fill ~/Pictures/wallpaper/green-salt-3888x2592.jpg'
 alias wp-red='feh --bg-fill ~/Pictures/wallpaper/red-forest-2560x1440.jpg'
 alias wp-green='feh --bg-fill ~/Pictures/wallpaper/green-forest-2048x1365.jpg'
-alias screenfetch='screenfetch -D arch' 
 alias fehb='feh --bg-fill'
 
 # Who has done the most work in a git project? Probably stolen from Stack
