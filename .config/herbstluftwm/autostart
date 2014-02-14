@@ -181,8 +181,8 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
    hc keybind $Mod-Control-$((monitor+1)) focus_monitor $monitor
 done
 
-hc pad 0 21 1 1 1
-hc pad 1 1 1 1 1
+hc pad 0 20 0 0 0
+hc pad 1 0 0 0 0
 TINT2_RUNNING=`ps --no-headers -Cpanel | wc -l`
 if [ ${TINT2_RUNNING} -ge 1 ]; then
     killall tint2
