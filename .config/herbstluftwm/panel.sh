@@ -184,6 +184,6 @@ hc pad $monitor $panel_height
     -e 'button3=' \
     -ta l -bg "$bgcolor" -fg '#efefef'
 
-trayer --height 14 --align right --widthtype request --width 10 \
-  --transparent true --expand true --distance 2 --edge top --alpha 0 \
-  --tint 0x333333 --margin 155 &!
+(sleep 10s && trayer --height 14 --align right --widthtype request --width 10\
+    --transparent true --expand true --distance 2 --edge top --alpha 0  --tint\
+    0x333333 --margin 155) & 

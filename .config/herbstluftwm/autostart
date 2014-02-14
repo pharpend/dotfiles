@@ -183,7 +183,7 @@ done
 
 hc pad 0 20 0 0 0
 hc pad 1 0 0 0 0
-TINT2_RUNNING=`ps --no-headers -Cpanel | wc -l`
+TINT2_RUNNING=`ps --no-headers -Ctint2 | wc -l`
 if [ ${TINT2_RUNNING} -ge 1 ]; then
     killall tint2
 fi
