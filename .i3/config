@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Source Code Pro 10
+font pango: Source Code Pro 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -31,7 +31,7 @@ bindsym $mod+Return exec terminator
 bindsym $mod+k kill
 
 # start dmenu (a program launcher)
-bindsym $mod+s exec dmenu_run
+bindsym $mod+w exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -72,7 +72,7 @@ bindsym $mod+t fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+r layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+s layout tabbed
 bindsym $mod+f layout toggle split
 
 # toggle tiling / floating
@@ -147,21 +147,20 @@ bindsym $mod+p mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    # output LVDS2
+    output VGA-1
+    output DVI-D-2
     position top
-    status_command i3status
-    tray_output primary
+    tray_output VGA-1
     colors{
-        background #232323
+        background #343434
         statusline #DCDCDC
     }
 }
 
 # Application keybindings
 bindsym Control+$mod+e exec emacs
-bindsym Control+$mod+w exec firefox
 bindsym Control+$mod+c exec chromium
-bindsym Control+$mod+i exec chromium --incognito
+bindsym Control+$mod+v exec chromium --incognito
 bindsym Control+$mod+f exec thunar
 bindsym Control+$mod+m exec thunderbird
 bindsym Control+$mod+t exec terminator
@@ -180,23 +179,24 @@ exec guake
 exec deluge
 
 # Panel things
-exec nitrogen --restore
+# exec tint2
 exec nm-applet
 exec parcellite
 exec pnmixer
-exec xfce4-power-manager
 
 # Non-panel things
-exec compton
 exec dunst
-exec synclient TouchpadOff=1
+exec nitrogen --restore
 exec thunar --daemon
-exec (sleep 10s && xmodmap ~/.Xmodmap)
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
-client.focused          #212121 #212121 #00BAA7 #00DA8E
+client.focused          #212121 #45c2ef #212121 #00DA8E
 client.focused_inactive #333333 #313131 #19c1ab #484e50
 client.unfocused        #333333 #424242 #557788 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 focus_follows_mouse no
+
+
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
