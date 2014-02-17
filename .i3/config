@@ -146,16 +146,16 @@ bindsym $mod+p mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-#     output none
-#     position top
-#     tray_output VGA-1
-#     status_command i3status
-#     colors{
-#         background #343434
-#         statusline #DCDCDC
-#     }
-# }
+bar {
+    output VGA-1
+    output DVI-D-2
+    position top
+    tray_output VGA-1
+    colors{
+        background #343434
+        statusline #DCDCDC
+    }
+}
 
 # Application keybindings
 bindsym Control+$mod+e exec emacs
@@ -179,7 +179,7 @@ exec guake
 exec deluge
 
 # Panel things
-exec tint2
+# exec tint2
 exec nm-applet
 exec parcellite
 exec pnmixer
@@ -190,7 +190,7 @@ exec nitrogen --restore
 exec thunar --daemon
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
-client.focused          #212121 #5f7f9f #212121 #00DA8E
+client.focused          #212121 #45c2ef #212121 #00DA8E
 client.focused_inactive #333333 #313131 #19c1ab #484e50
 client.unfocused        #333333 #424242 #557788 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
