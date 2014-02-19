@@ -106,6 +106,7 @@ export EDITOR="vim"
 export SHELL="/usr/bin/zsh"
 export rvm_ignore_gemrc_issues=1
 
+export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin # Haskell
