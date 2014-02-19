@@ -77,3 +77,6 @@
 (add-hook 'java-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-java.el")))
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-clojure.el")))

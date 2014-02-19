@@ -5,9 +5,12 @@
   (progn
     ;; (load-theme 'ample-zen t)
     ;; (require 'heroku-theme)
-    (load-file "~/.emacs.d/themes/sunburn.el")
-    (color-theme-sunburn)
+    ;; (load-file "~/.emacs.d/themes/sunburn.el")
+    ;; (color-theme-sunburn)
     ;; (require 'color-theme-railscasts)
+    ;; (require 'sublime-themes)
+    ;; (require 'color-theme-wombat)
+    (require 'monokai-theme)
 
     (set-face-attribute 'default nil :font "Source Code Pro-8")
     ))

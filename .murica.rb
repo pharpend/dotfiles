@@ -1,3 +1,7 @@
+def active_window_name
+  `xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) _NET_WM_NAME`.split('"')[1]
+end
+  
 def cpu_ghz
   cpu_mhz / 1024.0
 end
@@ -18,17 +22,21 @@ end
 
 ############
 
-$update_interval = 1
+$update_interval = 0.1
 white = "#eeeeee"
 
-ram = { full_text: "RAM: #{"%.2f" % ram_usage} GB",
+win = { full_text: "#{active_window_name}",
+        color: white }
+ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
         color: white }
 cputemp = { full_text: "CPU Temperature: #{cpu_temperature} C",
             color: white }
-cpughz = { full_text: "CPU: #{"%.2f" % cpu_ghz} GHz",
+cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
           color: white }
 time = {  full_text: "#{Time.now.strftime "%H:%M:%S"}",
           color: white }
+blank = { full_text: "",
+          color: white }
 
-$info = [ram, cputemp, cpughz, time]
+$info = [win, ram, cputemp, cpughz, time]
 update
