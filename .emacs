@@ -1,6 +1,8 @@
 ;; My .emacs file
 ;; Copyright (c) 2013 Peter Harpending. <pharpend2@gmail.com>
 
+(add-to-list 'exec-path "/usr/local/bin")
+
 (load-file "~/.emacs.d/config/elpa.el")                         ; Elpa
 (load-file "~/.emacs.d/config/lf.el")                           ; look and feel
 (load-file "~/.emacs.d/config/evil.el")                         ; evil
@@ -15,6 +17,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-trigger-key "RET")
  '(css-indent-offset 2)
  '(custom-safe-themes (quote ("a0feb1322de9e26a4d209d1cfa236deaf64662bb604fa513cca6a057ddf0ef64" "2395099b4d48847237504833d4169f5aaa748cef97667be5a3f9edd3e628411b" "18d91d95e20450b0cdab4d7eed600e80c22cc7a4153a87989daa5a1c5aff3b83" "b0fc95a71c0d988dbb9a147ae30b11748d87987f8f818fbff84484f6bb7892d7" default)))
  '(elpy-default-minor-modes (quote (eldoc-mode flymake-mode yas-minor-mode autopair-mode)))

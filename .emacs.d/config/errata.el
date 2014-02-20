@@ -33,6 +33,11 @@
 
 (require 'uniquify)                     ;Unique buffer names
 
+;; ELPA stuff
 (require 'package)
 (package-initialize)
 (elpy-enable)
+
+;; Auto complete
+(require 'auto-complete-config)
+(ac-config-default)

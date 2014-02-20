@@ -12,7 +12,7 @@
     ;; (require 'color-theme-wombat)
     (require 'monokai-theme)
 
-    (set-face-attribute 'default nil :font "Source Code Pro-8")
+    (set-face-attribute 'default nil :font "Source Code Pro-11")
     ))
 (scroll-bar-mode -1)
 (tool-bar-mode -1)

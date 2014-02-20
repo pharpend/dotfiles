@@ -9,6 +9,7 @@
 (defalias 'dr 'ido-dired)
 (defalias 'dro 'dired-other-window)
 (defalias 'eb 'eval-buffer)
+(defalias 'ee 'eval-expression)
 (defalias 'er 'eval-region)
 (defalias 'ff 'ido-find-file)
 (defalias 'ffo 'ido-find-file-other-window)

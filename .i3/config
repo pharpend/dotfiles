@@ -150,9 +150,9 @@ exec xrandr --output DVI-D-2 --auto --right-of VGA-1
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    output DVI-D-2
+    output VGA-1
     position top
-    status_command cat
+    status_command $HOME/bin/murica.rb
     tray_output DVI-D-2
 
     colors {
@@ -163,9 +163,11 @@ bar {
     }
 }
 bar {
-    output VGA-1
+    output DVI-D-2
     position top
-    status_command $HOME/bin/murica.rb
+    status_command cat
+    tray_output DVI-D-2
+
     colors {
         focused_workspace  #c6d6e6 #ddeeff #212121
         active_workspace   #333333 #222222 #888888
