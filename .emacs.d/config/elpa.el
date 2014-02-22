@@ -7,71 +7,46 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; Elpa packages:
-; (require 'cl)
-; (package-initialize)
-; (defvar my-packages '(ac-etags alect-themes ample-zen-theme
-                        ; anti-zenburn-theme auctex autopair
-                        ; direx
-                        ; elpy auto-complete evil
-                        ; evil-nerd-commenter find-file-in-project
-                        ; fuzzy goto-last-change haskell-mode
-                        ; highlight-indentation idomenu iedit
-                        ; linum-relative lua-mode magit
-                        ; git-rebase-mode git-commit-mode
-                        ; markdown-mode mmm-mode multiple-cursors
-                        ; nose pandoc-mode popup popwin
-                        ; rainbow-mode scss-mode undo-tree
-                        ; virtualenv yari yasnippet))
-; (defun my-packages-installed-p ()
-  ; (loop for p in my-packages
-        ; when (not (package-installed-p p)) do (return nil)
-        ; finally (return t)))
 
-; (unless (my-packages-installed-p)
-  ; ;; check for new packages (package versions)
-  ; (package-refresh-contents)
-  ; ;; install the missing packages
-  ; (dolist (p my-packages)
-    ; (when (not (package-installed-p p))
-       ; (package-install p))))
-;; ;; * auctex
-;; * auto-complete
-;; * autopair
-;; * color-theme
-;; * color-theme-github
-;; * color-theme-heroku
-;; * color-theme-railscasts
-;; * color-theme-solarized
-;; * direx
-;; * elpy
-;; * evil
-;; * evil-nerd-commenter
-;; * find-file-in-project
-;; * fuzzy
-;; * git-commit-mode
-;; * git-rebase-mode
-;; * haskell-mode
-;; * highlight-indentation
-;; * idomenu
-;; * iedit
-;; * linum-relative
-;; * magit
-;; * markdown-mode
-;; * mmm-mode
-;; * multiple-cursors
-;; * nose
-;; * pandoc-mode
-;; * popup
-;; * popwin
-;; * scss-mode
-;; * undo-tree
-;; * virtualenv
-;; * yasnippet
-
-
+(require 'package)
 (package-initialize)
+
+(defvar my-packages '(ac-nrepl
+                      ample-zen-theme
+                      auctex
+                      auto-complete
+                      autopair
+                      cider
+                      clojure-mode
+                      clojure-test-mode
+                      color-theme
+                      elpy
+                      evil
+                      evil-nerd-commenter
+                      haskell-mode
+                      linum-relative
+                      magit
+                      markdown-mode
+                      monokai-theme
+                      pandoc-mode
+                      paredit
+                      popwin
+                      rainbow-mode
+                      rsense
+                      scala-mode2
+                      slime
+                      undo-tree
+                      vala-mode))
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
 (require 'auto-complete)
+(require 'auto-complete-config)
 (require 'autopair)
+(load-library "cider-interaction.el")
+(require 'cider)
+(require 'ac-nrepl)
 (require 'direx)
 (require 'evil)
 (require 'evil-nerd-commenter)
@@ -79,4 +54,5 @@
 (require 'magit)
 (require 'markdown-mode)
 (require 'popwin)
+(require 'uniquify)                     ;Unique buffer names
 (require 'vala-mode)

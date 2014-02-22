@@ -80,3 +80,9 @@
 (add-hook 'clojure-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-clojure.el")))
+(add-hook 'cider-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/cider.el")))
+(add-hook 'cider-repl-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/cider-repl.el")))
