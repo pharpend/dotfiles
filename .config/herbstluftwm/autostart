@@ -174,7 +174,6 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
 # or simply
 # setxkbmap us -variant colemak
-xrandr --output DVI-D-2 --right-of VGA-1
 hc detect_monitors
 
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do

@@ -20,7 +20,7 @@ border_color = #414141 40
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #000000 57
+background_color = #000000 56
 border_color = #FF0000 100
 
 # Panel
@@ -50,9 +50,9 @@ taskbar_background_id = 0
 # Tasks
 urgent_nb_of_blink = 8
 task_icon = 1
-task_text = 0
+task_text = 1
 task_centered = 0
-task_maximum_size = 20 20
+task_maximum_size = 200 20
 task_padding = 1 1
 task_background_id = 0
 task_active_background_id = 0
@@ -66,7 +66,7 @@ task_urgent_icon_asb = 0 0 0
 task_iconified_icon_asb = 0 0 0
 
 # Fonts
-task_font = Droid Sans Bold 10
+task_font = Source Sans Pro Semi-Bold 9
 task_font_color = #DDDDDD 100
 task_active_font_color = #F0F0F0 100
 task_urgent_font_color = #FF0000 100
