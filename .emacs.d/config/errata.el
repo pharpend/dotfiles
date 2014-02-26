@@ -12,32 +12,13 @@
   (evil-open-above 1)
   (comment-dwim nil))
 
-(defun toggle-fullscreen ()
-  "Toggle full screen on X11"
-  (interactive)
-  (when (eq window-system 'x)
-    (set-frame-parameter
-     nil 'fullscreen
-     (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
-
-;; (defun comment-or-uncomment-region-or-line ()
-;;     "Comments or uncomments the region or the current line if there's no active region."
-;;     (interactive)
-;;     (let (beg end)
-;;         (if (region-active-p)
-;;             (setq beg (region-beginning) end (region-end))
-;;             (setq beg (line-beginning-position) end (line-end-position)))
-;;         (comment-or-uncomment-region beg end)))
-
 (setq dabbrev-check-other-buffers t)
 
-(require 'uniquify)                     ;Unique buffer names
-
-;; ELPA stuff
-(require 'package)
-(package-initialize)
 (elpy-enable)
 
-;; Auto complete
-(require 'auto-complete-config)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'cider-repl-mode))
+(setq cider-repl-pop-to-buffer-on-connect nil)
+(cider-jack-in)
+
 (ac-config-default)
