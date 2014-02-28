@@ -7,7 +7,7 @@
 (setq-local evil-shift-width 4)
 (setq-local tab-width 4)
 
-(setq-local python-check-command "/usr/bin/flake8-python")
+(setq-local python-check-command "/usr/bin/flake8")
 
 (define-key elpy-mode-map (kbd "M-n") 'windmove-down)
 (define-key elpy-mode-map (kbd "M-e") 'windmove-up)
