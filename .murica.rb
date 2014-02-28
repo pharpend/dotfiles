@@ -31,7 +31,7 @@ ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
 cputemp = { full_text: "CPU Temperature: #{cpu_temperature} C",
             color: white }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
-          color: white }
+           color: white }
 date = {  full_text: Time.now.strftime("%e %b %Y"),
           color: white }
 time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
@@ -39,5 +39,5 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
 blank = { full_text: "",
           color: white }
 
-$info = [win, ram, cputemp, cpughz, time, date, blank]
+$info = [win, ram, cputemp, cpughz, time, date]
 update
