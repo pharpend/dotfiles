@@ -16,13 +16,12 @@ def cpu_temperature
 end
 
 def ram_usage
-  total, free = `cat /proc/meminfo | head -2`.split("\n").map {|x| x.split[1].to_i }
-  (total-free) / (1024.0 ** 2)
+  `vmstat -s | grep "K active"`.split[0].to_f/1048576
 end
 
 ############
 
-$update_interval = 0.1
+$update_interval = 5
 white = "#eeeeee"
 
 win = { full_text: "#{active_window_name}",
@@ -33,7 +32,7 @@ cputemp = { full_text: "CPU Temperature: #{cpu_temperature} C",
             color: white }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
           color: white }
-time = {  full_text: "#{Time.now.strftime "%H:%M:%S"}",
+time = {  full_text: "#{Time.now.strftime "%H:%M"}",
           color: white }
 blank = { full_text: "",
           color: white }
