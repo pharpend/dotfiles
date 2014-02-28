@@ -33,10 +33,12 @@ cputemp = { full_text: "CPU Temperature: #{cpu_temperature} C",
             color: white }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
           color: white }
-time = {  full_text: "#{Time.now.strftime "%H:%M:%S"}",
+date = {  full_text: Time.now.strftime "%H:%M:%S",
+          color: white }
+time = {  full_text: Time.now.strftime "%H:%M",
           color: white }
 blank = { full_text: "",
           color: white }
 
-$info = [win, ram, cputemp, cpughz, time]
+$info = [win, ram, cputemp, cpughz, time, blank]
 update
