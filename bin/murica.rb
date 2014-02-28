@@ -5,14 +5,14 @@
 require 'json'
   
 def update
-   STDOUT.write "#{JSON.generate($info)},\n"
+   STDOUT.write "#{JSON.generate($info)},"
 end
 
 $info = []
 $update_interval = 5
 
-STDOUT.write "{\"version\":1}\n"
-STDOUT.write "[[],\n"
+STDOUT.write "{\"version\":1}"
+STDOUT.write "[[],"
 while true
   begin
     load File.expand_path("~/.murica.rb")

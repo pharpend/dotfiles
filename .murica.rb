@@ -22,7 +22,7 @@ end
 
 ############
 
-$update_interval = 0.1
+$update_interval = 1
 white = "#eeeeee"
 
 win = { full_text: "#{active_window_name}",
@@ -33,12 +33,12 @@ cputemp = { full_text: "CPU Temperature: #{cpu_temperature} C",
             color: white }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
           color: white }
-date = {  full_text: Time.now.strftime "%H:%M:%S",
+date = {  full_text: Time.now.strftime("%e %b %Y"),
           color: white }
-time = {  full_text: Time.now.strftime "%H:%M",
+time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
           color: white }
 blank = { full_text: "",
           color: white }
 
-$info = [win, ram, cputemp, cpughz, time, blank]
+$info = [win, ram, cputemp, cpughz, time, date, blank]
 update
