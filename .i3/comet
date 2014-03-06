@@ -161,13 +161,24 @@ bar {
 }
 
 # Application keybindings
-bindsym Control+$mod+e exec emacs
 bindsym Control+$mod+c exec chromium
 bindsym Control+$mod+v exec chromium --incognito
 bindsym Control+$mod+f exec thunar
-bindsym Control+$mod+m exec thunderbird
+bindsym Control+$mod+m exec emacs
 bindsym Control+$mod+t exec terminator
 bindsym Control+$mod+u exec urxvt
+
+# Resize windows
+bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
+bindsym Control+$mod+n resize grow height 10 px or 10 ppt
+bindsym Control+$mod+e resize shrink height 10 px or 10 ppt
+bindsym Control+$mod+i resize grow width 10 px or 10 ppt
+
+# same bindings, but for the arrow keys
+bindsym Control+$mod+Left resize shrink width 10 px or 10 ppt
+bindsym Control+$mod+Down resize grow height 10 px or 10 ppt
+bindsym Control+$mod+Up resize shrink height 10 px or 10 ppt
+bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle
@@ -193,6 +204,8 @@ exec xfce4-power-manager
 exec dunst
 exec nitrogen --restore
 exec thunar --daemon
+exec synclient TouchpadOff=1
+
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
 client.focused          #212121 #45c2ef #212121 #00DA8E
