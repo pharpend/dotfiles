@@ -197,7 +197,6 @@ bindsym $mod+F12 exec amixer set Master 8%+
 exec deluge
 
 # Panel things
-exec dropdoxd
 exec kalu
 exec kupfer
 exec nm-applet
