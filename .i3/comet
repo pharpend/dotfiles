@@ -159,6 +159,19 @@ bar {
         urgent_workspace   #2f343a #b00000 #ffffff
     }
 }
+bar {
+    output LVDS2
+    position top
+    status_command $HOME/bin/murica.rb
+    tray_output LVDS2
+
+    colors {
+        focused_workspace  #c6d6e6 #ddeeff #212121
+        active_workspace   #333333 #222222 #888888
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #b00000 #ffffff
+    }
+}
 
 # Application keybindings
 bindsym Control+$mod+c exec chromium

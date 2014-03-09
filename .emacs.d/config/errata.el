@@ -19,6 +19,5 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'cider-repl-mode))
 (setq cider-repl-pop-to-buffer-on-connect nil)
-(cider-jack-in)
 
 (ac-config-default)
