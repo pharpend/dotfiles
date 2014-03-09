@@ -39,5 +39,5 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
 blank = { full_text: "",
           color: white }
 
-$info = [win, ram, cputemp, cpughz, time, date]
+$info = [win, cputemp, cpughz, time, date]
 update
