@@ -1,8 +1,6 @@
 ;; My .emacs file
 ;; Copyright (c) 2013 Peter Harpending. <pharpend2@gmail.com>
 
-(add-to-list 'exec-path "/usr/local/bin")
-
 (load-file "~/.emacs.d/config/elpa.el")                         ; Elpa
 (load-file "~/.emacs.d/config/lf.el")                           ; look and feel
 (load-file "~/.emacs.d/config/evil.el")                         ; evil
@@ -37,7 +35,3 @@
  ;; If there is more than one, they won't work right.
  '(linum-relative-current-face ((t (:inherit linum :background "#f9f9f9" :foreground "#397460" :weight bold)))))
 (put 'downcase-region 'disabled nil)
-
-;; (add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp")
-;; (require 'structured-haskell-mode)
-;; (add-hook 'haskell-mode-hook 'structured-haskell-mode)
