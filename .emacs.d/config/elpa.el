@@ -54,5 +54,6 @@
 (require 'magit)
 (require 'markdown-mode)
 (require 'popwin)
+(require 'slime-autoloads)
 (require 'uniquify)                     ;Unique buffer names
 (require 'vala-mode)

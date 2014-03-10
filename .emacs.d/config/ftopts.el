@@ -86,3 +86,6 @@
 (add-hook 'cider-repl-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/cider-repl.el")))
+(add-hook 'slime-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/slime.el")))

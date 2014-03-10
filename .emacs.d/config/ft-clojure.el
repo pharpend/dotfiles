@@ -1,4 +1,3 @@
-(autopair-mode 1)
 (auto-fill-mode 1)
 (auto-complete-mode 1)
 (paredit-mode 1)
@@ -13,3 +12,5 @@
 (setq-local indent-tabs-mode nil)
 
 (local-set-key (kbd "M-d") 'ido-dired)
+(local-set-key (kbd "C-a") 'paredit-backward)
+(local-set-key (kbd "C-t") 'paredit-forward)
