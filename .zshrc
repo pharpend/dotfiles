@@ -39,6 +39,10 @@ alias fehb='feh --bg-fill'
 alias colemak='setxkbmap us -variant colemak -option altwin:swap_alt_win,ctrl:nocaps,'
 alias qwerty='setxkbmap us -option altwin:swap_alt_win,ctrl:nocaps,'
 
+pacman-remove-unneeded() {
+    sudo pacman -Rns $(pacman -Qdt | awk '{printf("%s ",$1)}')
+}
+
 # Swap the keyboard layout
 kb () {
     
