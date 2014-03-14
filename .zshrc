@@ -36,8 +36,11 @@ alias gf='git flow'
 alias hc='herbstclient'
 alias hlwm='herbstluftwm'
 alias fehb='feh --bg-fill'
-alias colemak='setxkbmap us -variant colemak -option altwin:swap_alt_win,ctrl:nocaps,'
-alias qwerty='setxkbmap us -option altwin:swap_alt_win,ctrl:nocaps,'
+
+colemak () {
+    setxkbmap us,ar -variant colemak, -option\
+        terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
+}
 
 pacman-remove-unneeded() {
     sudo pacman -Rns $(pacman -Qdt | awk '{printf("%s ",$1)}')

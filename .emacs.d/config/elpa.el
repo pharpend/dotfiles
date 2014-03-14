@@ -43,6 +43,7 @@
 
 (require 'auto-complete)
 (require 'auto-complete-config)
+(require 'ac-slime)
 (require 'autopair)
 (load-library "cider-interaction.el")
 (require 'cider)

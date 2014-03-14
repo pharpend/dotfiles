@@ -1,0 +1,6 @@
+(auto-complete-mode 1)
+(paredit-mode 1)
+(eldoc-mode 1)
+(set-up-slime-ac)
+(rainbow-mode 1)
+(rainbow-delimiters-mode 1)

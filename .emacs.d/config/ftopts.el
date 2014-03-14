@@ -89,3 +89,9 @@
 (add-hook 'slime-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/slime.el")))
+(add-hook 'slime-repl-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/slime.el")))
+(add-hook 'clojure-test-mode-map
+          (lambda ()
+            (load-file "~/.emacs.d/config/clojure-test.el")))
