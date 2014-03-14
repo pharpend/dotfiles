@@ -36,6 +36,7 @@ alias gf='git flow'
 alias hc='herbstclient'
 alias hlwm='herbstluftwm'
 alias fehb='feh --bg-fill'
+alias pry='pry --simple-prompt'
 
 dotup () {
     wd=$(pwd)
