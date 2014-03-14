@@ -23,6 +23,7 @@
                       elpy
                       evil
                       evil-nerd-commenter
+                      flycheck
                       haskell-mode
                       linum-relative
                       magit
@@ -33,10 +34,13 @@
                       popwin
                       rainbow-mode
                       rsense
+                      ruby-tools
                       scala-mode2
                       slime
+                      smartparens
                       undo-tree
-                      vala-mode))
+                      vala-mode
+		      yari))
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
@@ -56,5 +60,8 @@
 (require 'markdown-mode)
 (require 'popwin)
 (require 'slime-autoloads)
+(require 'smartparens-config)
+(require 'smartparens-ruby)
 (require 'uniquify)                     ;Unique buffer names
 (require 'vala-mode)
+(require 'yari)

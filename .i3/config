@@ -19,13 +19,13 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Source Code Pro 8
+font pango: Terminus 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec terminology
 
 # kill focused window
 bindsym $mod+k kill
@@ -185,7 +185,7 @@ bindsym $mod+c exec chromium-dev
 bindsym $mod+Shift+c exec chromium-dev --incognito
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+t exec terminator
+bindsym $mod+t exec terminology
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt

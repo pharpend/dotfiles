@@ -37,6 +37,15 @@ alias hc='herbstclient'
 alias hlwm='herbstluftwm'
 alias fehb='feh --bg-fill'
 
+dotup () {
+    \cd ~/src/dotfiles || \cd ~/code/dotfiles
+    git pull &&
+    git add -A . &&
+    git commit -m "dotfiles-$(hostname) commit for $(date)" &&
+    git push
+}
+
+
 colemak () {
     setxkbmap us,ar -variant colemak, -option\
         terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
