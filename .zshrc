@@ -38,13 +38,13 @@ alias hlwm='herbstluftwm'
 alias fehb='feh --bg-fill'
 
 dotup () {
-    wd = $(pwd)
+    wd=$(pwd)
     \cd ~/src/dotfiles || \cd ~/code/dotfiles
     git pull &&
     git add -A . &&
     git commit -m "dotfiles-$(hostname) commit for $(date)" &&
     git push
-    \cd $(wd)
+    \cd $wd
 }
 
 
