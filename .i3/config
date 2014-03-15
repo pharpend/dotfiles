@@ -19,13 +19,13 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Source Code Pro 8
+font pango: Terminus 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec terminology
 
 # kill focused window
 bindsym $mod+k kill
@@ -68,18 +68,18 @@ bindsym $mod+o split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+t fullscreen
+# bindsym $mod+t fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+r layout stacking
 bindsym $mod+s layout tabbed
-bindsym $mod+f layout toggle split
+bindsym $mod+space layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -112,7 +112,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+p restart
 # exit i3 (logs you out of your X session)
@@ -151,25 +151,29 @@ exec xrandr --output DVI-D-2 --auto --right-of VGA-1
 # finds out, if available)
 bar {
     output VGA-1
-    position top
+    position bottom
     status_command $HOME/bin/murica.rb
     tray_output DVI-D-2
+    mode dock
 
     colors {
-        focused_workspace  #c6d6e6 #ddeeff #212121
-        active_workspace   #555555 #222222 #888888
-        inactive_workspace #333333 #222222 #888888
+        background #222222
+        focused_workspace  #666666 #444444 #eeeeee
+        active_workspace   #555555 #333333 #888888
+        inactive_workspace #333333 #222222 #666666
         urgent_workspace   #2f343a #b00000 #ffffff
     }
 }
 bar {
     output DVI-D-2
-    position top
+    position bottom
     status_command cat
     tray_output DVI-D-2
+    mode dock
 
     colors {
-        focused_workspace  #c6d6e6 #ddeeff #212121
+        background #222222
+        focused_workspace  #666666 #333333 #eeeeee
         active_workspace   #555555 #222222 #888888
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2f343a #b00000 #ffffff
@@ -177,12 +181,11 @@ bar {
 }
 
 # Application keybindings
-bindsym Control+$mod+c exec chromium
-bindsym Control+$mod+v exec chromium --incognito
-bindsym Control+$mod+f exec thunar
-bindsym Control+$mod+m exec emacs
-bindsym Control+$mod+t exec terminator
-bindsym Control+$mod+u exec urxvt
+bindsym $mod+c exec chromium-dev
+bindsym $mod+Shift+c exec chromium-dev --incognito
+bindsym $mod+f exec thunar
+bindsym $mod+m exec emacs
+bindsym $mod+t exec terminology
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt

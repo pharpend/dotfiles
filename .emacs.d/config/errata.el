@@ -17,7 +17,10 @@
 (elpy-enable)
 
 (eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-repl-mode))
+  '(progn
+     (add-to-list 'ac-modes 'slime-repl-mode)
+     (add-to-list 'ac-modes 'cider-repl-mode)))
 (setq cider-repl-pop-to-buffer-on-connect nil)
 
 (ac-config-default)
+(setq inferior-lisp-program "/usr/bin/clisp")

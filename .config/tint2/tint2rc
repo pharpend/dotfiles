@@ -20,13 +20,13 @@ border_color = #414141 40
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #000000 56
+background_color = #000000 55
 border_color = #FF0000 100
 
 # Panel
-panel_monitor = all
-panel_position = top center horizontal
-panel_size = 100% 20
+panel_monitor = 2
+panel_position = bottom right horizontal
+panel_size = 15% 20
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
