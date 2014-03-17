@@ -3,8 +3,8 @@
 (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))  ;Rails
-(add-to-list 'auto-mode-alist '("config" . conf-mode)) ;i3
-(add-to-list 'auto-mode-alist '("comet" . conf-mode)) ;i3
+(add-to-list 'auto-mode-alist '("\\config\\'" . conf-mode)) ;i3
+(add-to-list 'auto-mode-alist '("\\comet\\'" . conf-mode)) ;i3
 (add-to-list 'auto-mode-alist '("autostart" . sh-mode)) ;herbtsluftwm
 (add-to-list 'auto-mode-alist '(".muttrc" . sh-mode))   ;mutt
 (add-to-list 'auto-mode-alist '("\\mutt-.*\\'" . markdown-mode)) ;mutt
