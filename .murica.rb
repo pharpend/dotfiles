@@ -73,9 +73,9 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
           color: white }
 blank = { full_text: "",
           color: white }
-ps = ping_speed
-ping = {  full_text: "P: #{ps} ms",
-          color: ping_color(ps) }
+# ps = ping_speed
+# ping = {  full_text: "P: #{ps} ms",
+#           color: ping_color(ps) }
 
-$info = [win, ping, cputemp, gov, cpughz, time, date, blank]
+$info = [win, cputemp, gov, cpughz, time, date, blank]
 update
