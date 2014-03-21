@@ -150,6 +150,8 @@ bindsym $mod+p mode "resize"
 
 exec xrandr --output VGA-1 --primary
 exec xrandr --output DVI-D-2 --auto --right-of VGA-1
+exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -211,6 +213,10 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 8%+
 bindsym $mod+F10 exec amixer set Master toggle
 bindsym $mod+F11 exec amixer set Master 8%-
 bindsym $mod+F12 exec amixer set Master 8%+
+bindsym $mod+F6 exec terminology -e cmus
+bindsym $mod+F7 exec cmus-remote -r
+bindsym $mod+F8 exec cmus-remote -u
+bindsym $mod+F9 exec cmus-remote -n
 
 # Autostarted applications
 exec deluge

@@ -41,17 +41,17 @@ alias pry='pry --simple-prompt'
 dotup () {
     wd=$(pwd)
     \cd ~/src/dotfiles || \cd ~/code/dotfiles
-    git pull &&
     git add -A . &&
     git commit -m "dotfiles-$(hostname) commit for $(date)" &&
+    git pull &&
     git push
     \cd $wd
 }
 
 
 colemak () {
-    setxkbmap us,ar -variant colemak, -option\
-        terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
+    setxkbmap us,us,ar -variant colemak, -option\
+        terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 }
 
 pacman-remove-unneeded() {
