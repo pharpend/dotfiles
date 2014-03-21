@@ -36,19 +36,25 @@ def governor
 end
 
 def ping_speed
-  `ping -c 1 google.com | grep 64`.split("=")[-1].strip.split[0].to_f
+  begin
+    `ping -c 1 google.com | grep 64`.split("=")[-1].strip.split[0].to_f
+  rescue
+    "--"
+  end
 end
 
 def ping_color(ps)
   case ps
+    when "--"
+      "#555555"
     when 0..30
-      return "#60f040"
+      "#60f040"
     when 30..50
-      return "#d0f040"
+      #d0f040"
     when 50..70
-      return "#f0d040"
+      "#f0d040"
     else
-      return "#f00000"
+      "#f00000"
   end
 end
 
@@ -93,7 +99,7 @@ end
 
 ############
 
-$update_interval = 1
+$update_interval = 0.1
 white = "#eeeeee"
 
 win = { full_text: "#{active_window_name}",
@@ -112,13 +118,13 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
           color: white }
 blank = { full_text: "",
           color: white }
-ps = ping_speed
-ping = {  full_text: "P: #{ps} ms",
-          color: ping_color(ps) }
+# ps = ping_speed
+# ping = {  full_text: "P: #{ps} ms",
+#           color: ping_color(ps) }
 volume = {  full_text: "V: #{vol_pct}%",
             color: vol_color(vol_pct)}
 cmus_hash = { full_text: "M: #{cmus}",
               color: cmus_color(cmus) }
 
-$info = [win, cmus_hash, volume, ping, cputemp, gov, cpughz, time, date, blank]
+$info = [win, cmus_hash, volume, cputemp, gov, cpughz, time, date, blank]
 update
