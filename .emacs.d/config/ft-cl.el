@@ -1,6 +1,5 @@
 ;; Common Lisp filetype extension
 
-(auto-fill-mode 1)
 (auto-complete-mode 1)
 (paredit-mode 1)
 (eldoc-mode 1)

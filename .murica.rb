@@ -52,6 +52,45 @@ def ping_color(ps)
   end
 end
 
+def vol_pct
+ `amixer get Master`.scan(/(\d+)%/).first.first.to_i
+end
+
+def vol_color(pct)
+  "#" + (pct*(255.0/100)).to_i.to_s(16)*3
+end
+
+def cmus
+  cmus_output = `cmus-remote -Q`
+  cmus_lines = cmus_output.lines
+
+  if cmus_lines == []
+    return "--"
+  end
+
+  artist = cmus_output.scan(/tag artist (.+)/).first.first
+  song = cmus_output.scan(/\d+\s+(.+)\.mp3/).first.first
+  p = ">"
+  p = "|" if cmus_output.include? "paused"
+  p = "." if cmus_output.include? "stopped"
+  
+  "#{p} #{artist} - #{song}" 
+end
+
+def cmus_color(cmo)
+  if cmo == "--"
+    "#555555"
+  elsif cmo.start_with? "."
+    "#777777"
+  elsif cmo.start_with? "|"
+    "#888888"
+  elsif cmo.start_with? ">"
+    "#eeeeee"
+  else
+    "#ff0000"
+  end
+end
+
 ############
 
 $update_interval = 1
@@ -76,6 +115,10 @@ blank = { full_text: "",
 ps = ping_speed
 ping = {  full_text: "P: #{ps} ms",
           color: ping_color(ps) }
+volume = {  full_text: "V: #{vol_pct}%",
+            color: vol_color(vol_pct)}
+cmus_hash = { full_text: "M: #{cmus}",
+              color: cmus_color(cmus) }
 
-$info = [win, ping, cputemp, gov, cpughz, time, date, blank]
+$info = [win, cmus_hash, volume, ping, cputemp, gov, cpughz, time, date, blank]
 update
