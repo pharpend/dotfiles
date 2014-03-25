@@ -37,6 +37,7 @@ alias hc='herbstclient'
 alias hlwm='herbstluftwm'
 alias fehb='feh --bg-fill'
 alias pry='pry --simple-prompt'
+alias sl='rlwrap sbcl'
 
 dotup () {
     wd=$(pwd)

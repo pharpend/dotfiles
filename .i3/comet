@@ -162,7 +162,7 @@ bindsym $mod+p mode "resize"
 # finds out, if available)
 bar {
     output LVDS1
-    position bottom
+    position top
     status_command $HOME/bin/murica.rb
     tray_output LVDS1
 
@@ -176,7 +176,7 @@ bar {
 }
 bar {
     output LVDS2
-    position bottom
+    position top
     status_command $HOME/bin/murica.rb
     tray_output LVDS2
 
