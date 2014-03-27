@@ -1,7 +1,5 @@
-(autopair-mode 1)
-(auto-fill-mode 1)
-
-(setq-local fill-column 80)
+(smartparens-mode 1)
+(rainbow-delimiters-mode 1)
 
 (setq-local evil-shift-width 2)
 (setq-local tab-width 2)
@@ -14,4 +12,4 @@
 (setq-local comment-start "// ")
 (setq-local comment-end "")
 
-(local-set-key (kbd "M-e") 'comment-open-above)
+;; (local-set-key (kbd "M-e") 'comment-open-above)
