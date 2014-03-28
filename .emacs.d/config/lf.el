@@ -11,11 +11,12 @@
     ;; (require 'sublime-themes)
     ;; (require 'color-theme-wombat)
     ;; (require 'monokai-theme)
-    (require 'planet-theme)
+    ;; (require 'planet-theme)
     ;; (color-theme-solarized-dark)
+    (load-theme 'monokai)
 
-    (set-face-attribute 'default nil :font "Terminus-9")
-    ))
+    (set-face-attribute 'default nil :font "Terminus-9")))
+
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
