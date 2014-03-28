@@ -31,6 +31,7 @@
                       monokai-theme
                       pandoc-mode
                       paredit
+                      planet-theme
                       popwin
                       rainbow-mode
                       rsense

@@ -10,7 +10,9 @@
     ;; (require 'color-theme-railscasts)
     ;; (require 'sublime-themes)
     ;; (require 'color-theme-wombat)
-    (require 'monokai-theme)
+    ;; (load-theme 'planet)
+    (load-theme 'monokai)
+
 
     (set-face-attribute 'default nil :font "Terminus-9")
     ))
