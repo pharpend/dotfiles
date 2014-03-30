@@ -37,6 +37,7 @@
                       rsense
                       ruby-tools
                       scala-mode2
+                      shm
                       slime
                       smartparens
                       undo-tree

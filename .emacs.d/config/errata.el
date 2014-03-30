@@ -23,4 +23,4 @@
 (setq cider-repl-pop-to-buffer-on-connect nil)
 
 (ac-config-default)
-(setq inferior-lisp-program "/usr/bin/clisp")
+(setq inferior-lisp-program "/usr/bin/sbcl")

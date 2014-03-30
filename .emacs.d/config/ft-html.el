@@ -4,4 +4,6 @@
 (setq evil-shift-width 2)
 
 (auto-complete-mode)
-(autopair-mode 1)
+(smartparens-mode 1)
+(rainbow-mode 1)
+(rainbow-delimiters-mode 1)
