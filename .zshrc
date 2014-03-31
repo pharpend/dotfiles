@@ -49,6 +49,10 @@ dotup () {
     \cd $wd
 }
 
+dcmsg () {
+    echo "dotfiles-$(hostname) commit for $(date)"
+}
+
 
 colemak () {
     setxkbmap us,us,ar -variant colemak, -option\
