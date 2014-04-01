@@ -108,7 +108,8 @@ source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 setopt prompt_subst
 setopt auto_pushd
 CONFIG="~/.config"
-PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}$%f%b '
+PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}%#%f%b '
+RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f%'
 REPORTTIME=3
 
 export EDITOR="vim"
