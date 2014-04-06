@@ -146,7 +146,7 @@ mode "resize" {
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
+
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
@@ -235,7 +235,7 @@ exec synclient TouchpadOff=1
 
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
-client.focused          #212121 #b592ef #212121 #00DA8E
+client.focused          #212121 #c090f0 #212121 #00DA8E
 client.focused_inactive #333333 #313131 #19c1ab #484e50
 client.unfocused        #333333 #424242 #557788 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
@@ -245,3 +245,4 @@ focus_follows_mouse no
 
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
+
