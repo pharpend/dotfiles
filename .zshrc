@@ -84,6 +84,10 @@ dcmsg () {
     echo "dotfiles-$(hostname) commit for $(date)"
 }
 
+dot-commit () {
+    git cm -am "dotfiles-$(hostname) commit for $(date)"
+}
+
 
 colemak () {
     setxkbmap us,us,ar -variant colemak, -option\
