@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Terminus 9
+font pango: Terminus 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -187,8 +187,8 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec chromium-dev
-bindsym $mod+Shift+c exec chromium-dev --incognito
+bindsym $mod+c exec chromium
+bindsym $mod+Shift+c exec chromium --incognito
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+t exec terminology
@@ -234,7 +234,7 @@ exec nitrogen --restore
 exec thunar --daemon
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
-client.focused          #212121 #45c2ef #212121 #00DA8E
+client.focused          #212121 #b592ef #212121 #00DA8E
 client.focused_inactive #333333 #313131 #19c1ab #484e50
 client.unfocused        #333333 #424242 #557788 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000

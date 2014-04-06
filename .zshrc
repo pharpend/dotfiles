@@ -39,6 +39,37 @@ alias fehb='feh --bg-fill'
 alias pry='pry --simple-prompt'
 alias sbcl='rlwrap sbcl'
 
+alias pacs='sudo pacman -S'
+alias pacsy='sudo pacman -Syu'
+alias pacsyu='sudo pacman -Syu'
+alias pacrns='sudo pacman -Rns'
+alias pacss='pacman -Ss'
+alias pacsi='pacman -Si'
+alias pacqs='pacman -Qs'
+alias pacqi='pacman -Qi'
+alias aurs='yaourt -S'
+alias aursn='yaourt -S --noconfirm'
+alias aurss='yaourt -Ss'
+alias aursi='yaourt -Si'
+alias aursyua='yaourt -Syua'
+alias aursyuan='yaourt -Syua --noconfirm'
+
+scr () {
+    scrot -e 'mv $f ~/Pictures/screenshots'
+}
+
+scs () {
+    scrot -s -e 'mv $f ~/Pictures/screenshots'
+}
+
+scsgur () {
+    scrot -s -e 'imgur $f ; mv $f ~/Pictures/screenshots'
+}
+
+scrgur () {
+    scrot -e 'imgur $f ; mv $f ~/Pictures/screenshots'
+}
+
 dotup () {
     wd=$(pwd)
     \cd ~/src/dotfiles || \cd ~/code/dotfiles
