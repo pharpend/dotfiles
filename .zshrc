@@ -38,6 +38,7 @@ alias hlwm='herbstluftwm'
 alias fehb='feh --bg-fill'
 alias pry='pry --simple-prompt'
 alias sbcl='rlwrap sbcl'
+alias xrdbx='xrdb ~/.Xresources'
 
 alias pms='sudo pacman -S'
 alias pmsy='sudo pacman -Syu'

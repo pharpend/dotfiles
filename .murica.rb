@@ -16,7 +16,8 @@ def cpu_temperature
 end
 
 def ram_usage
-  `vmstat -s | grep "K active"`.split[0].to_f/1048576
+  ramstat = `cat /proc/meminfo | head -3`.lines.map{|l| l.split[1].to_f/1024/1024 }
+  ramstat[0]-ramstat[2]
 end
 
 def cpu_color
@@ -118,13 +119,10 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
           color: white }
 blank = { full_text: "",
           color: white }
-# ps = ping_speed
-# ping = {  full_text: "P: #{ps} ms",
-#           color: ping_color(ps) }
 volume = {  full_text: "V: #{vol_pct}%",
             color: vol_color(vol_pct)}
 cmus_hash = { full_text: "M: #{cmus}",
               color: cmus_color(cmus) }
 
-$info = [win, cmus_hash, volume, cputemp, gov, cpughz, time, date, blank]
+$info = [win, cmus_hash, volume, cputemp, gov, cpughz, ram, time, date, blank]
 update

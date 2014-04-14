@@ -14,7 +14,7 @@ URxvt*scrollBar:                      false
 ! URxvt*thickness:                      number
 ! URxvt*scrollTtyOutput:                boolean
 ! URxvt*scrollTtyKeypress:              boolean
-! URxvt*scrollWithBuffer:               boolean
+URxvt*scrollWithBuffer:               true
 ! URxvt*inheritPixmap:                  boolean
 ! URxvt*transparent:                    boolean
 ! URxvt*tintColor:                      color
@@ -28,29 +28,31 @@ URxvt*scrollBar:                      false
 ! URxvt*mapAlert:                       boolean
 ! URxvt*meta8:                          boolean
 ! URxvt*mouseWheelScrollPage:           boolean
-! URxvt*tripleclickwords:               boolean
+URxvt*tripleclickwords:               true
 ! URxvt*insecure:                       boolean
-URxvt*cursorUnderline:                true
-! URxvt*cursorBlink:                    boolean
+URxvt*cursorUnderline:                false
+URxvt*cursorBlink:                    false
 ! URxvt*pointerBlank:                   boolean
-URxvt*background:                     #212121
+URxvt*background:                     [95]#112121
 URxvt*foreground:                     #eeeeee
-! URxvt*color0:                         color
-! URxvt*color1:                         color
-! URxvt*color2:                         color
-! URxvt*color3:                         color
-! URxvt*color4:                         color
-! URxvt*color5:                         color
-! URxvt*color6:                         color
-! URxvt*color7:                         color
-! URxvt*color8:                         color
-! URxvt*color9:                         color
-! URxvt*color10:                        color
-! URxvt*color11:                        color
-! URxvt*color12:                        color
-! URxvt*color13:                        color
-! URxvt*color14:                        color
-! URxvt*color15:                        color
+URxvt*color0:                           #202020
+URxvt*color1:                           #e02020
+URxvt*color2:                           #20e020
+URxvt*color3:                           #c0f060
+URxvt*color4:                           #20d0f0
+URxvt*color5:                           #e020e0
+URxvt*color6:                           #60e0e0
+
+URxvt*color9:                           #a02020
+URxvt*color10:                          #20d020
+URxvt*color11:                          #b0e050
+URxvt*color12:                          #2050d0
+URxvt*color13:                          #a020a0
+URxvt*color14:                          #20a0a0
+URxvt*color15:                          #e0e0e0
+
+URxvt*color7:                           #c0c0c0
+URxvt*color8:                           #909090
 ! URxvt*colorBD:                        color
 ! URxvt*colorIT:                        color
 ! URxvt*colorUL:                        color
@@ -66,7 +68,7 @@ URxvt*foreground:                     #eeeeee
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-! URxvt*font:                           fontname
+URxvt*font:                           xft:Terminus:size=8
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -77,9 +79,9 @@ URxvt*foreground:                     #eeeeee
 ! URxvt*imFont:                         fontname
 ! URxvt*title:                          string
 ! URxvt*iconName:                       string
-! URxvt*saveLines:                      number
+URxvt*saveLines:                      2000
 ! URxvt*buffered:                       boolean
-! URxvt*depth:                          number
+URxvt*depth:                          32
 ! URxvt*visual:                         number
 ! URxvt*transient-for:                  windowid
 ! URxvt*override-redirect:              boolean
@@ -101,7 +103,8 @@ URxvt*foreground:                     #eeeeee
 ! URxvt*secondaryScroll:                boolean
 ! URxvt*perl-lib:                       string
 ! URxvt*perl-eval:                      perl-eval
-! URxvt*perl-ext-common:                string
+URxvt*perl-ext-common:                  default, clipboard, matcher, vtwheel
+URxvt*url-launcher:                     /usr/bin/chromium
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean

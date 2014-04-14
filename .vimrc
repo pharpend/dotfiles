@@ -14,7 +14,7 @@ syntax on
 filetype plugin on
 filetype indent on
 
-colorscheme delek
+colorscheme desert
 
 set autoindent
 set smartindent 
