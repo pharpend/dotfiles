@@ -25,17 +25,17 @@ font pango: Terminus 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminology
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+k kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+w exec dmenu_run
+bindsym $mod+w exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+w exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+w exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -163,10 +163,10 @@ bar {
     mode dock
 
     colors {
-        background #222222
-        focused_workspace  #666666 #444444 #eeeeee
-        active_workspace   #555555 #333333 #888888
-        inactive_workspace #333333 #222222 #666666
+        background #112121
+        focused_workspace  #517171 #718181 #d1e1e1
+        active_workspace   #517171 #214141 #618181
+        inactive_workspace #416161 #113131 #416161
         urgent_workspace   #2f343a #b00000 #ffffff
     }
 }
@@ -178,10 +178,10 @@ bar {
     mode dock
 
     colors {
-        background #222222
-        focused_workspace  #666666 #333333 #eeeeee
-        active_workspace   #555555 #222222 #888888
-        inactive_workspace #333333 #222222 #888888
+        background #112121
+        focused_workspace  #517171 #718181 #d1e1e1
+        active_workspace   #517171 #214141 #618181
+        inactive_workspace #416161 #113131 #416161
         urgent_workspace   #2f343a #b00000 #ffffff
     }
 }
@@ -191,7 +191,7 @@ bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec chromium --incognito
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+t exec terminology
+bindsym $mod+t exec urxvtc
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
@@ -222,6 +222,7 @@ bindsym $mod+F9 exec cmus-remote -n
 exec deluge
 
 # Panel things
+exec google-musicmanager
 exec kalu
 exec kupfer
 exec nm-applet

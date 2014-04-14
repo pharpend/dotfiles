@@ -23,7 +23,7 @@
  '(css-indent-offset 2)
  '(cursor-color "#839496")
  '(custom-safe-themes (quote ("60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default)))
- '(elpy-default-minor-modes (quote (auto-complete-mode eldoc-mode flymake-mode smartparens-mode yas-minor-mode)))
+ '(elpy-default-minor-modes (quote (auto-complete-mode eldoc-mode flymake-mode rainbow-mode rainbow-delimiters-mode smartparens-mode yas-minor-mode)))
  '(elpy-rpc-backend "rope")
  '(evil-ex-search-case (quote smart))
  '(evil-ex-substitute-case (quote smart))

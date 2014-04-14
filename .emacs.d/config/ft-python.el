@@ -1,5 +1,6 @@
 ;; Indentation is 4 in python
 
+(setq-local fill-column 79)
 (setq-local indent-tabs-mode nil)
 (setq-local tab-stop-list (number-sequence 4 80 4))
 (setq-local evil-shift-width 4)
