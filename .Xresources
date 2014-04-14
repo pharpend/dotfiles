@@ -12,11 +12,11 @@ URxvt*scrollBar:                      false
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
 ! URxvt*thickness:                      number
-! URxvt*scrollTtyOutput:                boolean
+URxvt*scrollTtyOutput:                true
 ! URxvt*scrollTtyKeypress:              boolean
 URxvt*scrollWithBuffer:               true
 ! URxvt*inheritPixmap:                  boolean
-! URxvt*transparent:                    boolean
+URxvt*transparent:                    false
 ! URxvt*tintColor:                      color
 ! URxvt*shading:                        number
 ! URxvt*blurRadius:                     HxV
@@ -103,7 +103,7 @@ URxvt*depth:                          32
 ! URxvt*secondaryScroll:                boolean
 ! URxvt*perl-lib:                       string
 ! URxvt*perl-eval:                      perl-eval
-URxvt*perl-ext-common:                  default, clipboard, matcher, vtwheel
+URxvt*perl-ext-common:                  default, clipboard, vtwheel
 URxvt*url-launcher:                     /usr/bin/chromium
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean

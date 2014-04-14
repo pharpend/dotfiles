@@ -25,7 +25,7 @@ font pango: Source Code Pro 7
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminology
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+k kill
@@ -167,10 +167,10 @@ bar {
     tray_output LVDS1
 
     colors {
-        background #222222
-        focused_workspace  #666666 #444444 #eeeeee
-        active_workspace   #555555 #333333 #888888
-        inactive_workspace #333333 #222222 #666666
+        background #112121
+        focused_workspace  #517171 #718181 #d1e1e1
+        active_workspace   #517171 #214141 #618181
+        inactive_workspace #416161 #113131 #416161
         urgent_workspace   #2f343a #b00000 #ffffff
     }
 }
@@ -181,10 +181,10 @@ bar {
     tray_output LVDS2
 
     colors {
-        background #222222
-        focused_workspace  #666666 #444444 #eeeeee
-        active_workspace   #555555 #333333 #888888
-        inactive_workspace #333333 #222222 #666666
+        background #112121
+        focused_workspace  #517171 #718181 #d1e1e1
+        active_workspace   #517171 #214141 #618181
+        inactive_workspace #416161 #113131 #416161
         urgent_workspace   #2f343a #b00000 #ffffff
     }
 }
@@ -194,7 +194,7 @@ bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec chromium --incognito
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+t exec terminator
+bindsym $mod+t exec urxvt
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
@@ -212,7 +212,7 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioLowerVolume exec amixer set Master 8%-
 bindsym XF86AudioRaiseVolume exec amixer set Master 8%+
-bindsym $mod+F6 exec terminology -e cmus
+bindsym $mod+F6 exec urxvtc -e cmus
 bindsym $mod+F7 exec cmus-remote -r
 bindsym $mod+F8 exec cmus-remote -u
 bindsym $mod+F9 exec cmus-remote -n
@@ -232,6 +232,7 @@ exec pnmixer
 exec xfce4-power-manager
 
 # Non-panel things
+exec compton
 exec dunst
 exec nitrogen --restore
 exec thunar --daemon
