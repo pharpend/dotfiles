@@ -75,7 +75,7 @@ def cmus
   end
 
   artist = cmus_output.scan(/tag artist (.+)/).first.first
-  song = cmus_output.scan(/\d+\s+(.+)\.mp3/).first.first
+  song = cmus_output.scan(/tag title (.+)/).first.first
   p = ">"
   p = "|" if cmus_output.include? "paused"
   p = "." if cmus_output.include? "stopped"
@@ -99,7 +99,7 @@ end
 
 ############
 
-$update_interval = 0.1
+$update_interval = 2
 white = "#eeeeee"
 
 win = { full_text: "#{active_window_name}",
