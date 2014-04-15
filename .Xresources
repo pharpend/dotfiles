@@ -33,7 +33,7 @@ URxvt*tripleclickwords:               true
 URxvt*cursorUnderline:                false
 URxvt*cursorBlink:                    false
 ! URxvt*pointerBlank:                   boolean
-URxvt*background:                     [95]#112121
+URxvt*background:                     [98]#112121
 URxvt*foreground:                     #eeeeee
 URxvt*color0:                           #202020
 URxvt*color1:                           #e02020
