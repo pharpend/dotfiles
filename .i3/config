@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Terminus 8
+font pango: Source Code Pro 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -63,9 +63,8 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+o split h
-
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+semicolon split v
 
 # enter fullscreen mode for the focused container
 # bindsym $mod+t fullscreen
@@ -156,7 +155,7 @@ exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rc
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    output VGA-1
+    output VGA-0
     position bottom
     status_command $HOME/bin/murica.rb
     tray_output DVI-D-2
@@ -171,10 +170,10 @@ bar {
     }
 }
 bar {
-    output DVI-D-2
+    output DVI-D-1
     position bottom
     status_command cat
-    tray_output DVI-D-2
+    tray_output DVI-D-1
     mode dock
 
     colors {
@@ -233,6 +232,7 @@ exec pnmixer
 exec dunst
 exec nitrogen --restore
 exec thunar --daemon
+exec urxvtc -e cmus
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
 client.focused          #212121 #c090f0 #212121 #00DA8E
