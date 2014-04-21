@@ -90,6 +90,7 @@ dcmsg () {
 }
 
 dot-commit () {
+    git a .
     git cm -am "dotfiles-$(hostname) commit for $(date)"
 }
 
