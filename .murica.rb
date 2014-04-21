@@ -100,7 +100,7 @@ end
 
 ############
 
-$update_interval = 2
+$update_interval = 0.1
 white = "#eeeeee"
 
 win = { full_text: "#{active_window_name}",
