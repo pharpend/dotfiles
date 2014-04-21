@@ -2,17 +2,11 @@
 # 
 # sends system information to i3bar
 
-require 'json'
-  
-def update
-   STDOUT.write "#{JSON.generate($info)},"
-end
-
-$info = []
-$update_interval = 5
+load File.expand_path(File.dirname(__FILE__) + "/libmurica.rb")
 
 STDOUT.write "{\"version\":1}"
 STDOUT.write "[[],"
+
 while true
   begin
     load File.expand_path("~/.murica.rb")
@@ -20,7 +14,7 @@ while true
     error_msg = { full_text: "THERE IS AN ERROR IN ~/.murica.rb. FIX IT!",
                   color: "#ff"}
     STDOUT.write "[#{JSON.generate error_msg}],"
-    next
+    $update_interval=10
   end
   sleep $update_interval
 end

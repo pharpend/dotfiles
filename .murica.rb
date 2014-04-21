@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def active_window_name
   `xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) _NET_WM_NAME`.split('"')[1]
 end
@@ -17,7 +19,7 @@ end
 
 def ram_usage
   ramstat = `cat /proc/meminfo | head -3`.lines.map{|l| l.split[1].to_f/1024/1024 }
-  ramstat[0]-ramstat[2]
+  ramstat[0]-ramstat[1]
 end
 
 def cpu_color
@@ -100,14 +102,15 @@ end
 
 ############
 
-$update_interval = 2
+$update_interval = 0.1
 white = "#eeeeee"
 
 win = { full_text: "#{active_window_name}",
+
         color: white }
 ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
         color: white }
-cputemp = { full_text: "T: #{cpu_temperature} C",
+cputemp = { full_text: "\u2623: #{cpu_temperature} C",
             color: cpu_color }
 gov = { full_text: "G: #{governor}",
         color: white }
@@ -121,7 +124,7 @@ blank = { full_text: "",
           color: white }
 volume = {  full_text: "V: #{vol_pct}%",
             color: vol_color(vol_pct)}
-cmus_hash = { full_text: "M: #{cmus}",
+cmus_hash = { full_text: "\u266a: #{cmus}",
               color: cmus_color(cmus) }
 
 $info = [win, cmus_hash, volume, cputemp, gov, cpughz, ram, time, date, blank]
