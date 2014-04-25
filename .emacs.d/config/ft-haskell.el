@@ -10,4 +10,4 @@
 (turn-on-eldoc-mode)
 (turn-on-haskell-doc)
 (turn-on-haskell-indentation)
-(turn-off-haskell-simple-indent)
+;; (turn-off-haskell-simple-indent)
