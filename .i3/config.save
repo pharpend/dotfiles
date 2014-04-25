@@ -144,15 +144,15 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-exec xrandr --output VGA-1 --auto --primary
-exec xrandr --output DVI-D-2 --auto --right-of VGA-1
+exec xrandr --output VGA-0 --primary
+exec xrandr --output DVI-D-1 --auto --right-of VGA-1
 exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    output VGA-1
+    output VGA-0
     position bottom
     status_command $HOME/bin/murica.rb
     tray_output DVI-D-2
@@ -167,10 +167,10 @@ bar {
     }
 }
 bar {
-    output DVI-D-2
+    output DVI-D-1
     position bottom
     status_command cat
-    tray_output DVI-D-2
+    tray_output DVI-D-1
     mode dock
 
     colors {
