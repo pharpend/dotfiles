@@ -105,9 +105,6 @@ pacman-remove-unneeded() {
 }
 
 # Swap the keyboard layout
-kb () {
-    
-}
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
@@ -142,6 +139,10 @@ trash() {
     mv $@ ~/.local/share/Trash/files/
 }
 alias lstrash='ls ~/.local/share/Trash/files/'
+
+tn () {
+    $HOME/bin/tn-$(hostname) $@
+}
 
 # Syntax highlighting
 source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
