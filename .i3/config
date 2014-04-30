@@ -187,7 +187,7 @@ bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec chromium --incognito
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+t exec urxvtc
+bindsym $mod+t exec thunderbird
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
@@ -234,7 +234,6 @@ exec pnmixer
 exec dunst
 exec nitrogen --restore
 exec thunar --daemon
-exec urxvtc -e cmus
 
 # Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
 client.focused          #212121 #c090f0 #212121 #00DA8E

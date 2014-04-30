@@ -143,6 +143,10 @@ trash() {
 }
 alias lstrash='ls ~/.local/share/Trash/files/'
 
+tn () {
+    $HOME/bin/tn-$(hostname) $@
+}
+
 # Syntax highlighting
 source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
