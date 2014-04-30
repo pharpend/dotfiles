@@ -105,9 +105,6 @@ pacman-remove-unneeded() {
 }
 
 # Swap the keyboard layout
-kb () {
-    
-}
 
 # Who has done the most work in a git project? Probably stolen from Stack
 # overflow.
