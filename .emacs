@@ -22,7 +22,7 @@
  '(compilation-message-face (quote default))
  '(css-indent-offset 2)
  '(cursor-color "#839496")
- '(custom-safe-themes (quote ("60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default)))
+ '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default)))
  '(elpy-default-minor-modes (quote (auto-complete-mode eldoc-mode flymake-mode rainbow-mode rainbow-delimiters-mode smartparens-mode yas-minor-mode)))
  '(elpy-rpc-backend "rope")
  '(evil-ex-search-case (quote smart))
@@ -57,8 +57,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#272822" :foreground "#F8F8F2" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Terminus"))))
+ '(default ((t (:background nil))))
  '(linum-relative-current-face ((t (:inherit linum :background "#f9f9f9" :foreground "#397460" :weight bold))))
- '(shm-current-face ((t (:background "#404040"))))
- '(shm-quarantine-face ((t (:background "#333333")))))
+ '(shm-current-face ((t (:background "#404040"))) t)
+ '(shm-quarantine-face ((t (:background "#333333"))) t))
 (put 'downcase-region 'disabled nil)
