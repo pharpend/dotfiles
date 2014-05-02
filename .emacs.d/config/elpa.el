@@ -20,6 +20,8 @@
                       clojure-mode
                       clojure-test-mode
                       color-theme
+                      color-theme-eclipse
+                      color-theme-github
                       elpy
                       evil
                       evil-nerd-commenter
