@@ -2,7 +2,6 @@
 (if (eq window-system 'x)
   (load-theme 'monokai t))
 
-
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)

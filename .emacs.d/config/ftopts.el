@@ -8,6 +8,7 @@
 (add-to-list 'auto-mode-alist '("autostart" . sh-mode)) ;herbtsluftwm
 (add-to-list 'auto-mode-alist '(".muttrc" . sh-mode))   ;mutt
 (add-to-list 'auto-mode-alist '("\\mutt-.*\\'" . markdown-mode)) ;mutt
+(add-to-list 'auto-mode-alist '("\\pico.*\\'" . markdown-mode)) ;alpine
 
 (add-hook 'dired-load-hook
           (lambda ()
