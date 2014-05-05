@@ -1,7 +1,6 @@
 ;; Configure the look and feel of Emacs
 (if (eq window-system 'x)
-  (load-theme 'monokai t)
-  (require 'color-theme-github))
+  (load-theme 'monokai t))
 
 
 (scroll-bar-mode -1)
