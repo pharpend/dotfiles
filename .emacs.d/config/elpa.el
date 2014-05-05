@@ -1,7 +1,7 @@
 ;; My configuration for Elpa
 ;;
 
-(add-to-list 'load-path "~/builds/structured-haskell-mode/elisp")
+(add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp")
 
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
