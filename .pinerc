@@ -177,7 +177,7 @@ unknown-character-set=
 
 # Specifies the program invoked by ^_ in the Composer,
 # or the "enable-alternate-editor-implicitly" feature.
-editor=emacs -nw
+editor=emacs
 
 # Specifies the program invoked by ^T in the Composer.
 speller=
