@@ -229,6 +229,7 @@ exec kupfer
 exec nm-applet
 exec parcellite
 exec pnmixer
+exec xfce4-power-manager
 
 # Non-panel things
 exec dunst

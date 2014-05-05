@@ -1,13 +1,14 @@
 ;; My configuration for Elpa
 ;;
 
+(add-to-list 'load-path "~/builds/structured-haskell-mode/elisp")
+
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; Elpa packages:
-
 (require 'package)
 (package-initialize)
 
@@ -52,8 +53,8 @@
 (require 'auto-complete-config)
 (require 'ac-slime)
 (require 'autopair)
-(load-library "cider-interaction.el")
-(require 'cider)
+;; (load-library "cider-interaction.el")
+;; (require 'cider)
 (require 'ac-nrepl)
 (require 'direx)
 (require 'evil)
@@ -62,6 +63,7 @@
 (require 'magit)
 (require 'markdown-mode)
 (require 'popwin)
+(require 'shm)
 (require 'slime-autoloads)
 (require 'smartparens-config)
 (require 'smartparens-ruby)
