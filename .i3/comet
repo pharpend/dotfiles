@@ -183,7 +183,7 @@ bar {
 # Application keybindings
 bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec chromium --incognito
-bindsym $mod+f exec thunar
+bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec terminator
 
@@ -215,6 +215,7 @@ bindsym $mod+F12 exec amixer set Master 8%+
 exec deluge
 
 # Panel things
+exec google-musicmanager
 exec kalu
 exec kupfer
 exec nm-applet
@@ -226,7 +227,6 @@ exec xfce4-power-manager
 exec compton
 exec dunst
 exec nitrogen --restore
-exec thunar --daemon
 exec synclient TouchpadOff=1
 
 
