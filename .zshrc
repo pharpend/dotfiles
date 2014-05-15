@@ -45,7 +45,7 @@ alias xrdbx='xrdb ~/.Xresources'
 alias rsurxvtd='sudo systemctl restart urxvtd@pete.service'
 
 alias pms='sudo pacman -S'
-alias pmsy='sudo pacman -Syu'
+alias pmsy='sudo pacman -Sy'
 alias pmsyu='sudo pacman -Syu'
 alias pmrns='sudo pacman -Rns'
 alias pmss='pacman -Ss'
