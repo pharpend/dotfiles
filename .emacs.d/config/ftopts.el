@@ -97,3 +97,6 @@
 (add-hook 'clojure-test-mode-map
           (lambda ()
             (load-file "~/.emacs.d/config/clojure-test.el")))
+(add-hook 'hamlet-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-hamlet.el")))

@@ -185,7 +185,7 @@ bar {
 # Application keybindings
 bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec chromium --incognito
-bindsym $mod+f exec thunar
+bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec thunderbird
 
@@ -234,9 +234,7 @@ exec xfce4-power-manager
 # Non-panel things
 exec dunst
 exec nitrogen --restore
-exec thunar --daemon
 
-# Look stuff from here: http://hndr.me/blog/making-my-new-linux-less-ugly/
 client.focused          #212121 #c090f0 #212121 #00DA8E
 client.focused_inactive #333333 #313131 #19c1ab #484e50
 client.unfocused        #333333 #424242 #557788 #292d2e
