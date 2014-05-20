@@ -19,8 +19,10 @@
         evil-substitute
         haskell-indentation-delete-backward-char
         markdown-exdent-or-delete
+        sp--self-insert-command
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        evil-next-line
         ))
