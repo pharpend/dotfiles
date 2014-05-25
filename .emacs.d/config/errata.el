@@ -24,3 +24,5 @@
 
 (ac-config-default)
 (setq inferior-lisp-program "/usr/bin/sbcl")
+
+(setq diary-file "~/Documents/diary")
