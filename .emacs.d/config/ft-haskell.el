@@ -7,7 +7,8 @@
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
-(structured-haskell-mode 1)
 (turn-on-eldoc-mode)
 (turn-on-haskell-doc)
 (turn-on-haskell-indentation)
+(turn-on-haskell-simple-indent)
+
