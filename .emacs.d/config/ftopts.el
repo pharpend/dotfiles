@@ -9,6 +9,13 @@
 (add-to-list 'auto-mode-alist '(".muttrc" . sh-mode))   ;mutt
 (add-to-list 'auto-mode-alist '("\\mutt-.*\\'" . markdown-mode)) ;mutt
 (add-to-list 'auto-mode-alist '("\\pico.*\\'" . markdown-mode)) ;alpine
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hamlet\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.cassius\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()
@@ -97,6 +104,9 @@
 (add-hook 'clojure-test-mode-map
           (lambda ()
             (load-file "~/.emacs.d/config/clojure-test.el")))
-(add-hook 'hamlet-mode-hook
+(add-hook 'web-mode-hook
           (lambda ()
-            (load-file "~/.emacs.d/config/ft-hamlet.el")))
+            (load-file "~/.emacs.d/config/ft-web.el")))
+(add-hook 'css-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-web.el")))

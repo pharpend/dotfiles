@@ -28,7 +28,6 @@
                       evil-nerd-commenter
                       flycheck
                       haskell-mode
-                      hamlet-mode
                       linum-relative
                       magit
                       markdown-mode
@@ -45,6 +44,7 @@
                       smartparens
                       undo-tree
                       vala-mode
+                      web-mode
                       yaml-mode
 		      yari))
 (dolist (p my-packages)
