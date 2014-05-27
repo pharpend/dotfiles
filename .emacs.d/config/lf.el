@@ -1,6 +1,7 @@
 ;; Configure the look and feel of Emacs
-(if (eq window-system 'x)
-  (load-theme 'sanityinc-solarized-dark t))
+(cond ((eq window-system 'x)
+       (load-theme 'sanityinc-tomorrow-eighties t)
+       (set-frame-font "Terminus-8")))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)

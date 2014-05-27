@@ -22,7 +22,7 @@
  '(compilation-message-face (quote default))
  '(css-indent-offset 2)
  '(cursor-color "#839496")
- '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default)))
+ '(custom-safe-themes (quote ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default)))
  '(elpy-default-minor-modes (quote (auto-complete-mode eldoc-mode flymake-mode rainbow-mode rainbow-delimiters-mode smartparens-mode yas-minor-mode)))
  '(elpy-rpc-backend "rope")
  '(evil-ex-search-case (quote smart))
@@ -57,8 +57,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background nil :foreground nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Terminus"))))
+ '(default ((t (:inherit nil :stipple nil :background nil :foreground nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :foundry "xos4" :family "Terminus"))))
  '(linum-relative-current-face ((t (:inherit linum :background "#f9f9f9" :foreground "#397460" :weight bold))))
- '(shm-current-face ((t (:background "#002030"))) t)
- '(shm-quarantine-face ((t (:background "#103040"))) t))
+ '(shm-current-face ((t (:background "#002030"))))
+ '(shm-quarantine-face ((t (:background "#103040")))))
 (put 'downcase-region 'disabled nil)
