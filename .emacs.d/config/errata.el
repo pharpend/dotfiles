@@ -26,3 +26,5 @@
 (setq inferior-lisp-program "/usr/bin/sbcl")
 
 (setq diary-file "~/Documents/diary")
+
+(setq shm-program-name "/home/pete/.emacs.d/shm/.cabal-sandbox/bin/structured-haskell-mode")

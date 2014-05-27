@@ -15,8 +15,6 @@
 ;; (define-key evil-insert-state-map (kbd "C-j") 'shm/simple-indent-newline-indent)
 ;; (define-key evil-visual-state-map (kbd "RET") 'shm/newline-indent)
 ;; (define-key evil-visual-state-map (kbd "C-j") 'shm/simple-indent-newline-indent)
-(define-key shm-map (kbd "RET") 'shm/newline-indent)
-(define-key shm-map (kbd "C-j") 'shm/simple-indent-newline-indent)
 
 (define-key shm-map (kbd ":")
   '(lambda ()
@@ -24,6 +22,7 @@
      (previous-line 1)
      (evil-append-line 1)
      (shm/newline-indent)))
+
 (define-key shm-map (kbd ";")
   '(lambda ()
      (interactive)
@@ -31,3 +30,6 @@
      (beginning-of-line)
      (end-of-line)
      (shm/newline-indent)))
+
+(define-key evil-insert-state-map (kbd ":") 'self-insert-command)
+(define-key evil-insert-state-map (kbd ";") 'self-insert-command)

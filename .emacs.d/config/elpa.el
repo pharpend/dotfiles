@@ -1,7 +1,7 @@
 ;; My configuration for Elpa
 ;;
 
-(add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp")
+(add-to-list 'load-path "~/.emacs.d/shm/elisp")
 
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -23,6 +23,8 @@
                       color-theme
                       color-theme-eclipse
                       color-theme-github
+                      color-theme-sanityinc-solarized
+                      color-theme-sanityinc-tomorrow
                       elpy
                       evil
                       evil-nerd-commenter
