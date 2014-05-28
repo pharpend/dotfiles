@@ -33,3 +33,5 @@
 
 (define-key evil-insert-state-map (kbd ":") 'self-insert-command)
 (define-key evil-insert-state-map (kbd ";") 'self-insert-command)
+(define-key evil-normal-state-map (kbd "M-RET") 'shm/newline-indent)
+(define-key evil-insert-state-map (kbd "M-RET") 'shm/newline-indent)

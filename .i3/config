@@ -228,7 +228,7 @@ exec kalu
 exec kupfer
 exec nm-applet
 exec parcellite
-exec pnmixer
+exec pasystray
 exec xfce4-power-manager
 
 # Non-panel things

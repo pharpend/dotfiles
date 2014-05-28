@@ -59,6 +59,6 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background nil :foreground nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :foundry "xos4" :family "Terminus"))))
  '(linum-relative-current-face ((t (:inherit linum :background "#f9f9f9" :foreground "#397460" :weight bold))))
- '(shm-current-face ((t (:background "#002030"))))
- '(shm-quarantine-face ((t (:background "#103040")))))
+ '(shm-current-face ((t (:background "#404040"))))
+ '(shm-quarantine-face ((t (:background "#4f4f4f")))))
 (put 'downcase-region 'disabled nil)
