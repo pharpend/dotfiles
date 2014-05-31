@@ -110,3 +110,6 @@
 (add-hook 'css-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-web.el")))
+(add-hook 'json-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-javascript.el")))

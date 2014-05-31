@@ -30,6 +30,7 @@
                       evil-nerd-commenter
                       flycheck
                       haskell-mode
+                      json-mode
                       linum-relative
                       magit
                       markdown-mode

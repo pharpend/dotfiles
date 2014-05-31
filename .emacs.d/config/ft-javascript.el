@@ -4,7 +4,8 @@
 (setq-local fill-column 80)
 
 (setq-local indent-tabs-mode nil)
-(setq-local evil-shift-width 4)
-(setq-local tab-width 4)
-(setq-local tab-stop-list (number-sequence 4 80 4))
+(setq-local evil-shift-width 2)
+(setq-local tab-width 2)
+(setq-local tab-stop-list (number-sequence 2 80 2))
+(setq-local js-indent-level 2)
 
