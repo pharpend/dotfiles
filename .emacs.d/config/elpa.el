@@ -2,6 +2,7 @@
 ;;
 
 (add-to-list 'load-path "~/.emacs.d/shm/elisp")
+(add-to-list 'load-path "~/.emacs.d/hs")
 
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -30,6 +31,7 @@
                       evil-nerd-commenter
                       flycheck
                       haskell-mode
+                      json-mode
                       linum-relative
                       magit
                       markdown-mode
@@ -63,6 +65,8 @@
 (require 'direx)
 (require 'evil)
 (require 'evil-nerd-commenter)
+(require 'haskell-ac)
+(require 'hs-lint)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)

@@ -7,6 +7,8 @@
         evil-backward-char
         evil-backward-word-begin
         evil-change
+        evil-delete
+        evil-delete-backward-char-and-join
         evil-delete-char
         evil-ex
         evil-find-char-to
@@ -17,6 +19,7 @@
         evil-normal-state
         evil-previous-line
         evil-substitute
+        evil-visual-char
         haskell-indentation-delete-backward-char
         markdown-exdent-or-delete
         sp--self-insert-command
