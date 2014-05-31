@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
         evil-append
+        evil-append-line
         evil-backward-char
         evil-backward-word-begin
         evil-change
@@ -18,15 +19,18 @@
         evil-invert-char
         evil-normal-state
         evil-previous-line
+        evil-replace
         evil-substitute
         evil-visual-char
         haskell-indentation-delete-backward-char
         markdown-exdent-or-delete
+        shm/space
         sp--self-insert-command
         ))
 
 (setq mc/cmds-to-run-once
       '(
         evil-next-line
+        shm/close-paren
         shm/del
         ))
