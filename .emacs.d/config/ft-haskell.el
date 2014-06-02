@@ -17,8 +17,7 @@
 (turn-on-eldoc-mode)
 (turn-off-haskell-simple-indent)
 
-(local-set-key "C-c l" 'hs-lint)
-
+;; (local-set-key "C-c l" 'hs-lint)
 
 (define-key shm-map (kbd ":")
   '(lambda ()
@@ -39,3 +38,4 @@
 (define-key evil-insert-state-map (kbd ";") 'self-insert-command)
 (define-key evil-normal-state-map (kbd "M-RET") 'shm/newline-indent)
 (define-key evil-insert-state-map (kbd "M-RET") 'shm/newline-indent)
+(define-key evil-insert-state-map (kbd "C") 'self-insert-command)

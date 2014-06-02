@@ -7,3 +7,4 @@
 (autopair-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
+(highlight-indentation-current-column-mode 1)

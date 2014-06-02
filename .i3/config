@@ -144,8 +144,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-exec xrandr --output VGA-1 --auto --primary
-exec xrandr --output DVI-D-2 --auto --right-of VGA-1
+exec xrandr --output VGA-1 --auto --primary --rotate left
+exec xrandr --output DVI-D-2 --auto --right-of VGA-1 --rotate left
 exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
@@ -187,7 +187,6 @@ bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec chromium --incognito
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
-bindsym $mod+t exec thunderbird
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
@@ -228,11 +227,12 @@ exec kalu
 exec kupfer
 exec nm-applet
 exec parcellite
-exec pasystray
+exec pnmixer
 exec xfce4-power-manager
 
 # Non-panel things
 exec dunst
+exec emacs --daemon
 exec nitrogen --restore
 
 client.focused          #212121 #50f0f0 #212121 #00DA8E

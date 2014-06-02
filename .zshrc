@@ -44,6 +44,7 @@ alias pry='pry --simple-prompt'
 alias sbcl='rlwrap sbcl'
 alias xrdbx='xrdb ~/.Xresources'
 alias rsurxvtd='sudo systemctl restart urxvtd@pete.service'
+alias ec='emacsclient'
 
 alias pms='sudo pacman -S'
 alias pmsy='sudo pacman -Sy'

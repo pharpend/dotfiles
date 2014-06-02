@@ -30,6 +30,7 @@
                       evil
                       evil-nerd-commenter
                       flycheck
+                      hamlet-mode
                       haskell-mode
                       json-mode
                       linum-relative
