@@ -145,7 +145,7 @@ mode "resize" {
 bindsym $mod+p mode "resize"
 
 exec xrandr --output VGA-1 --auto --primary --rotate left
-exec xrandr --output DVI-D-2 --auto --right-of VGA-1 --rotate left
+exec xrandr --output DVI-D-2 --auto --rotate left --rotate left
 exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
@@ -235,9 +235,9 @@ exec dunst
 exec emacs --daemon
 exec nitrogen --restore
 
-client.focused          #212121 #50f0f0 #212121 #00DA8E
-client.focused_inactive #333333 #809080 #19c1ab #484e50
-client.unfocused        #333333 #809080 #557788 #292d2e
+client.focused          #212121 #20f0f0 #212121 #00DA8E
+client.focused_inactive #333333 #202020 #d0d0d0 #484e50
+client.unfocused        #333333 #202020 #d0d0d0 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 focus_follows_mouse no

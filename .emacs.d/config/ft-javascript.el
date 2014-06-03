@@ -1,5 +1,7 @@
 (smartparens-mode -1)
 (autopair-mode 1)
+(rainbow-mode 1)
+(rainbow-delimiters-mode 1)
 
 (setq-local fill-column 80)
 

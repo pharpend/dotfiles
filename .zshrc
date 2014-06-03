@@ -45,6 +45,7 @@ alias sbcl='rlwrap sbcl'
 alias xrdbx='xrdb ~/.Xresources'
 alias rsurxvtd='sudo systemctl restart urxvtd@pete.service'
 alias ec='emacsclient'
+alias hist='cat ~/.histfile'
 
 alias pms='sudo pacman -S'
 alias pmsy='sudo pacman -Sy'
@@ -106,6 +107,10 @@ pacman-remove-unneeded() {
     sudo pacman -Rns $(pacman -Qdt | awk '{printf("%s ",$1)}')
 }
 
+screencast () {
+    ffmpeg -f pulse -i default -f x11grab -s $1 -r 15 -i :0.0 $2
+}
+
 # Swap the keyboard layout
 
 # Who has done the most work in a git project? Probably stolen from Stack
@@ -163,7 +168,7 @@ export rvm_ignore_gemrc_issues=1
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.cabal/bin:$HOME/.cabal/bin # Haskell
+export PATH=$PATH:$HOME/.cabal/bin # Haskell
 export PATH=$PATH:$HOME/.config/herbstluftwm        # herbstluftwm
 export PATH=$PATH:$HOME/code/bin         # Add my programs
 export PATH=$PATH:$HOME/code/bleu/bleu   # Add bleu
