@@ -145,7 +145,7 @@ mode "resize" {
 bindsym $mod+p mode "resize"
 
 exec xrandr --output VGA-1 --auto --primary --rotate left
-exec xrandr --output DVI-D-2 --auto --rotate left --rotate left
+exec xrandr --output DVI-D-2 --auto --right-of VGA-1 --rotate left
 exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
