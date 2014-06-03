@@ -40,12 +40,11 @@
 (define-key evil-normal-state-map (kbd "N") 'evil-join)
 (define-key evil-visual-state-map (kbd "L") 'evil-insert)
 
-;; TAB KEY as ESCAPE
-(define-key evil-visual-state-map (kbd "<tab>") 'evil-force-normal-state)
-(define-key evil-insert-state-map (kbd "<tab>") 'evil-force-normal-state)
-(define-key evil-motion-state-map (kbd "<tab>") 'evil-force-normal-state)
-(define-key evil-normal-state-map (kbd "<tab>") 'evil-force-normal-state)
-(setq indent-line-function 'evil-force-normal-state)
+(define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
+(define-key evil-normal-state-map (kbd "<backtab>") 'evil-shift-left-line)
+(define-key evil-insert-state-map (kbd "<tab>") 'evil-shift-right-line)
+(define-key evil-normal-state-map (kbd "<tab>") 'evil-shift-right-line)
+(setq indent-line-function 'evil-shift-right-line)
 
 ;; SWAP : AND o
 ;; Normal state
