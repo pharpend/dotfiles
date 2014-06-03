@@ -226,6 +226,7 @@ exec xfce4-power-manager
 # Non-panel things
 exec compton
 exec dunst
+exec emacs --daemon
 exec nitrogen --restore
 exec synclient TouchpadOff=1
 
