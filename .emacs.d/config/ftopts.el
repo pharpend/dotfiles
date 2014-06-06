@@ -16,6 +16,8 @@
 (add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.cassius\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()
@@ -113,3 +115,6 @@
 (add-hook 'json-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-javascript.el")))
+(add-hook 'sass-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-web.el")))

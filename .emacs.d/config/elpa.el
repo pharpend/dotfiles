@@ -44,6 +44,7 @@
                       rainbow-mode
                       rsense
                       ruby-tools
+                      sass-mode
                       scala-mode2
                       slime
                       smartparens
