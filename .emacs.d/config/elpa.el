@@ -49,7 +49,6 @@
                       slime
                       smartparens
                       undo-tree
-                      vala-mode
                       web-mode
                       yaml-mode
 		      yari))
@@ -59,16 +58,10 @@
 
 (require 'auto-complete)
 (require 'auto-complete-config)
-(require 'ac-slime)
 (require 'autopair)
-;; (load-library "cider-interaction.el")
-;; (require 'cider)
 (require 'ac-nrepl)
-(require 'direx)
 (require 'evil)
 (require 'evil-nerd-commenter)
-(require 'haskell-ac)
-(require 'hs-lint)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
@@ -78,5 +71,4 @@
 (require 'smartparens-config)
 (require 'smartparens-ruby)
 (require 'uniquify)                     ;Unique buffer names
-(require 'vala-mode)
 (require 'yari)

@@ -152,7 +152,7 @@ tn () {
 }
 
 # Syntax highlighting
-source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 setopt prompt_subst
 setopt auto_pushd
