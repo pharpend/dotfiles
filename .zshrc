@@ -173,5 +173,6 @@ export PATH=$PATH:$HOME/.config/herbstluftwm        # herbstluftwm
 export PATH=$PATH:$HOME/code/bin         # Add my programs
 export PATH=$PATH:$HOME/code/bleu/bleu   # Add bleu
 export PATH=$PATH:/opt/android-sdk/platform-tools
+export PATH=$PATH:$HOME/.local/bin
 
 # alsi
