@@ -19,7 +19,7 @@ end
 
 def ram_usage
   ramstat = `cat /proc/meminfo | head -3`.lines.map{|l| l.split[1].to_f/1024/1024 }
-  ramstat[0]-ramstat[1]
+  ramstat[0]-ramstat[2]
 end
 
 def cpu_color
