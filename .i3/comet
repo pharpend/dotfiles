@@ -214,11 +214,11 @@ bindsym $mod+F12 exec amixer set Master 8%+
 # Autostarted applications
 exec deluge
 exec dropboxd
-exec google-musicmanager
 exec kalu
 exec nm-applet
 exec parcellite
 exec pnmixer
+exec vidalia
 exec xfce4-power-manager
 
 # Non-panel things
