@@ -1,6 +1,6 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
-       (load-theme 'monokai t)
+       (load-theme 'sanityinc-tomorrow-eighties t)
        (set-frame-font "Terminus-8")))
 
 (scroll-bar-mode -1)

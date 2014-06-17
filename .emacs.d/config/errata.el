@@ -25,7 +25,12 @@
 (ac-config-default)
 (setq inferior-lisp-program "/usr/bin/sbcl")
 
-(setq diary-file "~/Documents/diary")
-
 (setq shm-program-name "/home/pete/.emacs.d/shm/.cabal-sandbox/bin/structured-haskell-mode")
 (setq vc-follow-symlinks t)
+
+(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-by-copying t
+      kept-new-versions 6
+      kept-old-versions 2
+      delete-old-versions 2
+      version-control t)
