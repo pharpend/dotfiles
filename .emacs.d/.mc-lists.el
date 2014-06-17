@@ -5,6 +5,7 @@
       '(
         evil-append
         evil-append-line
+        evil-backward-WORD-begin
         evil-backward-char
         evil-backward-word-begin
         evil-change
@@ -20,6 +21,7 @@
         evil-normal-state
         evil-previous-line
         evil-replace
+        evil-ret-and-indent
         evil-substitute
         evil-visual-char
         haskell-indentation-delete-backward-char
