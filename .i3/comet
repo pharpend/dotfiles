@@ -181,6 +181,7 @@ bar {
 }
 
 # Application keybindings
+bindsym $mod+grave exec dwb
 bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec chromium --incognito
 bindsym $mod+f exec pcmanfm
