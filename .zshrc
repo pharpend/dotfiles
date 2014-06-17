@@ -79,16 +79,6 @@ scrgur () {
     scrot -e 'imgur $f ; mv $f ~/Pictures/screenshots'
 }
 
-dotup () {
-    wd=$(pwd)
-    \cd ~/src/dotfiles || \cd ~/code/dotfiles
-    git add -A . &&
-    git commit -m "dotfiles-$(hostname) commit for $(date)" &&
-    git pull &&
-    git push
-    \cd $wd
-}
-
 dcmsg () {
     echo "dotfiles-$(hostname) commit for $(date)"
 }
@@ -99,33 +89,10 @@ dot-commit () {
 }
 
 
+# Swap the keyboard layout
 colemak () {
     setxkbmap us,us,ar -variant colemak, -option\
         terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
-}
-
-pacman-remove-unneeded() {
-    sudo pacman -Rns $(pacman -Qdt | awk '{printf("%s ",$1)}')
-}
-
-screencast () {
-    ffmpeg -f pulse -i default -f x11grab -s $1 -r 15 -i :0.0 $2
-}
-
-# Swap the keyboard layout
-
-# Who has done the most work in a git project? Probably stolen from Stack
-# overflow.
-gbs () {
-    git ls-tree -r HEAD |
-    sed -re 's/^.{53}//' |
-    while read filename; do file "$filename"; done |
-    grep -E ': .*text' |
-    sed -r -e 's/: .*//' |
-    while read filename; do git blame -w "$filename"; done |
-    sed -r -e 's/.*\((.*)[0-9]{4}-[0-9]{2}-[0-9]{2} .*/\1/' -e 's/ +$//' |
-    sort |
-    uniq -c
 }
 
 psc () {
@@ -143,15 +110,6 @@ topcmds() {
 	cat ~/.histfile |awk '{print $1}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -rn|head $1
 }
 
-trash() {
-    mv $@ ~/.local/share/Trash/files/
-}
-alias lstrash='ls ~/.local/share/Trash/files/'
-
-tn () {
-    $HOME/bin/tn-$(hostname) $@
-}
-
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -162,18 +120,14 @@ PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}%#%f%b '
 RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f%'
 REPORTTIME=3
 
-export EDITOR="vim"
+export EDITOR="emacsclient"
 export SHELL="/usr/bin/zsh"
 export rvm_ignore_gemrc_issues=1
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.cabal/bin # Haskell
-export PATH=$PATH:$HOME/.config/herbstluftwm        # herbstluftwm
-export PATH=$PATH:$HOME/code/bin         # Add my programs
-export PATH=$PATH:$HOME/code/bleu/bleu   # Add bleu
-export PATH=$PATH:/opt/android-sdk/platform-tools
+export PATH=$PATH:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/.cabal/bin
+export PATH=$PATH:$HOME/.config/herbstluftwm
+export PATH=$PATH:$HOME/code/bin
 export PATH=$PATH:$HOME/.local/bin
-
-# alsi
