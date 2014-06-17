@@ -18,6 +18,7 @@
 (add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("comet" . conf-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()
