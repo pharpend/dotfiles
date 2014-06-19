@@ -1,7 +1,7 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
-       (load-theme 'sanityinc-tomorrow-eighties t)
-       (set-frame-font "Terminus-8")))
+       (set-frame-font "Meslo LG S DZ 9")
+       (load-theme 'sanityinc-tomorrow-eighties t)))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -17,6 +17,8 @@
 (setq line-spacing 1)
 (column-number-mode 1)
 (global-linum-mode 1)
+(setq truncate-partial-width-windows nil)
+(setq truncate-lines nil)
 (setq linum-format "%4d ")
 
 ;; Winner mode - save window configurations
