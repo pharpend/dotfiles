@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Terminus 7
+font pango: Meslo LG L DZ 7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -159,7 +159,7 @@ bar {
     mode dock
 
     colors {
-        background #112121
+        background #212121
         focused_workspace  #517171 #718181 #d1e1e1
         active_workspace   #517171 #214141 #618181
         inactive_workspace #416161 #113131 #416161

@@ -17,6 +17,8 @@
 (setq line-spacing 1)
 (column-number-mode 1)
 (global-linum-mode 1)
+(setq truncate-partial-width-windows nil)
+(setq truncate-lines nil)
 (setq linum-format "%4d ")
 
 ;; Winner mode - save window configurations
