@@ -172,7 +172,7 @@ bar {
     tray_output LVDS2
 
     colors {
-        background #112121
+        background #212121
         focused_workspace  #517171 #718181 #d1e1e1
         active_workspace   #517171 #214141 #618181
         inactive_workspace #416161 #113131 #416161

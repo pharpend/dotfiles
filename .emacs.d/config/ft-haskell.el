@@ -3,7 +3,6 @@
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
-(structured-haskell-mode 1)
 (turn-on-eldoc-mode)
 (turn-off-haskell-simple-indent)
 
@@ -18,29 +17,3 @@
                       ac-source-words-in-buffer
                       my/ac-source-haskell)
                     ac-sources))
-
-;; (local-set-key "C-c l" 'hs-lint)
-
-(define-key shm-map (kbd ":")
-  '(lambda ()
-     (interactive)
-     (previous-line 1)
-     (evil-append-line 1)
-     (shm/newline-indent)))
-
-(define-key shm-map (kbd ";")
-  '(lambda ()
-     (interactive)
-     (evil-insert 1)
-     (beginning-of-line)
-     (end-of-line)
-     (shm/newline-indent)))
-
-(define-key shm-map (kbd "SPC") 'self-insert-command)
-(define-key evil-insert-state-map (kbd "(") 'self-insert-command)
-(define-key evil-insert-state-map (kbd ")") 'self-insert-command)
-(define-key evil-insert-state-map (kbd ":") 'self-insert-command)
-(define-key evil-insert-state-map (kbd ";") 'self-insert-command)
-(define-key evil-normal-state-map (kbd "M-RET") 'shm/newline-indent)
-(define-key evil-insert-state-map (kbd "M-RET") 'shm/newline-indent)
-(define-key evil-insert-state-map (kbd "C") 'self-insert-command)
