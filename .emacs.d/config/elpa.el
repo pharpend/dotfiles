@@ -66,7 +66,6 @@
 (require 'magit)
 (require 'markdown-mode)
 (require 'popwin)
-(require 'shm)
 (require 'slime-autoloads)
 (require 'smartparens-config)
 (require 'smartparens-ruby)

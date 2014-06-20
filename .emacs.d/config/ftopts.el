@@ -41,6 +41,9 @@
 (add-hook 'scheme-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-scheme.el")))
+(add-hook 'literate-haskell-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-haskell.el")))
 (add-hook 'haskell-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-haskell.el")))
