@@ -1,7 +1,7 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
-       (set-frame-font "DejaVu Sans Mono 10")
-       (load-theme 'sanityinc-tomorrow-eighties t)))
+       (set-frame-font "Hermit 8")
+       (load-theme 'monokai t)))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -14,7 +14,7 @@
 (popwin-mode 1)
 
 ;; set line spacing to 1
-(setq line-spacing 1)
+(setq line-spacing 0)
 (column-number-mode 1)
 (global-linum-mode 1)
 (setq truncate-partial-width-windows nil)
