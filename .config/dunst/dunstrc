@@ -1,5 +1,5 @@
 [global]
-    font = Source Code Pro 8
+    font = Source Code Pro Light 9
 
     # allow a small subset of html markup:
     # <b>bold</b>
@@ -87,7 +87,7 @@
 
     # should a notification popped up from history be sticky or
     # timeout as if it would normally do.
-    sticky_history = yes
+    sticky_history = no
 
     # The height of a single line. If the height is smaller than the font height,
     # it will get raised to the font height.
@@ -149,17 +149,17 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#102020"
+    background = "#202020"
     foreground = "#cdcdcd"
-    timeout = 10
+    timeout = 5
 
 [urgency_normal]
-    background = "#112121"
+    background = "#212121"
     foreground = "#eeeeee"
-    timeout = 10
+    timeout = 8
 
 [urgency_critical]
-    background = "#912121"
+    background = "#c12121"
     foreground = "#ffffff"
     timeout = 0
 
