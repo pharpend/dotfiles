@@ -3,7 +3,7 @@
 require 'json'
   
 def update
-   STDOUT.write "#{JSON.generate($info)},"
+   STDOUT.write "#{JSON::pretty_generate($info)},"
 end
 
 $info = []

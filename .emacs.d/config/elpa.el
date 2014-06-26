@@ -1,8 +1,4 @@
 ;; My configuration for Elpa
-;;
-
-(add-to-list 'load-path "~/.emacs.d/shm/elisp")
-(add-to-list 'load-path "~/.emacs.d/hs")
 
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
