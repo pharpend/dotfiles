@@ -154,7 +154,7 @@ exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rc
 bar {
     output VGA-1
     position bottom
-    status_command cat
+    status_command $HOME/bin/murica.rb
     tray_output DVI-D-2
     mode dock
 
@@ -169,7 +169,7 @@ bar {
 bar {
     output DVI-D-2
     position bottom
-    status_command $HOME/bin/murica.rb
+    status_command cat
     tray_output DVI-D-2
     mode dock
 

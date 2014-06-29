@@ -47,6 +47,7 @@ alias ec='emacsclient'
 alias hist='cat ~/.histfile'
 alias xcl='xclip -sel clip'
 alias dmesg='dmesg -L -w'
+alias cabal='/home/pete/.cabal/bin/cabal'
 
 alias pms='sudo pacman -S'
 alias pmsy='sudo pacman -Sy'
