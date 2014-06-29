@@ -219,23 +219,17 @@ bindsym $mod+Shift+bracketright move container to  workspace next
 bindsym $mod+bracketleft workspace prev
 bindsym $mod+bracketright workspace next
 
-# Autostarted applications
-exec deluge
-
 # Panel things
+exec deluge
 exec google-musicmanager
-exec kalu
-exec kupfer
 exec nm-applet
 exec parcellite
-exec pnmixer
-exec xfce4-power-manager
 
 # Non-panel things
 exec compton
 exec dunst
 exec emacs --daemon
-exec pcmanfm --daemon
+exec pcmanfm --daemon-mode
 exec nitrogen --restore
 
 client.focused          #212121 #20f0f0 #212121 #00DA8E
