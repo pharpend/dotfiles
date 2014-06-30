@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Source Code Pro 8
+font pango: Meslo LG S DZ 7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -152,30 +152,14 @@ exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rc
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    output LVDS1
-    position bottom
+    position top
     status_command $HOME/bin/murica.rb
-    tray_output LVDS1
 
     colors {
         background #212121
-        focused_workspace  #517171 #718181 #d1e1e1
-        active_workspace   #517171 #214141 #618181
-        inactive_workspace #416161 #113131 #416161
-        urgent_workspace   #2f343a #b00000 #ffffff
-    }
-}
-bar {
-    output LVDS2
-    position bottom
-    status_command $HOME/bin/murica.rb
-    tray_output LVDS2
-
-    colors {
-        background #212121
-        focused_workspace  #517171 #718181 #d1e1e1
-        active_workspace   #517171 #214141 #618181
-        inactive_workspace #416161 #113131 #416161
+        focused_workspace  #81a1b1 #314444 #dddddd
+        active_workspace   #81a1b1 #213131 #999999
+        inactive_workspace #444444 #222222 #555555
         urgent_workspace   #2f343a #b00000 #ffffff
     }
 }
@@ -218,7 +202,6 @@ exec dropboxd
 exec kalu
 exec nm-applet
 exec parcellite
-exec pnmixer
 exec vidalia
 exec xfce4-power-manager
 
