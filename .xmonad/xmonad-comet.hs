@@ -1,8 +1,14 @@
 import qualified Data.Map        as M
 import           System.Exit
 import           XMonad
+import           XMonad.Hooks.ManageDocks
+import           XMonad.Layout.Column
 import           XMonad.Layout.Minimize
+import           XMonad.Layout.Reflect
 import           XMonad.Layout.WindowNavigation
+import           XMonad.Prompt
+import           XMonad.Prompt.RunOrRaise
+import qualified XMonad.StackSet as W
 import qualified XMonad.StackSet as W
 
 main = xmonad myConf
@@ -16,9 +22,11 @@ myConf = defaultConfig { terminal           = "terminator"
                        , keys               = myKeys
                        , startupHook        = myStartupHook
                        , layoutHook         = minimize $ windowNavigation myLayout
+                       , manageHook         = manageDocks
+                       , handleEventHook    = docksEventHook
                        }
 
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = avoidStruts $ tiled ||| reflectHoriz tiled
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -27,7 +35,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
     -- Default proportion of screen occupied by master pane
     ratio   = 1/2
     -- Percent of screen to increment by when resizing panes
-    delta   = 3/100
+    delta   = 5/100
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- The most basic, opening a terminal
@@ -89,20 +97,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   [ ((m .|. modm, k), windows $ f i)
     | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
-  ] ++
-
-  -- mod-{u,y}       - go to screen 1 or 2
-  -- mod-shift-{u,y} - move client to screen 1 or 2
-  [ ((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
-    | (key, sc) <- zip [xK_u, xK_y] [0..]
-    , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
-
 myStartupHook = do
-  spawn "xrandr --output VGA-1 --rotate normal"
-  spawn "xrandr --output DVI-D-2 --rotate normal --right-of VGA-1"
+  spawn "dropboxd"
+  spawn "xfce4-power-manager"
   spawn "compton"
   spawn "nitrogen --restore"
+  spawn "xsetroot -cursor_name left_ptr"
+  -- spawn "/home/pete/.cabal/bin/xmobar -b"
   spawn "setxkbmap us,us,ar -variant colemak, -option \
         \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
