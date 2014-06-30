@@ -1,8 +1,13 @@
 import qualified Data.Map        as M
 import           System.Exit
 import           XMonad
+import           XMonad.Hooks.ManageDocks
+import           XMonad.Layout.Column
 import           XMonad.Layout.Minimize
+import           XMonad.Layout.Reflect
 import           XMonad.Layout.WindowNavigation
+import           XMonad.Prompt
+import           XMonad.Prompt.RunOrRaise
 import qualified XMonad.StackSet as W
 
 main = xmonad myConf
@@ -10,24 +15,29 @@ main = xmonad myConf
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
                        , borderWidth        = 1
-                       , focusedBorderColor = "#44cedd"
+                       , focusedBorderColor = "#94eefd"
                        , normalBorderColor  = "#212121"
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
                        , layoutHook         = minimize $ windowNavigation myLayout
+                       , manageHook         = manageDocks
+                       , handleEventHook    = docksEventHook
                        }
 
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = avoidStruts $  tiled ||| reflectHoriz tiled
+                                ||| Mirror tiled
+                                ||| reflectVert (Mirror tiled)
+                                ||| Full
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
     -- The default number of windows in the master pane
     nmaster = 1
     -- Default proportion of screen occupied by master pane
-    ratio   = 1/2
+    ratio   = 0.5
     -- Percent of screen to increment by when resizing panes
-    delta   = 3/100
+    delta   = 5/100
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- The most basic, opening a terminal
@@ -64,6 +74,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_k         ), kill                                )
   , (( modm               , xK_o         ), withFocused minimizeWindow          )
   , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
+  , (( modm               , xK_equal     ), sendMessage Expand                  )
+  , (( modm               , xK_minus     ), sendMessage Shrink                  )
 
   -- Non-application keybindings
   , (( modm               , xK_F7  ), spawn "cmus-remote --prev"                         )
@@ -75,6 +87,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
                                             \/home/pete/.cabal/bin/xmonad --restart"     )
   , (( modm .|. shiftMask , xK_q   ), io $ exitWith ExitSuccess                          )
+  , (( modm               , xK_x   ), runOrRaisePrompt defaultXPConfig                   )
 
   -- Application keybindings
   , (( modm               , xK_w     ), spawn "dmenu_run"            )
@@ -82,6 +95,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_grave ), spawn "dwb"                  )
   , (( modm               , xK_c     ), spawn "chromium"             )
   , (( modm .|. shiftMask , xK_c     ), spawn "chromium --incognito" )
+  , (( modm               , xK_f     ), spawn "pcmanfm"              )
   ] ++
 
   -- mod-N       - go to workspace N
@@ -104,5 +118,6 @@ myStartupHook = do
   spawn "xrandr --output DVI-D-2 --rotate normal --right-of VGA-1"
   spawn "compton"
   spawn "nitrogen --restore"
+  spawn "xsetroot -cursor_name left_ptr"
   spawn "setxkbmap us,us,ar -variant colemak, -option \
         \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"

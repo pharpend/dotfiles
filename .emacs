@@ -62,3 +62,4 @@
  '(shm-current-face ((t (:background "#333333"))))
  '(shm-quarantine-face ((t (:background "#282828")))))
 (put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
