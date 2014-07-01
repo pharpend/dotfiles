@@ -1,3 +1,5 @@
+-- -*- mode: haskell -*-
+
 import qualified Data.Map        as M
 import           System.Exit
 import           XMonad
@@ -72,17 +74,19 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_k         ), kill                                )
   , (( modm               , xK_o         ), withFocused minimizeWindow          )
   , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
+  , (( modm               , xK_minus     ), sendMessage Shrink                  )
+  , (( modm               , xK_equal     ), sendMessage Expand                  )
 
   -- Non-application keybindings
-  , (( modm               , xK_F7  ), spawn "cmus-remote --prev"                         )
-  , (( modm               , xK_F8  ), spawn "cmus-remote --pause"                        )
-  , (( modm               , xK_F9  ), spawn "cmus-remote --next"                         )
-  , (( modm               , xK_F10 ), spawn "amixer set Master toggle"                   )
-  , (( modm               , xK_F11 ), spawn "amixer set Master 8%-"                      )
-  , (( modm               , xK_F12 ), spawn "amixer set Master 8%+"                      )
+  , (( modm               , xK_F7  ), spawn "cmus-remote --prev"                        )
+  , (( modm               , xK_F8  ), spawn "cmus-remote --pause"                       )
+  , (( modm               , xK_F9  ), spawn "cmus-remote --next"                        )
+  , (( modm               , xK_F10 ), spawn "amixer set Master toggle"                  )
+  , (( modm               , xK_F11 ), spawn "amixer set Master 8%-"                     )
+  , (( modm               , xK_F12 ), spawn "amixer set Master 8%+"                     )
   , (( modm               , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
-                                            \/home/pete/.cabal/bin/xmonad --restart"     )
-  , (( modm .|. shiftMask , xK_q   ), io $ exitWith ExitSuccess                          )
+                                            \/home/pete/.cabal/bin/xmonad --restart"    )
+  , (( modm .|. shiftMask , xK_q   ), io $ exitWith ExitSuccess                         )
 
   -- Application keybindings
   , (( modm               , xK_w     ), spawn "dmenu_run"            )
