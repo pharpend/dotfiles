@@ -117,7 +117,9 @@ myStartupHook = do
   spawn "xrandr --output VGA-1 --rotate normal"
   spawn "xrandr --output DVI-D-2 --rotate normal --right-of VGA-1"
   spawn "compton"
+  spawn "emacs --daemon"
   spawn "nitrogen --restore"
+  spawn "/home/pete/.cabal/bin/xmobar"
   spawn "xsetroot -cursor_name left_ptr"
   spawn "setxkbmap us,us,ar -variant colemak, -option \
         \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
