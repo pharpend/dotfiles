@@ -93,8 +93,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_w     ), spawn "dmenu_run"            )
   , (( modm               , xK_m     ), spawn "emacs"                )
   , (( modm               , xK_grave ), spawn "dwb"                  )
-  , (( modm               , xK_c     ), spawn "chromium"             )
-  , (( modm .|. shiftMask , xK_c     ), spawn "chromium --incognito" )
+  , (( modm               , xK_c     ), spawn "chromium --incognito" )
   , (( modm               , xK_f     ), spawn "pcmanfm"              )
   ] ++
 
