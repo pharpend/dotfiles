@@ -1,0 +1,20 @@
+-- -*- mode: haskell -*-
+
+Config { font         = "xft:Source Code Pro:size=8"
+       , bgColor      = "#111111"
+       , fgColor      = "#cccccc"
+       , position     = Top
+       , lowerOnStart = True
+       , commands     = [ Run Volume "default" "Master" [] 10
+                        , Run Weather "KSLC" ["-t", "<skyCondition>, <tempC> C"] 18000
+                        , Run Date "%H:%M | %d %B" "date" 10
+                        , Run Com "/home/pete/bin/cmus-local.rb" [] "cmus" 30
+                        ]
+       , sepChar      = "%"
+       , alignSep     = "}{"
+       , allDesktops  = True
+       , persistent   = True
+       , hideOnStart  = False
+       , pickBroadest = True
+       , template     = "}{%cmus% | %KSLC% | %default:Master%| %date% "
+       }
