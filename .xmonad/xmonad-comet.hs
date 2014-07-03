@@ -104,6 +104,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   ]
 
 myStartupHook = do
+  spawn "stalonetray --grow-gravity W -i 12 -bg #111111"
+  spawn "nm-applet"
   spawn "dropboxd"
   spawn "xfce4-power-manager"
   spawn "compton"
