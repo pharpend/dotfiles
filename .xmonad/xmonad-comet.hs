@@ -18,8 +18,8 @@ main = xmonad myConf
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
                        , borderWidth        = 1
-                       , focusedBorderColor = "#44cedd"
-                       , normalBorderColor  = "#212121"
+                       , focusedBorderColor = "#94defd"
+                       , normalBorderColor  = "#000000"
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
@@ -109,6 +109,6 @@ myStartupHook = do
   spawn "compton"
   spawn "nitrogen --restore"
   spawn "xsetroot -cursor_name left_ptr"
-  -- spawn "/home/pete/.cabal/bin/xmobar -b"
+  spawn "/home/pete/.cabal/bin/xmobar"
   spawn "setxkbmap us,us,ar -variant colemak, -option \
         \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
