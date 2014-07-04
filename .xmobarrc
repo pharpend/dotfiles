@@ -15,6 +15,6 @@ Config { font         = "xft:Source Code Pro:size=8"
        , allDesktops  = True
        , persistent   = True
        , hideOnStart  = False
-       , pickBroadest = True
+       , pickBroadest = False
        , template     = "}{%cmus% | %KSLC% | %default:Master%| %date% "
        }
