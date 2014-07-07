@@ -73,6 +73,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
   , (( modm               , xK_equal     ), sendMessage Expand                  )
   , (( modm               , xK_minus     ), sendMessage Shrink                  )
+  
+  -- |Utilities
+  , (( 0                  , xK_Print     ), spawn "scrot -e 'mv $f ~/Pictures/screenshots'" )
 
   -- Non-application keybindings
   , (( modm               , xK_F7  ), spawn "cmus-remote --prev"                         )
@@ -91,6 +94,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_m     ), spawn "emacs"                )
   , (( modm               , xK_grave ), spawn "dwb"                  )
   , (( modm               , xK_c     ), spawn "chromium --incognito" )
+  , (( modm .|. shiftMask , xK_c     ), spawn "chromium"             )
   , (( modm               , xK_f     ), spawn "pcmanfm"              )
   ] ++
 
