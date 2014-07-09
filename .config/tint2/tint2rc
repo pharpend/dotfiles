@@ -20,7 +20,7 @@ border_color = #414141 40
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #000000 56
+background_color = #000000 55
 border_color = #FF0000 100
 
 # Panel
