@@ -69,8 +69,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm .|. shiftMask , xK_Return    ), windows W.swapMaster                )
   , (( modm               , xK_period    ), sendMessage $ IncMasterN 1          )
   , (( modm               , xK_comma     ), sendMessage $ IncMasterN (-1)       )
-  , (( modm               , xK_space     ), sendMessage NextLayout              )
-  , (( modm .|. shiftMask , xK_space     ), setLayout $ XMonad.layoutHook conf  )
+  , (( modm .|. shiftMask , xK_space     ), sendMessage NextLayout              )
   , (( modm               , xK_k         ), kill                                )
   , (( modm               , xK_o         ), withFocused minimizeWindow          )
   , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
@@ -88,12 +87,20 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
                                             \/home/pete/.cabal/bin/xmonad --restart"    )
   , (( modm .|. shiftMask , xK_q   ), io $ exitWith ExitSuccess                         )
 
+  , (( 0                  , xK_Print   ), spawn "scrot -e 'mv $f ~/Pictures/wallpaper/'"  )
+  , (( shiftMask          , xK_Print   ), spawn "scrot -se 'mv $f ~/Pictures/wallpaper/'" )
+  , (( 0                  , 0X1008ff12 ), spawn "amixer set Master toggle"                )
+  , (( 0                  , 0X1008ff11 ), spawn "amixer set Master 8%-"                   )
+  , (( 0                  , 0X1008ff13 ), spawn "amixer set Master 8%+"                   )
+
   -- Application keybindings
-  , (( modm               , xK_w     ), spawn "dmenu_run"            )
-  , (( modm               , xK_m     ), spawn "emacs"                )
-  , (( modm               , xK_grave ), spawn "dwb"                  )
-  , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop" )
-  , (( modm               , xK_c     ), spawn "chromium --incognito" )
+  , (( modm               , xK_w     ), spawn "dmenu_run"                )
+  , (( modm               , xK_space ), runOrRaisePrompt defaultXPConfig )
+  , (( modm               , xK_m     ), spawn "emacs"                    )
+  , (( modm               , xK_grave ), spawn "dwb"                      )
+  , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop"     )
+  , (( modm               , xK_c     ), spawn "chromium --incognito"     )
+  , (( modm .|. shiftMask , xK_c     ), spawn "chromium"                 )
   ] ++
 
   -- mod-N       - go to workspace N
@@ -111,6 +118,5 @@ myStartupHook = do
   spawn "compton"
   spawn "nitrogen --restore"
   spawn "xsetroot -cursor_name left_ptr"
-  spawn "/home/pete/.cabal/bin/xmobar"
   spawn "setxkbmap us,us,ar -variant colemak, -option \
         \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
