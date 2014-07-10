@@ -66,8 +66,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm .|. shiftMask , xK_Return    ), windows W.swapMaster                )
   , (( modm               , xK_period    ), sendMessage $ IncMasterN 1          )
   , (( modm               , xK_comma     ), sendMessage $ IncMasterN (-1)       )
-  , (( modm               , xK_space     ), sendMessage NextLayout              )
-  , (( modm .|. shiftMask , xK_space     ), setLayout $ XMonad.layoutHook conf  )
+  , (( modm .|. shiftMask , xK_space     ), sendMessage NextLayout              )
   , (( modm               , xK_k         ), kill                                )
   , (( modm               , xK_o         ), withFocused minimizeWindow          )
   , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
@@ -86,8 +85,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_F12 ), spawn "amixer set Master 8%+"                      )
   , (( modm               , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
                                             \/home/pete/.cabal/bin/xmonad --restart"     )
-  , (( modm .|. shiftMask , xK_q   ), io $ exitWith ExitSuccess                          )
-  , (( modm               , xK_x   ), runOrRaisePrompt defaultXPConfig                   )
+  , (( modm .|. shiftMask , xK_q     ), io $ exitWith ExitSuccess        )
+  , (( modm               , xK_space ), runOrRaisePrompt defaultXPConfig )
 
   -- Application keybindings
   , (( modm               , xK_w     ), spawn "dmenu_run"            )
