@@ -110,13 +110,17 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
-myStartupHook = do
-  spawn "tint2"
-  spawn "nm-applet"
-  spawn "dropboxd"
-  spawn "xfce4-power-manager"
-  spawn "compton"
-  spawn "nitrogen --restore"
-  spawn "xsetroot -cursor_name left_ptr"
-  spawn "setxkbmap us,us,ar -variant colemak, -option \
-        \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
+myStartupHook = panelThings >> nonPanelThings
+  where
+    panelThings = do
+      spawn "tint2"
+      spawn "pnmixer"
+      spawn "nm-applet"
+      spawn "dropboxd"
+      spawn "xfce4-power-manager"
+    nonPanelThings = do
+      spawn "compton"
+      spawn "nitrogen --restore"
+      spawn "xsetroot -cursor_name left_ptr"
+      spawn "setxkbmap us,us,ar -variant colemak, -option \
+            \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
