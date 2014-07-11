@@ -118,6 +118,8 @@ myStartupHook = panelThings >> nonPanelThings
       spawn "nm-applet"
       spawn "dropboxd"
       spawn "xfce4-power-manager"
+      spawn "parcellite"
+      spawn "kalu"
     nonPanelThings = do
       spawn "compton"
       spawn "nitrogen --restore"
