@@ -20,13 +20,13 @@ border_color = #414141 40
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #000000 83
+background_color = #000000 82
 border_color = #FF0000 100
 
 # Panel
 panel_monitor = all
 panel_position = top center horizontal
-panel_size = 100% 30
+panel_size = 100% 24
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
@@ -75,17 +75,17 @@ font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 12 1 8
+systray_padding = 5 1 8
 systray_sort = ascending
-systray_background_id = 2
+systray_background_id = 0
 systray_icon_size = 0
 systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = Source Sans Pro Semi-Bold 10
+time1_font = Source Sans Pro Semi-Bold 9
 time2_format = %a %e %b
-time2_font = Source Sans Pro Semi-Bold 9
+time2_font = Source Sans Pro Semi-Bold 8
 clock_font_color = #FFFFFF 100
 clock_tooltip = %a %d %b
 clock_padding = 10 0

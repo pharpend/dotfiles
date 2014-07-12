@@ -83,9 +83,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_F10 ), spawn "amixer set Master toggle"                  )
   , (( modm               , xK_F11 ), spawn "amixer set Master 8%-"                     )
   , (( modm               , xK_F12 ), spawn "amixer set Master 8%+"                     )
-  , (( modm               , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
+  , (( modm .|. shiftMask , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
                                             \/home/pete/.cabal/bin/xmonad --restart"    )
-  , (( modm .|. shiftMask , xK_q   ), io $ exitWith ExitSuccess                         )
 
   , (( 0                  , xK_Print   ), spawn "scrot -e 'mv $f ~/Pictures/wallpaper/'"  )
   , (( shiftMask          , xK_Print   ), spawn "scrot -se 'mv $f ~/Pictures/wallpaper/'" )
