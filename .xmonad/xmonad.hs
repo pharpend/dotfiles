@@ -111,21 +111,28 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
-
-myStartupHook = nonPanelThings >> panelThings
-  where nonPanelThings = do spawn "xrandr --output VGA-1 --rotate normal"
-                            spawn "xrandr --output DVI-D-2 --rotate normal --right-of VGA-1"
-                            spawn "compton"
-                            spawn "emacs --daemon"
-                            spawn "nitrogen --restore"
-                            spawn "xsetroot -cursor_name left_ptr"
-                            spawn "xautolock -time 30 -locker \"i3lock\""
-                            spawn "setxkbmap us,us,ar -variant colemak, -option \
-                                  \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
-
-        panelThings    = do spawn "/home/pete/.cabal/bin/xmobar"
-                            spawn "stalonetray --grow-gravity W -i 12 -bg #111111"
-                            spawn "parcellite"
-                            spawn "nm-applet"
-                            spawn "vidalia"
-                            spawn "deluge"
+myStartupHook = killOld >> nonPanelThings >> panelThings
+  where
+    killOld = spawn "/home/pete/bin/killinit.rb xmobar nm-applet cbatticon kalu"
+    panelThings = do    
+      spawn "/home/pete/.cabal/bin/xmobar"
+      spawn "trayer --align left --edge top --expand false --heighttype pixel \
+            \--height 12 --transparent true --widthtype request --width 3 \
+            \--alpha 255 --tint 2"
+      spawn "nm-applet"
+      spawn "dropboxd"
+      spawn "cbatticon"
+      spawn "parcellite"
+      spawn "kalu"
+      spawn "vidalia"                                                              
+      spawn "deluge"                                                               
+    nonPanelThings = do
+      spawn "xrandr --output VGA-1 --rotate normal"
+      spawn "xrandr --output DVI-D-2 --rotate normal --right-of VGA-1"                           
+      spawn "compton"                                                                            
+      spawn "emacs --daemon"                                                                     
+      spawn "nitrogen --restore"                                                                 
+      spawn "xsetroot -cursor_name left_ptr"                                                     
+      spawn "xautolock -time 30 -locker \"i3lock -c \"#222222\"\""                                              
+      spawn "setxkbmap us,ar -variant colemak, -option \                                         
+            \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"                  

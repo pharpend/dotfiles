@@ -133,5 +133,6 @@ myStartupHook = killOld >> nonPanelThings >> panelThings
       spawn "compton"
       spawn "nitrogen --restore"
       spawn "xsetroot -cursor_name left_ptr"
+      spawn "xautolock -time 10 -locker \"i3lock -c \"#212121\"\""
       spawn "setxkbmap us,ar -variant colemak, -option \
             \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
