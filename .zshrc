@@ -48,7 +48,7 @@ alias hist='cat ~/.histfile'
 alias xcl='xclip -sel clip'
 alias dmesg='dmesg -L -w'
 alias cabal='/home/pete/.cabal/bin/cabal'
-alias erosc='/home/pete/src/rwl/eros/dist/build/erosc/erosc'
+alias roc='rlwrap ocaml'
 
 alias pms='sudo pacman -S'
 alias pmsy='sudo pacman -Sy'
@@ -95,7 +95,7 @@ dot-commit () {
 
 # Swap the keyboard layout
 colemak () {
-    setxkbmap us,us,ar -variant colemak, -option\
+    setxkbmap us,ar -variant colemak, -option\
         terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 }
 
@@ -112,6 +112,11 @@ alias cd='cdl'
 
 topcmds() {
 	cat ~/.histfile |awk '{print $1}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -rn|head $1
+}
+
+default-tray () {
+   trayer --align left --edge top --expand false --heighttype pixel --height 12\
+       --transparent true --widthtype request --width 3 --alpha 255 --tint 2 
 }
 
 # Syntax highlighting

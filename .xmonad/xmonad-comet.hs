@@ -86,8 +86,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm .|. shiftMask , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
                                             \/home/pete/.cabal/bin/xmonad --restart"    )
 
-  , (( 0                  , xK_Print   ), spawn "scrot -e 'mv $f ~/Pictures/wallpaper/'"  )
-  , (( shiftMask          , xK_Print   ), spawn "scrot -se 'mv $f ~/Pictures/wallpaper/'" )
+  , (( 0                  , xK_Print   ), spawn "scrot -e 'mv $f ~/Pictures/screenshots/'"  )
+  , (( shiftMask          , xK_Print   ), spawn "scrot -se 'mv $f ~/Pictures/screenshots/'" )
   , (( 0                  , 0X1008ff12 ), spawn "amixer set Master toggle"                )
   , (( 0                  , 0X1008ff11 ), spawn "amixer set Master 8%-"                   )
   , (( 0                  , 0X1008ff13 ), spawn "amixer set Master 8%+"                   )
@@ -123,5 +123,5 @@ myStartupHook = panelThings >> nonPanelThings
       spawn "compton"
       spawn "nitrogen --restore"
       spawn "xsetroot -cursor_name left_ptr"
-      spawn "setxkbmap us,us,ar -variant colemak, -option \
+      spawn "setxkbmap us,ar -variant colemak, -option \
             \terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps"
