@@ -109,14 +109,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
-myStartupHook = panelThings >> nonPanelThings
+myStartupHook = nonPanelThings >> panelThings
   where
     panelThings = do
-      spawn "tint2"
-      spawn "pnmixer"
+      spawn "/home/pete/.cabal/bin/xmobar"
+      spawn "trayer --align left --edge top --expand false --heighttype pixel \
+            \--height 12 --transparent true --widthtype request --width 3 \
+            \--alpha 255 --tint 2"
       spawn "nm-applet"
       spawn "dropboxd"
-      spawn "xfce4-power-manager"
+      spawn "cbatticon"
       spawn "parcellite"
       spawn "kalu"
     nonPanelThings = do
