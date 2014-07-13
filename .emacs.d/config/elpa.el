@@ -22,6 +22,7 @@
                       color-theme-github
                       color-theme-sanityinc-solarized
                       color-theme-sanityinc-tomorrow
+                      ecb
                       elpy
                       evil
                       evil-nerd-commenter

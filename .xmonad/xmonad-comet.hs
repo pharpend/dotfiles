@@ -41,7 +41,7 @@ myXPConfig = defaultXPConfig { font     = myFont
                              }
 
 
-myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Accordion ||| Grid ||| myTabbed
+myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| myTabbed
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -109,14 +109,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( 0                  , 0X1008ff13 ), spawn "amixer set Master 8%+"                   )
 
   -- Application keybindings
-  , (( modm .|. shiftMask , xK_w     ), spawn "dmenu_run"            )
-  , (( modm               , xK_w     ), runOrRaisePrompt myXPConfig  )
-  , (( modm               , xK_space ), runOrRaisePrompt myXPConfig  )
-  , (( modm               , xK_m     ), spawn "emacs"                )
-  , (( modm               , xK_grave ), spawn "dwb"                  )
-  , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop" )
-  , (( modm               , xK_c     ), spawn "chromium --incognito" )
-  , (( modm .|. shiftMask , xK_c     ), spawn "chromium"             )
+  , (( modm .|. shiftMask , xK_w     ), spawn "dmenu_run"                        )
+  , (( modm               , xK_w     ), runOrRaisePrompt myXPConfig              )
+  , (( modm               , xK_space ), runOrRaisePrompt myXPConfig              )
+  , (( modm               , xK_m     ), spawn "emacs"                            )
+  , (( modm               , xK_grave ), spawn "dwb"                              )
+  , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop"             )
+  , (( modm               , xK_c     ), spawn "chromium --incognito"             )
+  , (( modm .|. shiftMask , xK_c     ), spawn "chromium"                         )
+  , (( modm               , xK_v     ), spawn "/home/pete/.cabal/bin/yi -fpango" )
   ] ++
 
   -- mod-N       - go to workspace N
