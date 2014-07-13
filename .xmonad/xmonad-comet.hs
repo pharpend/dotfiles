@@ -4,9 +4,12 @@ import qualified Data.Map        as M
 import           System.Exit
 import           XMonad
 import           XMonad.Hooks.ManageDocks
-import           XMonad.Layout.Column
+import           XMonad.Layout.Accordion
+import           XMonad.Layout.Grid
 import           XMonad.Layout.Minimize
 import           XMonad.Layout.Reflect
+import           XMonad.Layout.Spiral
+import           XMonad.Layout.Tabbed
 import           XMonad.Layout.WindowNavigation
 import           XMonad.Prompt
 import           XMonad.Prompt.RunOrRaise
@@ -18,32 +21,39 @@ main = xmonad myConf
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
                        , borderWidth        = 1
-                       , focusedBorderColor = "#94defd"
-                       , normalBorderColor  = "#000000"
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
                        , layoutHook         = minimize $ windowNavigation myLayout
                        , manageHook         = manageDocks
                        , handleEventHook    = docksEventHook
+                       , focusedBorderColor = myFocusedBorderColor
+                       , normalBorderColor  = myNormalBorderColor
                        }
 
-myXPConfig = defaultXPConfig { font     = "xft:Meslo LG M:weight=bold:size=7"
+myFocusedBorderColor = "#94defd"
+myNormalBorderColor  = "#000000"
+myFont = "xft:Meslo LG S DZ:weight=bold:size=7"
+
+myXPConfig = defaultXPConfig { font     = myFont
                              , bgColor  = "#212121"
                              , position = Top
                              }
 
 
-myLayout = avoidStruts $ tiled ||| reflectHoriz tiled
+myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Accordion ||| Grid ||| myTabbed
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
-    -- The default number of windows in the master pane
     nmaster = 1
-    -- Default proportion of screen occupied by master pane
     ratio   = 1/2
-    -- Percent of screen to increment by when resizing panes
     delta   = 5/100
+    myTabbed = tabbedBottom shrinkText defaultTheme { fontName            = myFont
+                                                    , activeColor         = "#212121"
+                                                    , inactiveColor       = "#161616"
+                                                    , activeBorderColor   = myFocusedBorderColor
+                                                    , inactiveBorderColor = myNormalBorderColor
+                                                    }
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- The most basic, opening a terminal
@@ -118,11 +128,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 myStartupHook = killOld >> nonPanelThings >> panelThings
   where
-    killOld = spawn "/home/pete/bin/killinit.rb xmobar nm-applet cbatticon kalu"
+    killOld = spawn "/home/pete/bin/killinit.rb trayer xmobar nm-applet cbatticon kalu"
     panelThings = do
       spawn "/home/pete/.cabal/bin/xmobar"
       spawn "trayer --align left --edge top --expand false --heighttype pixel \
-            \--height 12 --transparent true --widthtype request --width 3 \
+            \--height 10 --transparent true --widthtype request --width 3 \
             \--alpha 255 --tint 2"
       spawn "nm-applet"
       spawn "dropboxd"

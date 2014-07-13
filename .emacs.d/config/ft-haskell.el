@@ -17,3 +17,5 @@
                       ac-source-words-in-buffer
                       my/ac-source-haskell)
                     ac-sources))
+
+(local-set-key (kbd "C-t") 'dabbrev-expand)

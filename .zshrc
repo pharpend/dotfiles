@@ -115,8 +115,8 @@ topcmds() {
 }
 
 default-tray () {
-  trayer --align left --edge top --expand false --heighttype pixel --height 12\
-    --widthtype request --width 3 --alpha 255 --tint 2 
+  trayer --align left --edge top --expand false --heighttype pixel --height 10\
+    --transparent true --widthtype request --width 3 --alpha 255 --tint 2 
 }
 
 rxmo () {
