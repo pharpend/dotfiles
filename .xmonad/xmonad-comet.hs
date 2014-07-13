@@ -28,6 +28,12 @@ myConf = defaultConfig { terminal           = "terminator"
                        , handleEventHook    = docksEventHook
                        }
 
+myXPConfig = defaultXPConfig { font     = "xft:Meslo LG M:weight=bold:size=7"
+                             , bgColor  = "#212121"
+                             , position = Top
+                             }
+
+
 myLayout = avoidStruts $ tiled ||| reflectHoriz tiled
   where
     -- default tiling algorithm partitions the screen into two panes
@@ -93,13 +99,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( 0                  , 0X1008ff13 ), spawn "amixer set Master 8%+"                   )
 
   -- Application keybindings
-  , (( modm               , xK_w     ), spawn "dmenu_run"                )
-  , (( modm               , xK_space ), runOrRaisePrompt defaultXPConfig )
-  , (( modm               , xK_m     ), spawn "emacs"                    )
-  , (( modm               , xK_grave ), spawn "dwb"                      )
-  , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop"     )
-  , (( modm               , xK_c     ), spawn "chromium --incognito"     )
-  , (( modm .|. shiftMask , xK_c     ), spawn "chromium"                 )
+  , (( modm .|. shiftMask , xK_w     ), spawn "dmenu_run"            )
+  , (( modm               , xK_w     ), runOrRaisePrompt myXPConfig  )
+  , (( modm               , xK_space ), runOrRaisePrompt myXPConfig  )
+  , (( modm               , xK_m     ), spawn "emacs"                )
+  , (( modm               , xK_grave ), spawn "dwb"                  )
+  , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop" )
+  , (( modm               , xK_c     ), spawn "chromium --incognito" )
+  , (( modm .|. shiftMask , xK_c     ), spawn "chromium"             )
   ] ++
 
   -- mod-N       - go to workspace N
@@ -109,8 +116,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
-myStartupHook = nonPanelThings >> panelThings
+myStartupHook = killOld >> nonPanelThings >> panelThings
   where
+    killOld = spawn "/home/pete/bin/killinit.rb xmobar nm-applet cbatticon kalu"
     panelThings = do
       spawn "/home/pete/.cabal/bin/xmobar"
       spawn "trayer --align left --edge top --expand false --heighttype pixel \

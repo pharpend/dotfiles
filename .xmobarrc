@@ -1,6 +1,6 @@
 -- -*- mode: haskell -*-
 
-Config { font         = "xft:Source Code Pro:size=8"
+Config { font         = "xft:Meslo LG M:weight=bold:size=7"
        , bgColor      = "#212121"
        , fgColor      = "#cccccc"
        , position     = Top
