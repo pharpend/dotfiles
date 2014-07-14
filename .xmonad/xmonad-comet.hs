@@ -114,10 +114,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_space ), runOrRaisePrompt myXPConfig              )
   , (( modm               , xK_m     ), spawn "emacs"                            )
   , (( modm               , xK_grave ), spawn "dwb"                              )
+  , (( modm               , xK_s     ), spawn "dwb"                              )
   , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop"             )
   , (( modm               , xK_c     ), spawn "chromium --incognito"             )
   , (( modm .|. shiftMask , xK_c     ), spawn "chromium"                         )
-  , (( modm               , xK_v     ), spawn "/home/pete/.cabal/bin/yi -fpango" )
   ] ++
 
   -- mod-N       - go to workspace N
@@ -127,7 +127,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
-myStartupHook = killOld >> nonPanelThings >> panelThings
+myStartupHook = nonPanelThings >> panelThings >> killOld
   where
     killOld = spawn "/home/pete/bin/killinit.rb trayer xmobar nm-applet cbatticon kalu"
     panelThings = do
