@@ -137,7 +137,7 @@ myStartupHook = nonPanelThings >> panelThings >> killOld
             \--alpha 255 --tint 2"
       spawn "nm-applet"
       spawn "dropboxd"
-      spawn "cbatticon"
+      spawn "xfce4-power-manager"
       spawn "parcellite"
       spawn "kalu"
     nonPanelThings = do
