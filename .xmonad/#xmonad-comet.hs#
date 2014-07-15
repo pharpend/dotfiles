@@ -7,7 +7,6 @@ import           XMonad.Hooks.ManageDocks
 import           XMonad.Layout.Accordion
 import           XMonad.Layout.Minimize
 import           XMonad.Layout.Reflect
-import           XMonad.Layout.Spiral
 import           XMonad.Layout.Tabbed
 import           XMonad.Layout.WindowNavigation
 import           XMonad.Prompt
@@ -113,10 +112,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_space ), runOrRaisePrompt myXPConfig              )
   , (( modm               , xK_m     ), spawn "emacs"                            )
   , (( modm               , xK_grave ), spawn "dwb"                              )
-  , (( modm               , xK_s     ), spawn "dwb"                              )
   , (( modm               , xK_f     ), spawn "pcmanfm --no-desktop"             )
   , (( modm               , xK_c     ), spawn "chromium --incognito"             )
   , (( modm .|. shiftMask , xK_c     ), spawn "chromium"                         )
+  , (( modm               , xK_v     ), spawn "/home/pete/.cabal/bin/yi -fpango" )
   ] ++
 
   -- mod-N       - go to workspace N
@@ -126,7 +125,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
-myStartupHook = nonPanelThings >> panelThings >> killOld
+myStartupHook = killOld >> nonPanelThings >> panelThings
   where
     killOld = spawn "/home/pete/bin/killinit.rb trayer xmobar nm-applet cbatticon kalu"
     panelThings = do
@@ -136,7 +135,7 @@ myStartupHook = nonPanelThings >> panelThings >> killOld
             \--alpha 255 --tint 2"
       spawn "nm-applet"
       spawn "dropboxd"
-      spawn "xfce4-power-manager"
+      spawn "cbatticon"
       spawn "parcellite"
       spawn "kalu"
     nonPanelThings = do
