@@ -26,3 +26,6 @@
 
 ;; Wrap when moving windows
 (setq windmove-wrap-around t)
+
+;; Don't wrap lines
+(setq truncate-lines t)
