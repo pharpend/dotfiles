@@ -40,19 +40,19 @@ myXPConfig = defaultXPConfig { font     = myFont
                              }
 
 
-myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| myTabbed
+myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Mirror Accordion
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
     nmaster = 1
     ratio   = 1/2
     delta   = 5/100
-    myTabbed = tabbedBottom shrinkText defaultTheme { fontName            = myFont
-                                                    , activeColor         = "#212121"
-                                                    , inactiveColor       = "#161616"
-                                                    , activeBorderColor   = myFocusedBorderColor
-                                                    , inactiveBorderColor = myNormalBorderColor
-                                                    }
+    -- _ = tabbedBottom shrinkText defaultTheme { fontName            = myFont
+    --                                                 , activeColor         = "#212121"
+    --                                                 , inactiveColor       = "#161616"
+    --                                                 , activeBorderColor   = myFocusedBorderColor
+    --                                                 , inactiveBorderColor = myNormalBorderColor
+    --                                                 }
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- The most basic, opening a terminal
