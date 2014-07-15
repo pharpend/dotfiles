@@ -34,5 +34,3 @@
       kept-old-versions 2
       delete-old-versions 2
       version-control t)
-
-(ecb-activate)

@@ -2,9 +2,11 @@ import qualified Data.Map        as M
 import           System.Exit
 import           XMonad
 import           XMonad.Hooks.ManageDocks
+import           XMonad.Layout.Accordion
 import           XMonad.Layout.Column
 import           XMonad.Layout.Minimize
 import           XMonad.Layout.Reflect
+import           XMonad.Layout.Tabbed
 import           XMonad.Layout.WindowNavigation
 import           XMonad.Prompt
 import           XMonad.Prompt.RunOrRaise
@@ -15,17 +17,26 @@ main = xmonad myConf
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
                        , borderWidth        = 1
-                       , focusedBorderColor = "#94eefd"
-                       , normalBorderColor  = "#212121"
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
                        , layoutHook         = minimize $ windowNavigation myLayout
                        , manageHook         = manageDocks
                        , handleEventHook    = docksEventHook
+                       , focusedBorderColor = myFocusedBorderColor
+                       , normalBorderColor  = myNormalBorderColor
                        }
 
-myLayout = avoidStruts $  tiled ||| reflectHoriz tiled ||| Full
+myFocusedBorderColor = "#94defd"
+myNormalBorderColor  = "#000000"
+myFont = "xft:Meslo LG S DZ:weight=bold:size=9"
+
+myXPConfig = defaultXPConfig { font     = myFont
+                             , bgColor  = "#212121"
+                             , position = Top
+                             }
+
+myLayout = avoidStruts $  tiled ||| reflectHoriz tiled ||| myTabbed ||| Accordion 
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -35,6 +46,12 @@ myLayout = avoidStruts $  tiled ||| reflectHoriz tiled ||| Full
     ratio   = 0.5
     -- Percent of screen to increment by when resizing panes
     delta   = 5/100
+    myTabbed = tabbedBottom shrinkText defaultTheme { fontName            = myFont
+                                                    , activeColor         = "#212121"
+                                                    , inactiveColor       = "#161616"
+                                                    , activeBorderColor   = myFocusedBorderColor
+                                                    , inactiveBorderColor = myNormalBorderColor
+                                                    }
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- The most basic, opening a terminal
@@ -83,13 +100,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_F10 ), spawn "amixer set Master toggle"                   )
   , (( modm               , xK_F11 ), spawn "amixer set Master 8%-"                      )
   , (( modm               , xK_F12 ), spawn "amixer set Master 8%+"                      )
-  , (( modm               , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
+  , (( modm .|. shiftMask , xK_q   ), spawn "/home/pete/.cabal/bin/xmonad --recompile;\
                                             \/home/pete/.cabal/bin/xmonad --restart"     )
-  , (( modm .|. shiftMask , xK_q     ), io $ exitWith ExitSuccess        )
-  , (( modm               , xK_space ), runOrRaisePrompt defaultXPConfig )
+  , (( modm               , xK_space ), runOrRaisePrompt myXPConfig                      )
+  , (( modm               , xK_w     ), runOrRaisePrompt myXPConfig                      )
 
   -- Application keybindings
-  , (( modm               , xK_w     ), spawn "dmenu_run"            )
   , (( modm               , xK_m     ), spawn "emacs"                )
   , (( modm               , xK_grave ), spawn "dwb"                  )
   , (( modm               , xK_c     ), spawn "chromium --incognito" )
