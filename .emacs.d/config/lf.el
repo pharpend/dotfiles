@@ -1,7 +1,7 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
        (set-frame-font "Meslo LG S DZ 9")
-       (load-theme 'sanityinc-tomorrow-day t)))
+       (load-theme 'monokai t)))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -28,4 +28,4 @@
 (setq windmove-wrap-around t)
 
 ;; Don't wrap lines
-(setq truncate-lines t)
+(setq-default truncate-lines t)
