@@ -128,15 +128,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 myStartupHook = nonPanelThings >> panelThings >> killOld
   where
-    killOld = spawn "/home/pete/bin/killinit.rb trayer xmobar nm-applet cbatticon kalu"
+    killOld = spawn "/home/pete/bin/killinit.rb stalonetray xmobar nm-applet cbatticon kalu"
     panelThings = do
       spawn "/home/pete/.cabal/bin/xmobar"
-      spawn "trayer --align left --edge top --expand false --heighttype pixel \
-            \--height 10 --transparent true --widthtype request --width 3 \
-            \--alpha 255 --tint 2"
+      spawn "stalonetray"
       spawn "nm-applet"
       spawn "dropboxd"
       spawn "xfce4-power-manager"
+      spawn "pnmixer"
       spawn "parcellite"
       spawn "kalu"
     nonPanelThings = do
