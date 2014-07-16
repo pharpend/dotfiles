@@ -30,7 +30,7 @@ myConf = defaultConfig { terminal           = "terminator"
                        , normalBorderColor  = myNormalBorderColor
                        }
 
-myFocusedBorderColor = "#94defd"
+myFocusedBorderColor = "#34defd"
 myNormalBorderColor  = "#000000"
 myFont = "xft:Meslo LG S DZ:weight=bold:size=7"
 
@@ -140,6 +140,7 @@ myStartupHook = nonPanelThings >> panelThings >> killOld
       spawn "kalu"
     nonPanelThings = do
       spawn "compton"
+      spawn "emacs --daemon"
       spawn "nitrogen --restore"
       spawn "xsetroot -cursor_name left_ptr"
       spawn "xautolock -time 10 -locker \"i3lock -c \"#212121\"\""

@@ -1,6 +1,6 @@
 -- -*- mode: haskell -*-
 
-Config { font         = "xft:Meslo LG S DZ:weight=bold:size=8"
+Config { font         = "xft:Meslo LG S DZ:weight=bold:size=7"
        , bgColor      = "#212121"
        , fgColor      = "#cccccc"
        , position     = Top
@@ -15,5 +15,5 @@ Config { font         = "xft:Meslo LG S DZ:weight=bold:size=8"
        , persistent   = True
        , hideOnStart  = False
        , pickBroadest = False
-        , template     = "}{%cmus% | %KSLC% | %date% "
+       , template     = "}{%cmus% | %KSLC% | %date% "
        }
