@@ -3,7 +3,6 @@
        (set-frame-font "Meslo LG S DZ 9")
        (load-theme 'mccarthy t)))
 
-
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -27,3 +26,6 @@
 
 ;; Wrap when moving windows
 (setq windmove-wrap-around t)
+
+;; Don't wrap lines
+(setq-default truncate-lines t)

@@ -30,7 +30,7 @@ myConf = defaultConfig { terminal           = "terminator"
                        , normalBorderColor  = myNormalBorderColor
                        }
 
-myFocusedBorderColor = "#94defd"
+myFocusedBorderColor = "#34defd"
 myNormalBorderColor  = "#000000"
 myFont = "xft:Meslo LG S DZ:weight=bold:size=7"
 
@@ -40,19 +40,19 @@ myXPConfig = defaultXPConfig { font     = myFont
                              }
 
 
-myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| myTabbed
+myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Mirror Accordion
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
     nmaster = 1
     ratio   = 1/2
     delta   = 5/100
-    myTabbed = tabbedBottom shrinkText defaultTheme { fontName            = myFont
-                                                    , activeColor         = "#212121"
-                                                    , inactiveColor       = "#161616"
-                                                    , activeBorderColor   = myFocusedBorderColor
-                                                    , inactiveBorderColor = myNormalBorderColor
-                                                    }
+    -- _ = tabbedBottom shrinkText defaultTheme { fontName            = myFont
+    --                                                 , activeColor         = "#212121"
+    --                                                 , inactiveColor       = "#161616"
+    --                                                 , activeBorderColor   = myFocusedBorderColor
+    --                                                 , inactiveBorderColor = myNormalBorderColor
+    --                                                 }
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- The most basic, opening a terminal
@@ -128,19 +128,19 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 myStartupHook = nonPanelThings >> panelThings >> killOld
   where
-    killOld = spawn "/home/pete/bin/killinit.rb trayer xmobar nm-applet cbatticon kalu"
+    killOld = spawn "/home/pete/bin/killinit.rb stalonetray xmobar nm-applet cbatticon kalu"
     panelThings = do
       spawn "/home/pete/.cabal/bin/xmobar"
-      spawn "trayer --align left --edge top --expand false --heighttype pixel \
-            \--height 10 --transparent true --widthtype request --width 3 \
-            \--alpha 255 --tint 2"
+      spawn "stalonetray"
       spawn "nm-applet"
       spawn "dropboxd"
-      spawn "cbatticon"
+      spawn "xfce4-power-manager"
+      spawn "pnmixer"
       spawn "parcellite"
       spawn "kalu"
     nonPanelThings = do
       spawn "compton"
+      spawn "emacs --daemon"
       spawn "nitrogen --restore"
       spawn "xsetroot -cursor_name left_ptr"
       spawn "xautolock -time 10 -locker \"i3lock -c \"#212121\"\""

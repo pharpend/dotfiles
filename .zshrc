@@ -125,6 +125,11 @@ rxmo () {
     xmobar &!
 }
 
+rstalone () {
+    killall stalonetray
+    stalonetray &!
+}
+
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
