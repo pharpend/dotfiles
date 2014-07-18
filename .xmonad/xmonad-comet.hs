@@ -5,14 +5,15 @@ import           System.Exit
 import           XMonad
 import           XMonad.Hooks.ManageDocks
 import           XMonad.Layout.Accordion
+import           XMonad.Layout.Gaps
 import           XMonad.Layout.Minimize
 import           XMonad.Layout.Reflect
+import           XMonad.Layout.Spacing
 import           XMonad.Layout.Spiral
 import           XMonad.Layout.Tabbed
 import           XMonad.Layout.WindowNavigation
 import           XMonad.Prompt
 import           XMonad.Prompt.RunOrRaise
-import qualified XMonad.StackSet as W
 import qualified XMonad.StackSet as W
 
 main = xmonad myConf
@@ -40,8 +41,9 @@ myXPConfig = defaultXPConfig { font     = myFont
                              }
 
 
-myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Mirror Accordion
+myLayout = myMods $ tiled ||| reflectHoriz tiled ||| Mirror Accordion
   where
+    myMods = gaps [(U, 3), (D, 3), (R, 3), (L, 3)] . spacing 3 . avoidStruts
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
     nmaster = 1

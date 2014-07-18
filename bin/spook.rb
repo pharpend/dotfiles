@@ -7,4 +7,4 @@ spook_n_words = (1..9).map do |x|
 end
 spook_n_s = spook_n_words.join(" ") + "\n"
 
-puts "Peter Harpending\n\n#{spook_n_s}"
+puts "Peter Harpending\n"
