@@ -20,11 +20,11 @@ main = xmonad myConf
 
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
-                       , borderWidth        = 1
+                       , borderWidth        = 2
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
-                       , layoutHook         = minimize $ windowNavigation myLayout
+                       , layoutHook         = myLayout
                        , manageHook         = manageDocks
                        , handleEventHook    = docksEventHook
                        , focusedBorderColor = myFocusedBorderColor
@@ -41,20 +41,13 @@ myXPConfig = defaultXPConfig { font     = myFont
                              }
 
 
-myLayout = myMods $ tiled ||| reflectHoriz tiled ||| Mirror Accordion
+myLayout = myMods $ tiled ||| reflectHoriz tiled ||| Mirror Accordion ||| Accordion
   where
-    myMods = gaps [(U, 3), (D, 3), (R, 3), (L, 3)] . spacing 3 . avoidStruts
-    -- default tiling algorithm partitions the screen into two panes
+    myMods  = minimize . windowNavigation . subTabbed . avoidStruts
     tiled   = Tall nmaster delta ratio
     nmaster = 1
     ratio   = 1/2
     delta   = 5/100
-    -- _ = tabbedBottom shrinkText defaultTheme { fontName            = myFont
-    --                                                 , activeColor         = "#212121"
-    --                                                 , inactiveColor       = "#161616"
-    --                                                 , activeBorderColor   = myFocusedBorderColor
-    --                                                 , inactiveBorderColor = myNormalBorderColor
-    --                                                 }
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- The most basic, opening a terminal
@@ -92,7 +85,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
   , (( modm               , xK_minus     ), sendMessage Shrink                  )
   , (( modm               , xK_equal     ), sendMessage Expand                  )
-
+  
   -- Non-application keybindings
   , (( modm               , xK_F7  ), spawn "cmus-remote --prev"                        )
   , (( modm               , xK_F8  ), spawn "cmus-remote --pause"                       )
@@ -130,7 +123,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 myStartupHook = nonPanelThings >> panelThings >> killOld
   where
-    killOld = spawn "/home/pete/bin/killinit.rb stalonetray xmobar nm-applet cbatticon kalu"
+    killOld = spawn "/home/pete/bin/killinit.rb \
+                      \stalonetray \
+                      \xmobar \
+                      \nm-applet \
+                      \pnmixer \
+                      \xfce4-power-manager \
+                      \kalu"
     panelThings = do
       spawn "/home/pete/.cabal/bin/xmobar"
       spawn "stalonetray"

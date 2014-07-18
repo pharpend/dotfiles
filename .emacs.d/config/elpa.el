@@ -45,7 +45,8 @@
                       scala-mode2
                       slime
                       smartparens
-                      undo-tree
+                      smartparens
+                      tuareg
                       web-mode
                       yaml-mode
 		      yari))
