@@ -18,7 +18,7 @@ if "stopped" == status then
   exit
 end
 
-artist = cmusQueryLines[6].strip.split[2..-1].join(" ")
-song = cmusQueryLines[4].strip.split[2..-1].join(" ")
+artist = cmusQueryLines[4].strip.split[2..-1].join(" ")
+song = cmusQueryLines[6].strip.split[2..-1].join(" ")
 
 puts "#{status} \"#{song}\" by #{artist}"
