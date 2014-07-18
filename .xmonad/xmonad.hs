@@ -132,12 +132,9 @@ myStartupHook = killOld >> nonPanelThings >> panelThings
     killOld = spawn "/home/pete/bin/killinit.rb xmobar nm-applet cbatticon kalu"
     panelThings = do    
       spawn "/home/pete/.cabal/bin/xmobar"
-      spawn "trayer --align left --edge top --expand false --heighttype pixel \
-            \--height 12 --transparent true --widthtype request --width 3 \
-            \--alpha 255 --tint 2"
+      spawn "stalonetray"
       spawn "nm-applet"
       spawn "dropboxd"
-      spawn "cbatticon"
       spawn "parcellite"
       spawn "kalu"
       spawn "vidalia"                                                              
