@@ -16,7 +16,7 @@ main = xmonad myConf
 
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
-                       , borderWidth        = 1
+                       , borderWidth        = 4
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
@@ -36,7 +36,7 @@ myXPConfig = defaultXPConfig { font     = myFont
                              , position = Top
                              }
 
-myLayout = avoidStruts $  tiled ||| reflectHoriz tiled ||| myTabbed ||| Accordion 
+myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| myTabbed ||| Accordion 
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
