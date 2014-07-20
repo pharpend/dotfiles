@@ -38,7 +38,9 @@
                       paredit
                       planet-theme
                       popwin
+                      rainbow-delimiters
                       rainbow-mode
+                      rainbow-identifiers
                       rsense
                       ruby-tools
                       sass-mode
