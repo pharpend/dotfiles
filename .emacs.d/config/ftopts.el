@@ -122,3 +122,6 @@
 (add-hook 'sass-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-web.el")))
+(add-hook 'racket-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-racket.el")))

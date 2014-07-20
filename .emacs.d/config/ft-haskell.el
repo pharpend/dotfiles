@@ -4,6 +4,7 @@
 (rainbow-delimiters-mode 1)
 (rainbow-identifiers-mode 1)
 (smartparens-mode 1)
+(yas/minor-mode 1)
 (turn-on-eldoc-mode)
 (turn-off-haskell-simple-indent)
 

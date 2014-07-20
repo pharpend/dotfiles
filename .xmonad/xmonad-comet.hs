@@ -20,7 +20,7 @@ main = xmonad myConf
 
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
-                       , borderWidth        = 2
+                       , borderWidth        = 3
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
@@ -43,7 +43,7 @@ myXPConfig = defaultXPConfig { font     = myFont
 
 myLayout = myMods $ tiled ||| reflectHoriz tiled ||| Mirror Accordion ||| Accordion
   where
-    myMods  = minimize . windowNavigation . subTabbed . avoidStruts
+    myMods  = minimize . windowNavigation . avoidStruts
     tiled   = Tall nmaster delta ratio
     nmaster = 1
     ratio   = 1/2
@@ -117,7 +117,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- mod-N       - go to workspace N
   -- mod-shift-N - move client to workspace N
   [ ((m .|. modm, k), windows $ f i)
-    | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+    | (i, k) <- zip (XMonad.workspaces conf) $ [xK_1 .. xK_9] ++ [xK_0]
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 
