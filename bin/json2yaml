@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'yaml'
+
+print YAML::dump Hash[(JSON::parse STDIN.read).sort]

@@ -4,5 +4,4 @@
 (auto-complete-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
-(rainbow-identifiers-mode 1)
 (setq indent-tabs-mode nil)

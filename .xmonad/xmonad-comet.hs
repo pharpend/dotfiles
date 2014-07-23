@@ -8,6 +8,7 @@ import           XMonad.Layout.Accordion
 import           XMonad.Layout.Gaps
 import           XMonad.Layout.Minimize
 import           XMonad.Layout.Reflect
+import           XMonad.Layout.ResizableTile
 import           XMonad.Layout.Spacing
 import           XMonad.Layout.Spiral
 import           XMonad.Layout.Tabbed
@@ -20,7 +21,7 @@ main = xmonad myConf
 
 myConf = defaultConfig { terminal           = "terminator" 
                        , modMask            = mod4Mask
-                       , borderWidth        = 3
+                       , borderWidth        = 1
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
@@ -32,7 +33,7 @@ myConf = defaultConfig { terminal           = "terminator"
                        }
 
 myFocusedBorderColor = "#34defd"
-myNormalBorderColor  = "#000000"
+myNormalBorderColor  = "#212121"
 myFont = "xft:Meslo LG S DZ:weight=bold:size=7"
 
 myXPConfig = defaultXPConfig { font     = myFont
@@ -41,10 +42,14 @@ myXPConfig = defaultXPConfig { font     = myFont
                              }
 
 
-myLayout = myMods $ tiled ||| reflectHoriz tiled ||| Mirror Accordion ||| Accordion
+myLayout = myMods $ tiled ||| reflectHoriz tiled
+                          ||| Mirror tiled
+                          ||| reflectVert (Mirror tiled)
+                          ||| Mirror Accordion
+                          ||| Accordion
   where
     myMods  = minimize . windowNavigation . avoidStruts
-    tiled   = Tall nmaster delta ratio
+    tiled   = ResizableTall nmaster delta ratio []
     nmaster = 1
     ratio   = 1/2
     delta   = 5/100
@@ -76,15 +81,17 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm .|. shiftMask , xK_Right ), sendMessage $ Swap R  )
 
   -- Do other things to windows
-  , (( modm .|. shiftMask , xK_Return    ), windows W.swapMaster                )
-  , (( modm               , xK_period    ), sendMessage $ IncMasterN 1          )
-  , (( modm               , xK_comma     ), sendMessage $ IncMasterN (-1)       )
-  , (( modm .|. shiftMask , xK_space     ), sendMessage NextLayout              )
-  , (( modm               , xK_k         ), kill                                )
-  , (( modm               , xK_o         ), withFocused minimizeWindow          )
-  , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
-  , (( modm               , xK_minus     ), sendMessage Shrink                  )
-  , (( modm               , xK_equal     ), sendMessage Expand                  )
+  , (( modm .|. shiftMask   , xK_Return    ), windows W.swapMaster                )
+  , (( modm                 , xK_period    ), sendMessage $ IncMasterN 1          )
+  , (( modm                 , xK_comma     ), sendMessage $ IncMasterN (-1)       )
+  , (( modm .|. shiftMask   , xK_space     ), sendMessage NextLayout              )
+  , (( modm                 , xK_k         ), kill                                )
+  , (( modm                 , xK_o         ), withFocused minimizeWindow          )
+  , (( modm                 , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
+  , (( modm .|. shiftMask   , xK_minus     ), sendMessage Shrink                  )
+  , (( modm .|. shiftMask   , xK_equal     ), sendMessage Expand                  )
+  , (( modm                 , xK_minus     ), sendMessage MirrorExpand            )
+  , (( modm                 , xK_equal     ), sendMessage MirrorShrink            )
   
   -- Non-application keybindings
   , (( modm               , xK_F7  ), spawn "cmus-remote --prev"                        )

@@ -8,6 +8,7 @@ Config { font         = "xft:Meslo LG S DZ:weight=bold:size=7"
        , commands     = [ Run Weather "KSLC" ["-t", "<skyCondition>, <tempC> C"] 18000
                         , Run Date "%H:%M | %d %B" "date" 10
                         , Run Com "/home/pete/bin/cmus-local.rb" [] "cmus" 30
+                        , Run Battery ["-t", "<left>% (<acstatus>, <watts>W)"] 600
                         ]
        , sepChar      = "%"
        , alignSep     = "}{"
@@ -15,5 +16,5 @@ Config { font         = "xft:Meslo LG S DZ:weight=bold:size=7"
        , persistent   = True
        , hideOnStart  = False
        , pickBroadest = False
-       , template     = "}{%cmus% | %KSLC% | %date% "
+       , template     = "}{%cmus% | %battery% | %KSLC% | %date% "
        }
