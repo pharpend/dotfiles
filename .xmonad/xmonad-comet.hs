@@ -124,7 +124,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- mod-N       - go to workspace N
   -- mod-shift-N - move client to workspace N
   [ ((m .|. modm, k), windows $ f i)
-    | (i, k) <- zip (XMonad.workspaces conf) $ [xK_1 .. xK_9] ++ [xK_0]
+    | (i, k) <- zip (XMonad.workspaces conf) $ [xK_1 .. xK_9]
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
   ]
 

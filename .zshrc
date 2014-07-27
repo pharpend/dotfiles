@@ -50,6 +50,7 @@ alias xcl='xclip -sel clip'
 alias dmesg='dmesg -L -w'
 alias cabal='/home/pete/.cabal/bin/cabal'
 alias roc='rlwrap ocaml'
+alias sprunge='curl -F sprunge=@- http://sprunge.us'
 
 alias pms='sudo pacman -S'
 alias pmsy='sudo pacman -Sy'

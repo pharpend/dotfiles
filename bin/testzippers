@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+FS=$@
+
+zipctf () {
+    echo $@
+    time cat $FS | $@ | wc -c
+}
+
+zipctf cat
+zipctf bzip2
+zipctf gzip
+zipctf lzma
+zipctf xz
