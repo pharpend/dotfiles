@@ -14,7 +14,7 @@ import qualified XMonad.StackSet as W
 
 main = xmonad myConf
 
-myConf = defaultConfig { terminal           = "terminator" 
+myConf = defaultConfig { terminal           = "sakura" 
                        , modMask            = mod4Mask
                        , borderWidth        = 4
                        , focusFollowsMouse  = False
