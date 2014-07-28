@@ -16,7 +16,7 @@ main = xmonad myConf
 
 myConf = defaultConfig { terminal           = "sakura" 
                        , modMask            = mod4Mask
-                       , borderWidth        = 4
+                       , borderWidth        = 2
                        , focusFollowsMouse  = False
                        , keys               = myKeys
                        , startupHook        = myStartupHook
