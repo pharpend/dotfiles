@@ -131,6 +131,22 @@ rstalone () {
     stalonetray &!
 }
 
+upgrade-cabal-global () {
+  cabal update
+  cabal list --simple-output --installed --global |
+  awk '{print $1}' |
+  uniq |
+  xargs -I {} sudo cabal install {} --reinstall --global
+}
+
+upgrade-cabal () {
+  cabal update
+  cabal list --simple-output --installed |
+  awk '{print $1}' |
+  uniq |
+  xargs -I {} cabal install {} --reinstall
+}
+
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
