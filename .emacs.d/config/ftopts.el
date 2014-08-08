@@ -12,7 +12,7 @@
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.hamlet\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hamlet\\'" . hamlet-mode))
 (add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.cassius\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
@@ -128,3 +128,6 @@
 (add-hook 'yaml-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-yaml.el")))
+(add-hook 'hamlet-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-web.el")))

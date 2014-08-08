@@ -25,7 +25,7 @@ font pango: Source Code Pro 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec sakura
 
 # kill focused window
 bindsym $mod+k kill
@@ -144,8 +144,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
-# exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
+# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
 exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
