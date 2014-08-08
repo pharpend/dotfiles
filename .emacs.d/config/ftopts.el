@@ -14,7 +14,7 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hamlet\\'" . hamlet-mode))
 (add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
-(add-to-list 'auto-mode-alist '("\\.cassius\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.cassius\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))

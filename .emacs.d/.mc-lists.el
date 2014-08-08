@@ -33,6 +33,7 @@
 (setq mc/cmds-to-run-once
       '(
         evil-next-line
+        haml-electric-backspace
         shm/close-paren
         shm/del
         ))
