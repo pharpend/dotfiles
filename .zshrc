@@ -168,4 +168,4 @@ export PATH=$PATH:$HOME/.cabal/bin
 export PATH=$PATH:$HOME/.config/herbstluftwm
 export PATH=$PATH:$HOME/code/bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/builds/yesod-bin-1.2.12/dist/build/yesod
+export PATH=$PATH:$HOME/builds/yesod-bin-1.2.12/.cabal-sandbox/bin
