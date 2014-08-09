@@ -41,6 +41,7 @@
  '(highlight-tail-colors (quote (("#49483E" . 0) ("#67930F" . 20) ("#349B8D" . 30) ("#21889B" . 50) ("#968B26" . 60) ("#A45E0A" . 70) ("#A41F99" . 85) ("#49483E" . 100))))
  '(magit-use-overlays nil)
  '(pandoc-binary "/home/pete/.cabal/bin/pandoc")
+ '(safe-local-variable-values (quote ((evil-shift-width . 4) (evil-shift-width . 2))))
  '(scss-compile-at-save nil)
  '(shm-program-name "/home/pete/.cabal/bin/structured-haskell-mode" t)
  '(shm-use-hdevtools nil)

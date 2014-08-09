@@ -51,6 +51,12 @@ alias dmesg='dmesg -L -w'
 alias cabal='/home/pete/.cabal/bin/cabal'
 alias roc='rlwrap ocaml'
 alias sprunge='curl -F sprunge=@- http://sprunge.us'
+alias translate='google-translate'
+alias trfen='translate english'
+
+trten () {
+    translate $1 english $@
+}
 
 alias pms='sudo pacman -S'
 alias pmsy='sudo pacman -Sy'
