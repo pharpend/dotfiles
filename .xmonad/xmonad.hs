@@ -89,6 +89,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , (( modm               , xK_semicolon ), sendMessage RestoreNextMinimizedWin )
   , (( modm               , xK_equal     ), sendMessage Expand                  )
   , (( modm               , xK_minus     ), sendMessage Shrink                  )
+  , (( modm               , xK_z         ), withFocused $ windows . W.sink      )
   
   -- |Utilities
   , (( 0                  , xK_Print     ), spawn "scrot -e 'mv $f ~/Pictures/screenshots'" )
@@ -108,8 +109,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   -- Application keybindings
   , (( modm               , xK_m     ), spawn "emacs"                )
   , (( modm               , xK_grave ), spawn "dwb"                  )
-  , (( modm               , xK_c     ), spawn "chromium --incognito" )
-  , (( modm .|. shiftMask , xK_c     ), spawn "chromium"             )
+  , (( modm .|. shiftMask , xK_c     ), spawn "chromium --incognito" )
+  , (( modm               , xK_c     ), spawn "chromium"             )
   , (( modm               , xK_f     ), spawn "pcmanfm"              )
   ] ++
 
