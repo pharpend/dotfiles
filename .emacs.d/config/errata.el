@@ -34,3 +34,12 @@
       kept-old-versions 2
       delete-old-versions 2
       version-control t)
+
+(setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
+(add-to-list 'exec-path "~/.cabal/bin")
+
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+
+(add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp/")
+(require 'shm)
