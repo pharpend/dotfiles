@@ -108,8 +108,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # Scratchpad stuff
-bindsym $mod+u scratchpad show
-bindsym $mod+y move scratchpad
+bindsym $mod+bracketleft scratchpad show
+bindsym $mod+bracketright move scratchpad
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
@@ -144,8 +144,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
-exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
+exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+# exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
 exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
@@ -214,10 +214,10 @@ bindsym $mod+F7 exec cmus-remote -r
 bindsym $mod+F8 exec cmus-remote -u
 bindsym $mod+F9 exec cmus-remote -n
 
-bindsym $mod+Shift+bracketleft  move container to workspace prev
-bindsym $mod+Shift+bracketright move container to  workspace next
-bindsym $mod+bracketleft workspace prev
-bindsym $mod+bracketright workspace next
+bindsym $mod+Shift+u  move container to workspace prev
+bindsym $mod+Shift+y move container to  workspace next
+bindsym $mod+u workspace prev
+bindsym $mod+y workspace next
 
 # Panel things
 exec deluge

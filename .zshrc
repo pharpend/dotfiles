@@ -54,6 +54,11 @@ alias sprunge='curl -F sprunge=@- http://sprunge.us'
 alias translate='google-translate'
 alias trfen='translate english'
 
+# n () {
+#     autojump $@
+#     ls
+# }
+
 trten () {
     translate $1 english $@
 }
