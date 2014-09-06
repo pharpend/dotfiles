@@ -1,6 +1,6 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
-       (set-frame-font "Source Code Pro 10")
+       (set-frame-font "Envy Code R 11")
        (load-theme 'monokai t)))
 
 (scroll-bar-mode -1)
