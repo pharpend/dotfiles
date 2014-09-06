@@ -54,6 +54,18 @@ alias sprunge='curl -F sprunge=@- http://sprunge.us'
 alias translate='google-translate'
 alias trfen='translate english'
 
+hscreen () {
+    xrandr --output VGA-1 --rotate normal
+    xrandr --output DVI-D-2 --rotate normal --right-of VGA-1
+    nitrogen --restore
+}
+
+vscreen () {
+    xrandr --output VGA-1 --rotate left
+    xrandr --output DVI-D-2 --rotate left --right-of VGA-1
+    nitrogen --restore
+}
+
 # n () {
 #     autojump $@
 #     ls
