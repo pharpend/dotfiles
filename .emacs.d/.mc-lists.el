@@ -34,6 +34,7 @@
       '(
         evil-next-line
         haml-electric-backspace
+        ido-find-file
         shm/close-paren
         shm/del
         ))
