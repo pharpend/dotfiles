@@ -93,19 +93,19 @@ alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
 
 scr () {
-    scrot -e 'mv $f ~/Pictures/screenshots'
+    scrot -e 'mv $f ~/pics/screenshots'
 }
 
 scs () {
-    scrot -s -e 'mv $f ~/Pictures/screenshots'
+    scrot -s -e 'mv $f ~/pics/screenshots'
 }
 
 scsgur () {
-    scrot -s -e 'imgur $f ; mv $f ~/Pictures/screenshots'
+    scrot -s -e 'imgur $f ; mv $f ~/pics/screenshots'
 }
 
 scrgur () {
-    scrot -e 'imgur $f ; mv $f ~/Pictures/screenshots'
+    scrot -e 'imgur $f ; mv $f ~/pics/screenshots'
 }
 
 dcmsg () {

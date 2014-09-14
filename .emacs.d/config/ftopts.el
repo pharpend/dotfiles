@@ -131,3 +131,6 @@
 (add-hook 'hamlet-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-web.el")))
+(add-hook 'bibtex-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-bibtex.el")))

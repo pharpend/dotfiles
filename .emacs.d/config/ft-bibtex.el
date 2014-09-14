@@ -1,9 +1,6 @@
 (smartparens-mode 1)
-(autopair-mode -1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
-(flyspell-mode 1)
-(LaTeX-math-mode 1)
 (wc-mode 1)
 
 (setq-local fill-column 80)
