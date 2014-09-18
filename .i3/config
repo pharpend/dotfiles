@@ -201,8 +201,8 @@ bindsym Control+$mod+Down resize grow height 10 px or 10 ppt
 bindsym Control+$mod+Up resize shrink height 10 px or 10 ppt
 bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
-bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
-bindsym F13 exec scrot -e 'mv $f ~/Pictures/screenshots/'
+bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
+bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioLowerVolume exec amixer set Master 8%-
 bindsym XF86AudioRaiseVolume exec amixer set Master 8%+

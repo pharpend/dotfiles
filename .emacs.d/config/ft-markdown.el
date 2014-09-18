@@ -10,5 +10,6 @@
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (flyspell-mode 1)
+(wc-mode 1)
 
 (local-set-key (kbd "M-n") 'windmove-down)

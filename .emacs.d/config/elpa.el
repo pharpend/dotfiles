@@ -73,4 +73,5 @@
 (require 'smartparens-config)
 (require 'smartparens-ruby)
 (require 'uniquify)                     ;Unique buffer names
+(require 'wc-mode)
 (require 'yari)
