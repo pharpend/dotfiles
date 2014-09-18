@@ -91,6 +91,7 @@ alias aursyua='yaourt -Syua'
 alias aursyuan='yaourt -Syua --noconfirm'
 alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
+alias ixit='ix | xclip -sel clip'
 
 scr () {
     scrot -e 'mv $f ~/Pictures/screenshots'
