@@ -184,8 +184,8 @@ bar {
 
 # Application keybindings
 bindsym $mod+grave exec dwb
-bindsym $mod+c exec chromium
-bindsym $mod+Shift+c exec chromium --incognito
+bindsym $mod+c exec google-chrome-stable
+bindsym $mod+Shift+c exec google-chrome-stable --incognito
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 
