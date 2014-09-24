@@ -144,8 +144,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
-# exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
+# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
 exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
@@ -204,8 +204,8 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle
-bindsym XF86AudioLowerVolume exec amixer set Master 8%-
-bindsym XF86AudioRaiseVolume exec amixer set Master 8%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym $mod+F10 exec amixer set Master toggle
 bindsym $mod+F11 exec amixer set Master 8%-
 bindsym $mod+F12 exec amixer set Master 8%+
