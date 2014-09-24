@@ -9,17 +9,13 @@
 (require 'package)
 (package-initialize)
 
-(defvar my-packages '(ac-nrepl
-                      ample-zen-theme
-                      auctex
+(defvar my-packages '(auctex
                       auto-complete
                       autopair
                       cider
                       clojure-mode
                       clojure-test-mode
                       color-theme
-                      color-theme-eclipse
-                      color-theme-github
                       color-theme-sanityinc-solarized
                       color-theme-sanityinc-tomorrow
                       company-ghc
@@ -36,13 +32,11 @@
                       magit
                       markdown-mode
                       monokai-theme
-                      pandoc-mode
                       paredit
                       planet-theme
                       popwin
                       rainbow-delimiters
                       rainbow-mode
-                      rainbow-identifiers
                       rsense
                       ruby-tools
                       sass-mode
@@ -50,6 +44,7 @@
                       slime
                       smartparens
                       tuareg
+                      wc-mode
                       web-mode
                       yaml-mode
 		      yari))
@@ -61,7 +56,6 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (require 'autopair)
-(require 'ac-nrepl)
 (require 'company)
 (require 'evil)
 (require 'evil-nerd-commenter)
@@ -72,6 +66,5 @@
 (require 'slime-autoloads)
 (require 'smartparens-config)
 (require 'smartparens-ruby)
-(require 'uniquify)                     ;Unique buffer names
 (require 'wc-mode)
 (require 'yari)
