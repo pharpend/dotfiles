@@ -23,27 +23,16 @@ alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='vim PKGBUILD'
 alias dud='du --max-depth=1 -B 1024M'
 alias cpuinfo='cat /proc/cpuinfo | grep MHz'
 alias cpuset='sudo cpupower frequency-set'
 alias zi='zile'
 alias irb='irb --simple-prompt'
-alias lpaste='pastebinit -b "http://lpaste.net/" | xclip -sel clip'
-alias hpaste='pastebinit -b "http://lpaste.net/new/haskell" | xclip -sel clip'
-alias sysd='sudo systemctl'
 alias pd='pandoc'
-alias pm='sudo pacman'
 alias ipy='ipython'
-alias enw='emacs -nw'
-alias gf='git flow'
-alias hc='herbstclient'
-alias hlwm='herbstluftwm'
 alias fehb='feh --bg-fill'
 alias pry='pry --simple-prompt'
 alias sbcl='rlwrap sbcl'
-alias xrdbx='xrdb ~/.Xresources'
-alias rsurxvtd='sudo systemctl restart urxvtd@pete.service'
 alias ec='emacsclient'
 alias hist='cat ~/.histfile'
 alias xcl='xclip -sel clip'
@@ -53,6 +42,8 @@ alias roc='rlwrap ocaml'
 alias sprunge='curl -F sprunge=@- http://sprunge.us'
 alias translate='google-translate'
 alias trfen='translate english'
+alias scc='sass --scss -t compressed'
+alias sccw='scc --watch'
 
 hscreen () {
     xrandr --output VGA-1 --rotate normal
@@ -75,23 +66,6 @@ trten () {
     translate $1 english $@
 }
 
-alias pms='sudo pacman -S'
-alias pmsy='sudo pacman -Sy'
-alias pmsyu='sudo pacman -Syu'
-alias pmrns='sudo pacman -Rns'
-alias pmss='pacman -Ss'
-alias pmsi='pacman -Si'
-alias pmqs='pacman -Qs'
-alias pmqi='pacman -Qi'
-alias aurs='yaourt -S'
-alias aursn='yaourt -S --noconfirm'
-alias aurss='yaourt -Ss'
-alias aursi='yaourt -Si'
-alias aursyua='yaourt -Syua'
-alias aursyuan='yaourt -Syua --noconfirm'
-alias scc='sass --scss -t compressed'
-alias sccw='scc --watch'
-alias ixit='ix | xclip -sel clip'
 
 scr () {
     scrot -e 'mv $f ~/pics/screenshots'
@@ -171,9 +145,6 @@ upgrade-cabal () {
   xargs -I {} cabal install {} --reinstall
 }
 
-# Syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 setopt prompt_subst
 setopt auto_pushd
 CONFIG="~/.config"
@@ -193,3 +164,4 @@ export PATH=$PATH:$HOME/.config/herbstluftwm
 export PATH=$PATH:$HOME/code/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/builds/yesod-bin-1.2.12/.cabal-sandbox/bin
+source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

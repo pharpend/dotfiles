@@ -50,6 +50,7 @@
                       slime
                       smartparens
                       tuareg
+                      wc-mode
                       web-mode
                       yaml-mode
 		      yari))

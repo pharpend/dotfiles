@@ -18,8 +18,8 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-# font pango:DejaVu Sans Mono 10
-font pango: Meslo LG S DZ 7
+font pango:Droid Sans Mono 8
+# font pango: Meslo LG S DZ 7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -166,8 +166,8 @@ bar {
 
 # Application keybindings
 bindsym $mod+grave exec dwb
-bindsym $mod+c exec chromium
-bindsym $mod+Shift+c exec chromium --incognito
+bindsym $mod+c exec google-chrome-stable
+bindsym $mod+Shift+c exec google-chrome-stable --incognito
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
@@ -198,11 +198,9 @@ bindsym $mod+F12 exec amixer set Master 8%+
 
 # Autostarted applications
 # exec deluge
-exec dropboxd
-exec kalu
+exec dropbox
 exec nm-applet
 exec parcellite
-# exec vidalia
 exec xfce4-power-manager
 
 # Non-panel things

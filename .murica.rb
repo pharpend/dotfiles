@@ -122,10 +122,10 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
           color: white }
 blank = { full_text: "",
           color: white }
-volume = {  full_text: "V: #{vol_pct}%",
-            color: vol_color(vol_pct)}
+# volume = {  full_text: "V: #{vol_pct}%",
+#             color: vol_color(vol_pct)}
 cmus_hash = { full_text: "\u266a: #{cmus}",
               color: cmus_color(cmus) }
 
-$info = [win, cmus_hash, volume, cputemp, gov, cpughz, ram, time, date, blank]
+$info = [win, cputemp, gov, cpughz, ram, time, date, blank]
 update
