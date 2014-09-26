@@ -213,12 +213,12 @@ exec synclient TouchpadOff=1
 
 
 client.focused          #212121 #50f0f0 #212121 #333333
-client.focused_inactive #333333 #222222 #19c1ab #484e50
-client.unfocused        #333333 #222222 #666666 #090d0e
+client.focused_inactive #333333 #101010 #19c1ab #484e50
+client.unfocused        #333333 #101010 #666666 #090d0e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 focus_follows_mouse no
 
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 4
 new_window 1pixel
