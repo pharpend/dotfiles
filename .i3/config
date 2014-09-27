@@ -144,8 +144,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
-exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
+exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+# exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
 exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
@@ -240,5 +240,5 @@ client.urgent           #C10004 #900000 #ffffff #900000
 focus_follows_mouse no
 
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 4
 new_window 1pixel

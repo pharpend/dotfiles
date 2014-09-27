@@ -51,8 +51,12 @@ alias dmesg='dmesg -L -w'
 alias cabal='/home/pete/.cabal/bin/cabal'
 alias roc='rlwrap ocaml'
 alias sprunge='curl -F sprunge=@- http://sprunge.us'
-alias translate='google-translate'
-alias trfen='translate english'
+alias scc='sass --scss -t compressed'
+alias sccw='scc --watch'
+alias em='emerge'
+alias eq='equery'
+alias es='eselect'
+alias s='sudo'
 
 hscreen () {
     xrandr --output VGA-1 --rotate normal
@@ -65,33 +69,6 @@ vscreen () {
     xrandr --output DVI-D-2 --rotate left --right-of VGA-1
     nitrogen --restore
 }
-
-# n () {
-#     autojump $@
-#     ls
-# }
-
-trten () {
-    translate $1 english $@
-}
-
-alias pms='sudo pacman -S'
-alias pmsy='sudo pacman -Sy'
-alias pmsyu='sudo pacman -Syu'
-alias pmrns='sudo pacman -Rns'
-alias pmss='pacman -Ss'
-alias pmsi='pacman -Si'
-alias pmqs='pacman -Qs'
-alias pmqi='pacman -Qi'
-alias aurs='yaourt -S'
-alias aursn='yaourt -S --noconfirm'
-alias aurss='yaourt -Ss'
-alias aursi='yaourt -Si'
-alias aursyua='yaourt -Syua'
-alias aursyuan='yaourt -Syua --noconfirm'
-alias scc='sass --scss -t compressed'
-alias sccw='scc --watch'
-alias ixit='ix | xclip -sel clip'
 
 scr () {
     scrot -e 'mv $f ~/pics/screenshots'
@@ -172,7 +149,7 @@ upgrade-cabal () {
 }
 
 # Syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 setopt prompt_subst
 setopt auto_pushd

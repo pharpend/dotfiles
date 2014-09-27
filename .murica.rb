@@ -34,9 +34,9 @@ def cpu_color
   end
 end
 
-def governor
-  `cpupower frequency-info | grep "The governor"`.split('"')[1].capitalize
-end
+# def governor
+#   `cpupower frequency-info | grep "The governor"`.split('"')[1].capitalize
+# end
 
 def ping_speed
   begin
@@ -106,14 +106,11 @@ $update_interval = 0.5
 white = "#eeeeee"
 
 win = { full_text: "#{active_window_name}",
-
         color: white }
 ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
         color: white }
 cputemp = { full_text: "\u2623: #{cpu_temperature} C",
             color: cpu_color }
-gov = { full_text: "G: #{governor}",
-        color: white }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
            color: white }
 date = {  full_text: Time.now.strftime("%A, %e %B %Y"),
@@ -124,8 +121,8 @@ blank = { full_text: "",
           color: white }
 volume = {  full_text: "V: #{vol_pct}%",
             color: vol_color(vol_pct)}
-cmus_hash = { full_text: "\u266a: #{cmus}",
-              color: cmus_color(cmus) }
+# cmus_hash = { full_text: "\u266a: #{cmus}",
+#               color: cmus_color(cmus) }
 
-$info = [win, cmus_hash, volume, cputemp, gov, cpughz, ram, time, date, blank]
+$info = [win, volume, cputemp, cpughz, ram, time, date, blank]
 update
