@@ -53,7 +53,7 @@ def ping_color(ps)
     when 0..30
       "#60f040"
     when 30..50
-      #d0f040"
+      "#d0f040"
     when 50..70
       "#f0d040"
     else
@@ -61,45 +61,45 @@ def ping_color(ps)
   end
 end
 
-def vol_pct
- `amixer get Master`.scan(/(\d+)%/).first.first.to_i
+def battery_pct
+  `acpi -b`.split[3][0..1].to_i
 end
 
-def vol_color(pct)
-  "#" + (pct*(255.0/100)).to_i.to_s(16)*3
-end
-
-def cmus
-  cmus_output = `cmus-remote -Q`
-  cmus_lines = cmus_output.lines
-
-  if cmus_lines == []
-    return "--"
+def battery_color(pct)
+  case pct
+    when 90..100
+      "#60f040"
+    when 70..90
+      "#a0d040"
+    when 50..70
+      "#d0d020"
+    when 30..50
+      "#f0d040"
+    when 10..30
+      "#f04020"
+    when 10..30
+      "#d00000"
   end
-
-  artist = cmus_output.scan(/tag artist (.+)/).first.first
-  song = cmus_output.scan(/tag title (.+)/).first.first
-  p = ">"
-  p = "|" if cmus_output.include? "paused"
-  p = "." if cmus_output.include? "stopped"
-  
-  "#{p} #{artist} - #{song}" 
 end
 
-def cmus_color(cmo)
-  if cmo == "--"
-    "#555555"
-  elsif cmo.start_with? "."
-    "#777777"
-  elsif cmo.start_with? "|"
-    "#888888"
-  elsif cmo.start_with? ">"
-    "#eeeeee"
+
+def comet
+  hostname = File::read("/etc/conf.d/hostname").scan(/"(\w+)"/).flatten[0]
+  if hostname == "comet"
+    [
+     {
+       full_text: "Battery: #{battery_pct}%",
+       color: battery_color(battery_pct)
+     },
+     {
+       full_text: "G: #{governor}",
+       color: white
+     }
+    ]
   else
-    "#ff0000"
+    []
   end
 end
-
 ############
 
 $update_interval = 0.5
@@ -113,16 +113,12 @@ cputemp = { full_text: "\u2623: #{cpu_temperature} C",
             color: cpu_color }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
            color: white }
-date = {  full_text: Time.now.strftime("%A, %e %B %Y"),
+date = {  full_text: Time.now.strftime("%a %e %b %y"),
           color: white }
 time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
           color: white }
 blank = { full_text: "",
           color: white }
-volume = {  full_text: "V: #{vol_pct}%",
-            color: vol_color(vol_pct)}
-# cmus_hash = { full_text: "\u266a: #{cmus}",
-#               color: cmus_color(cmus) }
 
-$info = [win, volume, cputemp, cpughz, ram, time, date, blank]
+$info = [win] + comet + [cputemp, cpughz, ram, time, date, blank]
 update
