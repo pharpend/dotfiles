@@ -111,21 +111,6 @@ topcmds() {
 	cat ~/.histfile |awk '{print $1}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -rn|head $1
 }
 
-default-tray () {
-  trayer --align left --edge top --expand false --heighttype pixel --height 10\
-    --transparent true --widthtype request --width 3 --alpha 255 --tint 2 
-}
-
-rxmo () {
-    killall xmobar
-    xmobar &!
-}
-
-rstalone () {
-    killall stalonetray
-    stalonetray &!
-}
-
 upgrade-cabal-global () {
   cabal update
   cabal list --simple-output --installed --global |
