@@ -79,9 +79,14 @@ dcmsg () {
     echo "dotfiles-$(hostname) commit for $(date)"
 }
 
-dot-commit () {
-    git a .
-    git cm -am "dotfiles-$(hostname) commit for $(date)"
+dotc () {
+    git add -A .
+    git commit -am "dotfiles/$(hostname) commit for $(date)"
+}
+
+pdotc () {
+    git add -A .
+    git commit -am "private-dots/$(hostname) commit for $(date)"
 }
 
 
