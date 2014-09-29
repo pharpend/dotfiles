@@ -107,12 +107,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-bindsym $mod+bracketleft workspace prev
-bindsym $mod+bracketright workspace next
+bindsym $mod+u workspace prev
+bindsym $mod+y workspace next
 
 # Scratchpad stuff
-bindsym $mod+u scratchpad show
-bindsym $mod+y move scratchpad
+bindsym $mod+bracketleft scratchpad show
+bindsym $mod+bracketright move scratchpad
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
@@ -122,31 +122,6 @@ bindsym $mod+Shift+p restart
 bindsym $mod+Shift+f exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+k exec killall -u pete
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym n resize grow height 10 px or 10 ppt
-        bindsym e resize shrink height 10 px or 10 ppt
-        bindsym i resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+p mode "resize"
 exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -172,17 +147,20 @@ bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
 
-# Resize windows
-bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
-bindsym Control+$mod+n resize grow height 10 px or 10 ppt
-bindsym Control+$mod+e resize shrink height 10 px or 10 ppt
-bindsym Control+$mod+i resize grow width 10 px or 10 ppt
 
-# same bindings, but for the arrow keys
-bindsym Control+$mod+Left resize shrink width 10 px or 10 ppt
-bindsym Control+$mod+Down resize grow height 10 px or 10 ppt
-bindsym Control+$mod+Up resize shrink height 10 px or 10 ppt
-bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
+
+
+
+
+# Resize windows
+bindsym Control+$mod+h     resize shrink width  05 px 
+bindsym Control+$mod+n     resize grow   height 05 px 
+bindsym Control+$mod+e     resize shrink height 05 px 
+bindsym Control+$mod+i     resize grow   width  05 px 
+bindsym Control+$mod+Left  resize shrink width  05 px 
+bindsym Control+$mod+Down  resize grow   height 05 px 
+bindsym Control+$mod+Up    resize shrink height 05 px 
+bindsym Control+$mod+Right resize grow   width  05 px 
 
 bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle

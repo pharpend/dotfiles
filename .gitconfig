@@ -1,0 +1,11 @@
+[alias]
+	cfg = config --global
+	a = add -A
+	cm = commit
+	st = status
+	co = checkout
+[user]
+	name = Peter Harpending
+	email = pharpend2@gmail.com
+[push]
+	default = matching
