@@ -1,15 +1,21 @@
-#!/usr/bin/ruby
-# 
-# sends system information to i3bar
+#!/usr/bin/env ruby
+# -*- mode: Ruby -*-
 
-load File.expand_path(File.dirname(__FILE__) + "/libmurica.rb")
+require 'json'
+  
+def update
+   STDOUT.write "#{JSON::pretty_generate($info)},"
+end
+
+$info = []
+$update_interval = 5
 
 STDOUT.write "{\"version\":1}\n"
 STDOUT.write "[[],"
 
 while true
   begin
-    load File.expand_path("~/.murica.rb")
+    load File.expand_path("~/.barinfo")
   rescue
     error_msg = { full_text: "THERE IS AN ERROR IN ~/.murica.rb. FIX IT!",
                   color: "#ff"}

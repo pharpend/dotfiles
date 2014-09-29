@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- mode: Ruby -*-
 
 spook_words = File::read(File::dirname(File::expand_path(__FILE__)) +
                          "/libspook.lines").split("\u0000\n")
