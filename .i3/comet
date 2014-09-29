@@ -212,7 +212,7 @@ exec nitrogen --restore
 exec synclient TouchpadOff=1
 
 
-client.focused          #212121 #b050e0 #212121 #333333
+client.focused          #212121 #d090f0 #212121 #333333
 client.focused_inactive #333333 #202020 #19c1ab #484e50
 client.unfocused        #333333 #202020 #666666 #090d0e
 client.urgent           #C10004 #900000 #ffffff #900000
@@ -220,5 +220,5 @@ client.urgent           #C10004 #900000 #ffffff #900000
 focus_follows_mouse no
 
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 2
 new_window 1pixel

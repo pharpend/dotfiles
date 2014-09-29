@@ -34,9 +34,9 @@ def cpu_color
   end
 end
 
-# def governor
-#   `cpupower frequency-info | grep "The governor"`.split('"')[1].capitalize
-# end
+def governor
+  `cpupower frequency-info | grep "The governor"`.split('"')[1].capitalize
+end
 
 def ping_speed
   begin
@@ -62,38 +62,48 @@ def ping_color(ps)
 end
 
 def battery_pct
-  `acpi -b`.split[3][0..1].to_i
+  `acpi -b`.scan(/(\w+), (\d+)%/)[0]
 end
 
 def battery_color(pct)
-  case pct
+  case pct[1].to_i
     when 90..100
-      "#60f040"
-    when 70..90
-      "#a0d040"
-    when 50..70
-      "#d0d020"
-    when 30..50
-      "#f0d040"
-    when 10..30
-      "#f04020"
-    when 10..30
-      "#d00000"
+      "#50f040"
+    when 80..81
+      "#70e040"
+    when 70..79
+      "#90e040"
+    when 60..69
+      "#f0f040"
+    when 50..59
+      "#e0e040"
+    when 40..49
+      "#e09040"
+    when 30..39
+      "#f05020"
+    when 30..29
+      "#f02020"
+    when 10..19
+      "#d02040"
+    when 0..9
+      "#f00020"
   end
 end
 
+$update_interval = 0.5
+$white = "#eeeeee"
 
 def comet
   hostname = File::read("/etc/conf.d/hostname").scan(/"(\w+)"/).flatten[0]
   if hostname == "comet"
     [
      {
-       full_text: "Battery: #{battery_pct}%",
+       full_text: "#{battery_pct[0]}: #{battery_pct[1]}%",
        color: battery_color(battery_pct)
      },
      {
        full_text: "G: #{governor}",
-       color: white
+       color: $white
      }
     ]
   else
@@ -102,23 +112,20 @@ def comet
 end
 ############
 
-$update_interval = 0.5
-white = "#eeeeee"
-
 win = { full_text: "#{active_window_name}",
-        color: white }
+        color: $white }
 ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
-        color: white }
+        color: $white }
 cputemp = { full_text: "\u2623: #{cpu_temperature} C",
             color: cpu_color }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
-           color: white }
+           color: $white }
 date = {  full_text: Time.now.strftime("%a %e %b %y"),
-          color: white }
+          color: $white }
 time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
-          color: white }
+          color: $white }
 blank = { full_text: "",
-          color: white }
+          color: $white }
 
 $info = [win] + comet + [cputemp, cpughz, ram, time, date, blank]
 update
