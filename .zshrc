@@ -80,7 +80,7 @@ dcmsg () {
 }
 
 dotcp () {
-    wd = $(pwd)
+    wd=$(pwd)
     cd ~/src/dotfiles
     git add -A .
     git commit -am "dotfiles/$(hostname) commit for $(date)"
