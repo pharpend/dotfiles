@@ -1,4 +1,5 @@
-;; Indentation is 4 in python
+;; This requires a bit of setup. You need to install the packages
+;; "dev-python/rope" and "dev-python/pyflakes"
 
 (setq-local fill-column 79)
 (setq-local indent-tabs-mode nil)

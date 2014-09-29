@@ -1,0 +1,80 @@
+#!/usr/bin/env ruby
+# -*- mode: Ruby -*-
+# 
+# INSTRUCTIONS
+# 
+# 1. You need to install the gems "ruby-gmail", "libnotify", and "parseconfig".
+# 
+# 2. You need to populate the file ~/.gmail.conf to make it look something like
+# this:
+# 
+#   email = myusername@gmail.com
+#   password = mypassword
+#   interval = 10
+# 
+# Replace 10 with the number of minutes you want the script to check for email.
+# 
+# 3. Make the script executable with "chmod +x /path/to/gmail-notifyd"
+# 
+# 4. Run the script with "/path/to/gmail-notifyd &" (in Bash), or
+# "/path/to/gmail-notifyd &!" (in zsh).
+# 
+# This is a terrible ruby script, and is thus likely to break. You can always
+# get the latest version from
+# https://github.com/pharpend/dotfiles/tree/master/bin/gmail-notifyd
+#
+# Copyright (c) 2014 Peter Harpending. <pharpend2@gmail.com>
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
+require 'gmail'
+require 'libnotify'
+require 'parseconfig'
+
+CONFIG_PATH = "~/.gmail.conf"
+pc = ParseConfig.new File.expand_path CONFIG_PATH
+$email = pc.params["email"]
+$pwd = pc.params["password"]
+$sleep_time = pc.params["interval"].to_i
+
+while true
+  $notes = []
+  Gmail.new($email, $pwd) do |gmail|
+    gmail.inbox.emails(:unread).each do |msg| 
+      rfc_body = msg.message.to_s
+      from = rfc_body.scan(/From:([^\<]+)/)[0][0].strip
+      subj = rfc_body.scan(/Subject:([^\n]+)/)[0][0].strip
+      $notes << {:from => from, :subject => subj}
+      msg.mark(:unread)
+    end
+  end
+
+  $notes_interp = $notes.map { |n| "\n<b>From:</b> #{n[:from]}\n<b>Subject:</b> #{n[:subject]}" }.join("\n")
+
+  case $notes.length
+    when 0
+      next
+    when 1
+      Libnotify.show(:summary => "New email", :body => $notes_interp, :urgency => :normal)
+    else
+      Libnotify.show(:summary => "New emails", :body => $notes_interp, :urgency => :normal)
+  end
+  sleep($sleep_time * 60)
+end
