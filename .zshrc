@@ -84,6 +84,7 @@ dotcpd () {
     cd $1
     git add -A .
     git commit -am "${wd}:$(hostname) commit for $(date)"
+    git pull
     git push
     cd $wd
 }
