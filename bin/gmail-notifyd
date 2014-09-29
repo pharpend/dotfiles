@@ -1,0 +1,133 @@
+#!/usr/bin/env ruby
+# -*- mode: Ruby -*-
+# 
+# gmail-notifyd - a Gmail notifier
+# Copyright (c) 2014 Peter Harpending. <pharpend2@gmail.com>
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# DESCRIPTION
+# 
+# Every so often, this program checks to see if there are new messages in a
+# Gmail inbox. If so, it sends a desktop notification. It will also output the
+# number of new messages to a file.
+# 
+# INSTRUCTIONS
+# 
+# 1. You need to install the gems "ruby-gmail", "libnotify", and "parseconfig".
+# 
+# 2. You need to populate the file ~/.gmail.conf to make it look, at a minimum,
+# something like this:
+# 
+#   email = myusername@gmail.com
+#   password = mypassword
+# 
+# Replace 10 with the number of minutes you want the script to check for email.
+# 
+# 3. Make the script executable with "chmod +x /path/to/gmail-notifyd"
+# 
+# 4. Run the script with "/path/to/gmail-notifyd".
+# 
+# This is a terrible ruby script, and is thus likely to break. You can always
+# get the latest version from
+# https://github.com/pharpend/dotfiles/tree/master/bin/gmail-notifyd
+#
+# This has been tested on Gentoo GNU/Linux, last updated 28 Sept 2014
+# 
+# You can edit some of the parameters here
+
+CONFIG_PATH          = "~/.gmail.conf"
+FORK_PARAM           = "fork"
+EMAIL_PARAM          = "email"
+INTERVAL_PARAM       = "interval"
+MAILNUM_PARAM        = "mailnum-path"
+NOTIFY_PARAM         = "notify"
+PASSWORD_PARAM       = "password"
+DEFAULT_FORK         = true
+DEFAULT_INTERVAL     = 10
+DEFAULT_NOTIFY       = true
+DEFAULT_MAILNUM_PATH = "~/.mailnum"
+ 
+require 'gmail'
+require 'libnotify'
+require 'parseconfig'
+
+# Stolen from https://gist.github.com/ChuckJHardySnippets/2000623
+class String
+  def to_bool
+    return true   if self == true   || self =~ (/(true|t|yes|y|1)$/i)
+    return false  if self == false  || self.empty? || self =~ (/(false|f|no|n|0)$/i)
+    raise ArgumentError.new("invalid value for Boolean: \"#{self}\"")
+  end
+end
+
+pc = ParseConfig.new(File.expand_path(CONFIG_PATH))
+$fork = DEFAULT_FORK
+$fork = pc.params[FORK_PARAM].to_bool unless pc.params[FORK_PARAM].nil?
+
+def checkmail
+  while true
+    $pc = ParseConfig.new(File.expand_path(CONFIG_PATH))
+    $notify = DEFAULT_NOTIFY
+    $mailnum_path = DEFAULT_MAILNUM_PATH
+    $sleep_time = DEFAULT_INTERVAL
+
+    $email        = $pc.params[EMAIL_PARAM]
+    $pwd          = $pc.params[PASSWORD_PARAM]
+
+    $notify       = $pc.params[NOTIFY_PARAM].to_bool unless $pc.params[NOTIFY_PARAM].nil?
+    $mailnum_path = $pc.params[MAILNUM_PARAM] unless $pc.params[MAILNUM_PARAM].nil?
+    $sleep_time   = $pc.params[INTERVAL_PARAM].to_i unless $pc.params[INTERVAL_PARAM].nil?
+
+    $notes = []
+    Gmail.new($email, $pwd) do |gmail|
+      gmail.inbox.emails(:unread).each do |msg| 
+        rfc_body = msg.message.to_s
+        from = rfc_body.scan(/From:([^\<]+)/)[0][0].strip
+        subj = rfc_body.scan(/Subject:([^\n]+)/)[0][0].strip
+        $notes << {:from => from, :subject => subj}
+        msg.mark(:unread)
+      end
+    end
+
+    $notes_interp = $notes.map { |n| "\n<b>From:</b> #{n[:from]}\n<b>Subject:</b> #{n[:subject]}" }.join("\n")
+
+    File.open(File.expand_path($mailnum_path), 'w') do |f| 
+      f.write($notes.length.to_s)
+    end
+
+    if $notify
+      case $notes.length
+        when 0
+          next
+        when 1
+          Libnotify.show(:summary => "1 New email", :body => $notes_interp, :urgency => :normal)
+        else
+          Libnotify.show(:summary => "#{$notes.length} new emails", :body => $notes_interp, :urgency => :normal)
+      end
+    end
+    sleep(($sleep_time * 60).to_i)
+  end
+end
+
+if $fork then
+  fork {checkmail}
+else 
+  checkmail
+end

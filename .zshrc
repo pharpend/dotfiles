@@ -79,9 +79,14 @@ dcmsg () {
     echo "dotfiles-$(hostname) commit for $(date)"
 }
 
-dot-commit () {
-    git a .
-    git cm -am "dotfiles-$(hostname) commit for $(date)"
+dotc () {
+    git add -A .
+    git commit -am "dotfiles/$(hostname) commit for $(date)"
+}
+
+pdotc () {
+    git add -A .
+    git commit -am "private-dots/$(hostname) commit for $(date)"
 }
 
 
@@ -104,21 +109,6 @@ alias cd='cdl'
 
 topcmds() {
 	cat ~/.histfile |awk '{print $1}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -rn|head $1
-}
-
-default-tray () {
-  trayer --align left --edge top --expand false --heighttype pixel --height 10\
-    --transparent true --widthtype request --width 3 --alpha 255 --tint 2 
-}
-
-rxmo () {
-    killall xmobar
-    xmobar &!
-}
-
-rstalone () {
-    killall stalonetray
-    stalonetray &!
 }
 
 upgrade-cabal-global () {

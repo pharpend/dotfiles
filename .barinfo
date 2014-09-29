@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- mode: Ruby; coding: utf-8 -*-
 
 def active_window_name
   `xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) _NET_WM_NAME`.split('"')[1]
@@ -110,6 +110,19 @@ def comet
     []
   end
 end
+
+def mailnum
+  mn = File.read(File.expand_path("~/.mailnum")).to_i
+  case mn
+    when 0
+      {full_text: "No new email", color: "#eeeeee"}
+    when 1
+      {full_text: "1 new email", color: "#60f040"}
+    else
+      {full_text: "#{mn} new emails", color: "#60f040"}
+  end
+end
+
 ############
 
 win = { full_text: "#{active_window_name}",
@@ -127,5 +140,5 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
 blank = { full_text: "",
           color: $white }
 
-$info = [win] + comet + [cputemp, cpughz, ram, time, date, blank]
+$info = [win] + comet + [mailnum, cputemp, cpughz, ram, time, date, blank]
 update

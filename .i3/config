@@ -144,32 +144,32 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
-# exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
+# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
 exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    output VGA-1
-    position bottom
-    status_command $HOME/bin/murica.rb
-    tray_output DVI-D-2
-    mode dock
+# bar {
+#     output VGA-1
+#     position bottom
+#     status_command $HOME/bin/murica
+#     tray_output DVI-D-2
+#     mode dock
 
-    colors {
-        background #212121
-        focused_workspace  #81a1b1 #314444 #dddddd
-        active_workspace   #81a1b1 #213131 #999999
-        inactive_workspace #444444 #222222 #555555
-        urgent_workspace   #2f343a #b00000 #ffffff
-    }
-}
+#     colors {
+#         background #212121
+#         focused_workspace  #81a1b1 #314444 #dddddd
+#         active_workspace   #81a1b1 #213131 #999999
+#         inactive_workspace #444444 #222222 #555555
+#         urgent_workspace   #2f343a #b00000 #ffffff
+#     }
+# }
 bar {
     output DVI-D-2
-    position bottom
-    status_command cat
+    position top
+    status_command $HOME/bin/barinfo
     tray_output DVI-D-2
     mode dock
 
@@ -222,6 +222,7 @@ bindsym $mod+y workspace next
 # Panel things
 exec deluge
 exec google-musicmanager
+exec $HOME/bin/gmail-notifyd
 exec nm-applet
 exec parcellite
 
@@ -232,7 +233,7 @@ exec emacs --daemon
 exec pcmanfm --daemon-mode
 exec nitrogen --restore
 
-client.focused          #212121 #20f0f0 #212121 #00DA8E
+client.focused          #212121 #20d0f0 #212121 #00DA8E
 client.focused_inactive #333333 #202020 #d0d0d0 #484e50
 client.unfocused        #333333 #202020 #d0d0d0 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
@@ -240,5 +241,5 @@ client.urgent           #C10004 #900000 #ffffff #900000
 focus_follows_mouse no
 
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 3
 new_window 1pixel
