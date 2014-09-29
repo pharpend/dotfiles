@@ -79,22 +79,21 @@ dcmsg () {
     echo "dotfiles-$(hostname) commit for $(date)"
 }
 
-dotcp () {
+dotcpd () {
     wd=$(pwd)
-    cd ~/src/dotfiles
+    cd $1
     git add -A .
-    git commit -am "dotfiles/$(hostname) commit for $(date)"
+    git commit -am "${wd}:$(hostname) commit for $(date)"
     git push
     cd $wd
 }
 
+dotcp () {
+    dotcpd ~/src/dotfiles
+}
+
 pdotcp () {
-    wd=$(pwd)
-    cd ~/src/private-dots
-    git add -A .
-    git commit -am "private-dots/$(hostname) commit for $(date)"
-    git push
-    cd $wd
+    dotcpd ~/src/private-dots
 }
 
 adotcp () {

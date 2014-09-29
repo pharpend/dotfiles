@@ -221,6 +221,7 @@ bindsym $mod+y workspace next
 
 # Panel things
 exec deluge
+exec dropbox
 exec google-musicmanager
 exec $HOME/bin/gmail-notifyd
 exec nm-applet
