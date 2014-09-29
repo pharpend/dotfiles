@@ -1,8 +1,18 @@
 #!/usr/bin/env ruby
 # -*- mode: Ruby -*-
-# 
+
+DEBUG          = false
+FORK           = true
+INTERVAL       = 10
+NOTIFY         = true
+PARAM_EMAIL    = "email"
+PARAM_PASSWORD = "password"
+PATH_CONFIG    = "~/.gmail.conf"
+PATH_MAILNUM   = "~/.mailnum"
+PATH_STATUS    = "~/.gmail.status.json"
+
 # gmail-notifyd - a Gmail notifier
-# Version 0.1, 2014-09-29
+# Version 0.2, 2014-09-29
 # Copyright (c) 2014 Peter Harpending. <pharpend2@gmail.com>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,11 +53,14 @@
 # 
 # CHANGES
 # 
-# v.0.1 - Introduce versions, miscellaneous code cleanups.
+# v.0.1   - Introduce versions, miscellaneous code cleanups.
+# v.0.1.1 - Introduce status file.
+# v.0.2   - Remove some options from gmail.conf.
 # 
 # TODO
 # 
-# Move this project to its own repository.
+# - Move this project to its own repository.
+# - Separate library, daemon, and client
 # 
 # DESCRIPTION
 # 
@@ -61,50 +74,20 @@
 #
 # This has been tested on Gentoo GNU/Linux, last updated 29 Sept 2014
 # 
-# You can edit some global parameters here.
-
-CONFIG_PATH          = "~/.gmail.conf"
-FORK_PARAM           = "fork"
-EMAIL_PARAM          = "email"
-INTERVAL_PARAM       = "interval"
-MAILNUM_PARAM        = "mailnum-path"
-NOTIFY_PARAM         = "notify"
-PASSWORD_PARAM       = "password"
-DEFAULT_FORK         = true
-DEFAULT_INTERVAL     = 10
-DEFAULT_MAILNUM_PATH = "~/.mailnum"
-DEFAULT_NOTIFY       = true
+# You can edit some global parameters at the top of the file.
  
 require 'gmail'
+require 'json'
 require 'libnotify'
 require 'parseconfig'
 
-# Stolen from https://gist.github.com/ChuckJHardySnippets/2000623
-class String
-  def to_bool
-    return true   if self == true   || self =~ (/(true|t|yes|y|1)$/i)
-    return false  if self == false  || self.empty? || self =~ (/(false|f|no|n|0)$/i)
-    raise ArgumentError.new("invalid value for Boolean: \"#{self}\"")
-  end
-end
-
-pc = ParseConfig.new(File.expand_path(CONFIG_PATH))
-$fork = DEFAULT_FORK
-$fork = pc.params[FORK_PARAM].to_bool unless pc.params[FORK_PARAM].nil?
+pc = ParseConfig.new(File.expand_path(PATH_CONFIG))
 
 def checkmail
   while true
-    $pc = ParseConfig.new(File.expand_path(CONFIG_PATH))
-    $notify = DEFAULT_NOTIFY
-    $mailnum_path = DEFAULT_MAILNUM_PATH
-    $sleep_time = DEFAULT_INTERVAL
-
-    $email        = $pc.params[EMAIL_PARAM]
-    $pwd          = $pc.params[PASSWORD_PARAM]
-
-    $notify       = $pc.params[NOTIFY_PARAM].to_bool unless $pc.params[NOTIFY_PARAM].nil?
-    $mailnum_path = $pc.params[MAILNUM_PARAM] unless $pc.params[MAILNUM_PARAM].nil?
-    $sleep_time   = $pc.params[INTERVAL_PARAM].to_i unless $pc.params[INTERVAL_PARAM].nil?
+    $pc = ParseConfig.new(File.expand_path(PATH_CONFIG))
+    $email = $pc.params[PARAM_EMAIL]
+    $pwd = $pc.params[PARAM_PASSWORD]
 
     $notes = []
     Gmail.new($email, $pwd) do |gmail|
@@ -119,25 +102,40 @@ def checkmail
 
     $notes_interp = $notes.map { |n| "\n<b>From:</b> #{n[:from]}\n<b>Subject:</b> #{n[:subject]}" }.join("\n")
 
-    File.open(File.expand_path($mailnum_path), 'w') do |f| 
+    File.open(File.expand_path(PATH_MAILNUM), 'w') do |f| 
       f.write($notes.length.to_s)
     end
 
-    if $notify
+    if NOTIFY
       case $notes.length
         when 0
           next
         when 1
+          notified=true
           Libnotify.show(:summary => "1 New email", :body => $notes_interp, :urgency => :normal)
         else
+          notified=true
           Libnotify.show(:summary => "#{$notes.length} new emails", :body => $notes_interp, :urgency => :normal)
       end
     end
-    sleep(($sleep_time * 60).to_i)
+
+    File.open File.expand_path(PATH_STATUS), 'w' do |f|
+      status = {
+        last_checked: Time.now.to_s,
+        notify: NOTIFY,
+        mailnum_last: $notes.length,
+        path_mailnum: PATH_MAILNUM,
+        interval_seconds: (INTERVAL*60).to_i,
+      }
+      json_status = JSON.pretty_generate(status) + "\n"
+      f.write(json_status)
+      STDOUT.write(json_status)
+    end
+    sleep((INTERVAL * 60).to_i)
   end
 end
 
-if $fork then
+if FORK then
   fork {checkmail}
 else 
   checkmail
