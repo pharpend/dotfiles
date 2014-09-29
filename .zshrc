@@ -82,8 +82,9 @@ dcmsg () {
 dotcpd () {
     wd=$(pwd)
     cd $1
+    repo_name=$(git remote -v | head -n1 | awk '{print $2}' | sed 's/.*\///' | sed 's/\.git//')
     git add -A .
-    git commit -am "${wd}:$(hostname) commit for $(date)"
+    git commit -am "${repo_name}/$(hostname) commit for $(date)"
     git pull
     git push
     cd $wd

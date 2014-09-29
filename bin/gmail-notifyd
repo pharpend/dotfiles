@@ -2,6 +2,7 @@
 # -*- mode: Ruby -*-
 # 
 # gmail-notifyd - a Gmail notifier
+# Version 0.1, 2014-09-29
 # Copyright (c) 2014 Peter Harpending. <pharpend2@gmail.com>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,12 +22,6 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
-# DESCRIPTION
-# 
-# Every so often, this program checks to see if there are new messages in a
-# Gmail inbox. If so, it sends a desktop notification. It will also output the
-# number of new messages to a file.
 # 
 # INSTRUCTIONS
 # 
@@ -38,19 +33,35 @@
 #   email = myusername@gmail.com
 #   password = mypassword
 # 
-# Replace 10 with the number of minutes you want the script to check for email.
+# Replace 10 with the number of minutes you want the script to check for
+# email. You can get the value of MYHOSTNAME by typing "hostname" in the
+# terminal.
 # 
 # 3. Make the script executable with "chmod +x /path/to/gmail-notifyd"
 # 
 # 4. Run the script with "/path/to/gmail-notifyd".
 # 
-# This is a terrible ruby script, and is thus likely to break. You can always
+# CHANGES
+# 
+# v.0.1 - Introduce versions, miscellaneous code cleanups.
+# 
+# TODO
+# 
+# Move this project to its own repository.
+# 
+# DESCRIPTION
+# 
+# Every so often, this program checks to see if there are new messages in a
+# Gmail inbox. If so, it sends a desktop notification. It will also output the
+# number of new messages to a file.
+# 
+# This is a terrible Ruby script, and is thus likely to break. You can always
 # get the latest version from
 # https://github.com/pharpend/dotfiles/tree/master/bin/gmail-notifyd
 #
-# This has been tested on Gentoo GNU/Linux, last updated 28 Sept 2014
+# This has been tested on Gentoo GNU/Linux, last updated 29 Sept 2014
 # 
-# You can edit some of the parameters here
+# You can edit some global parameters here.
 
 CONFIG_PATH          = "~/.gmail.conf"
 FORK_PARAM           = "fork"
@@ -61,8 +72,8 @@ NOTIFY_PARAM         = "notify"
 PASSWORD_PARAM       = "password"
 DEFAULT_FORK         = true
 DEFAULT_INTERVAL     = 10
-DEFAULT_NOTIFY       = true
 DEFAULT_MAILNUM_PATH = "~/.mailnum"
+DEFAULT_NOTIFY       = true
  
 require 'gmail'
 require 'libnotify'
