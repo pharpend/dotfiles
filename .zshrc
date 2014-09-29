@@ -89,7 +89,7 @@ dotcp () {
 }
 
 pdotcp () {
-    wd = $(pwd)
+    wd=$(pwd)
     cd ~/src/private-dots
     git add -A .
     git commit -am "private-dots/$(hostname) commit for $(date)"
