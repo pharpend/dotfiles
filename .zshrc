@@ -152,7 +152,7 @@ RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f%'
 REPORTTIME=3
 
 export EDITOR="emacsclient"
-export SHELL="/usr/bin/zsh"
+export SHELL="/bin/zsh"
 export rvm_ignore_gemrc_issues=1
 
 export PATH=$PATH:$HOME/bin

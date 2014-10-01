@@ -47,6 +47,7 @@
 # v.0.1.1 - Introduce status file.
 # v.0.2   - Remove some options from gmail.conf.
 # v.0.3   - Fix the timing bug, and the debug bug
+# v.0.3.1 - Turn off notifications
 # 
 # TODO
 # 
@@ -63,14 +64,14 @@
 # get the latest version from
 # https://github.com/pharpend/dotfiles/tree/master/bin/gmail-notifyd
 #
-# This has been tested on Gentoo GNU/Linux, last updated 29 Sept 2014
+# This has been tested on Gentoo GNU/Linux, last updated 30 Sept 2014
 # 
 # You can edit some global parameters here.
 
 DEBUG          = false
 FORK           = true
 INTERVAL       = 10
-NOTIFY         = true
+NOTIFY         = false
 PARAM_EMAIL    = "email"
 PARAM_PASSWORD = "password"
 PATH_CONFIG    = "~/.gmail.conf"
