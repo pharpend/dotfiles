@@ -1,7 +1,12 @@
 # -*- mode: Ruby; coding: utf-8 -*-
 
 def active_window_name
-  `xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) _NET_WM_NAME`.split('"')[1]
+  wt = `xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) _NET_WM_NAME`.split('"')[1]
+  if wt.length >= 30 then
+    return wt[0...30].strip.scan(/.+[^.,-_;]/)[0].strip + "..."
+  else
+    return wt
+  end
 end
   
 def cpu_ghz
@@ -123,9 +128,19 @@ def mailnum
   end
 end
 
+def ncmpcpp
+  x = `ncmpcpp --now-playing`
+  if x.empty?
+    return []
+  else
+    y = x.strip.split[1..-1].join(" ")
+    return [{ full_text: y, color: $white }]
+  end
+end
+
 ############
 
-win = { full_text: "#{active_window_name}",
+win = { full_text: active_window_name,
         color: $white }
 ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
         color: $white }
@@ -140,5 +155,5 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
 blank = { full_text: "",
           color: $white }
 
-$info = [win, mailnum] + comet + [cputemp, cpughz, ram, time, date, blank]
+$info = [win, mailnum] + ncmpcpp + comet + [cputemp, cpughz, ram, time, date, blank]
 update
