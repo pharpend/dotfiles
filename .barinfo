@@ -69,19 +69,19 @@ def battery_color(pct)
   case pct[1].to_i
     when 90..100
       "#50f040"
-    when 80..81
+    when 80..89
       "#70e040"
     when 70..79
-      "#90e040"
+      "#c0e040"
     when 60..69
-      "#f0f040"
-    when 50..59
       "#e0e040"
+    when 50..59
+      "#f0c040"
     when 40..49
       "#e09040"
     when 30..39
       "#f05020"
-    when 30..29
+    when 20..29
       "#f02020"
     when 10..19
       "#d02040"
