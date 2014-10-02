@@ -39,13 +39,28 @@ alias xcl='xclip -sel clip'
 alias dmesg='dmesg -L -w'
 alias cabal='/home/pete/.cabal/bin/cabal'
 alias roc='rlwrap ocaml'
-alias sprunge='curl -F sprunge=@- http://sprunge.us'
 alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
-alias em='emerge'
+alias s='sudo'
+
+# Portage aliases
+alias em='emerge -jav'
+alias emudn='emerge -javuDN @world'
+alias emudn='emerge -javuDN @world'
 alias eq='equery'
 alias es='eselect'
-alias s='sudo'
+
+esync () {
+    # Must be run as root
+    layman -S &&
+    emerge -j --sync &&
+    eix-update
+}
+
+# Other functions
+sprunge () {
+    curl -F sprunge=@$1 http://sprunge.us
+}
 
 hscreen () {
     xrandr --output VGA-1 --rotate normal
