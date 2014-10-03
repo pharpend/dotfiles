@@ -129,12 +129,12 @@ def mailnum
 end
 
 def ncmpcpp
-  x = `ncmpcpp --now-playing`
-  if x.empty?
-    return []
-  else
-    y = x.strip.split[1..-1].join(" ")
+  begin
+    y = `ncmpcpp --now-playing`.strip.split[1..-1].join(" ")
     return [{ full_text: y, color: $white }]
+  rescue Exception => e
+    STDERR.write e.backtrace.join("\n")
+    return []
   end
 end
 

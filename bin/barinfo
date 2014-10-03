@@ -22,7 +22,7 @@ while true
                   color: "#ff"}
     STDOUT.write "[#{JSON.pretty_generate error_msg}],"
     STDERR.write e.backtrace.join("\n")
-    $update_interval=10
+    $update_interval=1
   end
   sleep $update_interval
 end
