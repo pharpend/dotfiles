@@ -144,7 +144,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+exec (xrandr --output VGA-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
 # exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
 exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
@@ -154,7 +155,7 @@ exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl
 bar {
     output VGA-1
     position top
-    status_command cat
+    status_command $HOME/bin/barinfo
     tray_output DVI-D-2
     mode dock
 
@@ -169,7 +170,7 @@ bar {
 bar {
     output DVI-D-2
     position top
-    status_command $HOME/bin/barinfo
+    status_command cat
     tray_output DVI-D-2
     mode dock
 
