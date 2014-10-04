@@ -21,10 +21,10 @@ tag: MUSICBRAINZ_ALBUMARTISTID
 tag: MUSICBRAINZ_TRACKID
 info_end
 directory: 3 Doors Down
-mtime: 1411550442
+mtime: 1411381329
 begin: 3 Doors Down
 directory: 3 Doors Down (Bonus Track Vers
-mtime: 1411554253
+mtime: 1411397621
 begin: 3 Doors Down/3 Doors Down (Bonus Track Vers
 song_begin: 03 It's Not My Time(1).mp3
 Time: 242
@@ -67,7 +67,7 @@ mtime: 1391563410
 song_end
 end: 3 Doors Down/3 Doors Down (Bonus Track Vers
 directory: The Better Life
-mtime: 1411554068
+mtime: 1411397315
 begin: 3 Doors Down/The Better Life
 song_begin: 01 Kryptonite(1).mp3
 Time: 234
@@ -96,10 +96,10 @@ song_end
 end: 3 Doors Down/The Better Life
 end: 3 Doors Down
 directory: Aerosmith
-mtime: 1411550442
+mtime: 1411381278
 begin: Aerosmith
 directory: Aerosmith's Greatest Hits
-mtime: 1411556987
+mtime: 1411401659
 begin: Aerosmith/Aerosmith's Greatest Hits
 song_begin: 01 Dream On.mp3
 Time: 265
@@ -115,7 +115,7 @@ mtime: 1410383205
 song_end
 end: Aerosmith/Aerosmith's Greatest Hits
 directory: Chronicles
-mtime: 1411563696
+mtime: 1411402985
 begin: Aerosmith/Chronicles
 song_begin: 3-05 Livin' On the Edge(1).mp3
 Time: 381
@@ -145,7 +145,7 @@ mtime: 1391561009
 song_end
 end: Aerosmith/Chronicles
 directory: Gold
-mtime: 1411554803
+mtime: 1411398509
 begin: Aerosmith/Gold
 song_begin: 1-10 Young Lust(1).mp3
 Time: 259
@@ -175,7 +175,7 @@ mtime: 1391561083
 song_end
 end: Aerosmith/Gold
 directory: Just Push Play
-mtime: 1411555023
+mtime: 1411398839
 begin: Aerosmith/Just Push Play
 song_begin: 05 Trip Hoppin'.mp3
 Time: 267
@@ -191,7 +191,7 @@ mtime: 1391561089
 song_end
 end: Aerosmith/Just Push Play
 directory: Young Lust_ The Aerosmith Anth
-mtime: 1411554160
+mtime: 1411397468
 begin: Aerosmith/Young Lust_ The Aerosmith Anth
 song_begin: 2-13 Monkey on My Back.mp3
 Time: 237
@@ -208,10 +208,10 @@ song_end
 end: Aerosmith/Young Lust_ The Aerosmith Anth
 end: Aerosmith
 directory: Alex Clare
-mtime: 1411550441
+mtime: 1411381246
 begin: Alex Clare
 directory: The Lateness Of The Hour
-mtime: 1411556665
+mtime: 1411401213
 begin: Alex Clare/The Lateness Of The Hour
 song_begin: 04 Too Close(1).mp3
 Time: 257
@@ -242,10 +242,10 @@ song_end
 end: Alex Clare/The Lateness Of The Hour
 end: Alex Clare
 directory: Andy Grammer
-mtime: 1411550439
+mtime: 1411381070
 begin: Andy Grammer
 directory: Andy Grammer
-mtime: 1411551316
+mtime: 1411382274
 begin: Andy Grammer/Andy Grammer
 song_begin: 02 Fine By Me(1).mp3
 Time: 179
@@ -269,10 +269,10 @@ song_end
 end: Andy Grammer/Andy Grammer
 end: Andy Grammer
 directory: Apocalyptica
-mtime: 1411550442
+mtime: 1411381329
 begin: Apocalyptica
 directory: Apocalyptica
-mtime: 1411564109
+mtime: 1411411565
 begin: Apocalyptica/Apocalyptica
 song_begin: 01 Life Burns!.mp3
 Time: 187
@@ -419,7 +419,7 @@ mtime: 1391562593
 song_end
 end: Apocalyptica/Apocalyptica
 directory: Worlds Collide (Deluxe Version
-mtime: 1411553686
+mtime: 1411396736
 begin: Apocalyptica/Worlds Collide (Deluxe Version
 song_begin: 08 I Don't Care (feat_ Adam Gonti.mp3
 Time: 222
@@ -437,10 +437,10 @@ song_end
 end: Apocalyptica/Worlds Collide (Deluxe Version
 end: Apocalyptica
 directory: Arctic Monkeys
-mtime: 1411550442
+mtime: 1411381278
 begin: Arctic Monkeys
 directory: Favourite Worst Nightmare
-mtime: 1411553543
+mtime: 1411396529
 begin: Arctic Monkeys/Favourite Worst Nightmare
 song_begin: 05 Fluorescent Adolescent(1).mp3
 Time: 174
@@ -469,7 +469,7 @@ song_end
 end: Arctic Monkeys/Favourite Worst Nightmare
 end: Arctic Monkeys
 directory: Arrogant Worms
-mtime: 1411550733
+mtime: 1411381368
 begin: Arrogant Worms
 song_begin: 00 The Assumption Song.mp3
 Time: 91
@@ -482,10 +482,10 @@ mtime: 1391561127
 song_end
 end: Arrogant Worms
 directory: As I Lay Dying
-mtime: 1411550441
+mtime: 1411381246
 begin: As I Lay Dying
 directory: An Ocean Between Us
-mtime: 1411556591
+mtime: 1411401113
 begin: As I Lay Dying/An Ocean Between Us
 song_begin: 01 Separation.mp3
 Time: 76
@@ -646,10 +646,10 @@ song_end
 end: As I Lay Dying/An Ocean Between Us
 end: As I Lay Dying
 directory: Atreyu
-mtime: 1411550441
+mtime: 1411381224
 begin: Atreyu
 directory: Congregation Of The Damned
-mtime: 1411552981
+mtime: 1411386136
 begin: Atreyu/Congregation Of The Damned
 song_begin: 01 Stop! Before It's Too Late And.mp3
 Time: 230
@@ -821,7 +821,7 @@ mtime: 1391563186
 song_end
 end: Atreyu/Congregation Of The Damned
 directory: Lead Sails Paper Anchor
-mtime: 1411555356
+mtime: 1411411605
 begin: Atreyu/Lead Sails Paper Anchor
 song_begin: 01 Doomsday.mp3
 Time: 200
@@ -958,10 +958,10 @@ song_end
 end: Atreyu/Lead Sails Paper Anchor
 end: Atreyu
 directory: Audioslave
-mtime: 1411550439
+mtime: 1411381069
 begin: Audioslave
 directory: Out of Exile
-mtime: 1411556381
+mtime: 1411400789
 begin: Audioslave/Out of Exile
 song_begin: 01 Your Time Has Come.mp3
 Time: 255
@@ -1174,10 +1174,10 @@ song_end
 end: Audioslave/Out of Exile
 end: Audioslave
 directory: Blue Öyster Cult
-mtime: 1411550442
+mtime: 1411381254
 begin: Blue Öyster Cult
 directory: Fire of Unknown Origin
-mtime: 1411555134
+mtime: 1411399011
 begin: Blue Öyster Cult/Fire of Unknown Origin
 song_begin: 02 Burnin' for You(1).mp3
 Time: 270
@@ -1206,10 +1206,10 @@ song_end
 end: Blue Öyster Cult/Fire of Unknown Origin
 end: Blue Öyster Cult
 directory: Bowling For Soup
-mtime: 1411550443
+mtime: 1411381332
 begin: Bowling For Soup
 directory: A Hangover You Don't Deserve
-mtime: 1411554788
+mtime: 1411398477
 begin: Bowling For Soup/A Hangover You Don't Deserve
 song_begin: 01 Almost(1).mp3
 Time: 206
@@ -1261,7 +1261,7 @@ mtime: 1391562754
 song_end
 end: Bowling For Soup/A Hangover You Don't Deserve
 directory: Drunk Enough To Dance
-mtime: 1411554428
+mtime: 1411397835
 begin: Bowling For Soup/Drunk Enough To Dance
 song_begin: 03 Girl All The Bad Guys Want(1).mp3
 Time: 198
@@ -1289,7 +1289,7 @@ mtime: 1391562774
 song_end
 end: Bowling For Soup/Drunk Enough To Dance
 directory: I've Never Done Anything Like
-mtime: 1411554332
+mtime: 1411397735
 begin: Bowling For Soup/I've Never Done Anything Like
 song_begin: 02 Stacy's Mom.mp3
 Time: 193
@@ -1306,10 +1306,10 @@ song_end
 end: Bowling For Soup/I've Never Done Anything Like
 end: Bowling For Soup
 directory: Breaking Benjamin
-mtime: 1411550441
+mtime: 1411381246
 begin: Breaking Benjamin
 directory: Dear Agony
-mtime: 1411554738
+mtime: 1411411470
 begin: Breaking Benjamin/Dear Agony
 song_begin: 01 Fade Away(1).mp3
 Time: 196
@@ -1625,7 +1625,7 @@ mtime: 1391560846
 song_end
 end: Breaking Benjamin/Dear Agony
 directory: Phobia
-mtime: 1411554702
+mtime: 1411411445
 begin: Breaking Benjamin/Phobia
 song_begin: 01 Phobia (Intro).mp3
 Time: 74
@@ -1797,7 +1797,7 @@ mtime: 1391561965
 song_end
 end: Breaking Benjamin/Phobia
 directory: We Are Not Alone
-mtime: 1411555157
+mtime: 1411411565
 begin: Breaking Benjamin/We Are Not Alone
 song_begin: 01 So Cold (Remix)(1).mp3
 Time: 273
@@ -2102,10 +2102,10 @@ song_end
 end: Breaking Benjamin/We Are Not Alone
 end: Breaking Benjamin
 directory: Bruno Mars
-mtime: 1411550440
+mtime: 1411381207
 begin: Bruno Mars
 directory: Doo-Wops & Hooligans
-mtime: 1411555680
+mtime: 1411399815
 begin: Bruno Mars/Doo-Wops & Hooligans
 song_begin: 04 Runaway Baby(1).mp3
 Time: 148
@@ -2154,10 +2154,10 @@ song_end
 end: Bruno Mars/Doo-Wops & Hooligans
 end: Bruno Mars
 directory: Buckcherry
-mtime: 1411550435
+mtime: 1411381062
 begin: Buckcherry
 directory: 15
-mtime: 1411555626
+mtime: 1411399753
 begin: Buckcherry/15
 song_begin: 06 Sorry(1).mp3
 Time: 228
@@ -2206,10 +2206,10 @@ song_end
 end: Buckcherry/15
 end: Buckcherry
 directory: Bullet for My Valentine
-mtime: 1411550443
+mtime: 1411381437
 begin: Bullet for My Valentine
 directory: Fever
-mtime: 1411555838
+mtime: 1411400033
 begin: Bullet for My Valentine/Fever
 song_begin: 01 Your Betrayal.mp3
 Time: 291
@@ -2226,7 +2226,7 @@ mtime: 1391562557
 song_end
 end: Bullet for My Valentine/Fever
 directory: Scream Aim Fire (Deluxe Editio
-mtime: 1411563857
+mtime: 1411403206
 begin: Bullet for My Valentine/Scream Aim Fire (Deluxe Editio
 song_begin: 01 Scream Aim Fire.mp3
 Time: 266
@@ -2425,7 +2425,7 @@ mtime: 1391563980
 song_end
 end: Bullet for My Valentine/Scream Aim Fire (Deluxe Editio
 directory: The Poison (Deluxe Version)
-mtime: 1411563868
+mtime: 1411411614
 begin: Bullet for My Valentine/The Poison (Deluxe Version)
 song_begin: 01 Intro.mp3
 Time: 141
@@ -2690,10 +2690,10 @@ song_end
 end: Bullet for My Valentine/The Poison (Deluxe Version)
 end: Bullet for My Valentine
 directory: Carolina Liar
-mtime: 1411550440
+mtime: 1411381115
 begin: Carolina Liar
 directory: Coming To Terms
-mtime: 1411556140
+mtime: 1411400408
 begin: Carolina Liar/Coming To Terms
 song_begin: 04 Show Me What I'm Looking For(1).mp3
 Time: 241
@@ -2720,10 +2720,10 @@ song_end
 end: Carolina Liar/Coming To Terms
 end: Carolina Liar
 directory: Chevelle
-mtime: 1411550442
+mtime: 1411381254
 begin: Chevelle
 directory: Wonder What's Next (Deluxe Ver
-mtime: 1411554176
+mtime: 1411397490
 begin: Chevelle/Wonder What's Next (Deluxe Ver
 song_begin: 05 The Red(1).mp3
 Time: 238
@@ -2754,10 +2754,10 @@ song_end
 end: Chevelle/Wonder What's Next (Deluxe Ver
 end: Chevelle
 directory: Coheed and Cambria
-mtime: 1411550443
+mtime: 1411381343
 begin: Coheed and Cambria
 directory: Good Apollo I'm Burning Star I
-mtime: 1411563619
+mtime: 1411402882
 begin: Coheed and Cambria/Good Apollo I'm Burning Star I
 song_begin: 03 Welcome Home.mp3
 Time: 375
@@ -2774,7 +2774,7 @@ mtime: 1391562392
 song_end
 end: Coheed and Cambria/Good Apollo I'm Burning Star I
 directory: In Keeping Secrets of Silent E
-mtime: 1411556111
+mtime: 1411400390
 begin: Coheed and Cambria/In Keeping Secrets of Silent E
 song_begin: 03 Cuts Marked In the March of Me(1).mp3
 Time: 301
@@ -2805,10 +2805,10 @@ song_end
 end: Coheed and Cambria/In Keeping Secrets of Silent E
 end: Coheed and Cambria
 directory: Cream
-mtime: 1411550442
+mtime: 1411381331
 begin: Cream
 directory: Disraeli Gears (Remastered)
-mtime: 1411551642
+mtime: 1411382735
 begin: Cream/Disraeli Gears (Remastered)
 song_begin: 01 Strange Brew(1).mp3
 Time: 167
@@ -2848,7 +2848,7 @@ mtime: 1391564015
 song_end
 end: Cream/Disraeli Gears (Remastered)
 directory: The Very Best of Cream
-mtime: 1411551455
+mtime: 1411382474
 begin: Cream/The Very Best of Cream
 song_begin: 10 SWLABR(1).mp3
 Time: 152
@@ -2876,7 +2876,7 @@ mtime: 1391562144
 song_end
 end: Cream/The Very Best of Cream
 directory: The Very Best of Cream (Case Conflict)
-mtime: 1411552436
+mtime: 1411385234
 begin: Cream/The Very Best of Cream (Case Conflict)
 song_begin: 08 Sunshine Of Your Love.mp3
 Time: 253
@@ -2893,10 +2893,10 @@ song_end
 end: Cream/The Very Best of Cream (Case Conflict)
 end: Cream
 directory: Creedence Clearwater Revival
-mtime: 1411550443
+mtime: 1411381530
 begin: Creedence Clearwater Revival
 directory: Chronicle_ 20 Greatest Hits (2
-mtime: 1411552645
+mtime: 1411385569
 begin: Creedence Clearwater Revival/Chronicle_ 20 Greatest Hits (2
 song_begin: 01 I Put a Spell On You.mp3
 Time: 275
@@ -2996,7 +2996,7 @@ mtime: 1391563379
 song_end
 end: Creedence Clearwater Revival/Chronicle_ 20 Greatest Hits (2
 directory: Creedence Gold
-mtime: 1411556958
+mtime: 1411401627
 begin: Creedence Clearwater Revival/Creedence Gold
 song_begin: 01 Proud Mary.mp3
 Time: 189
@@ -3073,10 +3073,10 @@ song_end
 end: Creedence Clearwater Revival/Creedence Gold
 end: Creedence Clearwater Revival
 directory: Crossfade
-mtime: 1411550438
+mtime: 1411381067
 begin: Crossfade
 directory: Crossfade
-mtime: 1411552981
+mtime: 1411386157
 begin: Crossfade/Crossfade
 song_begin: 02 Cold(1).mp3
 Time: 194
@@ -3105,10 +3105,10 @@ song_end
 end: Crossfade/Crossfade
 end: Crossfade
 directory: Daughtry
-mtime: 1411550442
+mtime: 1411381254
 begin: Daughtry
 directory: Leave This Town (Bonus Track V
-mtime: 1411555060
+mtime: 1411411614
 begin: Daughtry/Leave This Town (Bonus Track V
 song_begin: 02 No Surprise.mp3
 Time: 270
@@ -3152,10 +3152,10 @@ song_end
 end: Daughtry/Leave This Town (Bonus Track V
 end: Daughtry
 directory: David Holt
-mtime: 1411550441
+mtime: 1411381250
 begin: David Holt
 directory: Grandfather's Greatest Hits
-mtime: 1411555060
+mtime: 1411398897
 begin: David Holt/Grandfather's Greatest Hits
 song_begin: 12 Dixie.mp3
 Time: 271
@@ -3172,10 +3172,10 @@ song_end
 end: David Holt/Grandfather's Greatest Hits
 end: David Holt
 directory: Disturbed
-mtime: 1411550439
+mtime: 1411381070
 begin: Disturbed
 directory: Indestructible
-mtime: 1411555532
+mtime: 1411399628
 begin: Disturbed/Indestructible
 song_begin: 04 The Night.mp3
 Time: 286
@@ -3192,10 +3192,10 @@ song_end
 end: Disturbed/Indestructible
 end: Disturbed
 directory: Dropkick Murphys
-mtime: 1411550443
+mtime: 1411381332
 begin: Dropkick Murphys
 directory: The Meanest of Times (Limited
-mtime: 1411554099
+mtime: 1411397376
 begin: Dropkick Murphys/The Meanest of Times (Limited
 song_begin: 03 The State of Massachusetts(1).mp3
 Time: 235
@@ -3247,7 +3247,7 @@ mtime: 1391563348
 song_end
 end: Dropkick Murphys/The Meanest of Times (Limited
 directory: The Warrior's Code
-mtime: 1411555520
+mtime: 1411411606
 begin: Dropkick Murphys/The Warrior's Code
 song_begin: 01 Your Spirit's Alive.mp3
 Time: 141
@@ -3468,10 +3468,10 @@ song_end
 end: Dropkick Murphys/The Warrior's Code
 end: Dropkick Murphys
 directory: Ellie Goulding
-mtime: 1411550442
+mtime: 1411381332
 begin: Ellie Goulding
 directory: An Introduction To Ellie Gould
-mtime: 1411556239
+mtime: 1411400529
 begin: Ellie Goulding/An Introduction To Ellie Gould
 song_begin: 04 Lights(1).mp3
 Time: 244
@@ -3500,10 +3500,10 @@ song_end
 end: Ellie Goulding/An Introduction To Ellie Gould
 end: Ellie Goulding
 directory: Elly Ameling_ Marilyn Horne_ E
-mtime: 1411550443
+mtime: 1411381332
 begin: Elly Ameling_ Marilyn Horne_ E
 directory: Mozart_ Requiem
-mtime: 1411553700
+mtime: 1411396756
 begin: Elly Ameling_ Marilyn Horne_ E/Mozart_ Requiem
 song_begin: 01 Mozart_ Requiem In D Minor_ K.mp3
 Time: 292
@@ -3662,10 +3662,10 @@ song_end
 end: Elly Ameling_ Marilyn Horne_ E/Mozart_ Requiem
 end: Elly Ameling_ Marilyn Horne_ E
 directory: Evanescence
-mtime: 1411550438
+mtime: 1411381067
 begin: Evanescence
 directory: Fallen
-mtime: 1411554114
+mtime: 1411397389
 begin: Evanescence/Fallen
 song_begin: 02 Bring Me to Life.mp3
 Time: 236
@@ -3683,10 +3683,10 @@ song_end
 end: Evanescence/Fallen
 end: Evanescence
 directory: Everybody Else
-mtime: 1411550440
+mtime: 1411381115
 begin: Everybody Else
 directory: Everybody Else
-mtime: 1411555319
+mtime: 1411399294
 begin: Everybody Else/Everybody Else
 song_begin: 05 Born To Do(1).mp3
 Time: 222
@@ -3727,10 +3727,10 @@ song_end
 end: Everybody Else/Everybody Else
 end: Everybody Else
 directory: Fastball
-mtime: 1411550441
+mtime: 1411381246
 begin: Fastball
 directory: All The Pain Money Can Buy
-mtime: 1411556708
+mtime: 1411401283
 begin: Fastball/All The Pain Money Can Buy
 song_begin: 01 The Way(1).mp3
 Time: 257
@@ -3759,10 +3759,10 @@ song_end
 end: Fastball/All The Pain Money Can Buy
 end: Fastball
 directory: Fee
-mtime: 1411550437
+mtime: 1411381064
 begin: Fee
 directory: Hope Rising
-mtime: 1411552148
+mtime: 1411383536
 begin: Fee/Hope Rising
 song_begin: 05 Everything Falls(1).mp3
 Time: 223
@@ -3799,10 +3799,10 @@ song_end
 end: Fee/Hope Rising
 end: Fee
 directory: Finger Eleven
-mtime: 1411550441
+mtime: 1411381224
 begin: Finger Eleven
 directory: Them vs_ You vs_ Me
-mtime: 1411553310
+mtime: 1411396032
 begin: Finger Eleven/Them vs_ You vs_ Me
 song_begin: 01 Paralyzer.mp3
 Time: 208
@@ -3820,10 +3820,10 @@ song_end
 end: Finger Eleven/Them vs_ You vs_ Me
 end: Finger Eleven
 directory: Fort Minor
-mtime: 1411550440
+mtime: 1411381111
 begin: Fort Minor
 directory: The Rising Tied
-mtime: 1411556005
+mtime: 1411400263
 begin: Fort Minor/The Rising Tied
 song_begin: 02 Remember The Name(1).mp3
 Time: 231
@@ -3924,10 +3924,10 @@ song_end
 end: Fort Minor/The Rising Tied
 end: Fort Minor
 directory: Fountains Of Wayne
-mtime: 1411550443
+mtime: 1411381333
 begin: Fountains Of Wayne
 directory: Welcome Interstate Managers
-mtime: 1411554754
+mtime: 1411398286
 begin: Fountains Of Wayne/Welcome Interstate Managers
 song_begin: 03 Stacy's Mom(1).mp3
 Time: 198
@@ -3956,10 +3956,10 @@ song_end
 end: Fountains Of Wayne/Welcome Interstate Managers
 end: Fountains Of Wayne
 directory: Gavin DeGraw
-mtime: 1411550438
+mtime: 1411381068
 begin: Gavin DeGraw
 directory: Sweeter
-mtime: 1411555203
+mtime: 1411399130
 begin: Gavin DeGraw/Sweeter
 song_begin: 02 Not over You.mp3
 Time: 219
@@ -4000,10 +4000,10 @@ song_end
 end: Gavin DeGraw/Sweeter
 end: Gavin DeGraw
 directory: George Martin
-mtime: 1411550442
+mtime: 1411381331
 begin: George Martin
 directory: 007_ Live and Let Die (Origina
-mtime: 1411552956
+mtime: 1411386116
 begin: George Martin/007_ Live and Let Die (Origina
 song_begin: 01 Live and Let Die.mp3
 Time: 195
@@ -4021,10 +4021,10 @@ song_end
 end: George Martin/007_ Live and Let Die (Origina
 end: George Martin
 directory: Glenn Beck
-mtime: 1411550438
+mtime: 1411381067
 begin: Glenn Beck
 directory: Insanity
-mtime: 1411553789
+mtime: 1411396890
 begin: Glenn Beck/Insanity
 song_begin: 01 Health Care.mp3
 Time: 456
@@ -4049,10 +4049,10 @@ song_end
 end: Glenn Beck/Insanity
 end: Glenn Beck
 directory: Gnarls Barkley
-mtime: 1411550440
+mtime: 1411381114
 begin: Gnarls Barkley
 directory: St_ Elsewhere
-mtime: 1411553907
+mtime: 1411397087
 begin: Gnarls Barkley/St_ Elsewhere
 song_begin: 02 Crazy(1).mp3
 Time: 182
@@ -4079,10 +4079,10 @@ song_end
 end: Gnarls Barkley/St_ Elsewhere
 end: Gnarls Barkley
 directory: Goldfinger
-mtime: 1411550441
+mtime: 1411381224
 begin: Goldfinger
 directory: The Best Of Goldfinger
-mtime: 1411556032
+mtime: 1411400301
 begin: Goldfinger/The Best Of Goldfinger
 song_begin: 10 99 Red Balloons(1).mp3
 Time: 234
@@ -4111,10 +4111,10 @@ song_end
 end: Goldfinger/The Best Of Goldfinger
 end: Goldfinger
 directory: Goldfrapp
-mtime: 1411550439
+mtime: 1411381069
 begin: Goldfrapp
 directory: Supernature
-mtime: 1411554623
+mtime: 1411398088
 begin: Goldfrapp/Supernature
 song_begin: 01 Ooh La La(1).mp3
 Time: 204
@@ -4145,10 +4145,10 @@ song_end
 end: Goldfrapp/Supernature
 end: Goldfrapp
 directory: Gov't Mule
-mtime: 1411550439
+mtime: 1411381069
 begin: Gov't Mule
 directory: Deja Voodoo
-mtime: 1411554460
+mtime: 1411397902
 begin: Gov't Mule/Deja Voodoo
 song_begin: 01 Bad Man Walking(1).mp3
 Time: 249
@@ -4191,7 +4191,7 @@ mtime: 1391561073
 song_end
 end: Gov't Mule/Deja Voodoo
 directory: Déjà Voodoo
-mtime: 1411552402
+mtime: 1411385153
 begin: Gov't Mule/Déjà Voodoo
 song_begin: 01 Bad Man Walking(1).mp3
 Time: 249
@@ -4220,10 +4220,10 @@ song_end
 end: Gov't Mule/Déjà Voodoo
 end: Gov't Mule
 directory: Great Big Sea
-mtime: 1411550440
+mtime: 1411381111
 begin: Great Big Sea
 directory: Great Big CD
-mtime: 1411553499
+mtime: 1411396454
 begin: Great Big Sea/Great Big CD
 song_begin: 05 The Night Pat Murphy Died.mp3
 Time: 216
@@ -4239,7 +4239,7 @@ mtime: 1391561470
 song_end
 end: Great Big Sea/Great Big CD
 directory: Play
-mtime: 1411552820
+mtime: 1411385903
 begin: Great Big Sea/Play
 song_begin: 03 The Night Pat Murphy Died(1).mp3
 Time: 184
@@ -4268,10 +4268,10 @@ song_end
 end: Great Big Sea/Play
 end: Great Big Sea
 directory: Green Day
-mtime: 1411550441
+mtime: 1411381224
 begin: Green Day
 directory: 21 Guns
-mtime: 1411563841
+mtime: 1411403172
 begin: Green Day/21 Guns
 song_begin: 02 21 Guns.mp3
 Time: 322
@@ -4288,7 +4288,7 @@ mtime: 1391562731
 song_end
 end: Green Day/21 Guns
 directory: 21st Century Breakdown
-mtime: 1411554952
+mtime: 1411398724
 begin: Green Day/21st Century Breakdown
 song_begin: 04 ¡Viva La Gloria!(1).mp3
 Time: 211
@@ -4316,7 +4316,7 @@ mtime: 1391564051
 song_end
 end: Green Day/21st Century Breakdown
 directory: American Idiot
-mtime: 1411564077
+mtime: 1411403504
 begin: Green Day/American Idiot
 song_begin: 04 - Boulevard of Broken Dreams.mp3
 Time: 261
@@ -4363,7 +4363,7 @@ mtime: 1391562496
 song_end
 end: Green Day/American Idiot
 directory: American Idiot (Deluxe)
-mtime: 1411563416
+mtime: 1411402618
 begin: Green Day/American Idiot (Deluxe)
 song_begin: 07 Wake Me Up When September Ends(1).mp3
 Time: 286
@@ -4392,10 +4392,10 @@ song_end
 end: Green Day/American Idiot (Deluxe)
 end: Green Day
 directory: Guns N' Roses
-mtime: 1411550441
+mtime: 1411381251
 begin: Guns N' Roses
 directory: Appetite for Destruction
-mtime: 1411563384
+mtime: 1411402595
 begin: Guns N' Roses/Appetite for Destruction
 song_begin: 01 Welcome to the Jungle.mp3
 Time: 274
@@ -4423,7 +4423,7 @@ mtime: 1391562627
 song_end
 end: Guns N' Roses/Appetite for Destruction
 directory: Use Your Illusion
-mtime: 1411552806
+mtime: 1411385874
 begin: Guns N' Roses/Use Your Illusion
 song_begin: 01 Live and Let Die.mp3
 Time: 184
@@ -4440,10 +4440,10 @@ song_end
 end: Guns N' Roses/Use Your Illusion
 end: Guns N' Roses
 directory: Imagine Dragons
-mtime: 1411550440
+mtime: 1411381115
 begin: Imagine Dragons
 directory: Night Visions
-mtime: 1411556032
+mtime: 1411400301
 begin: Imagine Dragons/Night Visions
 song_begin: 01 Radioactive(1).mp3
 Time: 187
@@ -4544,10 +4544,10 @@ song_end
 end: Imagine Dragons/Night Visions
 end: Imagine Dragons
 directory: Jay-Z
-mtime: 1411550439
+mtime: 1411381069
 begin: Jay-Z
 directory: The Black Album
-mtime: 1411556224
+mtime: 1411400513
 begin: Jay-Z/The Black Album
 song_begin: 06 Dirt Off Your Shoulder (Explic(1).mp3
 Time: 245
@@ -4600,10 +4600,10 @@ song_end
 end: Jay-Z/The Black Album
 end: Jay-Z
 directory: Jay-Z _ Linkin Park
-mtime: 1411550441
+mtime: 1411381248
 begin: Jay-Z _ Linkin Park
 directory: Collision Course
-mtime: 1411563602
+mtime: 1411402882
 begin: Jay-Z _ Linkin Park/Collision Course
 song_begin: 01 Dirt Off Your Shoulder_Lying F.mp3
 Time: 245
@@ -4674,10 +4674,10 @@ song_end
 end: Jay-Z _ Linkin Park/Collision Course
 end: Jay-Z _ Linkin Park
 directory: Jimi Hendrix
-mtime: 1411550442
+mtime: 1411381332
 begin: Jimi Hendrix
 directory: Experience Hendrix - The Best
-mtime: 1411552532
+mtime: 1411385386
 begin: Jimi Hendrix/Experience Hendrix - The Best
 song_begin: 02 Fire.mp3
 Time: 238
@@ -4789,7 +4789,7 @@ mtime: 1391563357
 song_end
 end: Jimi Hendrix/Experience Hendrix - The Best
 directory: Jimi Hendrix - The Greatest Hits
-mtime: 1411564019
+mtime: 1411403437
 begin: Jimi Hendrix/Jimi Hendrix - The Greatest Hits
 song_begin: 01 - Purple Haze.mp3
 Time: 172
@@ -5213,7 +5213,7 @@ mtime: 1398021146
 song_end
 end: Jimi Hendrix/Jimi Hendrix - The Greatest Hits
 directory: Jimi Hendrix_ His Greatest Hit
-mtime: 1411563883
+mtime: 1411403223
 begin: Jimi Hendrix/Jimi Hendrix_ His Greatest Hit
 song_begin: 08 The Sunshine of Your Love.mp3
 Time: 408
@@ -5229,7 +5229,7 @@ mtime: 1391562816
 song_end
 end: Jimi Hendrix/Jimi Hendrix_ His Greatest Hit
 directory: The Greatest Hits CD1
-mtime: 1411563219
+mtime: 1411411606
 begin: Jimi Hendrix/The Greatest Hits CD1
 song_begin: 01 Purple Haze.mp3
 Time: 172
@@ -5497,7 +5497,7 @@ mtime: 1408907660
 song_end
 end: Jimi Hendrix/The Greatest Hits CD1
 directory: The Greatest Hits CD2
-mtime: 1411564019
+mtime: 1411411584
 begin: Jimi Hendrix/The Greatest Hits CD2
 song_begin: 01 Stone Free.mp3
 Time: 223
@@ -5700,10 +5700,10 @@ song_end
 end: Jimi Hendrix/The Greatest Hits CD2
 end: Jimi Hendrix
 directory: John Lennon
-mtime: 1411550440
+mtime: 1411381220
 begin: John Lennon
 directory: Imagine (Remastered)
-mtime: 1411551799
+mtime: 1411382933
 begin: John Lennon/Imagine (Remastered)
 song_begin: 01 Imagine.mp3
 Time: 188
@@ -5720,10 +5720,10 @@ song_end
 end: John Lennon/Imagine (Remastered)
 end: John Lennon
 directory: Korn
-mtime: 1411550440
+mtime: 1411381115
 begin: Korn
 directory: Greatest Hits_ Vol_ 1
-mtime: 1411555000
+mtime: 1411398799
 begin: Korn/Greatest Hits_ Vol_ 1
 song_begin: 13 Freak on a Leash.mp3
 Time: 267
@@ -5739,7 +5739,7 @@ mtime: 1391562055
 song_end
 end: Korn/Greatest Hits_ Vol_ 1
 directory: Issues
-mtime: 1411555120
+mtime: 1411398990
 begin: Korn/Issues
 song_begin: 02 Falling Away from Me.mp3
 Time: 271
@@ -5755,7 +5755,7 @@ mtime: 1391562227
 song_end
 end: Korn/Issues
 directory: Korn
-mtime: 1411564095
+mtime: 1411403504
 begin: Korn/Korn
 song_begin: 01 Blind(1).mp3
 Time: 258
@@ -5807,7 +5807,7 @@ mtime: 1391562508
 song_end
 end: Korn/Korn
 directory: See You On the Other Side
-mtime: 1411563681
+mtime: 1411411605
 begin: Korn/See You On the Other Side
 song_begin: 01 Twisted Transistor(1).mp3
 Time: 252
@@ -6255,7 +6255,7 @@ mtime: 1391561894
 song_end
 end: Korn/See You On the Other Side
 directory: Untitled
-mtime: 1411553513
+mtime: 1411396476
 begin: Korn/Untitled
 song_begin: 04 Evolution.mp3
 Time: 218
@@ -6272,10 +6272,10 @@ song_end
 end: Korn/Untitled
 end: Korn
 directory: Led Zeppelin
-mtime: 1411550441
+mtime: 1411381248
 begin: Led Zeppelin
 directory: IV
-mtime: 1411564095
+mtime: 1411403519
 begin: Led Zeppelin/IV
 song_begin: 04 Stairway To Heaven.mp3
 Time: 478
@@ -6290,7 +6290,7 @@ mtime: 1408908450
 song_end
 end: Led Zeppelin/IV
 directory: Mothership (Remastered)
-mtime: 1411556563
+mtime: 1411401090
 begin: Led Zeppelin/Mothership (Remastered)
 song_begin: 20 Kashmir(1).mp3
 Time: 508
@@ -6319,10 +6319,10 @@ song_end
 end: Led Zeppelin/Mothership (Remastered)
 end: Led Zeppelin
 directory: Lee DeWyze
-mtime: 1411550440
+mtime: 1411381114
 begin: Lee DeWyze
 directory: Sweet Serendipity
-mtime: 1411554444
+mtime: 1411397866
 begin: Lee DeWyze/Sweet Serendipity
 song_begin: 01 Sweet Serendipity(1).mp3
 Time: 200
@@ -6353,10 +6353,10 @@ song_end
 end: Lee DeWyze/Sweet Serendipity
 end: Lee DeWyze
 directory: Linkin Park
-mtime: 1411550442
+mtime: 1411381326
 begin: Linkin Park
 directory: Hybrid Theory
-mtime: 1411554006
+mtime: 1411397241
 begin: Linkin Park/Hybrid Theory
 song_begin: 01 Papercut(1).mp3
 Time: 185
@@ -6404,7 +6404,7 @@ mtime: 1391562708
 song_end
 end: Linkin Park/Hybrid Theory
 directory: Hybrid Theory (Bonus Track Ver
-mtime: 1411553486
+mtime: 1411396432
 begin: Linkin Park/Hybrid Theory (Bonus Track Ver
 song_begin: 08 In the End(1).mp3
 Time: 217
@@ -6432,7 +6432,7 @@ mtime: 1391563268
 song_end
 end: Linkin Park/Hybrid Theory (Bonus Track Ver
 directory: Living Things
-mtime: 1411555680
+mtime: 1411399807
 begin: Linkin Park/Living Things
 song_begin: 03 Burn It Down(1).mp3
 Time: 230
@@ -6508,7 +6508,7 @@ mtime: 1391562434
 song_end
 end: Linkin Park/Living Things
 directory: Living Things (Case Conflict)
-mtime: 1411555640
+mtime: 1411399770
 begin: Linkin Park/Living Things (Case Conflict)
 song_begin: 03 Burn It Down (1).mp3
 Time: 230
@@ -6759,7 +6759,7 @@ mtime: 1396917192
 song_end
 end: Linkin Park/Living Things (Case Conflict)
 directory: Meteora
-mtime: 1411553598
+mtime: 1411411496
 begin: Linkin Park/Meteora
 song_begin: 04 Lying From You(1).mp3
 Time: 175
@@ -6811,7 +6811,7 @@ mtime: 1391562704
 song_end
 end: Linkin Park/Meteora
 directory: Meteora (Bonus Track Version)
-mtime: 1411552992
+mtime: 1411386167
 begin: Linkin Park/Meteora (Bonus Track Version)
 song_begin: 09 Breaking the Habit.mp3
 Time: 196
@@ -6864,10 +6864,10 @@ song_end
 end: Linkin Park/Meteora (Bonus Track Version)
 end: Linkin Park
 directory: Linkin Park (Case Conflict)
-mtime: 1411550442
+mtime: 1411381326
 begin: Linkin Park (Case Conflict)
 directory: LIVING THINGS
-mtime: 1411554897
+mtime: 1411398636
 begin: Linkin Park (Case Conflict)/LIVING THINGS
 song_begin: 01 Lost In The Echo (1).mp3
 Time: 205
@@ -6938,10 +6938,10 @@ song_end
 end: Linkin Park (Case Conflict)/LIVING THINGS
 end: Linkin Park (Case Conflict)
 directory: Luciano Pavarotti
-mtime: 1411550443
+mtime: 1411381333
 begin: Luciano Pavarotti
 directory: Luciano Pavarotti - The Best
-mtime: 1411552283
+mtime: 1411383779
 begin: Luciano Pavarotti/Luciano Pavarotti - The Best
 song_begin: 1-01 Rigoletto_ _La Donna È Mobile.mp3
 Time: 146
@@ -6959,10 +6959,10 @@ song_end
 end: Luciano Pavarotti/Luciano Pavarotti - The Best
 end: Luciano Pavarotti
 directory: Mariah Carey
-mtime: 1411550438
+mtime: 1411381067
 begin: Mariah Carey
 directory: E=MC²
-mtime: 1411553188
+mtime: 1411411565
 begin: Mariah Carey/E=MC²
 song_begin: 02 Touch My Body.mp3
 Time: 205
@@ -6980,10 +6980,10 @@ song_end
 end: Mariah Carey/E=MC²
 end: Mariah Carey
 directory: Metallica
-mtime: 1411550440
+mtime: 1411381114
 begin: Metallica
 directory: Master of Puppets
-mtime: 1411563736
+mtime: 1411403038
 begin: Metallica/Master of Puppets
 song_begin: 04 Welcome Home (Sanitarium).mp3
 Time: 388
@@ -6999,7 +6999,7 @@ mtime: 1391561576
 song_end
 end: Metallica/Master of Puppets
 directory: Metallica
-mtime: 1411556958
+mtime: 1411401642
 begin: Metallica/Metallica
 song_begin: 01 Enter Sandman.mp3
 Time: 332
@@ -7017,10 +7017,10 @@ song_end
 end: Metallica/Metallica
 end: Metallica
 directory: Michael Bublé
-mtime: 1411550439
+mtime: 1411381070
 begin: Michael Bublé
 directory: Crazy Love
-mtime: 1411556299
+mtime: 1411400600
 begin: Michael Bublé/Crazy Love
 song_begin: 05 Haven't Met You Yet(1).mp3
 Time: 245
@@ -7049,10 +7049,10 @@ song_end
 end: Michael Bublé/Crazy Love
 end: Michael Bublé
 directory: Michelle Branch
-mtime: 1411550440
+mtime: 1411381208
 begin: Michelle Branch
 directory: The Spirit Room
-mtime: 1411553472
+mtime: 1411396409
 begin: Michelle Branch/The Spirit Room
 song_begin: 01 Everywhere(1).mp3
 Time: 215
@@ -7081,10 +7081,10 @@ song_end
 end: Michelle Branch/The Spirit Room
 end: Michelle Branch
 directory: Mormon Tabernacle Choir
-mtime: 1411550442
+mtime: 1411381326
 begin: Mormon Tabernacle Choir
 directory: God Bless America
-mtime: 1411556550
+mtime: 1411411584
 begin: Mormon Tabernacle Choir/God Bless America
 song_begin: 01 America_ the Beautiful.mp3
 Time: 221
@@ -7396,10 +7396,10 @@ song_end
 end: Mormon Tabernacle Choir/God Bless America
 end: Mormon Tabernacle Choir
 directory: Muse
-mtime: 1411550437
+mtime: 1411381064
 begin: Muse
 directory: Absolution
-mtime: 1411552336
+mtime: 1411383881
 begin: Muse/Absolution
 song_begin: 01 Intro.mp3
 Time: 22
@@ -7624,10 +7624,10 @@ song_end
 end: Muse/Absolution
 end: Muse
 directory: My Darkest Days
-mtime: 1411550443
+mtime: 1411381440
 begin: My Darkest Days
 directory: My Darkest Days
-mtime: 1411556463
+mtime: 1411400931
 begin: My Darkest Days/My Darkest Days
 song_begin: 01 Move Your Body(1).mp3
 Time: 193
@@ -7983,7 +7983,7 @@ mtime: 1398023094
 song_end
 end: My Darkest Days/My Darkest Days
 directory: Sick And Twisted Affair (Deluxe Edition)
-mtime: 1411555626
+mtime: 1411411584
 begin: My Darkest Days/Sick And Twisted Affair (Deluxe Edition)
 song_begin: 01 - Sick And Twisted Affair.mp3
 Time: 219
@@ -8117,7 +8117,7 @@ mtime: 1398023314
 song_end
 end: My Darkest Days/Sick And Twisted Affair (Deluxe Edition)
 directory: Sick and Twisted Affair
-mtime: 1411555614
+mtime: 1411411584
 begin: My Darkest Days/Sick and Twisted Affair
 song_begin: 01 Sick And Twisted Affair.mp3
 Time: 219
@@ -8275,7 +8275,7 @@ mtime: 1408907554
 song_end
 end: My Darkest Days/Sick and Twisted Affair
 directory: Sick and Twisted Affair (Case Conflict)
-mtime: 1411553626
+mtime: 1411396631
 begin: My Darkest Days/Sick and Twisted Affair (Case Conflict)
 song_begin: 01 Sick And Twisted Affair.mp3
 Time: 219
@@ -8423,10 +8423,10 @@ song_end
 end: My Darkest Days/Sick and Twisted Affair (Case Conflict)
 end: My Darkest Days
 directory: My Darkest Days _Feat_ Ludacri
-mtime: 1411550443
+mtime: 1411381334
 begin: My Darkest Days _Feat_ Ludacri
 directory: My Darkest Days
-mtime: 1411551570
+mtime: 1411382632
 begin: My Darkest Days _Feat_ Ludacri/My Darkest Days
 song_begin: 11 Porn Star Dancing.mp3
 Time: 207
@@ -8442,10 +8442,10 @@ song_end
 end: My Darkest Days _Feat_ Ludacri/My Darkest Days
 end: My Darkest Days _Feat_ Ludacri
 directory: My Darkest Days _Feat_ Wylde_
-mtime: 1411550443
+mtime: 1411381332
 begin: My Darkest Days _Feat_ Wylde_
 directory: My Darkest Days
-mtime: 1411551097
+mtime: 1411381952
 begin: My Darkest Days _Feat_ Wylde_/My Darkest Days
 song_begin: 02 Porn Star Dancing.mp3
 Time: 199
@@ -8461,10 +8461,10 @@ song_end
 end: My Darkest Days _Feat_ Wylde_/My Darkest Days
 end: My Darkest Days _Feat_ Wylde_
 directory: Nashville Banjos
-mtime: 1411550440
+mtime: 1411381114
 begin: Nashville Banjos
 directory: 30 Classics
-mtime: 1411551934
+mtime: 1411383119
 begin: Nashville Banjos/30 Classics
 song_begin: 15 Dixie.mp3
 Time: 129
@@ -8481,10 +8481,10 @@ song_end
 end: Nashville Banjos/30 Classics
 end: Nashville Banjos
 directory: Natalie Imbruglia
-mtime: 1411550441
+mtime: 1411381248
 begin: Natalie Imbruglia
 directory: Left Of The Middle
-mtime: 1411556327
+mtime: 1411400633
 begin: Natalie Imbruglia/Left Of The Middle
 song_begin: 01 Torn(1).mp3
 Time: 247
@@ -8513,10 +8513,10 @@ song_end
 end: Natalie Imbruglia/Left Of The Middle
 end: Natalie Imbruglia
 directory: Neon Trees
-mtime: 1411550437
+mtime: 1411381065
 begin: Neon Trees
 directory: Habits
-mtime: 1411556280
+mtime: 1411400600
 begin: Neon Trees/Habits
 song_begin: 01 Sins Of My Youth.mp3
 Time: 219
@@ -8641,10 +8641,10 @@ song_end
 end: Neon Trees/Habits
 end: Neon Trees
 directory: Nickelback
-mtime: 1411550439
+mtime: 1411381069
 begin: Nickelback
 directory: Dark Horse
-mtime: 1411554363
+mtime: 1411397744
 begin: Nickelback/Dark Horse
 song_begin: 02 Burn It to the Ground.mp3
 Time: 209
@@ -8675,10 +8675,10 @@ song_end
 end: Nickelback/Dark Horse
 end: Nickelback
 directory: Nirvana
-mtime: 1411550437
+mtime: 1411381064
 begin: Nirvana
 directory: Nirvana
-mtime: 1411563619
+mtime: 1411402901
 begin: Nirvana/Nirvana
 song_begin: 05 Smells Like Teen Spirit(1).mp3
 Time: 302
@@ -8731,7 +8731,7 @@ song_end
 end: Nirvana/Nirvana
 end: Nirvana
 directory: OneRepublic
-mtime: 1411553334
+mtime: 1411396078
 begin: OneRepublic
 song_begin: 04 Apologize(1).mp3
 Time: 208
@@ -8759,10 +8759,10 @@ mtime: 1391562883
 song_end
 end: OneRepublic
 directory: Papa Roach
-mtime: 1411550442
+mtime: 1411381278
 begin: Papa Roach
 directory: To Be Loved_ The Best Of Papa
-mtime: 1411554540
+mtime: 1411397988
 begin: Papa Roach/To Be Loved_ The Best Of Papa
 song_begin: 02 Last Resort (Album Version Exp(1).mp3
 Time: 201
@@ -8815,10 +8815,10 @@ song_end
 end: Papa Roach/To Be Loved_ The Best Of Papa
 end: Papa Roach
 directory: Parks & Recreation
-mtime: 1411550443
+mtime: 1411381341
 begin: Parks & Recreation
 directory: Parks & Recreation_ Season II
-mtime: 1411550707
+mtime: 1411381592
 begin: Parks & Recreation/Parks & Recreation_ Season II
 song_begin: 00 Shotgun.mp3
 Time: 28
@@ -8833,10 +8833,10 @@ song_end
 end: Parks & Recreation/Parks & Recreation_ Season II
 end: Parks & Recreation
 directory: Paul McCartney
-mtime: 1411550442
+mtime: 1411381329
 begin: Paul McCartney
 directory: Back In the U_S_ (Live 2002)
-mtime: 1411552336
+mtime: 1411383907
 begin: Paul McCartney/Back In the U_S_ (Live 2002)
 song_begin: 1-10 Blackbird.mp3
 Time: 150
@@ -8852,7 +8852,7 @@ mtime: 1391563605
 song_end
 end: Paul McCartney/Back In the U_S_ (Live 2002)
 directory: Wingspan_ Hits and History
-mtime: 1411553920
+mtime: 1411397110
 begin: Paul McCartney/Wingspan_ Hits and History
 song_begin: 2-04 Maybe I'm Amazed.mp3
 Time: 231
@@ -8869,10 +8869,10 @@ song_end
 end: Paul McCartney/Wingspan_ Hits and History
 end: Paul McCartney
 directory: Plain White T's
-mtime: 1411550441
+mtime: 1411381251
 begin: Plain White T's
 directory: All That We Needed
-mtime: 1411555838
+mtime: 1411400053
 begin: Plain White T's/All That We Needed
 song_begin: 13 Hey There Delilah(1).mp3
 Time: 233
@@ -8900,7 +8900,7 @@ mtime: 1391564104
 song_end
 end: Plain White T's/All That We Needed
 directory: Big Bad World
-mtime: 1411554382
+mtime: 1411397772
 begin: Plain White T's/Big Bad World
 song_begin: 05 1_ 2_ 3_ 4(1).mp3
 Time: 198
@@ -8928,7 +8928,7 @@ mtime: 1391564035
 song_end
 end: Plain White T's/Big Bad World
 directory: Wonders Of The Younger
-mtime: 1411554492
+mtime: 1411397912
 begin: Plain White T's/Wonders Of The Younger
 song_begin: 04 Rhythm Of Love(1).mp3
 Time: 200
@@ -8957,10 +8957,10 @@ song_end
 end: Plain White T's/Wonders Of The Younger
 end: Plain White T's
 directory: Queen
-mtime: 1411550440
+mtime: 1411381207
 begin: Queen
 directory: Greatest Hits III
-mtime: 1411563868
+mtime: 1411403206
 begin: Queen/Greatest Hits III
 song_begin: 01 The Show Must Go On (Queen _ E(1).mp3
 Time: 275
@@ -9481,7 +9481,7 @@ mtime: 1396834170
 song_end
 end: Queen/Greatest Hits III
 directory: Greatest Hits_ CD 1
-mtime: 1411563961
+mtime: 1411411623
 begin: Queen/Greatest Hits_ CD 1
 song_begin: 01 Bohemian Rhapsody(1).mp3
 Time: 355
@@ -9914,7 +9914,7 @@ mtime: 1396834041
 song_end
 end: Queen/Greatest Hits_ CD 1
 directory: Greatest Hits_ CD 2
-mtime: 1411564063
+mtime: 1411403464
 begin: Queen/Greatest Hits_ CD 2
 song_begin: 01 A Kind Of Magic(1).mp3
 Time: 264
@@ -10369,7 +10369,7 @@ mtime: 1396834153
 song_end
 end: Queen/Greatest Hits_ CD 2
 directory: Queen - Greatest Hits I
-mtime: 1411563977
+mtime: 1411411518
 begin: Queen/Queen - Greatest Hits I
 song_begin: 01 - Bohemian Rhapsody.mp3
 Time: 358
@@ -10543,7 +10543,7 @@ mtime: 1396737260
 song_end
 end: Queen/Queen - Greatest Hits I
 directory: Queen - Greatest Hits II
-mtime: 1411564034
+mtime: 1411403437
 begin: Queen/Queen - Greatest Hits II
 song_begin: 01 - A Kind Of Magic.mp3
 Time: 263
@@ -10717,7 +10717,7 @@ mtime: 1396737258
 song_end
 end: Queen/Queen - Greatest Hits II
 directory: Queen - Greatest Hits III
-mtime: 1411563815
+mtime: 1411403155
 begin: Queen/Queen - Greatest Hits III
 song_begin: 01 - The Show Must Go On (Queen + Elton John).mp3
 Time: 275
@@ -10892,10 +10892,10 @@ song_end
 end: Queen/Queen - Greatest Hits III
 end: Queen
 directory: Queen feat_ Armageddon
-mtime: 1411550441
+mtime: 1411381246
 begin: Queen feat_ Armageddon
 directory: Sucker Punch
-mtime: 1411552362
+mtime: 1411383924
 begin: Queen feat_ Armageddon/Sucker Punch
 song_begin: 04 I Want It All_We Will Rock You.mp3
 Time: 307
@@ -10910,10 +10910,10 @@ song_end
 end: Queen feat_ Armageddon/Sucker Punch
 end: Queen feat_ Armageddon
 directory: Quietdrive
-mtime: 1411550442
+mtime: 1411381251
 begin: Quietdrive
 directory: When All That's Left Is You
-mtime: 1411554053
+mtime: 1411397297
 begin: Quietdrive/When All That's Left Is You
 song_begin: 09 Time After Time(1).mp3
 Time: 185
@@ -10942,10 +10942,10 @@ song_end
 end: Quietdrive/When All That's Left Is You
 end: Quietdrive
 directory: Rage Against the Machine
-mtime: 1411550443
+mtime: 1411381396
 begin: Rage Against the Machine
 directory: Renegades
-mtime: 1411563779
+mtime: 1411403091
 begin: Rage Against the Machine/Renegades
 song_begin: 12 Maggie's Farm.mp3
 Time: 394
@@ -10962,7 +10962,7 @@ mtime: 1391562001
 song_end
 end: Rage Against the Machine/Renegades
 directory: The Battle of Los Angeles
-mtime: 1411553375
+mtime: 1411396188
 begin: Rage Against the Machine/The Battle of Los Angeles
 song_begin: 01 Testify.mp3
 Time: 210
@@ -10991,27 +10991,28 @@ song_end
 end: Rage Against the Machine/The Battle of Los Angeles
 end: Rage Against the Machine
 directory: Rage_Against_The_Machine_-_30_
-mtime: 1411550443
+mtime: 1412300732
 begin: Rage_Against_The_Machine_-_30_
-directory: RATM_(Best_Of)_-_CD2
-mtime: 1411554085
-begin: Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2
+directory: Best Of
+mtime: 1412300742
+begin: Rage_Against_The_Machine_-_30_/Best Of
 song_begin: 02 Killing In The Name.mp3
 Time: 316
-Artist: Rage_Against_The_Machine_-_30_For_A_Revolution_(2CD_Best_Of)-2002-LUV
+Artist: Rage Against the Machine
 Title: Killing In The Name
-Album: RATM_(Best_Of)_-_CD2
-Track: 2/0
+Album: RATM (Best Of)
+Track: 02/00
+Date: 2001
 Disc: 0/0
 mtime: 1391562790
 song_end
-end: Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2
+end: Rage_Against_The_Machine_-_30_/Best Of
 end: Rage_Against_The_Machine_-_30_
 directory: Red Hot Chili Peppers
-mtime: 1411550442
+mtime: 1411381326
 begin: Red Hot Chili Peppers
 directory: Dani California - EP
-mtime: 1411555572
+mtime: 1411399680
 begin: Red Hot Chili Peppers/Dani California - EP
 song_begin: 01 Dani California.mp3
 Time: 283
@@ -11064,10 +11065,10 @@ song_end
 end: Red Hot Chili Peppers/Dani California - EP
 end: Red Hot Chili Peppers
 directory: Rise Against
-mtime: 1411550442
+mtime: 1411381254
 begin: Rise Against
 directory: The Sufferer & the Witness
-mtime: 1411553846
+mtime: 1411411487
 begin: Rise Against/The Sufferer & the Witness
 song_begin: 01 Intro _ Chamber the Cartridge.mp3
 Time: 215
@@ -11254,10 +11255,10 @@ song_end
 end: Rise Against/The Sufferer & the Witness
 end: Rise Against
 directory: Rolling Stones
-mtime: 1411550441
+mtime: 1411381224
 begin: Rolling Stones
 directory: Greatest Hits  CD1
-mtime: 1411563990
+mtime: 1411403398
 begin: Rolling Stones/Greatest Hits  CD1
 song_begin: 05 Mother's Little Helper.mp3
 Time: 170
@@ -11322,10 +11323,10 @@ song_end
 end: Rolling Stones/Greatest Hits  CD1
 end: Rolling Stones
 directory: Rush
-mtime: 1411550441
+mtime: 1411381246
 begin: Rush
 directory: Chronicles
-mtime: 1411563219
+mtime: 1411401995
 begin: Rush/Chronicles
 song_begin: 2-01 Tom Sawyer.mp3
 Time: 275
@@ -11353,7 +11354,7 @@ mtime: 1408909342
 song_end
 end: Rush/Chronicles
 directory: Spirit Of Radio_ Greatest Hits
-mtime: 1411553526
+mtime: 1411396492
 begin: Rush/Spirit Of Radio_ Greatest Hits
 song_begin: 04 Closer To The Heart.mp3
 Time: 173
@@ -11370,10 +11371,10 @@ song_end
 end: Rush/Spirit Of Radio_ Greatest Hits
 end: Rush
 directory: SINSHRIFT
-mtime: 1411550438
+mtime: 1411381068
 begin: SINSHRIFT
 directory: SINSHRIFT
-mtime: 1411551714
+mtime: 1411382825
 begin: SINSHRIFT/SINSHRIFT
 song_begin: 01 Infectious.mp3
 Time: 219
@@ -11408,10 +11409,10 @@ song_end
 end: SINSHRIFT/SINSHRIFT
 end: SINSHRIFT
 directory: SR-71
-mtime: 1411550439
+mtime: 1411381069
 begin: SR-71
 directory: Here We Go Again
-mtime: 1411551642
+mtime: 1411382735
 begin: SR-71/Here We Go Again
 song_begin: 04 1985(1).mp3
 Time: 219
@@ -11435,10 +11436,10 @@ song_end
 end: SR-71/Here We Go Again
 end: SR-71
 directory: Santana
-mtime: 1411550441
+mtime: 1411381251
 begin: Santana
 directory: Guitar Heaven_ The Greatest Gu
-mtime: 1411563494
+mtime: 1411402756
 begin: Santana/Guitar Heaven_ The Greatest Gu
 song_begin: 04 While My Guitar Gently Weeps (.mp3
 Time: 362
@@ -11469,10 +11470,10 @@ song_end
 end: Santana/Guitar Heaven_ The Greatest Gu
 end: Santana
 directory: Saron Gas
-mtime: 1411550437
+mtime: 1411381065
 begin: Saron Gas
 directory: Fragile
-mtime: 1411551829
+mtime: 1411382988
 begin: Saron Gas/Fragile
 song_begin: 02 Gasoline.mp3
 Time: 162
@@ -11512,10 +11513,10 @@ song_end
 end: Saron Gas/Fragile
 end: Saron Gas
 directory: Saving Abel
-mtime: 1411550439
+mtime: 1411381069
 begin: Saving Abel
 directory: Saving Abel
-mtime: 1411553716
+mtime: 1411396768
 begin: Saving Abel/Saving Abel
 song_begin: 02 Addicted.mp3
 Time: 223
@@ -11532,10 +11533,10 @@ song_end
 end: Saving Abel/Saving Abel
 end: Saving Abel
 directory: Secondhand Serenade
-mtime: 1411550442
+mtime: 1411381254
 begin: Secondhand Serenade
 directory: A Twist In My Story
-mtime: 1411556838
+mtime: 1411401470
 begin: Secondhand Serenade/A Twist In My Story
 song_begin: 01 - Like a Knife.mp3
 Time: 268
@@ -11795,10 +11796,10 @@ song_end
 end: Secondhand Serenade/A Twist In My Story
 end: Secondhand Serenade
 directory: Seether
-mtime: 1411551814
+mtime: 1411382969
 begin: Seether
 directory: Country Song - Single
-mtime: 1411553889
+mtime: 1411397046
 begin: Seether/Country Song - Single
 song_begin: 01 Country Song.mp3
 Time: 229
@@ -11815,7 +11816,7 @@ mtime: 1391562471
 song_end
 end: Seether/Country Song - Single
 directory: Disclaimer II
-mtime: 1411556451
+mtime: 1411411614
 begin: Seether/Disclaimer II
 song_begin: 01 Gasoline(1).mp3
 Time: 169
@@ -12378,7 +12379,7 @@ mtime: 1391563172
 song_end
 end: Seether/Disclaimer II
 directory: Finding Beauty In Negative Spa
-mtime: 1411563921
+mtime: 1411411548
 begin: Seether/Finding Beauty In Negative Spa
 song_begin: 01 Like Suicide.mp3
 Time: 255
@@ -12563,7 +12564,7 @@ mtime: 1391563596
 song_end
 end: Seether/Finding Beauty In Negative Spa
 directory: Holding Onto Strings Better Le
-mtime: 1411554719
+mtime: 1411398232
 begin: Seether/Holding Onto Strings Better Le
 song_begin: 01 Fur Cue.mp3
 Time: 228
@@ -12710,7 +12711,7 @@ mtime: 1391562669
 song_end
 end: Seether/Holding Onto Strings Better Le
 directory: Karma & Effect
-mtime: 1411555084
+mtime: 1411398934
 begin: Seether/Karma & Effect
 song_begin: 01 Because Of Me(1).mp3
 Time: 216
@@ -12740,7 +12741,7 @@ mtime: 1391562878
 song_end
 end: Seether/Karma & Effect
 directory: Karma and Effect
-mtime: 1411557019
+mtime: 1411401707
 begin: Seether/Karma and Effect
 song_begin: 02 Remedy(1).mp3
 Time: 207
@@ -12796,7 +12797,7 @@ mtime: 1391562619
 song_end
 end: Seether/Karma and Effect
 directory: NCIS (The Official TV Soundtra
-mtime: 1411551854
+mtime: 1411383010
 begin: Seether/NCIS (The Official TV Soundtra
 song_begin: 2-02 No Shelter.mp3
 Time: 248
@@ -12810,7 +12811,7 @@ mtime: 1391563096
 song_end
 end: Seether/NCIS (The Official TV Soundtra
 directory: One Cold Night
-mtime: 1411556239
+mtime: 1411400529
 begin: Seether/One Cold Night
 song_begin: 08 Fine Again (Live).mp3
 Time: 305
@@ -12827,7 +12828,7 @@ mtime: 1391562523
 song_end
 end: Seether/One Cold Night
 directory: iTunes Originals - Seether
-mtime: 1411554919
+mtime: 1411398672
 begin: Seether/iTunes Originals - Seether
 song_begin: 04 Fine Again (iTunes Originals V.mp3
 Time: 265
@@ -12855,10 +12856,10 @@ mtime: 1391563812
 song_end
 end: Seether
 directory: Shinedown
-mtime: 1411550442
+mtime: 1411381278
 begin: Shinedown
 directory: Leave a Whisper
-mtime: 1411554397
+mtime: 1411397804
 begin: Shinedown/Leave a Whisper
 song_begin: 12 45(1).mp3
 Time: 250
@@ -12886,7 +12887,7 @@ mtime: 1391562973
 song_end
 end: Shinedown/Leave a Whisper
 directory: Somewhere in the Stratosphere
-mtime: 1411552112
+mtime: 1411383468
 begin: Shinedown/Somewhere in the Stratosphere
 song_begin: 00 The Crow & the Butterfly (Live.mp3
 Time: 277
@@ -12908,7 +12909,7 @@ mtime: 1397605408
 song_end
 end: Shinedown/Somewhere in the Stratosphere
 directory: The Sound of Madness
-mtime: 1411554024
+mtime: 1411397241
 begin: Shinedown/The Sound of Madness
 song_begin: 02 Sound of Madness.mp3
 Time: 234
@@ -12924,7 +12925,7 @@ mtime: 1391562992
 song_end
 end: Shinedown/The Sound of Madness
 directory: The Sound of Madness (Bonus Tr
-mtime: 1411554738
+mtime: 1411398256
 begin: Shinedown/The Sound of Madness (Bonus Tr
 song_begin: 01 Devour(1).mp3
 Time: 230
@@ -13000,7 +13001,7 @@ mtime: 1391564070
 song_end
 end: Shinedown/The Sound of Madness (Bonus Tr
 directory: Us and Them
-mtime: 1411553431
+mtime: 1411411436
 begin: Shinedown/Us and Them
 song_begin: 02 Heroes.mp3
 Time: 204
@@ -13040,7 +13041,7 @@ mtime: 1391562405
 song_end
 end: Shinedown/Us and Them
 directory: iTunes Session
-mtime: 1411554476
+mtime: 1411397902
 begin: Shinedown/iTunes Session
 song_begin: 07 What a Shame (iTunes Session).mp3
 Time: 252
@@ -13057,10 +13058,24 @@ song_end
 end: Shinedown/iTunes Session
 end: Shinedown
 directory: Simon & Garfunkel
-mtime: 1411943675
+mtime: 1412300732
 begin: Simon & Garfunkel
+directory: Sounds of Silence
+mtime: 1412300742
+begin: Simon & Garfunkel/Sounds of Silence
+song_begin: The Sounds of Silence.mp3
+Time: 184
+Artist: Simon & Garfunkel
+Title: The Sounds of Silence
+Album: Sounds of Silence
+Track: 08/08
+Date: 1965
+Genre: (80)
+mtime: 1412283997
+song_end
+end: Simon & Garfunkel/Sounds of Silence
 directory: Wednesday Morning, 3AM
-mtime: 1411944490
+mtime: 1411964295
 begin: Simon & Garfunkel/Wednesday Morning, 3AM
 song_begin: The Sound of Silence.mp3
 Time: 185
@@ -13073,10 +13088,10 @@ song_end
 end: Simon & Garfunkel/Wednesday Morning, 3AM
 end: Simon & Garfunkel
 directory: Simple Plan
-mtime: 1411550441
+mtime: 1411381246
 begin: Simple Plan
 directory: Simple Plan (Explicit)
-mtime: 1411555471
+mtime: 1411399531
 begin: Simple Plan/Simple Plan (Explicit)
 song_begin: 05 Save You(1).mp3
 Time: 226
@@ -13105,10 +13120,10 @@ song_end
 end: Simple Plan/Simple Plan (Explicit)
 end: Simple Plan
 directory: Skillet
-mtime: 1411550440
+mtime: 1411381115
 begin: Skillet
 directory: Awake (Deluxe Version)
-mtime: 1411553362
+mtime: 1411396140
 begin: Skillet/Awake (Deluxe Version)
 song_begin: 02 Monster(1).mp3
 Time: 178
@@ -13172,7 +13187,7 @@ mtime: 1391563003
 song_end
 end: Skillet/Awake (Deluxe Version)
 directory: Comatose
-mtime: 1411555697
+mtime: 1411399833
 begin: Skillet/Comatose
 song_begin: 05 Comatose(1).mp3
 Time: 230
@@ -13201,10 +13216,10 @@ song_end
 end: Skillet/Comatose
 end: Skillet
 directory: Skylar Grey
-mtime: 1411550439
+mtime: 1411381069
 begin: Skylar Grey
 directory: Coming Home
-mtime: 1411551187
+mtime: 1411382088
 begin: Skylar Grey/Coming Home
 song_begin: Coming Home, Pt. II.mp3
 Time: 167
@@ -13217,7 +13232,7 @@ mtime: 1399434776
 song_end
 end: Skylar Grey/Coming Home
 directory: None
-mtime: 1411551515
+mtime: 1411382573
 begin: Skylar Grey/None
 song_begin: 01 Coming Home_ Pt_ II.mp3
 Time: 165
@@ -13232,10 +13247,10 @@ song_end
 end: Skylar Grey/None
 end: Skylar Grey
 directory: System of a Down
-mtime: 1411550443
+mtime: 1411381334
 begin: System of a Down
 directory: Toxicity (Bonus Track Version)
-mtime: 1411554146
+mtime: 1411397446
 begin: System of a Down/Toxicity (Bonus Track Version)
 song_begin: 14 Aerials(1).mp3
 Time: 235
@@ -13279,10 +13294,10 @@ song_end
 end: System of a Down/Toxicity (Bonus Track Version)
 end: System of a Down
 directory: Tal Bachman
-mtime: 1411550439
+mtime: 1411381069
 begin: Tal Bachman
 directory: Tal Bachman
-mtime: 1411555381
+mtime: 1411399391
 begin: Tal Bachman/Tal Bachman
 song_begin: 02 She's so High(1).mp3
 Time: 225
@@ -13313,10 +13328,10 @@ song_end
 end: Tal Bachman/Tal Bachman
 end: Tal Bachman
 directory: Tears for Fears
-mtime: 1411550443
+mtime: 1411381610
 begin: Tears for Fears
 directory: Tears For Fears -Tears Roll Down Greatest Hits '82-'92  (1992) 320 vtwin88cube
-mtime: 1411554872
+mtime: 1411398603
 begin: Tears for Fears/Tears For Fears -Tears Roll Down Greatest Hits '82-'92  (1992) 320 vtwin88cube
 song_begin: 06.Mad World.mp3
 Time: 209
@@ -13332,10 +13347,10 @@ song_end
 end: Tears for Fears/Tears For Fears -Tears Roll Down Greatest Hits '82-'92  (1992) 320 vtwin88cube
 end: Tears for Fears
 directory: Tears for Fears (Case Conflict)
-mtime: 1411550443
+mtime: 1411381534
 begin: Tears for Fears (Case Conflict)
 directory: Tears Roll Down_ Greatest Hits
-mtime: 1411554862
+mtime: 1411398603
 begin: Tears for Fears (Case Conflict)/Tears Roll Down_ Greatest Hits
 song_begin: 06 Mad World (1).mp3
 Time: 209
@@ -13364,10 +13379,10 @@ song_end
 end: Tears for Fears (Case Conflict)/Tears Roll Down_ Greatest Hits
 end: Tears for Fears (Case Conflict)
 directory: Tennessee Ernie Ford
-mtime: 1411550443
+mtime: 1411381407
 begin: Tennessee Ernie Ford
 directory: Sings Civil War Songs of The S
-mtime: 1411552176
+mtime: 1411383572
 begin: Tennessee Ernie Ford/Sings Civil War Songs of The S
 song_begin: 12 Dixie(1).mp3
 Time: 141
@@ -13398,10 +13413,10 @@ song_end
 end: Tennessee Ernie Ford/Sings Civil War Songs of The S
 end: Tennessee Ernie Ford
 directory: The Academy Is___
-mtime: 1411550443
+mtime: 1411381334
 begin: The Academy Is___
 directory: Fast Times At Barrington High
-mtime: 1411554966
+mtime: 1411398741
 begin: The Academy Is___/Fast Times At Barrington High
 song_begin: 01 About A Girl(1).mp3
 Time: 210
@@ -13430,10 +13445,10 @@ song_end
 end: The Academy Is___/Fast Times At Barrington High
 end: The Academy Is___
 directory: The All-American Rejects
-mtime: 1411550443
+mtime: 1411381397
 begin: The All-American Rejects
 directory: Move Along
-mtime: 1411554237
+mtime: 1411397579
 begin: The All-American Rejects/Move Along
 song_begin: 01 Dirty Little Secret(1).mp3
 Time: 194
@@ -13461,7 +13476,7 @@ mtime: 1391562035
 song_end
 end: The All-American Rejects/Move Along
 directory: The All-American Rejects
-mtime: 1411553977
+mtime: 1411397194
 begin: The All-American Rejects/The All-American Rejects
 song_begin: 03 Swing_ Swing(1).mp3
 Time: 233
@@ -13489,7 +13504,7 @@ mtime: 1395188076
 song_end
 end: The All-American Rejects/The All-American Rejects
 directory: When The World Comes Down
-mtime: 1411555023
+mtime: 1411398860
 begin: The All-American Rejects/When The World Comes Down
 song_begin: 04 Gives You Hell(1).mp3
 Time: 213
@@ -13518,10 +13533,10 @@ song_end
 end: The All-American Rejects/When The World Comes Down
 end: The All-American Rejects
 directory: The Beatles
-mtime: 1411550443
+mtime: 1411381343
 begin: The Beatles
 directory: 1
-mtime: 1411563977
+mtime: 1411403356
 begin: The Beatles/1
 song_begin: 01 Love Me Do.mp3
 Time: 141
@@ -13822,7 +13837,7 @@ mtime: 1396834337
 song_end
 end: The Beatles/1
 directory: Greatest Hits 2011 Remaster [Bubanee]
-mtime: 1411563990
+mtime: 1411411606
 begin: The Beatles/Greatest Hits 2011 Remaster [Bubanee]
 song_begin: 01 - Love Me Do.mp3
 Time: 141
@@ -14099,7 +14114,7 @@ mtime: 1396765249
 playlist_end
 end: The Beatles/Greatest Hits 2011 Remaster [Bubanee]
 directory: Help!
-mtime: 1411551902
+mtime: 1411383076
 begin: The Beatles/Help!
 song_begin: 5-13 Yesterday(1).mp3
 Time: 126
@@ -14127,7 +14142,7 @@ mtime: 1391560899
 song_end
 end: The Beatles/Help!
 directory: Let It Be
-mtime: 1411554317
+mtime: 1411397691
 begin: The Beatles/Let It Be
 song_begin: 06 Let It Be.mp3
 Time: 243
@@ -14144,7 +14159,7 @@ mtime: 1391563210
 song_end
 end: The Beatles/Let It Be
 directory: Sgt_ Pepper's Lonely Hearts Cl
-mtime: 1411553297
+mtime: 1411395995
 begin: The Beatles/Sgt_ Pepper's Lonely Hearts Cl
 song_begin: 8-03 Lucy In the Sky With Diamonds.mp3
 Time: 209
@@ -14162,10 +14177,10 @@ song_end
 end: The Beatles/Sgt_ Pepper's Lonely Hearts Cl
 end: The Beatles
 directory: The Bollox
-mtime: 1411550439
+mtime: 1411381069
 begin: The Bollox
 directory: The Bollox
-mtime: 1411555265
+mtime: 1411411623
 begin: The Bollox/The Bollox
 song_begin: 01 Shenanigans(1).mp3
 Time: 43
@@ -14446,10 +14461,10 @@ song_end
 end: The Bollox/The Bollox
 end: The Bollox
 directory: The Cab
-mtime: 1411550439
+mtime: 1411381070
 begin: The Cab
 directory: Symphony Soldier
-mtime: 1411554428
+mtime: 1411397845
 begin: The Cab/Symphony Soldier
 song_begin: 03 Bad(1).mp3
 Time: 200
@@ -14478,10 +14493,10 @@ song_end
 end: The Cab/Symphony Soldier
 end: The Cab
 directory: The Click Five
-mtime: 1411550443
+mtime: 1411381332
 begin: The Click Five
 directory: Greetings From Imrie House (U_
-mtime: 1411554897
+mtime: 1411398655
 begin: The Click Five/Greetings From Imrie House (U_
 song_begin: 06 Angel To You (Devil To Me)(1).mp3
 Time: 210
@@ -14509,7 +14524,7 @@ mtime: 1395188881
 song_end
 end: The Click Five/Greetings From Imrie House (U_
 directory: Modern Minds and Pastimes (U_S
-mtime: 1411554558
+mtime: 1411398009
 begin: The Click Five/Modern Minds and Pastimes (U_S
 song_begin: 01 Flipside(1).mp3
 Time: 188
@@ -14562,10 +14577,10 @@ song_end
 end: The Click Five/Modern Minds and Pastimes (U_S
 end: The Click Five
 directory: The Doobie Brothers
-mtime: 1411550442
+mtime: 1411381251
 begin: The Doobie Brothers
 directory: The Captain and Me
-mtime: 1411551844
+mtime: 1411382998
 begin: The Doobie Brothers/The Captain and Me
 song_begin: 03 China Grove(1).mp3
 Time: 194
@@ -14594,10 +14609,10 @@ song_end
 end: The Doobie Brothers/The Captain and Me
 end: The Doobie Brothers
 directory: The Dubliners
-mtime: 1411550442
+mtime: 1411381254
 begin: The Dubliners
 directory: The Best of the Dubliners
-mtime: 1411555809
+mtime: 1411411584
 begin: The Dubliners/The Best of the Dubliners
 song_begin: 01 Muirsheen Durkin'.mp3
 Time: 152
@@ -14866,10 +14881,10 @@ song_end
 end: The Dubliners/The Best of the Dubliners
 end: The Dubliners
 directory: The Fenians
-mtime: 1411550442
+mtime: 1411381326
 begin: The Fenians
 directory: The Best of the Fenians - Coul
-mtime: 1411553818
+mtime: 1411396949
 begin: The Fenians/The Best of the Fenians - Coul
 song_begin: 16 Whiskey In the Jar 1992.mp3
 Time: 227
@@ -14886,10 +14901,10 @@ song_end
 end: The Fenians/The Best of the Fenians - Coul
 end: The Fenians
 directory: The Offspring
-mtime: 1411550442
+mtime: 1411381329
 begin: The Offspring
 directory: Rise and Fall_ Rage and Grace
-mtime: 1411552726
+mtime: 1411385711
 begin: The Offspring/Rise and Fall_ Rage and Grace
 song_begin: 03 You're Gonna Go Far_ Kid.mp3
 Time: 178
@@ -14907,10 +14922,10 @@ song_end
 end: The Offspring/Rise and Fall_ Rage and Grace
 end: The Offspring
 directory: The Postal Service
-mtime: 1411550441
+mtime: 1411381249
 begin: The Postal Service
 directory: Such Great Heights
-mtime: 1411557035
+mtime: 1411401726
 begin: The Postal Service/Such Great Heights
 song_begin: 01 Such Great Heights.mp3
 Time: 267
@@ -14927,10 +14942,10 @@ song_end
 end: The Postal Service/Such Great Heights
 end: The Postal Service
 directory: The Red Army Choir
-mtime: 1411550443
+mtime: 1411381343
 begin: The Red Army Choir
 directory: The Red Army Choir_ Live In Pa
-mtime: 1411551656
+mtime: 1411382745
 begin: The Red Army Choir/The Red Army Choir_ Live In Pa
 song_begin: 02 Russian National Anthem(1).mp3
 Time: 86
@@ -14955,10 +14970,10 @@ song_end
 end: The Red Army Choir/The Red Army Choir_ Live In Pa
 end: The Red Army Choir
 directory: The Rolling Stones
-mtime: 1411550441
+mtime: 1411381249
 begin: The Rolling Stones
 directory: Beggars Banquet
-mtime: 1411563650
+mtime: 1411402939
 begin: The Rolling Stones/Beggars Banquet
 song_begin: 01 Sympathy for the Devil.mp3
 Time: 378
@@ -14975,10 +14990,10 @@ mtime: 1391561624
 song_end
 end: The Rolling Stones/Beggars Banquet
 directory: Greatest Hits
-mtime: 1411550441
+mtime: 1411381249
 begin: The Rolling Stones/Greatest Hits
 directory: CD 1
-mtime: 1411563050
+mtime: 1411401769
 begin: The Rolling Stones/Greatest Hits/CD 1
 song_begin: 01. (I Can't Get No) Satisfaction.mp3
 Time: 226
@@ -15214,7 +15229,7 @@ mtime: 1398401788
 song_end
 end: The Rolling Stones/Greatest Hits/CD 1
 directory: CD 2
-mtime: 1411554558
+mtime: 1411411548
 begin: The Rolling Stones/Greatest Hits/CD 2
 song_begin: 01- Street Fighting Man.mp3
 Time: 196
@@ -15427,7 +15442,7 @@ mtime: 1398401790
 song_end
 end: The Rolling Stones/Greatest Hits/CD 2
 directory: CD 3
-mtime: 1411554525
+mtime: 1411411606
 begin: The Rolling Stones/Greatest Hits/CD 3
 song_begin: 01 - Miss You.mp3
 Time: 289
@@ -15641,7 +15656,7 @@ song_end
 end: The Rolling Stones/Greatest Hits/CD 3
 end: The Rolling Stones/Greatest Hits
 directory: Greatest Hits  CD1
-mtime: 1411554476
+mtime: 1411397911
 begin: The Rolling Stones/Greatest Hits  CD1
 song_begin: 01 (I Can't Get No) Satisfaction.mp3
 Time: 226
@@ -15839,7 +15854,7 @@ mtime: 1408907532
 song_end
 end: The Rolling Stones/Greatest Hits  CD1
 directory: Greatest Hits  CD3
-mtime: 1411563035
+mtime: 1411411496
 begin: The Rolling Stones/Greatest Hits  CD3
 song_begin: 01 Miss You.mp3
 Time: 289
@@ -16071,7 +16086,7 @@ mtime: 1408907653
 song_end
 end: The Rolling Stones/Greatest Hits  CD3
 directory: Greatest Hits CD2
-mtime: 1411556633
+mtime: 1411411565
 begin: The Rolling Stones/Greatest Hits CD2
 song_begin: 01 Street Fighting Man.mp3
 Time: 196
@@ -16304,10 +16319,10 @@ song_end
 end: The Rolling Stones/Greatest Hits CD2
 end: The Rolling Stones
 directory: The Stubby Shillelaghs
-mtime: 1411550442
+mtime: 1411381254
 begin: The Stubby Shillelaghs
 directory: Whiskey Business
-mtime: 1411553571
+mtime: 1411396560
 begin: The Stubby Shillelaghs/Whiskey Business
 song_begin: 05 Club 2 Da Pub(1).mp3
 Time: 174
@@ -16336,10 +16351,10 @@ song_end
 end: The Stubby Shillelaghs/Whiskey Business
 end: The Stubby Shillelaghs
 directory: The Tossers
-mtime: 1411550441
+mtime: 1411381248
 begin: The Tossers
 directory: On a Fine Spring Morning
-mtime: 1411552469
+mtime: 1411385291
 begin: The Tossers/On a Fine Spring Morning
 song_begin: 04 The Rocky Road to Dublin.mp3
 Time: 161
@@ -16356,10 +16371,10 @@ song_end
 end: The Tossers/On a Fine Spring Morning
 end: The Tossers
 directory: The Verve
-mtime: 1411550439
+mtime: 1411381069
 begin: The Verve
 directory: Urban Hymns
-mtime: 1411563400
+mtime: 1411402606
 begin: The Verve/Urban Hymns
 song_begin: 01 Bitter Sweet Symphony.mp3
 Time: 358
@@ -16376,7 +16391,7 @@ song_end
 end: The Verve/Urban Hymns
 end: The Verve
 directory: The Who
-mtime: 1412146731
+mtime: 1412147474
 begin: The Who
 song_begin: The Who - Behind Blue Eyes.mp3
 Time: 223
@@ -16440,10 +16455,10 @@ mtime: 1412146662
 song_end
 end: The Who
 directory: The Young Dubliners
-mtime: 1411550443
+mtime: 1411381397
 begin: The Young Dubliners
 directory: With All Due Respect - The Iri
-mtime: 1411555507
+mtime: 1411399598
 begin: The Young Dubliners/With All Due Respect - The Iri
 song_begin: 02 If I Should Fall from Grace Wi.mp3
 Time: 145
@@ -16496,10 +16511,10 @@ song_end
 end: The Young Dubliners/With All Due Respect - The Iri
 end: The Young Dubliners
 directory: Theory of a Deadman
-mtime: 1411550441
+mtime: 1411381249
 begin: Theory of a Deadman
 directory: Scars & Souvenirs
-mtime: 1411553267
+mtime: 1411395953
 begin: Theory of a Deadman/Scars & Souvenirs
 song_begin: 08 Bad Girlfriend(1).mp3
 Time: 206
@@ -16528,10 +16543,10 @@ song_end
 end: Theory of a Deadman/Scars & Souvenirs
 end: Theory of a Deadman
 directory: Three Days Grace
-mtime: 1411550443
+mtime: 1411381334
 begin: Three Days Grace
 directory: Life Starts Now
-mtime: 1411554237
+mtime: 1411397592
 begin: Three Days Grace/Life Starts Now
 song_begin: 02 Break.mp3
 Time: 193
@@ -16587,7 +16602,7 @@ mtime: 1391561527
 song_end
 end: Three Days Grace/Life Starts Now
 directory: One-X
-mtime: 1411555572
+mtime: 1411399680
 begin: Three Days Grace/One-X
 song_begin: 01 It's All Over(1).mp3
 Time: 249
@@ -16786,7 +16801,7 @@ mtime: 1391560950
 song_end
 end: Three Days Grace/One-X
 directory: Three Days Grace (Deluxe Versi
-mtime: 1411553920
+mtime: 1411397110
 begin: Three Days Grace/Three Days Grace (Deluxe Versi
 song_begin: 03 I Hate Everything About You.mp3
 Time: 231
@@ -16804,10 +16819,10 @@ song_end
 end: Three Days Grace/Three Days Grace (Deluxe Versi
 end: Three Days Grace
 directory: Tokio Hotel
-mtime: 1411550439
+mtime: 1411381069
 begin: Tokio Hotel
 directory: Humanoid
-mtime: 1411556648
+mtime: 1411401192
 begin: Tokio Hotel/Humanoid
 song_begin: 01 Noise(1).mp3
 Time: 233
@@ -17100,10 +17115,10 @@ song_end
 end: Tokio Hotel/Humanoid
 end: Tokio Hotel
 directory: Train
-mtime: 1411550440
+mtime: 1411381208
 begin: Train
 directory: Hey_ Soul Sister - Single
-mtime: 1411553526
+mtime: 1411396492
 begin: Train/Hey_ Soul Sister - Single
 song_begin: 01 Hey_ Soul Sister(1).mp3
 Time: 217
@@ -17133,7 +17148,7 @@ mtime: 1391562674
 song_end
 end: Train/Hey_ Soul Sister - Single
 directory: My Private Nation
-mtime: 1411554237
+mtime: 1411397579
 begin: Train/My Private Nation
 song_begin: 01 Calling All Angels.mp3
 Time: 242
@@ -17150,10 +17165,10 @@ song_end
 end: Train/My Private Nation
 end: Train
 directory: Trivium
-mtime: 1411550438
+mtime: 1411381067
 begin: Trivium
 directory: Ascendancy
-mtime: 1411563908
+mtime: 1411403274
 begin: Trivium/Ascendancy
 song_begin: 01 The End of Everything.mp3
 Time: 81
@@ -17326,10 +17341,10 @@ song_end
 end: Trivium/Ascendancy
 end: Trivium
 directory: Various Artists
-mtime: 1411550443
+mtime: 1411381334
 begin: Various Artists
 directory: Reader's Digest Music_ Tears f
-mtime: 1411552620
+mtime: 1411385529
 begin: Various Artists/Reader's Digest Music_ Tears f
 song_begin: 13 Dead Poets Society (Ode to Joy(1).mp3
 Time: 168
@@ -17360,10 +17375,10 @@ song_end
 end: Various Artists/Reader's Digest Music_ Tears f
 end: Various Artists
 directory: VersaEmerge
-mtime: 1411550442
+mtime: 1411381251
 begin: VersaEmerge
 directory: Another Atmosphere Preview
-mtime: 1411555229
+mtime: 1411399164
 begin: VersaEmerge/Another Atmosphere Preview
 song_begin: 02 Bones(1).mp3
 Time: 219
@@ -17390,10 +17405,10 @@ song_end
 end: VersaEmerge/Another Atmosphere Preview
 end: VersaEmerge
 directory: Young Dubliners
-mtime: 1411550442
+mtime: 1411381331
 begin: Young Dubliners
 directory: St_ Patrick's Day Party Jam!
-mtime: 1411555146
+mtime: 1411399039
 begin: Young Dubliners/St_ Patrick's Day Party Jam!
 song_begin: 01 Follow Me Up to Carlow.mp3
 Time: 217
@@ -17422,7 +17437,7 @@ song_end
 end: Young Dubliners/St_ Patrick's Day Party Jam!
 end: Young Dubliners
 directory: etc
-mtime: 1412146718
+mtime: 1412147446
 begin: etc
 song_begin: 00 10_20_10 2_33 PM_m4a.mp3
 Time: 578

@@ -1435,3 +1435,22 @@ Oct 02 15:28 : player: played "Rage Against the Machine/The Battle of Los Angele
 Oct 02 15:28 : player: played "The Who/The Who - Baba O'Riley.mp3"
 Oct 02 15:28 : player: played "Rage Against the Machine/The Battle of Los Angeles/01 Testify.mp3"
 Oct 02 15:28 : player: played "The Who/The Who - Baba O'Riley.mp3"
+Oct 02 20:09 : player: played "Rage Against the Machine/The Battle of Los Angeles/01 Testify.mp3"
+Oct 02 20:09 : player: played "Fort Minor/The Rising Tied/06 Where'd You Go (Featuring Holl(1).mp3"
+Oct 02 20:12 : player: played "Fort Minor/The Rising Tied/06 Where'd You Go (Featuring Holl(1).mp3"
+Oct 02 20:12 : archive: Failed to stat /home/pete/music/Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2/02 Killing In The Name.mp3: No such file or directory
+Oct 02 20:12 : input: Unrecognized URI
+Oct 02 20:12 : archive: Failed to stat /home/pete/music/Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2/02 Killing In The Name.mp3: No such file or directory
+Oct 02 20:12 : input: Unrecognized URI
+Oct 02 20:12 : player: played "Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2/02 Killing In The Name.mp3"
+Oct 02 20:12 : archive: Failed to stat /home/pete/music/Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2/02 Killing In The Name.mp3: No such file or directory
+Oct 02 20:12 : input: Unrecognized URI
+Oct 02 20:12 : archive: Failed to stat /home/pete/music/Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2/02 Killing In The Name.mp3: No such file or directory
+Oct 02 20:12 : input: Unrecognized URI
+Oct 02 20:12 : player: played "Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2/02 Killing In The Name.mp3"
+Oct 02 20:12 : update: added Simon & Garfunkel/Sounds of Silence/The Sounds of Silence.mp3
+Oct 02 20:12 : update: removing Rage_Against_The_Machine_-_30_/RATM_(Best_Of)_-_CD2/02 Killing In The Name.mp3
+Oct 02 20:12 : update: added Rage_Against_The_Machine_-_30_/Best Of/02 Killing In The Name.mp3
+Oct 02 20:12 : player: played "Rage Against the Machine/The Battle of Los Angeles/01 Testify.mp3"
+Oct 02 21:37 : player: played "Rage_Against_The_Machine_-_30_/Best Of/02 Killing In The Name.mp3"
+Oct 02 21:41 : player: played "Shinedown/Leave a Whisper/12 45(1).mp3"

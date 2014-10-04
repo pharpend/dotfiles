@@ -18,7 +18,7 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:Source Code Pro 9
+font pango:Source Code Pro 8
 # font pango: Meslo LG S DZ 7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -166,10 +166,9 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioLowerVolume exec amixer set Master 8%-
 bindsym XF86AudioRaiseVolume exec amixer set Master 8%+
-bindsym $mod+F6 exec urxvtc -e cmus
-bindsym $mod+F7 exec cmus-remote -r
-bindsym $mod+F8 exec cmus-remote -u
-bindsym $mod+F9 exec cmus-remote -n
+bindsym $mod+F7 exec ncmpcpp prev
+bindsym $mod+F8 exec ncmpcpp toggle
+bindsym $mod+F9 exec ncmpcpp next
 bindsym $mod+F10 exec amixer set Master toggle
 bindsym $mod+F11 exec amixer set Master 8%-
 bindsym $mod+F12 exec amixer set Master 8%+
