@@ -42,19 +42,19 @@ alias roc='rlwrap ocaml'
 alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
 alias s='sudo'
+alias clrml='echo 0 > ~/.mailnum'
 
 # Portage aliases
+alias sem='sudo emerge -jav'
 alias em='emerge -jav'
-alias emudn='emerge -javuDN @world'
-alias emudn='emerge -javuDN @world'
+alias emudn='sudo emerge -javuDN @world'
 alias eq='equery'
-alias es='eselect'
+alias es='sudo eselect'
 
 esync () {
-    # Must be run as root
-    layman -S &&
-    emerge -j --sync &&
-    eix-update
+    sudo layman -S &&
+    sudo emerge -j --sync &&
+    sudo eix-update
 }
 
 # Other functions
