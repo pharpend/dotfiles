@@ -25,7 +25,7 @@ font pango: Source Code Pro 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+k kill
@@ -144,9 +144,14 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-exec (xrandr --output VGA-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
-# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+# Monitor configurations
+# H V
+# exec (xrandr --output VGA-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+# V V
+exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
+# H H
 # exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
+
 exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
@@ -227,6 +232,8 @@ exec $HOME/bin/gmail-notifyd
 exec nm-applet
 exec parcellite
 exec mpd
+exec ncmpcpp pause
+exec urxvtd
 
 # Non-panel things
 exec compton

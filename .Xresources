@@ -1,0 +1,42 @@
+URxvt*font             : xft:DejaVu Sans Mono:size=9
+URxvt*scrollBar        : false
+URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select
+URxvt.keysym.M-u       : perl:url-select:select_next
+URxvt.url-launcher     : /usr/bin/firefox
+URxvt.underlineURLs    : True
+URxvt.matcher.button   : 1 
+URxvt.keysym.M-Escape  : perl:keyboard-select:activate
+URxvt.keysym.M-c       : perl:clipboard:copy
+URxvt.keysym.M-v       : perl:clipboard:paste
+URxvt.keysym.M-C-v     : perl:clipboard:paste_escaped
+URxvt.copyCommand      : xsel -ib
+URxvt.pasteCommand     : xsel -ob
+URxvt.depth            : 32
+
+URxvt.background: [80]#111111
+URxvt.foreground: #eeeeee
+
+!black
+*color0:  #111111
+*color8:  #111111
+!red
+*color1:  #ee0000
+*color9:  #ee0000
+!green
+*color2:  #00ff00
+*color10: #00ff00
+!yellow
+*color3:  #ffff66
+*color11: #ffff66
+!blue
+*color4:  #00ccff
+*color12: #00ccff
+!magenta
+*color5:  #ff00ff
+*color13: #ff00ff
+!cyan
+*color6:  #33ffff
+*color14: #33ffff
+!white
+*color7:  #ffffff
+*color15: #ffffff

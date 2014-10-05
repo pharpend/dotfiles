@@ -43,6 +43,7 @@ alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
 alias s='sudo'
 alias clrml='echo 0 > ~/.mailnum'
+alias xrdbo='xrdb ~/.Xresources'
 
 # Portage aliases
 alias sem='sudo emerge -jav'
