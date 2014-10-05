@@ -1,12 +1,7 @@
 # -*- mode: Ruby; coding: utf-8 -*-
 
 def active_window_name
-  wt = `xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) _NET_WM_NAME`.split('"')[1]
-  if wt.length >= 30 then
-    return wt[0...30].strip.scan(/.+[^.,-_;]/)[0].strip + "..."
-  else
-    return wt
-  end
+  `xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) _NET_WM_NAME`.split('"')[1]
 end
   
 def cpu_ghz
@@ -131,9 +126,14 @@ end
 def ncmpcpp
   begin
     y = `ncmpcpp --now-playing`.strip.split[1..-1].join(" ")
-    return [{ full_text: y, color: $white }]
+    z = [{ full_text: y, color: $white }]
+    return z
   rescue Exception => e
-    STDERR.write e.backtrace.join("\n")
+    q = "\n" + Time.now.to_s + "\n" + e.backtrace.join("\n")
+    STDERR.write(q)
+    File.open(File.expand_path("~/.barinfo-errors"), "a") do |f| 
+      f.write(q)
+    end
     return []
   end
 end
