@@ -7,3 +7,4 @@
 /.mpd/mpd.db
 /.mpd/mpd.log
 /.mpd/mpdstate
+/.mpd/mpd.pid
