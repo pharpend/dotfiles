@@ -25,7 +25,8 @@ font pango:Source Code Pro 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec urxvtc
+bindsym $mod+Shift+Return exec sakura
 
 # kill focused window
 bindsym $mod+k kill
@@ -147,11 +148,6 @@ bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
 
-
-
-
-
-
 # Resize windows
 bindsym Control+$mod+h     resize shrink width  05 px 
 bindsym Control+$mod+n     resize grow   height 05 px 
@@ -179,6 +175,9 @@ exec dropbox
 exec nm-applet
 exec parcellite
 exec xfce4-power-manager
+exec mpd
+exec ncmpdcpp pause
+exec urxvtd
 
 # Non-panel things
 exec compton
@@ -187,7 +186,6 @@ exec emacs --daemon
 exec pcmanfm --daemon
 exec nitrogen --restore
 exec synclient TouchpadOff=1
-
 
 client.focused          #212121 #d090f0 #212121 #333333
 client.focused_inactive #333333 #202020 #19c1ab #484e50
