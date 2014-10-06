@@ -195,5 +195,5 @@ client.urgent           #C10004 #900000 #ffffff #900000
 focus_follows_mouse no
 
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 new_window 1pixel
