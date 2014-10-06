@@ -13,7 +13,7 @@ URxvt.copyCommand      : xsel -ib
 URxvt.pasteCommand     : xsel -ob
 URxvt.depth            : 32
 
-URxvt.background: [80]#111111
+URxvt.background: [100]#111111
 URxvt.foreground: #eeeeee
 
 !black
