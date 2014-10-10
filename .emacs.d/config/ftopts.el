@@ -134,3 +134,6 @@
 (add-hook 'bibtex-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-bibtex.el")))
+(add-hook 'tuareg-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-ml.el")))
