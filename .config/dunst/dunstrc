@@ -1,5 +1,7 @@
+# -*- mode: conf -*- 
+
 [global]
-    font = Source Code Pro Light 9
+    font = Inconsolata-dz for Powerline 9
 
     # allow a small subset of html markup:
     # <b>bold</b>
