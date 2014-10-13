@@ -158,7 +158,7 @@ bindsym Control+$mod+Down  resize grow   height 05 px
 bindsym Control+$mod+Up    resize shrink height 05 px 
 bindsym Control+$mod+Right resize grow   width  05 px 
 
-bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
+bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioLowerVolume exec amixer set Master 8%-
 bindsym XF86AudioRaiseVolume exec amixer set Master 8%+

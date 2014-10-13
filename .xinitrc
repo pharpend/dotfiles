@@ -1,2 +1,2 @@
 [[ -f ~/.Xresources ]] && xrdb -merge /home/pete/.Xresources
-exec i3
+exec ck-launch-session i3
