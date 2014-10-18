@@ -141,12 +141,14 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+grave exec dwb
+bindsym $mod+q exec firefox-bin
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Shift+c exec google-chrome-stable --incognito
+bindsym $mod+d exec dwb
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
+bindsym $mod+p exec pavucontrol
 
 # Resize windows
 bindsym Control+$mod+h     resize shrink width  05 px 
@@ -178,10 +180,12 @@ exec xfce4-power-manager
 exec mpd
 exec ncmpdcpp pause
 exec urxvtd
+exec xscreensaver
 
 # Non-panel things
 exec compton
 exec dunst
+exec $HOME/bin/gmail-notifyd
 exec emacs --daemon
 exec pcmanfm --daemon
 exec nitrogen --restore
@@ -193,7 +197,6 @@ client.unfocused        #333333 #202020 #666666 #090d0e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 focus_follows_mouse no
-
 
 for_window [class="^.*"] border pixel 3
 new_window 1pixel
