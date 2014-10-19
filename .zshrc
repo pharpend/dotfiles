@@ -46,9 +46,9 @@ alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb ~/.Xresources'
 
 # Portage aliases
-alias sem='sudo emerge -jav'
-alias em='emerge -jav'
-alias emudn='sudo emerge -javuDN @world'
+alias sem='sudo emerge --jobs=5 --ask --verbose'
+alias em='emerge'
+alias emudn='sudo emerge --jobs=5 --ask --verbose --update --deep --newuse --with-bdeps=y @world'
 alias eq='equery'
 alias es='sudo eselect'
 
