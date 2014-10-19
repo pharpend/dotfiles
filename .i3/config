@@ -25,7 +25,7 @@ font pango: Source Code Pro 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+k kill
@@ -198,6 +198,7 @@ bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Shift+c exec google-chrome-stable --incognito
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
+bindsym $mod+t exec sakura
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
@@ -245,6 +246,7 @@ exec dunst
 exec emacs --daemon
 exec pcmanfm --daemon-mode
 exec nitrogen --restore
+exec urxvtd
 
 client.focused          #212121 #20d0f0 #212121 #00DA8E
 client.focused_inactive #333333 #202020 #d0d0d0 #484e50
