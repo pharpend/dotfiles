@@ -21,6 +21,7 @@
                       company-ghc
                       ecb
                       elpy
+                      erlang
                       evil
                       evil-nerd-commenter
                       flycheck
@@ -43,6 +44,7 @@
                       scala-mode2
                       slime
                       smartparens
+                      sublime-themes
                       tuareg
                       wc-mode
                       web-mode
