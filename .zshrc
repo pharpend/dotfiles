@@ -52,12 +52,6 @@ alias emudn='sudo emerge --jobs=5 --ask --verbose --update --deep --newuse --wit
 alias eq='equery'
 alias es='sudo eselect'
 
-esync () {
-    sudo layman -S &&
-    sudo emerge -j --sync &&
-    sudo eix-update
-}
-
 # Other functions
 sprunge () {
     curl -F sprunge=@$1 http://sprunge.us
