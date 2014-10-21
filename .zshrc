@@ -173,3 +173,6 @@ export PATH=$PATH:$HOME/.config/herbstluftwm
 export PATH=$PATH:$HOME/code/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/builds/yesod-bin-1.2.12/.cabal-sandbox/bin
+
+# OPAM configuration
+. /home/pete/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
