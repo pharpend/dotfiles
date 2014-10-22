@@ -19,6 +19,8 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("comet" . conf-mode))
+(add-to-list 'auto-mode-alist '("\\.ml[ily]?$" . tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.topml$" . tuareg-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()
