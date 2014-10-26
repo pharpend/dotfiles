@@ -2,7 +2,7 @@ URxvt*font             : xft:Envy Code R:size=10
 URxvt*scrollBar        : false
 URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
 URxvt.keysym.M-u       : perl:url-select:select_next
-URxvt.url-launcher     : /usr/bin/google-chrome-stable
+URxvt.url-launcher     : /usr/bin/firefox-bin
 URxvt.underlineURLs    : True
 URxvt.matcher.button   : 1 
 URxvt.keysym.M-Escape  : perl:keyboard-select:activate
@@ -29,14 +29,14 @@ URxvt.foreground: #eeeeee
 *color3:  #ffff66
 *color11: #ffff66
 !blue
-*color4:  #00ccff
-*color12: #00ccff
+*color4:  #0033ff
+*color12: #0033ff
 !magenta
 *color5:  #ff00ff
 *color13: #ff00ff
 !cyan
-*color6:  #33ffff
-*color14: #33ffff
+*color6:  #33cccc
+*color14: #33cccc
 !white
 *color7:  #ffffff
 *color15: #ffffff

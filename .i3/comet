@@ -141,10 +141,10 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+q exec firefox-bin
-bindsym $mod+c exec google-chrome-stable
-bindsym $mod+Shift+c exec google-chrome-stable --incognito
-bindsym $mod+d exec dwb
+bindsym $mod+grave exec google-chrome-stable
+bindsym $mod+Shift+grave exec google-chrome-stable --incognito
+bindsym $mod+c exec firefox-bin
+bindsym $mod+q exec dwb
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
