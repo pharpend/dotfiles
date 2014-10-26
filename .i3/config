@@ -153,8 +153,7 @@ exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --au
 # exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
 # H H
 # exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
-
-exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+exec setxkbmap us -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -193,12 +192,14 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+grave exec dwb
-bindsym $mod+c exec google-chrome-stable
-bindsym $mod+Shift+c exec google-chrome-stable --incognito
+bindsym $mod+grave exec google-chrome-stable
+bindsym $mod+Shift+grave exec google-chrome-stable --incognito
+bindsym $mod+q exec dwb
+bindsym $mod+c exec firefox-bin
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
+bindsym $mod+shift+t exec urxvt
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt

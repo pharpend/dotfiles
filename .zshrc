@@ -89,12 +89,16 @@ dcmsg () {
     echo "dotfiles-$(hostname) commit for $(date)"
 }
 
+dot-commit() {
+    git add -A .
+    git commit -am "${repo_name}/$(hostname) commit for $(date)"
+}
+
 dotcpd () {
     wd=$(pwd)
     cd $1
     repo_name=$(git remote -v | head -n1 | awk '{print $2}' | sed 's/.*\///' | sed 's/\.git//')
-    git add -A .
-    git commit -am "${repo_name}/$(hostname) commit for $(date)"
+    dot-commit
     git pull
     git push
     cd $wd
@@ -151,14 +155,22 @@ upgrade-cabal () {
   xargs -I {} cabal install {} --reinstall
 }
 
+ggit-branch () {
+    git branch &> /dev/null
+    if [[ $? -eq 0 ]]; then
+      br=$(git branch | sed "s/^\* //")
+      echo " ${br}"
+    fi
+}
+
 # Syntax highlighting
 source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 setopt prompt_subst
 setopt auto_pushd
 CONFIG="~/.config"
-PROMPT='%B[%b%F{cyan}%2~%f%B] %F{green}%#%f%b '
-RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f%'
+PROMPT='%B[%b%F{cyan}%2~%f%F{red}$(ggit-branch)%f%B]%b %F{green}%#%f '
+RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 REPORTTIME=3
 
 export EDITOR="emacsclient"

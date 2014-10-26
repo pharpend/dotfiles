@@ -1,8 +1,8 @@
-URxvt*font             : xft:DejaVu Sans Mono:size=9
+URxvt*font             : xft:Envy Code R:size=10
 URxvt*scrollBar        : false
 URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
 URxvt.keysym.M-u       : perl:url-select:select_next
-URxvt.url-launcher     : /usr/bin/google-chrome-stable
+URxvt.url-launcher     : /usr/bin/firefox-bin
 URxvt.underlineURLs    : True
 URxvt.matcher.button   : 1 
 URxvt.keysym.M-Escape  : perl:keyboard-select:activate
