@@ -32,7 +32,9 @@
                       linum-relative
                       magit
                       markdown-mode
+                      merlin
                       monokai-theme
+                      ocp-indent
                       paredit
                       planet-theme
                       popwin
@@ -46,6 +48,7 @@
                       smartparens
                       sublime-themes
                       tuareg
+                      utop
                       wc-mode
                       web-mode
                       yaml-mode
@@ -59,14 +62,18 @@
 (require 'auto-complete-config)
 (require 'autopair)
 (require 'company)
+(require 'cl)
 (require 'evil)
 (require 'evil-nerd-commenter)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
+(require 'merlin)
+;; (require 'ocp-indent)
 (require 'popwin)
 (require 'slime-autoloads)
 (require 'smartparens-config)
 (require 'smartparens-ruby)
+(require 'tuareg)
 (require 'wc-mode)
 (require 'yari)

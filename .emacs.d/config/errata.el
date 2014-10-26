@@ -43,3 +43,9 @@
 
 ;; (add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp/")
 ;; (require 'shm)
+
+;; OCaml setup
+(autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)
+(setq opam-share (substring (shell-command-to-string "opam config var share") 0 -1))
+(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
+(setq exec-path (append exec-path '("/home/pete/.opam/4.01.0/bin")))
