@@ -1,4 +1,4 @@
-URxvt*font             : xft:Envy Code R:size=10
+URxvt*font             : xft:DejaVu Sans Mono:size=9
 URxvt*scrollBar        : false
 URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
 URxvt.keysym.M-u       : perl:url-select:select_next

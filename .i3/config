@@ -146,14 +146,14 @@ bindsym $mod+p mode "resize"
 
 # Monitor configurations
 # V H
-exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate right --right-of VGA-1)
+# exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate right --right-of VGA-1)
 # H V
 # exec (xrandr --output VGA-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
 # V V
 # exec (xrandr --output VGA-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of VGA-1)
 # H H
-# exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
-exec setxkbmap us -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+exec (xrandr --output VGA-1 --auto && xrandr --output DVI-D-2 --auto --right-of VGA-1)
+exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
