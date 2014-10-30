@@ -142,7 +142,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+p mode "resize"
 
 # Monitor configurations
 # V H
@@ -200,6 +199,7 @@ bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
 bindsym $mod+shift+t exec urxvt
+bindsym $mod+p exec pavucontrol
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
