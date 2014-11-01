@@ -250,8 +250,8 @@ exec nitrogen --restore
 exec urxvtd
 
 client.focused          #212121 #20d0f0 #212121 #00DA8E
-client.focused_inactive #333333 #202020 #d0d0d0 #484e50
-client.unfocused        #333333 #202020 #d0d0d0 #292d2e
+client.focused_inactive #333333 #222222 #d0d0d0 #484e50
+client.unfocused        #333333 #222222 #d0d0d0 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 focus_follows_mouse no
