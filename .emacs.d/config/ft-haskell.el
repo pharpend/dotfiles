@@ -14,5 +14,4 @@
 (setq-local tab-stop-list (number-sequence 2 200 2))
 (setq-local evil-shift-width 2)
 
-(define-key 'shm-map (kbd "RET") 'shm/newline-indent)
-(define-key 'shm-map (kbd "RET") 'shm/simple-indent-newline-same-col)
+(define-key haskell-mode-map (kbd "<C-return>") 'hindent/reformat-decl)
