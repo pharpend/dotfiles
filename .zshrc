@@ -158,7 +158,7 @@ upgrade-cabal () {
 ggit-branch () {
     git branch &> /dev/null
     if [[ $? -eq 0 ]]; then
-      br=$(git branch | sed "s/^\* //")
+      br=$(git branch | \grep \* | sed "s/^\* //")
       echo " ${br}"
     fi
 }
