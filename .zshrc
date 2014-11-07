@@ -44,6 +44,7 @@ alias sccw='scc --watch'
 alias s='sudo'
 alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb ~/.Xresources'
+alias mredshift='redshift -l 40.75:111.88 -b 0.4:1.0'
 
 # Portage aliases
 alias sem='sudo emerge --jobs --ask --verbose'
@@ -158,11 +159,15 @@ upgrade-cabal () {
 ggit-branch () {
     git branch &> /dev/null
     if [[ $? -eq 0 ]]; then
-      br=$(git branch | sed "s/^\* //")
+      br=$(git branch | \grep \* | sed "s/^\* //")
       echo " ${br}"
     fi
 }
 
+rrshift () {
+    killall redshift
+    mredshift &!
+}
 # Syntax highlighting
 source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

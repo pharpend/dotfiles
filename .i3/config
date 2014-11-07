@@ -191,10 +191,10 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+grave exec google-chrome-stable
-bindsym $mod+Shift+grave exec google-chrome-stable --incognito
+bindsym $mod+c exec google-chrome-stable
+bindsym $mod+Shift+c exec google-chrome-stable --incognito
 bindsym $mod+q exec dwb
-bindsym $mod+c exec firefox-bin
+bindsym $mod+grave exec firefox-bin
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
@@ -246,6 +246,7 @@ exec compton
 exec dunst
 exec emacs --daemon
 exec pcmanfm --daemon-mode
+exec redshift -l 40.7500:111.8833
 exec nitrogen --restore
 exec urxvtd
 
