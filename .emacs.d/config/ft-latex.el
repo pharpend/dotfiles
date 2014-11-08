@@ -13,3 +13,4 @@
 (setq-local evil-shift-width 2)
 
 (define-key evil-insert-state-map (kbd "`") 'self-insert-command)
+(local-set-key (kbd "C-c C-c") 'compile)
