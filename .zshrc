@@ -59,6 +59,18 @@ sprunge () {
     curl -F sprunge=@$1 http://sprunge.us
 }
 
+hvscreen () {
+    xrandr --output VGA-1 --rotate normal
+    xrandr --output DVI-D-2 --rotate left --right-of VGA-1
+    nitrogen --restore
+}
+
+vhscreen () {
+    xrandr --output VGA-1 --rotate left
+    xrandr --output DVI-D-2 --rotate normal --right-of VGA-1
+    nitrogen --restore
+}
+
 hscreen () {
     xrandr --output VGA-1 --rotate normal
     xrandr --output DVI-D-2 --rotate normal --right-of VGA-1

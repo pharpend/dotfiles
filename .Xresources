@@ -2,7 +2,7 @@ Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
-Xft.hintstyle:  hintslight
+Xft.hintstyle:  hintfull
 
 URxvt*font             : xft:Envy Code R:size=10
 URxvt*scrollBar        : false
