@@ -3,7 +3,8 @@
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.milkbox.net/packages/")
+                         ("SC"   . "http://joseito.republika.pl/sunrise-commander/")))
 
 ;; Elpa packages:
 (require 'package)
@@ -34,6 +35,7 @@
                       markdown-mode
                       merlin
                       monokai-theme
+                      neotree
                       ocp-indent
                       paredit
                       planet-theme

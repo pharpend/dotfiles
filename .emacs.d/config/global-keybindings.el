@@ -45,3 +45,4 @@
 (global-set-key (kbd "C-x g s") 'magit-status)
 (global-set-key (kbd "C-x g l") 'magit-log)
 (global-set-key (kbd "C-x C-m") 'magit-git-command)
+
