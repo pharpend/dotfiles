@@ -44,8 +44,8 @@ alias sccw='scc --watch'
 alias s='sudo'
 alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb ~/.Xresources'
-alias mredshift='redshift -l 40.75:111.88 -b 0.8:1.0'
-alias unrhift='redshift -r -l 40.75:111.88 -b 0.8:1.0'
+alias mredshift='redshift -l 40.75:111.88'
+alias unrhift='redshift -r -l 40.75:111.88'
 
 # Portage aliases
 alias sem='sudo emerge --jobs --ask --verbose'
