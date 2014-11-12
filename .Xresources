@@ -4,7 +4,7 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 
-URxvt*font             : xft:Envy Code R:size=10
+URxvt*font             : xft:Source Code Pro Light:size=9
 URxvt*scrollBar        : false
 URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
 URxvt.keysym.M-u       : perl:url-select:select_next
