@@ -47,6 +47,9 @@ alias xrdbo='xrdb ~/.Xresources'
 alias mredshift='redshift -l 40.75:111.88'
 alias unrhift='redshift -r -l 40.75:111.88'
 
+# Openvpn fails a lot, so here
+alias ropev='sudo /etc/init.d/openvpn restart'
+
 # Portage aliases
 alias sem='sudo emerge --jobs --ask --verbose'
 alias em='emerge'
