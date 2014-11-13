@@ -184,6 +184,13 @@ rrshift () {
     killall redshift
     mredshift &!
 }
+
+ri3bars () {
+    killall i3bar &&
+    i3bar --bar_id=bar-0 &!
+    i3bar --bar_id=bar-1 &!
+}
+
 # Syntax highlighting
 source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
