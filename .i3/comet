@@ -18,8 +18,7 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:Source Code Pro 8
-# font pango: Meslo LG S DZ 7
+font pango: Inconsolata-dz for Powerline 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -132,11 +131,11 @@ bar {
     status_command $HOME/bin/barinfo
 
     colors {
-        background #212121
-        focused_workspace  #81a1b1 #314444 #dddddd
-        active_workspace   #81a1b1 #213131 #999999
-        inactive_workspace #444444 #222222 #555555
-        urgent_workspace   #2f343a #b00000 #ffffff
+        background #073642
+        focused_workspace  #073642 #073642 #eee8d5
+        active_workspace   #073642 #073642 #2aa198
+        inactive_workspace #073642 #073642 #268bd2
+        urgent_workspace   #dc322f #dc322f #fdf6e3
     }
 }
 
@@ -192,10 +191,12 @@ exec nitrogen --restore
 exec redshift -l 40.75:111.8833
 exec synclient TouchpadOff=1
 
-client.focused          #212121 #d090f0 #212121 #333333
-client.focused_inactive #333333 #202020 #19c1ab #484e50
-client.unfocused        #333333 #202020 #666666 #090d0e
-client.urgent           #C10004 #900000 #ffffff #900000
+#                       BorderFrame     Border      Title       NextWindowGoesHere
+#---------------------------------------------------------------------------------
+client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
+client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
+client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
+client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 
 focus_follows_mouse no
 
