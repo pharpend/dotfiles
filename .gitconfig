@@ -4,6 +4,7 @@
 	cm = commit
 	st = status
 	co = checkout
+	br = branch
 [user]
 	name = Peter Harpending
 	email = pharpend2@gmail.com
