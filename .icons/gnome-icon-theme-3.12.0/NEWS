@@ -1,0 +1,133 @@
+3.12.0
+  - no changes
+
+3.11.92
+  - semi starred icon (bug #689098)
+  - better fir for Files and save/open icons
+  - addon and repositories icons (bug #724669)
+
+3.11.5
+  - scale gedit properly
+  - media-player cleanup
+  - make folder-download emblem more legible
+
+3.10.0
+  - build fixes
+
+3.9.5
+  - color shift for folder (bug #700757)
+
+3.8.2
+  - heaphones & headset
+  - notifications panel updated
+  - make folders a tad less prominent again
+
+3.8.0
+  - system-shutdown
+  - scale icons to fit canvas better (bug #694279)
+  - beige folders
+  - emblem centering (bug #695523)
+
+3.7.91
+  - rendering tweaks
+  - network-cellular-connected
+
+3.7.4
+  - settings - sharing panel
+
+3.7.3
+  - Add icons for new panels: search, notifications, privacy
+  - Add icons for RAID and other multidisk devices
+  - Weather icons
+
+3.6.2
+  - Translation updates
+
+3.5.5
+  - update IM status icons to sync with -symbolic
+
+3.4.0
+3.3.91
+  - trophies
+  - UPS 
+
+3.2.1.2
+  - bug #662171
+
+3.2.1
+  - right to left variants of directional icons
+
+3.2.0
+  - just adding numbers :)
+
+3.1.90
+  - updated wallpaper icon
+  - removable media icon
+  - updated user status icons
+  - dialpad icon
+
+3.1.4
+  - printer-network
+  - starred/unstarred status
+  - window decoration icons updated to current look. Also addresses #650712
+
+3.0.0
+  - prepare for awesome
+  - camera-web highres
+
+2.91.93
+  - volume icon in highres
+  - mouse device icon redone + highres
+
+2.91.92
+  - 'fail whale'
+  - disconnected wired network
+  - vpn 'device'
+  - development
+  - scanner
+  - dialog-password in highres
+
+2.91.7
+  - speaker device icon
+
+2.91.6
+  - include license files in tarball
+  - new Uyghur translation
+  - updated Galician translation
+
+2.91.0
+  - generic phone device
+  - metadata cleanup
+  - blank template for new icons
+  - generic tablet in highres
+  - system-run in high res
+  - microphone input level icons
+  - regerate cache during installation
+  - video-camera in highres
+  - folder for preview. #635612
+
+2.31.0
+  - new license
+  - highres icon additions
+
+2.30.0
+  - Bengali translation
+  - remove arrows from format-justify-*
+2.29.3
+  - --enable-icon-mapping works (thanks Luca)
+  - edit-find and edit-find-replace finetuned
+  - redundant system-search tweaked rather than dropped for now
+
+2.29.2
+  - bugfix: misplaced process-working
+
+2.29.1
+  - added .pc file back bug #606245
+  - missing emoticons
+  - accessories-dictionary at 24x24px
+  - highres web-browser
+  - changes-prevent and changes-allow to replace stock-lock icons. bug #611480  
+  - progress-working from 2.28
+
+2.29.0
+  - initial release of the highres-laden icon theme

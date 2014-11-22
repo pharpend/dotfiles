@@ -57,6 +57,11 @@ alias emudn='sudo emerge --jobs --ask --verbose --update --deep --newuse --with-
 alias eq='equery'
 alias es='sudo eselect'
 
+# Nix aliases
+alias nxs='nix-env -qaP | grep -i'
+alias nxi='nix-env -j 5 --cores 4 -i'
+alias nxconf='sudo zile /etc/nixos/configuration.nix'
+
 # Other functions
 sprunge () {
     curl -F sprunge=@$1 http://sprunge.us
@@ -192,7 +197,7 @@ ri3bars () {
 }
 
 # Syntax highlighting
-source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zshlex/zsh-syntax-highlighting.zsh
 
 setopt prompt_subst
 setopt auto_pushd
