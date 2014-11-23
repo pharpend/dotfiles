@@ -45,7 +45,9 @@ alias s='sudo'
 alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb ~/.Xresources'
 alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
-# alias unrhift='redshift -r -l 40.75:111.88 -b '
+alias unrhift='redshift -r -l 40.75:111.88 -b '
+alias sysd='sudo systemctl'
+alias cnf='command-not-found'
 
 # Openvpn fails a lot, so here
 alias ropev='sudo /etc/init.d/openvpn restart'
@@ -60,7 +62,8 @@ alias es='sudo eselect'
 # Nix aliases
 alias nxs='nix-env -qaP | grep -i'
 alias nxi='nix-env -j 5 --cores 4 -i'
-alias nxconf='sudo zile /etc/nixos/configuration.nix'
+alias nxconf='sudo vim /etc/nixos/configuration.nix'
+alias nxrb='sudo nixos-rebuild'
 
 # Other functions
 sprunge () {
@@ -206,7 +209,7 @@ PROMPT='%B[%b%F{cyan}%2~%f%F{red}$(ggit-branch)%f%B]%b %F{green}%#%f '
 RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 REPORTTIME=3
 
-export EDITOR="emacsclient"
+export EDITOR="vim"
 export SHELL="/bin/zsh"
 export rvm_ignore_gemrc_issues=1
 

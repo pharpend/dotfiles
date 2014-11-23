@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # imgur script by Phil Tang <tangphillip@gmail.com>
 # Based the work of Bart Nagel <bart@tremby.net>

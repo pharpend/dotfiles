@@ -18,7 +18,7 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango: Inconsolata-dz for Powerline 8
+font pango: Inconsolata for Powerline 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -128,7 +128,7 @@ exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rc
 # finds out, if available)
 bar {
     position top
-    status_command $HOME/bin/barinfo
+    # status_command $HOME/bin/barinfo
 
     colors {
         background #073642
@@ -140,7 +140,8 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec firefox
+bindsym $mod+c exec chromium
+bindsym $mod+Shift+c exec chromium --incognito
 bindsym $mod+q exec dwb
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
@@ -170,10 +171,10 @@ bindsym $mod+F12 exec amixer set Master 8%+
 
 # Autostarted applications
 # exec deluge
+exec batti
 exec dropbox
 exec nm-applet
 exec parcellite
-exec xfce4-power-manager
 exec mpd
 exec ncmpdcpp pause
 exec urxvtd
