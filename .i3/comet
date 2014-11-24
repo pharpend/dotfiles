@@ -140,8 +140,8 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec chromium
-bindsym $mod+Shift+c exec chromium --incognito
+bindsym $mod+c exec chromium-browser
+bindsym $mod+Shift+c exec chromium-browser --incognito
 bindsym $mod+q exec dwb
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
