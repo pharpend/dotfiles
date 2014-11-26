@@ -9,6 +9,7 @@ general_packages=(
     app-editors/emacs
     app-editors/vim
     app-editors/zile
+    app-editors/eix
     app-portage/gentoolkit
     app-shells/zsh
     dev-haskell/cabal-install
@@ -17,6 +18,7 @@ general_packages=(
     dev-lang/python
     dev-vcs/git
     gnome-base/gvfs
+    lxde-base/lxappearance
     mail-client/alpine
     media-sound/ncmpcpp
     media-sound/pavucontrol
