@@ -18,6 +18,7 @@ general_packages=(
     dev-lang/python
     dev-vcs/git
     gnome-base/gvfs
+    gnome-extra/nm-applet
     lxde-base/lxappearance
     mail-client/alpine
     media-sound/ncmpcpp
@@ -36,7 +37,9 @@ general_packages=(
     x11-misc/pcmanfm
     x11-misc/redshift
     x11-misc/xscreensaver
-    x11-terms/rxvt-unicode
+    x11-misc/xclip
+    x11-misc/xsel
+    x10-terms/rxvt-unicode
     x11-terms/terminator
     x11-wm/i3
 )
