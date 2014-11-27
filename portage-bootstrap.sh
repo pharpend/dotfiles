@@ -22,6 +22,9 @@ general_packages=(
     gnome-extra/nm-applet
     lxde-base/lxappearance
     mail-client/alpine
+    media-fonts/dejavu
+    media-fonts/droid
+    media-fonts/inconsolata
     media-sound/ncmpcpp
     media-sound/pavucontrol
     net-misc/dropbox
