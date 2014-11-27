@@ -140,8 +140,8 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec chromium-browser
-bindsym $mod+Shift+c exec chromium-browser --incognito
+bindsym $mod+c exec google-chrome-stable
+bindsym $mod+Shift+c exec google-chrome-stable --incognito
 bindsym $mod+q exec dwb
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
@@ -171,7 +171,7 @@ bindsym $mod+F12 exec amixer set Master 8%+
 
 # Autostarted applications
 # exec deluge
-exec batti
+exec cbatticon
 exec dropbox
 exec dbus-launch nm-applet
 exec parcellite

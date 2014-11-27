@@ -9,8 +9,9 @@ general_packages=(
     app-editors/emacs
     app-editors/vim
     app-editors/zile
-    app-editors/eix
+    app-portage/eix
     app-portage/gentoolkit
+    app-portage/layman
     app-shells/zsh
     dev-haskell/cabal-install
     dev-lang/ghc
@@ -39,7 +40,7 @@ general_packages=(
     x11-misc/xscreensaver
     x11-misc/xclip
     x11-misc/xsel
-    x10-terms/rxvt-unicode
+    x11-terms/rxvt-unicode
     x11-terms/terminator
     x11-wm/i3
 )
@@ -88,3 +89,9 @@ cabal update
 for pkg in $haskell_packages ; do
   cabal install $pkg
 done
+
+ovl_packages=(
+    media-fonts/powerline-fonts
+    x11-themes/numix
+    x11-themes/numix-icon-theme
+)
