@@ -46,8 +46,7 @@ alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb ~/.Xresources'
 alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
 alias unrhift='redshift -r -l 40.75:111.88 -b '
-alias sysd='sudo systemctl'
-alias cnf='command-not-found'
+alias eix='eix -n'              # eix is annoying 
 
 # Openvpn fails a lot, so here
 alias ropev='sudo /etc/init.d/openvpn restart'
