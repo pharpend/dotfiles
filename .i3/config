@@ -199,10 +199,10 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec firefox-bin
+bindsym $mod+grave exec firefox-bin
 bindsym $mod+q exec dwb
-bindsym $mod+grave exec chromium
-bindsym $mod+Shift+grave exec chromium --incognito
+bindsym $mod+c exec google-chrome-stable
+bindsym $mod+Shift+c exec google-chrome-stable --incognito
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
