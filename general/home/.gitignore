@@ -1,0 +1,10 @@
+*~
+general/home/.emacs.d/elpa
+general/home/.emacs.d/config/#evil.el#
+general/home/.emacs.d/ac-comphist.dat
+general/home/.emacs.d/url/cookies
+general/home/.emacs.d/abbrev_defs
+/.mpd/mpd.db
+/.mpd/mpd.log
+/.mpd/mpdstate
+/.mpd/mpd.pid
