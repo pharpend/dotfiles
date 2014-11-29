@@ -155,5 +155,5 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
 blank = { full_text: "",
           color: $white }
 
-$info = [win, mailnum] + ncmpcpp + comet + [cputemp, cpughz, ram, time, date, blank]
+$info = [win, mailnum] + comet + [cputemp, cpughz, ram, time, date, blank]
 update
