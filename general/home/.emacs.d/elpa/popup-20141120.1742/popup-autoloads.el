@@ -1,18 +1,17 @@
 ;;; popup-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("popup-pkg.el" "popup.el") (21615 59708
-;;;;;;  59384 393000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/popup-20141120.1742/popup-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/popup-20141120.1742/popup.el")
+;;;;;;  (21623 60963 958844 608000))
 
 ;;;***
 
-(provide 'popup-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; popup-autoloads.el ends here

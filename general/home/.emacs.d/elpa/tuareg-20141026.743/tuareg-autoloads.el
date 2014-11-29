@@ -1,11 +1,11 @@
 ;;; tuareg-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (ocamldebug) "ocamldebug" "ocamldebug.el" (21615
-;;;;;;  59858 81970 847000))
-;;; Generated autoloads from ocamldebug.el
+;;;### (autoloads nil "ocamldebug" "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/ocamldebug.el"
+;;;;;;  "2de09a35f859dd31c6165e300c9bdfee")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/tuareg-20141026.743/ocamldebug.el
 
 (autoload 'ocamldebug "ocamldebug" "\
 Run ocamldebug on program FILE in buffer *ocamldebug-FILE*.
@@ -19,9 +19,9 @@ the ocamldebug commands `cd DIR' and `directory'.
 
 ;;;***
 
-;;;### (autoloads (tuareg-run-ocaml tuareg-mode) "tuareg" "tuareg.el"
-;;;;;;  (21615 59857 956969 748000))
-;;; Generated autoloads from tuareg.el
+;;;### (autoloads nil "tuareg" "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg.el"
+;;;;;;  "297780f1b4e9d995a447ce56403a94f2")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg.el
 (add-to-list 'auto-mode-alist '("\\.ml[iylp]?\\'" . tuareg-mode))
 (dolist (ext '(".cmo" ".cmx" ".cma" ".cmxa" ".cmi"
                ".annot" ".cmt" ".cmti"))
@@ -107,16 +107,20 @@ Run an OCaml toplevel process.  I/O via buffer `*ocaml-toplevel*'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("tuareg-light.el" "tuareg-pkg.el" "tuareg-site-file.el"
-;;;;;;  "tuareg_indent.el") (21615 59858 125124 343000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/tuareg-20141026.743/ocamldebug.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg-light.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg-site-file.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/tuareg-20141026.743/tuareg_indent.el")
+;;;;;;  (21623 61118 531497 416000))
 
 ;;;***
 
-(provide 'tuareg-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; tuareg-autoloads.el ends here

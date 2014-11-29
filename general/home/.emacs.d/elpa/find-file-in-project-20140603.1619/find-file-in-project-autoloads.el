@@ -1,11 +1,11 @@
 ;;; find-file-in-project-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (find-file-in-project) "find-file-in-project" "find-file-in-project.el"
-;;;;;;  (21615 59797 190448 924000))
-;;; Generated autoloads from find-file-in-project.el
+;;;### (autoloads nil "find-file-in-project" "../../../../../../../.emacs.d/elpa/find-file-in-project-20140603.1619/find-file-in-project.el"
+;;;;;;  "96a5b6e260419cc6d159322fda0a7a8c")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/find-file-in-project-20140603.1619/find-file-in-project.el
 
 (autoload 'find-file-in-project "find-file-in-project" "\
 Prompt with a completing list of all files in the project to find one.
@@ -32,16 +32,15 @@ setting the variable `ffip-project-root'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("find-file-in-project-pkg.el") (21615
-;;;;;;  59797 286552 520000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/find-file-in-project-20140603.1619/find-file-in-project-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/find-file-in-project-20140603.1619/find-file-in-project.el")
+;;;;;;  (21623 61051 619544 443000))
 
 ;;;***
 
-(provide 'find-file-in-project-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; find-file-in-project-autoloads.el ends here

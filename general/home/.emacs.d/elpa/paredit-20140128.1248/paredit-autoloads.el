@@ -1,11 +1,11 @@
 ;;; paredit-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (enable-paredit-mode paredit-mode) "paredit" "paredit.el"
-;;;;;;  (21615 59834 115759 49000))
-;;; Generated autoloads from paredit.el
+;;;### (autoloads nil "paredit" "../../../../../../../.emacs.d/elpa/paredit-20140128.1248/paredit.el"
+;;;;;;  "7e7175b7d7d148fc121a47d262d39038")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/paredit-20140128.1248/paredit.el
 
 (autoload 'paredit-mode "paredit" "\
 Minor mode for pseudo-structurally editing Lisp code.
@@ -25,16 +25,15 @@ Turn on pseudo-structural editing of Lisp code.
 
 ;;;***
 
-;;;### (autoloads nil nil ("paredit-pkg.el") (21615 59834 220272
-;;;;;;  521000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/paredit-20140128.1248/paredit-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/paredit-20140128.1248/paredit.el")
+;;;;;;  (21623 61091 955638 424000))
 
 ;;;***
 
-(provide 'paredit-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; paredit-autoloads.el ends here

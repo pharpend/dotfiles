@@ -1,15 +1,11 @@
 ;;; smartparens-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (turn-off-show-smartparens-mode turn-on-show-smartparens-mode
-;;;;;;  show-smartparens-global-mode show-smartparens-mode turn-off-smartparens-mode
-;;;;;;  turn-on-smartparens-mode smartparens-global-mode turn-on-smartparens-strict-mode
-;;;;;;  smartparens-global-strict-mode smartparens-strict-mode smartparens-mode
-;;;;;;  sp-use-smartparens-bindings sp-use-paredit-bindings sp-cheat-sheet)
-;;;;;;  "smartparens" "smartparens.el" (21615 59852 601921 744000))
-;;; Generated autoloads from smartparens.el
+;;;### (autoloads nil "smartparens" "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens.el"
+;;;;;;  "4f0f18d4cd21a3588f5cab056ecd8ff6")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens.el
 
 (autoload 'sp-cheat-sheet "smartparens" "\
 Generate a cheat sheet of all the smartparens interactive functions.
@@ -171,17 +167,21 @@ Turn off `show-smartparens-mode'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("smartparens-config.el" "smartparens-html.el"
-;;;;;;  "smartparens-latex.el" "smartparens-lua.el" "smartparens-pkg.el"
-;;;;;;  "smartparens-ruby.el") (21615 59852 754077 363000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens-config.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens-html.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens-latex.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens-lua.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens-ruby.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/smartparens-20141107.1100/smartparens.el")
+;;;;;;  (21623 61112 634196 138000))
 
 ;;;***
 
-(provide 'smartparens-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; smartparens-autoloads.el ends here

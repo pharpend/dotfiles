@@ -1,11 +1,11 @@
 ;;; json-reformat-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (json-reformat-region) "json-reformat" "json-reformat.el"
-;;;;;;  (21615 59824 420675 658000))
-;;; Generated autoloads from json-reformat.el
+;;;### (autoloads nil "json-reformat" "../../../../../../../.emacs.d/elpa/json-reformat-20141108.1618/json-reformat.el"
+;;;;;;  "9ec89defa692e2128f6c80a61ab82605")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/json-reformat-20141108.1618/json-reformat.el
 
 (autoload 'json-reformat-region "json-reformat" "\
 Reformat the JSON in the region from BEGIN to END.
@@ -14,16 +14,15 @@ Reformat the JSON in the region from BEGIN to END.
 
 ;;;***
 
-;;;### (autoloads nil nil ("json-reformat-pkg.el") (21615 59824 509850
-;;;;;;  78000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/json-reformat-20141108.1618/json-reformat-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/json-reformat-20141108.1618/json-reformat.el")
+;;;;;;  (21623 61080 94182 319000))
 
 ;;;***
 
-(provide 'json-reformat-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; json-reformat-autoloads.el ends here

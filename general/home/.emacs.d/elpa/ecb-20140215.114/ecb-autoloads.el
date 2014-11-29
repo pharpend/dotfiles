@@ -1,11 +1,11 @@
 ;;; ecb-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (ecb-byte-compile ecb-minor-mode ecb-activate)
-;;;;;;  "ecb" "ecb.el" (21615 59741 457020 947000))
-;;; Generated autoloads from ecb.el
+;;;### (autoloads nil "ecb" "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb.el"
+;;;;;;  "e562c97daed7c9a4209301fb0d1bbc70")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb.el
 
 (autoload 'ecb-activate "ecb" "\
 Activates ECB and creates the special buffers for the choosen layout.
@@ -34,9 +34,9 @@ exist.
 
 ;;;***
 
-;;;### (autoloads (ecb-show-help) "ecb-help" "ecb-help.el" (21615
-;;;;;;  59741 498021 293000))
-;;; Generated autoloads from ecb-help.el
+;;;### (autoloads nil "ecb-help" "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-help.el"
+;;;;;;  "ad2944009b5fefed05b806382318ce03")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-help.el
 
 (autoload 'ecb-show-help "ecb-help" "\
 Shows the online help of ECB in Info or HTML-format.
@@ -54,32 +54,56 @@ HTML-online-documentation is not included.
 
 ;;;***
 
-;;;### (autoloads nil "ecb-util" "ecb-util.el" (21615 59741 666022
-;;;;;;  472000))
-;;; Generated autoloads from ecb-util.el
+;;;### (autoloads nil "ecb-util" "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-util.el"
+;;;;;;  "6a61d6ae4a631c772a078f49c2e87b11")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-util.el
 
 (defconst ecb-running-xemacs (featurep 'xemacs))
 
 ;;;***
 
-;;;### (autoloads nil nil ("ecb-advice-test.el" "ecb-analyse.el"
-;;;;;;  "ecb-autogen.el" "ecb-buffertab.el" "ecb-cedet-wrapper.el"
-;;;;;;  "ecb-common-browser.el" "ecb-compatibility.el" "ecb-compilation.el"
-;;;;;;  "ecb-create-layout.el" "ecb-cycle.el" "ecb-eshell.el" "ecb-examples.el"
-;;;;;;  "ecb-face.el" "ecb-file-browser.el" "ecb-jde.el" "ecb-layout-defs.el"
-;;;;;;  "ecb-layout.el" "ecb-method-browser.el" "ecb-mode-line.el"
-;;;;;;  "ecb-multiframe.el" "ecb-navigate.el" "ecb-pkg.el" "ecb-semantic-wrapper.el"
-;;;;;;  "ecb-semantic.el" "ecb-speedbar.el" "ecb-symboldef.el" "ecb-tod.el"
-;;;;;;  "ecb-upgrade.el" "ecb-winman-support.el" "silentcomp.el"
-;;;;;;  "tree-buffer.el") (21615 59743 179103 363000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-advice-test.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-analyse.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-autogen.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-buffertab.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-cedet-wrapper.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-common-browser.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-compatibility.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-compilation.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-create-layout.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-cycle.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-eshell.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-examples.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-face.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-file-browser.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-help.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-jde.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-layout-defs.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-layout.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-method-browser.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-mode-line.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-multiframe.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-navigate.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-semantic-wrapper.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-semantic.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-speedbar.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-symboldef.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-tod.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-upgrade.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-util.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb-winman-support.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/ecb.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/silentcomp.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ecb-20140215.114/tree-buffer.el")
+;;;;;;  (21623 61001 53311 71000))
 
 ;;;***
 
-(provide 'ecb-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; ecb-autoloads.el ends here

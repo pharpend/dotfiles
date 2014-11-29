@@ -1,11 +1,11 @@
 ;;; ocp-indent-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (ocp-indent-caml-mode-setup ocp-setup-indent) "ocp-indent"
-;;;;;;  "ocp-indent.el" (21615 59833 469753 453000))
-;;; Generated autoloads from ocp-indent.el
+;;;### (autoloads nil "ocp-indent" "../../../../../../../.emacs.d/elpa/ocp-indent-20140826.429/ocp-indent.el"
+;;;;;;  "60409e991dc33e3346316efc3716b66a")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/ocp-indent-20140826.429/ocp-indent.el
 
 (autoload 'ocp-setup-indent "ocp-indent" "\
 
@@ -19,16 +19,15 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("ocp-indent-pkg.el") (21615 59833 552088
-;;;;;;  362000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/ocp-indent-20140826.429/ocp-indent-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/ocp-indent-20140826.429/ocp-indent.el")
+;;;;;;  (21623 61090 785432 616000))
 
 ;;;***
 
-(provide 'ocp-indent-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; ocp-indent-autoloads.el ends here

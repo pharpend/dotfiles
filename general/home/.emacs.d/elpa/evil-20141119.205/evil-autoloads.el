@@ -1,11 +1,11 @@
 ;;; evil-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (evil-mode) "evil" "evil.el" (21615 59809 613551
-;;;;;;  8000))
-;;; Generated autoloads from evil.el
+;;;### (autoloads nil "evil" "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil.el"
+;;;;;;  "90e3f8ab0280088769ddd7c54d82a15d")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/evil-20141119.205/evil.el
 
 (defvar evil-mode nil "\
 Non-nil if Evil mode is enabled.
@@ -30,19 +30,30 @@ See `evil-local-mode' for more information on Evil-Local mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("evil-command-window.el" "evil-commands.el"
-;;;;;;  "evil-common.el" "evil-core.el" "evil-digraphs.el" "evil-ex.el"
-;;;;;;  "evil-integration.el" "evil-macros.el" "evil-maps.el" "evil-pkg.el"
-;;;;;;  "evil-repeat.el" "evil-search.el" "evil-states.el" "evil-types.el"
-;;;;;;  "evil-vars.el") (21615 59810 152837 960000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-command-window.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-commands.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-common.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-core.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-digraphs.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-ex.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-integration.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-macros.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-maps.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-repeat.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-search.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-states.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-types.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil-vars.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-20141119.205/evil.el")
+;;;;;;  (21623 61063 927712 235000))
 
 ;;;***
 
-(provide 'evil-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; evil-autoloads.el ends here

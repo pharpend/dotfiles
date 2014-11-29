@@ -1,11 +1,11 @@
 ;;; git-rebase-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (git-rebase-mode) "git-rebase-mode" "git-rebase-mode.el"
-;;;;;;  (21615 59826 21689 347000))
-;;; Generated autoloads from git-rebase-mode.el
+;;;### (autoloads nil "git-rebase-mode" "../../../../../../../.emacs.d/elpa/git-rebase-mode-20140928.1547/git-rebase-mode.el"
+;;;;;;  "636068633bd28ff93bdb45e4f5da82f6")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/git-rebase-mode-20140928.1547/git-rebase-mode.el
 
 (autoload 'git-rebase-mode "git-rebase-mode" "\
 Major mode for editing of a Git rebase file.
@@ -21,16 +21,15 @@ running 'man git-rebase' at the command line) for details.
 
 ;;;***
 
-;;;### (autoloads nil nil ("git-rebase-mode-pkg.el") (21615 59826
-;;;;;;  116711 638000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/git-rebase-mode-20140928.1547/git-rebase-mode-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/git-rebase-mode-20140928.1547/git-rebase-mode.el")
+;;;;;;  (21623 61082 367938 857000))
 
 ;;;***
 
-(provide 'git-rebase-mode-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; git-rebase-mode-autoloads.el ends here

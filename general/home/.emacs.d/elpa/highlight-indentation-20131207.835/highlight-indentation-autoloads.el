@@ -1,12 +1,11 @@
 ;;; highlight-indentation-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (highlight-indentation-current-column-mode highlight-indentation-set-offset
-;;;;;;  highlight-indentation-mode) "highlight-indentation" "highlight-indentation.el"
-;;;;;;  (21615 59796 671444 719000))
-;;; Generated autoloads from highlight-indentation.el
+;;;### (autoloads nil "highlight-indentation" "../../../../../../../.emacs.d/elpa/highlight-indentation-20131207.835/highlight-indentation.el"
+;;;;;;  "534f5c686ac97d6f156c457b361a7922")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/highlight-indentation-20131207.835/highlight-indentation.el
 
 (autoload 'highlight-indentation-mode "highlight-indentation" "\
 Highlight indentation minor mode highlights indentation based
@@ -29,16 +28,15 @@ a vertical bar corresponding to the indentation of the current line
 
 ;;;***
 
-;;;### (autoloads nil nil ("highlight-indentation-pkg.el") (21615
-;;;;;;  59796 760237 645000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/highlight-indentation-20131207.835/highlight-indentation-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/highlight-indentation-20131207.835/highlight-indentation.el")
+;;;;;;  (21623 61050 957695 932000))
 
 ;;;***
 
-(provide 'highlight-indentation-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; highlight-indentation-autoloads.el ends here

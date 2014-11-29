@@ -1,12 +1,11 @@
 ;;; erlang-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (inferior-erlang erlang-compile erlang-shell erlang-find-tag-other-window
-;;;;;;  erlang-find-tag erlang-mode) "erlang" "erlang.el" (21615
-;;;;;;  59805 342515 640000))
-;;; Generated autoloads from erlang.el
+;;;### (autoloads nil "erlang" "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang.el"
+;;;;;;  "3435de73d795f4c7f0cc8c36a143a5f6")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang.el
 
 (autoload 'erlang-mode "erlang" "\
 Major mode for editing Erlang source files in Emacs.
@@ -120,9 +119,9 @@ editing control characters:
 
 ;;;***
 
-;;;### (autoloads nil "erlang-start" "erlang-start.el" (21615 59805
-;;;;;;  217514 625000))
-;;; Generated autoloads from erlang-start.el
+;;;### (autoloads nil "erlang-start" "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-start.el"
+;;;;;;  "0bd901dbd0f835873c36420400830d1d")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-start.el
 
 (let ((a '("\\.erl\\'" . erlang-mode)) (b '("\\.hrl\\'" . erlang-mode))) (or (assoc (car a) auto-mode-alist) (setq auto-mode-alist (cons a auto-mode-alist))) (or (assoc (car b) auto-mode-alist) (setq auto-mode-alist (cons b auto-mode-alist))))
 
@@ -132,17 +131,22 @@ editing control characters:
 
 ;;;***
 
-;;;### (autoloads nil nil ("erlang-eunit.el" "erlang-flymake.el"
-;;;;;;  "erlang-pkg.el" "erlang-skels-old.el" "erlang-skels.el" "erlang_appwiz.el")
-;;;;;;  (21615 59805 519147 530000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-eunit.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-flymake.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-skels-old.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-skels.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang-start.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/erlang-20141104.17/erlang_appwiz.el")
+;;;;;;  (21623 61059 321673 336000))
 
 ;;;***
 
-(provide 'erlang-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; erlang-autoloads.el ends here

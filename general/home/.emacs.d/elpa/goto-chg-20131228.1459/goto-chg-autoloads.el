@@ -1,11 +1,11 @@
 ;;; goto-chg-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (goto-last-change-reverse goto-last-change) "goto-chg"
-;;;;;;  "goto-chg.el" (21615 59806 642526 370000))
-;;; Generated autoloads from goto-chg.el
+;;;### (autoloads nil "goto-chg" "../../../../../../../.emacs.d/elpa/goto-chg-20131228.1459/goto-chg.el"
+;;;;;;  "522fd016a9d492a2412c112a8eaf7b63")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/goto-chg-20131228.1459/goto-chg.el
 
 (autoload 'goto-last-change "goto-chg" "\
 Go to the point where the last edit was made in the current buffer.
@@ -42,16 +42,15 @@ See `goto-last-change' for use of prefix argument.
 
 ;;;***
 
-;;;### (autoloads nil nil ("goto-chg-pkg.el") (21615 59806 731299
-;;;;;;  883000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/goto-chg-20131228.1459/goto-chg-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/goto-chg-20131228.1459/goto-chg.el")
+;;;;;;  (21623 61060 649974 481000))
 
 ;;;***
 
-(provide 'goto-chg-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; goto-chg-autoloads.el ends here

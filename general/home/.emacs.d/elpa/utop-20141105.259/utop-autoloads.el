@@ -1,10 +1,11 @@
 ;;; utop-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (utop) "utop" "utop.el" (21615 59887 513241 588000))
-;;; Generated autoloads from utop.el
+;;;### (autoloads nil "utop" "../../../../../../../.emacs.d/elpa/utop-20141105.259/utop.el"
+;;;;;;  "ade9f153cc31956be51928030589cff5")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/utop-20141105.259/utop.el
 
 (autoload 'utop "utop" "\
 A universal toplevel for OCaml.
@@ -26,15 +27,15 @@ Special keys for utop:
 
 ;;;***
 
-;;;### (autoloads nil nil ("utop-pkg.el") (21615 59887 607199 106000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/utop-20141105.259/utop-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/utop-20141105.259/utop.el")
+;;;;;;  (21623 61128 320425 734000))
 
 ;;;***
 
-(provide 'utop-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; utop-autoloads.el ends here

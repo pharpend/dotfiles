@@ -1,11 +1,11 @@
 ;;; auctex-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (turn-on-bib-cite bib-cite-minor-mode) "bib-cite"
-;;;;;;  "bib-cite.el" (21615 59686 409650 435000))
-;;; Generated autoloads from bib-cite.el
+;;;### (autoloads nil "bib-cite" "../../../../../../../.emacs.d/elpa/auctex-11.88/bib-cite.el"
+;;;;;;  "fc46c46f400a42af007fd42ce73395be")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/bib-cite.el
 
 (autoload 'bib-cite-minor-mode "bib-cite" "\
 Toggle bib-cite mode.
@@ -22,9 +22,9 @@ Unconditionally turn on Bib Cite mode.
 
 ;;;***
 
-;;;### (autoloads (context-mode) "context" "context.el" (21615 59698
-;;;;;;  271725 605000))
-;;; Generated autoloads from context.el
+;;;### (autoloads nil "context" "../../../../../../../.emacs.d/elpa/auctex-11.88/context.el"
+;;;;;;  "aaede47229785ee362c712c6887cc44f")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/context.el
 
 (defalias 'ConTeXt-mode 'context-mode)
 
@@ -42,9 +42,9 @@ of ConTeXt-mode-hook.
 
 ;;;***
 
-;;;### (autoloads (context-en-mode) "context-en" "context-en.el"
-;;;;;;  (21615 59687 342656 253000))
-;;; Generated autoloads from context-en.el
+;;;### (autoloads nil "context-en" "../../../../../../../.emacs.d/elpa/auctex-11.88/context-en.el"
+;;;;;;  "5ac2595246062777c61ed4104a93cf61")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/context-en.el
 
 (autoload 'context-en-mode "context-en" "\
 Major mode for editing files for ConTeXt using its english interface.
@@ -60,9 +60,9 @@ of context-mode-hook.
 
 ;;;***
 
-;;;### (autoloads (context-nl-mode) "context-nl" "context-nl.el"
-;;;;;;  (21615 59698 397726 422000))
-;;; Generated autoloads from context-nl.el
+;;;### (autoloads nil "context-nl" "../../../../../../../.emacs.d/elpa/auctex-11.88/context-nl.el"
+;;;;;;  "f5ed983cd477814f04e4a63affd4f323")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/context-nl.el
 
 (autoload 'context-nl-mode "context-nl" "\
 Major mode for editing files for ConTeXt using its dutch interface.
@@ -78,9 +78,9 @@ of context-mode-hook.
 
 ;;;***
 
-;;;### (autoloads (font-latex-setup) "font-latex" "font-latex.el"
-;;;;;;  (21615 59686 461650 758000))
-;;; Generated autoloads from font-latex.el
+;;;### (autoloads nil "font-latex" "../../../../../../../.emacs.d/elpa/auctex-11.88/font-latex.el"
+;;;;;;  "2f06608b82005569dd347d3534c206e3")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/font-latex.el
 
 (autoload 'font-latex-setup "font-latex" "\
 Setup this buffer for LaTeX font-lock.  Usually called from a hook.
@@ -89,9 +89,9 @@ Setup this buffer for LaTeX font-lock.  Usually called from a hook.
 
 ;;;***
 
-;;;### (autoloads (docTeX-mode TeX-latex-mode BibTeX-auto-store)
-;;;;;;  "latex" "latex.el" (21615 59697 339719 609000))
-;;; Generated autoloads from latex.el
+;;;### (autoloads nil "latex" "../../../../../../../.emacs.d/elpa/auctex-11.88/latex.el"
+;;;;;;  "9c28d1203d5a7208323289d2b39535ae")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/latex.el
 
 (autoload 'BibTeX-auto-store "latex" "\
 This function should be called from `bibtex-mode-hook'.
@@ -127,9 +127,9 @@ runs the hooks in `docTeX-mode-hook'.
 
 ;;;***
 
-;;;### (autoloads (multi-prompt-key-value multi-prompt) "multi-prompt"
-;;;;;;  "multi-prompt.el" (21615 59697 129718 259000))
-;;; Generated autoloads from multi-prompt.el
+;;;### (autoloads nil "multi-prompt" "../../../../../../../.emacs.d/elpa/auctex-11.88/multi-prompt.el"
+;;;;;;  "ec1c94ddf907b2d0fe04131a14dd9397")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/multi-prompt.el
 
 (autoload 'multi-prompt "multi-prompt" "\
 Completing prompt for a list of strings.  
@@ -157,9 +157,9 @@ The return value is the string as entered in the minibuffer.
 
 ;;;***
 
-;;;### (autoloads (ams-tex-mode TeX-plain-tex-mode) "plain-tex" "plain-tex.el"
-;;;;;;  (21615 59697 297719 337000))
-;;; Generated autoloads from plain-tex.el
+;;;### (autoloads nil "plain-tex" "../../../../../../../.emacs.d/elpa/auctex-11.88/plain-tex.el"
+;;;;;;  "f779fa6e1110cb9255a3a5adacf8911c")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/plain-tex.el
 
 (autoload 'TeX-plain-tex-mode "plain-tex" "\
 Major mode in AUCTeX for editing plain TeX files.
@@ -189,9 +189,9 @@ of `AmS-TeX-mode-hook'.
 
 ;;;***
 
-;;;### (autoloads (preview-report-bug LaTeX-preview-setup preview-install-styles)
-;;;;;;  "preview" "preview.el" (21615 59697 45717 725000))
-;;; Generated autoloads from preview.el
+;;;### (autoloads nil "preview" "../../../../../../../.emacs.d/elpa/auctex-11.88/preview.el"
+;;;;;;  "3e7c4464be8fe283a721d02ad8897170")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/preview.el
 
 (autoload 'preview-install-styles "preview" "\
 Installs the TeX style files into a permanent location.
@@ -221,10 +221,9 @@ Report a bug in the preview-latex package.
 
 ;;;***
 
-;;;### (autoloads (TeX-submit-bug-report TeX-auto-generate-global
-;;;;;;  TeX-auto-generate TeX-tex-mode) "tex" "tex.el" (21615 59698
-;;;;;;  355726 147000))
-;;; Generated autoloads from tex.el
+;;;### (autoloads nil "tex" "../../../../../../../.emacs.d/elpa/auctex-11.88/tex.el"
+;;;;;;  "f638c98c80a58baf47dcf982a997608e")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/tex.el
 
 (defalias 'TeX-assoc-string (symbol-function (if (featurep 'xemacs) 'assoc 'assoc-string)))
 
@@ -266,9 +265,9 @@ information about your AUCTeX version and AUCTeX configuration.
 
 ;;;***
 
-;;;### (autoloads (LaTeX-install-toolbar TeX-install-toolbar) "tex-bar"
-;;;;;;  "tex-bar.el" (21615 59697 171718 527000))
-;;; Generated autoloads from tex-bar.el
+;;;### (autoloads nil "tex-bar" "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-bar.el"
+;;;;;;  "d15072908452a8022622ddba3f6537d2")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/tex-bar.el
 
 (autoload 'TeX-install-toolbar "tex-bar" "\
 Install toolbar buttons for TeX mode.
@@ -282,18 +281,18 @@ Install toolbar buttons for LaTeX mode.
 
 ;;;***
 
-;;;### (autoloads nil "tex-fold" "tex-fold.el" (21615 59687 467657
-;;;;;;  27000))
-;;; Generated autoloads from tex-fold.el
+;;;### (autoloads nil "tex-fold" "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-fold.el"
+;;;;;;  "48c6d153797c587ee9fadcda90acb39c")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/tex-fold.el
  (autoload 'TeX-fold-mode "tex-fold" "Minor mode for hiding and revealing macros and environments." t)
 
 (defalias 'tex-fold-mode 'TeX-fold-mode)
 
 ;;;***
 
-;;;### (autoloads (tex-font-setup) "tex-font" "tex-font.el" (21615
-;;;;;;  59687 300655 989000))
-;;; Generated autoloads from tex-font.el
+;;;### (autoloads nil "tex-font" "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-font.el"
+;;;;;;  "6cb30f3aa1f7aba735901cdeb6615049")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/tex-font.el
 
 (autoload 'tex-font-setup "tex-font" "\
 Setup font lock support for TeX.
@@ -302,9 +301,9 @@ Setup font lock support for TeX.
 
 ;;;***
 
-;;;### (autoloads (TeX-texinfo-mode) "tex-info" "tex-info.el" (21615
-;;;;;;  59687 123654 878000))
-;;; Generated autoloads from tex-info.el
+;;;### (autoloads nil "tex-info" "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-info.el"
+;;;;;;  "3c28e750ccf0f8082251cca38821dbe9")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/tex-info.el
 
 (defalias 'Texinfo-mode 'texinfo-mode)
 
@@ -321,9 +320,9 @@ value of `Texinfo-mode-hook'.
 
 ;;;***
 
-;;;### (autoloads (japanese-latex-mode japanese-plain-tex-mode) "tex-jp"
-;;;;;;  "tex-jp.el" (21615 59694 470701 234000))
-;;; Generated autoloads from tex-jp.el
+;;;### (autoloads nil "tex-jp" "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-jp.el"
+;;;;;;  "9e0e52469eb692332f6ff454c6727798")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/tex-jp.el
 
 (autoload 'japanese-plain-tex-mode "tex-jp" "\
 Major mode in AUCTeX for editing Japanese plain TeX files.
@@ -339,16 +338,16 @@ Set `japanese-TeX-mode' to t, and enter `TeX-latex-mode'.
 
 ;;;***
 
-;;;### (autoloads nil "tex-site" "tex-site.el" (21615 59686 174648
-;;;;;;  972000))
-;;; Generated autoloads from tex-site.el
+;;;### (autoloads nil "tex-site" "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-site.el"
+;;;;;;  "5648fdf3fc01cdfe543554fc13e27639")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/tex-site.el
  (require 'tex-site)
 
 ;;;***
 
-;;;### (autoloads (texmathp-match-switch texmathp) "texmathp" "texmathp.el"
-;;;;;;  (21615 59697 87717 986000))
-;;; Generated autoloads from texmathp.el
+;;;### (autoloads nil "texmathp" "../../../../../../../.emacs.d/elpa/auctex-11.88/texmathp.el"
+;;;;;;  "39e6000daf5c9c5ac7bb7fe6da506713")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/texmathp.el
 
 (autoload 'texmathp "texmathp" "\
 Determine if point is inside (La)TeX math mode.
@@ -367,24 +366,47 @@ Limit searched to BOUND.
 
 ;;;***
 
-;;;### (autoloads nil "toolbar-x" "toolbar-x.el" (21615 59694 614702
-;;;;;;  160000))
-;;; Generated autoloads from toolbar-x.el
+;;;### (autoloads nil "toolbar-x" "../../../../../../../.emacs.d/elpa/auctex-11.88/toolbar-x.el"
+;;;;;;  "b53a339031113a1cc21bde9000be3863")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/auctex-11.88/toolbar-x.el
  (autoload 'toolbarx-install-toolbar "toolbar-x")
 
 ;;;***
 
-;;;### (autoloads nil nil ("auctex-pkg.el" "auctex.el" "prv-emacs.el"
-;;;;;;  "prv-xemacs.el" "tex-buf.el" "tex-mik.el" "tex-style.el"
-;;;;;;  "tex-wizard.el") (21615 59698 449679 905000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/auctex-11.88/auctex-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/auctex-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/auctex.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/bib-cite.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/context-en.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/context-nl.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/context.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/font-latex.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/latex.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/multi-prompt.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/plain-tex.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/preview.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/prv-emacs.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/prv-xemacs.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-bar.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-buf.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-fold.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-font.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-info.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-jp.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-mik.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-site.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-style.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex-wizard.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/tex.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/texmathp.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/auctex-11.88/toolbar-x.el")
+;;;;;;  (21623 60945 51878 98000))
 
 ;;;***
 
-(provide 'auctex-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; auctex-autoloads.el ends here

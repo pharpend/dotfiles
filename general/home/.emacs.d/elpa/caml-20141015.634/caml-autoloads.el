@@ -1,11 +1,11 @@
 ;;; caml-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (camldebug) "camldebug" "camldebug.el" (21615 59855
-;;;;;;  940951 582000))
-;;; Generated autoloads from camldebug.el
+;;;### (autoloads nil "camldebug" "../../../../../../../.emacs.d/elpa/caml-20141015.634/camldebug.el"
+;;;;;;  "34d8ff534b6af1091d78780e19cb7455")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/caml-20141015.634/camldebug.el
 
 (defvar camldebug-command-name "ocamldebug" "\
 *Pathname for executing camldebug.")
@@ -20,18 +20,26 @@ the camldebug commands `cd DIR' and `directory'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("caml-compat.el" "caml-emacs.el" "caml-font-old.el"
-;;;;;;  "caml-font.el" "caml-help.el" "caml-hilit.el" "caml-pkg.el"
-;;;;;;  "caml-types.el" "caml-xemacs.el" "caml.el" "inf-caml.el")
-;;;;;;  (21615 59856 202437 940000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-compat.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-emacs.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-font-old.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-font.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-help.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-hilit.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-types.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml-xemacs.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/caml.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/camldebug.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/caml-20141015.634/inf-caml.el")
+;;;;;;  (21623 61116 575117 879000))
 
 ;;;***
 
-(provide 'caml-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; caml-autoloads.el ends here

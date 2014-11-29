@@ -1,1 +1,1 @@
-(define-package "highlight-indentation" "20131207.835" "Minor modes for highlighting indentation" (quote nil))
+(define-package "highlight-indentation" "20131207.835" "Minor modes for highlighting indentation" 'nil :url "https://github.com/antonj/Highlight-Indentation-for-Emacs")

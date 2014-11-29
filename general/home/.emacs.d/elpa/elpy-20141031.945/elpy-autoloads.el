@@ -1,11 +1,11 @@
 ;;; elpy-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (elpy-version elpy-config elpy-mode elpy-enable)
-;;;;;;  "elpy" "elpy.el" (21615 59798 164456 850000))
-;;; Generated autoloads from elpy.el
+;;;### (autoloads nil "elpy" "../../../../../../../.emacs.d/elpa/elpy-20141031.945/elpy.el"
+;;;;;;  "e1df154aee327c7f6089978c8c0112b9")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/elpy-20141031.945/elpy.el
 
 (autoload 'elpy-enable "elpy" "\
 Enable Elpy in all future Python buffers.
@@ -42,16 +42,17 @@ Display the version of Elpy.
 
 ;;;***
 
-;;;### (autoloads nil nil ("elpy-pkg.el" "elpy-refactor.el") (21615
-;;;;;;  59803 880319 979000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/elpy-20141031.945/elpy-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/elpy-20141031.945/elpy-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/elpy-20141031.945/elpy-refactor.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/elpy-20141031.945/elpy.el")
+;;;;;;  (21623 61057 599164 610000))
 
 ;;;***
 
-(provide 'elpy-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; elpy-autoloads.el ends here

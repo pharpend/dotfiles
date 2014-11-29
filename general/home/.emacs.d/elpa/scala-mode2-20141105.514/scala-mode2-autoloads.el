@@ -1,11 +1,11 @@
 ;;; scala-mode2-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (scala-mode scala-mode:set-scala-syntax-mode) "scala-mode2"
-;;;;;;  "scala-mode2.el" (21615 59839 880809 279000))
-;;; Generated autoloads from scala-mode2.el
+;;;### (autoloads nil "scala-mode2" "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2.el"
+;;;;;;  "81698e71dbb48700f29e017b390ee4f4")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2.el
 
 (autoload 'scala-mode:set-scala-syntax-mode "scala-mode2" "\
 Sets the syntax-table and other realted variables for the current buffer to those of scala-mode. Can be used to make some other major mode (such as sbt-mode) use scala syntax-table.
@@ -27,18 +27,23 @@ When started, runs `scala-mode-hook'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("scala-mode2-fontlock.el" "scala-mode2-indent.el"
-;;;;;;  "scala-mode2-lib.el" "scala-mode2-map.el" "scala-mode2-paragraph.el"
-;;;;;;  "scala-mode2-pkg.el" "scala-mode2-sbt.el" "scala-mode2-syntax.el")
-;;;;;;  (21615 59840 258675 447000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-fontlock.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-indent.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-lib.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-map.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-paragraph.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-sbt.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2-syntax.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/scala-mode2-20141105.514/scala-mode2.el")
+;;;;;;  (21623 61100 400194 848000))
 
 ;;;***
 
-(provide 'scala-mode2-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; scala-mode2-autoloads.el ends here

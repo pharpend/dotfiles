@@ -1,11 +1,11 @@
 ;;; undo-tree-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (global-undo-tree-mode undo-tree-mode) "undo-tree"
-;;;;;;  "undo-tree.el" (21615 59807 444533 39000))
-;;; Generated autoloads from undo-tree.el
+;;;### (autoloads nil "undo-tree" "../../../../../../../.emacs.d/elpa/undo-tree-20140509.522/undo-tree.el"
+;;;;;;  "ed8d19643922a3d2863ac4c34abcdfc5")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/undo-tree-20140509.522/undo-tree.el
 
 (autoload 'undo-tree-mode "undo-tree" "\
 Toggle undo-tree mode.
@@ -50,16 +50,15 @@ See `undo-tree-mode' for more information on Undo-Tree mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("undo-tree-pkg.el") (21615 59807 551098
-;;;;;;  861000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/undo-tree-20140509.522/undo-tree-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/undo-tree-20140509.522/undo-tree.el")
+;;;;;;  (21623 61061 568456 87000))
 
 ;;;***
 
-(provide 'undo-tree-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; undo-tree-autoloads.el ends here

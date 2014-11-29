@@ -1,12 +1,11 @@
 ;;; neotree-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (neotree-dir neotree-hide neotree-show neotree-toggle
-;;;;;;  neotree-projectile-action neotree-find) "neotree" "neotree.el"
-;;;;;;  (21615 59832 850748 111000))
-;;; Generated autoloads from neotree.el
+;;;### (autoloads nil "neotree" "../../../../../../../.emacs.d/elpa/neotree-20141119.443/neotree.el"
+;;;;;;  "daf32a5aa57df79fed7dd5bab1d7eeb6")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/neotree-20141119.443/neotree.el
 
 (autoload 'neotree-find "neotree" "\
 Quick select node which specified PATH in NeoTree.
@@ -50,16 +49,15 @@ Show the NeoTree window.")
 
 ;;;***
 
-;;;### (autoloads nil nil ("neotree-pkg.el") (21615 59832 950639
-;;;;;;  25000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/neotree-20141119.443/neotree-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/neotree-20141119.443/neotree.el")
+;;;;;;  (21623 61090 50061 574000))
 
 ;;;***
 
-(provide 'neotree-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; neotree-autoloads.el ends here

@@ -1,12 +1,11 @@
 ;;; pyvenv-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (pyvenv-restart-python pyvenv-tracking-mode pyvenv-mode
-;;;;;;  pyvenv-workon pyvenv-deactivate pyvenv-activate) "pyvenv"
-;;;;;;  "pyvenv.el" (21615 59795 587435 973000))
-;;; Generated autoloads from pyvenv.el
+;;;### (autoloads nil "pyvenv" "../../../../../../../.emacs.d/elpa/pyvenv-20140921.816/pyvenv.el"
+;;;;;;  "e089ad9f666511219d36048e4f02efe5")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/pyvenv-20140921.816/pyvenv.el
 
 (autoload 'pyvenv-activate "pyvenv" "\
 Activate the virtual environment in DIRECTORY.
@@ -65,15 +64,15 @@ Restart Python inferior processes.
 
 ;;;***
 
-;;;### (autoloads nil nil ("pyvenv-pkg.el") (21615 59795 681142 198000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/pyvenv-20140921.816/pyvenv-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/pyvenv-20140921.816/pyvenv.el")
+;;;;;;  (21623 61049 437408 612000))
 
 ;;;***
 
-(provide 'pyvenv-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; pyvenv-autoloads.el ends here

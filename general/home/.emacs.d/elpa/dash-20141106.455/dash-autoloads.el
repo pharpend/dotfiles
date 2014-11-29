@@ -1,18 +1,17 @@
 ;;; dash-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("dash-pkg.el" "dash.el") (21615 59713
-;;;;;;  580905 862000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/dash-20141106.455/dash-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/dash-20141106.455/dash.el")
+;;;;;;  (21623 60971 425526 121000))
 
 ;;;***
 
-(provide 'dash-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; dash-autoloads.el ends here

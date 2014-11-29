@@ -1,11 +1,11 @@
 ;;; git-commit-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (git-commit-mode) "git-commit-mode" "git-commit-mode.el"
-;;;;;;  (21615 59826 579694 132000))
-;;; Generated autoloads from git-commit-mode.el
+;;;### (autoloads nil "git-commit-mode" "../../../../../../../.emacs.d/elpa/git-commit-mode-20141014.1634/git-commit-mode.el"
+;;;;;;  "28b46c6a25ff55da7ca2c51e70105de0")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/git-commit-mode-20141014.1634/git-commit-mode.el
 
 (autoload 'git-commit-mode "git-commit-mode" "\
 Major mode for editing git commit messages.
@@ -22,16 +22,15 @@ basic structure of and errors in git commit messages.
 
 ;;;***
 
-;;;### (autoloads nil nil ("git-commit-mode-pkg.el") (21615 59826
-;;;;;;  668446 716000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/git-commit-mode-20141014.1634/git-commit-mode-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/git-commit-mode-20141014.1634/git-commit-mode.el")
+;;;;;;  (21623 61083 136665 375000))
 
 ;;;***
 
-(provide 'git-commit-mode-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; git-commit-mode-autoloads.el ends here

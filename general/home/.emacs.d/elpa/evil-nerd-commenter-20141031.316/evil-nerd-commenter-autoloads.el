@@ -1,15 +1,11 @@
 ;;; evil-nerd-commenter-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (evilnc-default-hotkeys evilnc-version evilnc-kill-to-line
-;;;;;;  evilnc-copy-to-line evilnc-copy-and-comment-lines evilnc-comment-or-uncomment-lines
-;;;;;;  evilnc-toggle-comment-empty-lines evilnc-toggle-invert-comment-line-by-line
-;;;;;;  evilnc-quick-comment-or-uncomment-to-the-line evilnc-comment-or-uncomment-to-the-line
-;;;;;;  evilnc-comment-or-uncomment-paragraphs) "evil-nerd-commenter"
-;;;;;;  "evil-nerd-commenter.el" (21615 59812 900578 403000))
-;;; Generated autoloads from evil-nerd-commenter.el
+;;;### (autoloads nil "evil-nerd-commenter" "../../../../../../../.emacs.d/elpa/evil-nerd-commenter-20141031.316/evil-nerd-commenter.el"
+;;;;;;  "e69bcfdba9ad82b1916f066008e34e49")
+;;; Generated autoloads from ../../../../../../../.emacs.d/elpa/evil-nerd-commenter-20141031.316/evil-nerd-commenter.el
 
 (autoload 'evilnc-comment-or-uncomment-paragraphs "evil-nerd-commenter" "\
 Comment or uncomment paragraph(s). A paragraph is a continuation non-empty lines.
@@ -79,16 +75,17 @@ Set the hotkeys of evil-nerd-comment
 
 ;;;***
 
-;;;### (autoloads nil nil ("evil-nerd-commenter-operator.el" "evil-nerd-commenter-pkg.el")
-;;;;;;  (21615 59812 983995 643000))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/elpa/evil-nerd-commenter-20141031.316/evil-nerd-commenter-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-nerd-commenter-20141031.316/evil-nerd-commenter-operator.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-nerd-commenter-20141031.316/evil-nerd-commenter-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/elpa/evil-nerd-commenter-20141031.316/evil-nerd-commenter.el")
+;;;;;;  (21623 61066 852455 273000))
 
 ;;;***
 
-(provide 'evil-nerd-commenter-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; evil-nerd-commenter-autoloads.el ends here
