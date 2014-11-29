@@ -10,6 +10,7 @@ general_packages=(
     app-editors/vim
     app-editors/zile
     app-portage/eix
+    app-portage/flaggie
     app-portage/gentoolkit
     app-portage/layman
     app-shells/zsh
@@ -30,12 +31,14 @@ general_packages=(
     net-misc/dropbox
     net-misc/wget
     sys-devel/clang
+    sys-devel/distcc
     sys-power/acpi
     www-client/chromium
     www-client/firefox-bin
     x11-misc/compton
     x11-misc/dmenu
     x11-misc/dunst
+    x11-misc/i3status
     x11-misc/nitrogen
     x11-misc/parcellite
     x11-misc/pcmanfm
@@ -94,7 +97,6 @@ for pkg in $haskell_packages ; do
 done
 
 ovl_packages=(
-    media-fonts/powerline-fonts
     x11-themes/numix
     x11-themes/numix-icon-theme
 )

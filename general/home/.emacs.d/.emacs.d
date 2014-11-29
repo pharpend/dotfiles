@@ -1,1 +1,0 @@
-/home/pete/src/dotfiles/.emacs.d

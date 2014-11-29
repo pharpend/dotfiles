@@ -54,7 +54,7 @@
                       wc-mode
                       web-mode
                       yaml-mode
-		      yari))
+		              yari))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

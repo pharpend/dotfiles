@@ -18,7 +18,7 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango: Inconsolata for Powerline 10
+font pango: Sauce Code Powerline 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -128,7 +128,7 @@ exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rc
 # finds out, if available)
 bar {
     position top
-    # status_command $HOME/bin/barinfo
+    status_command i3status
 
     colors {
         background #073642
