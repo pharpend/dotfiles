@@ -27,6 +27,7 @@ Non-essentials
     gentoolkit
     ghc
     git
+    gnome-system-monitor
     gvfs
     i3
     i3status
