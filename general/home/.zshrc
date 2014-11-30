@@ -16,7 +16,7 @@ compinit
 # [[ -z "$TMUX" ]] && exec tmux
 
 # My bash aliases
-alias ls='ls --color=auto -F --ignore="*~"'
+alias ls='ls -F -G'
 alias l='ls -l'
 alias la='l -a'
 alias grep='grep --color=tty -d skip'
@@ -209,7 +209,7 @@ RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 REPORTTIME=3
 
 export EDITOR="vim"
-export SHELL="/bin/zsh"
+export SHELL=$(which zsh)
 export rvm_ignore_gemrc_issues=1
 
 export PATH=$PATH:$HOME/bin
