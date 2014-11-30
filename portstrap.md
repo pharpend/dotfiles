@@ -1,6 +1,13 @@
 This is a list of packages I will use on my next FreeBSD install.
 
-    acpi
+The essentials (need these to do the other things)
+
+    git
+    sudo
+    zsh
+
+Non-essentials
+
     alpine
     cabal-install
     chromium
