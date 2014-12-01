@@ -11,7 +11,7 @@ rm -rf ~/.emacs               &&
 rm -rf ~/.ghc/ghci.conf       &&
 rm -rf ~/.emacs.d             &&
 rm -rf ~/.icons               &&
-rm -rf ~/.mpd                 &&
+rm -rf ~/.config/mpd          &&
 rm -rf ~/.ncmpcpp             &&
 rm -rf ~/.zshrc               &&
 rm -rf ~/.zshlex              
@@ -26,7 +26,7 @@ ln -sf $dpath/.emacs              ~/.emacs              &&
 ln -sf $dpath/.ghc/ghci.conf      ~/.ghc/ghci.conf      &&
 ln -sf $dpath/.emacs.d            ~/.emacs.d            &&
 ln -sf $dpath/.icons              ~/.icons              &&
-ln -sf $dpath/.mpd                ~/.mpd                &&
+ln -sf $dpath/.config/mpd         ~/.config/mpd         &&
 ln -sf $dpath/.ncmpcpp            ~/.ncmpcpp            &&
 ln -sf $dpath/.zshrc              ~/.zshrc              &&
 ln -sf $dpath/.zshlex             ~/.zshlex
