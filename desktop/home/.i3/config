@@ -200,9 +200,8 @@ bar {
 
 # Application keybindings
 bindsym $mod+grave exec firefox-bin
-bindsym $mod+q exec dwb
-bindsym $mod+c exec google-chrome-stable
-bindsym $mod+Shift+c exec google-chrome-stable --incognito
+bindsym $mod+q exec google-chrome-stable
+bindsym $mod+c exec xombrero
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura

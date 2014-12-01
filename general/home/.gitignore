@@ -8,3 +8,4 @@ general/home/.emacs.d/abbrev_defs
 /.mpd/mpd.log
 /.mpd/mpdstate
 /.mpd/mpd.pid
+.emacs.d/ac-comphist.dat

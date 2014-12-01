@@ -13,7 +13,7 @@ rm -rf ~/.fonts               &&
 rm -rf ~/.gitconfig           &&
 rm -rf ~/.ghc/ghci.conf       &&
 rm -rf ~/.icons               &&
-rm -rf ~/.mpd                 &&
+rm -rf ~/.config/mpd          &&
 rm -rf ~/.ncmpcpp             &&
 rm -rf ~/.vim                 &&
 rm -rf ~/.vimrc               &&
@@ -34,7 +34,7 @@ ln -sf $dpath/.fonts              ~/.fonts              &&
 ln -sf $dpath/.gitconfig          ~/.gitconfig          &&
 ln -sf $dpath/.ghc/ghci.conf      ~/.ghc/ghci.conf      &&
 ln -sf $dpath/.icons              ~/.icons              &&
-ln -sf $dpath/.mpd                ~/.mpd                &&
+ln -sf $dpath/.config/mpd         ~/.config/mpd         &&
 ln -sf $dpath/.ncmpcpp            ~/.ncmpcpp            &&
 ln -sf $dpath/.vim                ~/.vim                &&
 ln -sf $dpath/.vimrc              ~/.vimrc              &&
