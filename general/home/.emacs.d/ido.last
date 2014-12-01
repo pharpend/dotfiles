@@ -1,0 +1,34 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/usr/home/pete/dotfiles/general/home/.emacs.d/" . "config/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/pete/"
+ "/usr/home/pete/dotfiles/general/home/.emacs.d/config/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".zshrc"
+ "elpa.el"
+ "errata.el"
+ ".emacs"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/pete/" (21627 27650 973487 391000) ".mpd/" ".vimrc" ".cache/" ".rhosts" "dotfiles/" ".ghc/" ".serverauth.2166" ".serverauth.802" ".xinitrc~" ".ncmpcpp/" ".profile" ".ssh/" ".rnd" ".xinitrc" ".cshrc" ".viminfo" ".zshrc~" ".gnome2_private/" ".login_conf" ".profile~" ".i3/" "..profile.un~" ".Xresources" ".mailrc" ".config/" ".emacs.d/" ".dbus/" "emacs-24.4.core" ".mail_aliases" ".barinfo" ".fonts/" "bin/" ".histfile" ".emacs" ".zshlex/" ".shrc" ".icons/" ".vim/" ".saves/" ".local/" ".zcompdump" ".urxvt/" ".serverauth.53789" ".Xauthority" ".login" ".gnome2/" ".zshrc" "../" "./")
+
+ ("/usr/home/pete/dotfiles/general/home/.emacs.d/config/" (21626 28847 369236 2000) "ft-javascript.el" "errata.el" "ft-nxml.el" "paredit.el" "ft-clojure.el" "ft-java.el" "ft-c.el" "ft-makefile.el" "ft-scss.el" "ft-perl.el" "ft-clojure-test.el" "ftopts.el" "ft-bibtex.el" "ft-css.el" "global-keybindings.el" "slime.el" "ft-cl.el" "cider.el" "elpa.el" "ft-ml.el" "ft-yaml.el" "ft-latex.el" "ft-emacs-lisp.el" "ft-dired.el" "lf.el" "ft-ruby.el" "ft-racket.el" "cider-repl.el" "ft-web.el" "ft-zsh.el" "ft-vala.el" "ft-scala.el" "evil.el" "ft-html.el" "functions.el" "editing.el" "ft-conf.el" "ft-cabal.el" "ft-scheme.el" "ft-haskell.el" "ft-python.el" "ft-text.el" "ft-markdown.el" "../" "./")
+
+ ("/usr/home/pete/dotfiles/general/home/.emacs.d/" (21627 27200 311617 197000) "errat/" "config/" "ac-comphist.dat" ".mc-lists.el" "elpa/" "pandoc-mode/" "abbrev_defs" "../" "./")
+
+ ("/usr/home/pete/dotfiles/general/home/" (21627 26984 212447 383000) ".zshrc" ".gitconfig" ".emacs.d/" ".barinfo" ".icons/" ".Xresources" ".emacs" ".fonts/" "linker.sh" ".config/" ".zshlex/" ".linker.sh.un~" ".vim/" ".themes/" "bin/" "linker.sh~" ".mpd/" "..zshrc.un~" ".ghc/" "..xinitrc.un~" ".gitignore" ".vimrc" ".ncmpcpp/" ".xinitrc" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
