@@ -2,11 +2,18 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/pete/docs/school/math2280/" . "hw5/")
+ ("/home/" . "pete/")
+ ("/home/pete/docs/school/" . "math2280/")
+ ("/home/pete/docs/" . "school/")
+ ("/home/pete/" . "docs/")
  ("/usr/home/pete/dotfiles/general/home/.emacs.d/" . "config/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/pete/docs/school/math2280/hw5/"
+ "/home/pete/docs/school/math2280/notes/"
  "/home/pete/.i3/"
  "/home/pete/"
  "/usr/home/pete/dotfiles/general/home/.emacs.d/config/"
@@ -14,6 +21,8 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "141201.md"
+ "140202.md"
  "config"
  ".Xresources"
  ".zshrc"
@@ -24,9 +33,23 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/pete/.i3/" (21625 1455 863262 58000) "./" "../" "config")
+ ("/home/pete/docs/school/math2280/hw5/" (21629 61990 370461 245000) "pharpend-hw5.pdf" "3.3.7.png" "build" "./" "pharpend-hw5.ltx" "../" "3.4.11.png")
 
- ("/home/pete/" (21628 30758 716637 335000) ".nix-profile/" ".config/" ".pinerc" ".grip-lame" ".emacs" ".gimp-2.8/" "videos/" "hindent.cfg~" ".serverauth.2763" ".mpderrat/" ".serverauth.3234" ".glurp" ".VirtualBox/" "builds/" ".mpd" ".gpg.rc" "gitlab/" ".muttrc" ".distcc/" ".dropbox/" ".ncmpcpp/" "pics/" ".pry_history" ".nix-defexpr/" ".mutt/" ".pine-debug3" "AndroidDevice/" ".gmail.conf" "docs/" ".xsession-errors" ".opam/" ".gnupg/" ".vim/" ".serverauth.2642" ".cddb/" ".pip/" ".Xresources" ".gmail.status.json" ".serverauth.2719" ".grip-flac" "downloads/" ".atom/" ".gnome2_private/" ".pine-debug1" ".riprc" ".mailnum" ".elinks/" "overlays/" ".serverauth.2411" ".cache/" ".fonts/" ".viminfo" ".android/" ".topal/" "keys/" ".emacs.d/" ".histfile" "openvpn.tar.gz" ".mittens/" ".gnome2/" ".gtkrc-2.0" ".aliases" ".sqlite_history" ".bashrc" ".pki/" ".pine-passfile" ".Xauthority" ".serverauth.2599" ".cabal/" ".ghc/" ".serverauth.19932" ".aspell.en.prepl" ".icons/" "./" ".pine-crash" ".serverauth.2626" ".food.md" ".links/" "mail/" ".grip-l3enc" ".Mathematica/" ".bash_history" ".serverauth.2290" "bin/" ".pine-debug4" ".mailinfo" ".gitconfig" ".i3/" "sync/" "src/" ".pine-debug2" ".mail" ".mutt_certificates" ".python-eggs/" ".ido.last~" ".xombrero/" ".gnome/" ".barinfo-errors" "Dropbox/" ".dropbox-dist/" ".ipython/" ".vimrc" ".xsel.log" ".bash_profile" ".ssh/" ".xinitrc" "ff.log.gpg" ".grip-cdparanoia" ".utop-history" ".zshrc" ".sage/" ".journal.md" ".urxvt/" ".addressbook" ".serverauth.2321" ".ido.last" ".scratch.cpp" "../" ".serverauth.8145" ".dbus/" "music/" ".thumbnails/" ".ocaml_history" ".dmenu_cache" ".themes/" ".serverauth.2660" ".mozilla/" ".local/" ".cmus/" ".signature" ".lyrics/" ".grip" ".grip-oggenc" ".weechat/" ".maildir/" ".ocamlinit" "prj/" ".alpine-smime/" ".barinfo" ".lesshst" ".gem/" ".serverauth.2435" ".serverauth.2634" ".zshlex/" ".gtk-bookmarks" ".serverauth.7656" ".zcompdump" "ff.log" ".saves/" ".nix-channels" ".bash_logout" "x.txt" ".gstreamer-0.10/" ".aspell.en.pws" ".fontf/" ".puffytools/")
+ ("/home/pete/" (21629 61979 950460 708000) ".nix-profile/" ".config/" ".pinerc" ".grip-lame" ".emacs" ".gimp-2.8/" "videos/" "hindent.cfg~" ".serverauth.2763" ".mpderrat/" ".serverauth.3234" ".glurp" ".VirtualBox/" "builds/" ".mpd" ".gpg.rc" "gitlab/" ".muttrc" ".serverauth.2760" ".distcc/" ".dropbox/" ".ncmpcpp/" "pics/" ".pry_history" ".nix-defexpr/" ".mutt/" ".pine-debug3" "AndroidDevice/" ".gmail.conf" "docs/" ".xsession-errors" ".opam/" ".gnupg/" ".vim/" ".serverauth.2642" ".cddb/" ".pip/" ".Xresources" ".gmail.status.json" ".serverauth.2719" ".grip-flac" "downloads/" ".atom/" ".gnome2_private/" ".pine-debug1" ".riprc" ".mailnum" ".elinks/" "overlays/" ".serverauth.2411" ".cache/" ".fonts/" ".viminfo" ".android/" ".topal/" "keys/" ".emacs.d/" ".histfile" ".mittens/" ".gnome2/" ".gtkrc-2.0" ".aliases" ".sqlite_history" ".bashrc" ".pki/" ".pine-passfile" ".Xauthority" ".serverauth.2599" ".cabal/" ".ghc/" ".serverauth.19932" ".aspell.en.prepl" ".icons/" "./" ".pine-crash" ".serverauth.2626" ".food.md" ".links/" "mail/" ".grip-l3enc" ".Mathematica/" ".bash_history" ".serverauth.2290" "bin/" ".pine-debug4" ".mailinfo" ".gitconfig" ".i3/" "sync/" "src/" ".pine-debug2" ".mail" ".mutt_certificates" ".python-eggs/" ".ido.last~" ".xombrero/" ".gnome/" ".barinfo-errors" "Dropbox/" ".dropbox-dist/" ".ipython/" ".vimrc" ".xsel.log" ".bash_profile" ".ssh/" ".xinitrc" ".grip-cdparanoia" ".utop-history" ".zshrc" ".sage/" ".journal.md" ".urxvt/" ".addressbook" ".serverauth.2321" ".ido.last" ".scratch.cpp" "../" ".serverauth.8145" ".dbus/" "music/" ".thumbnails/" ".ocaml_history" ".dmenu_cache" ".themes/" ".mpv/" ".serverauth.2660" ".mozilla/" ".local/" ".cmus/" ".signature" ".lyrics/" ".grip" ".grip-oggenc" ".weechat/" ".maildir/" ".ocamlinit" "prj/" ".alpine-smime/" ".barinfo" ".lesshst" ".gem/" ".serverauth.2435" ".serverauth.2634" ".zshlex/" ".gtk-bookmarks" ".serverauth.7656" ".zcompdump" ".saves/" ".nix-channels" ".bash_logout" ".gstreamer-0.10/" ".aspell.en.pws" ".fontf/" ".puffytools/")
+
+ ("/home/pete/docs/school/math2280/notes/" (21629 58655 176289 185000) "./" "141201.md" "../" ".#140202.md")
+
+ ("/home/" (21538 4165 883580 380000) "sys/" "pete/" "./" "proc/" "dev/" "lost+found/" "../" ".keep")
+
+ ("/home/pete/src/" (21615 39459 62084 623000) "learn/" "dead/" "private-dots/" "./" "dotfiles/" "web/" "../" "scratch/" "passchuse/" "puffytools/")
+
+ ("/home/pete/.i3/" (21628 30913 550648 378000) "./" "../" "config")
+
+ ("/home/pete/docs/school/math2280/" (21588 358 819011 633000) "hw1/" "./" "hw2/" "hw3/" "hw4/" "hw5/" "../" "notes/")
+
+ ("/home/pete/docs/school/" (21583 45032 66711 909000) "math2280/" "./" "wrtg2010/" "../" "Phys2210/")
+
+ ("/home/pete/docs/" (21614 21543 959132 846000) "cv/" "diary.ods.gpg" "itemthing" "keys.tar.gz.gpg" "journal.yml.gpg" "composekeys.html" "./" "ubuntu.txt" "../" ".gpg" "rwl/" "todolist.md" "school/")
 
  ("/home/pete/src/dotfiles/general/home/" (21627 57583 32876 397000) ".config/" ".emacs" ".ncmpcpp/" ".vim/" ".Xresources" ".fonts/" ".emacs.d/" ".ghc/" ".icons/" "./" "bin/" ".gitconfig" ".vimrc" ".xinitrc" ".zshrc" "../" ".themes/" "linker.sh" ".gitignore" ".barinfo" ".zshlex/")
 
