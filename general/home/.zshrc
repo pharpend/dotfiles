@@ -115,7 +115,7 @@ dcmsg () {
 
 dot-commit() {
     git add -A .
-    git commit -am "${repo_name}/$(hostname) commit for $(date)"
+    git commit
 }
 
 dotcpd () {

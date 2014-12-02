@@ -2,17 +2,26 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/pete/.emacs.d/" . "config/")
+ ("/home/pete/src/dotfiles/general/home/.emacs.d/" . "config/")
+ ("/home/pete/src/dotfiles/general/" . "home/")
+ ("/home/pete/src/dotfiles/" . "general/")
+ ("/home/pete/src/" . "dotfiles/")
  ("/home/pete/docs/school/math2280/" . "hw5/")
  ("/home/" . "pete/")
  ("/home/pete/docs/school/" . "math2280/")
  ("/home/pete/docs/" . "school/")
- ("/home/pete/" . "docs/")
+ ("/home/pete/" . "src/")
  ("/usr/home/pete/dotfiles/general/home/.emacs.d/" . "config/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/pete/src/dotfiles/general/home/"
+ "/home/pete/.emacs.d/config/"
+ "/home/pete/src/dotfiles/general/home/.emacs.d/config/"
  "/home/pete/docs/school/math2280/hw5/"
+ "/home/pete/src/private-dots/"
  "/home/pete/docs/school/math2280/notes/"
  "/home/pete/.i3/"
  "/home/pete/"
@@ -21,11 +30,13 @@
 
 ;; ----- ido-work-file-list -----
 (
+ ".zshrc"
+ "lf.el"
+ "ft-latex.el"
  "141201.md"
  "140202.md"
  "config"
  ".Xresources"
- ".zshrc"
  "elpa.el"
  "errata.el"
  ".emacs"
@@ -33,9 +44,25 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/pete/docs/school/math2280/hw5/" (21629 61990 370461 245000) "pharpend-hw5.pdf" "3.3.7.png" "build" "./" "pharpend-hw5.ltx" "../" "3.4.11.png")
+ ("/home/pete/src/dotfiles/general/home/.emacs.d/" (21629 63187 554523 7000) "ac-comphist.dat" "elpa/" "abbrev_defs" ".mc-lists.el" "./" "ido.last" "../" "config/" "auto-save-list/" "errat/" "pandoc-mode/")
 
- ("/home/pete/" (21629 61979 950460 708000) ".nix-profile/" ".config/" ".pinerc" ".grip-lame" ".emacs" ".gimp-2.8/" "videos/" "hindent.cfg~" ".serverauth.2763" ".mpderrat/" ".serverauth.3234" ".glurp" ".VirtualBox/" "builds/" ".mpd" ".gpg.rc" "gitlab/" ".muttrc" ".serverauth.2760" ".distcc/" ".dropbox/" ".ncmpcpp/" "pics/" ".pry_history" ".nix-defexpr/" ".mutt/" ".pine-debug3" "AndroidDevice/" ".gmail.conf" "docs/" ".xsession-errors" ".opam/" ".gnupg/" ".vim/" ".serverauth.2642" ".cddb/" ".pip/" ".Xresources" ".gmail.status.json" ".serverauth.2719" ".grip-flac" "downloads/" ".atom/" ".gnome2_private/" ".pine-debug1" ".riprc" ".mailnum" ".elinks/" "overlays/" ".serverauth.2411" ".cache/" ".fonts/" ".viminfo" ".android/" ".topal/" "keys/" ".emacs.d/" ".histfile" ".mittens/" ".gnome2/" ".gtkrc-2.0" ".aliases" ".sqlite_history" ".bashrc" ".pki/" ".pine-passfile" ".Xauthority" ".serverauth.2599" ".cabal/" ".ghc/" ".serverauth.19932" ".aspell.en.prepl" ".icons/" "./" ".pine-crash" ".serverauth.2626" ".food.md" ".links/" "mail/" ".grip-l3enc" ".Mathematica/" ".bash_history" ".serverauth.2290" "bin/" ".pine-debug4" ".mailinfo" ".gitconfig" ".i3/" "sync/" "src/" ".pine-debug2" ".mail" ".mutt_certificates" ".python-eggs/" ".ido.last~" ".xombrero/" ".gnome/" ".barinfo-errors" "Dropbox/" ".dropbox-dist/" ".ipython/" ".vimrc" ".xsel.log" ".bash_profile" ".ssh/" ".xinitrc" ".grip-cdparanoia" ".utop-history" ".zshrc" ".sage/" ".journal.md" ".urxvt/" ".addressbook" ".serverauth.2321" ".ido.last" ".scratch.cpp" "../" ".serverauth.8145" ".dbus/" "music/" ".thumbnails/" ".ocaml_history" ".dmenu_cache" ".themes/" ".mpv/" ".serverauth.2660" ".mozilla/" ".local/" ".cmus/" ".signature" ".lyrics/" ".grip" ".grip-oggenc" ".weechat/" ".maildir/" ".ocamlinit" "prj/" ".alpine-smime/" ".barinfo" ".lesshst" ".gem/" ".serverauth.2435" ".serverauth.2634" ".zshlex/" ".gtk-bookmarks" ".serverauth.7656" ".zcompdump" ".saves/" ".nix-channels" ".bash_logout" ".gstreamer-0.10/" ".aspell.en.pws" ".fontf/" ".puffytools/")
+ ("/home/pete/src/dotfiles/general/home/.emacs.d/config/" (21629 63217 66524 530000) "evil.el" "ft-cl.el" "ft-ruby.el" "ft-ml.el" "ft-nxml.el" "ft-c.el" "ft-scss.el" "editing.el" "ft-dired.el" "ft-perl.el" "ft-clojure.el" "ft-java.el" "ft-web.el" "ft-scheme.el" "ft-scala.el" "ft-css.el" "ft-zsh.el" "ft-emacs-lisp.el" "slime.el" "cider.el" "./" "lf.el" "ft-javascript.el" "ft-clojure-test.el" "ft-latex.el" "ft-markdown.el" "ft-html.el" "paredit.el" "ft-haskell.el" "global-keybindings.el" "ft-vala.el" "ft-yaml.el" "ft-racket.el" "ftopts.el" "../" "functions.el" "errata.el" "ft-cabal.el" "elpa.el" "ft-text.el" "ft-python.el" "ft-bibtex.el" "ft-makefile.el" "cider-repl.el" "ft-conf.el")
+
+ ("/home/pete/.emacs.d/" (21629 63187 554523 7000) "ac-comphist.dat" "elpa/" "abbrev_defs" ".mc-lists.el" "./" "ido.last" "../" "config/" "auto-save-list/" "errat/" "pandoc-mode/")
+
+ ("/home/pete/.emacs.d/config/" (21629 62952 170510 864000) "evil.el" "ft-cl.el" "ft-ruby.el" "ft-ml.el" "ft-nxml.el" "ft-c.el" "ft-scss.el" "editing.el" "ft-dired.el" "ft-perl.el" "ft-clojure.el" "ft-java.el" "ft-web.el" "ft-scheme.el" "ft-scala.el" "ft-css.el" "ft-zsh.el" "ft-emacs-lisp.el" "slime.el" "cider.el" "./" "lf.el" "ft-javascript.el" "ft-clojure-test.el" "ft-latex.el" "ft-markdown.el" "ft-html.el" "paredit.el" "ft-haskell.el" "global-keybindings.el" "ft-vala.el" "ft-yaml.el" "ft-racket.el" "ftopts.el" "../" "functions.el" "errata.el" "ft-cabal.el" "elpa.el" "ft-text.el" "ft-python.el" "ft-bibtex.el" "ft-makefile.el" "cider-repl.el" "ft-conf.el")
+
+ ("/home/pete/src/dotfiles/general/home/" (21629 62257 847475 44000) ".config/" ".emacs" ".ncmpcpp/" ".vim/" ".Xresources" ".fonts/" ".emacs.d/" ".ghc/" ".icons/" "./" "bin/" ".gitconfig" ".vimrc" ".xinitrc" ".zshrc" "../" ".themes/" "linker.sh" ".gitignore" ".barinfo" ".zshlex/")
+
+ ("/home/pete/src/dotfiles/general/" (21625 1445 52261 73000) "home/" "./" "../")
+
+ ("/home/pete/src/dotfiles/" (21627 56609 648806 975000) "portage-bootstrap.sh" "desktop/" "README.md" "./" "portstrap.md" ".git/" "../" "freebsd/" "laptop/" "LICENSE" ".gitignore" "general/")
+
+ ("/home/pete/docs/school/math2280/hw5/" (21629 62780 882502 27000) "pharpend-hw5.pdf" "3.3.7.png" "build" "./" "pharpend-hw5.ltx" "../" "3.4.11.png")
+
+ ("/home/pete/" (21629 62773 215501 632000) ".nix-profile/" ".config/" ".pinerc" ".grip-lame" ".emacs" ".gimp-2.8/" "videos/" "hindent.cfg~" ".serverauth.2763" ".mpderrat/" ".serverauth.3234" ".glurp" ".VirtualBox/" "builds/" ".mpd" ".gpg.rc" "gitlab/" ".muttrc" ".serverauth.2760" ".distcc/" ".dropbox/" ".ncmpcpp/" "pics/" ".pry_history" ".nix-defexpr/" ".mutt/" ".pine-debug3" "AndroidDevice/" ".gmail.conf" "docs/" ".xsession-errors" ".opam/" ".gnupg/" ".vim/" ".serverauth.2642" ".cddb/" ".pip/" ".Xresources" ".gmail.status.json" ".serverauth.2719" ".grip-flac" "downloads/" ".atom/" ".gnome2_private/" ".pine-debug1" ".riprc" ".mailnum" ".elinks/" "overlays/" ".serverauth.2411" ".cache/" ".fonts/" ".viminfo" ".android/" ".topal/" "keys/" ".emacs.d/" ".histfile" ".mittens/" ".gnome2/" ".gtkrc-2.0" ".aliases" ".sqlite_history" ".bashrc" ".pki/" ".pine-passfile" ".Xauthority" ".serverauth.2599" ".cabal/" ".ghc/" ".serverauth.19932" ".aspell.en.prepl" ".icons/" "./" ".pine-crash" ".serverauth.2626" ".food.md" ".links/" "mail/" ".grip-l3enc" ".Mathematica/" ".bash_history" ".serverauth.2290" "bin/" ".pine-debug4" ".mailinfo" ".gitconfig" ".i3/" "sync/" "src/" ".pine-debug2" ".mail" ".mutt_certificates" ".python-eggs/" ".ido.last~" ".xombrero/" ".gnome/" ".barinfo-errors" "Dropbox/" ".dropbox-dist/" ".ipython/" ".vimrc" ".xsel.log" ".bash_profile" ".ssh/" ".xinitrc" ".grip-cdparanoia" ".utop-history" ".zshrc" ".sage/" ".journal.md" ".urxvt/" ".addressbook" ".serverauth.2321" ".ido.last" ".scratch.cpp" "../" ".serverauth.8145" ".dbus/" "music/" ".thumbnails/" ".ocaml_history" ".dmenu_cache" ".themes/" ".mpv/" ".serverauth.2660" ".mozilla/" ".local/" ".cmus/" ".signature" ".lyrics/" ".grip" ".grip-oggenc" ".weechat/" ".maildir/" ".ocamlinit" "prj/" ".alpine-smime/" ".barinfo" ".lesshst" ".gem/" ".serverauth.2435" ".serverauth.2634" ".zshlex/" ".gtk-bookmarks" ".serverauth.7656" ".zcompdump" ".saves/" ".nix-channels" ".bash_logout" ".gstreamer-0.10/" ".aspell.en.pws" ".fontf/" ".puffytools/")
+
+ ("/home/pete/src/private-dots/" (21628 35035 352942 347000) ".config/" ".pinerc" ".muttrc" ".mutt/" ".gmail.conf" "./" ".git/" "../" ".gmail.valentine.conf" ".weechat/" ".gitignore")
 
  ("/home/pete/docs/school/math2280/notes/" (21629 58655 176289 185000) "./" "141201.md" "../" ".#140202.md")
 
@@ -50,8 +77,6 @@
  ("/home/pete/docs/school/" (21583 45032 66711 909000) "math2280/" "./" "wrtg2010/" "../" "Phys2210/")
 
  ("/home/pete/docs/" (21614 21543 959132 846000) "cv/" "diary.ods.gpg" "itemthing" "keys.tar.gz.gpg" "journal.yml.gpg" "composekeys.html" "./" "ubuntu.txt" "../" ".gpg" "rwl/" "todolist.md" "school/")
-
- ("/home/pete/src/dotfiles/general/home/" (21627 57583 32876 397000) ".config/" ".emacs" ".ncmpcpp/" ".vim/" ".Xresources" ".fonts/" ".emacs.d/" ".ghc/" ".icons/" "./" "bin/" ".gitconfig" ".vimrc" ".xinitrc" ".zshrc" "../" ".themes/" "linker.sh" ".gitignore" ".barinfo" ".zshlex/")
 
  ("/usr/home/pete/dotfiles/general/home/.emacs.d/config/" (21626 28847 369236 2000) "ft-javascript.el" "errata.el" "ft-nxml.el" "paredit.el" "ft-clojure.el" "ft-java.el" "ft-c.el" "ft-makefile.el" "ft-scss.el" "ft-perl.el" "ft-clojure-test.el" "ftopts.el" "ft-bibtex.el" "ft-css.el" "global-keybindings.el" "slime.el" "ft-cl.el" "cider.el" "elpa.el" "ft-ml.el" "ft-yaml.el" "ft-latex.el" "ft-emacs-lisp.el" "ft-dired.el" "lf.el" "ft-ruby.el" "ft-racket.el" "cider-repl.el" "ft-web.el" "ft-zsh.el" "ft-vala.el" "ft-scala.el" "evil.el" "ft-html.el" "functions.el" "editing.el" "ft-conf.el" "ft-cabal.el" "ft-scheme.el" "ft-haskell.el" "ft-python.el" "ft-text.el" "ft-markdown.el" "../" "./")
 
