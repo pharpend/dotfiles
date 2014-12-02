@@ -1,0 +1,155 @@
+# required by flattr-icons (argument)
+=x11-themes/flattr-icons-9999 **
+# required by google-chrome (argument)
+=www-client/google-chrome-37.0.2062.120_p1 ~amd64
+# required by dunst (argument)
+=x11-misc/dunst-1.0.0-r1 ~amd64
+# required by alsamixer-app (argument)
+=media-sound/alsamixer-app-0.1 ~amd64
+# required by media-sound/pithos-1.0.0
+# required by pithos (argument)
+=dev-python/pylast-1.0.0 ~amd64
+# required by pithos (argument)
+=media-sound/pithos-1.0.0 ~amd64
+=app-shells/zsh-syntax-highlighting-0.2.0 ~amd64
+# required by x11-themes/numix (argument)
+=x11-themes/numix-9999 **
+# required by x11-themes/numix-icon-theme (argument)
+=x11-themes/numix-icon-theme-9999 **
+# required by source-pro (argument)
+>=media-fonts/source-pro-20130316 ~amd64
+>=media-fonts/powerline-fonts-9999 ~amd64
+
+
+dev-haskell/cabal-install ~amd64
+www-client/dwb ~amd64dev-haskell/haskell-platform ~amd64
+>=dev-haskell/haskell-platform-2013 ~amd64
+=dev-lang/ocaml-4.01.0 ~amd64
+=x11-base/xorg-server-1.16.1 ~amd64
+=x11-base/xorg-drivers-1.16 ~amd64
+>=dev-lang/ghc-7.8 ~amd64
+# required by flattr-icons (argument)
+=x11-themes/flattr-icons-9999 **
+# required by google-chrome (argument)
+=www-client/google-chrome-37.0.2062.120_p1 ~amd64
+# required by dunst (argument)
+=x11-misc/dunst-1.0.0-r1 ~amd64
+# required by alsamixer-app (argument)
+=media-sound/alsamixer-app-0.1 ~amd64
+# required by media-sound/pithos-1.0.0
+# required by pithos (argument)
+=dev-python/pylast-1.0.0 ~amd64
+# required by pithos (argument)
+=media-sound/pithos-1.0.0 ~amd64
+=app-shells/zsh-syntax-highlighting-0.2.0 ~amd64
+# required by x11-themes/numix (argument)
+=x11-themes/numix-9999 **
+# required by x11-themes/numix-icon-theme (argument)
+=x11-themes/numix-icon-theme-9999 **
+# required by source-pro (argument)
+>=media-fonts/source-pro-20130316 ~amd64
+>=media-fonts/powerline-fonts-9999 ~amd64
+
+
+dev-haskell/cabal-install ~amd64
+www-client/dwb ~amd64dev-haskell/haskell-platform ~amd64
+>=dev-haskell/haskell-platform-2013 ~amd64
+=dev-lang/ocaml-4.01.0 ~amd64
+=x11-base/xorg-server-1.16.1 ~amd64
+=x11-base/xorg-drivers-1.16 ~amd64
+>=dev-lang/ghc-7.8 ~amd64
+
+=x11-proto/xproto-7.0.26 ~amd64
+=x11-proto/fontsproto-2.1.3 ~amd64
+=x11-libs/libXfont-1.5.0 ~amd64
+# required by android-tools (argument)
+=dev-util/android-tools-0_p20130218 ~amd64
+dev-tex/biblatex ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Readonly-XS-1.50.0-r1 ~amd64
+# required by biber (argument)
+=dev-tex/biber-1.9 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/autovivification-0.130.0 ~amd64
+# required by dev-perl/Business-ISBN-2.50.0-r1
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Business-ISBN-Data-20120719.1.0-r1 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Encode-HanExtra-0.230.0-r1 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Date-Simple-3.30.0-r1 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Business-ISMN-1.110.0-r1 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/List-AllUtils-0.90.0 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Business-ISSN-0.910.0-r1 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Encode-JIS2K-0.02 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/File-Slurp-Unicode-0.7.1-r1 ~amd64
+# required by dev-lang/perl-5.18.2-r2
+# required by dev-perl/IPC-Run3-0.45.0-r1
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=virtual/perl-File-Temp-0.230.400-r2 ~amd64
+# required by dev-perl/Text-BibTeX-0.700.0
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Config-AutoConf-0.305 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/XML-LibXML-Simple-0.930.0 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Text-BibTeX-0.700.0 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Business-ISBN-2.50.0-r1 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Unicode-LineBreak-2014.60.0 ~amd64
+# required by virtual/perl-Scalar-List-Utils-1.380.0
+# required by dev-perl/Business-ISMN-1.110.0-r1
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-lang/perl-5.20.1-r2 ~amd64
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Encode-EUCJPASCII-0.03 ~amd64
+# required by dev-perl/Text-BibTeX-0.700.0
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/ExtUtils-LibBuilder-0.04 ~amd64
+# required by dev-perl/Business-ISMN-1.110.0-r1
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=dev-perl/Tie-Cycle-1.190.0-r1 ~amd64
+# required by dev-perl/List-AllUtils-0.90.0
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=virtual/perl-Scalar-List-Utils-1.380.0 ~amd64
+# required by virtual/perl-File-Temp-0.230.400-r2
+# required by dev-lang/perl-5.20.1-r2
+# required by virtual/perl-Scalar-List-Utils-1.380.0
+# required by dev-perl/Business-ISMN-1.110.0-r1
+# required by dev-tex/biber-1.9
+# required by biber (argument)
+=perl-core/File-Temp-0.230.400-r1 ~amd64
+media-gfx/font-manager ~amd64
+
+dev-lang/scala ~amd64
+
+dev-java/hawtjni-runtime ~amd64
+media-sound/gmtp ~amd64
+media-gfx/font-manager **
