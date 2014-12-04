@@ -128,7 +128,7 @@ exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rc
 # finds out, if available)
 bar {
     position top
-    status_command i3status
+    status_command cat
 
     colors {
         background #073642
