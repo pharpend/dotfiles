@@ -38,10 +38,8 @@ alias hist='cat ~/.histfile'
 alias xcl='xclip -sel clip'
 alias dmesg='dmesg -L -w'
 alias cabal='/home/pete/.cabal/bin/cabal'
-alias roc='rlwrap ocaml'
 alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
-alias s='sudo'
 alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb ~/.Xresources'
 alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
@@ -57,12 +55,6 @@ alias em='emerge'
 alias emudn='sudo emerge --jobs --ask --verbose --update --deep --newuse --with-bdeps=y @world'
 alias eq='equery'
 alias es='sudo eselect'
-
-# Nix aliases
-alias nxs='nix-env -qaP | grep -i'
-alias nxi='nix-env -j 5 --cores 4 -i'
-alias nxconf='sudo vim /etc/nixos/configuration.nix'
-alias nxrb='sudo nixos-rebuild'
 
 # Other functions
 sprunge () {
@@ -216,10 +208,3 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
 export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$PATH:$HOME/.cabal/bin
-export PATH=$PATH:$HOME/.config/herbstluftwm
-export PATH=$PATH:$HOME/code/bin
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/builds/yesod-bin-1.2.12/.cabal-sandbox/bin
-
-# OPAM configuration
-. /home/pete/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
