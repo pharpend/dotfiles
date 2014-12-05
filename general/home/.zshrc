@@ -19,7 +19,7 @@ compinit
 alias ls='ls -F -G'
 alias l='ls -l'
 alias la='l -a'
-alias grep='grep --color=tty -d skip'
+alias grep='grep -i --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -41,7 +41,7 @@ alias cabal='/home/pete/.cabal/bin/cabal'
 alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
 alias clrml='echo 0 > ~/.mailnum'
-alias xrdbo='xrdb ~/.Xresources'
+alias xrdbo='xrdb -merge ~/.Xresources'
 alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
 alias unrhift='redshift -r -l 40.75:111.88 -b '
 alias eix='eix -n'              # eix is annoying 
