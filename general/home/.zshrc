@@ -5,7 +5,7 @@ SAVEHIST=10000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/pete/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 #autoload -U colors && colors
 autoload -Uz compinit
