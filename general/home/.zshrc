@@ -11,9 +11,9 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-#
+# 
 
-[[ -z "$TMUX" ]] && exec tmux
+# [[ -z "$TMUX" ]] && exec tmux
 
 # My bash aliases
 alias ls='ls -F -G'
