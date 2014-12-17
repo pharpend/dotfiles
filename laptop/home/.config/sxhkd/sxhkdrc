@@ -5,13 +5,13 @@
 super + alt + Escape
 	bspc quit
 
-super + w
+super + k
 	bspc window -c
 
-super + t
+super + y
 	bspc desktop -l next
 
-super + b
+super + u
 	bspc desktop -B
 
 super + {s,f}
@@ -23,22 +23,20 @@ super + {grave,Tab}
 super + apostrophe
 	bspc window -s last
 
-super + {o,i}
-	bspc control --record-history off; \
-	bspc window {older,newer} -f; \
-	bspc control --record-history on
+# super + {o,i}
+# 	bspc control --record-history off; \
+# 	bspc window {older,newer} -f; \
+# 	bspc control --record-history on
 
 super + y
 	bspc window -w last.manual
 
-super + m
-	bspc window -s biggest
 
-super + {_,shift + }{h,j,k,l}
+super + {_,shift + }{h,n,e,i}
 	bspc window -{f,s} {left,down,up,right}
 
-super + {_,shift + }c
-	bspc window -f {next,prev}
+# super + {_,shift + }c
+# 	bspc window -f {next,prev}
 
 super + {comma,period}
 	bspc desktop -C {backward,forward}
@@ -46,17 +44,17 @@ super + {comma,period}
 super + bracket{left,right}
 	bspc desktop -f {prev,next}
 
-super + ctrl + {h,j,k,l}
-	bspc window -p {left,down,up,right}
+# super + ctrl + {h,n,e,i}
+# 	bspc window -p {left,down,up,right}
 
 super + ctrl + {_,shift + }space
 	bspc {window -p cancel,desktop -c}
 
-super + alt + {h,j,k,l}
-	bspc window -e {left -10,down +10,up -10,right +10}
+super + ctrl + {h,n,e,i}
+	bspc window -e {right -10,up +10,down +10,left -10}
 
-super + alt + shift + {h,j,k,l}
-	bspc window -e {right -10,up +10,down -10,left +10}
+super + ctrl + shift + {h,n,e,i}
+	bspc window -e {right +10,up +10,down +10,left +10}
 
 super + ctrl + {1-9}
 	bspc window -r 0.{1-9}
@@ -85,6 +83,12 @@ super + Return
 
 super + space
 	dmenu_run
+
+super + m
+	emacs
+
+super + c
+    google-chrome-stable
 
 # make sxhkd reload its configuration files:
 super + Escape
