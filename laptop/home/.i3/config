@@ -24,7 +24,7 @@ font pango: Sauce Code Powerline 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+Return exec sakura
 
 # kill focused window
@@ -122,13 +122,13 @@ bindsym $mod+Shift+p restart
 bindsym $mod+Shift+f exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+k exec killall -u pete
 
-exec setxkbmap us,us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
     position top
-    status_command cat
+    status_command $HOME/bin/barinfo
 
     colors {
         background #073642
@@ -140,8 +140,9 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec dwb
-bindsym $mod+grave exec google-chrome-stable --incognito
+bindsym $mod+c exec google-chrome-stable
+bindsym $mod+Shift+c exec google-chrome-stable --incognito
+bindsym $mod+grave exec xombrero
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura

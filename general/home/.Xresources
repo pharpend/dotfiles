@@ -6,7 +6,7 @@ Xft.hintstyle:  hintfull
 
 Xcursor.theme: ComixCursors-Slim-Green
 
-URxvt*font             : xft:Terminess Powerline:size=12
+URxvt*font             : xft:Terminess Powerline:size=9
 URxvt*scrollBar        : false
 URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
 URxvt.keysym.M-u       : perl:url-select:select_next
@@ -372,6 +372,7 @@ URxvt.letterSpace      : -1
 #define S_blue          #268bd2
 #define S_cyan          #2aa198
 #define S_green         #859900
+
 ! ! Dark
 ! #define S_base03        #002b36
 ! #define S_base02        #073642
