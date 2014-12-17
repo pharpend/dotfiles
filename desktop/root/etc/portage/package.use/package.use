@@ -1,2 +1,12 @@
 media-video/libav threads
 media-video/vlc qt4
+mail-client/mutt doc gnutls gpg idn imap nntp sasl sidebar slang smime smtp
+www-client/dwb gtk3
+dev-lang/ghc binary
+sys-apps/lm_sensors sensord
+media-sound/ncmpcpp clock curl taglib visualizer
+mail-client/alpine passfile doc smime topal threads
+net-libs/c-client chappa topal
+net-misc/openvpn passwordsave
+dev-libs/libxml2 icu
+x11-libs/vte termite-patch

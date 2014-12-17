@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/pete/code'
 let g:netrw_dirhist_2='/home/pete/code/rpisc'
 let g:netrw_dirhist_3='/home/pete/src/linc/Settings'
+let g:netrw_dirhist_4='/home/pete/.config/termite'

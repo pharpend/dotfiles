@@ -4,11 +4,13 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 
-URxvt*font             : xft:Meslo LG M DZ for Powerline:size=8
+Xcursor.theme: ComixCursors-Slim-Green
+
+URxvt*font             : xft:Terminess Powerline:size=12
 URxvt*scrollBar        : false
 URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
 URxvt.keysym.M-u       : perl:url-select:select_next
-URxvt.url-launcher     : /usr/bin/dwb
+URxvt.url-launcher     : /usr/bin/xombrero
 URxvt.underlineURLs    : True
 URxvt.matcher.button   : 1 
 URxvt.keysym.M-Escape  : perl:keyboard-select:activate
@@ -19,6 +21,7 @@ URxvt.copyCommand      : xsel -ib
 URxvt.pasteCommand     : xsel -ob
 URxvt.depth            : 32
 URxvt.intensityStyles  : false
+URxvt.letterSpace      : -1
 
 ! URxvt*background:   #111
 ! URxvt*foreground:   #eee
