@@ -24,7 +24,7 @@ font pango: Sauce Code Powerline 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 bindsym $mod+Shift+Return exec sakura
 
 # kill focused window

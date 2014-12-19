@@ -2,7 +2,8 @@
 font = Monospace 9
 font = Terminus 9
 font = Terminess Powerline 9
-# font = Tewi 9
+font = Tewi 9
+browser = /usr/bin/firefox-bin
 
 
 # Solarized Light
