@@ -192,12 +192,12 @@ exec synclient TouchpadOff=1
 
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
-client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
+client.focused          #f336a2         #f336a2     #fdf6e3     #93a1a1
 client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
 client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
 client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 
 focus_follows_mouse no
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 5
 new_window 1pixel
