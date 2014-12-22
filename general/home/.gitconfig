@@ -10,3 +10,5 @@
 	email = pharpend2@gmail.com
 [push]
 	default = matching
+[merge]
+	ff = off

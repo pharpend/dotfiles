@@ -141,7 +141,7 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec google-chrome-stable
-bindsym $mod+Shift+c exec google-chrome-stable --incognito
+# bindsym $mod+Shift+c exec google-chrome-stable --incognito
 bindsym $mod+grave exec xombrero
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
