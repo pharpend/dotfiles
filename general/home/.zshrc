@@ -45,6 +45,7 @@ alias xrdbo='xrdb -merge ~/.Xresources'
 alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
 alias unrhift='redshift -r -l 40.75:111.88 -b '
 alias eix='eix -n'              # eix is annoying 
+alias gf='git flow'
 
 # Openvpn fails a lot, so here
 alias ropev='sudo /etc/init.d/openvpn restart'

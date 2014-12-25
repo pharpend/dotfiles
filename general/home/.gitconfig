@@ -11,4 +11,4 @@
 [push]
 	default = matching
 [merge]
-	ff = off
+	ff = on
