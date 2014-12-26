@@ -2,13 +2,13 @@
 ;; Copyright (c) 2013 Peter Harpending. <pharpend2@gmail.com>
 
 (load-file "~/.emacs.d/config/elpa.el")                         ; Elpa
-(load-file "~/.emacs.d/config/lf.el")                           ; look and feel
 (load-file "~/.emacs.d/config/evil.el")                         ; evil
 (load-file "~/.emacs.d/config/editing.el")                      ; editing
 (load-file "~/.emacs.d/config/errata.el")                       ; errata
 (load-file "~/.emacs.d/config/global-keybindings.el")           ; Global keybindings
 (load-file "~/.emacs.d/config/ftopts.el")                       ; filetype options
 (load-file "~/.emacs.d/config/functions.el")                    ; functions i've added
+(load-file "~/.emacs.d/config/lf.el")                           ; look and feel
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
