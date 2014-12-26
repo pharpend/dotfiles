@@ -93,9 +93,9 @@ end
 $update_interval = 0.5
 $white = "#eeeeee"
 
-def comet
+def locust
   hostname = File::read("/etc/conf.d/hostname").scan(/"(\w+)"/).flatten[0]
-  if hostname == "comet"
+  if hostname == "locust"
     [
      {
        full_text: "#{battery_pct[0]}: #{battery_pct[1]}%",
@@ -155,5 +155,5 @@ time = {  full_text: Time.now.strftime("%l:%M %p %Z").strip,
 blank = { full_text: "",
           color: $white }
 
-$info = [win, mailnum] + ncmpcpp + comet + [cputemp, cpughz, ram, time, date, blank]
+$info = [win, mailnum] + ncmpcpp + locust + [cputemp, cpughz, ram, time, date, blank]
 update
