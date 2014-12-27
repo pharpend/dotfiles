@@ -5,10 +5,11 @@
 	st = status
 	co = checkout
 	br = branch
+	fl = flow
 [user]
 	name = Peter Harpending
 	email = pharpend2@gmail.com
 [push]
 	default = matching
 [merge]
-	ff = on
+	ff = yes
