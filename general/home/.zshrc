@@ -47,6 +47,11 @@ alias unrhift='redshift -r -l 40.75:111.88 -b '
 alias eix='eix -n'              # eix is annoying 
 alias gf='git flow'
 
+diffpaste () {
+  x=$(git diff | wgetpaste -s gists -l Diff | awk '{print $NF}') 
+  printf "Updated diff: %s\n" $x | xclip -sel clip
+}
+
 # Openvpn fails a lot, so here
 alias ropev='sudo /etc/init.d/openvpn restart'
 
