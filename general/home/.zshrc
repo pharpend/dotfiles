@@ -47,9 +47,14 @@ alias unrhift='redshift -r -l 40.75:111.88 -b '
 alias eix='eix -n'              # eix is annoying 
 alias gf='git flow'
 
+initii () {
+  ii -s irc.freenode.net -p 6667 -n lysabot-ii -i /tmp &!
+  echo "/j #lysa" > /tmp/irc.freenode.net/in
+}
+
 diffpaste () {
   x=$(git diff | wgetpaste -s gists -l Diff | awk '{print $NF}') 
-  printf "Updated diff: %s\n" $x | xclip -sel clip
+  printf "Updated diff: %s\n" $x > /tmp/irc.freenode.net/\#lysa/in
 }
 
 # Openvpn fails a lot, so here
