@@ -48,12 +48,18 @@ alias eix='eix -n'              # eix is annoying
 alias gf='git flow'
 
 initii () {
-  ii -s irc.freenode.net -p 6667 -n lysabot-ii -i /tmp &!
+  ii -s irc.freenode.net -p 6667 -n deltabot -i /tmp &!
+  sleep 5s
+  echo "/j nickserv" > /tmp/irc.freenode.net/in
+  echo "identify $1" > /tmp/irc.freenode.net/nickserv/in
+  cat /tmp/irc.freenode.net/nickserv/out
+  echo "/l nickserv" > /tmp/irc.freenode.net/in
+  sleep 2s
   echo "/j #lysa" > /tmp/irc.freenode.net/in
 }
 
 diffpaste () {
-  x=$(git diff | wgetpaste -s gists -l Diff | awk '{print $NF}') 
+  x=$(git diff | wgetpaste -s bpaste -l Diff | awk '{print $NF}') 
   printf "Updated diff: %s\n" $x > /tmp/irc.freenode.net/\#lysa/in
 }
 
@@ -201,6 +207,14 @@ ri3bars () {
     i3bar --bar_id=bar-1 &!
 }
 
+pubnight () {
+    cp lysa.pdf $(printf "pdfs/lysa-%s.pdf" $(date -u +%y%m%e%H%M%S))
+    cd pdfs
+    git pull
+    git add -A .
+    git commit 
+    cd ..
+}
 
 # Syntax highlighting
 source ~/.zshlex/zsh-syntax-highlighting.zsh
