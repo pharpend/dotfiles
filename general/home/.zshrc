@@ -49,12 +49,10 @@ alias gf='git flow'
 
 initii () {
   ii -s irc.freenode.net -p 6667 -n deltabot -i /tmp &!
-  sleep 5s
   echo "/j nickserv" > /tmp/irc.freenode.net/in
   echo "identify $1" > /tmp/irc.freenode.net/nickserv/in
   cat /tmp/irc.freenode.net/nickserv/out
   echo "/l nickserv" > /tmp/irc.freenode.net/in
-  sleep 2s
   echo "/j #lysa" > /tmp/irc.freenode.net/in
 }
 
