@@ -148,7 +148,7 @@ bar {
 # Application keybindings
 bindsym $mod+c exec firefox-bin
 bindsym $mod+grave exec xombrero
-bindsym $mod+f exec pcmanfm
+bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+t exec sakura
 bindsym $mod+p exec pavucontrol
@@ -190,7 +190,7 @@ exec compton
 exec dunst
 exec $HOME/bin/gmail-notifyd
 exec emacs --daemon
-exec pcmanfm --daemon
+exec thunar --daemon
 exec nitrogen --restore
 exec redshift -l 40.75:111.8833
 exec synclient TouchpadOff=1
