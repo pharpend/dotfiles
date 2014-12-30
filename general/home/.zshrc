@@ -48,12 +48,12 @@ alias eix='eix -n'              # eix is annoying
 alias gf='git flow'
 
 initii () {
-  ii -s irc.freenode.net -p 6667 -n lysabot-ii -i /tmp &!
+  ii -s irc.freenode.net -p 6667 -n pharpend-bot -i /tmp &!
   echo "/j #lysa" > /tmp/irc.freenode.net/in
 }
 
 diffpaste () {
-  x=$(git diff | wgetpaste -s gists -l Diff | awk '{print $NF}') 
+  x=$(git diff | wgetpaste -s bpaste -l Diff | awk '{print $NF}') 
   printf "Updated diff: %s\n" $x > /tmp/irc.freenode.net/\#lysa/in
 }
 
