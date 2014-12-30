@@ -58,9 +58,13 @@ initii () {
   echo "/j #lysa" > /tmp/irc.freenode.net/in
 }
 
-diffpaste () {
-  x=$(git diff | wgetpaste -s bpaste -l Diff | awk '{print $NF}') 
+dpastespec () {
+  x=$(git diff $1 | wgetpaste -s bpaste -l Diff | awk '{print $NF}') 
   printf "Updated diff: %s\n" $x > /tmp/irc.freenode.net/\#lysa/in
+}
+
+dpaste () {
+    dpastespec HEAD
 }
 
 # Openvpn fails a lot, so here
