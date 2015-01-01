@@ -210,7 +210,9 @@ ri3bars () {
 }
 
 pubnight () {
-    cp lysa.pdf $(printf "%s" $(date -u +%y%m%e%H%M%S))
+    cp lysa.pdf $(
+      printf "%s.pdf" $(date -u +%y%m%e%H%M%S)
+    )
     cd pdfs
     git pull
     git add -A .
