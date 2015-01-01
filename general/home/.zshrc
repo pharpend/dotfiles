@@ -192,7 +192,7 @@ ri3bars () {
 }
 
 pubnight () {
-    cp lysa.pdf $(printf "pdfs/lysa-%s.pdf" $(date -u +%y%m%e%H%M%S))
+    cp lysa.pdf $(printf "pdfs/lysa-%s.pdf" $(date -u +%y%m%d%H%M%S))
     \cd pdfs
     git pull
     git add -A .
@@ -202,14 +202,16 @@ pubnight () {
 }
 
 initii () {
+  printf "Connecting..."
   ii -s irc.freenode.net -p 6667 -n deltabot -i /tmp &!
-  sleep 5s
-  # echo "/j nickserv" > /tmp/irc.freenode.net/in
-  # echo "identify $1" > /tmp/irc.freenode.net/nickserv/in
-  # cat /tmp/irc.freenode.net/nickserv/out
-  # echo "/l nickserv" > /tmp/irc.freenode.net/in
-  # sleep 2s
+  printf "done.\n"
+  printf "Identifying..."
+  echo "/j nickserv" > /tmp/irc.freenode.net/in
+  echo "identify $1" > /tmp/irc.freenode.net/nickserv/in
+  printf "done.\n"
+  printf "Joining #lysa..."
   echo "/j #lysa" > /tmp/irc.freenode.net/in
+  printf "done.\n"
 }
 
 dpastespec () {
