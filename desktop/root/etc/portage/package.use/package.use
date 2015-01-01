@@ -11,3 +11,4 @@ net-misc/openvpn passwordsave
 dev-libs/libxml2 icu
 x11-libs/vte termite-patch
 sys-kernel/genkernel -crypt cryptsetup
+media-fonts/terminus-font distinct-l
