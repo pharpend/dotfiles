@@ -202,14 +202,20 @@ pubnight () {
 }
 
 initii () {
+  printf "Connecting..."
   ii -s irc.freenode.net -p 6667 -n deltabot -i /tmp &!
   sleep 5s
+  printf "done.\n"
+  printf "Identifying..."
   echo "/j nickserv" > /tmp/irc.freenode.net/in
   echo "identify $1" > /tmp/irc.freenode.net/nickserv/in
-  cat /tmp/irc.freenode.net/nickserv/out
+  # cat /tmp/irc.freenode.net/nickserv/out
   echo "/l nickserv" > /tmp/irc.freenode.net/in
+  printf "done.\n"
+  printf "Joining #lysa..."
   sleep 2s
   echo "/j #lysa" > /tmp/irc.freenode.net/in
+  printf "done.\n"
 }
 
 dpastespec () {
