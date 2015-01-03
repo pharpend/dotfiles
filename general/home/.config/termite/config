@@ -8,7 +8,7 @@ browser = /usr/bin/firefox-bin
 foreground      = #EEEEEE
 foreground_bold = #FFFFFF
 foreground_dim  = #111111
-background      = #222222
+background      = rgba(34,34,34,0.7)
 cursor          = #EEEEEE
 # if unset, will reverse foreground and background
 # highlight = #
