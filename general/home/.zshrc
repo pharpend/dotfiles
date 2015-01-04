@@ -63,26 +63,26 @@ sprunge () {
 }
 
 hvscreen () {
-    xrandr --output VGA-1 --rotate normal
-    xrandr --output DVI-D-2 --rotate left --right-of VGA-1
+    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output DVI-D-2 --rotate left --right-of DVI-D-1
     nitrogen --restore
 }
 
 vhscreen () {
-    xrandr --output VGA-1 --rotate left
-    xrandr --output DVI-D-2 --rotate normal --right-of VGA-1
+    xrandr --output DVI-D-1 --rotate left
+    xrandr --output DVI-D-2 --rotate normal --right-of DVI-D-1
     nitrogen --restore
 }
 
 hscreen () {
-    xrandr --output VGA-1 --rotate normal
-    xrandr --output DVI-D-2 --rotate normal --right-of VGA-1
+    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output DVI-D-2 --rotate normal --right-of DVI-D-1
     nitrogen --restore
 }
 
 vscreen () {
-    xrandr --output VGA-1 --rotate left
-    xrandr --output DVI-D-2 --rotate left --right-of VGA-1
+    xrandr --output DVI-D-1 --rotate left
+    xrandr --output DVI-D-2 --rotate left --right-of DVI-D-1
     nitrogen --restore
 }
 
@@ -204,14 +204,20 @@ pubnight () {
 initii () {
   printf "Connecting..."
   ii -s irc.freenode.net -p 6667 -n deltabot -i /tmp &!
-  printf "done.\n"
+  sleep 10s
+  printf "...done.\n"
   printf "Identifying..."
-  echo "/j nickserv" > /tmp/irc.freenode.net/in
-  echo "identify $1" > /tmp/irc.freenode.net/nickserv/in
+  echo "/j NickServ" > /tmp/irc.freenode.net/in
+  echo "identify $1" > /tmp/irc.freenode.net/NickServ/in
   printf "done.\n"
   printf "Joining #lysa..."
   echo "/j #lysa" > /tmp/irc.freenode.net/in
   printf "done.\n"
+}
+
+killii () {
+    killall ii
+    rm -rf /tmp/irc.freenode.net/
 }
 
 dpastespec () {
