@@ -4,6 +4,7 @@
 (rainbow-delimiters-mode 1)
 (flyspell-mode 1)
 (LaTeX-math-mode 1)
+(auto-fill-mode -1)
 (wc-mode 1)
 
 (setq-local fill-column 80)
@@ -14,3 +15,4 @@
 
 (define-key evil-insert-state-map (kbd "`") 'self-insert-command)
 (local-set-key (kbd "C-c C-c") 'compile)
+(local-set-key (kbd "RET") 'reindent-then-newline-and-indent)

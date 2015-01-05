@@ -29,6 +29,7 @@
                       hamlet-mode
                       haskell-mode
                       ghc
+                      idris-mode
                       json-mode
                       linum-relative
                       magit
