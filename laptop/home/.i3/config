@@ -18,14 +18,14 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango: Terminus 8
+font pango: Inconsolata-dz for Powerline 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec sakura
+bindsym $mod+Return exec sakura
+bindsym $mod+Shift+Return exec termite
 
 # kill focused window
 bindsym $mod+k kill
