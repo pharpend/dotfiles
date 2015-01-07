@@ -4,7 +4,6 @@
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
 (turn-on-eldoc-mode)
-(turn-off-haskell-simple-indent)
 
 (setq-local indent-tabs-mode nil)
 (setq-local indent-line-function 'indent-relative-maybe)
@@ -12,4 +11,4 @@
 (setq-local tab-stop-list (number-sequence 2 200 2))
 (setq-local evil-shift-width 2)
 
-(define-key haskell-mode-map (kbd "<C-return>") 'hindent/reformat-decl)
+(define-key idris-mode-map "C-c C-c" 'idris-repl)

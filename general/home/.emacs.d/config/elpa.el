@@ -29,6 +29,7 @@
                       hamlet-mode
                       haskell-mode
                       ghc
+                      idris-mode
                       json-mode
                       linum-relative
                       magit
@@ -67,6 +68,7 @@
 (require 'cl)
 (require 'evil)
 (require 'evil-nerd-commenter)
+(require 'idris-mode)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
