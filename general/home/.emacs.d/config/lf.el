@@ -1,7 +1,7 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
-       ;; (set-frame-font "Inconsolata-dz 10")
-       ;; (load-theme 'sanityinc-tomorrow-day t)
+       (set-frame-font "Inconsolata-dz 10")
+       (load-theme 'sanityinc-tomorrow-day t)
        ))
 
 (scroll-bar-mode -1)
@@ -30,3 +30,20 @@
 
 ;; Don't wrap lines
 (setq-default truncate-lines t)
+
+;; Popwin
+(push 'idris-compiler-notes-mode popwin:special-display-config)
+(push '(idris-repl-mode
+        :height 0.2
+        :noselect nil
+        :position bottom
+        :stick t)
+      popwin:special-display-config)
+
+
+;; All idris modes
+;;
+;; idris-metavariable-list-mode, idris-info-mode,
+;; idris-mode, idris-prover-script-mode,idris-compiler-notes-mode,
+;; idris-log-mode, idris-ipkg-build-mode,
+;; idris-ipkg-mode, idris-repl-mode

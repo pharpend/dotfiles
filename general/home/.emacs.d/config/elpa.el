@@ -68,6 +68,7 @@
 (require 'cl)
 (require 'evil)
 (require 'evil-nerd-commenter)
+(require 'idris-mode)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
