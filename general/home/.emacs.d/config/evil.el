@@ -66,10 +66,6 @@
 
 ;; COMMENT CURRENT LINE
 (define-key evil-normal-state-map (kbd "=") 'evilnc-comment-or-uncomment-lines)
-(define-key evil-normal-state-map (kbd "+")
-  '(lambda ()
-     (comment-dwim)
-     (evil-append)))
 
 ;; EXTRANEOUS KEYBINDINGS
 (define-key evil-normal-state-map (kbd "C-<tab>") 'other-window)
