@@ -13,3 +13,4 @@ x11-libs/vte termite-patch
 sys-kernel/genkernel -crypt cryptsetup
 media-fonts/terminus-font distinct-l
 sci-mathematics/coq doc gtk
+dev-libs/efl sound

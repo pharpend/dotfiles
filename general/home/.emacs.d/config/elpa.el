@@ -11,6 +11,8 @@
 (package-initialize)
 
 (defvar my-packages '(auctex
+                      ample-theme
+                      ample-zen-theme
                       auto-complete
                       autopair
                       cider

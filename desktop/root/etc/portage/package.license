@@ -15,3 +15,4 @@ dev-lang/gnat-gcc GMGPL
 =sys-apps/microcode-data-20140430 intel-ucode
 app-emulation/virtualbox-bin PUEL
 sys-apps/microcode-data intel-ucode
+x11-themes/adwaita-icon-theme CC-Sampling-Plus-1.0

@@ -9,3 +9,5 @@
 
 ;; Better file and buffer switching
 (ido-mode 1)
+
+(evilnc-default-hotkeys)

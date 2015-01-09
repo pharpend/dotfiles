@@ -5,13 +5,13 @@
   "Open comment below"
   (interactive)
   (evil-open-below 1)
-  (comment-dwim nil))
+  (evilnc-comment-or-uncomment-lines 1))
 
 (defun comment-open-above ()
   "Open comment above"
   (interactive)
   (evil-open-above 1)
-  (comment-dwim nil))
+  (evilnc-comment-or-uncomment-lines 1))
 
 (setq dabbrev-check-other-buffers t)
 
@@ -53,3 +53,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/errat/")
 (require 'hindent)
+
+;; Structured Haskell Mode
+;; (add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp")
+;; (require 'shm)
