@@ -140,5 +140,6 @@
           (lambda ()
             (load-file "~/.emacs.d/config/ft-ml.el")))
 (add-hook 'idris-mode-hook
-          (lambda ()
-            (load-file "~/.emacs.d/config/ft-idris.el")))
+          '(lambda ()
+             (load-file "~/.emacs.d/config/ft-idris.el"))
+          t)
