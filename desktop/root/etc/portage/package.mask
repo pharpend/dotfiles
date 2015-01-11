@@ -1,3 +1,4 @@
 >media-sound/ncmpcpp-0.5.10
 dev-tex/bibtexextra
 >=dev-python/numpy-1.9
+>=app-text/evince-3.14

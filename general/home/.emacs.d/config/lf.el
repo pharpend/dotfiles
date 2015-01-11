@@ -1,7 +1,7 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
        (set-frame-font "Meslo LG S 10")
-       (load-theme 'ample t)))
+       (load-theme 'sanityinc-tomorrow-eighties t)))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
