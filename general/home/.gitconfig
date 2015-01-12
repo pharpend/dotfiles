@@ -8,7 +8,7 @@
 	fl = flow
 [user]
 	name = Peter Harpending
-	email = pharpend2@gmail.com
+	email = peter@harpending.org
 [push]
 	default = matching
 [merge]
