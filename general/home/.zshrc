@@ -244,8 +244,10 @@ export SHELL=$(which zsh)
 export rvm_ignore_gemrc_issues=1
 
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.gem/ruby/1.9.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
 export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$PATH:$HOME/.cabal/bin
 

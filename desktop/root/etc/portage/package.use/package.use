@@ -14,3 +14,5 @@ sys-kernel/genkernel -crypt cryptsetup
 media-fonts/terminus-font distinct-l
 sci-mathematics/coq doc gtk
 dev-libs/efl sound
+app-portage/layman mercurial
+media-fonts/powerline-fonts anonymouspro dejavusansmono droidsansmono inconsolata meslo
