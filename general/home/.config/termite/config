@@ -1,6 +1,7 @@
 [options]
 font = Source Code Pro 8
 font = Terminus 8
+font = DejaVu Sans Mono 9
 browser = /usr/bin/firefox-bin
 
 
