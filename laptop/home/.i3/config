@@ -24,7 +24,7 @@ font pango: Inconsolata-dz for Powerline 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec termite
 bindsym $mod+Shift+Return exec termite
 
 # kill focused window
@@ -150,7 +150,7 @@ bindsym $mod+c exec firefox-bin
 bindsym $mod+grave exec xombrero
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+t exec sakura
+bindsym $mod+t exec termite
 bindsym $mod+p exec pavucontrol
 
 # Resize windows
@@ -177,7 +177,7 @@ bindsym $mod+F12 exec amixer set Master 8%+
 # Autostarted applications
 # exec deluge
 exec cbatticon
-exec dropbox
+# exec dropbox
 exec dbus-launch nm-applet
 exec parcellite
 exec mpd
@@ -186,12 +186,12 @@ exec urxvtd
 exec xscreensaver
 
 # Non-panel things
-exec compton
+# exec compton
 exec dunst
-exec $HOME/bin/gmail-notifyd
+# exec $HOME/bin/gmail-notifyd
 exec emacs --daemon
 exec thunar --daemon
-exec nitrogen --restore
+# exec nitrogen --restore
 exec redshift -l 40.75:111.8833
 exec synclient TouchpadOff=1
 
