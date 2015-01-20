@@ -50,7 +50,7 @@
                       sass-mode
                       scala-mode2
                       slime
-                      smartparens
+                      ;; smartparens
                       sublime-themes
                       tuareg
                       utop
@@ -78,6 +78,7 @@
 ;; (require 'ocp-indent)
 (require 'popwin)
 (require 'slime-autoloads)
+(add-to-list 'load-path "~/.emacs.d/smartparens")
 (require 'smartparens-config)
 (require 'smartparens-ruby)
 (require 'tuareg)
