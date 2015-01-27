@@ -23,9 +23,6 @@ while true
     STDOUT.write "[#{JSON.pretty_generate error_msg}],"
     berrs = "\n" + Time.now.to_s + "\n" + e.backtrace.join("\n")
     STDERR.write(berrs)
-    File.open(File.expand_path("~/.barinfo")) do |f|
-      f.write(berrs)
-    end
     $update_interval=1
   end
   sleep $update_interval

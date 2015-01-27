@@ -153,5 +153,5 @@ date = {  full_text: Time.now.strftime("%A %e-%m-%Y, %H:%M"),
 blank = { full_text: "",
           color: $white }
 
-$info = [win] + ncmpcpp + locust + [cputemp, cpughz, ram, date, blank]
+$info = [win] + [cputemp, cpughz, ram, date, blank]
 update

@@ -46,6 +46,9 @@ alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
 alias unrhift='redshift -r -l 40.75:111.88 -b '
 alias eix='eix -n'              # eix is annoying 
 alias gf='git flow'
+alias ysd='systemctl'
+alias sysd='sudo systemctl'
+alias myip='curl icanhazip.com'
 
 # Openvpn fails a lot, so here
 alias ropev='sudo /etc/init.d/openvpn restart'
@@ -56,6 +59,25 @@ alias em='emerge'
 alias emudn='sudo emerge --jobs --ask --verbose --update --deep --newuse --with-bdeps=y @world'
 alias eq='equery'
 alias es='sudo eselect'
+
+# Pacman aliases
+alias pm='pacman'
+alias spm='sudo pacman'
+alias pmq='pacman -Q'
+alias pmqs='pacman -Qs'
+alias pmqi='pacman -Qi'
+alias pms='sudo pacman -S'
+alias pmsyu='sudo pacman -Syu'
+alias pmss='pacman -Ss'
+alias pmsi='pacman -Si'
+alias pmrm='sudo pacman -Rsn'
+alias aur='yaourt'
+alias aurs='yaourt -S'
+alias aurss='yaourt -Ss'
+alias aursi='yaourt -Si'
+alias aursn='yaourt -S --noconfirm'
+alias aursyua='yaourt -Syua'
+alias aursyuan='yaourt -Syua --noconfirm'
 
 # Other functions
 sprunge () {
@@ -137,7 +159,7 @@ adotcp () {
 
 # Swap the keyboard layout
 colemak () {
-    setxkbmap us,ar -variant colemak, -option\
+    setxkbmap us,ru -variant colemak, -option\
         terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 }
 
