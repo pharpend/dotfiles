@@ -94,8 +94,7 @@ $update_interval = 10
 $white = "#eeeeee"
 
 def locust
-  hostname = File::read("/etc/conf.d/hostname").scan(/"(\w+)"/).flatten[0]
-  if hostname == "locust"
+  if `hostname`.strip == "locust"
     [
      {
        full_text: "#{battery_pct[0]}: #{battery_pct[1]}%",
@@ -153,5 +152,5 @@ date = {  full_text: Time.now.strftime("%A %e-%m-%Y, %H:%M"),
 blank = { full_text: "",
           color: $white }
 
-$info = [win] + [cputemp, cpughz, ram, date, blank]
+$info = [win] + locust + [cputemp, cpughz, ram, date, blank]
 update

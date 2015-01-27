@@ -51,7 +51,7 @@ alias sysd='sudo systemctl'
 alias myip='curl icanhazip.com'
 
 # Openvpn fails a lot, so here
-alias ropev='sudo /etc/init.d/openvpn restart'
+alias ropev='sysd restart openvpn@openvpn'
 
 # Portage aliases
 alias sem='sudo emerge --jobs --ask --verbose'
