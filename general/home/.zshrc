@@ -251,6 +251,12 @@ dpaste () {
     dpastespec HEAD
 }
 
+lysa_pushall () {
+    for i in {origin,hub,bit,gitorious} ; do
+        git push $i master
+    done
+}
+
 # Syntax highlighting
 source ~/.zshlex/zsh-syntax-highlighting.zsh
 
