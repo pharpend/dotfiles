@@ -16,3 +16,13 @@ sci-mathematics/coq doc gtk
 dev-libs/efl sound
 app-portage/layman mercurial
 media-fonts/powerline-fonts anonymouspro dejavusansmono droidsansmono inconsolata meslo
+media-video/vlc vnc vdpautwolame theora mtp matroska lua http gnutls fontconfig dirac dvb bluray
+medi-video/ffmpeg doc examples fontconfig gnutls bluray ssh theora x265 wavpack
+media-video/ffmpeg doc examples fontconfig gnutls bluray ssh theora x265 wavpack
+media-video/ffmpeg aac twolame threads aacplus cdio faac
+media-libs/faac MPEG-4
+dev-qt/qtsql qt3support
+dev-qt/qtcore qt3support
+dev-qt/qtgui qt3support
+sys-auth/polkit qt4
+sys-auth/polkit-qt qt4

@@ -16,3 +16,4 @@ dev-lang/gnat-gcc GMGPL
 app-emulation/virtualbox-bin PUEL
 sys-apps/microcode-data intel-ucode
 x11-themes/adwaita-icon-theme CC-Sampling-Plus-1.0
+media-libs/faac MPEG-4

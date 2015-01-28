@@ -25,7 +25,7 @@ font pango: Inconsolata-dz for Powerline 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+k kill
@@ -205,12 +205,12 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec firefox-bin
-bindsym $mod+shift+c exec firefox-bin --incognito
+bindsym $mod+c exec firefox
+bindsym $mod+shift+c exec chromium --incognito
 bindsym $mod+grave exec dwb
 bindsym $mod+f exec pcmanfm
 bindsym $mod+m exec emacs
-bindsym $mod+t exec sakura
+bindsym $mod+t exec termite
 bindsym $mod+shift+t exec urxvt
 bindsym $mod+p exec pavucontrol
 
