@@ -122,7 +122,8 @@ bindsym $mod+Shift+p restart
 bindsym $mod+Shift+f exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+k exec killall -u pete
 
-exec setxkbmap us,ar -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+exec setxkbmap us,ru -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -146,7 +147,7 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec firefox-bin
+bindsym $mod+c exec firefox
 bindsym $mod+grave exec xombrero
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
@@ -183,7 +184,7 @@ exec parcellite
 exec mpd
 exec ncmpdcpp pause
 exec urxvtd
-exec xscreensaver
+# exec xscreensaver
 
 # Non-panel things
 # exec compton
@@ -191,7 +192,7 @@ exec dunst
 # exec $HOME/bin/gmail-notifyd
 exec emacs --daemon
 exec thunar --daemon
-# exec nitrogen --restore
+exec nitrogen --restore
 exec redshift -l 40.75:111.8833
 exec synclient TouchpadOff=1
 
