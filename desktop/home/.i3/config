@@ -208,7 +208,7 @@ bar {
 bindsym $mod+c exec firefox
 bindsym $mod+shift+c exec chromium --incognito
 bindsym $mod+grave exec dwb
-bindsym $mod+f exec pcmanfm
+bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+t exec termite
 bindsym $mod+shift+t exec urxvt
@@ -234,9 +234,9 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym $mod+F10 exec amixer set Master toggle
 bindsym $mod+F11 exec amixer set Master 8%-
 bindsym $mod+F12 exec amixer set Master 8%+
-bindsym $mod+F7 exec ncmpcpp prev
-bindsym $mod+F8 exec ncmpcpp toggle
-bindsym $mod+F9 exec ncmpcpp next
+bindsym $mod+F7 exec mpc prev
+bindsym $mod+F8 exec mpc toggle
+bindsym $mod+F9 exec mpc next
 
 bindsym $mod+Shift+u  move container to workspace prev
 bindsym $mod+Shift+y move container to  workspace next
@@ -258,7 +258,7 @@ exec urxvtd
 exec compton
 exec dunst
 exec emacs --daemon
-exec pcmanfm --daemon-mode
+exec thunar --daemon
 exec redshift -l 40.7500:111.8833
 exec nitrogen --restore
 exec urxvtd

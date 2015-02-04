@@ -54,11 +54,11 @@ alias myip='curl icanhazip.com'
 alias ropev='sysd restart openvpn@openvpn'
 
 # Portage aliases
-alias sem='sudo emerge --jobs --ask --verbose'
-alias em='emerge'
-alias emudn='sudo emerge --jobs --ask --verbose --update --deep --newuse --with-bdeps=y @world'
-alias eq='equery'
-alias es='sudo eselect'
+# alias sem='sudo emerge --jobs --ask --verbose'
+# alias em='emerge'
+# alias emudn='sudo emerge --jobs --ask --verbose --update --deep --newuse --with-bdeps=y @world'
+# alias eq='equery'
+# alias es='sudo eselect'
 
 # Pacman aliases
 alias pm='pacman'
@@ -253,7 +253,7 @@ dpaste () {
 
 lysa_pushall () {
     for i in {origin,hub,bit,gitorious} ; do
-        git push $i master
+        git push $i master $@
     done
 }
 

@@ -1,5 +1,5 @@
-(smartparens-mode 1)
-(autopair-mode -1)
+;; (smartparens-mode -1)
+;; (autopair-mode -1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (flyspell-mode 1)
