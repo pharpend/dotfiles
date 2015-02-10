@@ -90,7 +90,7 @@ def battery_color(pct)
   end
 end
 
-$update_interval = 10
+$update_interval = 1
 $white = "#eeeeee"
 
 def locust
@@ -124,7 +124,7 @@ end
 
 def ncmpcpp
   begin
-    y = `ncmpcpp --now-playing`.strip.split[1..-1].join(" ")
+    y = `mpc current`.strip
     z = [{ full_text: y, color: $white }]
     return z
   rescue Exception => e
@@ -152,5 +152,5 @@ date = {  full_text: Time.now.strftime("%A %e-%m-%Y, %H:%M"),
 blank = { full_text: "",
           color: $white }
 
-$info = [win] + locust + [cputemp, cpughz, ram, date, blank]
+$info = [win] + ncmpcpp + locust + [cputemp, cpughz, ram, date, blank]
 update

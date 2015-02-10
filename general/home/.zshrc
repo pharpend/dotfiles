@@ -278,5 +278,6 @@ export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
 export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$PATH:$HOME/.cabal/bin
+export PATH=$PATH:$HOME/.local/bin
 
 export BROWSER=$(which firefox-bin)

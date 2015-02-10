@@ -128,7 +128,7 @@ exec setxkbmap us,ru -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    position bottom
+    position top
     status_command $HOME/bin/barinfo
 
     colors {
@@ -168,21 +168,22 @@ bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioLowerVolume exec amixer set Master 8%-
 bindsym XF86AudioRaiseVolume exec amixer set Master 8%+
-bindsym $mod+F7 exec ncmpcpp prev
-bindsym $mod+F8 exec ncmpcpp toggle
-bindsym $mod+F9 exec ncmpcpp next
-bindsym $mod+F10 exec amixer set Master toggle
-bindsym $mod+F11 exec amixer set Master 8%-
-bindsym $mod+F12 exec amixer set Master 8%+
+bindsym $mod+F7 exec mpc prev
+bindsym $mod+F8 exec mpc toggle
+bindsym $mod+F9 exec mpc next
+bindsym $mod+F10 exec pamixer --toggle-mute
+bindsym $mod+F11 exec pamixer --decrease 5
+bindsym $mod+F12 exec pamixer --increase 5
 
 # Autostarted applications
 # exec deluge
 exec cbatticon
 # exec dropbox
-exec dbus-launch nm-applet
+exec kalu
+exec nm-applet
 exec parcellite
 exec mpd
-exec ncmpdcpp pause
+exec ncmpcpp pause
 exec urxvtd
 # exec xscreensaver
 
