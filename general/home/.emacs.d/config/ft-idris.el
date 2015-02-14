@@ -13,3 +13,4 @@
 
 (define-key idris-mode-map (kbd "C-c C-c") 'idris-repl)
 (define-key evil-insert-state-map (kbd "C") 'self-insert-command)
+(define-key idris-mode-map (kbd "C-RET") 'hindent/reformat-decl)
