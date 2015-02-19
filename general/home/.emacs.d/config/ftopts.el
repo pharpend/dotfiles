@@ -21,6 +21,8 @@
 (add-to-list 'auto-mode-alist '("comet" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.ml[ily]?$" . tuareg-mode))
 (add-to-list 'auto-mode-alist '("\\.topml$" . tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
+(add-to-list 'auto-mode-alist '("\\.scm\\'" . racket-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()

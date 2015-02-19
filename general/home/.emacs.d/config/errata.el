@@ -57,3 +57,5 @@
 ;; Structured Haskell Mode
 ;; (add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp")
 ;; (require 'shm)
+
+(add-to-list 'rainbow-identifiers-faces-to-override 'idris-identifier-face)

@@ -153,6 +153,7 @@ bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+t exec termite
 bindsym $mod+p exec pavucontrol
+bindsym $mod+l exec gksudo system-config-printer
 
 # Resize windows
 bindsym Control+$mod+h     resize shrink width  05 px 

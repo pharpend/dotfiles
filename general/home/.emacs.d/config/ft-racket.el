@@ -2,7 +2,7 @@
 
 (company-mode 1)
 (paredit-mode 1)
-(eldoc-mode 1)
+;; (eldoc-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 ;; (rainbow-identifiers-mode 1)
