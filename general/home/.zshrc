@@ -257,6 +257,21 @@ lysa_pushall () {
     done
 }
 
+# Wacom Bamboo 16FG 6x8 Pad pad   	id: 8	type: PAD       
+# Wacom Bamboo 16FG 6x8 Pen stylus	id: 9	type: STYLUS    
+# Wacom Bamboo 16FG 6x8 Pen eraser	id: 10	type: ERASER    
+# Wacom Bamboo 16FG 6x8 Finger touch	
+
+fixwacom () {
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "DVI-D-2"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "DVI-D-2"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad" MapToOutput "DVI-D-2"
+}
+
+gitcc () {
+    git rev-list HEAD --count
+}
+
 # Syntax highlighting
 source ~/.zshlex/zsh-syntax-highlighting.zsh
 

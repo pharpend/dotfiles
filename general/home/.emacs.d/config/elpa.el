@@ -80,6 +80,7 @@
 (require 'merlin)
 ;; (require 'ocp-indent)
 (require 'popwin)
+(require 'rainbow-identifiers)
 (require 'slime-autoloads)
 (add-to-list 'load-path "~/.emacs.d/smartparens")
 (require 'smartparens-config)
