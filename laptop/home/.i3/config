@@ -154,6 +154,7 @@ bindsym $mod+m exec emacs
 bindsym $mod+t exec termite
 bindsym $mod+p exec pavucontrol
 bindsym $mod+l exec gksudo system-config-printer
+bindsym Control+$mod+l exec $HOME/bin/startlysa
 
 # Resize windows
 bindsym Control+$mod+h     resize shrink width  05 px 

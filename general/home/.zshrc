@@ -49,6 +49,7 @@ alias gf='git flow'
 alias ysd='systemctl'
 alias sysd='sudo systemctl'
 alias myip='curl icanhazip.com'
+alias sshopen='nmap -p22 --open -sV 192.168.1.0/24'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
