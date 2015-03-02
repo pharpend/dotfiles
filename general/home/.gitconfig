@@ -6,6 +6,7 @@
 	co = checkout
 	br = branch
 	fl = flow
+	rmup = remote update
 [user]
 	name = Peter Harpending
 	email = peter@harpending.org
