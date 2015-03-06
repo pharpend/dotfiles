@@ -23,7 +23,7 @@
                       color-theme-sanityinc-tomorrow
                       company-ghc
                       ecb
-                      elpy
+                      ;; elpy
                       erlang
                       evil
                       evil-nerd-commenter
@@ -44,6 +44,7 @@
                       paredit
                       planet-theme
                       popwin
+                      python-mode
                       racket-mode
                       rainbow-delimiters
                       rainbow-identifiers

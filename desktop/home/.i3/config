@@ -213,6 +213,7 @@ bindsym $mod+m exec emacs
 bindsym $mod+t exec termite
 bindsym $mod+shift+t exec urxvt
 bindsym $mod+p exec pavucontrol
+bindsym $mod+l exec emacs "~/prj/lysa/en/book"
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt

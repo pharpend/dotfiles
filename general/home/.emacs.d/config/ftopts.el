@@ -23,6 +23,7 @@
 (add-to-list 'auto-mode-alist '("\\.topml$" . tuareg-mode))
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
 (add-to-list 'auto-mode-alist '("\\.scm\\'" . racket-mode))
+(add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()

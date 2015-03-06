@@ -15,7 +15,7 @@
 
 (setq dabbrev-check-other-buffers t)
 
-(elpy-enable)
+;; (elpy-enable)
 
 (eval-after-load "auto-complete"
   '(progn
