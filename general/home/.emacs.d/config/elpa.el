@@ -30,6 +30,7 @@
                       flycheck
                       hamlet-mode
                       haskell-mode
+                      helm
                       geiser
                       ghc
                       idris-mode

@@ -9,11 +9,11 @@ browser = /usr/bin/firefox
 # # highlight = #
 # # colors from color0 to color254 can be set
 # # Linux colors
-# background      = #F1F1F1
-# foreground      = #212121
-# foreground_bold = #111111
-# foreground_dim  = #313131
-# cursor          = #212121
+# foreground      = #EEEEEE
+# foreground_bold = #FFFFFF
+# foreground_dim  = #111111
+# background      = rgba(33,33,33,1)
+# cursor          = #EEEEEE
 # color0       = #111
 # color8       = #444
 # color1       = #d00
