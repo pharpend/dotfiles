@@ -9,11 +9,11 @@ browser = /usr/bin/firefox
 # # highlight = #
 # # colors from color0 to color254 can be set
 # # Linux colors
-# background      = #F1F1F1
-# foreground      = #212121
-# foreground_bold = #111111
-# foreground_dim  = #313131
-# cursor          = #212121
+# foreground      = #EEEEEE
+# foreground_bold = #FFFFFF
+# foreground_dim  = #111111
+# background      = rgba(33,33,33,1)
+# cursor          = #EEEEEE
 # color0       = #111
 # color8       = #444
 # color1       = #d00
@@ -32,27 +32,30 @@ browser = /usr/bin/firefox
 # color15      = #fff
 
 # Solarized Light
-foreground      = #657b83
+foreground = #657b83
 foreground_bold = #073642
-background      = #fdf6e3
-cursor          = #586e75
-highlight       = #839496
-color0          = #073642
-color1          = #dc322f
-color2          = #859900
-color3          = #b58900
-color4          = #268bd2
-color5          = #d33682
-color6          = #2aa198
-color7          = #eee8d5
-color8          = #002b36
-color9          = #cb4b16
-color10         = #586e75
-color11         = #657b83
-color12         = #839496
-color13         = #6c71c4
-color14         = #93a1a1
-color15         = #fdf6e3
+#foreground_dim = #888888
+background = #fdf6e3
+cursor = #586e75
+# if unset, will reverse foreground and background
+highlight = #839496
+# colors from color0 to color254 can be set
+color0 = #073642
+color1 = #dc322f
+color2 = #859900
+color3 = #b58900
+color4 = #268bd2
+color5 = #d33682
+color6 = #2aa198
+color7 = #073642
+color8 = #002b36
+color9 = #cb4b16
+color10 = #93a1a1
+color11 = #839496
+color12 = #657b83
+color13 = #6c71c4
+color14 = #586e75
+color15 = #002b36
 
 # Solarized dark
 # foreground = #839496
@@ -81,4 +84,3 @@ color15         = #fdf6e3
 # color13 = #6c71c4
 # color14 = #93a1a1
 # color15 = #fdf6e3
-# https://raw.githubusercontent.com/alpha-omega/termite-colors-solarized/master/solarized-light

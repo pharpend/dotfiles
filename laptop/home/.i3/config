@@ -153,7 +153,7 @@ bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+p exec pavucontrol
 bindsym $mod+r exec thunderbird
-bindsym $mod+l exec gksudo system-config-printer
+bindsym $mod+l exec emacs "~/prj/lysa/en/book"
 bindsym Control+$mod+l exec $HOME/bin/startlysa
 
 # Resize windows
