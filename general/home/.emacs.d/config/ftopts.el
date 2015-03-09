@@ -146,3 +146,6 @@
           '(lambda ()
              (load-file "~/.emacs.d/config/ft-idris.el"))
           t)
+(add-hook 'lua-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-lua.el")))

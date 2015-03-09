@@ -121,6 +121,13 @@ scsgur () {
     scrot -s -e 'imgur $f ; mv $f ~/pics/screenshots'
 }
 
+scrpomf () {
+    scrot -e 'pymf $f ; mv $f ~/pics/screenshots'
+}
+scspomf () {
+    scrot -s -e 'pymf $f ; mv $f ~/pics/screenshots'
+}
+
 scrgur () {
     scrot -e 'imgur $f ; mv $f ~/pics/screenshots'
 }

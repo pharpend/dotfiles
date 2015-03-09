@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Inconsolata-dz for Powerline 8
+font pango: Meslo LG S for Powerline 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -67,8 +67,8 @@ bindsym $mod+o split h
 bindsym $mod+semicolon split v
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+r layout stacking
-bindsym $mod+s layout tabbed
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
 bindsym $mod+space layout toggle split
 
 # toggle tiling / floating
@@ -210,7 +210,7 @@ bindsym $mod+shift+c exec chromium --incognito
 bindsym $mod+grave exec dwb
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+t exec termite
+bindsym $mod+r exec thunderbird
 bindsym $mod+shift+t exec urxvt
 bindsym $mod+p exec pavucontrol
 bindsym $mod+l exec emacs "~/prj/lysa/en/book"

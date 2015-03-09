@@ -36,6 +36,7 @@
                       idris-mode
                       json-mode
                       linum-relative
+                      lua-mode
                       magit
                       markdown-mode
                       merlin
