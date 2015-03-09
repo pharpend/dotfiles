@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# i3-msg "workspace 3"
+# i3-msg "append_layout $HOME/.i3/lysa.json"
+
+emacs ~/prj/lysa/en/book/graphs & 
+firefox & 
+termite -d ~/prj/lysa/en/book/graphs & 
+gthumb ~/prj/lysa/en/book/graphs & 

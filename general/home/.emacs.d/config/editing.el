@@ -10,13 +10,7 @@
 (rainbow-mode 1)
 
 ;; Better file and buffer switching
-(ido-mode 1)
-;; (helm-mode 1)
-;; (global-set-key (kbd "M-x") 'helm-M-x)
-;; (setq helm-buffers-fuzzy-matching t)
-;; (setq helm-recentf-fuzzy-match t)
-;; (setq helm-M-x-fuzzy-match t)
-;; (setq helm-locate-fuzzy-match t)
+;; (ido-mode 1)
 ;; (setq helm-semantic-fuzzy-match t)
 ;; (setq helm-imenu-fuzzy-match t)
 ;; (setq helm-apropos-fuzzy-match t)

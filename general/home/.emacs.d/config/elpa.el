@@ -31,11 +31,13 @@
                       hamlet-mode
                       haskell-mode
                       helm
+                      helm-projectile
                       geiser
                       ghc
                       idris-mode
                       json-mode
                       linum-relative
+                      lua-mode
                       magit
                       markdown-mode
                       merlin
@@ -45,6 +47,7 @@
                       paredit
                       planet-theme
                       popwin
+                      projectile
                       python-mode
                       racket-mode
                       rainbow-delimiters

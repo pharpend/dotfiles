@@ -25,9 +25,6 @@
 (global-set-key (kbd "C-d") 'dired)
 (global-set-key (kbd "C-f") 'find-file)
 (global-set-key (kbd "C-b") 'switch-to-buffer)
-(global-set-key (kbd "M-d") 'dired)
-(global-set-key (kbd "M-f") 'find-file)
-(global-set-key (kbd "M-b") 'switch-to-buffer)
 
 (global-set-key (kbd "M-k") 'scroll-up-command)
 (global-set-key (kbd "M-;") 'scroll-down-command)

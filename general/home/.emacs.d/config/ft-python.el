@@ -15,3 +15,8 @@
 (local-set-key (kbd "C-c f n") 'flymake-goto-next-error)
 (local-set-key (kbd "C-c f p") 'flymake-goto-prev-error)
 (local-set-key (kbd "C-c f c") 'flymake-display-err-menu-for-current-line)
+
+(smartparens-mode 1)
+(rainbow-delimiters-mode 1)
+(highlight-indentation-current-column-mode 1)
+(rainbow-mode 1)
