@@ -214,6 +214,9 @@ bindsym $mod+r exec thunderbird
 bindsym $mod+shift+t exec urxvt
 bindsym $mod+p exec pavucontrol
 bindsym $mod+l exec emacs "~/prj/lysa/en/book"
+bindsym $mod+Control+l exec $HOME/bin/startlysa
+bindsym $mod+Control+Shift+l exec $HOME/bin/startlysagraphs
+bindsym $mod+control+k exec google-chrome-stable netflix.com
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
