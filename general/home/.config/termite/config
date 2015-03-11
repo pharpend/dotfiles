@@ -3,6 +3,7 @@ font = Terminus 8
 font = Source Code Pro 9
 font = DejaVu Sans Mono 9
 font = Terminess Powerline 9
+font = DejaVu Sans Mono 9
 browser = /usr/bin/firefox
 
 [colors]
