@@ -1,1 +1,1 @@
-("~/src/dotfiles/" "~/prj/lysa/" "~/prj/lysa/en/book/")
+("~/prj/lysa/" "~/src/dotfiles/" "~/prj/lysa/en/book/")
