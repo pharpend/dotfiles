@@ -1,3 +1,4 @@
+
 (autopair-mode 1)
 (auto-fill-mode 1)
 
@@ -7,3 +8,5 @@
 (setq-local evil-shift-width 2)
 
 (setq-local fill-column 80)
+
+(local-set-key (kbd "C-c c d") 'haskell-cabal-add-dependency)

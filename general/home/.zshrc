@@ -122,10 +122,10 @@ scsgur () {
 }
 
 scrpomf () {
-    scrot -e 'pymf $f ; mv $f ~/pics/screenshots'
+    scrot -e 'pymf $f ; mv $f ~/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
 }
 scspomf () {
-    scrot -s -e 'pymf $f ; mv $f ~/pics/screenshots'
+    scrot -s -e 'pymf $f ; mv $f ~/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
 }
 
 scrgur () {
