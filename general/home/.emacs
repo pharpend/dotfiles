@@ -41,11 +41,12 @@
  '(evil-want-change-word-to-end nil)
  '(fci-rule-color "#49483E")
  '(foreground-color "#839496")
+ '(haskell-literate-default (quote bird))
  '(haskell-mode-hook
    (quote
     (turn-on-eldoc-mode turn-on-haskell-doc turn-on-haskell-simple-indent
                         (lambda nil
-                          (load-file "~/.emacs.d/config/ft-haskell.el")))) t)
+                          (load-file "~/.emacs.d/config/ft-haskell.el")))))
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
    (quote

@@ -14,3 +14,8 @@
 (setq-local evil-shift-width 2)
 
 (define-key haskell-mode-map (kbd "<C-return>") 'hindent/reformat-decl)
+(define-key haskell-mode-map (kbd "C-c i a") 'haskell-add-import)
+(define-key haskell-mode-map (kbd "C-c i s") 'haskell-add-import)
+(define-key haskell-mode-map (kbd "C-c c d") 'haskell-cabal-add-dependency)
+
+;; (setq-local haskell-literate "tex")
