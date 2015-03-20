@@ -17,5 +17,6 @@
 (define-key haskell-mode-map (kbd "C-c i a") 'haskell-add-import)
 (define-key haskell-mode-map (kbd "C-c i s") 'haskell-add-import)
 (define-key haskell-mode-map (kbd "C-c c d") 'haskell-cabal-add-dependency)
+(define-key haskell-mode-map (kbd "C-c s c") 'haskell-session-change)
 
 ;; (setq-local haskell-literate "tex")
