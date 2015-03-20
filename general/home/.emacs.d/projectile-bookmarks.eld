@@ -1,1 +1,0 @@
-("~/src/dotfiles/" "~/org.harpending/" "~/org.harpending/freedom/" "~/prj/lysa/en/book/" "~/src/tn/" "~/src/hjournal/" "~/src/journal/" "~/prj/lysa/")
