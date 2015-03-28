@@ -153,9 +153,11 @@ bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+p exec pavucontrol
 bindsym $mod+r exec thunderbird
+bindsym $mod+q exec qutebrowser
 bindsym $mod+l exec emacs "~/prj/lysa/en/book"
 bindsym Control+$mod+l exec $HOME/bin/startlysa
 bindsym Control+Shift+$mod+l exec $HOME/bin/startlysagraphs
+bindsym Control+$mod+k exec google-chrome-stable netflix.com
 
 # Resize windows
 bindsym Control+$mod+h     resize shrink width  05 px 
