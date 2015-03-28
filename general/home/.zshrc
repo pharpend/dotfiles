@@ -50,6 +50,7 @@ alias ysd='systemctl'
 alias sysd='sudo systemctl'
 alias myip='curl icanhazip.com'
 alias sshopen='nmap -p22 --open -sV 192.168.1.0/24'
+alias rsy='rsync -avv --progress'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
@@ -110,26 +111,26 @@ vscreen () {
 }
 
 scr () {
-    scrot -e 'mv $f ~/pics/screenshots'
+    scrot -e 'mv $f /data/pics/screenshots'
 }
 
 scs () {
-    scrot -s -e 'mv $f ~/pics/screenshots'
+    scrot -s -e 'mv $f /data/pics/screenshots'
 }
 
 scsgur () {
-    scrot -s -e 'imgur $f ; mv $f ~/pics/screenshots'
+    scrot -s -e 'imgur $f ; mv $f /data/pics/screenshots'
 }
 
 scrpomf () {
-    scrot -e 'pymf $f ; mv $f ~/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
+    scrot -e 'pymf $f ; mv $f /data/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
 }
 scspomf () {
-    scrot -s -e 'pymf $f ; mv $f ~/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
+    scrot -s -e 'pymf $f ; mv $f /data/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
 }
 
 scrgur () {
-    scrot -e 'imgur $f ; mv $f ~/pics/screenshots'
+    scrot -e 'imgur $f ; mv $f /data/pics/screenshots'
 }
 
 dcmsg () {

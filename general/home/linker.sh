@@ -3,25 +3,27 @@
 
 echo "Removing old files... " 
 dpath=$(pwd)                  
-rm -rf ~/.barinfo             &&
-rm -rf ~/bin                  &&
-rm -rf ~/.config/dunst        &&
-rm -rf ~/.config/fontconfig   &&
-rm -rf ~/.emacs               &&
-rm -rf ~/.emacs.d             &&
-rm -rf ~/.fonts               &&
-rm -rf ~/.gitconfig           &&
-rm -rf ~/.ghc/ghci.conf       &&
-rm -rf ~/.icons               &&
-rm -rf ~/.config/mpd          &&
-rm -rf ~/.ncmpcpp             &&
-rm -rf ~/.vim                 &&
-rm -rf ~/.vimrc               &&
-rm -rf ~/.xinitrc             &&
-rm -rf ~/.Xresources          &&
-rm -rf ~/.zshrc               &&
+rm -rf ~/.barinfo           
+rm -rf ~/bin                
+rm -rf ~/.config/dunst      
+rm -rf ~/.config/fontconfig 
+rm -rf ~/.emacs             
+rm -rf ~/.emacs.d           
+rm -rf ~/.fonts             
+rm -rf ~/.gitconfig         
+rm -rf ~/.ghc/ghci.conf     
+rm -rf ~/.icons             
+rm -rf ~/.config/mpd        
+rm -rf ~/.ncmpcpp           
+rm -rf ~/.vim               
+rm -rf ~/.vimrc             
+rm -rf ~/.xinitrc           
+rm -rf ~/.Xresources        
+rm -rf ~/.zshrc             
 rm -rf ~/.zshlex              
 echo "Done."
+
+mkdir ~/.ghc ~/.config
 
 echo "Linking..."
 ln -sf $dpath/.barinfo            ~/.barinfo            &&
