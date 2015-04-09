@@ -12,17 +12,17 @@
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.hamlet\\'" . hamlet-mode))
-(add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
-(add-to-list 'auto-mode-alist '("\\.cassius\\'" . css-mode))
-(add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.hamlet\\'" . shakespeare-hamlet-mode))
+;; (add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
+;; (add-to-list 'auto-mode-alist '("\\.cassius\\'" . css-mode))
+;; (add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("comet" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.ml[ily]?$" . tuareg-mode))
 (add-to-list 'auto-mode-alist '("\\.topml$" . tuareg-mode))
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
-(add-to-list 'auto-mode-alist '("\\.scm\\'" . racket-mode))
+(add-to-list 'auto-mode-alist '("\\.scm\\'" . scheme-mode))
 (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
 
 (add-hook 'dired-load-hook
@@ -133,9 +133,9 @@
 (add-hook 'yaml-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-yaml.el")))
-(add-hook 'hamlet-mode-hook
-          (lambda ()
-            (load-file "~/.emacs.d/config/ft-web.el")))
+;; (add-hook 'hamlet-mode-hook
+;;           (lambda ()
+;;             (load-file "~/.emacs.d/config/ft-web.el")))
 (add-hook 'bibtex-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-bibtex.el")))
@@ -149,3 +149,9 @@
 (add-hook 'lua-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-lua.el")))
+(add-hook 'makefile-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-makefile.el")))
+(add-hook 'shakespeare-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-fay.el")))

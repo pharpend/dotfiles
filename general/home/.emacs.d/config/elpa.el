@@ -28,7 +28,6 @@
                       evil
                       evil-nerd-commenter
                       flycheck
-                      hamlet-mode
                       haskell-mode
                       helm
                       helm-projectile
@@ -57,6 +56,7 @@
                       ruby-tools
                       sass-mode
                       scala-mode2
+                      shakespeare-mode
                       slime
                       ;; smartparens
                       sublime-themes

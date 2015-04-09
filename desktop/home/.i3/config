@@ -210,7 +210,7 @@ bindsym $mod+shift+c exec chromium
 bindsym $mod+grave exec dwb
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+r exec thunderbird
+bindsym $mod+r exec evolution
 bindsym $mod+shift+t exec urxvt
 bindsym $mod+p exec pavucontrol
 bindsym $mod+l exec emacs "~/prj/lysa/en/book"
