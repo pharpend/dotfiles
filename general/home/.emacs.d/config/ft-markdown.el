@@ -13,3 +13,4 @@
 (wc-mode 1)
 
 (local-set-key (kbd "M-n") 'windmove-down)
+(local-set-key (kbd "M-p") 'helm-projectile)

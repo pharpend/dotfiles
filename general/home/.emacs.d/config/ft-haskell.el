@@ -1,3 +1,4 @@
+(auto-complete-mode -1)
 (company-mode 1)
 (highlight-indentation-current-column-mode 1)
 (rainbow-mode 1)
