@@ -4,6 +4,7 @@
 (setq-local tab-width 4)
 (setq-local tab-stop-list (number-sequence 4 400 4))
 (setq-local evil-shift-width 4)
+(setq-local fill-column 72)
 
 (smartparens-mode 1)
 (autopair-mode -1)

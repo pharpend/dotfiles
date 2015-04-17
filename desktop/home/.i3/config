@@ -187,22 +187,22 @@ bar {
         # urgent_workspace   #dc322f #dc322f #fdf6e3
     }
 }
-# bar {
-#     output DVI-D-2
-#     position top
-#     status_command cat
-#     # status_command $HOME/bin/barinfo
-#     tray_output DVI-D-2
-#     mode dock
+bar {
+    output DVI-D-1
+    position top
+    status_command cat
+    # status_command $HOME/bin/barinfo
+    tray_output DVI-D-2
+    mode dock
 
-#     colors {
-#         background #222222
-#         focused_workspace  #222222 #222222 #eeeeee
-#         active_workspace   #222222 #222222 #cccccc
-#         inactive_workspace #222222 #222222 #aaaaaa
-#         urgent_workspace   #ee0000 #ee0000 #ffffff
-#     }
-# }
+    colors {
+        background #222222
+        focused_workspace  #222222 #222222 #eeeeee
+        active_workspace   #222222 #222222 #cccccc
+        inactive_workspace #222222 #222222 #aaaaaa
+        urgent_workspace   #ee0000 #ee0000 #ffffff
+    }
+}
 
 # Application keybindings
 bindsym $mod+c exec firefox

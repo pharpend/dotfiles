@@ -17,4 +17,4 @@
 (c-set-style "user")
 (setq-local c-basic-offset 2)
 (setq-local c-syntactic-indentation t)
-(c-set-offset block-open 2)
+(c-set-offset 'block-open 0)

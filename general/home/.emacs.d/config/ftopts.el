@@ -24,6 +24,18 @@
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
 (add-to-list 'auto-mode-alist '("\\.scm\\'" . scheme-mode))
 (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.cabal\\'" . text-mode))
+
+(defun std-hook () 
+  (highlight-indentation-current-column-mode 1)
+  (rainbow-mode 1)
+  (rainbow-delimiters-mode 1)
+  (smartparens-mode 1)
+  (setq-local indent-tabs-mode nil)
+  (setq-local indent-line-function 'indent-relative-maybe)
+  (setq-local tab-width 2)
+  (setq-local tab-stop-list (number-sequence 2 200 2))
+  (setq-local evil-shift-width 2))
 
 (add-hook 'dired-load-hook
           (lambda ()
@@ -155,3 +167,7 @@
 (add-hook 'shakespeare-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-fay.el")))
+(add-hook 'text-mode-hook
+          (lambda ()
+            (std-hook)
+            (autopair-mode -1)) t)
