@@ -261,7 +261,7 @@ dpaste () {
 }
 
 lysa_pushall () {
-    for i in {origin,hub,bit,notabug} ; do
+    for i in {origin,hub} ; do
         git push $i master $@
     done
 }
