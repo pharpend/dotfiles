@@ -12,6 +12,7 @@
 (setq-local tab-width 2)
 (setq-local tab-stop-list (number-sequence 2 200 2))
 (setq-local evil-shift-width 2)
+(setq-local LaTeX-item-indent 0)
 
 (define-key evil-insert-state-map (kbd "`") 'self-insert-command)
 (local-set-key (kbd "C-c C-c") 'compile)

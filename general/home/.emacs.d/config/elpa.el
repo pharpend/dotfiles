@@ -22,6 +22,7 @@
                       color-theme-sanityinc-solarized
                       color-theme-sanityinc-tomorrow
                       company-ghc
+                      direx
                       ecb
                       ;; elpy
                       erlang
@@ -83,6 +84,7 @@
 (require 'magit)
 (require 'markdown-mode)
 (require 'merlin)
+(require 'neotree)
 ;; (require 'ocp-indent)
 (require 'popwin)
 (require 'rainbow-identifiers)

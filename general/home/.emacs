@@ -58,7 +58,7 @@
      ("#A45E0A" . 70)
      ("#A41F99" . 85)
      ("#49483E" . 100))))
- '(hindent-style "chris-done")
+ '(hindent-style "gibiansky")
  '(magit-use-overlays nil)
  '(pandoc-binary "/home/pete/.cabal/bin/pandoc")
  '(safe-local-variable-values (quote ((evil-shift-width . 4) (evil-shift-width . 2))))

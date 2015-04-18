@@ -11,9 +11,9 @@
 
 ;; Better file and buffer switching
 ;; (ido-mode 1)
-;; (setq helm-semantic-fuzzy-match t)
-;; (setq helm-imenu-fuzzy-match t)
-;; (setq helm-apropos-fuzzy-match t)
-;; (setq helm-apropos-fuzzy-match t)
+(setq helm-semantic-fuzzy-match t)
+(setq helm-imenu-fuzzy-match t)
+(setq helm-apropos-fuzzy-match t)
+(setq helm-apropos-fuzzy-match t)
 
 (evilnc-default-hotkeys)

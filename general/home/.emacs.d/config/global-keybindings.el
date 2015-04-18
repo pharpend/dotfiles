@@ -45,3 +45,7 @@
 
 (global-set-key (kbd "M-S-n") 'evil-window-increase-height)
 (global-set-key (kbd "M-S-h") 'evil-window-increase-width)
+
+(global-set-key (kbd "C-x c") 'customize-set-variable)
+(global-set-key [f8] 'neotree-toggle)
+(global-set-key (kbd "C-c n") 'neotree-toggle)

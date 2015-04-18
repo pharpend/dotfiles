@@ -78,3 +78,5 @@
 ;; get rid of q
 (evil-ex-define-cmd "q" nil)
 (evil-ex-define-cmd "wq" nil)
+
+(add-to-list 'evil-emacs-state-modes 'neotree-mode)
