@@ -97,3 +97,6 @@
 (helm-mode 1)
 (helm-autoresize-mode t)
 (projectile-global-mode)
+
+(setq magit-auto-revert-mode nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
