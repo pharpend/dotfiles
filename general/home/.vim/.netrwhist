@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/pete/code'
 let g:netrw_dirhist_2='/home/pete/code/rpisc'
 let g:netrw_dirhist_3='/home/pete/src/linc/Settings'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/pete/.config/termite'
 let g:netrw_dirhist_5='/home/pete/prj/lysa/en/book'
 let g:netrw_dirhist_6='/home/pete/prj/lysa/en/book/appendices'
 let g:netrw_dirhist_7='/home/pete/.gpg'
+let g:netrw_dirhist_8='/home/pete/prj/website/site/templates'
