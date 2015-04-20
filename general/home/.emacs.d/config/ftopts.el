@@ -25,6 +25,7 @@
 (add-to-list 'auto-mode-alist '("\\.scm\\'" . scheme-mode))
 (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.cabal\\'" . text-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (defun std-hook () 
   (highlight-indentation-current-column-mode 1)
