@@ -302,6 +302,9 @@ export EDITOR="vim"
 export SHELL=$(which zsh)
 export rvm_ignore_gemrc_issues=1
 
+# Add Halcyon
+eval "$( /app/halcyon/halcyon paths )" && clear
+
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.gem/ruby/1.9.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin

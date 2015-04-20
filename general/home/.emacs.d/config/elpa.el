@@ -3,15 +3,13 @@
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa-stable" . "http://stable.melpa.org/packages/")
-                         ("SC"   . "http://joseito.republika.pl/sunrise-commander/")))
+                         ("melpa-stable" . "http://stable.melpa.org/packages/")))
 
 ;; Elpa packages:
 (require 'package)
 (package-initialize)
 
-(defvar my-packages '(auctex
-                      auto-complete
+(defvar my-packages '(auto-complete
                       autopair
                       cider
                       clojure-mode
@@ -34,6 +32,7 @@
                       magit
                       markdown-mode
                       monokai-theme
+                      multiple-cursors
                       paredit
                       popwin
                       projectile
@@ -66,6 +65,7 @@
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
+(require 'multiple-cursors)
 (require 'popwin)
 (require 'rainbow-identifiers)
 (add-to-list 'load-path "~/.emacs.d/smartparens")
