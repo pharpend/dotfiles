@@ -1,7 +1,6 @@
 (company-mode 1)
-(highlight-indentation-current-column-mode 1)
+(hl-highlight-mode 1)
 (rainbow-mode 1)
-(rainbow-identifiers-mode 1)
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
 (turn-on-eldoc-mode)
