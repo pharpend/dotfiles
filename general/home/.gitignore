@@ -1,9 +1,0 @@
-*~
-.emacs.d/elpa
-.emacs.d/ac-comphist.dat
-.emacs.d/url/cookies
-.emacs.d/abbrev_defs
-.mpd/mpd.db
-.mpd/mpd.log
-.mpd/mpdstate
-.mpd/mpd.pid

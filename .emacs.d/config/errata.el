@@ -100,6 +100,3 @@
 
 (setq magit-auto-revert-mode nil)
 (setq magit-last-seen-setup-instructions "1.4.0")
-
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
