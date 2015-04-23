@@ -15,3 +15,5 @@
 	default = matching
 [merge]
 	ff = yes
+[core]
+	editor = vim
