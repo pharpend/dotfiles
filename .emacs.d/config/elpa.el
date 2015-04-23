@@ -16,6 +16,7 @@
                       color-theme
                       color-theme-sanityinc-solarized
                       color-theme-sanityinc-tomorrow
+                      company
                       erlang
                       evil
                       evil-nerd-commenter

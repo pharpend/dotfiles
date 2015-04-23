@@ -158,10 +158,25 @@ exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,grp:rctrl_tog
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    output DVI-D-1
+    position top
+    status_command $HOME/bin/barinfo.valentine 1
+    tray_output DVI-D-2
+    mode dock
+
+    colors {
+        background #222222
+        focused_workspace  #222222 #222222 #eeeeee
+        active_workspace   #222222 #222222 #cccccc
+        inactive_workspace #222222 #222222 #aaaaaa
+        urgent_workspace   #ee0000 #ee0000 #ffffff
+    }
+}
+bar {
     output DVI-D-2
     position top
     # status_command cat
-    status_command $HOME/bin/barinfo
+    status_command $HOME/bin/barinfo.valentine 2
     tray_output DVI-D-2
     mode dock
 
@@ -185,22 +200,6 @@ bar {
         # active_workspace   #073642 #073642 #2aa198
         # inactive_workspace #073642 #073642 #268bd2
         # urgent_workspace   #dc322f #dc322f #fdf6e3
-    }
-}
-bar {
-    output DVI-D-1
-    position top
-    status_command cat
-    # status_command $HOME/bin/barinfo
-    tray_output DVI-D-2
-    mode dock
-
-    colors {
-        background #222222
-        focused_workspace  #222222 #222222 #eeeeee
-        active_workspace   #222222 #222222 #cccccc
-        inactive_workspace #222222 #222222 #aaaaaa
-        urgent_workspace   #ee0000 #ee0000 #ffffff
     }
 }
 
@@ -277,12 +276,12 @@ exec urxvtd
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
 client.focused          #00eeee         #00eeee     #eeeeee     #aaaaaa
-client.focused_inactive #222222         #222222     #dddddd     #aaaaaa
+client.focused_inactive #555555         #555555     #dddddd     #aaaaaa
 client.unfocused        #222222         #222222     #dddddd     #aaaaaa
 client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
 
 focus_follows_mouse no
 
 
-for_window [class="^.*"] border pixel 6
-new_window 1pixel
+for_window [class="^.*"] border normal 4
+# new_window 1pixel

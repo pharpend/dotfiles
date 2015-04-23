@@ -4,6 +4,7 @@
 echo "Removing old files... " 
 dpath=$(pwd)                  
 rm -rf ~/.barinfo           
+rm -rf ~/.barinfo-valentine
 rm -rf ~/bin                
 rm -rf ~/.config/dunst      
 rm -rf ~/.config/fontconfig 
@@ -15,7 +16,6 @@ rm -rf ~/.fonts
 rm -rf ~/.gitconfig         
 rm -rf ~/.ghc/ghci.conf     
 rm -rf ~/.icons             
-rm -rf ~/.config/mpd        
 rm -rf ~/.ncmpcpp           
 rm -rf ~/.themes
 rm -rf ~/.vim               
@@ -32,10 +32,11 @@ mkdir ~/.i3 ~/.ghc ~/.config
 
 echo "Linking..."
 ln -sf $dpath/.barinfo            ~/.barinfo            &&
+ln -sf $dpath/.barinfo-valentine            ~/.barinfo-valentine            &&
 ln -sf $dpath/bin                 ~/bin                 &&
 ln -sf $dpath/.config/dunst       ~/.config/dunst       &&
 ln -sf $dpath/.config/fontconfig  ~/.config/fontconfig  &&
-ln -sf $dpath/.config/gtk-3.0  ~/.config/gtk-3.0  &&
+ln -sf $dpath/.config/gtk-3.0     ~/.config/gtk-3.0  &&
 ln -sf $dpath/.config/termite     ~/.config/termite     &&
 ln -sf $dpath/.emacs              ~/.emacs              &&
 ln -sf $dpath/.emacs.d            ~/.emacs.d            &&

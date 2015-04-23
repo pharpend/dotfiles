@@ -1,0 +1,278 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/pete/prj/desbot/" . "dist/")
+ ("/home/pete/src/snotra/" . "scripts/")
+ ("/home/pete/prj/lysa/en/book/chapters/" . "3/")
+ ("/home/pete/prj/lysa/en/" . "book/")
+ ("/home/pete/prj/lysa/en/book/" . "bibliographies/")
+ ("/home/" . "pete/")
+ ("/" . "home/")
+ ("/home/pete/prj/lysa/book/" . "bibliographies/")
+ ("/home/pete/docs/school/wrtg2010/assignment3/" . "final/")
+ ("/home/pete/docs/school/wrtg2010/assignment1/1/" . "finalDraft/")
+ ("/home/pete/docs/school/wrtg2010/assignment1/" . "1/")
+ ("/home/pete/docs/school/wrtg2010/" . "assignment5/")
+ ("/home/pete/docs/school/" . "wrtg2010/")
+ ("/home/pete/docs/" . "school/")
+ ("/home/pete/prj/lysa/pages/" . "tex/")
+ ("/home/pete/prj/lysa/site/" . "templates/")
+ ("/home/pete/prj/lysa/" . "en/")
+ ("/home/pete/src/web/pharpend/" . "site/")
+ ("/home/pete/src/web/" . "pharpend/")
+ ("/home/pete/prj/" . "lysa/")
+ ("/home/pete/src/dotfiles/general/home/.emacs.d/" . "config/")
+ ("/home/pete/.emacs.d/" . "config/")
+ ("/home/pete/src/puffytools/ptk/Ptk/" . "Journal/")
+ ("/home/pete/src/puffytools/src/" . "PuffyTools/")
+ ("/home/pete/src/puffytools/ptk/" . "Ptk/")
+ ("/home/pete/src/puffytools/" . "ptk/")
+ ("/home/pete/src/" . "snotra/")
+ ("/home/pete/.config/" . "termite/")
+ ("/home/pete/math/" . "hw8/")
+ ("/home/pete/" . "prj/")
+ ("/usr/home/pete/dotfiles/general/home/.emacs.d/" . "config/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/pete/prj/lysa/en/book/bibliographies/"
+ "/home/pete/prj/lysa/en/book/"
+ "/home/pete/prj/lysa/en/book/appendices/"
+ "/home/pete/prj/lysa/en/book/chapters/"
+ "/home/pete/"
+ "/home/pete/prj/"
+ "/home/pete/.emacs.d/config/"
+ "/home/pete/prj/lysa/"
+ "/home/pete/.config/termite/"
+ "/home/pete/prj/lysa/en/book/chapters/3/"
+ "/home/pete/prj/lysa/en/book/chapters/2/"
+ "/home/pete/prj/lysa/en/book/code/"
+ "/home/pete/prj/desbot/"
+ "/home/pete/prj/desbot/src/"
+ "/home/pete/docs/schedule/"
+ "/home/pete/prj/trapshoot/"
+ "/home/pete/src/snotra/scripts/"
+ "/home/pete/src/snotra/config/"
+ "/home/pete/src/snotra/templates/"
+ "/home/pete/src/snotra/"
+ "/home/pete/src/snotra/Handler/"
+ "/home/pete/.i3/"
+ "/home/pete/src/"
+ "/home/pete/src/dotfiles/desktop/home/.i3/"
+ "/home/pete/.config/gtk-3.0/"
+ "/home/pete/src/dotfiles/general/home/"
+ "/home/pete/prj/lysa/book/chapters/"
+ "/home/pete/prj/lysa/book/"
+ "/home/pete/prj/lysa/book/bibliographies/"
+ "/home/pete/docs/"
+ "/home/pete/docs/school/wrtg2010/assignment5/"
+ "/home/pete/docs/school/wrtg2010/assignment3/final/"
+ "/home/pete/docs/school/wrtg2010/"
+ "/home/pete/docs/school/wrtg2010/assignment1/1/finalDraft/"
+ "/home/pete/prj/lysa/pages/tex/"
+ "/home/pete/prj/lysa/site/templates/"
+ "/home/pete/math/hw8/"
+ "/home/pete/prj/lysa/pages/"
+ "/home/pete/prj/lysa/.git/"
+ "/home/pete/prj/lysa/site/pages/"
+ "/home/pete/prj/lysa/site/"
+ "/home/pete/prj/lysa/site/hakyll/"
+ "/home/pete/src/web/pharpend/site/"
+ "/home/pete/prj/lyaa/"
+ "/home/pete/math/hw7/"
+ "/home/pete/src/dotfiles/general/home/.emacs.d/config/"
+ "/home/pete/src/puffytools/"
+ "/home/pete/src/puffytools/ptk/Ptk/Journal/"
+ "/home/pete/src/puffytools/src/PuffyTools/"
+ "/home/pete/src/puffytools/ptk/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "lysa.bib"
+ "lysa.ltx"
+ "identities.ltx"
+ "2-boolean-algebra.ltx"
+ "fdl.ltx"
+ ".md"
+ "5-more-sets.ltx"
+ "1-introduction.ltx"
+ "4-functions.ltx"
+ ".zshrc"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/pete/prj/lysa/en/book/chapters/" (21750 35875 614776 909000) "./" "3-sets.ltx" "2-boolean-algebra.ltx" "../" "4-functions.ltx" "5-more-sets.ltx" "1-introduction.ltx")
+
+ ("/home/pete/prj/lysa/en/book/bibliographies/" (21747 34579 949768 129000) "./" "../" "lysa.bib")
+
+ ("/home/pete/prj/lysa/en/book/" (21750 33172 284799 556000) "code/" "./" "images/" "appendices/" "build" "../" "lysa.ltx" "outline.md" "lysa.pdf" "bibliographies/" "chapters/")
+
+ ("/home/pete/prj/lysa/en/book/appendices/" (21750 32786 904802 784000) "./" "philosophy.ltx" "../" "identities.ltx" "how-to-learn.ltx" "fdl.ltx")
+
+ ("/home/pete/" (21750 31378 298147 918000) "keys.tar.gz.gpg" ".gringotts.conf" ".gtkrc-2.0" ".ssh/" ".Xauthority" "./" ".cabal/" ".gpg.rc" ".cddb/" ".grip" "builds/" ".gnome/" ".pki/" "music/" "guadal.avi" ".local/" ".saves/" ".gnupg/" "pr4.tar" ".zcompdump" ".gpg/" "mail/" ".barinfo" ".FBReader/" ".subversion/" ".adobe/" ".gnome2/" ".fonts/" ".mozilla/" ".xsel.log" ".dropbox/" "italy.avi" ".i3/" ".mypaint/" ".vimrc" ".urxvt/" ".emacs.d/" ".gnome2_private/" ".Xresources" ".pip/" ".md" ".gem/" ".pinerc" "droid/" ".barinfo-errors" ".openvpn/" ".oldbarinfo" ".lyrics/" ".histfile" "books/" "diaries/" ".gitconfig" ".icons/" ".muttrc" ".elinks/" ".zshrc" ".mutt_aliases" ".gimp-2.8/" "keys/" ".themes/" ".zshlex/" "Desktop/" "openvpn.tar.gz" ".gringotts.recent" "downloads/" ".cache/" "docs/" "books.tar.gz" ".mutt/" ".grip-lame" "crappypics.tar.gz" ".pwds" ".macromedia/" ".serverauth.4105" ".gstreamer-0.10/" ".viminfo" ".ghc/" ".esd_auth" ".mutt_certificates" ".thumbnails/" "Pictures/" "videos/" ".serverauth.4116" ".vim/" ".pine-debug1" ".weechat/" "../" "maildir/" "bin/" "src/" ".config/" ".maildir/" "prj/" "crapmusic.tar.gz" ".mailnum" ".grip-flac" ".idris/" ".mpderrat/" ".gtk-bookmarks" ".dbus/" "pics/" ".rednotebook/" ".sage/" ".xinitrc" "Downloads/" ".emacs" "music.tar" ".ncmpcpp/" ".python_history" ".lesshst" ".mpd/")
+
+ ("/home/pete/prj/lysa/" (21747 6213 753339 92000) "en/" "./" ".git/" "pdf/" "README.md" "../" ".gitignore" "ru/" "changes.md" "LICENSE")
+
+ ("/home/" (21727 33733 176388 351000) "apples/" "lost+found/" "./" "../" "pete/")
+
+ ("/home/pete/src/dotfiles/general/home/" (21742 27825 489236 432000) "./" ".barinfo" ".fonts/" ".vimrc" ".emacs.d/" ".Xresources" "linker.sh" "#.zshrc#" ".gitconfig" ".icons/" ".zshrc" ".themes/" ".zshlex/" ".ghc/" ".vim/" "../" ".gitignore" "bin/" ".config/" ".xinitrc" ".emacs" ".ncmpcpp/")
+
+ ("/home/pete/src/dotfiles/general/home/.emacs.d/" (21744 5204 861661 243000) "./" "elpa/" "auto-save-list/" "structured-haskell-mode/" "config/" "tramp" "pandoc-mode/" "ido.last" "errat/" "../" "smartparens/" ".gitignore" "ac-comphist.dat")
+
+ ("/home/pete/src/dotfiles/general/home/.emacs.d/config/" (21742 45201 365757 536000) "ft-idris.el" "ft-css.el" "ft-ml.el" "./" "ft-c.el" "ft-scss.el" "ft-emacs-lisp.el" "slime.el" "ft-makefile.el" "ft-javascript.el" "ft-web.el" "ft-cl.el" "ft-perl.el" "ft-markdown.el" "cider.el" "ft-java.el" "errata.el" "ft-scala.el" "evil.el" "ft-html.el" "ft-dired.el" "ft-latex.el" "ft-clojure-test.el" "lf.el" "ft-clojure.el" "functions.el" "ft-zsh.el" "ftopts.el" "ft-conf.el" "ft-vala.el" "../" "elpa.el" "ft-haskell.el" "cider-repl.el" "ft-ruby.el" "ft-yaml.el" "ft-nxml.el" "ft-scheme.el" "global-keybindings.el" "ft-cabal.el" "ft-python.el" "ft-text.el" "editing.el" "ft-bibtex.el" "paredit.el" "ft-racket.el")
+
+ ("/home/pete/.emacs.d/config/" (21742 45201 365757 536000) "ft-idris.el" "ft-css.el" "ft-ml.el" "./" "ft-c.el" "ft-scss.el" "ft-emacs-lisp.el" "slime.el" "ft-makefile.el" "ft-javascript.el" "ft-web.el" "ft-cl.el" "ft-perl.el" "ft-markdown.el" "cider.el" "ft-java.el" "errata.el" "ft-scala.el" "evil.el" "ft-html.el" "ft-dired.el" "ft-latex.el" "ft-clojure-test.el" "lf.el" "ft-clojure.el" "functions.el" "ft-zsh.el" "ftopts.el" "ft-conf.el" "ft-vala.el" "../" "elpa.el" "ft-haskell.el" "cider-repl.el" "ft-ruby.el" "ft-yaml.el" "ft-nxml.el" "ft-scheme.el" "global-keybindings.el" "ft-cabal.el" "ft-python.el" "ft-text.el" "editing.el" "ft-bibtex.el" "paredit.el" "ft-racket.el")
+
+ ("/home/pete/.emacs.d/" (21744 5204 861661 243000) "./" "elpa/" "auto-save-list/" "structured-haskell-mode/" "config/" "tramp" "pandoc-mode/" "ido.last" "errat/" "../" "smartparens/" ".gitignore" "ac-comphist.dat")
+
+ ("/home/pete/prj/lysa/.git/" (21744 5002 798329 602000) "FETCH_HEAD" "./" "COMMIT_EDITMSG" "HEAD" "config" "description" "objects/" "index" "ORIG_HEAD" "logs/" ".#COMMIT_EDITMSG" "info/" "hooks/" "../" "refs/")
+
+ ("/home/pete/docs/schedule/" (21726 8119 29538 683000) "./" "../" "schedule.md")
+
+ ("/home/pete/prj/desbot/src/" (21727 58570 742196 581000) "./" "main.hs" "../")
+
+ ("/home/pete/prj/desbot/" (21727 57534 955565 713000) "cabal.sandbox.config" "./" ".git/" "dist/" "Setup.hs" ".cabal-sandbox/" "desbot.cabal" "cabal.config" "../" "skel/" ".gitignore" "src/" "LICENSE")
+
+ ("/home/pete/prj/lysa/en/book/code/" (21735 32065 618325 534000) "truthtable.idr" "./" ".gitkeep" "truthtable.ibc" "../" "helloworld.idr")
+
+ ("/home/pete/.config/termite/" (21738 19648 621959 522000) "./" "config" "../")
+
+ ("/home/pete/.config/" (21728 21833 851201 225000) "sakura/" "./" "mimeapps.list" "brasero/" "elegance-colors/" "netsurf/" "chromium/" "gthumb/" "pcmanfm/" "ario/" "gedit/" "xfburn/" "Atom-Shell/" "kalu/" "nitrogen/" "easytag/" "deluge/" "parcellite/" "Trolltech.conf" "htop/" "abiword/" "backintime/" "libreoffice/" "mpd/" "Thunar/" "pulse/" "coq/" "ImageMagick/" "evince/" "pithos.ini" "viewnior/" "terminator/" "menus/" "VirtualBox/" "pavucontrol.ini" "enchant/" "dconf/" "jumanji/" "gtk-2.0/" "../" "font-manager/" "termite/" "bleachbit/" "gconf/" "vlc/" "Mumble/" "dwb/" "xfce4/" "Atom/" "gtk-3.0/" "midori/" "libfm/" "dunst/" "matplotlib/" "syncthing/" "google-chrome/" "fontconfig/")
+
+ ("/home/pete/prj/lysa/en/book/chapters/3/" (21736 53951 668637 386000) "./" "3-unions-intersections.ltx" ".#1-elements-subsets.ltx" "garbage.ltx" "4-categories.ltx" "../" "1-elements-subsets.ltx" "2-operators-functions.ltx")
+
+ ("/home/pete/prj/lysa/en/book/chapters/2/" (21735 36638 591500 816000) "1-basic-logic.ltx" "./" "../" "2-more-logic.ltx")
+
+ ("/home/pete/prj/lysa/en/" (21732 60136 184150 528000) "./" "README.md" "docs/" "../" ".gitignore" "book/" "lysa.pdf")
+
+ ("/home/pete/prj/desbot/dist/" (21727 57157 428912 95000) "./" "setup-config" "dist-sandbox-71de1312/" "build/" "../" "package.conf.inplace/")
+
+ ("/home/pete/docs/" (21722 53282 133704 647000) "keys.tar.gz.gpg" "other/" "./" "schedule/" "journal.yml.gpg" "lamb.md" "cv/" "rwl/" "school/" "todolist.md" "../" "composekeys.html" "notes.md" "diary.ods.gpg")
+
+ ("/home/pete/src/dotfiles/desktop/home/.i3/" (21716 3839 609003 819000) "./" "config" "../")
+
+ ("/home/pete/.i3/" (21716 3839 609003 819000) "./" "config" "../")
+
+ ("/home/pete/src/snotra/templates/" (21716 5333 82285 534000) "./" "homepage.lucius" "default-layout-wrapper.hamlet" "default-layout.hamlet" "homepage.hamlet" "homepage.julius" "../")
+
+ ("/home/pete/src/snotra/config/" (21716 4480 642314 997000) "./" "sqlite.yml" "settings.yml" "routes" "models" "robots.txt" "../" "keter.yml" "favicon.ico" "test-settings.yml" "client_session_key.aes")
+
+ ("/home/pete/prj/trapshoot/" (21720 12974 689627 867000) "./" ".git/" "clay-pigeon.jpg" "../" "trapshoot.md")
+
+ ("/home/pete/prj/" (21720 11162 729690 492000) "website/" "desbot/" "./" "lysa/" "../" "trapshoot/" "commalg/")
+
+ ("/home/pete/src/snotra/Settings/" (21716 3541 955680 774000) "./" "StaticFiles.hs" "../")
+
+ ("/home/pete/src/snotra/Handler/" (21716 3541 955680 774000) "./" "Common.hs" "Home.hs" "../")
+
+ ("/home/pete/src/snotra/" (21716 3989 32331 988000) ".ghci" "cabal.sandbox.config" "./" ".git/" "test/" "dist/" "Handler/" "config/" ".cabal-sandbox/" "snotra_test.sqlite3" "app/" "Import/" "static/" "Application.hs" "snotra.sqlite3" "cabal.config" "Model.hs" "Settings.hs" "scripts/" "templates/" "README.md" "Foundation.hs" "yesod-devel/" "../" ".gitignore" "LICENSE" "Settings/" "snotra.cabal" "Import.hs")
+
+ ("/home/pete/src/snotra/scripts/" (21716 3585 629012 596000) "./" "agplthings.sh" "../" "agpl-blob.txt")
+
+ ("/home/pete/src/snotra/app/" (21716 3541 955680 774000) "devel.hs" "./" "main.hs" "../" "DevelMain.hs")
+
+ ("/home/pete/src/web/" (21682 59863 274730 79000) "./" "pharpend.github.io/" "../")
+
+ ("/home/pete/src/" (21716 2233 675725 990000) "puffytools/" "./" "passchuse/" "csidr/" "cindent/" "ptkgtk/" "snotra.bak/" "dotfiles/" "snotra/" "journal/" "idr/" "scratch/" "apate/" "web/" "../" "dead/" "private-dots/")
+
+ ("/home/pete/.config/dwb/" (21690 58273 98231 947000) "./" "userscripts/" "settings" "keys" "../" "searchengines" "mimetypes" "default/")
+
+ ("/home/pete/docs/school/wrtg2010/assignment3/final/" (21686 31755 558016 157000) "./" "draft (valentine's conflicted copy 2014-11-14).pdf" "images/" "draftnotes.md" "draft.ltx" "coverletter.md" "draft.bib" "draft.pdf" "build" "../")
+
+ ("/home/pete/.config/gtk-3.0/" (21706 37974 107909 512000) "./" "gtk.css" "bookmarks" "../" "settings.ini")
+
+ ("/home/pete/src/dotfiles/" (21669 42868 379153 799000) "laptop/" "./" ".git/" "desktop/" "portage-bootstrap.sh" "portstrap.md" "README.md" "../" ".gitignore" "LICENSE" "general/")
+
+ ("/tmp/" (21685 41219 785145 546000) ".vbox-pete-ipc/" "irc.freenode.net/" "tmp_7a8m9" "orbit-pete/" "tmux-1000/" "mutt-valentine-1000-23136-17585664582140575246" "../" "clipboardcache" "./" "tmp8XlZkp" ".X11-unix/" "tmpozMEWl" "pulse-PKdhtXMmr18n/" "tmpqLuiyT" ".ICE-unix/" "ghc19378_0/" "mutt-valentine-1000-6040-1159289854753496954" "emacs1000/" "i3-pete.QFDnlV/" "ghc26782_0/" "i3-pete.Zdkh7l/" "tmpeTquIq" ".#mutt-valentine-1000-23136-17585664582140575246" "#mutt-valentine-1000-5808-13517235501210229568#" "hsperfdata_portage/" ".X0-lock" "docview1000/" "manpages-checksKl5P" "tmpqQ6nDU")
+
+ ("/home/pete/prj/lysa/book/bibliographies/" (21658 9609 481622 63000) "3-special-sets.bib" "2-sets-monoids.bib" "./" "../" "1-introduction.bib")
+
+ ("/home/pete/prj/lysa/book/chapters/" (21658 9064 540633 40000) "3-special-sets.ltx" "1-introduction.ltx" "./" "2-sets-monoids.ltx" "../")
+
+ ("/home/pete/prj/lysa/book/" (21658 9609 481622 63000) "lysa.run.xml" "lysa-blx.bib" "images/" "build" "lysa.out" "bibliographies/" "lysa.ltx" "./" "lysa.pdf" "lysa.fls" "lysa.log" "fdl.ltx" "lysa.toc" "../" "chapters/" "lysa.blg" "lysa.bbl" "lysa.fdb_latexmk" "lysa.aux")
+
+ ("/home/pete/src/dotfiles/general/" (21625 1445 52261 73000) "home/" "./" "../")
+
+ ("/home/pete/math/hw5/" (21652 28554 947160 561000) "pharpend-hw5.pdf" "3.3.7.png" "build" "./" "pharpend-hw5.ltx" "../" "3.4.11.png")
+
+ ("/home/pete/math/notes/" (21652 28545 554160 750000) "videos/" "140203.md" "140403.ora" "141206.md" "140403-fourier.ora" "./" "141201.md" "140202.md" "../" "140403-fourier.png")
+
+ ("/home/pete/math/hw7/" (21652 28555 23160 559000) "build" "pharpend-hw.ltx" "5.2.28.png" "./" "pharpend-hw.pdf" "../")
+
+ ("/home/pete/math/hw8/" (21652 28554 998160 560000) "build" "pharpend-hw.ltx" "./" "pharpend-hw.pdf" "../")
+
+ ("/home/pete/docs/school/wrtg2010/assignment1/1/finalDraft/" (21652 28555 293160 554000) "draft.bib" "draft.ltx" "images/" "draft.pdf" "./" "build.sh" "../")
+
+ ("/home/pete/docs/school/wrtg2010/assignment5/" (21652 35137 724027 972000) "assignment2.bib" "coverletter.pdf" "assignment3.bib" "statement.ltx" "hw2.ltx" "notes.bib" "build" "./" "assignment1.bib" "hw3.ltx" "notes.pdf" "coverletter.ltx" "img/" "../" "notes.ltx" "artifacts.ltx" "hw1.ltx")
+
+ ("/home/pete/prj/lysa/site/" (21652 55871 687610 351000) "images/" "COPYING" "./" "pages/" "stylesheets/" "_site/" "highlight/" "fonts/" "_cache/" "../" "chapters/" "main.hs" "templates/" "LICENSE" ".gitignore")
+
+ ("/home/pete/prj/lysa/site/stylesheets/" (21652 56109 106605 569000) "default.sass" "./" "../")
+
+ ("/home/pete/src/dotfiles/desktop/" (21629 62530 234489 96000) "home/" "./" "../" "root/")
+
+ ("/home/pete/src/dotfiles/desktop/home/" (21625 3252 844425 675000) "./" ".i3/" "../" "linker.sh")
+
+ ("/home/pete/docs/school/" (21652 28555 48160 559000) "math2280/" "./" "wrtg2010/" "../" "Phys2210/")
+
+ ("/home/pete/docs/school/wrtg2010/" (21652 28555 768160 544000) "assignment3/" "assignment5/" "hw/" "./" "../" "assignment1/" "assignment4/" "notes/" "assignment2/")
+
+ ("/home/pete/docs/school/wrtg2010/assignment2/" (21551 1346 0 0) "proposal/" "rough/" "./" "../")
+
+ ("/home/pete/docs/school/wrtg2010/assignment2/rough/" (21572 861 0 0) "draft.bib" "cover-letter.txt" "draft.ltx" "images/" "draft.pdf" "./" "cover-letter.html" "build.sh" "../" "vectorsort.hs")
+
+ ("/home/pete/docs/school/wrtg2010/assignment3/" (21603 45657 0 0) "notes.md" "proposal.txt" "proposal.md" "rough/" "final/" "./" "sources.txt" "../" "sources.md")
+
+ ("/home/pete/docs/school/wrtg2010/assignment1/1/" (21544 59206 0 0) "thesis.md" "coverletter.md" "outline.md" "./" "finalDraft/" "roughDraft/" "../")
+
+ ("/home/pete/docs/school/wrtg2010/assignment1/" (21544 59206 0 0) "0/" "1/" "./" "../")
+
+ ("/home/pete/prj/lysa/pages/" (21646 32437 717326 286000) "tex/" "index.md" "outline.md" "./" "../")
+
+ ("/home/pete/prj/lysa/site/templates/" (21646 31803 486339 61000) "default.html" "./" "../")
+
+ ("/home/pete/src/puffytools/ptk/Ptk/" (21634 19913 842563 319000) "Journal.hs" "./" "Journal/" "../")
+
+ ("/home/pete/src/puffytools/ptk/" (21634 19913 842563 319000) "./" "Ptk/" "../" "Main.hs")
+
+ ("/home/pete/src/puffytools/src/PuffyTools/" (21634 19913 844563 320000) "Slug.hs" "Journal.hs" "./" "../")
+
+ ("/home/pete/src/puffytools/ptk/Ptk/Journal/" (21634 19913 842563 319000) "Cat.hs" "List.hs" "New.hs" "ListEntries.hs" "./" "../" "AddEntry.hs")
+
+ ("/home/pete/src/puffytools/" (21634 20354 989594 782000) "skel/" "README.md" "./" "Setup.hs" "puffytools.cabal" ".git/" "src/" "ptk/" "../" "res/" "ptkbuild" "LICENSE" ".gitignore" "test/")
+
+ ("/home/pete/prj/lysa/site/pages/" (21644 52949 707553 168000) "tex/" "index.md" "outline.md" "./" "../")
+
+ ("/home/pete/prj/lysa/pages/tex/" (21644 52949 707553 168000) "commalg.tex" "README" "./" "ch0.tex" "../" "ch0.md")
+
+ ("/home/pete/math/" (21638 29346 0 0) "hw7/" "hw1/" "hw6/" "./" "hw2/" "hw3/" "hw4/" "hw5/" "hw8/" "../" "notes/")
+
+ ("/home/pete/prj/lysa/site/hakyll/" (21642 39442 210465 265000) "COPYING" "./" "../" "main.hs" ".gitignore")
+
+ ("/home/pete/prj/lyaa/" (21642 31357 713628 102000) "./" ".git/" "commalg.ltx" "../" "chapters/" ".gitignore")
+
+ ("/home/pete/src/web/pharpend/site/" (21615 39491 303086 922000) "site.hs" "./" "../")
+
+ ("/home/pete/src/web/pharpend/" (21615 39491 303086 922000) "README.md" "images/" "site/" "posts/" "./" "pages/" "stylesheets/" ".git/" "highlight/" "build.sh" "../" "templates/" ".gitignore" "bugs/")
+
+ ("/home/pete/src/learn/" (21606 61666 654688 789000) "lens/" "./" "../")
+
+ ("/home/pete/docs/school/math2280/" (21636 64278 997821 841000) "hw7/" "hw1/" "hw6/" "./" "hw2/" "hw3/" "hw4/" "hw5/" "../" "notes/")
+
+ ("/home/pete/docs/school/math2280/hw7/" (21637 33767 753116 378000) "build" "pharpend-hw.ltx" "5.2.28.png" "./" "#pharpend-hw.ltx#" "pharpend-hw.pdf" "../")
+
+ ("/home/pete/src/puffytools/src/" (21633 59923 651742 778000) "./" "PuffyTools/" "../")
+
+ ("/usr/home/pete/dotfiles/general/home/.emacs.d/config/" (21626 28847 369236 2000) "ft-javascript.el" "errata.el" "ft-nxml.el" "paredit.el" "ft-clojure.el" "ft-java.el" "ft-c.el" "ft-makefile.el" "ft-scss.el" "ft-perl.el" "ft-clojure-test.el" "ftopts.el" "ft-bibtex.el" "ft-css.el" "global-keybindings.el" "slime.el" "ft-cl.el" "cider.el" "elpa.el" "ft-ml.el" "ft-yaml.el" "ft-latex.el" "ft-emacs-lisp.el" "ft-dired.el" "lf.el" "ft-ruby.el" "ft-racket.el" "cider-repl.el" "ft-web.el" "ft-zsh.el" "ft-vala.el" "ft-scala.el" "evil.el" "ft-html.el" "functions.el" "editing.el" "ft-conf.el" "ft-cabal.el" "ft-scheme.el" "ft-haskell.el" "ft-python.el" "ft-text.el" "ft-markdown.el" "../" "./")
+
+ ("/usr/home/pete/dotfiles/general/home/.emacs.d/" (21627 27200 311617 197000) "errat/" "config/" "ac-comphist.dat" ".mc-lists.el" "elpa/" "pandoc-mode/" "abbrev_defs" "../" "./")
+
+ ("/usr/home/pete/dotfiles/general/home/" (21627 26984 212447 383000) ".zshrc" ".gitconfig" ".emacs.d/" ".barinfo" ".icons/" ".Xresources" ".emacs" ".fonts/" "linker.sh" ".config/" ".zshlex/" ".linker.sh.un~" ".vim/" ".themes/" "bin/" "linker.sh~" ".mpd/" "..zshrc.un~" ".ghc/" "..xinitrc.un~" ".gitignore" ".vimrc" ".ncmpcpp/" ".xinitrc" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
