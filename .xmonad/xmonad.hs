@@ -3,6 +3,7 @@ module Main where
 import qualified Data.Map as M
 import           System.Exit
 import           XMonad
+import           XMonad.Actions.CycleWS
 import qualified XMonad.StackSet as W
 
 main :: IO ()
@@ -12,21 +13,20 @@ main = xmonad
            , modMask = mod4Mask
            , borderWidth = 3
            , normalBorderColor = "#222222"
-           , focusedBorderColor = "#222222"
+           , focusedBorderColor = "#2222f2"
            , workspaces = [show i | i <- [0 .. 9]]
            , keys = myKeys
            , mouseBindings = myMouseBindings
            , layoutHook = myLayout
+           , startupHook = myStartupHook
            }
   where
+    myStartupHook = do
+      spawn "xmobar"
     myKeys conf@(XConfig { XMonad.modMask = modm }) = M.fromList $
-      [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
-      , ((modm, xK_w), spawn "dmenu_run")
-      , ((modm .|. shiftMask, xK_c), spawn "chromium --incognito")
+      [ ((modm, xK_Return), spawn $ XMonad.terminal conf)
       , ((modm, xK_space), sendMessage NextLayout)
-      ,
-      -- Resize viewed windows to the correct size
-      ((modm, xK_k), kill)
+      , ((modm, xK_k), kill)
       , ((modm, xK_Tab), windows W.focusDown)
       , ((modm, xK_n), windows W.focusDown)
       , ((modm, xK_e), windows W.focusUp)
@@ -41,6 +41,19 @@ main = xmonad
       , ((modm, xK_period), sendMessage (IncMasterN (-1)))
       , ((modm .|. shiftMask, xK_q), io (exitWith ExitSuccess))
       , ((modm, xK_q), spawn "xmonad --recompile; xmonad --restart")
+      , ((modm, xK_u), prevWS)
+      , ((modm, xK_u), nextWS)
+      , ((modm .|. shiftMask, xK_u), shiftToPrev)
+      , ((modm .|. shiftMask, xK_u), shiftToNext)
+      ,
+      --
+      -- applications
+      ((modm, xK_w), spawn "dmenu_run")
+      , ((modm .|. shiftMask, xK_c), spawn "chromium --incognito")
+      , ((modm, xK_c), spawn "firefox")
+      , ((modm, xK_m), spawn "emacs")
+      , ((modm .|. shiftMask, xK_f), spawn "thunar")
+      , ((modm .|. shiftMask, xK_p), spawn "pavucontrol")
       ]
 
     myMouseBindings (XConfig { XMonad.modMask = modm }) = M.fromList $

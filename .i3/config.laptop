@@ -132,17 +132,17 @@ bar {
     status_command $HOME/bin/barinfo
 
     colors {
-        # background #222222
-        # focused_workspace  #222222 #222222 #eeeeee
-        # active_workspace   #222222 #222222 #cccccc
-        # inactive_workspace #222222 #222222 #aaaaaa
-        # urgent_workspace   #ee0000 #ee0000 #ffffff
+        background #222222
+        focused_workspace  #222222 #222222 #eeeeee
+        active_workspace   #222222 #222222 #cccccc
+        inactive_workspace #222222 #222222 #aaaaaa
+        urgent_workspace   #ee0000 #ee0000 #ffffff
         # Solarized
-        background #073642
-        focused_workspace  #073642 #073642 #eee8d5
-        active_workspace   #073642 #073642 #2aa198
-        inactive_workspace #073642 #073642 #268bd2
-        urgent_workspace   #dc322f #dc322f #fdf6e3
+        # background #073642
+        # focused_workspace  #073642 #073642 #eee8d5
+        # active_workspace   #073642 #073642 #2aa198
+        # inactive_workspace #073642 #073642 #268bd2
+        # urgent_workspace   #dc322f #dc322f #fdf6e3
     }
 }
 
@@ -204,16 +204,16 @@ exec synclient TouchpadOff=1
 
 # Solarized
 # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
-client.focused          #f336a2         #f336a2     #fdf6e3     #93a1a1
-client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
-client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
-client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
+# client.focused          #f336a2         #f336a2     #fdf6e3     #93a1a1
+# client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
+# client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
+# client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
-# client.focused          #00eeee         #00eeee     #eeeeee     #aaaaaa
-# client.focused_inactive #222222         #222222     #dddddd     #aaaaaa
-# client.unfocused        #222222         #222222     #dddddd     #aaaaaa
-# client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
+client.focused          #00eeee         #00eeee     #eeeeee     #aaaaaa
+client.focused_inactive #222222         #222222     #dddddd     #aaaaaa
+client.unfocused        #222222         #222222     #dddddd     #aaaaaa
+client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
 
 focus_follows_mouse no
 
