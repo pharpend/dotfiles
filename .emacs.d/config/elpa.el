@@ -11,6 +11,7 @@
 
 (defvar my-packages '(auto-complete
                       autopair
+                      auctex
                       cider
                       clojure-mode
                       color-theme
