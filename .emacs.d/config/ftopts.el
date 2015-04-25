@@ -27,13 +27,12 @@
 (add-to-list 'auto-mode-alist '("\\.cabal\\'" . text-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-(defun std-hook () 
+(defun haskellook () 
   (highlight-indentation-current-column-mode 1)
   (rainbow-mode 1)
   (rainbow-delimiters-mode 1)
   (smartparens-mode 1)
   (setq-local indent-tabs-mode nil)
-  (setq-local indent-line-function 'indent-relative-maybe)
   (setq-local tab-width 2)
   (setq-local tab-stop-list (number-sequence 2 200 2))
   (setq-local evil-shift-width 2))
@@ -67,7 +66,7 @@
             (load-file "~/.emacs.d/config/ft-haskell.el")))
 (add-hook 'LaTeX-mode-hook
           (lambda ()
-            (load-file "~/.emacs.d/config/ft-latex.el")))
+            (load-file "~/.emacs.d/config/ft-latex.el")) 1)
 (add-hook 'python-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-python.el")))
@@ -170,5 +169,5 @@
             (load-file "~/.emacs.d/config/ft-fay.el")))
 (add-hook 'text-mode-hook
           (lambda ()
-            (std-hook)
+            (haskellook)
             (autopair-mode -1)) t)
