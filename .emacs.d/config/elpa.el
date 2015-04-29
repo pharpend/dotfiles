@@ -3,7 +3,7 @@
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa-stable" . "http://stable.melpa.org/packages/")))
+                         ("melpa" . "http://melpa.org/packages/")))
 
 ;; Elpa packages:
 (require 'package)
@@ -46,6 +46,7 @@
                       ruby-tools
                       sass-mode
                       scala-mode2
+                      shakespeare-mode
                       slime
                       wc-mode
                       web-mode
