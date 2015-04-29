@@ -100,3 +100,5 @@
 
 (setq magit-auto-revert-mode nil)
 (setq magit-last-seen-setup-instructions "1.4.0")
+
+(push '("*goals*" :position bottom :noselect t :stick t) popwin:special-display-config)

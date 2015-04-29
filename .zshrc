@@ -51,6 +51,7 @@ alias sysd='sudo systemctl'
 alias myip='curl icanhazip.com'
 alias sshopen='nmap -p22 --open -sV 192.168.1.0/24'
 alias rsy='rsync -avv --progress'
+alias mcqt='rlwrap coqtop'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
@@ -272,9 +273,9 @@ lysa_pushall () {
 # Wacom Bamboo 16FG 6x8 Finger touch	
 
 fixwacom () {
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "DVI-D-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "DVI-D-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad" MapToOutput "DVI-D-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "DVI-D-2"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "DVI-D-2"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad" MapToOutput "DVI-D-2"
 }
 
 gitcc () {
