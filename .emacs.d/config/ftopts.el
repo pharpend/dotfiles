@@ -27,16 +27,6 @@
 (add-to-list 'auto-mode-alist '("\\.cabal\\'" . text-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-(defun haskellook () 
-  (highlight-indentation-current-column-mode 1)
-  (rainbow-mode 1)
-  (rainbow-delimiters-mode 1)
-  (smartparens-mode 1)
-  (setq-local indent-tabs-mode nil)
-  (setq-local tab-width 2)
-  (setq-local tab-stop-list (number-sequence 2 200 2))
-  (setq-local evil-shift-width 2))
-
 (add-hook 'dired-load-hook
           (lambda ()
             (load "dired-x")))
@@ -167,7 +157,3 @@
 (add-hook 'shakespeare-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-fay.el")))
-(add-hook 'text-mode-hook
-          (lambda ()
-            (haskellook)
-            (autopair-mode -1)) t)

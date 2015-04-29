@@ -275,7 +275,7 @@ exec urxvtd
 # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
-client.focused          #00eeee         #00eeee     #eeeeee     #aaaaaa
+client.focused          #22eeee         #22eeee     #eeeeee     #aaaaaa
 client.focused_inactive #555555         #555555     #dddddd     #aaaaaa
 client.unfocused        #222222         #222222     #dddddd     #aaaaaa
 client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
@@ -283,5 +283,8 @@ client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
 focus_follows_mouse no
 
 
-for_window [class="^.*"] border normal 4
-# new_window 1pixel
+for_window [class="^.*"] border pixel 6
+new_window 1pixel
+
+gaps inner 0
+gaps outer 0
