@@ -106,8 +106,29 @@ hscreen () {
 }
 
 vscreen () {
+    xrandr --output VGA-1 --rotate left
+    xrandr --output DVI-D-2 --rotate left --right-of VGA-1
+    nitrogen --restore
+}
+
+vhvscreen () {
+    xrandr --output DVI-D-1 --auto --rotate normal
+    xrandr --output VGA-1   --auto --rotate left --left-of DVI-D-1
+    xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1
+    nitrogen --restore
+}
+
+vvvscreen () {
     xrandr --output DVI-D-1 --rotate left
+    xrandr --output VGA-1 --rotate left --left-of DVI-D-1
     xrandr --output DVI-D-2 --rotate left --right-of DVI-D-1
+    nitrogen --restore
+}
+
+bigscreen () {
+    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output VGA-1 --off
+    xrandr --output DVI-D-2 --off
     nitrogen --restore
 }
 

@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Meslo LG S for Powerline 9
+font pango: Meslo LG S for Powerline 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -151,17 +151,36 @@ mode "resize" {
 # V V
 # exec (xrandr --output DVI-D-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
 # H H
-exec (xrandr --output DVI-D-1 --auto && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-1 --auto && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
 exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+# V H V
+exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-1 && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+# Just the big screen
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-2 --off)
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    output VGA-1
+    position top
+    status_command cat
+    tray_output DVI-D-1
+    mode dock
+
+    colors {
+        background #222222
+        focused_workspace  #222222 #222222 #eeeeee
+        active_workspace   #222222 #222222 #cccccc
+        inactive_workspace #222222 #222222 #aaaaaa
+        urgent_workspace   #ee0000 #ee0000 #ffffff
+    }
+}
+bar {
     output DVI-D-1
     position top
-    status_command $HOME/bin/barinfo.valentine 1
-    tray_output DVI-D-2
+    status_command $HOME/bin/barinfo
+    tray_output DVI-D-1
     mode dock
 
     colors {
@@ -175,9 +194,8 @@ bar {
 bar {
     output DVI-D-2
     position top
-    # status_command cat
-    status_command $HOME/bin/barinfo.valentine 2
-    tray_output DVI-D-2
+    status_command cat
+    tray_output DVI-D-1
     mode dock
 
     # These are the colors for the window borders, so I'm going to apply them here
@@ -232,12 +250,9 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
-bindsym XF86AudioMute        exec pamixer --toggle-mute
-bindsym XF86AudioLowerVolume exec pamixer --decrease 5
-bindsym XF86AudioRaiseVolume exec pamixer --increase 5
-bindsym $mod+F10 exec pamixer --toggle-mute
-bindsym $mod+F11 exec pamixer --decrease 5
-bindsym $mod+F12 exec pamixer --increase 5
+bindsym $mod+F10 exec amixer set Master toggle
+bindsym $mod+F11 exec amixer set Master 5%-
+bindsym $mod+F12 exec amixer set Master 5%+
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next

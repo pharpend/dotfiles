@@ -128,7 +128,8 @@
             (load-file "~/.emacs.d/config/ft-javascript.el")))
 (add-hook 'sass-mode-hook
           (lambda ()
-            (load-file "~/.emacs.d/config/ft-web.el")))
+            (load-file "~/.emacs.d/config/ft-sass.el"))
+          1)
 (add-hook 'racket-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-racket.el")))

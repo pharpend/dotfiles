@@ -154,9 +154,7 @@ blank = { full_text: "",
 
 case $arg
 when "1"
-  $info = ncmpcpp
-when "2"
-  $info = [cputemp, cpughz, ram, date, blank]
+  $info = [ncmpcpp, cputemp, cpughz, ram, date, blank]
 else
   $info = {full_text: "Error in .barinfo.valentine!", color: "red"}
 end
