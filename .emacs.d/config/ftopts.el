@@ -12,7 +12,7 @@
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.hamlet\\'" . shakespeare-hamlet-mode))
+(add-to-list 'auto-mode-alist '("\\.hamlet\\'" . shakespeare-hamlet-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.cassius\\'" . css-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.julius\\'" . web-mode))
