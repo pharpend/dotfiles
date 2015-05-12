@@ -25,8 +25,6 @@
 
 (ac-config-default)
 (setq inferior-lisp-program "/usr/bin/sbcl")
-
-;; (setq shm-program-name "/home/pete/.emacs.d/shm/.cabal-sandbox/bin/structured-haskell-mode")
 (setq vc-follow-symlinks t)
 
 (setq backup-directory-alist `(("." . "~/.saves")))
@@ -42,8 +40,8 @@
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 
-;; (add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp/")
-;; (require 'shm)
+(add-to-list 'load-path "~/.emacs.d/load-list/structured-haskell-mode/elisp/")
+(require 'shm)
 
 ;; OCaml setup
 (autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)
@@ -53,10 +51,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/errat/")
 (require 'hindent)
-
-;; Structured Haskell Mode
-;; (add-to-list 'load-path "~/.emacs.d/structured-haskell-mode/elisp")
-;; (require 'shm)
 
 (add-to-list 'rainbow-identifiers-faces-to-override 'idris-identifier-face)
 

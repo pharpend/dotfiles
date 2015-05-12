@@ -1,10 +1,12 @@
 (auto-complete-mode -1)
 (company-mode 1)
 (highlight-indentation-current-column-mode 1)
+(hindent-mode 1)
+(interactive-haskell-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
-;; (structured-haskell-mode -1)
+(structured-haskell-mode 1)
 (turn-on-eldoc-mode)
 
 (setq-local indent-tabs-mode nil)
@@ -21,3 +23,7 @@
 (define-key haskell-mode-map (kbd "C-c s c") 'haskell-session-change)
 
 ;; (setq-local haskell-literate "tex")
+(set-face-background 'shm-current-face "#eee8d5")
+(set-face-background 'shm-quarantine-face "lemonchiffon")
+
+(define-key shm-map (kbd ")") nil)
