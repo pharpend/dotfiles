@@ -1,5 +1,6 @@
 [options]
 font = Terminus 13
+font = DejaVu Sans Mono 9
 browser = /usr/bin/firefox
 
 [colors]
