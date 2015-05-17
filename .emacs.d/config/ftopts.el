@@ -155,6 +155,15 @@
 (add-hook 'makefile-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-makefile.el")))
-(add-hook 'shakespeare-mode-hook
+(add-hook 'shakespeare-hamlet-mode-hook
           (lambda ()
-            (load-file "~/.emacs.d/config/ft-fay.el")))
+            (load-file "~/.emacs.d/config/ft-shakespeare.el")) 1)
+(add-hook 'shakespeare-lucius-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-shakespeare.el")) 1)
+(add-hook 'shakespeare-cassius-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-shakespeare.el")) 1)
+(add-hook 'shakespeare-julius-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-shakespeare.el")) 1)

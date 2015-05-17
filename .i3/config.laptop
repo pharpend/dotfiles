@@ -24,7 +24,7 @@ font pango: Inconsolata-dz for Powerline 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec terminator
 bindsym $mod+Shift+Return exec termite
 
 # kill focused window
@@ -216,9 +216,6 @@ client.unfocused        #222222         #222222     #dddddd     #aaaaaa
 client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
 
 focus_follows_mouse no
-
-gaps inner 0
-gaps outer 0
 
 for_window [class="^.*"] border pixel 5
 new_window 1pixel
