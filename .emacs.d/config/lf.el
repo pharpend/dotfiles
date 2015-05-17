@@ -1,7 +1,7 @@
 ;; Configure the look and feel of Emacs
 (cond ((eq window-system 'x)
-       (set-frame-font "Fira Mono 13")
-       (load-theme 'sanityinc-solarized-light t)
+       (set-frame-font "Meslo LG L 10")
+       (load-theme 'sanityinc-solarized-dark t)
        ))
 
 (scroll-bar-mode -1)
@@ -40,6 +40,9 @@
         :stick t)
       popwin:special-display-config)
 
+
+(set-face-background 'shm-quarantine-face "#073642")
+(set-face-background 'shm-current-face "#0e414e")
 
 ;; All idris modes
 ;;

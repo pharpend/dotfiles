@@ -23,7 +23,5 @@
 (define-key haskell-mode-map (kbd "C-c s c") 'haskell-session-change)
 
 ;; (setq-local haskell-literate "tex")
-(set-face-background 'shm-current-face "#eee8d5")
-(set-face-background 'shm-quarantine-face "lemonchiffon")
 
 (define-key shm-map (kbd ")") nil)

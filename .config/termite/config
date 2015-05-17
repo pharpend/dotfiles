@@ -1,5 +1,5 @@
 [options]
-font = Terminus 13
+font = Meslo LG S 10
 browser = /usr/bin/firefox
 
 [colors]
