@@ -25,3 +25,6 @@
 ;; (setq-local haskell-literate "tex")
 
 (define-key shm-map (kbd ")") nil)
+(define-key shm-map (kbd "M-y") nil)
+(set-face-background 'shm-quarantine-face "#073642")
+(set-face-background 'shm-current-face "#0e414e")
