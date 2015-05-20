@@ -24,8 +24,8 @@ font pango: Inconsolata-dz for Powerline 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
-bindsym $mod+Shift+Return exec termite
+bindsym $mod+Shift+Return exec terminator
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+k kill
