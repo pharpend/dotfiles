@@ -41,8 +41,6 @@
       popwin:special-display-config)
 
 
-(set-face-background 'shm-quarantine-face "#073642")
-(set-face-background 'shm-current-face "#0e414e")
 
 ;; All idris modes
 ;;
