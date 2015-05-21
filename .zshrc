@@ -337,3 +337,6 @@ export PATH=$PATH:$HOME/.cabal/bin:.cabal-sandbox/bin
 export PATH=$PATH:$HOME/.local/bin
 
 export BROWSER=$(which firefox-bin)
+
+# OPAM configuration
+. /home/pete/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
