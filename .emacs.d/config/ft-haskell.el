@@ -26,5 +26,10 @@
 
 (define-key shm-map (kbd ")") nil)
 (define-key shm-map (kbd "M-y") nil)
-(set-face-background 'shm-quarantine-face "#073642")
-(set-face-background 'shm-current-face "#0e414e")
+;; For light
+(set-face-background 'shm-quarantine-face "lemonchiffon")
+(set-face-background 'shm-current-face "#eee8d5")
+                                          ;;
+;; For dark
+;; (set-face-background 'shm-quarantine-face "#073642")
+;; (set-face-background 'shm-current-face "#0e414e")
