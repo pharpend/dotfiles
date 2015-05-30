@@ -250,9 +250,9 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
-bindsym $mod+F10 exec amixer set Master toggle
-bindsym $mod+F11 exec amixer set Master 5%-
-bindsym $mod+F12 exec amixer set Master 5%+
+bindsym $mod+F10 exec pamixer --toggle
+bindsym $mod+F11 exec pamixer --decrease 5
+bindsym $mod+F12 exec pamixer --increase 5
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
