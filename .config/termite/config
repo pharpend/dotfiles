@@ -1,5 +1,5 @@
 [options]
-font = Meslo LG S 10
+font = Monospace 9
 browser = /usr/bin/firefox
 
 [colors]
