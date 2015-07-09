@@ -47,3 +47,6 @@
 (global-set-key (kbd "M-S-h") 'evil-window-increase-width)
 
 (global-set-key (kbd "C-x c") 'customize-set-variable)
+
+(define-key dired-mode-map (kbd "e") 'dired-previous-line)
+(define-key dired-mode-map (kbd "i") 'evil-forward-char)
