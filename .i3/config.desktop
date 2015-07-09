@@ -154,7 +154,7 @@ mode "resize" {
 # exec (xrandr --output DVI-D-1 --auto && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
 exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
 # V H V
-exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-1 && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-2 && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-2)
 # Just the big screen
 # exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-2 --off)
 
@@ -165,22 +165,7 @@ bar {
     output VGA-1
     position top
     status_command cat
-    tray_output DVI-D-1
-    mode dock
-
-    colors {
-        background #222222
-        focused_workspace  #222222 #222222 #eeeeee
-        active_workspace   #222222 #222222 #cccccc
-        inactive_workspace #222222 #222222 #aaaaaa
-        urgent_workspace   #ee0000 #ee0000 #ffffff
-    }
-}
-bar {
-    output DVI-D-1
-    position top
-    status_command $HOME/bin/barinfo
-    tray_output DVI-D-1
+    tray_output DVI-D-2
     mode dock
 
     colors {
@@ -194,8 +179,23 @@ bar {
 bar {
     output DVI-D-2
     position top
+    status_command $HOME/bin/barinfo
+    tray_output DVI-D-2
+    mode dock
+
+    colors {
+        background #222222
+        focused_workspace  #222222 #222222 #eeeeee
+        active_workspace   #222222 #222222 #cccccc
+        inactive_workspace #222222 #222222 #aaaaaa
+        urgent_workspace   #ee0000 #ee0000 #ffffff
+    }
+}
+bar {
+    output DVI-D-1
+    position top
     status_command cat
-    tray_output DVI-D-1
+    tray_output DVI-D-2
     mode dock
 
     # These are the colors for the window borders, so I'm going to apply them here

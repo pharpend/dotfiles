@@ -34,13 +34,11 @@
       delete-old-versions 2
       version-control t)
 
-(setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
-(add-to-list 'exec-path "~/.cabal/bin")
-
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 
 (add-to-list 'load-path "~/.emacs.d/load-list/structured-haskell-mode/elisp/")
+(setq shm-program-name "/home/pete/.local/bin/structured-haskell-mode")
 (require 'shm)
 
 ;; OCaml setup
@@ -96,3 +94,7 @@
 (setq magit-last-seen-setup-instructions "1.4.0")
 
 (push '("*goals*" :position bottom :noselect t :stick t) popwin:special-display-config)
+(push '("*louse*" :position bottom :noselect t :stick t :height 20) popwin:special-display-config)
+(setq shm-program-name "/home/pete/.local/bin/structured-haskell-mode")
+(setq shm-program-name "/home/pete/.local/bin/structured-haskell-mode")
+(setq shm-program-name "/home/pete/.local/bin/structured-haskell-mode")

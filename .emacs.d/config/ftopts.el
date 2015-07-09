@@ -24,7 +24,6 @@
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
 (add-to-list 'auto-mode-alist '("\\.scm\\'" . scheme-mode))
 (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.cabal\\'" . text-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (add-hook 'dired-load-hook
@@ -167,3 +166,6 @@
 (add-hook 'shakespeare-julius-mode-hook
           (lambda ()
             (load-file "~/.emacs.d/config/ft-shakespeare.el")) 1)
+(add-hook 'coq-mode-hook
+          (lambda ()
+            (load-file "~/.emacs.d/config/ft-coq.el")) 1)

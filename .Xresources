@@ -1,420 +1,420 @@
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintfull
+! Xft.dpi:        96
+! Xft.antialias:  true
+! Xft.rgba:       rgb
+! Xft.hinting:    true
+! Xft.hintstyle:  hintfull
 
-Xcursor.theme: ComixCursors-Slim-Green
+Xcursor.size: 64
 
-URxvt*font             : xft:Terminess Powerline:size=9
-URxvt*scrollBar        : false
-URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
-URxvt.keysym.M-u       : perl:url-select:select_next
-URxvt.url-launcher     : /usr/bin/xombrero
-URxvt.underlineURLs    : True
-URxvt.matcher.button   : 1 
-URxvt.keysym.M-Escape  : perl:keyboard-select:activate
-URxvt.keysym.M-c       : perl:clipboard:copy
-URxvt.keysym.M-v       : perl:clipboard:paste
-URxvt.keysym.M-C-v     : perl:clipboard:paste_escaped
-URxvt.copyCommand      : xsel -ib
-URxvt.pasteCommand     : xsel -ob
-URxvt.depth            : 32
-URxvt.intensityStyles  : false
-URxvt.letterSpace      : -1
+! URxvt*font             : xft:Terminess Powerline:size=9
+! URxvt*scrollBar        : false
+! URxvt.perl-ext-common  : default,clipboard,matcher,keyboard-select,selection-to-clipboard
+! URxvt.keysym.M-u       : perl:url-select:select_next
+! URxvt.url-launcher     : /usr/bin/xombrero
+! URxvt.underlineURLs    : True
+! URxvt.matcher.button   : 1 
+! URxvt.keysym.M-Escape  : perl:keyboard-select:activate
+! URxvt.keysym.M-c       : perl:clipboard:copy
+! URxvt.keysym.M-v       : perl:clipboard:paste
+! URxvt.keysym.M-C-v     : perl:clipboard:paste_escaped
+! URxvt.copyCommand      : xsel -ib
+! URxvt.pasteCommand     : xsel -ob
+! URxvt.depth            : 32
+! URxvt.intensityStyles  : false
+! URxvt.letterSpace      : -1
 
-! URxvt*background:   #111
-! URxvt*foreground:   #eee
-! URxvt*color0:       #111
-! URxvt*color8:       #444
-! URxvt*color1:       #d00
-! URxvt*color9:       #f00
-! URxvt*color2:       #0d0
-! URxvt*color10:      #0f0
-! URxvt*color3:       #dd0
-! URxvt*color11:      #ff0
-! URxvt*color4:       #09d
-! URxvt*color12:      #0df
-! URxvt*color5:       #d0d
-! URxvt*color13:      #f0f
-! URxvt*color6:       #0dd
-! URxvt*color14:      #0ff
-! URxvt*color7:       #ddd
-! URxvt*color15:      #fff
+! ! URxvt*background:   #111
+! ! URxvt*foreground:   #eee
+! ! URxvt*color0:       #111
+! ! URxvt*color8:       #444
+! ! URxvt*color1:       #d00
+! ! URxvt*color9:       #f00
+! ! URxvt*color2:       #0d0
+! ! URxvt*color10:      #0f0
+! ! URxvt*color3:       #dd0
+! ! URxvt*color11:      #ff0
+! ! URxvt*color4:       #09d
+! ! URxvt*color12:      #0df
+! ! URxvt*color5:       #d0d
+! ! URxvt*color13:      #f0f
+! ! URxvt*color6:       #0dd
+! ! URxvt*color14:      #0ff
+! ! URxvt*color7:       #ddd
+! ! URxvt*color15:      #fff
 
-! Molokai theme
-! URxvt*background: #101010
-! URxvt*foreground: #d0d0d0
-! URxvt*color0: #101010
-! URxvt*color1: #960050
-! URxvt*color2: #66aa11
-! URxvt*color3: #c47f2c
-! URxvt*color4: #30309b
-! URxvt*color5: #7e40a5
-! URxvt*color6: #3579a8
-! URxvt*color7: #9999aa
-! URxvt*color8: #303030
-! URxvt*color9: #ff0090
-! URxvt*color10: #80ff00
-! URxvt*color11: #ffba68
-! URxvt*color12: #5f5fee
-! URxvt*color13: #bb88dd
-! URxvt*color14: #4eb4fa
-! URxvt*color15: #d0d0d0
+! ! Molokai theme
+! ! URxvt*background: #101010
+! ! URxvt*foreground: #d0d0d0
+! ! URxvt*color0: #101010
+! ! URxvt*color1: #960050
+! ! URxvt*color2: #66aa11
+! ! URxvt*color3: #c47f2c
+! ! URxvt*color4: #30309b
+! ! URxvt*color5: #7e40a5
+! ! URxvt*color6: #3579a8
+! ! URxvt*color7: #9999aa
+! ! URxvt*color8: #303030
+! ! URxvt*color9: #ff0090
+! ! URxvt*color10: #80ff00
+! ! URxvt*color11: #ffba68
+! ! URxvt*color12: #5f5fee
+! ! URxvt*color13: #bb88dd
+! ! URxvt*color14: #4eb4fa
+! ! URxvt*color15: #d0d0d0
 
-! IR_Black
-! URxvt*background: #000000
-! URxvt*foreground: #dcdccc
-! URxvt*color0: #2F2E2D
-! URxvt*color8: #4A4845
-! URxvt*color1: #C37561
-! URxvt*color9: #D19485
-! URxvt*color2: #A0A57E
-! URxvt*color10: #B6B99D
-! URxvt*color3: #D1A375
-! URxvt*color11: #DEBC9C
-! URxvt*color4: #7985A3
-! URxvt*color12: #98A1B9
-! URxvt*color5: #AB716D
-! URxvt*color13: #BE918E
-! URxvt*color6: #98B9B1
-! URxvt*color14: #CBE6CB
-! URxvt*color7: #D0D0D0
-! URxvt*color15: #EFEFEF
+! ! IR_Black
+! ! URxvt*background: #000000
+! ! URxvt*foreground: #dcdccc
+! ! URxvt*color0: #2F2E2D
+! ! URxvt*color8: #4A4845
+! ! URxvt*color1: #C37561
+! ! URxvt*color9: #D19485
+! ! URxvt*color2: #A0A57E
+! ! URxvt*color10: #B6B99D
+! ! URxvt*color3: #D1A375
+! ! URxvt*color11: #DEBC9C
+! ! URxvt*color4: #7985A3
+! ! URxvt*color12: #98A1B9
+! ! URxvt*color5: #AB716D
+! ! URxvt*color13: #BE918E
+! ! URxvt*color6: #98B9B1
+! ! URxvt*color14: #CBE6CB
+! ! URxvt*color7: #D0D0D0
+! ! URxvt*color15: #EFEFEF
 
-! Slate
-!URxvt*color0: #4E4E4E
-!URxvt*color8: #7C7C7C
-!URxvt*color1: #FF6C60
-!URxvt*color9: #D19485
-!URxvt*color2: #A8FF60
-!URxvt*color10: #CEFFAB
-!URxvt*color3: #FFFFB6
-!URxvt*color11: #FFFFCB
-!URxvt*color4: #96CBFE
-!URxvt*color12: #FFFFCB
-!URxvt*color5: #FF73FD
-!URxvt*color13: #FF9CFE
-!URxvt*color6: #C6C5FE
-!URxvt*color14: #DFDFFE
-!URxvt*color7: #EEEEEE
-!URxvt*color15: #FFFFFF
+! ! Slate
+! !URxvt*color0: #4E4E4E
+! !URxvt*color8: #7C7C7C
+! !URxvt*color1: #FF6C60
+! !URxvt*color9: #D19485
+! !URxvt*color2: #A8FF60
+! !URxvt*color10: #CEFFAB
+! !URxvt*color3: #FFFFB6
+! !URxvt*color11: #FFFFCB
+! !URxvt*color4: #96CBFE
+! !URxvt*color12: #FFFFCB
+! !URxvt*color5: #FF73FD
+! !URxvt*color13: #FF9CFE
+! !URxvt*color6: #C6C5FE
+! !URxvt*color14: #DFDFFE
+! !URxvt*color7: #EEEEEE
+! !URxvt*color15: #FFFFFF
 
-!droog
-! URxvt*background: #1e1e1e
-! URxvt*foreground: #E1E2DB
-! URxvt*color0: #232526
-! URxvt*color8: #1e1e1e
-! URxvt*color1: #933046
-! URxvt*color9: #4b2935
-! URxvt*color2: #74835E
-! URxvt*color10: #394332
-! URxvt*color3: #C9B464
-! URxvt*color11: #D6993C
-! URxvt*color4: #3b5170
-! URxvt*color12: #36416b
-! URxvt*color5: #6B709C
-! URxvt*color13: #474F73
-! URxvt*color6: #4A6A76
-! URxvt*color14: #40505D
-! URxvt*color7: #E1E2DB
-! URxvt*color15: #888888
+! !droog
+! ! URxvt*background: #1e1e1e
+! ! URxvt*foreground: #E1E2DB
+! ! URxvt*color0: #232526
+! ! URxvt*color8: #1e1e1e
+! ! URxvt*color1: #933046
+! ! URxvt*color9: #4b2935
+! ! URxvt*color2: #74835E
+! ! URxvt*color10: #394332
+! ! URxvt*color3: #C9B464
+! ! URxvt*color11: #D6993C
+! ! URxvt*color4: #3b5170
+! ! URxvt*color12: #36416b
+! ! URxvt*color5: #6B709C
+! ! URxvt*color13: #474F73
+! ! URxvt*color6: #4A6A76
+! ! URxvt*color14: #40505D
+! ! URxvt*color7: #E1E2DB
+! ! URxvt*color15: #888888
 
-!dno
-! URxvt*background: #101010
-! URxvt*foreground: #f2f2f2
-! URxvt*color0: #101010
-! URxvt*color8: #1d202f
-! URxvt*color1: #f13a21
-! URxvt*color9: #ff361e
-! URxvt*color2: #93f91d
-! URxvt*color3: #ffd00a
-! URxvt*color11: #93ff00
-! URxvt*color10: #ffc005
-! URxvt*color4: #004f9e
-! URxvt*color12: #0071ff
-! URxvt*color5: #ec0048
-! URxvt*color13: #ef0051
-! URxvt*color6: #2aa7e7
-! URxvt*color14: #4bb8fd
-! URxvt*color7: #f2f2f2
-! URxvt*color15: #ffffff
+! !dno
+! ! URxvt*background: #101010
+! ! URxvt*foreground: #f2f2f2
+! ! URxvt*color0: #101010
+! ! URxvt*color8: #1d202f
+! ! URxvt*color1: #f13a21
+! ! URxvt*color9: #ff361e
+! ! URxvt*color2: #93f91d
+! ! URxvt*color3: #ffd00a
+! ! URxvt*color11: #93ff00
+! ! URxvt*color10: #ffc005
+! ! URxvt*color4: #004f9e
+! ! URxvt*color12: #0071ff
+! ! URxvt*color5: #ec0048
+! ! URxvt*color13: #ef0051
+! ! URxvt*color6: #2aa7e7
+! ! URxvt*color14: #4bb8fd
+! ! URxvt*color7: #f2f2f2
+! ! URxvt*color15: #ffffff
 
 
-! Something else
-! URxvt*color0: #1B1D1E
-! URxvt*color8: #505354
-! URxvt*color1: #F92672
-! URxvt*color9: #FF669D
-! URxvt*color2: #A6E22E
-! URxvt*color10: #BEED5F
-! URxvt*color3: #FD971F
-! URxvt*color11: #E6DB74
-! URxvt*color4: #66D9EF
-! URxvt*color12: #66D9EF
-! URxvt*color5: #9E6FFE
-! URxvt*color13: #9E6FFE
-! URxvt*color6: #5E7175
-! URxvt*color14: #A3BABF
-! URxvt*color7: #CCCCC6
-! URxvt*color15: #F8F8F2
-! URxvt*foreground:#a0a0a0
-! URxvt*background:#000000
+! ! Something else
+! ! URxvt*color0: #1B1D1E
+! ! URxvt*color8: #505354
+! ! URxvt*color1: #F92672
+! ! URxvt*color9: #FF669D
+! ! URxvt*color2: #A6E22E
+! ! URxvt*color10: #BEED5F
+! ! URxvt*color3: #FD971F
+! ! URxvt*color11: #E6DB74
+! ! URxvt*color4: #66D9EF
+! ! URxvt*color12: #66D9EF
+! ! URxvt*color5: #9E6FFE
+! ! URxvt*color13: #9E6FFE
+! ! URxvt*color6: #5E7175
+! ! URxvt*color14: #A3BABF
+! ! URxvt*color7: #CCCCC6
+! ! URxvt*color15: #F8F8F2
+! ! URxvt*foreground:#a0a0a0
+! ! URxvt*background:#000000
 
-!skwid
-! URxvt*background: #1C1C1C
-! URxvt*foreground: #DDEEDD
-! URxvt*color0: #1C1C1C
-! URxvt*color8: #4d4d4d
-! URxvt*color1: #D81860
-! URxvt*color9: #F00060
-! URxvt*color2: #B7CE42
-! URxvt*color10: #BDE077
-! URxvt*color3: #FEA63C
-! URxvt*color11: #FFE863
-! URxvt*color4: #66AABB
-! URxvt*color12: #AACCBB
-! URxvt*color5: #B7416E
-! URxvt*color13: #BB4466
-! URxvt*color6: #5E7175
-! URxvt*color14: #A3BABF
-! URxvt*color7: #DDEEDD
-! URxvt*color15: #6C887A
+! !skwid
+! ! URxvt*background: #1C1C1C
+! ! URxvt*foreground: #DDEEDD
+! ! URxvt*color0: #1C1C1C
+! ! URxvt*color8: #4d4d4d
+! ! URxvt*color1: #D81860
+! ! URxvt*color9: #F00060
+! ! URxvt*color2: #B7CE42
+! ! URxvt*color10: #BDE077
+! ! URxvt*color3: #FEA63C
+! ! URxvt*color11: #FFE863
+! ! URxvt*color4: #66AABB
+! ! URxvt*color12: #AACCBB
+! ! URxvt*color5: #B7416E
+! ! URxvt*color13: #BB4466
+! ! URxvt*color6: #5E7175
+! ! URxvt*color14: #A3BABF
+! ! URxvt*color7: #DDEEDD
+! ! URxvt*color15: #6C887A
 
-! Daisuke newest
-!*color0: #040404
-!*color1: #ba7373
-!*color2: #739456
-!*color3: #a4712e
-!*color4: #7985a3
-!*color5: #6f4f70
-!*color6: #b0c4de
-!*color7: #d0d0d0
-!*color8: #554444
-!*color9: #c14b4b
-!*color10: #6ca318
-!*color11: #7f672e
-!*color12: #537595
-!*color13: #a971a7
-!*color14: #70999a
-!*color15: #cacaca
+! ! Daisuke newest
+! !*color0: #040404
+! !*color1: #ba7373
+! !*color2: #739456
+! !*color3: #a4712e
+! !*color4: #7985a3
+! !*color5: #6f4f70
+! !*color6: #b0c4de
+! !*color7: #d0d0d0
+! !*color8: #554444
+! !*color9: #c14b4b
+! !*color10: #6ca318
+! !*color11: #7f672e
+! !*color12: #537595
+! !*color13: #a971a7
+! !*color14: #70999a
+! !*color15: #cacaca
 
-!milomouse
-!*background: #151515
-! *foreground: #c3c2c5
-! *color0: #050505
-! *color8: #555753
-! *color1: #9c8093
-! *color9: #ffadcc
-! *color2: #9ed3d7
-! *color10: #67d797
-! *color3: #ccc9a5
-! *color11: #c4c497
-! *color4: #3f4f60
-! *color12: #98a7b6
-! *color5: #a488d9
-! *color13: #b7a7bc
-! *color6: #8d9fa6
-! *color14: #b8ddea
-! *color7: #665c64
-! *color15: #787a76
+! !milomouse
+! !*background: #151515
+! ! *foreground: #c3c2c5
+! ! *color0: #050505
+! ! *color8: #555753
+! ! *color1: #9c8093
+! ! *color9: #ffadcc
+! ! *color2: #9ed3d7
+! ! *color10: #67d797
+! ! *color3: #ccc9a5
+! ! *color11: #c4c497
+! ! *color4: #3f4f60
+! ! *color12: #98a7b6
+! ! *color5: #a488d9
+! ! *color13: #b7a7bc
+! ! *color6: #8d9fa6
+! ! *color14: #b8ddea
+! ! *color7: #665c64
+! ! *color15: #787a76
 
-!!!! BLAH forgot
-!*color0: #303030
-!*color1: #c03000
-!*color2: #b1d631
-!*color3: #fecf35
-!*color4: #426870
-!*color5: #6d506d
-!*color6: #4bb5c1
-!*color7: #e2e2e5
-!*color8: #5f5f5f
-!*color9: #ff3a78
-!*color10: #a6cd07
-!*color11: #b5c865
-!*color12: #4a7781
-!*color13: #ff3b77
-!*color14: #4bb5c1
-!*color15: #e2e2e5
+! !!!! BLAH forgot
+! !*color0: #303030
+! !*color1: #c03000
+! !*color2: #b1d631
+! !*color3: #fecf35
+! !*color4: #426870
+! !*color5: #6d506d
+! !*color6: #4bb5c1
+! !*color7: #e2e2e5
+! !*color8: #5f5f5f
+! !*color9: #ff3a78
+! !*color10: #a6cd07
+! !*color11: #b5c865
+! !*color12: #4a7781
+! !*color13: #ff3b77
+! !*color14: #4bb5c1
+! !*color15: #e2e2e5
 
-!!! shiva
-! *color0: rgb:00/00/00
-! *color1: rgb:cd/5c/5c
-! *color2: rgb:27/CA/25
-! *color3: rgb:d2/b4/8c
-! *color4: rgb:5f/7b/8a
-! *color5: rgb:cd/cd/b4
-! *color6: rgb:68/68/68
-! *color7: rgb:ff/ff/ff
-! *color8: rgb:3C/3C/3C
-! *color9: rgb:D6/93/00
-! *color10: rgb:95/c7/49
-! *color11: rgb:cd/cd/c1
-! *color12: rgb:36/7F/C5
-! *color13: rgb:cd/cd/b4
-! *color14: rgb:77/87/98
-! *color15: rgb:ff/ff/ff
+! !!! shiva
+! ! *color0: rgb:00/00/00
+! ! *color1: rgb:cd/5c/5c
+! ! *color2: rgb:27/CA/25
+! ! *color3: rgb:d2/b4/8c
+! ! *color4: rgb:5f/7b/8a
+! ! *color5: rgb:cd/cd/b4
+! ! *color6: rgb:68/68/68
+! ! *color7: rgb:ff/ff/ff
+! ! *color8: rgb:3C/3C/3C
+! ! *color9: rgb:D6/93/00
+! ! *color10: rgb:95/c7/49
+! ! *color11: rgb:cd/cd/c1
+! ! *color12: rgb:36/7F/C5
+! ! *color13: rgb:cd/cd/b4
+! ! *color14: rgb:77/87/98
+! ! *color15: rgb:ff/ff/ff
  
-!!!! Daisuke 2
-!*color0: #000000
-!*color8: #555753
-!*color1: #ff6565
-!*color9: #ff8d8d
-!*color2: #93d44f
-!*color10: #c8e7a8
-! Yellow
-!*color3: #eab93d
-!*color11: #ffc123
-!*color4: #204a87
-!*color12: #3465a4
-!*color5: #ce5c00
-!*color13: #f57900
-!*color6: #89b6e2
-!*color14: #46a4ff
-!*color7: #cccccc
-!*color15: #ffffff
+! !!!! Daisuke 2
+! !*color0: #000000
+! !*color8: #555753
+! !*color1: #ff6565
+! !*color9: #ff8d8d
+! !*color2: #93d44f
+! !*color10: #c8e7a8
+! ! Yellow
+! !*color3: #eab93d
+! !*color11: #ffc123
+! !*color4: #204a87
+! !*color12: #3465a4
+! !*color5: #ce5c00
+! !*color13: #f57900
+! !*color6: #89b6e2
+! !*color14: #46a4ff
+! !*color7: #cccccc
+! !*color15: #ffffff
 
-! Daisuke
-! URxvt*background: #000000
-! URxvt*foreground: #dcdccc
-! URxvt*color0: #1e1e1e
-! URxvt*color8: #505050
-! URxvt*color1: #b04020
-! URxvt*color9: #dd4010
-! URxvt*color2: #afd700
-! URxvt*color10: #daff30
-! URxvt*color3: #f7cf0a
-! URxvt*color11: #fce70d
-! URxvt*color4: #3060aa
-! URxvt*color12: #6099dd
-! URxvt*color5: #d6156c
-! URxvt*color13: #fe4365
-! URxvt*color6: #a0c2de
-! URxvt*color14: #c9dee8
-! URxvt*color7: #808080
-! URxvt*color15: #b0b0b0
+! ! Daisuke
+! ! URxvt*background: #000000
+! ! URxvt*foreground: #dcdccc
+! ! URxvt*color0: #1e1e1e
+! ! URxvt*color8: #505050
+! ! URxvt*color1: #b04020
+! ! URxvt*color9: #dd4010
+! ! URxvt*color2: #afd700
+! ! URxvt*color10: #daff30
+! ! URxvt*color3: #f7cf0a
+! ! URxvt*color11: #fce70d
+! ! URxvt*color4: #3060aa
+! ! URxvt*color12: #6099dd
+! ! URxvt*color5: #d6156c
+! ! URxvt*color13: #fe4365
+! ! URxvt*color6: #a0c2de
+! ! URxvt*color14: #c9dee8
+! ! URxvt*color7: #808080
+! ! URxvt*color15: #b0b0b0
 
-! Light
-!URxvt*background: #f0f0f0
-!URxvt*foreground: #22303d
-! black
-!URxvt*color0: #cbd9e2
-!URxvt*color8: #666666
-! red
-!URxvt*color1: #6dacd8
-!URxvt*color9: #62aada
-! green
-!URxvt*color2: #315b81
-!URxvt*color10: #477ea7
-! yellow
-!URxvt*color3: #4282b0
-!URxvt*color11: #62aada
-! blue
-!URxvt*color4: #315b81
-!URxvt*color12: #477ea7
-! magenta
-!URxvt*color5: #4282b0
-!URxvt*color13: #62aada
-! cyan
-!URxvt*color6: #315b81
-!URxvt*color14: #477ea7
-! white
-!URxvt*color7: #22303d
-!URxvt*color15: #444444
+! ! Light
+! !URxvt*background: #f0f0f0
+! !URxvt*foreground: #22303d
+! ! black
+! !URxvt*color0: #cbd9e2
+! !URxvt*color8: #666666
+! ! red
+! !URxvt*color1: #6dacd8
+! !URxvt*color9: #62aada
+! ! green
+! !URxvt*color2: #315b81
+! !URxvt*color10: #477ea7
+! ! yellow
+! !URxvt*color3: #4282b0
+! !URxvt*color11: #62aada
+! ! blue
+! !URxvt*color4: #315b81
+! !URxvt*color12: #477ea7
+! ! magenta
+! !URxvt*color5: #4282b0
+! !URxvt*color13: #62aada
+! ! cyan
+! !URxvt*color6: #315b81
+! !URxvt*color14: #477ea7
+! ! white
+! !URxvt*color7: #22303d
+! !URxvt*color15: #444444
 
-! Tango
-! URxvt*background: #1e1e1e
-! URxvt*foreground: #e0e0e0
-! URxvt*color0: #1e1e1e
-! URxvt*color8: #555753
-! URxvt*color1: #CC0000
-! URxvt*color9: #EF2929
-! URxvt*color2: #4E9A06
-! URxvt*color10: #8AE234
-! URxvt*color3: #C4A000
-! URxvt*color11: #FCE94F
-! URxvt*color4: #3465A4
-! URxvt*color12: #729FCF
-! URxvt*color5: #75507B
-! URxvt*color13: #AD7FA8
-! URxvt*color6: rgb:06/98/9A
-! URxvt*color14: #34E2E2
-! URxvt*color7: #9f9f9f
-! URxvt*color15: #e0e0e0
+! ! Tango
+! ! URxvt*background: #1e1e1e
+! ! URxvt*foreground: #e0e0e0
+! ! URxvt*color0: #1e1e1e
+! ! URxvt*color8: #555753
+! ! URxvt*color1: #CC0000
+! ! URxvt*color9: #EF2929
+! ! URxvt*color2: #4E9A06
+! ! URxvt*color10: #8AE234
+! ! URxvt*color3: #C4A000
+! ! URxvt*color11: #FCE94F
+! ! URxvt*color4: #3465A4
+! ! URxvt*color12: #729FCF
+! ! URxvt*color5: #75507B
+! ! URxvt*color13: #AD7FA8
+! ! URxvt*color6: rgb:06/98/9A
+! ! URxvt*color14: #34E2E2
+! ! URxvt*color7: #9f9f9f
+! ! URxvt*color15: #e0e0e0
 
-! Zenburn
-! URxvt*background: #3F3F3F
-! URxvt*foreground: #DCDCCC
-! URxvt*color0: #1E2320
-! URxvt*color1: #705050
-! URxvt*color2: #60b48a
-! URxvt*color3: #dfaf8f
-! URxvt*color4: #506070
-! URxvt*color5: #dc8cc3
-! URxvt*color6: #8cd0d3
-! URxvt*color7: #dcdccc
-! URxvt*color8: #709080
-! URxvt*color9: #dca3a3
-! URxvt*color10: #c3bf9f
-! URxvt*color11: #f0dfaf
-! URxvt*color12: #94bff3
-! URxvt*color13: #ec93d3
-! URxvt*color14: #93e0e3
-! URxvt*color15: #ffffff
+! ! Zenburn
+! ! URxvt*background: #3F3F3F
+! ! URxvt*foreground: #DCDCCC
+! ! URxvt*color0: #1E2320
+! ! URxvt*color1: #705050
+! ! URxvt*color2: #60b48a
+! ! URxvt*color3: #dfaf8f
+! ! URxvt*color4: #506070
+! ! URxvt*color5: #dc8cc3
+! ! URxvt*color6: #8cd0d3
+! ! URxvt*color7: #dcdccc
+! ! URxvt*color8: #709080
+! ! URxvt*color9: #dca3a3
+! ! URxvt*color10: #c3bf9f
+! ! URxvt*color11: #f0dfaf
+! ! URxvt*color12: #94bff3
+! ! URxvt*color13: #ec93d3
+! ! URxvt*color14: #93e0e3
+! ! URxvt*color15: #ffffff
 
-! Solarized
-! Common
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+! ! Solarized
+! ! Common
+! #define S_yellow        #b58900
+! #define S_orange        #cb4b16
+! #define S_red           #dc322f
+! #define S_magenta       #d33682
+! #define S_violet        #6c71c4
+! #define S_blue          #268bd2
+! #define S_cyan          #2aa198
+! #define S_green         #859900
 
-! ! Dark
-! #define S_base03        #002b36
-! #define S_base02        #073642
-! #define S_base01        #586e75
-! #define S_base00        #657b83
-! #define S_base0         #839496
-! #define S_base1         #93a1a1
-! #define S_base2         #eee8d5
-! #define S_base3         #fdf6e3
-! Light
-#define S_base03        #fdf6e3
-#define S_base02        #eee8d5
-#define S_base01        #93a1a1
-#define S_base00        #839496
-#define S_base0         #657b83
-#define S_base1         #586e75
-#define S_base2         #073642
-#define S_base3         #002b36
-! ! To only apply colors to your terminal, for example, prefix
-! ! the color assignment statement with its name. Example:
-! !
-! URxvt*background:            S_base03
-*background:              S_base03
-*foreground:              S_base0
-*fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color8:                  S_base03
-*color9:                  S_orange
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+! ! ! Dark
+! ! #define S_base03        #002b36
+! ! #define S_base02        #073642
+! ! #define S_base01        #586e75
+! ! #define S_base00        #657b83
+! ! #define S_base0         #839496
+! ! #define S_base1         #93a1a1
+! ! #define S_base2         #eee8d5
+! ! #define S_base3         #fdf6e3
+! ! Light
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+! ! ! To only apply colors to your terminal, for example, prefix
+! ! ! the color assignment statement with its name. Example:
+! ! !
+! ! URxvt*background:            S_base03
+! *background:              S_base03
+! *foreground:              S_base0
+! *fading:                  40
+! *fadeColor:               S_base03
+! *cursorColor:             S_base1
+! *pointerColorBackground:  S_base01
+! *pointerColorForeground:  S_base1
+! *color0:                  S_base02
+! *color1:                  S_red
+! *color2:                  S_green
+! *color3:                  S_yellow
+! *color4:                  S_blue
+! *color5:                  S_magenta
+! *color6:                  S_cyan
+! *color7:                  S_base2
+! *color8:                  S_base03
+! *color9:                  S_orange
+! *color10:                 S_base01
+! *color11:                 S_base00
+! *color12:                 S_base0
+! *color13:                 S_violet
+! *color14:                 S_base1
+! *color15:                 S_base3
