@@ -41,8 +41,7 @@ alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
 alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb -merge ~/.Xresources'
-alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
-alias unrhift='redshift -r -l 40.75:111.88 -b '
+alias mredshift='redshift -l 41:112'
 alias eix='eix -n'              # eix is annoying 
 alias gf='git flow'
 alias ysd='systemctl'
@@ -153,7 +152,7 @@ dcmsg () {
 
 dot-commit() {
     git add -A .
-    git commit
+    git commit -m "$(dcmsg)"
 }
 
 dotcpd () {

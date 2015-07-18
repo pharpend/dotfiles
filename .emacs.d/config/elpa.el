@@ -21,6 +21,7 @@
                       erlang
                       evil
                       evil-nerd-commenter
+                      fold-dwim
                       flycheck
                       haskell-mode
                       helm
@@ -64,6 +65,7 @@
 (require 'cl)
 (require 'evil)
 (require 'evil-nerd-commenter)
+(require 'fold-dwim)
 (require 'idris-mode)
 (require 'linum-relative)
 (require 'magit)
@@ -76,3 +78,4 @@
 (require 'smartparens-ruby)
 (require 'wc-mode)
 (require 'yari)
+

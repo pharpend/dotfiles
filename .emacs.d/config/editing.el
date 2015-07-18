@@ -17,3 +17,4 @@
 (setq helm-apropos-fuzzy-match t)
 
 (evilnc-default-hotkeys)
+

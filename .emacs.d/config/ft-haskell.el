@@ -1,6 +1,7 @@
 (auto-complete-mode -1)
 (company-mode 1)
 (highlight-indentation-current-column-mode 1)
+(hs-minor-mode 1)
 (interactive-haskell-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
@@ -25,10 +26,13 @@
 
 (define-key shm-map (kbd ")") nil)
 (define-key shm-map (kbd "M-y") nil)
-;; For light
-(set-face-background 'shm-quarantine-face "lemonchiffon")
-(set-face-background 'shm-current-face "#eee8d5")
-                                          ;;
-;; For dark
+
+;; ;; For light
+;; (set-face-background 'shm-quarantine-face "lemonchiffon")
+;; (set-face-background 'shm-current-face "#eee8d5")
+;; ;; For dark
 ;; (set-face-background 'shm-quarantine-face "#073642")
 ;; (set-face-background 'shm-current-face "#0e414e")
+;; Monokai
+(set-face-background 'shm-quarantine-face "#2f2f3a")
+(set-face-background 'shm-current-face "#2f2f2a")
