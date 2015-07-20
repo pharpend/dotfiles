@@ -42,11 +42,6 @@
  '(evil-want-change-word-to-end nil)
  '(fci-rule-color "#49483E")
  '(foreground-color "#839496")
- '(haskell-mode-hook
-   (quote
-    (turn-on-eldoc-mode turn-on-haskell-doc turn-on-haskell-simple-indent
-                        (lambda nil
-                          (load-file "~/.emacs.d/config/ft-haskell.el")))) t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
    (quote
@@ -60,10 +55,8 @@
      ("#49483E" . 100))))
  '(hindent-style "chris-done")
  '(magit-use-overlays nil)
- '(pandoc-binary "/home/pete/.cabal/bin/pandoc")
  '(safe-local-variable-values (quote ((evil-shift-width . 4) (evil-shift-width . 2))))
  '(scss-compile-at-save nil)
- '(shm-program-name "/home/pete/.cabal/bin/structured-haskell-mode")
  '(shm-use-hdevtools nil)
  '(syslog-debug-face
    (quote

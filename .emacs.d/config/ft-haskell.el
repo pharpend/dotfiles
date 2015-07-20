@@ -24,15 +24,15 @@
 
 ;; (setq-local haskell-literate "tex")
 
-(define-key shm-map (kbd ")") nil)
-(define-key shm-map (kbd "M-y") nil)
+;; (define-key shm-map (kbd ")") nil)
+;; (define-key shm-map (kbd "M-y") nil)
 
 ;; ;; For light
 ;; (set-face-background 'shm-quarantine-face "lemonchiffon")
 ;; (set-face-background 'shm-current-face "#eee8d5")
-;; ;; For dark
-;; (set-face-background 'shm-quarantine-face "#073642")
-;; (set-face-background 'shm-current-face "#0e414e")
-;; Monokai
-(set-face-background 'shm-quarantine-face "#2f2f3a")
-(set-face-background 'shm-current-face "#2f2f2a")
+;; For dark
+(set-face-background 'shm-quarantine-face "#073642")
+(set-face-background 'shm-current-face "#0e414e")
+;; ;; Monokai
+;; (set-face-background 'shm-quarantine-face "#2f2f3a")
+;; (set-face-background 'shm-current-face "#2f2f2a")
