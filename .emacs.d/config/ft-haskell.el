@@ -14,22 +14,30 @@
 (setq-local tab-width 2)
 (setq-local tab-stop-list (number-sequence 2 200 2))
 (setq-local evil-shift-width 2)
-(setq-local fill-column 72)
+(setq-local fill-column 80)
+(setq shm-program-name "~/.local/bin/structured-haskell-mode")
 
 (define-key haskell-mode-map (kbd "<C-return>") 'hindent/reformat-decl)
 (define-key haskell-mode-map (kbd "C-c i a") 'haskell-add-import)
 (define-key haskell-mode-map (kbd "C-c i s") 'haskell-add-import)
 (define-key haskell-mode-map (kbd "C-c c d") 'haskell-cabal-add-dependency)
 (define-key haskell-mode-map (kbd "C-c s c") 'haskell-session-change)
+(define-key shm-map (kbd "C-c C-s") 'shm/case-split)
 
 ;; (setq-local haskell-literate "tex")
 
 (define-key shm-map (kbd ")") nil)
 (define-key shm-map (kbd "M-y") nil)
-;; For light
-(set-face-background 'shm-quarantine-face "lemonchiffon")
-(set-face-background 'shm-current-face "#eee8d5")
-                                          ;;
-;; For dark
-;; (set-face-background 'shm-quarantine-face "#073642")
+
+;; ;; Solarized
+;; ;; For light
+;; (set-face-background 'shm-quarantine-face "lemonchiffon")
+;; (set-face-background 'shm-current-face "#eee8d5")
+;; ;; For dark
+;; (set-face-background 'shm-quarantine-face "#333366")
 ;; (set-face-background 'shm-current-face "#0e414e")
+
+;; Monokai
+(set-face-background 'shm-quarantine-face "#633336")
+(set-face-background 'shm-current-face "#373832")
+

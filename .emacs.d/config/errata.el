@@ -34,14 +34,12 @@
       delete-old-versions 2
       version-control t)
 
-(setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
-(add-to-list 'exec-path "~/.cabal/bin")
-
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 
 (add-to-list 'load-path "~/.emacs.d/load-list/structured-haskell-mode/elisp/")
 (require 'shm)
+(require 'shm-case-split)
 
 ;; OCaml setup
 (autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)
