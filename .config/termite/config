@@ -1,5 +1,6 @@
 [options]
-font = Inconsolata 10
+font = Inconsolata 11
+# font = Inconsolata 18
 browser = /usr/bin/firefox
 
 [colors]
@@ -53,7 +54,7 @@ color11 = #839496
 color12 = #657b83
 color13 = #6c71c4
 color14 = #586e75
-color15 = #002b36
+# color15 = #002b36
 
 # # Solarized dark
 # foreground = #839496

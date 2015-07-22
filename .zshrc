@@ -41,8 +41,7 @@ alias scc='sass --scss -t compressed'
 alias sccw='scc --watch'
 alias clrml='echo 0 > ~/.mailnum'
 alias xrdbo='xrdb -merge ~/.Xresources'
-alias mredshift='redshift -l 40.75:111.88 -b 0.5:1.0'
-alias unrhift='redshift -r -l 40.75:111.88 -b '
+alias mredshift='redshift -l 41:112'
 alias eix='eix -n'              # eix is annoying 
 alias gf='git flow'
 alias ysd='systemctl'
@@ -86,21 +85,8 @@ sprunge () {
     curl -F sprunge=@$1 http://sprunge.us
 }
 
-hvscreen () {
-    xrandr --output DVI-D-1 --rotate normal
-    xrandr --output DVI-D-2 --rotate left --right-of DVI-D-1
-    nitrogen --restore
-}
-
-vhscreen () {
-    xrandr --output DVI-D-1 --rotate left
-    xrandr --output DVI-D-2 --rotate normal --right-of DVI-D-1
-    nitrogen --restore
-}
-
 hscreen () {
-    xrandr --output DVI-D-1 --rotate normal
-    xrandr --output DVI-D-2 --rotate normal --right-of DVI-D-1
+    xrandr --output VGA-1 --rotate normal
     nitrogen --restore
 }
 
@@ -111,23 +97,29 @@ vscreen () {
 }
 
 vhvscreen () {
-    xrandr --output DVI-D-1 --auto --rotate normal
-    xrandr --output VGA-1   --auto --rotate left --left-of DVI-D-1
-    xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1
+    xrandr --output DVI-D-2 --auto --rotate normal
+    xrandr --output VGA-1   --auto --rotate left --left-of DVI-D-2
+    xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-2
+    nitrogen --restore
+}
+hhvscreen () {
+    xrandr --output DVI-D-2 --auto --rotate normal
+    xrandr --output VGA-1   --auto --rotate normal --left-of DVI-D-2
+    xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-2
     nitrogen --restore
 }
 
 vvvscreen () {
-    xrandr --output DVI-D-1 --rotate left
-    xrandr --output VGA-1 --rotate left --left-of DVI-D-1
-    xrandr --output DVI-D-2 --rotate left --right-of DVI-D-1
+    xrandr --output DVI-D-2 --rotate left
+    xrandr --output VGA-1 --rotate left --left-of DVI-D-2
+    xrandr --output DVI-D-1 --rotate left --right-of DVI-D-2
     nitrogen --restore
 }
 
 bigscreen () {
-    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output DVI-D-2 --rotate normal
     xrandr --output VGA-1 --off
-    xrandr --output DVI-D-2 --off
+    xrandr --output DVI-D-1 --off
     nitrogen --restore
 }
 
@@ -160,7 +152,7 @@ dcmsg () {
 
 dot-commit() {
     git add -A .
-    git commit
+    git commit -m "$(dcmsg)"
 }
 
 dotcpd () {
@@ -293,9 +285,9 @@ lysa_pushall () {
 # Wacom Bamboo 16FG 6x8 Finger touch	
 
 fixwacom () {
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "DVI-D-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "DVI-D-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad" MapToOutput "DVI-D-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "VGA-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "VGA-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad"    MapToOutput "VGA-1"
 }
 
 gitcc () {
@@ -326,14 +318,13 @@ export rvm_ignore_gemrc_issues=1
 # Add Halcyon
 # eval "$( /app/halcyon/halcyon paths )" && clear
 
-export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/.gem/ruby/1.9.0/bin
-export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
-export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
-export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
-export PATH=$PATH:$HOME/.rvm/bin
-export PATH=$PATH:$HOME/.cabal/bin:.cabal-sandbox/bin
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.gem/ruby/1.9.0/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.1.0/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
+export PATH=$HOME/.rvm/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 export BROWSER=$(which firefox-bin)
 
