@@ -30,9 +30,9 @@
 ;; ;; For light
 ;; (set-face-background 'shm-quarantine-face "lemonchiffon")
 ;; (set-face-background 'shm-current-face "#eee8d5")
-;; For dark
-(set-face-background 'shm-quarantine-face "#073642")
-(set-face-background 'shm-current-face "#0e414e")
-;; ;; Monokai
-;; (set-face-background 'shm-quarantine-face "#2f2f3a")
-;; (set-face-background 'shm-current-face "#2f2f2a")
+;; ;; For dark
+;; (set-face-background 'shm-quarantine-face "#073642")
+;; (set-face-background 'shm-current-face "#0e414e")
+;; Monokai
+(set-face-background 'shm-quarantine-face "#3f2f2a")
+(set-face-background 'shm-current-face "#2f2f2a")
