@@ -6,9 +6,7 @@
    ((string= system-name "valentine")
     (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
-    (set-frame-font "Fira Mono 8"))))
- ((t)
-  (load-theme 'monokai t)))
+    (set-frame-font "Inconsolata 10")))))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)

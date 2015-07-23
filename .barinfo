@@ -150,7 +150,7 @@ cputemp = { full_text: "\u2623: #{cpu_temperature} C",
             color: cpu_color }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
            color: $white }
-date = {  full_text: Time.now.strftime("%A %e-%m-%Y, %H:%M"),
+date = {  full_text: Time.now.strftime("%A, %B %-e, %Y, %-l:%M %p %Z"),
           color: $white }
 blank = { full_text: "",
           color: $white }
