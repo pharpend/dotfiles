@@ -1,5 +1,5 @@
 [options]
-font = Inconsolata 11
+font = Monospace 9
 # font = Inconsolata 18
 browser = /usr/bin/firefox
 
