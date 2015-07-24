@@ -14,7 +14,10 @@ def cpu_mhz
 end
 
 def cpu_temperature
-  temp = `acpi -t`.split("\n").map {|x| x.split(", ")[1].split(" d")[0].to_f }[0]
+  temp = `sensors`
+  sensor_lines = temp.lines.select { |x| /^Core/ =~ x }
+  sensor_temps = sensor_lines.map  { |x| x.gsub( /^Core \d: +\+([0-9.]+).+\n/, '\1').to_f }
+  ("%.01f" % (sensor_temps.inject { |sum,el| sum + el }.to_f / sensor_temps.size)).to_f
 end
 
 def ram_usage
