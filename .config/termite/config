@@ -1,5 +1,5 @@
 [options]
-font = Monospace 9
+font = Liberation Mono 9
 # font = Inconsolata 18
 browser = /usr/bin/firefox
 
@@ -54,7 +54,7 @@ color11 = #839496
 color12 = #657b83
 color13 = #6c71c4
 color14 = #586e75
-# color15 = #002b36
+color15 = #002b36
 
 # # Solarized dark
 # foreground = #839496

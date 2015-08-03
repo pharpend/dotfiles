@@ -1,12 +1,12 @@
 ;; Configure the look and feel of Emacs
 (cond
  ((eq window-system 'x)
-  (load-theme 'monokai t)
+  (load-theme 'sanityinc-solarized-light t)
   (cond
    ((string= system-name "valentine")
     (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
-    (set-frame-font "Terminus 8")))))
+    (set-frame-font "Liberation Mono 9")))))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -52,3 +52,14 @@
 ;; idris-mode, idris-prover-script-mode,idris-compiler-notes-mode,
 ;; idris-log-mode, idris-ipkg-build-mode,
 ;; idris-ipkg-mode, idris-repl-mode
+
+;; ;; Solarized
+;; For light
+(set-face-background 'shm-quarantine-face "lemonchiffon")
+(set-face-background 'shm-current-face "#eee8d5")
+;; ;; For dark
+;; (set-face-background 'shm-quarantine-face "#073642")
+;; (set-face-background 'shm-current-face "#0e414e")
+;; ;; Monokai
+;; (set-face-background 'shm-quarantine-face "#633336")
+;; (set-face-background 'shm-current-face "#373832")
