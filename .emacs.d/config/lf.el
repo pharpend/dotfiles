@@ -6,7 +6,7 @@
    ((string= system-name "valentine")
     (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
-    (set-frame-font "Inconsolata 10")))))
+    (set-frame-font "Terminus 8")))))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
