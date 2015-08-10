@@ -3,11 +3,9 @@
 (highlight-indentation-current-column-mode 1)
 (hindent-mode 1)
 (hs-minor-mode 1)
-(interactive-haskell-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
-(structured-haskell-mode 1)
 (turn-on-eldoc-mode)
 
 (setq-local indent-tabs-mode nil)
@@ -22,20 +20,7 @@
 (define-key haskell-mode-map (kbd "C-c i s") 'haskell-add-import)
 (define-key haskell-mode-map (kbd "C-c c d") 'haskell-cabal-add-dependency)
 (define-key haskell-mode-map (kbd "C-c s c") 'haskell-session-change)
+(define-key haskell-mode-map (kbd "M-p") 'helm-projectile)
 (define-key shm-map (kbd "C-c C-s") 'shm/case-split)
-
-;; (setq-local haskell-literate "tex")
-
 (define-key shm-map (kbd ")") nil)
 (define-key shm-map (kbd "M-y") nil)
-
-;; ;; Solarized
-;; For light
-(set-face-background 'shm-quarantine-face "lemonchiffon")
-(set-face-background 'shm-current-face "#eee8d5")
-;; ;; For dark
-;; (set-face-background 'shm-quarantine-face "#073642")
-;; (set-face-background 'shm-current-face "#0e414e")
-;; ;; Monokai
-;; (set-face-background 'shm-quarantine-face "#633336")
-;; (set-face-background 'shm-current-face "#373832")
