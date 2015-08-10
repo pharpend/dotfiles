@@ -279,6 +279,13 @@ lysa_pushall () {
     done
 }
 
+stopwatch ()
+{
+    date1=`date +%s`; while true; do 
+       echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+   done
+   }
+
 # Wacom Bamboo 16FG 6x8 Pad pad   	id: 8	type: PAD       
 # Wacom Bamboo 16FG 6x8 Pen stylus	id: 9	type: STYLUS    
 # Wacom Bamboo 16FG 6x8 Pen eraser	id: 10	type: ERASER    
@@ -319,9 +326,7 @@ export rvm_ignore_gemrc_issues=1
 # eval "$( /app/halcyon/halcyon paths )" && clear
 
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.gem/ruby/1.9.0/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.1.0/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
