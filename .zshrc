@@ -124,26 +124,19 @@ bigscreen () {
 }
 
 scr () {
-    scrot -e 'mv $f /data/pics/screenshots'
+    scrot -e 'mv $f ~/pics/screenshots'
 }
 
 scs () {
-    scrot -s -e 'mv $f /data/pics/screenshots'
+    scrot -s -e 'mv $f ~/pics/screenshots'
 }
 
 scsgur () {
-    scrot -s -e 'imgur $f ; mv $f /data/pics/screenshots'
-}
-
-scrpomf () {
-    scrot -e 'pymf $f ; mv $f /data/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
-}
-scspomf () {
-    scrot -s -e 'pymf $f ; mv $f /data/pics/screenshots' | awk '{ print $3 }' | sed "s/http/https/"
+    scrot -s -e 'imgur $f ; mv $f ~/pics/screenshots'
 }
 
 scrgur () {
-    scrot -e 'imgur $f ; mv $f /data/pics/screenshots'
+    scrot -e 'imgur $f ; mv $f ~/pics/screenshots'
 }
 
 dcmsg () {
@@ -319,12 +312,10 @@ export rvm_ignore_gemrc_issues=1
 # eval "$( /app/halcyon/halcyon paths )" && clear
 
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.gem/ruby/1.9.0/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.1.0/bin:$PATH
 export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
 
 export BROWSER=$(which firefox-bin)
 

@@ -38,7 +38,7 @@
 (autoload 'ghc-debug "ghc" nil t)
 
 (add-to-list 'load-path "~/.emacs.d/load-list/structured-haskell-mode/elisp/")
-(setq shm-program-name "/home/pete/.local/bin/structured-haskell-mode")
+(setq shm-program-name "/home/pete/.cabal/bin/structured-haskell-mode")
 (require 'shm)
 (require 'shm-case-split)
 
