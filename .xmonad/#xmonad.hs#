@@ -74,13 +74,13 @@ main =
                       ,((modm .|. shiftMask,xK_f),spawn "thunar")
                       ,((modm .|. shiftMask,xK_p),spawn "pavucontrol")]
                      ,
-                      -- Dear Peter of the future, you copied this off of the Haskell Wiki having no idea
-                      -- what it means. Good luck.
+                      -- Dear Peter of the future, you copied this off of the
+                      -- Haskell Wiki having no idea what it means. Good luck.
                       -- <http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Layout-IndependentScreens.html>
-                      [((m .|. modm,key),windows (onCurrentScreen f workspace)) | (workspace,key) <-
+                      [((otherModMasks .|. modm,key),windows (onCurrentScreen otherModMasks workspace)) | (workspace,key) <-
                                                                                    zip (workspaces' conf)
                                                                                        [xK_1 .. xK_9]
-                                                                                , (f,m) <-
+                                                                                , (otherModMasks,action) <-
                                                                                     [(W.greedyView
                                                                                      ,0)
                                                                                     ,(W.shift

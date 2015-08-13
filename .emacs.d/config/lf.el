@@ -60,6 +60,9 @@
 ;; ;; For dark
 ;; (set-face-background 'shm-quarantine-face "#073642")
 ;; (set-face-background 'shm-current-face "#0e414e")
-;; Monokai
+;; ;; Monokai
+;; (set-face-background 'shm-quarantine-face "#633336")
+;; (set-face-background 'shm-current-face "#373832")
+;; Tomorrow night
 (set-face-background 'shm-quarantine-face "#373837")
 (set-face-background 'shm-current-face "#272727")

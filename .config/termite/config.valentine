@@ -1,5 +1,5 @@
 [options]
-font = Liberation Mono 12
+font = Liberation Mono 10
 browser = /usr/bin/firefox
 
 [colors]
