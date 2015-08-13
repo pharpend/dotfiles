@@ -6,14 +6,14 @@
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
-;; (structured-haskell-mode 1)
+(structured-haskell-mode 1)
 (turn-on-eldoc-mode)
 
 (setq-local indent-tabs-mode nil)
 (setq-local indent-line-function 'indent-relative-maybe)
-(setq-local tab-width 2)
-(setq-local tab-stop-list (number-sequence 2 200 2))
-(setq-local evil-shift-width 2)
+;; (setq-local tab-width 2)
+;; (setq-local tab-stop-list (number-sequence 2 200 2))
+;; (setq-local evil-shift-width 2)
 (setq-local fill-column 80)
 
 (define-key haskell-mode-map (kbd "C-c i i") 'hindent/reformat-decl)
@@ -25,3 +25,6 @@
 (define-key shm-map (kbd "C-c C-s") 'shm/case-split)
 (define-key shm-map (kbd ")") nil)
 (define-key shm-map (kbd "M-y") nil)
+
+(define-key evil-insert-state-map (kbd "TAB") 'shm/simple-indent)
+(define-key evil-insert-state-map (kbd "S-TAB") 'shm/simple-indent-backtab)

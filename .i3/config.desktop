@@ -278,7 +278,6 @@ bindsym $mod+y workspace next
 exec deluge
 exec google-musicmanager
 exec kalu
-exec nm-applet
 exec parcellite
 exec mpd
 exec urxvtd

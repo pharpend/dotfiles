@@ -272,6 +272,13 @@ lysa_pushall () {
     done
 }
 
+stopwatch ()
+{
+    date1=`date +%s`; while true; do 
+       echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+   done
+   }
+
 # Wacom Bamboo 16FG 6x8 Pad pad   	id: 8	type: PAD       
 # Wacom Bamboo 16FG 6x8 Pen stylus	id: 9	type: STYLUS    
 # Wacom Bamboo 16FG 6x8 Pen eraser	id: 10	type: ERASER    

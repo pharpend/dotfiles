@@ -1,6 +1,5 @@
 [options]
 font = Liberation Mono 9
-# font = Inconsolata 18
 browser = /usr/bin/firefox
 
 [colors]
