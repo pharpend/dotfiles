@@ -274,7 +274,7 @@ dpaste () {
 }
 
 lysa_pushall () {
-    for i in {origin,hub} ; do
+    for i in {origin,lab,gnu} ; do
         git push $i master $@
     done
 }
