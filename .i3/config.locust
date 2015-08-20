@@ -170,15 +170,21 @@ bindsym Control+$mod+Up    resize shrink height 05 px
 bindsym Control+$mod+Right resize grow   width  05 px 
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
-bindsym XF86AudioMute exec amixer set Master toggle
-bindsym XF86AudioLowerVolume exec amixer set Master 8%-
-bindsym XF86AudioRaiseVolume exec amixer set Master 8%+
+# bindsym XF86AudioMute        exec amixer set Master toggle
+# bindsym XF86AudioLowerVolume exec amixer set Master 8%-
+# bindsym XF86AudioRaiseVolume exec amixer set Master 8%+
+# bindsym $mod+F10 exec amixer set Master toggle
+# bindsym $mod+F11 exec amixer set Master 8%-
+# bindsym $mod+F12 exec amixer set Master 8%+
+bindsym XF86AudioMute        exec pamixer --toggle
+bindsym XF86AudioLowerVolume exec pamixer --decrease 8
+bindsym XF86AudioRaiseVolume exec pamixer --increase 8
+bindsym $mod+F10 exec pamixer --toggle
+bindsym $mod+F11 exec pamixer --decrease 8
+bindsym $mod+F12 exec pamixer --increase 8
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
-bindsym $mod+F10 exec amixer set Master toggle
-bindsym $mod+F11 exec amixer set Master 8%-
-bindsym $mod+F12 exec amixer set Master 8%+
 
 # Autostarted applications
 # exec deluge
