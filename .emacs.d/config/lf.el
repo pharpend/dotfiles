@@ -4,7 +4,7 @@
   (load-theme 'sanityinc-tomorrow-night t)
   (cond
    ((string= system-name "valentine")
-    (set-frame-font "Liberation Mono 12"))
+    (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
     (set-frame-font "Liberation Mono 9")))))
 
