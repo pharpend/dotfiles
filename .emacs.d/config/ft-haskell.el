@@ -25,6 +25,6 @@
 (define-key shm-map (kbd ")") nil)
 (define-key shm-map (kbd "M-y") nil)
 (define-key evil-insert-state-map (kbd "<tab>") 'shm/simple-indent)
-(define-key evil-insert-state-map (kbd "S-<tab>") 'shm/simple-indent-backtab)
+(define-key evil-insert-state-map (kbd "<backtab>") 'shm/simple-indent-backtab)
 (define-key evil-normal-state-map (kbd "<tab>") 'shm/simple-indent)
-(define-key evil-normal-state-map (kbd "S-<tab>") 'shm/simple-indent-backtab)
+(define-key evil-normal-state-map (kbd "<backtab>") 'shm/simple-indent-backtab)
