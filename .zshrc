@@ -267,7 +267,7 @@ dpaste () {
 }
 
 lysa_pushall () {
-    for i in {origin,hub} ; do
+    for i in {origin,lab,gnu} ; do
         git push $i master $@
     done
 }
@@ -285,9 +285,9 @@ stopwatch ()
 # Wacom Bamboo 16FG 6x8 Finger touch	
 
 fixwacom () {
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "VGA-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "VGA-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad"    MapToOutput "VGA-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "DVI-D-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "DVI-D-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad"    MapToOutput "DVI-D-1"
 }
 
 gitcc () {
