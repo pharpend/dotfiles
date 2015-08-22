@@ -43,6 +43,12 @@
         :position bottom
         :stick t)
       popwin:special-display-config)
+(push '(compilation-mode
+        :height 0.2
+        :noselect nil
+        :position bottom
+        :stick nil)
+      popwin:special-display-config)
 
 
 

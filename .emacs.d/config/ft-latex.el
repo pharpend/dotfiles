@@ -15,6 +15,7 @@
 (define-key evil-insert-state-map (kbd "`") 'self-insert-command)
 (local-set-key (kbd "RET") 'reindent-then-newline-and-indent)
 (local-set-key (kbd "C-c i") 'LaTeX-insert-item)
+(local-set-key (kbd "C-c C-c") 'projectile-compile-project)
 
 (setq-local LaTeX-item-indent -2)
 (setq-local LaTeX-indent-level 4)
