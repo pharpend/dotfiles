@@ -26,6 +26,7 @@
 (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.comd\\'" . text-mode))
+(add-to-list 'auto-mode-alist '("\\.cabal\\'" . text-mode))
 
 (add-hook 'dired-load-hook
           (lambda ()
