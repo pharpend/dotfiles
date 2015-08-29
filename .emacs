@@ -55,7 +55,12 @@
      ("#49483E" . 100))))
  '(hindent-style "chris-done")
  '(magit-use-overlays nil)
- '(safe-local-variable-values (quote ((evil-shift-width . 4) (evil-shift-width . 2))))
+ '(safe-local-variable-values
+   (quote
+    ((LaTeX-indent-level . 2)
+     (LaTeX-item-indent . -2)
+     (evil-shift-width . 4)
+     (evil-shift-width . 2))))
  '(scss-compile-at-save nil)
  '(syslog-debug-face
    (quote
