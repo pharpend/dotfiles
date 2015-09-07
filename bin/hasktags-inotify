@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Regenerates ETAGS file every time there is a change.
+#
+# Requires inotify and hasktags. Press C-c to exit.
+
+while true ; do
+    inotifywait -rq . @.stack-work @.git @yesod-devel @devDB.sql @dist
+    hasktags -e --ignore-close-implementation .
+done
+
