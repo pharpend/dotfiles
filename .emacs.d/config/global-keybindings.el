@@ -50,3 +50,5 @@
 
 (define-key dired-mode-map (kbd "i") 'evil-forward-char)
 (define-key dired-mode-map (kbd "C-c w") 'wdired-change-to-wdired-mode)
+
+(global-set-key (kbd "M-t") 'helm-etags-select)

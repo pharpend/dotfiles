@@ -2,10 +2,10 @@
 (company-mode 1)
 (highlight-indentation-current-column-mode 1)
 (hs-minor-mode 1)
+(interactive-haskell-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
 (smartparens-mode 1)
-(structured-haskell-mode 1)
 (turn-on-eldoc-mode)
 
 (setq-local indent-tabs-mode nil)
