@@ -28,3 +28,4 @@
 (define-key evil-insert-state-map (kbd "<backtab>") 'shm/simple-indent-backtab)
 (define-key evil-normal-state-map (kbd "<tab>") 'shm/simple-indent)
 (define-key evil-normal-state-map (kbd "<backtab>") 'shm/simple-indent-backtab)
+(define-key haskell-interactive-mode-map (kbd "M-p") 'helm-projectile)
