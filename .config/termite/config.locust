@@ -29,31 +29,31 @@ browser = /usr/bin/firefox
 # color7       = #ddd
 # color15      = #fff
 
-# Solarized Light
-foreground = #657b83
-foreground_bold = #073642
-#foreground_dim = #888888
-background = #fdf6e3
-cursor = #586e75
-# if unset, will reverse foreground and background
-highlight = #839496
-# colors from color0 to color254 can be set
-color0 = #073642
-color1 = #dc322f
-color2 = #859900
-color3 = #b58900
-color4 = #268bd2
-color5 = #d33682
-color6 = #2aa198
-color7 = #073642
-color8 = #002b36
-color9 = #cb4b16
-color10 = #93a1a1
-color11 = #839496
-color12 = #657b83
-color13 = #6c71c4
-color14 = #586e75
-color15 = #002b36
+# # Solarized Light
+# foreground = #657b83
+# foreground_bold = #073642
+# #foreground_dim = #888888
+# background = #fdf6e3
+# cursor = #586e75
+# # if unset, will reverse foreground and background
+# highlight = #839496
+# # colors from color0 to color254 can be set
+# color0 = #073642
+# color1 = #dc322f
+# color2 = #859900
+# color3 = #b58900
+# color4 = #268bd2
+# color5 = #d33682
+# color6 = #2aa198
+# color7 = #073642
+# color8 = #002b36
+# color9 = #cb4b16
+# color10 = #93a1a1
+# color11 = #839496
+# color12 = #657b83
+# color13 = #6c71c4
+# color14 = #586e75
+# color15 = #002b36
 
 # # Solarized dark
 # foreground = #839496
@@ -81,24 +81,24 @@ color15 = #002b36
 # color14 = #93a1a1
 # color15 = #fdf6e3
 
-# # Monokai dark
-# foreground      = #f8f8f2
-# foreground_bold = #f8f8f2
-# cursor          = #f8f8f2
-# background      = #272822
-# color0  = #272822
-# color8  = #75715e
-# color1  = #f92672
-# color9  = #f92672
-# color2  = #a6e22e
-# color10 = #a6e22e
-# color3  = #f4bf75
-# color11 = #f4bf75
-# color4  = #66d9ef
-# color12 = #66d9ef
-# color5  = #ae81ff
-# color13 = #ae81ff
-# color6  = #a1efe4
-# color14 = #a1efe4
-# color7  = #f8f8f2
-# color15 = #f9f8f5
+# Monokai dark
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = #272822
+color0  = #272822
+color8  = #75715e
+color1  = #f92672
+color9  = #f92672
+color2  = #a6e22e
+color10 = #a6e22e
+color3  = #f4bf75
+color11 = #f4bf75
+color4  = #66d9ef
+color12 = #66d9ef
+color5  = #ae81ff
+color13 = #ae81ff
+color6  = #a1efe4
+color14 = #a1efe4
+color7  = #f8f8f2
+color15 = #f9f8f5
