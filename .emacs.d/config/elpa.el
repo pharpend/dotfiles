@@ -18,6 +18,7 @@
                       color-theme-sanityinc-solarized
                       color-theme-sanityinc-tomorrow
                       company
+                      darktooth-theme
                       erlang
                       evil
                       evil-nerd-commenter
