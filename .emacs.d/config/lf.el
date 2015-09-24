@@ -1,12 +1,12 @@
 ;; Configure the look and feel of Emacs
 (cond
  ((eq window-system 'x)
-  (load-theme 'sanityinc-solarized-light t)
+  (load-theme 'darktooth t)
   (cond
    ((string= system-name "valentine")
     (set-frame-font "Fira Mono 12"))
    ((string= system-name "locust")
-    (set-frame-font "Liberation Mono 9")))))
+    (set-frame-font "Inconsolata 10")))))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
