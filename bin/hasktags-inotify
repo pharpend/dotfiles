@@ -4,8 +4,14 @@
 #
 # Requires inotify and hasktags. Press C-c to exit.
 
-while true ; do
-    inotifywait -rq . @.stack-work @.git @yesod-devel @devDB.sql @dist
-    hasktags -e --ignore-close-implementation .
-done
+function hasktags-inotify () {
+    while true ; do
+        inotifywait -rq . @.stack-work @.git @yesod-devel @devDB.sql @dist
+        # For Emacs
+        # hasktags -e --ignore-close-implementation .
+
+        # For Atom + Vim (probably also works for Emacs)
+        hasktags -c -x --ignore-close-implementation .
+    done
+}
 

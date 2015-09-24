@@ -57,7 +57,18 @@
  '(magit-use-overlays nil)
  '(safe-local-variable-values
    (quote
-    ((LaTeX-indent-level . 2)
+    ((haskell-tags-on-save . t)
+     (haskell-indentation-where-post-offset . 2)
+     (haskell-indentation-where-pre-offset . 2)
+     (haskell-indentation-ifte-offset . 4)
+     (haskell-indentation-left-offset . 4)
+     (haskell-indentation-starter-offset . 1)
+     (haskell-indentation-layout-offset . 4)
+     (quote
+      (evil-shift-width . 2))
+     (haskell-process-use-ghci . t)
+     (haskell-indent-spaces . 4)
+     (LaTeX-indent-level . 2)
      (LaTeX-item-indent . -2)
      (evil-shift-width . 4)
      (evil-shift-width . 2))))
