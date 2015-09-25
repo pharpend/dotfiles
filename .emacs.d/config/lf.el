@@ -25,6 +25,7 @@
 (setq truncate-partial-width-windows nil)
 (setq truncate-lines nil)
 (setq linum-format "%4d ")
+(global-hl-line-mode 1)
 
 ;; Winner mode - save window configurations
 (winner-mode 1)
