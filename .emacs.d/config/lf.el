@@ -6,7 +6,7 @@
    ((string= system-name "valentine")
     (set-frame-font "Fira Mono 12"))
    ((string= system-name "locust")
-    (set-frame-font "Inconsolata 10")))))
+    (set-frame-font "Source Code Pro 9")))))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -25,6 +25,8 @@
 (setq truncate-partial-width-windows nil)
 (setq truncate-lines nil)
 (setq linum-format "%4d ")
+(hlinum-activate)
+;; (global-hl-line-mode 1)
 
 ;; Winner mode - save window configurations
 (winner-mode 1)
@@ -78,3 +80,8 @@
 ;; ;; Tomorrow night
 ;; (set-face-background 'shm-quarantine-face "#373837")
 ;; (set-face-background 'shm-current-face "#272727")
+
+(custom-set-faces
+ '(linum-highlight-face
+   ((t
+     (:inherit default :background nil :foreground "#EBDBB2")))))
