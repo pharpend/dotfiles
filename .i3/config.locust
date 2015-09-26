@@ -18,7 +18,7 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango: DejaVu Sans Mono 9
+font pango: Monospace 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -189,14 +189,12 @@ bindsym $mod+F9 exec mpc next
 # Autostarted applications
 # exec deluge
 exec cbatticon
-# exec dropbox
 exec kalu
 exec nm-applet
 exec parcellite
 exec mpd
 exec ncmpcpp pause
-exec urxvtd
-# exec xscreensaver
+exec synapse
 
 # Non-panel things
 # exec compton
