@@ -1,6 +1,6 @@
 [options]
 browser = /usr/bin/firefox
-font = Monospace 11
+font = Monospace 12
 
 [colors]
 # # if unset, will reverse foreground and background

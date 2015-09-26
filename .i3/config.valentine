@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango: Meslo LG S for Powerline 12
+font pango: Monospace 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -275,19 +275,19 @@ bindsym $mod+y workspace next
 
 # Panel things
 exec deluge
-exec google-musicmanager
 exec kalu
+exec nm-applet
 exec parcellite
-exec mpd
-exec urxvtd
+exec synapse
 
 # Non-panel things
 exec compton
 exec dunst
 exec emacs --daemon
-exec thunar --daemon
+exec mpd
+exec nitrogen --restore
 exec redshift -l 41:112
-exec urxvtd
+exec thunar --daemon
 
 # # Solarized
 # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
