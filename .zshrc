@@ -79,6 +79,10 @@ alias aursi='yaourt -Si'
 alias aursn='yaourt -S --noconfirm'
 alias aursyua='yaourt -Syua'
 alias aursyuan='yaourt -Syua --noconfirm'
+alias pws='sudo powerpill -S'
+alias pwsyu='sudo powerpill -Syu'
+alias pwss='powerpill -Ss'
+alias pwsi='powerpill -Si'
 
 # Other functions
 sprunge () {
