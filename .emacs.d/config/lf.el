@@ -2,8 +2,10 @@
 (cond
  ((eq window-system 'x)
   (load-theme 'darktooth t)
+  (global-linum-mode 1)
   (cond
    ((string= system-name "valentine")
+    ;; (set-frame-font "Fira Mono 30"))
     (set-frame-font "Fira Mono 12"))
    ((string= system-name "locust")
     (set-frame-font "Source Code Pro 9")))))
@@ -21,7 +23,6 @@
 ;; set line spacing to 1
 (setq line-spacing 1)
 (column-number-mode 1)
-(global-linum-mode 1)
 (setq truncate-partial-width-windows nil)
 (setq truncate-lines nil)
 (setq linum-format "%4d ")
