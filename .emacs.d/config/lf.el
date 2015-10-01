@@ -69,8 +69,8 @@
 
 ;; ;; Solarized
 ;; For light
-(set-face-background 'shm-quarantine-face "lemonchiffon")
-(set-face-background 'shm-current-face "#eee8d5")
+;; (set-face-background 'shm-quarantine-face "lemonchiffon")
+;; (set-face-background 'shm-current-face "#eee8d5")
 ;; ;; For dark
 ;; (set-face-background 'shm-quarantine-face "#073642")
 ;; (set-face-background 'shm-current-face "#0e414e")
@@ -80,6 +80,9 @@
 ;; ;; Tomorrow night
 ;; (set-face-background 'shm-quarantine-face "#373837")
 ;; (set-face-background 'shm-current-face "#272727")
+;; ;; Darktooth
+(set-face-background 'shm-quarantine-face "#4D3B27")
+(set-face-background 'shm-current-face "#32302F")
 
 (custom-set-faces
  '(linum-highlight-face
