@@ -24,6 +24,7 @@
                       evil-nerd-commenter
                       fold-dwim
                       flycheck
+                      greymatters-theme
                       haskell-mode
                       helm
                       helm-projectile

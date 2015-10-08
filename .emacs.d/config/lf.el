@@ -7,6 +7,7 @@
    ((string= system-name "valentine")
     ;; (set-frame-font "Fira Mono 30"))
     (set-frame-font "Fira Mono 12"))
+    ;; (set-frame-font "Inconsolata-dz for Powerline 14"))
    ((string= system-name "locust")
     (set-frame-font "Source Code Pro 9")))))
 
@@ -68,8 +69,8 @@
 ;; idris-log-mode, idris-ipkg-build-mode,
 ;; idris-ipkg-mode, idris-repl-mode
 
-;; ;; Solarized
-;; For light
+;; ;; ;; Solarized
+;; ;; For light
 ;; (set-face-background 'shm-quarantine-face "lemonchiffon")
 ;; (set-face-background 'shm-current-face "#eee8d5")
 ;; ;; For dark
@@ -84,8 +85,13 @@
 ;; ;; Darktooth
 (set-face-background 'shm-quarantine-face "#4D3B27")
 (set-face-background 'shm-current-face "#32302F")
+;; ;; Greymatters
+;; (set-face-background 'shm-quarantine-face "#e7d0d0")
+;; (set-face-background 'shm-current-face "#f0f0f0")
 
 (custom-set-faces
  '(linum-highlight-face
    ((t
+     ;; (:inherit default :background "#EEEEEE" :foreground "#333333")))))
+     ;; (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
      (:inherit default :background nil :foreground "#EBDBB2")))))
