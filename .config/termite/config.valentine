@@ -1,8 +1,8 @@
 [options]
 browser = /usr/bin/firefox
-font = Monospace 11
+font = Inconsolata-dz for Powerline 12
 
-# [colors]
+[colors]
 # # if unset, will reverse foreground and background
 # # highlight = #
 # # colors from color0 to color254 can be set
@@ -81,29 +81,29 @@ font = Monospace 11
 # color14 = #93a1a1
 # color15 = #fdf6e3
 
-# # Monokai dark
-# foreground      = #f8f8f2
-# foreground_bold = #f8f8f2
-# cursor          = #f8f8f2
-# background      = #272822
-# color0  = #272822
-# color8  = #75715e
-# color1  = #f92672
-# color9  = #f92672
-# color2  = #a6e22e
-# color10 = #a6e22e
-# color3  = #f4bf75
-# color11 = #f4bf75
-# color4  = #66d9ef
-# color12 = #66d9ef
-# color5  = #ae81ff
-# color13 = #ae81ff
-# color6  = #a1efe4
-# color14 = #a1efe4
-# color7  = #f8f8f2
-# color15 = #f9f8f5
+# Monokai dark
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = #272822
+color0  = #272822
+color8  = #75715e
+color1  = #f92672
+color9  = #f92672
+color2  = #a6e22e
+color10 = #a6e22e
+color3  = #f4bf75
+color11 = #f4bf75
+color4  = #66d9ef
+color12 = #66d9ef
+color5  = #ae81ff
+color13 = #ae81ff
+color6  = #a1efe4
+color14 = #a1efe4
+color7  = #f8f8f2
+color15 = #f9f8f5
 
-# # Atelierforest light, from terminal.sexy
+# Atelierforest light, from terminal.sexy
 # foreground      = #68615e
 # foreground_bold = #68615e
 # cursor          = #68615e
@@ -147,7 +147,7 @@ font = Monospace 11
 # color7  = #dddddd
 # color15 = #cccccc
 
-# Grayscale theme
+# # Grayscale theme
 # foreground      = #b9b9b9
 # foreground_bold = #b9b9b9
 # cursor          = #b9b9b9
@@ -169,7 +169,7 @@ font = Monospace 11
 # color7  = #b9b9b9
 # color15 = #f7f7f7
 
-# Isotope from terminal.sexy
+# # Isotope from terminal.sexy
 # foreground      = #d0d0d0
 # foreground_bold = #d0d0d0
 # cursor          = #d0d0d0
@@ -190,3 +190,90 @@ font = Monospace 11
 # color14 = #00ffff
 # color7  = #d0d0d0
 # color15 = #ffffff
+
+# # Shapeshifter dark from terminal.sexy
+# foreground      = #ababab
+# foreground_bold = #ababab
+# cursor          = #ababab
+# background      = #000000
+# color0  = #000000
+# color8  = #343434
+# color1  = #e92f2f
+# color9  = #e92f2f
+# color2  = #0ed839
+# color10 = #0ed839
+# color3  = #dddd13
+# color11 = #dddd13
+# color4  = #3b48e3
+# color12 = #3b48e3
+# color5  = #f996e2
+# color13 = #f996e2
+# color6  = #23edda
+# color14 = #23edda
+# color7  = #ababab
+# color15 = #f9f9f9
+
+# # gotham theme
+# foreground      = #98d1ce
+# foreground_bold = #98d1ce
+# cursor          = #98d1ce
+# background      = #0a0f14
+# color0  = #0a0f14
+# color8  = #10151b
+# color1  = #c33027
+# color9  = #d26939
+# color2  = #26a98b
+# color10 = #081f2d
+# color3  = #edb54b
+# color11 = #245361
+# color4  = #195465
+# color12 = #093748
+# color5  = #4e5165
+# color13 = #888ba5
+# color6  = #33859d
+# color14 = #599caa
+# color7  = #98d1ce
+# color15 = #d3ebe9
+
+# # muse theme
+# foreground      = #ffffff
+# foreground_bold = #ffffff
+# cursor          = #ffffff
+# background      = #000000
+# color0  = #2e3436
+# color8  = #555753
+# color1  = #a31604
+# color9  = #c60001
+# color2  = #447241
+# color10 = #27a343
+# color3  = #c1951a
+# color11 = #d5a30e
+# color4  = #425387
+# color12 = #4a5a8d
+# color5  = #965d98
+# color13 = #893c8c
+# color6  = #06989a
+# color14 = #12bccb
+# color7  = #d3d7cf
+# color15 = #eeeeec
+
+# foreground      = #00bb00
+# foreground_bold = #00bb00
+# cursor          = #00bb00
+# background      = #001100
+# color0  = #001100
+# color8  = #007700
+# color1  = #007700
+# color9  = #007700
+# color2  = #00bb00
+# color10 = #00bb00
+# color3  = #007700
+# color11 = #007700
+# color4  = #009900
+# color12 = #009900
+# color5  = #00bb00
+# color13 = #00bb00
+# color6  = #005500
+# color14 = #005500
+# color7  = #00bb00
+# color15 = #00ff00
