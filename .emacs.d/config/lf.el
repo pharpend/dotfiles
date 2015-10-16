@@ -6,8 +6,9 @@
   (cond
    ((string= system-name "valentine")
     ;; (set-frame-font "Fira Mono 30"))
-    ;; (set-frame-font "Fira Mono 12"))
-    (set-frame-font "Inconsolata-dz for Powerline 12"))
+    (set-frame-font "Fira Mono 12"))
+    ;; (set-frame-font "Inconsolata-dz for Powerline 12"))
+    ;; (set-frame-font "Terminus 14"))
    ((string= system-name "locust")
     (set-frame-font "Source Code Pro 9")))))
 
