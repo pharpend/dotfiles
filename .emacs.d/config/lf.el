@@ -10,7 +10,7 @@
     ;; (set-frame-font "Inconsolata-dz for Powerline 12"))
     ;; (set-frame-font "Terminus 14"))
    ((string= system-name "locust")
-    (set-frame-font "Inconsolata-dz for Powerline 9")))))
+    (set-frame-font "Input Mono 9")))))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
