@@ -1,16 +1,16 @@
 ;; Configure the look and feel of Emacs
 (cond
  ((eq window-system 'x)
-  (load-theme 'darktooth t)
-  (global-linum-mode 1)
+  (load-theme 'monokai t)
   (cond
    ((string= system-name "valentine")
-    ;; (set-frame-font "Fira Mono 30"))
     (set-frame-font "Fira Mono 12"))
-    ;; (set-frame-font "Inconsolata-dz for Powerline 12"))
-    ;; (set-frame-font "Terminus 14"))
+    ;; (set-frame-font "Inconsolata 13"))
+    ;; (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
-    (set-frame-font "Input Mono 9")))))
+    (set-frame-font "Input Mono 9"))))
+ (t
+  (load-theme 'monokai t)))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -29,6 +29,7 @@
 (setq truncate-lines nil)
 (setq linum-format "%4d ")
 (hlinum-activate)
+(global-linum-mode 1)
 ;; (global-hl-line-mode 1)
 
 ;; Winner mode - save window configurations
