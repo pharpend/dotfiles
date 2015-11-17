@@ -1,12 +1,12 @@
 ;; Configure the look and feel of Emacs
 (cond
  ((eq window-system 'x)
-  (load-theme 'sanityinc-solarized-light t)
+  (load-theme 'darktooth t)
   (cond
    ((string= system-name "valentine")
-    (set-frame-font "Fira Mono 12"))
+    ;; (set-frame-font "Meslo LG M 11"))
     ;; (set-frame-font "Inconsolata 13"))
-    ;; (set-frame-font "Inconsolata 12"))
+    (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
     (set-frame-font "Meslo LG M 9"))))
  (t
@@ -72,9 +72,9 @@
 ;; idris-ipkg-mode, idris-repl-mode
 
 ;; ;; ;; Solarized
-;; For light
-(set-face-background 'shm-quarantine-face "lemonchiffon")
-(set-face-background 'shm-current-face "#eee8d5")
+;; ;; For light
+;; (set-face-background 'shm-quarantine-face "lemonchiffon")
+;; (set-face-background 'shm-current-face "#eee8d5")
 ;; ;; For dark
 ;; (set-face-background 'shm-quarantine-face "#073642")
 ;; (set-face-background 'shm-current-face "#0e414e")
@@ -84,9 +84,9 @@
 ;; ;; Tomorrow night
 ;; (set-face-background 'shm-quarantine-face "#373837")
 ;; (set-face-background 'shm-current-face "#272727")
-;; ;; Darktooth
-;; (set-face-background 'shm-quarantine-face "#4D3B27")
-;; (set-face-background 'shm-current-face "#32302F")
+;; Darktooth
+(set-face-background 'shm-quarantine-face "#4D3B27")
+(set-face-background 'shm-current-face "#32302F")
 ;; ;; Greymatters
 ;; (set-face-background 'shm-quarantine-face "#e7d0d0")
 ;; (set-face-background 'shm-current-face "#f0f0f0")
@@ -96,5 +96,5 @@
    ((t
      ;; (:inherit default :background "#EEEEEE" :foreground "#333333")))))
      ;; Solarized
-     (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
-     ;; (:inherit default :background nil :foreground "#EBDBB2")))))
+     ;; (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
+     (:inherit default :background nil :foreground "#EBDBB2")))))
