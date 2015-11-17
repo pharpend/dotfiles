@@ -8,7 +8,7 @@
     (set-frame-font "Inconsolata 14"))
     ;; (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
-    (set-frame-font "Input Mono 9"))))
+    (set-frame-font "Meslo LG M 9"))))
  (t
   (load-theme 'monokai t)))
 
