@@ -5,8 +5,8 @@
   (cond
    ((string= system-name "valentine")
     ;; (set-frame-font "Meslo LG M 11"))
-    ;; (set-frame-font "Inconsolata 13"))
-    (set-frame-font "Inconsolata 12"))
+    (set-frame-font "Inconsolata 14"))
+    ;; (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
     (set-frame-font "Meslo LG M 9"))))
  (t
@@ -95,6 +95,5 @@
  '(linum-highlight-face
    ((t
      ;; (:inherit default :background "#EEEEEE" :foreground "#333333")))))
-     ;; Solarized
      ;; (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
      (:inherit default :background nil :foreground "#EBDBB2")))))
