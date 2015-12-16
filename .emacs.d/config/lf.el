@@ -1,7 +1,9 @@
 ;; Configure the look and feel of Emacs
 (cond
  ((eq window-system 'x)
-  (load-theme 'darktooth t)
+  ;; (load-theme 'darktooth t)
+  ;; (load-theme 'monokai t)
+  (load-theme 'sanityinc-solarized-light t)
   (cond
    ((string= system-name "valentine")
     ;; (set-frame-font "Meslo LG M 11"))
@@ -95,5 +97,5 @@
  '(linum-highlight-face
    ((t
      ;; (:inherit default :background "#EEEEEE" :foreground "#333333")))))
-     ;; (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
-     (:inherit default :background nil :foreground "#EBDBB2")))))
+     (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
+     ;; (:inherit default :background nil :foreground "#EBDBB2")))))
