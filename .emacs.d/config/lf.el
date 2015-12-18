@@ -1,14 +1,15 @@
 ;; Configure the look and feel of Emacs
 (cond
  ((eq window-system 'x)
-  (load-theme 'darktooth t)
+  (load-theme 'monokai t)
   (cond
    ((string= system-name "valentine")
     ;; (set-frame-font "Meslo LG M 11"))
     (set-frame-font "Inconsolata 14"))
     ;; (set-frame-font "Inconsolata 12"))
    ((string= system-name "locust")
-    (set-frame-font "Meslo LG M 9"))))
+    ;; (set-frame-font "Meslo LG M 9"))))
+    (set-frame-font "Inconsolata 10"))))
  (t
   (load-theme 'monokai t)))
 
