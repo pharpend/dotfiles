@@ -276,7 +276,7 @@ bindsym $mod+y workspace next
 # Panel things
 exec deluge
 exec kalu
-exec nm-applet
+# exec nm-applet
 exec parcellite
 exec synapse
 
