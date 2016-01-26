@@ -18,6 +18,7 @@ rm -rf ~/.ghc/ghci.conf
 rm -rf ~/.i3/config
 rm -rf ~/.icons             
 rm -rf ~/.ncmpcpp           
+rm -rf ~/.ocamlinit
 rm -rf ~/.themes
 rm -rf ~/.vim               
 rm -rf ~/.vimrc             
@@ -48,6 +49,7 @@ ln -sf $dpath/.i3/config.$1 ~/.i3/config          &&
 ln -sf $dpath/.icons                 ~/.icons              &&
 ln -sf $dpath/.config/mpd            ~/.config/mpd         &&
 ln -sf $dpath/.ncmpcpp               ~/.ncmpcpp            &&
+ln -sf $dpath/.ocamlinit               ~/.ocamlinit            &&
 ln -sf $dpath/.themes                ~/.themes             &&
 ln -sf $dpath/.vim                   ~/.vim                &&
 ln -sf $dpath/.vimrc                 ~/.vimrc              &&
