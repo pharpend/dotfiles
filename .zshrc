@@ -333,3 +333,13 @@ export BROWSER=$(which firefox-bin)
 
 # OPAM configuration
 . /home/pete/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# Flight simulator
+LD_LIBRARY_PATH=$HOME/.local/share/flightgear/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+FG_HOME=$HOME/.local/share/flightgear
+export FG_HOME
+FG_ROOT=$HOME/.local/share/flightgear/data
+export FG_ROOT
+FG_SCENERY=$FG_ROOT/Scenery:$FG_ROOT/worldscenery
+export FG_SCENERY

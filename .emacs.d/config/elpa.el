@@ -80,4 +80,3 @@
 (require 'smartparens-ruby)
 (require 'wc-mode)
 (require 'yari)
-

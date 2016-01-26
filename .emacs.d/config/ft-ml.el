@@ -9,6 +9,8 @@
 (setq-local tab-stop-list (number-sequence 2 200 2))
 (setq-local evil-shift-width 2)
 
+(setq-local tuareg-library-path "/usr/lib/ocaml")
+
 ;; (merlin-mode 1)
 ;; (tuareg-imenu-set-imenu)
 ;; (utop-setup-ocaml-buffer)
