@@ -122,9 +122,9 @@ vvvscreen () {
 }
 
 bigscreen () {
-    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output DVI-D-2 --rotate normal
     xrandr --output VGA-1 --off
-    xrandr --output DVI-D-2 --off
+    xrandr --output DVI-D-1 --off
     nitrogen --restore
 }
 
