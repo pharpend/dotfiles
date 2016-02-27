@@ -1,6 +1,6 @@
 [options]
 browser = /usr/bin/firefox
-font = Fira Mono 14
+font = Fira Mono 12
 
 [colors]
 # # if unset, will reverse foreground and background
