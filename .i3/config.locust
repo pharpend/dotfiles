@@ -18,7 +18,8 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango: Monospace 9
+# font pango: Monospace 9
+font pango: Roboto Mono 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -155,7 +156,7 @@ bindsym $mod+m exec emacs
 bindsym $mod+p exec pavucontrol
 bindsym $mod+r exec thunderbird
 bindsym $mod+q exec qutebrowser
-bindsym $mod+l exec emacs "~/prj/lysa/en/book"
+bindsym $mod+l exec liferea
 bindsym Control+$mod+l exec $HOME/bin/startlysa
 bindsym Control+Shift+$mod+l exec $HOME/bin/startlysagraphs
 bindsym Control+$mod+k exec google-chrome-stable netflix.com
