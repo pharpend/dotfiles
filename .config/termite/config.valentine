@@ -1,6 +1,7 @@
 [options]
 browser = /usr/bin/firefox
-font = Fira Mono 12
+font = Roboto Mono for Powerline 18
+font = Roboto Mono for Powerline 12
 
 [colors]
 # # if unset, will reverse foreground and background
