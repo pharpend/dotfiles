@@ -13,7 +13,7 @@
     ;; (set-frame-font "Inconsolata 16"))
    ((string= system-name "locust")
     ;; (set-frame-font "Meslo LG M 9"))))
-    (set-frame-font "Source Code Pro 10"))))
+    (set-frame-font "Roboto Mono 10"))))
  (t
   (load-theme 'monokai t)))
 
