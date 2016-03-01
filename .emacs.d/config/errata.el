@@ -45,7 +45,6 @@
 ;; ;; OCaml setup
 ;; (autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)
 ;; (setq opam-share (substring (shell-command-to-string "opam config var share") 0 -1))
-;; (setq exec-path (append exec-path '("/home/pete/.opam/4.01.0/bin")))
 ;; (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 
 (add-to-list 'load-path "~/.emacs.d/errat/")
@@ -97,5 +96,7 @@
 (push '("*goals*" :position bottom :noselect t :stick t) popwin:special-display-config)
 (push '("*louse*" :position bottom :noselect t :stick t :height 20) popwin:special-display-config)
 
-(load "/home/pete/.opam/system/share/emacs/site-lisp/tuareg-site-file")
-(add-to-list 'load-path "/home/pete/.opam/system/share/emacs/site-lisp/")
+;; OCaml setup
+(load "/home/pete/.opam/4.02.3/share/emacs/site-lisp/tuareg-site-file")
+(add-to-list 'load-path "/home/pete/.opam/4.02.3/share/emacs/site-lisp/")
+(setq exec-path (append exec-path '("/home/pete/.opam/4.03.2/bin")))
