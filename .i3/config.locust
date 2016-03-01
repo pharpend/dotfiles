@@ -148,6 +148,7 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec firefox
+bindsym Control+$mod+c exec chromium
 bindsym $mod+grave exec xombrero
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
@@ -189,7 +190,7 @@ bindsym $mod+F9 exec mpc next
 # Autostarted applications
 # exec deluge
 exec cbatticon
-exec kalu
+# exec kalu
 exec nm-applet
 exec parcellite
 exec mpd

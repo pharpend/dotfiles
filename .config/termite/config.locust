@@ -1,5 +1,6 @@
 [options]
 font = Monospace 9
+font = Roboto Mono 9
 browser = /usr/bin/firefox
 
 [colors]
