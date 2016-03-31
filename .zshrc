@@ -51,6 +51,7 @@ alias sshopen='nmap -p22 --open -sV 192.168.1.0/24'
 alias rsy='rsync -avv --progress'
 alias mcqt='rlwrap coqtop'
 alias getlinux='ABSROOT=. abs core/linux'
+alias pa='pacaur --noedit'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'

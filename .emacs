@@ -17,7 +17,10 @@
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    (quote
-    ((haskell-indentation-where-post-offset . 2)
+    ((haskell-process-use-ghci . t)
+     (haskell-indent-spaces . 4)
+     (evil-shift-width . 4)
+     (haskell-indentation-where-post-offset . 2)
      (haskell-indentation-where-pre-offset . 2)
      (haskell-indentation-ifte-offset . 4)
      (haskell-indentation-left-offset . 4)
@@ -27,9 +30,3 @@
      (LaTeX-indent-level . 2)
      (LaTeX-item-indent . -2)
      (haskell-tags-on-save . t)))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(linum-highlight-face ((t (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
