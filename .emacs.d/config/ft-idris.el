@@ -12,3 +12,5 @@
 (setq-local evil-shift-width 2)
 
 (define-key evil-insert-state-map (kbd "C") 'self-insert-command)
+
+(define-key idris-mode-map (kbd "M-p") nil)

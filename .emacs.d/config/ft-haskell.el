@@ -14,6 +14,7 @@
 (setq-local indent-line-function 'indent-relative-maybe)
 (setq-local fill-column 72)
 (setq-local hindent-style "chris-done")
+(setq-local haskell-tags-on-save t)
 ;; (setq-local tab-width 2)
 ;; (setq-local tab-stop-list (number-sequence 2 200 2))
 ;; (setq-local evil-shift-width 2)

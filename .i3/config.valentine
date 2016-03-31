@@ -20,8 +20,8 @@ set $mod Mod4
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 12
-# font pango: Roboto Mono 10
-font pango: Roboto Mono 14
+font pango: Roboto Mono 12
+# font pango: Roboto Mono 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -161,29 +161,29 @@ exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,grp:rctrl_tog
 exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --off)
 
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-    output VGA-1
-    position top
-    status_command cat
-    tray_output DVI-D-2
-    mode dock
-
-    colors {
-        background #222222
-        focused_workspace  #222222 #222222 #eeeeee
-        active_workspace   #222222 #222222 #cccccc
-        inactive_workspace #222222 #222222 #aaaaaa
-        urgent_workspace   #ee0000 #ee0000 #ffffff
-        # # Solarized
-        # background #073642
-        # focused_workspace  #073642 #073642 #eee8d5
-        # active_workspace   #073642 #073642 #2aa198
-        # inactive_workspace #073642 #073642 #268bd2
-        # urgent_workspace   #dc322f #dc322f #fdf6e3
-    }
-}
+# # Start i3bar to display a workspace bar (plus the system information i3status
+# # finds out, if available)
+# bar {
+#     output VGA-1
+#     position top
+#     status_command cat
+#     tray_output DVI-D-2
+#     mode dock
+# 
+#     colors {
+#         background #222222
+#         focused_workspace  #222222 #222222 #eeeeee
+#         active_workspace   #222222 #222222 #cccccc
+#         inactive_workspace #222222 #222222 #aaaaaa
+#         urgent_workspace   #ee0000 #ee0000 #ffffff
+#         # # Solarized
+#         # background #073642
+#         # focused_workspace  #073642 #073642 #eee8d5
+#         # active_workspace   #073642 #073642 #2aa198
+#         # inactive_workspace #073642 #073642 #268bd2
+#         # urgent_workspace   #dc322f #dc322f #fdf6e3
+#     }
+# }
 bar {
     output DVI-D-2
     position top
@@ -205,35 +205,35 @@ bar {
         # urgent_workspace   #dc322f #dc322f #fdf6e3
     }
 }
-bar {
-    output DVI-D-1
-    position top
-    status_command cat
-    tray_output DVI-D-2
-    mode dock
-
-    # These are the colors for the window borders, so I'm going to apply them here
-    #                       BorderFrame     Border      Title       NextWindowGoesHere
-    #---------------------------------------------------------------------------------
-    # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
-    # client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
-    # client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
-    # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
-
-    colors {
-        background #222222
-        focused_workspace  #222222 #222222 #eeeeee
-        active_workspace   #222222 #222222 #cccccc
-        inactive_workspace #222222 #222222 #aaaaaa
-        urgent_workspace   #ee0000 #ee0000 #ffffff
-        # # Solarized
-        # background #073642
-        # focused_workspace  #073642 #073642 #eee8d5
-        # active_workspace   #073642 #073642 #2aa198
-        # inactive_workspace #073642 #073642 #268bd2
-        # urgent_workspace   #dc322f #dc322f #fdf6e3
-    }
-}
+# bar {
+#     output DVI-D-1
+#     position top
+#     status_command cat
+#     tray_output DVI-D-2
+#     mode dock
+# 
+#     # These are the colors for the window borders, so I'm going to apply them here
+#     #                       BorderFrame     Border      Title       NextWindowGoesHere
+#     #---------------------------------------------------------------------------------
+#     # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
+#     # client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
+#     # client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
+#     # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
+# 
+#     colors {
+#         background #222222
+#         focused_workspace  #222222 #222222 #eeeeee
+#         active_workspace   #222222 #222222 #cccccc
+#         inactive_workspace #222222 #222222 #aaaaaa
+#         urgent_workspace   #ee0000 #ee0000 #ffffff
+#         # # Solarized
+#         # background #073642
+#         # focused_workspace  #073642 #073642 #eee8d5
+#         # active_workspace   #073642 #073642 #2aa198
+#         # inactive_workspace #073642 #073642 #268bd2
+#         # urgent_workspace   #dc322f #dc322f #fdf6e3
+#     }
+# }
 
 # Application keybindings
 bindsym $mod+c exec firefox
@@ -279,7 +279,7 @@ bindsym $mod+y workspace next
 # Panel things
 exec deluge
 exec kalu
-# exec nm-applet
+exec nm-applet
 exec parcellite
 exec synapse
 
@@ -300,16 +300,13 @@ exec thunar --daemon
 # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
-client.focused          #22eeee         #22eeee     #eeeeee     #aaaaaa
-client.focused_inactive #555555         #555555     #dddddd     #aaaaaa
-client.unfocused        #222222         #222222     #dddddd     #aaaaaa
-client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
+client.focused          #ccff55         #ccff55     #413101     #ebdbb2
+client.focused_inactive #555555         #555555     #dddddd     #cbbb92
+client.unfocused        #222222         #222222     #dddddd     #cbbb92
+client.urgent           #ee0000         #ee0000     #ffffff     #cbbb92
 
 focus_follows_mouse no
 
 
 for_window [class="^.*"] border pixel 6
 new_window 1pixel
-
-gaps inner 0
-gaps outer 0
