@@ -12,7 +12,7 @@
 
 (setq-local indent-tabs-mode nil)
 (setq-local indent-line-function 'indent-relative-maybe)
-(setq-local fill-column 80)
+(setq-local fill-column 72)
 (setq-local hindent-style "chris-done")
 (setq-local haskell-tags-on-save t)
 ;; (setq-local tab-width 2)
