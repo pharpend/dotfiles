@@ -314,7 +314,7 @@ export rvm_ignore_gemrc_issues=1
 # eval "$( /app/halcyon/halcyon paths )" && clear
 
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.3.0/bin:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
