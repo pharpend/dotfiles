@@ -1,16 +1,16 @@
 ;; Configure the look and feel of Emacs
 (cond
  ((eq window-system 'x)
-  (load-theme 'darktooth t)
+  ;; (load-theme 'darktooth t)
   ;; (load-theme 'monokai t)
-  ;; (load-theme 'sanityinc-solarized-light t)
+  (load-theme 'sanityinc-solarized-light t)
   (cond
-   ((string= system-name "valentine")
-    ;; (set-frame-font "Source Code Pro 16"))
+   ((string= system-name "tsarina")
+    ;; (set-frame-font "Source Code Pro for Powerline 11"))
     ;; (set-frame-font "Meslo LG M 24"))
     ;; (set-frame-font "Inconsolata-dz for Powerline 14"))
-    (set-frame-font "Roboto Mono 12"))
-    ;; (set-frame-font "Inconsolata 16"))
+    ;; (set-frame-font "Latin Modern Mono 16"))
+    (set-frame-font "Roboto Mono 11"))
    ((string= system-name "locust")
     ;; (set-frame-font "Meslo LG M 9"))))
     (set-frame-font "Roboto Mono 8"))))
@@ -100,6 +100,6 @@
 '(linum-highlight-face
     ((t
     ;; (:inherit default :background "#EEEEEE" :foreground "#333333")))))
-    ;; (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
-    (:inherit default :background nil :foreground "#EBDBB2")))))
+    (:inherit default :background "#ded8c5" :foreground "#268bd2")))))
+    ;; (:inherit default :background nil :foreground "#EBDBB2")))))
     ;; (:inherit default :background "#073642" :foreground "#268bd2")))))

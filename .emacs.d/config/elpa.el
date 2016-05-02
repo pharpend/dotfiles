@@ -3,7 +3,7 @@
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.org/packages/")))
+                         ("melpa" . "https://stable.melpa.org/packages/")))
 
 ;; Elpa packages:
 (require 'package)
@@ -24,12 +24,13 @@
                       evil-nerd-commenter
                       fold-dwim
                       flycheck
-                      greymatters-theme
+                      ;; greymatters-theme
                       haskell-mode
                       helm
                       helm-projectile
                       highlight-indentation
                       hl-anything
+                      hlinum
                       idris-mode
                       json-mode
                       linum-relative

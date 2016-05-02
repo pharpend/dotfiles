@@ -1,0 +1,3 @@
+[submodule ".emacs.d/load-list/structured-haskell-mode"]
+	path = .emacs.d/load-list/structured-haskell-mode
+	url = git@github.com:chrisdone/structured-haskell-mode.git

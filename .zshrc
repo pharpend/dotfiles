@@ -52,6 +52,8 @@ alias rsy='rsync -avv --progress'
 alias mcqt='rlwrap coqtop'
 alias getlinux='ABSROOT=. abs core/linux'
 alias pa='pacaur --noedit'
+alias a='aptitude'
+alias sa='sudo aptitude'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
@@ -296,6 +298,10 @@ vboxload () {
     sudo modprobe vboxpci
 }
 
+ytdl () {
+        youtube-dl $(echo $1 | sed 's/\([^&]\+\).\+/\1/') $2 $3 $4 $5
+}
+
 # Syntax highlighting
 source ~/.zshlex/zsh-syntax-highlighting.zsh
 
@@ -319,7 +325,7 @@ export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 
-export BROWSER=$(which firefox-bin)
+# export BROWSER=$(which firefox-bin)
 
 # OPAM configuration
 . /home/pete/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

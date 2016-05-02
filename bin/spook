@@ -8,4 +8,4 @@
 # end
 # spook_n_s = spook_n_words.join(" ") + "\n"
 
-puts "\n\nPeter Harpending\n\n"
+puts "\n\nPeter Harpending\n"

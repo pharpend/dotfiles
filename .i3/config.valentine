@@ -19,22 +19,25 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-# font pango: Monospace 12
-font pango: Roboto Mono 12
+# font pango: Monospace 10
+font pango: Roboto Mono 11
 # font pango: Roboto Mono 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+# bindsym $mod+Return exec urxvt
+# bindsym $mod+Return exec mrxvt
+bindsym $mod+Return exec terminator
+bindsym $mod+shift+t exec urxvt
 
 # kill focused window
 bindsym $mod+k kill
 
 # start dmenu (a program launcher)
 bindsym $mod+w exec dmenu_run
-bindsym $mod+q exec synapse
+bindsym $mod+q exec gksudo synaptic
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -236,13 +239,12 @@ bar {
 # }
 
 # Application keybindings
-bindsym $mod+c exec firefox
-bindsym $mod+shift+c exec chromium
+bindsym $mod+c exec iceweasel
+bindsym $mod+shift+c exec chromium-browser
 bindsym $mod+grave exec dwb
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+r exec thunderbird
-bindsym $mod+shift+t exec urxvt
 bindsym $mod+p exec pavucontrol
 bindsym $mod+l exec liferea
 bindsym $mod+Control+l exec $HOME/bin/startlysa
@@ -264,9 +266,9 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
-bindsym $mod+F10 exec pamixer --toggle
-bindsym $mod+F11 exec pamixer --decrease 5
-bindsym $mod+F12 exec pamixer --increase 5
+bindsym $mod+F10 exec pactl set-sink-mute   1 toggle
+bindsym $mod+F11 exec pactl set-sink-volume 1 -- -5%
+bindsym $mod+F12 exec pactl set-sink-volume 1 +5%
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
@@ -278,10 +280,8 @@ bindsym $mod+y workspace next
 
 # Panel things
 exec deluge
-exec kalu
 exec nm-applet
 exec parcellite
-exec synapse
 
 # Non-panel things
 exec compton
@@ -291,6 +291,7 @@ exec mpd
 exec nitrogen --restore
 exec redshift -l 41:112
 exec thunar --daemon
+# exec wicd-gtk
 
 # # Solarized
 # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1

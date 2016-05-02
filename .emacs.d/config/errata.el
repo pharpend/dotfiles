@@ -97,6 +97,6 @@
 (push '("*louse*" :position bottom :noselect t :stick t :height 20) popwin:special-display-config)
 
 ;; OCaml setup
-(load "/home/pete/.opam/4.02.3/share/emacs/site-lisp/tuareg-site-file")
+;; (load "/home/pete/.opam/system/share/emacs/site-lisp/tuareg-site-file")
 (add-to-list 'load-path "/home/pete/.opam/4.02.3/share/emacs/site-lisp/")
 (setq exec-path (append exec-path '("/home/pete/.opam/4.03.2/bin")))

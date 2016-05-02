@@ -1,5 +1,5 @@
 ## Set the old version that we want to upgrade from.
-export FROM_VERSION=9.4
+export FROM_VERSION=9.3
 
 pacman -S --needed postgresql-old-upgrade
 chown postgres:postgres /var/lib/postgres/
