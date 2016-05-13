@@ -10,10 +10,11 @@
     ;; (set-frame-font "Meslo LG M 24"))
     ;; (set-frame-font "Inconsolata-dz for Powerline 14"))
     ;; (set-frame-font "Latin Modern Mono 16"))
-    (set-frame-font "Roboto Mono 11"))
+    (set-frame-font "Roboto Mono 12"))
    ((string= system-name "locust")
     ;; (set-frame-font "Meslo LG M 9"))))
-    (set-frame-font "Roboto Mono 8"))))
+    ;; (set-frame-font "Roboto Mono 19"))))
+    (set-frame-font "Terminus 8"))))
  (t
   (load-theme 'monokai t)))
 
@@ -33,7 +34,7 @@
 (setq truncate-partial-width-windows nil)
 (setq truncate-lines nil)
 (setq linum-format "%4d ")
-(hlinum-activate)
+;; (hlinum-activate)
 (global-linum-mode 1)
 ;; (global-hl-line-mode 1)
 
