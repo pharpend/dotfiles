@@ -240,7 +240,7 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec iceweasel
-bindsym $mod+shift+c exec chromium-browser
+bindsym $mod+shift+c exec chromium --incognito
 bindsym $mod+grave exec dwb
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
@@ -266,9 +266,9 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
-bindsym $mod+F10 exec pactl set-sink-mute   1 toggle
-bindsym $mod+F11 exec pactl set-sink-volume 1 -- -5%
-bindsym $mod+F12 exec pactl set-sink-volume 1 +5%
+bindsym $mod+F10 exec pactl set-sink-mute   2 toggle
+bindsym $mod+F11 exec pactl set-sink-volume 2 -- -5%
+bindsym $mod+F12 exec pactl set-sink-volume 2 +5%
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next

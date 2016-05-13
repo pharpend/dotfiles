@@ -1,5 +1,5 @@
 (auto-complete-mode -1)
-(company-mode 1)
+(company-mode -1)
 (highlight-indentation-current-column-mode 1)
 ;; hs = hide/show, not haskell
 (hs-minor-mode 1)
