@@ -16,8 +16,8 @@
 (setq-local hindent-style "chris-done")
 ;; (setq-local haskell-tags-on-save nil)
 ;; (setq-local tab-width 2)
-;; (setq-local tab-stop-list (number-sequence 2 200 2))
-;; (setq-local evil-shift-width 2)
+(setq-local tab-stop-list (number-sequence 2 200 2))
+(setq-local evil-shift-width 2)
 
 (define-key haskell-mode-map (kbd "C-c i i") 'hindent/reformat-decl)
 (define-key haskell-mode-map (kbd "C-c i a") 'haskell-add-import)
@@ -32,8 +32,9 @@
 (define-key evil-normal-state-map (kbd "<tab>") 'shm/simple-indent)
 (define-key evil-normal-state-map (kbd "<backtab>") 'shm/simple-indent-backtab)
 (define-key interactive-haskell-mode-map (kbd "M-p") 'helm-projectile)
+(define-key helm-map (kbd "M-TAB") nil)
 
-(define-key haskell-mode-map (kbd "M-TAB")
+(define-key haskell-mode-map (kbd "M-m")
   '(lambda ()
      (interactive)
      (insert "  ")))

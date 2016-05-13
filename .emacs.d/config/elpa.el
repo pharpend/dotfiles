@@ -3,7 +3,7 @@
 ;; Elpa repositories
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa" . "https://stable.melpa.org/packages/")))
+                         ("melpa" . "https://melpa.org/packages/")))
 
 ;; Elpa packages:
 (require 'package)
@@ -38,7 +38,7 @@
                       magit
                       markdown-mode
                       monokai-theme
-                      multiple-cursors
+                      ;; multiple-cursors
                       paredit
                       popwin
                       projectile
@@ -69,11 +69,12 @@
 (require 'evil)
 (require 'evil-nerd-commenter)
 (require 'fold-dwim)
+(require 'hlinum)
 (require 'idris-mode)
 (require 'linum-relative)
 (require 'magit)
 (require 'markdown-mode)
-(require 'multiple-cursors)
+;; (require 'multiple-cursors)
 (require 'popwin)
 (require 'rainbow-identifiers)
 (add-to-list 'load-path "~/.emacs.d/smartparens")

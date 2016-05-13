@@ -16,8 +16,8 @@
 (global-set-key (kbd "M-r") 'insert-register)
 (global-set-key (kbd "M-c") 'compile)
 
-(global-set-key (kbd "M-SPC") 'mc/mark-all-like-this-dwim)
-(global-set-key (kbd "M-m") 'mc/mark-more-like-this-extended)
+;; (global-set-key (kbd "M-SPC") 'mc/mark-all-like-this-dwim)
+;; (global-set-key (kbd "M-m") 'mc/mark-more-like-this-extended)
 
 (global-set-key (kbd "C-x x j") 'direx:jump-to-directory-other-window)
 (global-set-key (kbd "C-x x f") 'direx:find-directory-other-window)
