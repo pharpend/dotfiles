@@ -34,7 +34,7 @@
 (define-key interactive-haskell-mode-map (kbd "M-p") 'helm-projectile)
 (define-key helm-map (kbd "M-TAB") nil)
 
-(define-key haskell-mode-map (kbd "M-m")
+(define-key haskell-mode-map (kbd "M-TAB")
   '(lambda ()
      (interactive)
      (insert "  ")))
