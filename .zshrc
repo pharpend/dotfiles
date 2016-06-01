@@ -171,8 +171,7 @@ adotcp () {
 
 # Swap the keyboard layout
 colemak () {
-    setxkbmap us,ru -variant colemak, -option\
-        terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+    setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 }
 
 psc () {
@@ -299,7 +298,12 @@ vboxload () {
 }
 
 ytdl () {
-        youtube-dl $(echo $1 | sed 's/\([^&]\+\).\+/\1/') $2 $3 $4 $5
+    youtube-dl $(echo $1 | sed 's/\([^&]\+\).\+/\1/') $2 $3 $4 $5
+}
+
+tbb () {
+    cd ~/builds/tbb/tor-browser_en-US
+    ./start-tor-browser.desktop
 }
 
 # Syntax highlighting
