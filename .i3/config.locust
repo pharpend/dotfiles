@@ -123,7 +123,7 @@ bindsym $mod+Shift+p restart
 bindsym $mod+Shift+f exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+k exec killall -u pete
 
-exec setxkbmap us,ru -variant colemak, -option terminate:ctrl_alt_bksp,grp:rctrl_toggle,compose:ralt,ctrl:nocaps
+exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
