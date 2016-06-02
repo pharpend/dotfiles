@@ -41,7 +41,7 @@
 (global-set-key (kbd "C-x g b") 'magit-branch-manager)
 (global-set-key (kbd "C-x g s") 'magit-status)
 (global-set-key (kbd "C-x g l") 'magit-log)
-(global-set-key (kbd "C-x C-m") 'magit-git-command)
+;; (global-set-key (kbd "C-x C-m") 'magit-git-command)
 
 (global-set-key (kbd "M-S-n") 'evil-window-increase-height)
 (global-set-key (kbd "M-S-h") 'evil-window-increase-width)

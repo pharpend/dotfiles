@@ -38,7 +38,7 @@ let g:haddock_browser='firefox'
 
 "Line breaks
 set lbr
-set tw=80
+set tw=72
 set wrap
 
 "Keymappings

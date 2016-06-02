@@ -15,7 +15,7 @@
    ((string= system-name "locust")
     ;; (set-frame-font "Meslo LG M 9"))))
     ;; (set-frame-font "Roboto Mono 19"))))
-    (set-frame-font "Terminus 8"))))
+    (set-frame-font "Roboto Mono 9"))))
  (t
   (load-theme 'monokai t)))
 
