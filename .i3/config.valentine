@@ -20,7 +20,7 @@ set $mod Mod4
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 10
-font pango: Roboto Mono 11
+font pango: Monospace 10
 # font pango: Roboto Mono 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -30,14 +30,13 @@ floating_modifier $mod
 # bindsym $mod+Return exec urxvt
 # bindsym $mod+Return exec mrxvt
 bindsym $mod+Return exec terminator
-bindsym $mod+shift+t exec urxvt
+bindsym $mod+Shift+t exec gnome-terminal
 
 # kill focused window
 bindsym $mod+k kill
 
 # start dmenu (a program launcher)
 bindsym $mod+w exec dmenu_run
-bindsym $mod+q exec gksudo synaptic
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -149,6 +148,11 @@ mode "resize" {
 }
 
 exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
+# Unicomp keyboard trackpoint thing
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Button Scrolling Button' 3
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Middle Emulation Enabled' 1
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Scroll Method Enabled' 0 0 1
+
 # Monitor configurations
 # V H
 # exec (xrandr --output DVI-D-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate right --right-of DVI-D-1)
@@ -161,7 +165,9 @@ exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,
 # V H V
 # exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-1 && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
 # Just the big screen
-exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --off)
+# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --off)
+# The big screen, with a small vertical screen to the left.
+exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --auto --rotate left --left-of DVI-D-2)
 
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
@@ -208,49 +214,42 @@ bar {
         # urgent_workspace   #dc322f #dc322f #fdf6e3
     }
 }
-# bar {
-#     output DVI-D-1
-#     position top
-#     status_command cat
-#     tray_output DVI-D-2
-#     mode dock
-# 
-#     # These are the colors for the window borders, so I'm going to apply them here
-#     #                       BorderFrame     Border      Title       NextWindowGoesHere
-#     #---------------------------------------------------------------------------------
-#     # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
-#     # client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
-#     # client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
-#     # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
-# 
-#     colors {
-#         background #222222
-#         focused_workspace  #222222 #222222 #eeeeee
-#         active_workspace   #222222 #222222 #cccccc
-#         inactive_workspace #222222 #222222 #aaaaaa
-#         urgent_workspace   #ee0000 #ee0000 #ffffff
-#         # # Solarized
-#         # background #073642
-#         # focused_workspace  #073642 #073642 #eee8d5
-#         # active_workspace   #073642 #073642 #2aa198
-#         # inactive_workspace #073642 #073642 #268bd2
-#         # urgent_workspace   #dc322f #dc322f #fdf6e3
-#     }
-# }
+bar {
+    output DVI-D-1
+    position top
+    status_command cat
+    tray_output DVI-D-2
+    mode dock
+
+    # These are the colors for the window borders, so I'm going to apply them here
+    #                       BorderFrame     Border      Title       NextWindowGoesHere
+    #---------------------------------------------------------------------------------
+    # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
+    # client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
+    # client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
+    # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
+
+    colors {
+        background #222222
+        focused_workspace  #222222 #222222 #eeeeee
+        active_workspace   #222222 #222222 #cccccc
+        inactive_workspace #222222 #222222 #aaaaaa
+        urgent_workspace   #ee0000 #ee0000 #ffffff
+        # # Solarized
+        # background #073642
+        # focused_workspace  #073642 #073642 #eee8d5
+        # active_workspace   #073642 #073642 #2aa198
+        # inactive_workspace #073642 #073642 #268bd2
+        # urgent_workspace   #dc322f #dc322f #fdf6e3
+    }
+}
 
 # Application keybindings
-bindsym $mod+c exec iceweasel
-bindsym $mod+shift+c exec chromium --incognito
-bindsym $mod+grave exec dwb
+bindsym $mod+c exec firefox
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+r exec thunderbird
 bindsym $mod+p exec pavucontrol
-bindsym $mod+l exec liferea
-bindsym $mod+Control+l exec $HOME/bin/startlysa
-bindsym $mod+Control+Shift+l exec $HOME/bin/startlysagraphs
-bindsym $mod+Control+k exec google-chrome-stable netflix.com
-# bindsym $mod+q exec qutebrowser
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
@@ -266,9 +265,9 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
-bindsym $mod+F10 exec pactl set-sink-mute   0 toggle
-bindsym $mod+F11 exec pactl set-sink-volume 0 -- -5%
-bindsym $mod+F12 exec pactl set-sink-volume 0 +5%
+bindsym $mod+F10 exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+bindsym $mod+F11 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
+bindsym $mod+F12 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
@@ -284,14 +283,11 @@ exec nm-applet
 exec parcellite
 
 # Non-panel things
-exec compton
 exec dunst
 exec emacs --daemon
 exec mpd
-exec nitrogen --restore
 exec redshift -l 41:112
 exec thunar --daemon
-# exec wicd-gtk
 
 # # Solarized
 # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
@@ -307,7 +303,6 @@ client.unfocused        #222222         #222222     #dddddd     #cbbb92
 client.urgent           #ee0000         #ee0000     #ffffff     #cbbb92
 
 focus_follows_mouse no
-
 
 for_window [class="^.*"] border pixel 6
 new_window 1pixel

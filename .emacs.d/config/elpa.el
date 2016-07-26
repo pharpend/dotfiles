@@ -49,7 +49,6 @@
                       rsense
                       ruby-tools
                       sass-mode
-                      scala-mode2
                       shakespeare-mode
                       slime
                       wc-mode

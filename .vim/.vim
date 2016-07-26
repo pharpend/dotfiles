@@ -1,1 +1,1 @@
-/home/pete/src/dotfiles/.vim
+/home/pharpend/src/dotfiles/.vim

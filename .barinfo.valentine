@@ -139,14 +139,14 @@ end
 
 ############
 
-win = { full_text: active_window_name,
-        color: $white }
-ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
-        color: $white }
-cputemp = { full_text: "\u2623: #{cpu_temperature} C",
-            color: cpu_color }
-cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
-           color: $white }
+#win = { full_text: active_window_name,
+#        color: $white }
+#ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
+#        color: $white }
+#cputemp = { full_text: "\u2623: #{cpu_temperature} C",
+#            color: cpu_color }
+#cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
+#           color: $white }
 date = {  full_text: Time.now.strftime("%A %e-%m-%Y, %H:%M"),
           color: $white }
 blank = { full_text: "",
@@ -154,7 +154,7 @@ blank = { full_text: "",
 
 case $arg
 when "1"
-  $info = [ncmpcpp, cputemp, cpughz, ram, date, blank]
+  $info = [date, blank]
 else
   $info = {full_text: "Error in .barinfo.valentine!", color: "red"}
 end

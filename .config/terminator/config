@@ -1,22 +1,16 @@
 [global_config]
-  title_transmit_bg_color = "#48483e"
-  title_inactive_fg_color = "#f1ebeb"
-  title_transmit_fg_color = "#f1ebeb"
-  title_inactive_bg_color = "#76715e"
-[keybindings]
+  title_transmit_fg_color = "#f8f8f2"
+  title_transmit_bg_color = "#272822"
+  title_inactive_fg_color = "#f8f8f2"
+  title_inactive_bg_color = "#75715e"
+
 [profiles]
   [[default]]
-    scrollbar_position = hidden
-    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
-    login_shell = True
-    background_image = None
-    use_system_font = False
-    cursor_color = "#f1ebeb"
-    foreground_color = "#000000"
-    icon_bell = False
-    show_titlebar = False
-    font = Roboto Mono 9
-    background_color = "#ffffff"
+    palette = "#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f8f8f2:#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f9f8f5"
+    foreground_color = "#f8f8f2"
+    background_color = "#272822"
+    cursor_color = "#f8f8f2"
+
 [layouts]
   [[default]]
     [[[child1]]]
@@ -26,4 +20,3 @@
     [[[window0]]]
       type = Window
       parent = ""
-[plugins]

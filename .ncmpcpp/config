@@ -1,6 +1,6 @@
 # Stolen from http://www.linuxandlife.com/2012/01/simple-guide-to-set-up-mpd-with-ncmpcpp.html
 
-mpd_music_dir = "/home/pete/music/"  
+mpd_music_dir = "~/music/"  
 mpd_connection_timeout = "5"  
 mpd_crossfade_time = "5"  
 playlist_disable_highlight_delay = "0"  

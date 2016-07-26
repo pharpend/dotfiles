@@ -1,6 +1,13 @@
 ;; My .emacs file
 ;; Copyright (c) 2013-2015 Peter Harpending. <peter@harpending.org>
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (load-file "~/.emacs.d/config/elpa.el")                         ; Elpa
 (load-file "~/.emacs.d/config/evil.el")                         ; evil
 (load-file "~/.emacs.d/config/editing.el")                      ; editing
@@ -9,7 +16,7 @@
 (load-file "~/.emacs.d/config/ftopts.el")                       ; filetype options
 (load-file "~/.emacs.d/config/functions.el")                    ; functions i've added
 (load-file "~/.emacs.d/config/lf.el")                           ; look and feel
-(load-file "/usr/share/emacs24/site-lisp/proofgeneral/generic/proof-site.el") ;Proof general
+(load-file "/usr/share/emacs/site-lisp/proofgeneral/generic/proof-site.elc") ;Proof general
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
