@@ -16,7 +16,7 @@
 (load-file "~/.emacs.d/config/ftopts.el")                       ; filetype options
 (load-file "~/.emacs.d/config/functions.el")                    ; functions i've added
 (load-file "~/.emacs.d/config/lf.el")                           ; look and feel
-(load-file "/usr/share/emacs/site-lisp/proofgeneral/generic/proof-site.elc") ;Proof general
+(load-file "/usr/share/emacs/site-lisp/proofgeneral/generic/proof-site.el") ;Proof general
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

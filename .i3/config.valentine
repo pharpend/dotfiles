@@ -149,9 +149,8 @@ mode "resize" {
 
 exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 # Unicomp keyboard trackpoint thing
-exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Button Scrolling Button' 3
-exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Middle Emulation Enabled' 1
-exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Scroll Method Enabled' 0 0 1
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation' 1
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation Button' 3
 
 # Monitor configurations
 # V H
@@ -246,6 +245,7 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec firefox
+bindsym Control+$mod+k exec google-chrome-stable netflix.com
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+r exec thunderbird

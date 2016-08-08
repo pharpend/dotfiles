@@ -5,7 +5,7 @@
   ;; (load-theme 'monokai t)
   (load-theme 'sanityinc-solarized-light t)
   (cond
-   ((string= system-name "tsarina")
+   ((string= system-name "centurion")
     ;; (set-frame-font "Source Code Pro for Powerline 11"))
     ;; (set-frame-font "Meslo LG M 24"))
     ;; (set-frame-font "Inconsolata-dz for Powerline 14"))
