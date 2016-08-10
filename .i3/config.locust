@@ -148,8 +148,9 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec iceweasel
+bindsym $mod+c exec firefox
 bindsym Control+$mod+c exec chromium-browser
+bindsym Control+$mod+k exec google-chrome-stable netflix.com
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+p exec pavucontrol

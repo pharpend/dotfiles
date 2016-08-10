@@ -1,3 +1,4 @@
+acpi
 alpine
 auctex
 bitlbee
@@ -57,6 +58,7 @@ texlive-math-extra
 texlive-xetex
 thunar
 thunderbird
+tmux
 viewnior
 vim
 vim-pathogen

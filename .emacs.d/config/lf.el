@@ -13,8 +13,8 @@
     (set-frame-font "Roboto Mono 12"))
     ;; (set-frame-font "Roboto Mono 20"))
    ((string= system-name "locust")
-    ;; (set-frame-font "Meslo LG M 9"))))
-    ;; (set-frame-font "Roboto Mono 19"))))
+    (set-frame-font "Roboto Mono 9"))
+   ((string= system-name "comet")
     (set-frame-font "Roboto Mono 9"))))
  (t
   (load-theme 'monokai t)))
