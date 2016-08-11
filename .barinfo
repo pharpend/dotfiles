@@ -64,8 +64,8 @@ def ping_color(ps)
   end
 end
 
-def battery_pct
-  `acpi -b`.scan(/(\w+), (\d+)%/)[0]
+def battery_pcts
+  `acpi -b`.split("\n")
 end
 
 def battery_color(pct)
@@ -144,6 +144,10 @@ end
 
 win = { full_text: active_window_name,
         color: $white }
+bat0 = { full_text: battery_pcts[0],
+         color: $white }
+bat1 = { full_text: battery_pcts[1],
+         color: $white }
 ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
         color: $white }
 cputemp = { full_text: "\u2623: #{cpu_temperature} C",
@@ -155,5 +159,5 @@ date = {  full_text: Time.now.strftime("%A %Y-%m-%d %H:%M %Z (UTC%z)"),
 blank = { full_text: "",
           color: $white }
 
-$info = [win] + ncmpcpp + locust + [cputemp, cpughz, ram, date, blank]
+$info = [win] + ncmpcpp + locust + [bat0, bat1, cputemp, cpughz, ram, date, blank]
 update

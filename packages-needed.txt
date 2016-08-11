@@ -20,6 +20,7 @@ gimp
 git
 git-annex
 gksu
+gnome-system-monitor
 hplip
 i3lock
 i3-wm
