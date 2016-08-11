@@ -57,6 +57,7 @@ alias sa='sudo aptitude'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
+alias kopev='sysd stop openvpn@openvpn'
 
 # Portage aliases
 # alias sem='sudo emerge --jobs --ask --verbose'
@@ -117,7 +118,18 @@ bigscreen () {
     xrandr --output DVI-D-2 --rotate normal
     xrandr --output VGA-1 --off
     xrandr --output DVI-D-1 --off
-    nitrogen --restore
+}
+
+hhbs () {
+    xrandr --output DVI-D-2 --rotate normal
+    xrandr --output DVI-D-1 --rotate normal --left-of DVI-D-2
+    xrandr --output VGA-1 --off
+}
+
+vhbs () {
+    xrandr --output DVI-D-2 --rotate normal
+    xrandr --output DVI-D-1 --rotate left --left-of DVI-D-2
+    xrandr --output VGA-1 --off
 }
 
 scr () {
