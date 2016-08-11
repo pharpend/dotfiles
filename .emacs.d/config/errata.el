@@ -37,10 +37,10 @@
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 
-(add-to-list 'load-path "~/.emacs.d/load-list/structured-haskell-mode/elisp/")
-(setq shm-program-name "/home/pete/.cabal/bin/structured-haskell-mode")
-(require 'shm)
-(require 'shm-case-split)
+;;(add-to-list 'load-path "~/.emacs.d/load-list/structured-haskell-mode/elisp/")
+;;(setq shm-program-name "/home/pete/.cabal/bin/structured-haskell-mode")
+;; (require 'shm)
+;; (require 'shm-case-split)
 
 ;; ;; OCaml setup
 ;; (autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)

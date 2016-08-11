@@ -148,8 +148,9 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec iceweasel
+bindsym $mod+c exec firefox
 bindsym Control+$mod+c exec chromium-browser
+bindsym Control+$mod+k exec google-chrome-stable netflix.com
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+p exec pavucontrol
@@ -177,13 +178,17 @@ bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 # bindsym $mod+F12 exec amixer set Master 8%+
 bindsym XF86AudioMute        exec pactl set-sink-mute 0 toggle
 bindsym $mod+F10             exec pactl set-sink-mute 0 toggle
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5%
-bindsym $mod+F11             exec pactl set-sink-volume 0 -- -5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym $mod+F11             exec pactl set-sink-volume 0 -5%
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym $mod+F12             exec pactl set-sink-volume 0 +5%
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym F5 exec $HOME/bin/kb-light.py -
+bindsym F6 exec $HOME/bin/kb-light.py +
 
 # Autostarted applications
 # exec deluge
@@ -195,7 +200,7 @@ exec mpd
 exec ncmpcpp pause
 
 # Non-panel things
-# exec compton
+exec compton
 exec dunst
 # exec $HOME/bin/gmail-notifyd
 exec emacs --daemon

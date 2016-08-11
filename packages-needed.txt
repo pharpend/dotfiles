@@ -1,3 +1,4 @@
+acpi
 alpine
 auctex
 bitlbee
@@ -19,6 +20,7 @@ gimp
 git
 git-annex
 gksu
+gnome-system-monitor
 hplip
 i3lock
 i3-wm
@@ -57,6 +59,7 @@ texlive-math-extra
 texlive-xetex
 thunar
 thunderbird
+tmux
 viewnior
 vim
 vim-pathogen
