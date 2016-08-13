@@ -57,6 +57,7 @@ alias sa='sudo aptitude'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
+alias kopev='sysd stop openvpn@openvpn'
 
 # Portage aliases
 # alias sem='sudo emerge --jobs --ask --verbose'

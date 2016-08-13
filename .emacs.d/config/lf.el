@@ -15,7 +15,7 @@
    ((string= system-name "locust")
     (set-frame-font "Roboto Mono 9"))
    ((string= system-name "comet")
-    (set-frame-font "Roboto Mono 9"))))
+    (set-frame-font "Roboto Mono 12"))))
  (t
   (load-theme 'monokai t)))
 

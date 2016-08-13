@@ -154,8 +154,6 @@ bindsym Control+$mod+k exec google-chrome-stable netflix.com
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+p exec pavucontrol
-bindsym $mod+r exec thunderbird
-bindsym $mod+l exec liferea
 bindsym Control+$mod+l exec $HOME/bin/startlysa
 bindsym Control+Shift+$mod+l exec $HOME/bin/startlysagraphs
 

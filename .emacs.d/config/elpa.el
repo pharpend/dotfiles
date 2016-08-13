@@ -32,6 +32,7 @@
                       hl-anything
                       hlinum
                       idris-mode
+                      intero
                       json-mode
                       linum-relative
                       lua-mode

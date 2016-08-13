@@ -1,12 +1,10 @@
 (auto-complete-mode -1)
 (company-mode -1)
 (highlight-indentation-current-column-mode 1)
-;; hs = hide/show, not haskell
 (hs-minor-mode 1)
-;; (interactive-haskell-mode 1)
+(intero-mode 1)
 (rainbow-mode 1)
 (rainbow-delimiters-mode 1)
-;; (structured-haskell-mode 1)
 (smartparens-mode 1)
 (turn-on-eldoc-mode)
 
@@ -14,8 +12,6 @@
 (setq-local indent-line-function 'indent-relative-maybe)
 (setq-local fill-column 72)
 (setq-local hindent-style "chris-done")
-;; (setq-local haskell-tags-on-save nil)
-;; (setq-local tab-width 2)
 (setq-local tab-stop-list (number-sequence 2 200 2))
 (setq-local evil-shift-width 2)
 
