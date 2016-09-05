@@ -149,6 +149,7 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec firefox
+bindsym $mod+r exec thunderbird
 bindsym Control+$mod+c exec chromium-browser
 bindsym Control+$mod+k exec google-chrome-stable netflix.com
 bindsym $mod+f exec thunar
