@@ -185,6 +185,9 @@ adotcp () {
 colemak () {
     setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 }
+qwerty () {
+    setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
+}
 
 psc () {
     ps ax | grep $@
