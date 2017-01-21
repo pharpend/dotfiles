@@ -36,7 +36,7 @@ bindsym $mod+Shift+t exec gnome-terminal
 bindsym $mod+k kill
 
 # start dmenu (a program launcher)
-bindsym $mod+w exec dmenu_run
+bindsym $mod+q exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -154,19 +154,21 @@ exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emul
 
 # Monitor configurations
 # V H
-# exec (xrandr --output DVI-D-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate right --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate left && xrandr --output DVI-D-1 --auto --rotate right --right-of DVI-D-0)
 # H V
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate normal && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
 # V V
-# exec (xrandr --output DVI-D-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate left && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
 # H H
-# exec (xrandr --output DVI-D-1 --auto && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto && xrandr --output DVI-D-1 --auto --right-of DVI-D-0)
 # V H V
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-1 && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-0 && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
 # Just the big screen
-# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --off)
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --off)
 # The big screen, with a small vertical screen to the left.
-exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --auto --rotate left --left-of DVI-D-2)
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --left-of DVI-D-1)
+# The big screen, with a small horizontal screen to the left.
+exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --left-of DVI-D-1)
 
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
@@ -175,7 +177,7 @@ exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --
 #     output VGA-1
 #     position top
 #     status_command cat
-#     tray_output DVI-D-2
+#     tray_output DVI-D-1
 #     mode dock
 # 
 #     colors {
@@ -193,10 +195,10 @@ exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --
 #     }
 # }
 bar {
-    output DVI-D-2
+    output DVI-D-1
     position top
     status_command $HOME/bin/barinfo
-    tray_output DVI-D-2
+    tray_output DVI-D-1
     mode dock
 
     colors {
@@ -214,10 +216,10 @@ bar {
     }
 }
 bar {
-    output DVI-D-1
+    output DVI-D-0
     position top
     status_command cat
-    tray_output DVI-D-2
+    tray_output DVI-D-1
     mode dock
 
     # These are the colors for the window borders, so I'm going to apply them here
@@ -245,6 +247,7 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec firefox
+bindsym $mod+d exec gksudo gufw
 bindsym Control+$mod+k exec google-chrome-stable netflix.com
 bindsym $mod+f exec thunar
 bindsym $mod+m exec emacs
@@ -265,6 +268,9 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
+bindsym $mod+F1 exec pactl set-sink-mute   bluez_sink.00_1B_66_80_B9_5B toggle
+bindsym $mod+F2 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B -5%
+bindsym $mod+F3 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B +5%
 bindsym $mod+F10 exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
 bindsym $mod+F11 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
 bindsym $mod+F12 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
@@ -281,6 +287,7 @@ bindsym $mod+y workspace next
 exec deluge
 exec nm-applet
 exec parcellite
+exec synapse
 
 # Non-panel things
 exec dunst

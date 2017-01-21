@@ -58,6 +58,7 @@ alias sa='sudo aptitude'
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
 alias kopev='sysd stop openvpn@openvpn'
+alias renm='sysd restart NetworkManager'
 
 # Portage aliases
 # alias sem='sudo emerge --jobs --ask --verbose'
@@ -90,45 +91,44 @@ hscreen () {
 
 vscreen () {
     xrandr --output VGA-1 --rotate left
-    xrandr --output DVI-D-1 --rotate left --right-of VGA-1
+    xrandr --output DVI-D-0 --rotate left --right-of VGA-1
     nitrogen --restore
 }
 
 vhvscreen () {
-    xrandr --output DVI-D-1 --auto --rotate normal
-    xrandr --output VGA-1   --auto --rotate left --left-of DVI-D-1
-    xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1
+    xrandr --output DVI-D-0 --auto --rotate normal
+    xrandr --output VGA-1   --auto --rotate left --left-of DVI-D-0
+    xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0
     nitrogen --restore
 }
 hhvscreen () {
-    xrandr --output DVI-D-1 --auto --rotate normal
-    xrandr --output VGA-1   --auto --rotate normal --left-of DVI-D-1
-    xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1
+    xrandr --output DVI-D-0 --auto --rotate normal
+    xrandr --output VGA-1   --auto --rotate normal --left-of DVI-D-0
+    xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0
     nitrogen --restore
 }
 
 vvvscreen () {
-    xrandr --output DVI-D-1 --rotate left
-    xrandr --output VGA-1 --rotate left --left-of DVI-D-1
-    xrandr --output DVI-D-2 --rotate left --right-of DVI-D-1
+    xrandr --output DVI-D-0 --rotate left
+    xrandr --output VGA-1 --rotate left --left-of DVI-D-0
+    xrandr --output DVI-D-1 --rotate left --right-of DVI-D-0
     nitrogen --restore
 }
 
 bigscreen () {
-    xrandr --output DVI-D-2 --rotate normal
+    xrandr --output DVI-D-1 --rotate normal
     xrandr --output VGA-1 --off
-    xrandr --output DVI-D-1 --off
+    xrandr --output DVI-D-0 --off
 }
 
 hhbs () {
-    xrandr --output DVI-D-2 --rotate normal
-    xrandr --output DVI-D-1 --rotate normal --left-of DVI-D-2
-    xrandr --output VGA-1 --off
+    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output DVI-D-0 --rotate normal --left-of DVI-D-1
 }
 
 vhbs () {
-    xrandr --output DVI-D-2 --rotate normal
-    xrandr --output DVI-D-1 --rotate left --left-of DVI-D-2
+    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output DVI-D-0 --rotate left --left-of DVI-D-1
     xrandr --output VGA-1 --off
 }
 
@@ -296,9 +296,9 @@ stopwatch ()
 # Wacom Bamboo 16FG 6x8 Finger touch	
 
 fixwacom () {
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "VGA-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "VGA-1"
-    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad"    MapToOutput "VGA-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "DVI-D-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "DVI-D-1"
+    xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad"    MapToOutput "DVI-D-1"
 }
 
 gitcc () {
@@ -319,6 +319,11 @@ ytdl () {
 tbb () {
     cd ~/builds/tbb/tor-browser_en-US
     ./start-tor-browser.desktop
+}
+
+trash () {
+    mkdir -p ~/.local/share/Trash/files
+    mv $@ ~/.local/share/Trash/files
 }
 
 # Syntax highlighting
