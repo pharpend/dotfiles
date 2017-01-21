@@ -54,6 +54,7 @@ alias getlinux='ABSROOT=. abs core/linux'
 alias pa='pacaur --noedit'
 alias a='aptitude'
 alias sa='sudo aptitude'
+alias enw='emacs -nw'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
@@ -324,13 +325,15 @@ tbb () {
 }
 
 # Syntax highlighting
-source ~/.zshlex/zsh-syntax-highlighting.zsh
+# source ~/.zshlex/zsh-syntax-highlighting.zsh
 
 setopt prompt_subst
 setopt auto_pushd
 CONFIG="~/.config"
 PROMPT='%B[%b%F{cyan}%2~%f%F{red}$(ggit-branch)%f%B]%b %F{green}%#%f '
+# PROMPT='[%2~$(ggit-branch)] %# '
 RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
+# RPROMPT='%n@%M'
 REPORTTIME=3
 
 export EDITOR="vim"

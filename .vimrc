@@ -41,52 +41,6 @@ set lbr
 set tw=70
 set wrap
 
-"Keymappings
-noremap <C-n> <C-W>j
-noremap <C-e> <C-W>k
-noremap <C-h> <C-W>h
-noremap <C-i> <C-W>l
-nmap <C-k> <C-d>
-nmap = <Leader>c 
-nmap + <Leader>cA
-nmap <C-/> u
-nmap <C-?> <C-r>
-
-" Motion remappings for Colemak
-" Remap j to n, and vice versa
-noremap j n
-noremap n j
-" Remap J to N and vice versa.
-noremap J N
-noremap N J
-" Remap k to e, and vice versa
-noremap k e
-noremap e k
-" Remap K to E, and vice versa
-noremap K E
-noremap E K
-" Remap l to i, and vice versa.
-noremap l i
-noremap i l
-" Remap L to I and vice versa.
-noremap L I
-noremap I L
-
-"change the font to 10 point Liberation Mono
-if has("gui_running")
-    if has("gui_gtk2")
-        set guifont=Liberation\ Mono\ 10
-    elseif has("gui_photon")
-        set guifont=Liberation\ Mono:s10
-    elseif has("gui_kde")
-        set guifont=Liberation\ Mono/10/-1/5/50/0/0/0/1/0
-    elseif has("x11")
-        set guifont=-*-liberation-mono-medium-r-normal-*-*-180-*-*-m-*-*
-    else
-        set guifont=Liberation_Mono:h11:cDEFAULT
-    endif
-endif
-
 " Pathogen
 execute pathogen#infect()
 
@@ -115,16 +69,3 @@ vnoremap _" <Esc>`>a"<Esc>`<i"<Esc>
 vnoremap _' <Esc>`>a'<Esc>`<i'<Esc>
 vnoremap _""" <Esc>`>a"""<Esc>`<i"""<Esc>
 vnoremap _''' <Esc>`>a'''<Esc>`<i'''<Esc>
-
-" GHCi in Haskell
-command GhciFile ghci
-command GhciRange ghcil
-command GhciReload ghcir
-
-" Remap Tab to Escape
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
-" inoremap <C-Tab> <Tab>
-" inoremap <M-i> <Tab>
