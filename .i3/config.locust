@@ -189,7 +189,7 @@ bindsym F6 exec $HOME/bin/kb-light.py +
 
 # Autostarted applications
 # exec deluge
-exec cbatticon
+exec dropbox
 exec synapse
 exec nm-applet
 exec parcellite

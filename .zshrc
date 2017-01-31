@@ -325,7 +325,7 @@ tbb () {
 }
 
 # Syntax highlighting
-# source ~/.zshlex/zsh-syntax-highlighting.zsh
+source ~/.zshlex/zsh-syntax-highlighting.zsh
 
 setopt prompt_subst
 setopt auto_pushd
