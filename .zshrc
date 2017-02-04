@@ -340,30 +340,5 @@ RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 # RPROMPT='%n@%M'
 REPORTTIME=3
 
-export EDITOR="vim"
-export SHELL=$(which zsh)
-export rvm_ignore_gemrc_issues=1
-
-# Add Halcyon
-# eval "$( /app/halcyon/halcyon paths )" && clear
-
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.3.0/bin:$PATH
-export PATH=$HOME/.rvm/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.cabal/bin:$PATH
-
-# export BROWSER=$(which firefox-bin)
-
 # OPAM configuration
 . /home/pete/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-# Flight simulator
-LD_LIBRARY_PATH=$HOME/.local/share/flightgear/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH
-FG_HOME=$HOME/.local/share/flightgear
-export FG_HOME
-FG_ROOT=$HOME/.local/share/flightgear/data
-export FG_ROOT
-FG_SCENERY=$FG_ROOT/Scenery:$FG_ROOT/worldscenery
-export FG_SCENERY

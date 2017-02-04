@@ -30,25 +30,26 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(python
+     mu4e
+     markdown
      vimscript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
-     ;; auto-completion
-     ;; better-defaults
+     ivy
+     auto-completion
+     better-defaults
      emacs-lisp
-     ;; git
-     ;; markdown
+     git
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
+     spell-checking
+     syntax-checking
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
@@ -127,14 +128,16 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(sanityinc-solarized-light
+                         sanityinc-solarized-dark
+                         spacemacs-dark
                          spacemacs-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Roboto Mono"
-                               :size 12
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -218,7 +221,7 @@ values."
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
    dotspacemacs-fullscreen-at-startup nil
@@ -250,7 +253,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -300,7 +303,98 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  )
+  (add-hook 'LaTeX-mode-hook
+            (lambda ()
+              (rainbow-delimiters-mode t)
+              (setq fill-column 72)))
+  (smartparens-global-mode t)
+  (define-key evil-normal-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
+  (define-key evil-visual-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
+  (push '("*compilation*"
+          :position bottom
+          :height 8
+          :stick nil
+          :noselect t)
+        popwin:special-display-config)
+  (defalias 'er 'eval-region)
+  (setq mu4e-drafts-folder "/[Gmail].Drafts")
+  (setq mu4e-sent-folder   "/[Gmail].Sent Mail")
+  (setq mu4e-trash-folder  "/[Gmail].Trash")
+  ;; don't save message to Sent Messages, Gmail/IMAP takes care of this
+  (setq mu4e-sent-messages-behavior 'delete)
 
-;; Do not write anything past this comment. This is where Emacs will
+  ;; (See the documentation for `mu4e-sent-messages-behavior' if you have
+  ;; additional non-Gmail addresses and want assign them different behavior.)
+
+  ;; setup some handy shortcuts
+  ;; you can quickly switch to your Inbox -- press ``ji''
+  ;; then, when you want archive some messages, move them to
+  ;; the 'All Mail' folder by pressing ``ma''.
+
+  ;; allow for updating mail using 'U' in the main view:
+  (setq mu4e-get-mail-command "offlineimap -o")
+
+  ;; something about ourselves
+  (setq
+    user-mail-address "peter.harpending@gmail.com"
+    user-full-name  "Peter Harpending"
+    mu4e-compose-signature "Peter Harpending")
+
+  ;; sending mail -- replace USERNAME with your gmail username
+  ;; also, make sure the gnutls command line utils are installed
+  ;; package 'gnutls-bin' in Debian/Ubuntu
+
+  ;; (setq message-send-mail-function 'smtpmail-send-it
+  ;;   starttls-use-gnutls t
+  ;;   smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+  ;;   smtpmail-auth-credentials
+  ;;     '(("smtp.gmail.com" 587 "peter.harpending@gmail.com" nil))
+  ;;   smtpmail-default-smtp-server "smtp.gmail.com"
+  ;;   smtpmail-smtp-server "smtp.gmail.com"
+  ;;   smtpmail-smtp-service 587)
+
+  ;; alternatively, for emacs-24 you can use:
+  (setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-stream-type 'starttls
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587)
+
+  ;; don't keep message buffers around
+  (setq message-kill-buffer-on-exit t)
+
+  (defun mbork/message-attachment-present-p ()
+    "Return t if an attachment is found in the current message."
+    (save-excursion
+      (save-restriction
+        (widen)
+        (goto-char (point-min))
+        (when (search-forward "<#part" nil t) t))))
+
+  (defcustom mbork/message-attachment-intent-re
+    (regexp-opt '("attach"))
+    "A regex which - if found in the message, and if there is no
+  attachment - should launch the no-attachment warning.")
+
+  (defcustom mbork/message-attachment-reminder
+    "Are you sure you want to send this message without any attachment? "
+    "The default question asked when trying to send a message
+  containing `mbork/message-attachment-intent-re' without an
+  actual attachment.")
+
+  (defun mbork/message-warn-if-no-attachments ()
+    "Ask the user if s?he wants to send the message even though
+  there are no attachments."
+    (when (and (save-excursion
+          (save-restriction
+      (widen)
+      (goto-char (point-min))
+      (re-search-forward mbork/message-attachment-intent-re nil t)))
+        (not (mbork/message-attachment-present-p)))
+      (unless (y-or-n-p mbork/message-attachment-reminder)
+        (keyboard-quit))))
+
+  (add-hook 'message-send-hook #'mbork/message-warn-if-no-attachments))
+
+;; do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
