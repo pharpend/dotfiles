@@ -18,7 +18,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango: Monospace 9
-font pango: Roboto Mono 9
+font pango: Roboto Mono 10
 # font pango: Terminus 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -199,7 +199,7 @@ exec ncmpcpp pause
 # Non-panel things
 exec compton
 exec dunst
-# exec $HOME/bin/gmail-notifyd
+exec offlineimap
 exec emacs --daemon
 exec thunar --daemon
 exec nitrogen --restore
