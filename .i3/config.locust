@@ -116,9 +116,9 @@ bindsym $mod+bracketleft scratchpad show
 bindsym $mod+bracketright move scratchpad
 
 # reload the configuration file
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+s reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+p restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+f exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -189,7 +189,7 @@ bindsym F6 exec $HOME/bin/kb-light.py +
 
 # Autostarted applications
 # exec deluge
-exec dropbox
+exec dropbox start -i
 exec synapse
 exec nm-applet
 exec parcellite
@@ -199,11 +199,9 @@ exec ncmpcpp pause
 # Non-panel things
 exec compton
 exec dunst
-exec offlineimap
 exec emacs --daemon
-exec thunar --daemon
 exec nitrogen --restore
-exec redshift -l 40.75:111.8833
+exec redshift
 exec synclient TouchpadOff=1
 exec xscreensaver
 

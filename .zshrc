@@ -56,6 +56,10 @@ alias a='aptitude'
 alias sa='sudo aptitude'
 alias enw='emacs -nw'
 
+viewavis() {
+    find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ' | xargs vlc
+}
+
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
 alias kopev='sysd stop openvpn@openvpn'
