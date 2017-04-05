@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require 'time'
+
+if ARGV.empty? then
+  STDERR.puts "No arguments given to program"
+  exit!
+else
+  entry = ARGV.inject {|x, y| x + " " + y}
+  CSV.open("food.csv", "ab") do |csv|
+    csv << [Time.now.strftime('%a %b %d %H:%M:%S %Z %Y'), entry]
+  end
+end
+

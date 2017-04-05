@@ -31,7 +31,6 @@ alias irb='irb --simple-prompt'
 alias pd='pandoc'
 alias ipy='ipython'
 alias fehb='feh --bg-fill'
-alias pry='pry --simple-prompt'
 alias sbcl='rlwrap sbcl'
 alias ec='emacsclient'
 alias hist='cat ~/.histfile'
@@ -55,6 +54,7 @@ alias pa='pacaur --noedit'
 alias a='aptitude'
 alias sa='sudo aptitude'
 alias enw='emacs -nw'
+alias prys='pry --simple-prompt'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
@@ -189,6 +189,10 @@ colemak () {
 }
 qwerty () {
     setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
+}
+
+qwerty-prime () {
+    setxkbmap us,ru,ar -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,grp:rctrl_toggle
 }
 
 psc () {
@@ -326,6 +330,14 @@ tbb () {
 trash () {
     mkdir -p ~/.local/share/Trash/files
     mv $@ ~/.local/share/Trash/files
+}
+
+viewavis () {
+    AVIS=$(find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    MPFS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    echo $AVIS $MKVS $MFVS $MPFS | xargs vlc
 }
 
 # Syntax highlighting

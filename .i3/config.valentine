@@ -20,8 +20,8 @@ set $mod Mod4
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 10
-font pango: Monospace 10
-# font pango: Roboto Mono 14
+# font pango: Monospace 10
+font pango: Roboto Mono 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -167,7 +167,9 @@ exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emul
 # The big screen, with a small vertical screen to the left.
 # exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --left-of DVI-D-1)
 # The big screen, with a small horizontal screen to the left.
-exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --left-of DVI-D-1)
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --left-of DVI-D-1)
+# The big screen, with a small vertical screen to the right.
+exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --right-of DVI-D-1)
 
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
@@ -284,16 +286,17 @@ bindsym $mod+o workspace next
 
 # Panel things
 exec deluge
+exec dropbox start -i
 exec nm-applet
 exec parcellite
-exec synapse
+exec synapse -s
 
 # Non-panel things
 exec dunst
 exec emacs --daemon
 exec mpd
-exec redshift -l 41:112
-exec thunar --daemon
+exec offlineimap
+exec redshift
 
 # # Solarized
 # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
@@ -307,6 +310,8 @@ client.focused          #ccff55         #ccff55     #413101     #ebdbb2
 client.focused_inactive #555555         #555555     #dddddd     #cbbb92
 client.unfocused        #222222         #222222     #dddddd     #cbbb92
 client.urgent           #ee0000         #ee0000     #ffffff     #cbbb92
+#gaps inner 10
+#gaps outer 10
 
 focus_follows_mouse no
 

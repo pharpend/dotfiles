@@ -30,15 +30,14 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(python
+   '(
+     ruby
+     csv
+     html
+     python
      mu4e
      markdown
      vimscript
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
      ivy
      auto-completion
      better-defaults
@@ -50,8 +49,7 @@ values."
      ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     ;; version-control
-     )
+     jabber)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
@@ -129,6 +127,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(sanityinc-solarized-light
+                         monokai
                          sanityinc-solarized-dark
                          spacemacs-dark
                          spacemacs-light)
@@ -317,51 +316,33 @@ you should place your code here."
           :noselect t)
         popwin:special-display-config)
   (defalias 'er 'eval-region)
-  (setq mu4e-drafts-folder "/[Gmail].Drafts")
-  (setq mu4e-sent-folder   "/[Gmail].Sent Mail")
-  (setq mu4e-trash-folder  "/[Gmail].Trash")
-  ;; don't save message to Sent Messages, Gmail/IMAP takes care of this
-  (setq mu4e-sent-messages-behavior 'delete)
 
   ;; (See the documentation for `mu4e-sent-messages-behavior' if you have
   ;; additional non-Gmail addresses and want assign them different behavior.)
 
-  ;; setup some handy shortcuts
-  ;; you can quickly switch to your Inbox -- press ``ji''
-  ;; then, when you want archive some messages, move them to
-  ;; the 'All Mail' folder by pressing ``ma''.
-
   ;; allow for updating mail using 'U' in the main view:
-  (setq mu4e-get-mail-command "offlineimap -o")
 
   ;; something about ourselves
   (setq
     user-mail-address "peter.harpending@gmail.com"
     user-full-name  "Peter Harpending"
-    mu4e-compose-signature "Peter Harpending")
-
-  ;; sending mail -- replace USERNAME with your gmail username
-  ;; also, make sure the gnutls command line utils are installed
-  ;; package 'gnutls-bin' in Debian/Ubuntu
-
-  ;; (setq message-send-mail-function 'smtpmail-send-it
-  ;;   starttls-use-gnutls t
-  ;;   smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-  ;;   smtpmail-auth-credentials
-  ;;     '(("smtp.gmail.com" 587 "peter.harpending@gmail.com" nil))
-  ;;   smtpmail-default-smtp-server "smtp.gmail.com"
-  ;;   smtpmail-smtp-server "smtp.gmail.com"
-  ;;   smtpmail-smtp-service 587)
-
-  ;; alternatively, for emacs-24 you can use:
-  (setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'starttls
-      smtpmail-default-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-service 587)
-
-  ;; don't keep message buffers around
-  (setq message-kill-buffer-on-exit t)
+    mu4e-compose-signature "Peter Harpending <peter.harpending@gmail.com>"
+    message-citation-line-format "On %a %Y-%m-%d at %R %Z, %f wrote:"
+    message-citation-line-function 'message-insert-formatted-citation-line
+    mu4e-drafts-folder "/[Gmail].Drafts"
+    mu4e-sent-folder   "/[Gmail].Sent Mail"
+    mu4e-junk-folder   "/Junk"
+    mu4e-trash-folder  "/[Gmail].Trash"
+    mu4e-get-mail-command "offlineimap -o"
+    mu4e-sent-messages-behavior 'delete
+    message-send-mail-function 'smtpmail-send-it
+    message-kill-buffer-on-exit t
+    smtpmail-stream-type 'starttls
+    smtpmail-auth-credentials
+    '(("smtp.gmail.com" 587 "peter.harpending@gmail.com" nil))
+    smtpmail-default-smtp-server "smtp.gmail.com"
+    smtpmail-smtp-server "smtp.gmail.com"
+    smtpmail-smtp-service 587)
 
   (defun mbork/message-attachment-present-p ()
     "Return t if an attachment is found in the current message."
@@ -394,7 +375,12 @@ you should place your code here."
       (unless (y-or-n-p mbork/message-attachment-reminder)
         (keyboard-quit))))
 
-  (add-hook 'message-send-hook #'mbork/message-warn-if-no-attachments))
+  (add-hook 'message-send-hook #'mbork/message-warn-if-no-attachments)
+  (global-set-key (kbd "M-h") 'evil-window-left)
+  (global-set-key (kbd "M-j") 'evil-window-down)
+  (global-set-key (kbd "M-k") 'evil-window-up)
+  (global-set-key (kbd "M-l") 'evil-window-right)
+  )
 
 ;; do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
