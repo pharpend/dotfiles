@@ -20,8 +20,8 @@ set $mod Mod4
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 10
-font pango: Monospace 10
-# font pango: Roboto Mono 14
+# font pango: Monospace 10
+font pango: Roboto Mono 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -30,13 +30,12 @@ floating_modifier $mod
 # bindsym $mod+Return exec urxvt
 # bindsym $mod+Return exec mrxvt
 bindsym $mod+Return exec terminator
-bindsym $mod+Shift+t exec gnome-terminal
 
 # kill focused window
-bindsym $mod+k kill
+bindsym $mod+n kill
 
 # start dmenu (a program launcher)
-bindsym $mod+w exec dmenu_run
+bindsym $mod+q exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -44,9 +43,9 @@ bindsym $mod+w exec dmenu_run
 
 # change focus
 bindsym $mod+h focus left
-bindsym $mod+n focus down
-bindsym $mod+e focus up
-bindsym $mod+i focus right
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -56,9 +55,9 @@ bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
-bindsym $mod+Shift+n move down
-bindsym $mod+Shift+e move up
-bindsym $mod+Shift+i move right
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -67,13 +66,13 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+o split h
+bindsym $mod+semicolon split h
 # split in vertical orientation
-bindsym $mod+semicolon split v
+bindsym $mod+p split v
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
+bindsym $mod+d layout stacking
+bindsym $mod+f layout tabbed
 bindsym $mod+space layout toggle split
 
 # toggle tiling / floating
@@ -117,9 +116,9 @@ bindsym $mod+bracketleft scratchpad show
 bindsym $mod+bracketright move scratchpad
 
 # reload the configuration file
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+s reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+p restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+f exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -147,26 +146,30 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-exec setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
+exec setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 # Unicomp keyboard trackpoint thing
 exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation' 1
 exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation Button' 3
 
 # Monitor configurations
 # V H
-# exec (xrandr --output DVI-D-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate right --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate left && xrandr --output DVI-D-1 --auto --rotate right --right-of DVI-D-0)
 # H V
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate normal && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
 # V V
-# exec (xrandr --output DVI-D-1 --auto --rotate left && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate left && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
 # H H
-# exec (xrandr --output DVI-D-1 --auto && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto && xrandr --output DVI-D-1 --auto --right-of DVI-D-0)
 # V H V
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-1 && xrandr --output DVI-D-2 --auto --rotate left --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-0 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-0 && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
 # Just the big screen
-# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --off)
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --off)
 # The big screen, with a small vertical screen to the left.
-exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-1 --auto --rotate left --left-of DVI-D-2)
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --left-of DVI-D-1)
+# The big screen, with a small horizontal screen to the left.
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --left-of DVI-D-1)
+# The big screen, with a small vertical screen to the right.
+exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --right-of DVI-D-1)
 
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
@@ -175,7 +178,7 @@ exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --
 #     output VGA-1
 #     position top
 #     status_command cat
-#     tray_output DVI-D-2
+#     tray_output DVI-D-1
 #     mode dock
 # 
 #     colors {
@@ -193,10 +196,10 @@ exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output VGA-1 --
 #     }
 # }
 bar {
-    output DVI-D-2
+    output DVI-D-1
     position top
     status_command $HOME/bin/barinfo
-    tray_output DVI-D-2
+    tray_output DVI-D-1
     mode dock
 
     colors {
@@ -214,10 +217,10 @@ bar {
     }
 }
 bar {
-    output DVI-D-1
+    output DVI-D-0
     position top
     status_command cat
-    tray_output DVI-D-2
+    tray_output DVI-D-1
     mode dock
 
     # These are the colors for the window borders, so I'm going to apply them here
@@ -245,17 +248,18 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec firefox
-bindsym Control+$mod+k exec google-chrome-stable netflix.com
-bindsym $mod+f exec thunar
+bindsym $mod+g exec gksudo gufw
+bindsym Control+$mod+n exec google-chrome-stable netflix.com
+bindsym $mod+e exec thunar
 bindsym $mod+m exec emacs
-bindsym $mod+r exec thunderbird
-bindsym $mod+p exec pavucontrol
+bindsym $mod+s exec thunderbird
+bindsym $mod+r exec pavucontrol
 
 # Resize windows
 bindsym Control+$mod+h resize shrink width 10 px or 10 ppt
-bindsym Control+$mod+n resize grow height 10 px or 10 ppt
-bindsym Control+$mod+e resize shrink height 10 px or 10 ppt
-bindsym Control+$mod+i resize grow width 10 px or 10 ppt
+bindsym Control+$mod+j resize grow height 10 px or 10 ppt
+bindsym Control+$mod+k resize shrink height 10 px or 10 ppt
+bindsym Control+$mod+l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
 bindsym Control+$mod+Left resize shrink width 10 px or 10 ppt
@@ -265,6 +269,9 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
+bindsym $mod+F1 exec pactl set-sink-mute   bluez_sink.00_1B_66_80_B9_5B toggle
+bindsym $mod+F2 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B -5%
+bindsym $mod+F3 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B +5%
 bindsym $mod+F10 exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
 bindsym $mod+F11 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
 bindsym $mod+F12 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
@@ -272,22 +279,24 @@ bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
 
-bindsym $mod+Shift+u  move container to workspace prev
-bindsym $mod+Shift+y move container to  workspace next
-bindsym $mod+u workspace prev
-bindsym $mod+y workspace next
+bindsym $mod+Shift+i  move container to workspace prev
+bindsym $mod+Shift+o move container to  workspace next
+bindsym $mod+i workspace prev
+bindsym $mod+o workspace next
 
 # Panel things
 exec deluge
+exec dropbox start -i
 exec nm-applet
 exec parcellite
+exec synapse -s
 
 # Non-panel things
 exec dunst
 exec emacs --daemon
 exec mpd
-exec redshift -l 41:112
-exec thunar --daemon
+exec offlineimap
+exec redshift
 
 # # Solarized
 # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
@@ -301,6 +310,8 @@ client.focused          #ccff55         #ccff55     #413101     #ebdbb2
 client.focused_inactive #555555         #555555     #dddddd     #cbbb92
 client.unfocused        #222222         #222222     #dddddd     #cbbb92
 client.urgent           #ee0000         #ee0000     #ffffff     #cbbb92
+#gaps inner 10
+#gaps outer 10
 
 focus_follows_mouse no
 
