@@ -285,18 +285,17 @@ bindsym $mod+i workspace prev
 bindsym $mod+o workspace next
 
 # Panel things
-exec deluge
 exec dropbox start -i
 exec nm-applet
 exec parcellite
-exec synapse -s
 
 # Non-panel things
 exec dunst
 exec emacs --daemon
 exec mpd
+exec nitrogen --restore
 exec offlineimap
-exec redshift
+exec redshift -l 41:112
 
 # # Solarized
 # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
