@@ -56,10 +56,6 @@ alias sa='sudo aptitude'
 alias enw='emacs -nw'
 alias prys='pry --simple-prompt'
 
-viewavis() {
-    find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ' | xargs vlc
-}
-
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
 alias kopev='sysd stop openvpn@openvpn'
@@ -336,12 +332,22 @@ trash () {
     mv $@ ~/.local/share/Trash/files
 }
 
+avifiles () {
+    AVIS=$(find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    echo $AVIS $MKVS $MFVS $MPFS $WEBMS
+}
+
 viewavis () {
     AVIS=$(find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    MPFS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    echo $AVIS $MKVS $MFVS $MPFS | xargs vlc
+    MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | xargs vlc
 }
 
 # Syntax highlighting
