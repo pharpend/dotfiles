@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     haskell
      racket
      csv
      python
@@ -140,7 +141,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Roboto Mono"
-                               :size 14
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -397,7 +398,9 @@ you should place your code here."
       (unless (y-or-n-p mbork/message-attachment-reminder)
         (keyboard-quit))))
 
-  (add-hook 'message-send-hook #'mbork/message-warn-if-no-attachments))
+  (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
+  (add-hook 'message-send-hook #'mbork/message-warn-if-no-attachments)
+  (add-hook 'haskell-mode-hook 'hindent-mode))
 
 ;; do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
