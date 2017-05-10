@@ -201,7 +201,7 @@ exec compton
 exec dunst
 exec emacs --daemon
 exec nitrogen --restore
-exec redshift
+exec redshift -l 41:112
 exec synclient TouchpadOff=1
 exec xscreensaver
 
