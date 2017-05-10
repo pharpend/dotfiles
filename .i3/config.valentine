@@ -249,6 +249,7 @@ bar {
 # Application keybindings
 bindsym $mod+c exec firefox
 bindsym $mod+g exec gksudo gufw
+bindsym Control+$mod+p exec gksudo system-config-printer
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym $mod+e exec thunar
 bindsym $mod+m exec emacs

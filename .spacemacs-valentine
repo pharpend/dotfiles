@@ -31,6 +31,8 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     yaml
+     haskell
      ruby
      csv
      html
@@ -380,6 +382,8 @@ you should place your code here."
   (global-set-key (kbd "M-j") 'evil-window-down)
   (global-set-key (kbd "M-k") 'evil-window-up)
   (global-set-key (kbd "M-l") 'evil-window-right)
+  (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
+  ;; (add-to-hook 'haskell-mode-hook 'hindent-mode)
   )
 
 ;; do not write anything past this comment. This is where Emacs will
