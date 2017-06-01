@@ -132,10 +132,11 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(sanityinc-solarized-light
-                         sanityinc-solarized-dark
+   dotspacemacs-themes '(spacemacs-light
+                         sanityinc-solarized-light
                          spacemacs-dark
-                         spacemacs-light)
+                         sanityinc-solarized-dark
+                         monokai)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -313,7 +314,10 @@ you should place your code here."
               (setq fill-column 72)))
   (smartparens-global-mode t)
   (define-key evil-normal-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
-  (define-key evil-visual-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
+  (define-key evil-normal-state-map (kbd "M-h") 'windmove-left)
+  (define-key evil-normal-state-map (kbd "M-j") 'windmove-down)
+  (define-key evil-normal-state-map (kbd "M-k") 'windmove-up)
+  (define-key evil-normal-state-map (kbd "M-l") 'windmove-right)
   (push '("*compilation*"
           :position bottom
           :height 8
