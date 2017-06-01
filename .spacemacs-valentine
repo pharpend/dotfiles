@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     racket
      yaml
      haskell
      ruby
@@ -51,7 +52,8 @@ values."
      ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     jabber)
+     jabber
+     )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
@@ -60,7 +62,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(evil-lisp-state)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -311,6 +313,12 @@ you should place your code here."
   (smartparens-global-mode t)
   (define-key evil-normal-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
   (define-key evil-visual-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
+  (push '("*Racket REPL*"
+          :position bottom
+          :height 8
+          :stick nil
+          :noselect t)
+        popwin:special-display-config)
   (push '("*compilation*"
           :position bottom
           :height 8
@@ -382,9 +390,11 @@ you should place your code here."
   (global-set-key (kbd "M-j") 'evil-window-down)
   (global-set-key (kbd "M-k") 'evil-window-up)
   (global-set-key (kbd "M-l") 'evil-window-right)
-  (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
-  ;; (add-to-hook 'haskell-mode-hook 'hindent-mode)
-  )
+  (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode)))
+  ;; (add-to-hook 'haskell-mode-hook '(lambda () (flycheck-mode nil))))
+  ;;              '(lambda ()
+  ;;                 (flycheck-mode nil)
+  ;;                 (hindent-mode t))))
 
 ;; do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

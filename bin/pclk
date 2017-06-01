@@ -1,0 +1,80 @@
+#!/usr/bin/ruby
+# -*- mode: Ruby -*-
+
+require 'yaml'
+require 'optparse'
+require 'ostruct'
+require 'pp'
+
+clk = YAML.load_file "clock.yaml"
+options = {}
+OptionParser.new do |opts|
+  opts.on("-p", "--project PROJECT", "Project name") do |p|
+    options[:project] = p
+  end
+
+  opts.on_tail("-l", "--list-projects", "list projects") do
+    options[:mode] = "list"
+  end
+
+  opts.on_tail("-s", "--status", "Status") do
+    options[:mode] = "status"
+  end
+
+  opts.on("-i", "--clock-in", "Clock in") do
+    options[:mode] = "in"
+  end
+
+  opts.on("-o", "--clock-out", "Clock out") do
+    options[:mode] = "out"
+  end
+end.parse!
+
+if "list" == options[:mode]
+  pp clk.keys
+# If we're not listing projects, we need a project
+# If it's not specified, fail
+elsif not options.has_key? :project
+  fail "must specify project with -p\nprojects: #{clk.keys}"
+# If the project is specified but does not exist: fail
+elsif not clk.has_key? options[:project]
+  fail "no such project: #{options[:project]}\nprojects: #{clk.keys}"
+# If the project exists
+else
+  # If the project exists, check mode
+  current_project_name = options[:project]
+  current_project = clk[current_project_name]
+  case options[:mode]
+  when "status"
+    if current_project.empty?
+      puts "no entries in project"
+    else
+      last_entry = current_project[-1]
+      if last_entry.has_key? "out"
+        clockout_time = last_entry["out"]
+        puts "last clocked out at #{clockout_time}"
+      else
+        clockin_time = last_entry["in"]
+        puts "clocked in at #{clockin_time}"
+      end
+    end
+  when "in"
+    already_clocked_in = (not current_project.empty?) && (not current_project[-1].has_key? "out")
+    if already_clocked_in
+      fail "already clocked in"
+    else
+      clk[current_project_name] << {"in" => Time.now.to_s}
+      puts "clocked in"
+    end
+  when "out"
+    already_clocked_out = (current_project.empty?) || (current_project[-1].has_key? "out")
+    if already_clocked_out
+      fail "already clocked out"
+    else
+      clk[current_project_name][-1]["out"] = Time.now.to_s
+      puts "clocked out"
+    end
+  end
+end
+
+File.write("clock.yaml", YAML.dump(clk))
