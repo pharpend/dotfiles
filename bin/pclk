@@ -10,20 +10,20 @@ require 'time'
 clk = YAML.load_file "clock.yaml"
 options = {}
 OptionParser.new do |opts|
+  opts.on("-s", "--status", "Status") do
+    options[:mode] = "status"
+  end
+
+  opts.on("-i", "--clock-in", "Clock in") do
+    options[:mode] = "in"
+  end
+
+  opts.on("-o", "--clock-out", "Clock out") do
+    options[:mode] = "out"
+  end
+
   opts.on("-p", "--project PROJECT", "Project name") do |p|
     options[:project] = p
-
-    opts.on("-s", "--status", "Status") do
-      options[:mode] = "status"
-    end
-
-    opts.on("-i", "--clock-in", "Clock in") do
-      options[:mode] = "in"
-    end
-
-    opts.on("-o", "--clock-out", "Clock out") do
-      options[:mode] = "out"
-    end
   end
 
   opts.on("-l", "--list-projects", "list projects") do
@@ -61,7 +61,7 @@ elsif "sum" == options[:mode]
         print "\n"
       end
     end
-    puts "  Total earnings: $%04.2f" % (total_hours * options[:wage])
+    puts "  Total earnings: $%04.2f" % (total_hours * options[:wage]) if options[:wage]
   end
 # If we're not listing projects, we need a project
 # If it's not specified, fail
