@@ -1,24 +1,13 @@
-countdown () {
-    local OLD_IFS="${IFS}"
-    IFS=":"
-    local ARR=( $1 )
-    local SECONDS=$((  (ARR[0] * 60 * 60) + (ARR[1] * 60) + ARR[2]  ))
-    local START=$(date +%s)
-    local END=$((START + SECONDS))
-    local CUR=$START
+#!/usr/bin/racket
+#lang racket
+;; -*- mode: Racket -*-
 
-    while [[ $CUR -lt $END ]]
-    do
-            CUR=$(date +%s)
-            LEFT=$((END-CUR))
+(define (countdown cnt)
+  (printf "\r~a seconds remaining" cnt)
+  (sleep 1)
+  (cond [(eq? 0 cnt)
+         (printf "\r")
+         (exit 0)]
+        [else (countdown (- cnt 1))]))
 
-            printf "\r%02d:%02d:%02d" \
-                    $((LEFT/3600)) $(( (LEFT/60)%60)) $((LEFT%60))
-
-            sleep 1
-    done
-    IFS="${OLD_IFS}"
-    echo "        "
-    }
-
-countdown $@
+(countdown 10)

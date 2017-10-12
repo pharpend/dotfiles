@@ -17,10 +17,10 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-# font pango: Monospace 10
-# font pango: Roboto Mono 10
+# font pango: Monospace 9
+font pango: Roboto Mono 10
 # font pango: Hack 10
-font pango: Terminus 9
+# font pango: Terminus 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -149,11 +149,10 @@ bar {
 }
 
 # Application keybindings
+bindsym $mod+c exec firefox
 bindsym $mod+s exec thunderbird
 bindsym Control+$mod+c exec chromium-browser
-bindsym $mod+c exec firefox
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
-bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
 bindsym $mod+e exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+r exec pavucontrol

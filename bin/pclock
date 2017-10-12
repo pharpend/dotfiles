@@ -7,22 +7,21 @@ require 'ostruct'
 require 'pp'
 require 'time'
 
-clk = YAML.load_file "clock.yaml"
+clockfile = File.expand_path "~/clock.yaml"
+clk = YAML.load_file clockfile
 options = {}
 OptionParser.new do |opts|
   opts.on("-s", "--status", "Status") do
     options[:mode] = "status"
   end
 
-  opts.on("-i", "--clock-in", "Clock in") do
+  opts.on("-i", "--clock-in PROJECT", String, "Clock in") do |p|
     options[:mode] = "in"
+    options[:project] = p
   end
 
-  opts.on("-o", "--clock-out", "Clock out") do
+  opts.on("-o", "--clock-out PROJECT", "Clock out") do |p|
     options[:mode] = "out"
-  end
-
-  opts.on("-p", "--project PROJECT", "Project name") do |p|
     options[:project] = p
   end
 
@@ -43,17 +42,36 @@ end.parse!
 
 if "list" == options[:mode]
   pp clk.keys
+elsif "status" == options[:mode]
+  clk.each do |prj,entries|
+    puts "Project: #{prj}"
+    current_project = entries
+    if current_project.empty?
+      puts "no entries in project"
+    else
+      last_entry = current_project[-1]
+      if last_entry.has_key? "out"
+        clockout_time = Time.parse(last_entry["out"])
+        clockout_time_s = clockout_time.strftime("%a %b %-d %Y at %-I:%M %p %Z")
+        puts "last clocked out at #{clockout_time_s}"
+      else
+        clockin_time = Time.parse last_entry["in"]
+        clockin_time_s = clockin_time.strftime("%A, %B %-d, %Y at %-I:%M %p %Z")
+        puts "clocked in at #{clockin_time_s}"
+      end
+    end
+  end
 elsif "sum" == options[:mode]
   clk.each do |prj, entries|
     puts "Project: #{prj}"
     relevant_entries = entries.select { |e| Time.parse(e["in"]) >= options[:since] }
     total_hours = 0
-    relevant_entries.each do |ety| 
+    relevant_entries.each do |ety|
       start_time = Time.parse ety["in"]
-      end_time = Time.parse ety["out"]
+      end_time = if ety["out"] then Time.parse ety["out"] else Time.now end
       hours_worked = (end_time - start_time)/3600
       total_hours += hours_worked
-      print "  #{start_time.strftime("%a %d %b %y")}: %04.2f hours" % hours_worked
+      print "  #{start_time.strftime("%a %b %-d %Y")}: %04.2f hours" % hours_worked
       if options[:wage]
         money_earned = hours_worked * options[:wage]
         print ", Earnings: $%04.2f\n" % money_earned
@@ -61,6 +79,8 @@ elsif "sum" == options[:mode]
         print "\n"
       end
     end
+
+    puts "  Total hours: %04.2f" % total_hours
     puts "  Total earnings: $%04.2f" % (total_hours * options[:wage]) if options[:wage]
   end
 # If we're not listing projects, we need a project
@@ -76,19 +96,6 @@ else
   current_project_name = options[:project]
   current_project = clk[current_project_name]
   case options[:mode]
-  when "status"
-    if current_project.empty?
-      puts "no entries in project"
-    else
-      last_entry = current_project[-1]
-      if last_entry.has_key? "out"
-        clockout_time = last_entry["out"]
-        puts "last clocked out at #{clockout_time}"
-      else
-        clockin_time = last_entry["in"]
-        puts "clocked in at #{clockin_time}"
-      end
-    end
   when "in"
     already_clocked_in = (not current_project.empty?) && (not current_project[-1].has_key? "out")
     if already_clocked_in
@@ -107,4 +114,4 @@ else
     end
   end
 end
-File.write("clock.yaml", YAML.dump(clk))
+File.write(clockfile, YAML.dump(clk))
