@@ -4,7 +4,7 @@
 ! Xft.hinting:    true
 ! Xft.hintstyle:  hintfull
 
-Xcursor.size: 16
+Xcursor.size: 48
 
 URxvt*font             : xft:Terminus:size=14
 URxvt*scrollBar        : false

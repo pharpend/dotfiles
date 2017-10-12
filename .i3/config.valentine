@@ -21,7 +21,7 @@ set $mod Mod4
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 10
 # font pango: Monospace 10
-font pango: Roboto Mono 14
+font pango: Hack 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -167,9 +167,9 @@ exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emul
 # The big screen, with a small vertical screen to the left.
 # exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --left-of DVI-D-1)
 # The big screen, with a small horizontal screen to the left.
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --left-of DVI-D-1)
-# The big screen, with a small vertical screen to the right.
-exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --right-of DVI-D-1)
+exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --left-of DVI-D-1)
+# # The big screen, with a small vertical screen to the right.
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --right-of DVI-D-1)
 
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
@@ -251,6 +251,7 @@ bindsym $mod+c exec firefox
 bindsym $mod+g exec gksudo gufw
 bindsym Control+$mod+p exec gksudo system-config-printer
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
+bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
 bindsym $mod+e exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+s exec thunderbird
@@ -279,6 +280,10 @@ bindsym $mod+F12 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
+bindsym $mod+Shift+F5 exec xbacklight -dec 1
+bindsym $mod+Shift+F6 exec xbacklight -inc 1
+bindsym $mod+F5 exec xbacklight -dec 5
+bindsym $mod+F6 exec xbacklight -inc 5
 
 bindsym $mod+Shift+i  move container to workspace prev
 bindsym $mod+Shift+o move container to  workspace next
@@ -289,6 +294,7 @@ bindsym $mod+o workspace next
 exec dropbox start -i
 exec nm-applet
 exec parcellite
+exec synapse -s
 
 # Non-panel things
 exec dunst
@@ -306,8 +312,8 @@ exec redshift -l 41:112
 # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
-client.focused          #ccff55         #ccff55     #413101     #ebdbb2
-client.focused_inactive #555555         #555555     #dddddd     #cbbb92
+client.focused          #55ffff         #55ffff     #413101     #ff3399
+client.focused_inactive #00cccc         #005555     #dddddd     #cc0000
 client.unfocused        #222222         #222222     #dddddd     #cbbb92
 client.urgent           #ee0000         #ee0000     #ffffff     #cbbb92
 #gaps inner 10
@@ -315,5 +321,7 @@ client.urgent           #ee0000         #ee0000     #ffffff     #cbbb92
 
 focus_follows_mouse no
 
-for_window [class="^.*"] border pixel 6
+for_window [class="^.*"] border pixel 10
 new_window 1pixel
+gaps inner 20
+gaps outer 8

@@ -1,0 +1,10 @@
+ <svg width="50" height="50"
+ 	xmlns="http://www.w3.org/2000/svg"
+ 	xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  	<filter id="blurMe">
+   	 <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+  	</filter>
+
+  	<circle cx="25"  cy="25" r="20" fill="#4a90d9" />
+</svg>
