@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Libra-Dark
+Comment=A modern flat theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Libra-Dark
+MetacityTheme=Libra-Dark
+ButtonLayout=:minimize,maximize,close
+

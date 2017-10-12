@@ -347,7 +347,7 @@ viewavis () {
     MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | xargs vlc
+    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | shuf | xargs gnome-mpv
 }
 
 # Syntax highlighting

@@ -1,0 +1,13 @@
+ <svg height="300" width="450">
+  <defs>
+    <filter id="f3" x="0" y="0" width="500%" height="500%">
+      <feOffset result="offOut" in="SourceAlpha" dx="0" dy="0" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+<rect x="115" y="75" width="185" height="150" fill="#74a9e2"/>
+<ellipse cx="115" cy="150" rx="75" ry="75" fill="#74a9e2"/> 
+  <ellipse cx="300" cy="150" rx="100" ry="100" stroke="green" stroke-width="0"
+  fill="#4a90d9" filter="url(#f3)" />
+</svg> 
