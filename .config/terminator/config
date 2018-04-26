@@ -1,28 +1,54 @@
+# [global_config]
+#   title_inactive_bg_color = "#75715e"
+#   title_inactive_fg_color = "#f8f8f2"
+#   title_transmit_bg_color = "#272822"
+#   title_transmit_fg_color = "#f8f8f2"
+# [keybindings]
+# [layouts]
+#   [[default]]
+#     [[[child1]]]
+#       parent = window0
+#       profile = default
+#       type = Terminal
+#     [[[window0]]]
+#       parent = ""
+#       type = Window
+# [plugins]
+# [profiles]
+#   [[default]]
+#     background_color = "#272822"
+#     background_darkness = 0.9
+#     background_image = None
+    # background_type = transparent
+#     cursor_color = "#f8f8f2"
+#     font = Hack 14
+#     foreground_color = "#f8f8f2"
+#     palette = "#0f0f0f:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f8f8f2:#272727:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f9f8f5"
+#     use_system_font = False
+
+# Mostly bright
 [global_config]
-  title_inactive_bg_color = "#75715e"
-  title_inactive_fg_color = "#f8f8f2"
-  title_transmit_bg_color = "#272822"
-  title_transmit_fg_color = "#f8f8f2"
-[keybindings]
+  title_transmit_fg_color = "#707070"
+  title_transmit_bg_color = "#d3d3d3"
+  title_inactive_fg_color = "#707070"
+  title_inactive_bg_color = "#b3b3b3"
+
+[profiles]
+  [[default]]
+    palette = "#d3d3d3:#ef6b7b:#a1d569:#f59335:#4ec2e8:#fec7cd:#95c1c0:#707070:#b3b3b3:#ed5466:#afdb80:#f59335:#5dc7ea:#d2a4b4:#75a1a0:#909090"
+    foreground_color = "#707070"
+    background_color = "#f3f3f3"
+    cursor_color = "#707070"
+    font = Fantasque Sans Mono 14
+    use_system_font = False
+
 [layouts]
   [[default]]
     [[[child1]]]
+      type = Terminal
       parent = window0
       profile = default
-      type = Terminal
     [[[window0]]]
-      parent = ""
       type = Window
+      parent = ""
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#272822"
-    background_darkness = 0.9
-    background_image = None
-    background_type = transparent
-    cursor_color = "#f8f8f2"
-    font = Hack 12
-    font = Hack 14
-    foreground_color = "#f8f8f2"
-    palette = "#0f0f0f:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f8f8f2:#272727:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f9f8f5"
-    use_system_font = False

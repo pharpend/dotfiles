@@ -20,7 +20,7 @@ set $mod Mod4
 # font pango: Monospace 10
 # font pango: Roboto Mono 10
 # font pango: Hack 10
-font pango: Terminus 9
+font pango: Hack 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -151,12 +151,15 @@ bar {
 # Application keybindings
 bindsym $mod+s exec thunderbird
 bindsym Control+$mod+c exec chromium-browser
+bindsym Control+$mod+i exec chromium-browser --incognito
 bindsym $mod+c exec firefox
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
+bindsym Control+$mod+u exec google-chrome-stable hulu.com
 bindsym $mod+e exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+r exec pavucontrol
+bindsym $mod+Control+p exec gksudo system-config-printer
 
 # Resize windows
 bindsym Control+$mod+h     resize shrink width  05 px 
@@ -175,19 +178,21 @@ bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 # bindsym $mod+F10 exec amixer set Master toggle
 # bindsym $mod+F11 exec amixer set Master 8%-
 # bindsym $mod+F12 exec amixer set Master 8%+
-bindsym XF86AudioMute        exec pactl set-sink-mute 0 toggle
-bindsym $mod+F10             exec pactl set-sink-mute 0 toggle
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-bindsym $mod+F11             exec pactl set-sink-volume 0 -5%
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-bindsym $mod+F12             exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioMute        exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym $mod+F10             exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+F11             exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+F12             exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
+bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 1
+bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 1
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym F5 exec $HOME/bin/kb-light.py -
-bindsym F6 exec $HOME/bin/kb-light.py +
+bindsym $mod+F5 exec $HOME/bin/kb-light.py -
+bindsym $mod+F6 exec $HOME/bin/kb-light.py +
 
 # Autostarted applications
 # exec deluge
@@ -213,12 +218,20 @@ exec xscreensaver
 # client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
 # client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
 # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
+# Monokai
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
-client.focused          #b3fc29         #b3fc49     #222222     #aaaaaa
-client.focused_inactive #222222         #222222     #dddddd     #aaaaaa
-client.unfocused        #222222         #222222     #dddddd     #aaaaaa
-client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
+# client.focused          #b3fc29         #b3fc49     #222222     #aaaaaa
+# client.focused_inactive #222222         #222222     #dddddd     #aaaaaa
+# client.unfocused        #222222         #222222     #dddddd     #aaaaaa
+# client.urgent           #ee0000         #ee0000     #ffffff     #aaaaaa
+# Blue
+#                       BorderFrame     Border      Title       NextWindowGoesHere
+#---------------------------------------------------------------------------------
+client.focused          #55ffff         #55ffff     #413101     #ff3399
+client.focused_inactive #00cccc         #005555     #dddddd     #cc0000
+client.unfocused        #222222         #222222     #dddddd     #cbbb92
+client.urgent           #ee0000         #ee0000     #ffffff     #cbbb92
 
 focus_follows_mouse no
 

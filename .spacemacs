@@ -31,13 +31,15 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     html
+     ruby
      yaml
      (haskell :variables
               haskell-enable-hindent-style "chris-done"
               haskell-completion-backend 'intero)
      racket
      csv
-     python
+     (python :variables python-enable-yapf-format-on-save t)
      mu4e
      markdown
      vimscript
@@ -136,17 +138,32 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-light
+   dotspacemacs-themes '(
+                         sanityinc-tomorrow-day
+                         spacemacs-light
+                         sanityinc-tomorrow-bright
                          sanityinc-solarized-light
+                         minimal
+                         molokai
+                         monokai
+                         ample
+                         ample-flat
+                         ample-zen
+                         apropospriate-light
+                         deeper-blue
+                         farmhouse-dark
+                         minimal-light
                          spacemacs-dark
                          sanityinc-solarized-dark
-                         monokai)
+                         sanityinc-tomorrow-eighties
+                         sanityinc-tomorrow-night
+                         )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
-                               :size 16
+   dotspacemacs-default-font '("Fantasque Sans Mono"
+                               :size 20
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -315,13 +332,20 @@ you should place your code here."
   (add-hook 'LaTeX-mode-hook
             (lambda ()
               (rainbow-delimiters-mode t)
-              (setq fill-column 72)))
+              (setq fill-column 80)))
   (smartparens-global-mode t)
   (define-key evil-normal-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
   (define-key evil-normal-state-map (kbd "M-h") 'windmove-left)
   (define-key evil-normal-state-map (kbd "M-j") 'windmove-down)
   (define-key evil-normal-state-map (kbd "M-k") 'windmove-up)
   (define-key evil-normal-state-map (kbd "M-l") 'windmove-right)
+  (push '(inferior-python-mode
+          :position bottom
+          :height 8
+          :stick t
+          :noselect nil
+          :tail t)
+        popwin:special-display-config)
   (push '(intero-repl-mode
           :position bottom
           :height 8
@@ -415,6 +439,7 @@ you should place your code here."
 
   (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
   (add-hook 'message-send-hook #'mbork/message-warn-if-no-attachments)
+  ;; (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
   )
 ;; do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
