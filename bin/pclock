@@ -7,7 +7,7 @@ require 'ostruct'
 require 'pp'
 require 'time'
 
-clockfile = File.expand_path "~/clock.yaml"
+clockfile = File.expand_path "~/.clock.yaml"
 clk = YAML.load_file clockfile
 options = {}
 OptionParser.new do |opts|
