@@ -15,12 +15,12 @@ OptionParser.new do |opts|
     options[:mode] = "status"
   end
 
-  opts.on("-i", "--clock-in PROJECT", String, "Clock in") do |p| 
+  opts.on("-i", "--clock-in PROJECT", String, "Clock in") do |p|
     options[:mode] = "in"
     options[:project] = p
   end
 
-  opts.on("-o", "--clock-out PROJECT", "Clock out") do |p| 
+  opts.on("-o", "--clock-out PROJECT", "Clock out") do |p|
     options[:mode] = "out"
     options[:project] = p
   end
@@ -43,7 +43,7 @@ end.parse!
 if "list" == options[:mode]
   pp clk.keys
 elsif "status" == options[:mode]
-  clk.each do |prj,entries| 
+  clk.each do |prj,entries|
     puts "Project: #{prj}"
     current_project = entries
     if current_project.empty?
@@ -79,6 +79,7 @@ elsif "sum" == options[:mode]
         print "\n"
       end
     end
+
     puts "  Total hours: %04.2f" % total_hours
     puts "  Total earnings: $%04.2f" % (total_hours * options[:wage]) if options[:wage]
   end

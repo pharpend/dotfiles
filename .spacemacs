@@ -21,7 +21,7 @@ values."
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
    dotspacemacs-enable-lazy-installation 'unused
-   ;; If non-nil then Spacemacs will ask for confirmation before installing
+   ;; If non-nil th
    ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation t
    ;; If non-nil layers with lazy install support are lazy installed.
@@ -31,7 +31,10 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     haskell
+     yaml
+     (haskell :variables
+              haskell-enable-hindent-style "chris-done"
+              haskell-completion-backend 'intero)
      racket
      csv
      python
@@ -43,7 +46,8 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ivy
+     helm
+     ;; auto-completion
      auto-completion
      better-defaults
      emacs-lisp
@@ -141,7 +145,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Roboto Mono"
+   dotspacemacs-default-font '("Hack"
                                :size 16
                                :weight normal
                                :width normal
@@ -280,7 +284,7 @@ values."
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
-   ;; The default package repository used if no explicit repository has been
+   ;; The defaul t package repository used if no explicit repository has been
    ;; specified with an installed package.
    ;; Not used for now. (default nil)
    dotspacemacs-default-package-repository nil
@@ -318,6 +322,13 @@ you should place your code here."
   (define-key evil-normal-state-map (kbd "M-j") 'windmove-down)
   (define-key evil-normal-state-map (kbd "M-k") 'windmove-up)
   (define-key evil-normal-state-map (kbd "M-l") 'windmove-right)
+  (push '(intero-repl-mode
+          :position bottom
+          :height 8
+          :stick t
+          :noselect nil
+          :tail t)
+        popwin:special-display-config)
   (push '("*compilation*"
           :position bottom
           :height 8
@@ -399,12 +410,11 @@ you should place your code here."
       (goto-char (point-min))
       (re-search-forward mbork/message-attachment-intent-re nil t)))
         (not (mbork/message-attachment-present-p)))
-      (unless (y-or-n-p mbork/message-attachment-reminder)
-        (keyboard-quit))))
+
+        (keyboard-quit)))
 
   (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
   (add-hook 'message-send-hook #'mbork/message-warn-if-no-attachments)
-  (add-hook 'haskell-mode-hook 'hindent-mode))
-
+  )
 ;; do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

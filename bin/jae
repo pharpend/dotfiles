@@ -1,11 +1,32 @@
 #!/usr/bin/env ruby
 
 require 'csv'
+require 'pp'
+require 'tempfile'
 require 'time'
 
 if ARGV.empty? then
   STDERR.puts "No arguments given to program"
   exit!
+elsif ["-e"] == ARGV
+  editor_program = 
+    if ENV["EDITOR"] then
+      ENV["EDITOR"]
+    elsif ENV["VISUAL"]
+      ENV["VISUAL"]
+    else
+      fail "Need $EDITOR, else $VISUAL to be defined."
+    end
+  tmp_file = Tempfile.new(["jae", ".txt"])
+  tmp_file.write("Put your entry here")
+  tmp_file.close
+  system(editor_program, tmp_file.path)
+  entry = File.read(tmp_file.path).strip
+  CSV.open("journal.csv", "ab") do |csv|
+    csv << [Time.now.strftime('%a %b %d %H:%M:%S %Z %Y'), entry]
+  end
+  tmp_file.close!
+  puts "Added entry:\n#{entry}"
 else
   entry = ARGV.inject {|x, y| x + " " + y}
   CSV.open("journal.csv", "ab") do |csv|
