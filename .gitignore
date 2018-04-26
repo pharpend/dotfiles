@@ -20,3 +20,5 @@ general/home/.emacs.d/abbrev_defs
 *.hi
 *.o
 xmonad.errors
+.config/gtk-3.0/bookmarks
+.config/gtk-3.0/settings.ini
