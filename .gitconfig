@@ -16,4 +16,4 @@
 [merge]
 	ff = yes
 [core]
-	editor = vim
+	editor = /usr/bin/vim

@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     javascript
      idris
      racket
      yaml
@@ -133,17 +134,19 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(sanityinc-solarized-light
+                         spacemacs-dark
                          spacemacs-light
-                         sanityinc-solarized-light
+                         molokai
+                         sanityinc-tomorrow-bright
                          monokai
                          sanityinc-solarized-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
-                               :size 24
+   dotspacemacs-default-font '("Fantasque Sans Mono"
+                               :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -227,7 +230,7 @@ values."
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar nil
+   dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
    dotspacemacs-fullscreen-at-startup nil
@@ -313,9 +316,18 @@ you should place your code here."
             (lambda ()
               (rainbow-delimiters-mode t)
               (setq fill-column 72)))
+  (add-hook 'haskell-mode-hook
+            (lambda ()
+              (haskell-indentation-mode nil)))
   (smartparens-global-mode t)
   (define-key evil-normal-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
   (define-key evil-visual-state-map (kbd "=") 'spacemacs/comment-or-uncomment-lines)
+  (push '(intero-repl-mode
+          :position bottom
+          :height 8
+          :stick nil
+          :noselect t)
+        popwin:special-display-config)
   (push '("*Racket REPL*"
           :position bottom
           :height 8
@@ -381,7 +393,7 @@ you should place your code here."
   there are no attachments."
     (when (and (save-excursion
           (save-restriction
-      (widen)
+
       (goto-char (point-min))
       (re-search-forward mbork/message-attachment-intent-re nil t)))
         (not (mbork/message-attachment-present-p)))
@@ -397,7 +409,9 @@ you should place your code here."
   (global-set-key (kbd "M-k") 'evil-window-up)
   (global-set-key (kbd "M-l") 'evil-window-right)
   (global-set-key (kbd "M-=") 'count-words)
-  (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode)))
+  (add-to-list 'auto-mode-alist '("\\.sage\\'" . python-mode))
+  ;; (add-to-hook 'haskell-mode-hook '(lambda () (haskell-indentation-mode nil)))
+  )
   ;; (add-to-hook 'haskell-mode-hook '(lambda () (flycheck-mode nil))))
   ;;              '(lambda ()
   ;;                 (flycheck-mode nil)

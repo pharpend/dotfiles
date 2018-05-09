@@ -2,7 +2,7 @@
 # -*- mode: Ruby -*-
 
 require 'json'
-  
+
 def update
    STDOUT.write "#{JSON::pretty_generate($info)},"
 end

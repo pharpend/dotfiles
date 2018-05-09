@@ -29,7 +29,7 @@ alias cpuset='sudo cpupower frequency-set'
 alias zi='zile'
 alias irb='irb --simple-prompt'
 alias pd='pandoc'
-alias ipy='ipython'
+alias ipy='ipython3'
 alias fehb='feh --bg-fill'
 alias sbcl='rlwrap sbcl'
 alias ec='emacsclient'
@@ -190,6 +190,9 @@ colemak () {
 qwerty () {
     setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 }
+qwerty-mac () {
+    setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
+}
 
 qwerty-prime () {
     setxkbmap us,ru,ar -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,grp:rctrl_toggle
@@ -339,6 +342,11 @@ avifiles () {
     MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     echo $AVIS $MKVS $MFVS $MPFS $WEBMS
+    find . -name '*.avi'
+    find . -name '*.mkv'
+    find . -name '*.m4v'
+    find . -name '*.mp4'
+    find . -name '*.webm'
 }
 
 viewavis () {
@@ -347,7 +355,7 @@ viewavis () {
     MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | shuf | xargs gnome-mpv
+    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | xargs vlc
 }
 
 # Syntax highlighting

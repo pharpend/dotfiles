@@ -252,6 +252,8 @@ bindsym $mod+g exec gksudo gufw
 bindsym Control+$mod+p exec gksudo system-config-printer
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
+bindsym Control+$mod+u exec google-chrome-stable hulu.com
+bindsym Control+$mod+i exec chromium-browser --incognito
 bindsym $mod+e exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+s exec thunderbird
@@ -271,12 +273,15 @@ bindsym Control+$mod+Right resize grow width 10 px or 10 ppt
 
 bindsym Print exec scrot -e 'mv $f ~/pics/screenshots/'
 bindsym F13 exec scrot -e 'mv $f ~/pics/screenshots/'
-bindsym $mod+F1 exec pactl set-sink-mute   bluez_sink.00_1B_66_80_B9_5B toggle
-bindsym $mod+F2 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B -5%
-bindsym $mod+F3 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B +5%
-bindsym $mod+F10 exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
-bindsym $mod+F11 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
-bindsym $mod+F12 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
+# bindsym $mod+F1 exec pactl set-sink-mute   bluez_sink.00_1B_66_80_B9_5B toggle
+# bindsym $mod+F2 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B -5%
+# bindsym $mod+F3 exec pactl set-sink-volume bluez_sink.00_1B_66_80_B9_5B +5%
+# bindsym $mod+F10 exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+# bindsym $mod+F11 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
+# bindsym $mod+F12 exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
+bindsym $mod+F10 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym $mod+F11 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+F12 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
@@ -323,5 +328,5 @@ focus_follows_mouse no
 
 for_window [class="^.*"] border pixel 10
 new_window 1pixel
-gaps inner 20
-gaps outer 8
+# gaps inner 30
+# gaps outer 15
