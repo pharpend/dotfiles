@@ -21,7 +21,7 @@ set $mod Mod4
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 10
 # font pango: Monospace 10
-font pango: Hack 14
+font pango: Fantasque Sans Mono 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -148,8 +148,12 @@ mode "resize" {
 
 exec setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 # Unicomp keyboard trackpoint thing
-exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation' 1
-exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation Button' 3
+#exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation' 1
+#exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation Button' 3
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Scroll Method Enabled' 0 0 1
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Middle Emulation Enabled' 1
+exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Button Scrolling Button' 3
+
 
 # Monitor configurations
 # V H
@@ -198,7 +202,7 @@ exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --
 bar {
     output DVI-D-1
     position top
-    status_command $HOME/bin/barinfo
+    status_command $HOME/bin/barinfo.valentine
     tray_output DVI-D-1
     mode dock
 
@@ -217,7 +221,7 @@ bar {
     }
 }
 bar {
-    output DVI-D-0
+    output DVI-D-2
     position top
     status_command cat
     tray_output DVI-D-1
@@ -248,8 +252,7 @@ bar {
 
 # Application keybindings
 bindsym $mod+c exec firefox
-bindsym $mod+g exec gksudo gufw
-bindsym Control+$mod+p exec gksudo system-config-printer
+bindsym Control+$mod+p exec system-config-printer
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
 bindsym Control+$mod+u exec google-chrome-stable hulu.com

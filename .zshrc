@@ -135,19 +135,19 @@ vhbs () {
 }
 
 scr () {
-    scrot -e 'mv $f ~/pics/screenshots'
+    scrot -e 'mv $f ~/Pictures/screenshots'
 }
 
 scs () {
-    scrot -s -e 'mv $f ~/pics/screenshots'
+    scrot -s -e 'mv $f ~/Pictures/screenshots'
 }
 
 scsgur () {
-    scrot -s -e 'imgur $f ; mv $f ~/pics/screenshots'
+    scrot -s -e 'imgur $f ; mv $f ~/Pictures/screenshots'
 }
 
 scrgur () {
-    scrot -e 'imgur $f ; mv $f ~/pics/screenshots'
+    scrot -e 'imgur $f ; mv $f ~/Pictures/screenshots'
 }
 
 dcmsg () {
