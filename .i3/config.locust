@@ -20,7 +20,7 @@ set $mod Mod4
 # font pango: Monospace 10
 # font pango: Roboto Mono 10
 # font pango: Hack 10
-font pango: Hack 9
+font pango: Fantasque Sans Mono 13
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -152,7 +152,8 @@ bar {
 bindsym $mod+s exec thunderbird
 bindsym Control+$mod+c exec chromium-browser
 bindsym Control+$mod+i exec chromium-browser --incognito
-bindsym $mod+c exec firefox
+bindsym $mod+c exec chromium-browser
+bindsym $mod+Shift+c exec firefox
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
 bindsym Control+$mod+u exec google-chrome-stable hulu.com
@@ -196,17 +197,18 @@ bindsym $mod+F6 exec $HOME/bin/kb-light.py +
 
 # Autostarted applications
 # exec deluge
+exec blueman-applet
 exec dropbox start -i
 exec synapse
 exec nm-applet
 exec parcellite
-exec mpd
 exec ncmpcpp pause
 
 # Non-panel things
 exec compton
 exec dunst
 exec emacs --daemon
+exec mpd
 exec nitrogen --restore
 exec redshift -l 41:112
 exec synclient TouchpadOff=1

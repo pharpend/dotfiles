@@ -336,12 +336,12 @@ trash () {
 }
 
 avifiles () {
-    AVIS=$(find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    echo $AVIS $MKVS $MFVS $MPFS $WEBMS
+    # AVIS=$(find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    # MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    # MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    # MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    # WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
+    # echo $AVIS $MKVS $MFVS $MPFS $WEBMS
     find . -name '*.avi'
     find . -name '*.mkv'
     find . -name '*.m4v'
@@ -354,9 +354,14 @@ viewavis () {
     MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
     MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | xargs vlc
+    WEBMS=$(find . -name '*.webm' )
+    avifiles | shuf | sed -e 's/.\+/"&"/g' | tr '\n' ' '  | xargs vlc
 }
+
+screenbright () {
+    echo $1 | sudo tee /sys/class/backlight/intel_backlight/brightness
+}
+
 
 # Syntax highlighting
 source ~/.zshlex/zsh-syntax-highlighting.zsh

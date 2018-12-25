@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Downloads links from Joe Rogan Experience RSS.
+
+echo "jre" > ~/jre.txt
