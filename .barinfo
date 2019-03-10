@@ -93,21 +93,15 @@ def battery_color(pct)
   end
 end
 
-$update_interval = 1
 $white = "#eeeeee"
 
 def locust
   if `hostname`.strip == "locust"
-    [
-     {
-       full_text: "#{battery_pct[0]}: #{battery_pct[1]}%",
-       color: battery_color(battery_pct)
-     } #,
-     #{
-     #  full_text: "G: #{governor}",
-     #  color: $white
-     #}
-    ]
+    bat0 = { full_text: battery_pcts[0],
+             color: battery_color(battery_pcts[0])}
+    bat1 = { full_text: battery_pcts[1],
+             color: battery_color(battery_pcts[1])}
+    [bat0, bat1]
   else
     []
   end
@@ -142,22 +136,23 @@ end
 
 ############
 
-win = { full_text: active_window_name,
+def spcs(s)
+  " " + s + " "
+end
+
+win = { full_text: spcs("#{active_window_name}"),
         color: $white }
-bat0 = { full_text: battery_pcts[0],
-         color: $white }
-bat1 = { full_text: battery_pcts[1],
-         color: $white }
-ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
+ram = { full_text: spcs("RAM: #{"%.1f" % ram_usage} GB"),
         color: $white }
-cputemp = { full_text: "\u2623: #{cpu_temperature} C",
-            color: cpu_color }
-cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
+cputemp = { full_text: spcs("\u2623: #{cpu_temperature} C"),
+            color: $white }
+cpughz = { full_text: spcs("CPU: #{"%.1f" % cpu_ghz} GHz"),
            color: $white }
-date = {  full_text: Time.now.strftime("%A, %B %-d, %Y, %-I:%M %p %Z (UTC%z)"),
+date = {  full_text: spcs(Time.now.strftime("%a %b %-d %Y, %I:%M %p %Z (UTC%z)")),
           color: $white }
-blank = { full_text: "",
+blank = { full_text: spcs(""),
           color: $white }
 
-$info = [win] + locust + [bat0, bat1, cputemp, cpughz, ram, date, blank]
+$update_interval = 2
+$info = [win] + locust + [cputemp, cpughz, ram, date, blank]
 update

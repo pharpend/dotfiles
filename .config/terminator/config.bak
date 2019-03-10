@@ -1,0 +1,42 @@
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[keybindings]
+# #-----------------------------
+# # light theme
+# #-----------------------------
+# [global_config]
+#   title_transmit_fg_color = "#373b41"
+#   title_transmit_bg_color = "#1d1f21"
+#   title_inactive_fg_color = "#373b41"
+#   title_inactive_bg_color = "#969896"
+# 
+# [profiles]
+#   [[default]]
+#     palette = "#1d1f21:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#c5c8c6:#969896:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#ffffff"
+#     foreground_color = "#373b41"
+#     background_color = "#ffffff"
+#     cursor_color = "#373b41"
+#-----------------------------
+# dark theme
+#-----------------------------
+ [global_config]
+   title_inactive_bg_color = "#737475"
+   title_inactive_fg_color = "#b7b8b9"
+   title_transmit_bg_color = "#0c0d0e"
+   title_transmit_fg_color = "#b7b8b9"
+ [profiles]
+   [[default]]
+     background_color = "#0c0d0e"
+     cursor_color = "#b7b8b9"
+     palette = "#0c0d0e:#e31a1c:#31a354:#dca060:#3182bd:#756bb1:#80b1d3:#b7b8b9:#737475:#e31a1c:#31a354:#dca060:#3182bd:#756bb1:#80b1d3:#fcfdfe"
+     foreground_color = "#b7b8b9"
+    font = Fantasque Sans Mono 13
+    use_system_font = False

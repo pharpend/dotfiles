@@ -122,6 +122,11 @@ bigscreen () {
     xrandr --output VGA-1 --off
     xrandr --output DVI-D-0 --off
 }
+smallscreen () {
+    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output VGA-1 --off
+    xrandr --output DVI-D-0 --off
+}
 
 hhbs () {
     xrandr --output DVI-D-1 --rotate normal
@@ -132,6 +137,12 @@ vhbs () {
     xrandr --output DVI-D-1 --rotate normal
     xrandr --output DVI-D-0 --rotate left --left-of DVI-D-1
     xrandr --output VGA-1 --off
+}
+
+fixscreen () {
+    xrandr --output DVI-D-2 --auto --rotate normal
+    xrandr --output DVI-D-1 --auto --rotate normal --left-of DVI-D-2
+    nitrogen --restore
 }
 
 scr () {
@@ -152,6 +163,10 @@ scrgur () {
 
 dcmsg () {
     echo "dotfiles-$(hostname) commit for $(date)"
+}
+
+ttake () {
+    date >> takes.txt
 }
 
 dot-commit() {
@@ -188,15 +203,18 @@ colemak () {
     setxkbmap us -variant colemak -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 }
 qwerty () {
-    setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
+    setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps
 }
 qwerty-mac () {
-    setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
+    setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps,altwin:swap_alt_win
 }
 
 qwerty-prime () {
-    setxkbmap us,ru,ar -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,grp:rctrl_toggle
+    setxkbmap us,ru,ar -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps,grp:rctrl_toggle
 }
+
+alias qqq='qwerty'
+alias QQQ='qwerty'
 
 psc () {
     ps ax | grep $@
@@ -371,4 +389,4 @@ RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 REPORTTIME=3
 
 # OPAM configuration
-. /home/pete/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. /home/pharpend/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
