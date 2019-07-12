@@ -148,6 +148,8 @@ bat0 = { full_text: battery_pcts[0],
          color: $white }
 bat1 = { full_text: battery_pcts[1],
          color: $white }
+bat2 = { full_text: battery_pcts[2],
+         color: $white }
 ram = { full_text: "RAM: #{"%.1f" % ram_usage} GB",
         color: $white }
 cputemp = { full_text: "\u2623: #{cpu_temperature} C",

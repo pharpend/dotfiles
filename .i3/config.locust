@@ -188,17 +188,18 @@ bindsym $mod+F12             exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+F7 exec mpc prev
 bindsym $mod+F8 exec mpc toggle
 bindsym $mod+F9 exec mpc next
-bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 1
-bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 1
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym $mod+F5 exec $HOME/bin/kb-light.py -
-bindsym $mod+F6 exec $HOME/bin/kb-light.py +
+# bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 1
+# bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 1
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+# bindsym XF86MonBrightnessUp   exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec $HOME/bin/kb-light.py -
+bindsym XF86MonBrightnessUp   exec $HOME/bin/kb-light.py +
 
 # Autostarted applications
 # exec deluge
 exec blueman-applet
 exec dropbox start -i
+exec guake
 exec synapse
 exec nm-applet
 exec parcellite
@@ -211,7 +212,10 @@ exec emacs --daemon
 exec mpd
 exec nitrogen --restore
 exec redshift -l 41:112
+# Disables moving the cursor using touchpad
 exec synclient TouchpadOff=1
+# Disables tapping the touchpad for click
+exec xinput --disable 11
 exec xscreensaver
 
 # # Solarized

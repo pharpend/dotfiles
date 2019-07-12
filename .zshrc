@@ -56,6 +56,11 @@ alias sa='sudo aptitude'
 alias enw='emacs -nw'
 alias prys='pry --simple-prompt'
 
+genid () {
+    date | sha1sum | sed -e 's/^\([0-9a-z]\{7\}\).\+/\1/'
+}
+
+
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
 alias kopev='sysd stop openvpn@openvpn'
@@ -308,6 +313,11 @@ fixwacom () {
     xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen stylus" MapToOutput "DVI-D-1"
     xsetwacom --set "Wacom Bamboo 16FG 6x8 Pen eraser" MapToOutput "DVI-D-1"
     xsetwacom --set "Wacom Bamboo 16FG 6x8 Pad pad"    MapToOutput "DVI-D-1"
+}
+
+bullshit-commit () {
+    git add .
+    git commit -m "$(date)"
 }
 
 gitcc () {
