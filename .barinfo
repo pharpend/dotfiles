@@ -65,7 +65,10 @@ def ping_color(ps)
 end
 
 def battery_pcts
-  `acpi -b`.split("\n")
+  `acpi -b`.split("\n").map! do |ln|
+    x = ln.split(" ")
+    "Bat#{x[1]} #{x[3]}"
+  end
 end
 
 def battery_color(pct)
@@ -156,7 +159,7 @@ cputemp = { full_text: "\u2623: #{cpu_temperature} C",
             color: cpu_color }
 cpughz = { full_text: "CPU: #{"%.1f" % cpu_ghz} GHz",
            color: $white }
-date = {  full_text: Time.now.strftime("%A, %B %-d, %Y, %-I:%M:%S %p %Z (UTC%z)"),
+date = {  full_text: Time.now.strftime("%a %-d %b %Y, %-I:%M:%S %p %Z"),
           color: $white }
 blank = { full_text: "",
           color: $white }
