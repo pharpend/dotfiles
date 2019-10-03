@@ -148,11 +148,11 @@ cputemp = { full_text: spcs("\u2623: #{cpu_temperature} C"),
             color: $white }
 cpughz = { full_text: spcs("CPU: #{"%.1f" % cpu_ghz} GHz"),
            color: $white }
-date = {  full_text: spcs(Time.now.strftime("%a %b %-d %Y, %I:%M:%S %p %Z (UTC%z)")),
+date = {  full_text: spcs(Time.now.strftime("%A %B %-d, %Y, %I:%M:%S %p %Z")),
           color: $white }
 blank = { full_text: spcs(""),
           color: $white }
 
-$update_interval = 0.05
-$info = [win] + locust + [cputemp, cpughz, ram, date, blank]
+$update_interval = 0.1
+$info = [win] + locust + [date]
 update

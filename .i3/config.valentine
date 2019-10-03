@@ -22,7 +22,7 @@ set $alt Mod1
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 10
 # font pango: Monospace 10
-font pango: Ubuntu Mono 12
+font pango: Input Mono Condensed 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -98,6 +98,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -147,15 +148,22 @@ mode "resize" {
 }
 
 # mac keyboard
-#exec setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
-exec setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps
-bindsym $mod+x exec setxkbmap us -option 'terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps'
+# exec setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
+# Normal
+exec setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
+# Bluetooth
+#exec setxkbmap us -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps
+#bindsym $mod+x exec setxkbmap us -option 'terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps'
 # Unicomp keyboard trackpoint thing
 #exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation' 1
 #exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'Evdev Wheel Emulation Button' 3
 exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Scroll Method Enabled' 0 0 1
 exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Middle Emulation Enabled' 1
 exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Button Scrolling Button' 3
+
+# Fix too rapid key repeating on new keyboard (July 2019)
+# xset r rate (delay in ms) (optional rate in Hz)
+exec xset r rate 1000 30
 
 
 # Monitor configurations
@@ -178,7 +186,12 @@ exec xinput --set-prop 'pointer:Unicomp  Endura Pro Keyboard ' 'libinput Button 
 # # The big screen, with a small vertical screen to the right.
 # exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --right-of DVI-D-1)
 # The big screen, with a small vertical screen to the left.
-exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --auto --rotate left --left-of DVI-D-2)
+# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --auto --rotate left --left-of DVI-D-2)
+# The big screen vertical
+exec (xrandr --output DVI-D-2 --auto --rotate left)
+
+# ALTER $PATH
+exec (export PATH=$HOME/.cabal/bin:$PATH)
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
 # # finds out, if available)
@@ -205,9 +218,9 @@ exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 
 # }
 bar {
     output DVI-D-2
-    position bottom
-    status_command cat
-    tray_output DVI-D-1
+    position top
+    status_command $HOME/bin/barinfo
+    tray_output DVI-D-2
     mode dock
 
     colors {
@@ -226,9 +239,9 @@ bar {
 }
 bar {
     output DVI-D-1
-    position bottom
-    status_command $HOME/bin/barinfo
-    tray_output DVI-D-1
+    position top
+    status_command $HOME/bin/barinfo2
+    tray_output DVI-D-2
     mode dock
 
     # These are the colors for the window borders, so I'm going to apply them here
@@ -255,18 +268,18 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+c exec google-chrome-stable
-bindsym $mod+Shift+c exec firefox
-bindsym Control+$mod+c exec chromium
+bindsym $mod+Shift+c exec chromium
+bindsym $mod+c exec firefox
+bindsym Control+$mod+c exec google-chrome-stable
 bindsym Control+$mod+p exec system-config-printer
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
-bindsym Control+$mod+u exec google-chrome-stable hulu.com
 bindsym Control+$mod+i exec google-chrome-stable --incognito
 bindsym $mod+e exec thunar
 bindsym $mod+m exec emacs
 bindsym $mod+s exec thunderbird
 bindsym $mod+r exec pavucontrol
+bindsym $mod+v exec pavucontrol
 bindsym $mod+b exec blueman-manager
 bindsym $mod+equal exec guake
 
@@ -326,12 +339,12 @@ exec parcellite
 exec synapse -s
 
 # Non-panel things
-exec compton
+# exec compton
 exec dunst
-exec emacs --daemon
+# exec emacs --daemon
 exec mpd
 exec nitrogen --restore
-exec offlineimap
+# exec offlineimap
 exec redshift -l 41:112
 
 # # Solarized
@@ -361,7 +374,7 @@ client.urgent           #e00000         #e00000     #f0f0f0     #90a0a0
 
 focus_follows_mouse no
 
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 15
 new_window 1pixel
 # border toggle
 # gaps inner 30

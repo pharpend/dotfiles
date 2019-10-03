@@ -118,9 +118,9 @@ vvvscreen () {
 }
 
 bigscreen () {
-    xrandr --output DVI-D-1 --rotate normal
+    xrandr --output DVI-D-2 --rotate normal
     xrandr --output VGA-1 --off
-    xrandr --output DVI-D-0 --off
+    xrandr --output DVI-D-1 --off
 }
 smallscreen () {
     xrandr --output DVI-D-1 --rotate normal
@@ -211,6 +211,10 @@ qwerty-mac () {
 
 qwerty-prime () {
     setxkbmap us,ru,ar -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:swapcaps,grp:rctrl_toggle
+}
+
+kill-chromium () {
+    killall /usr/lib/chromium-browser/chromium-browser
 }
 
 alias qqq='qwerty'
@@ -376,6 +380,10 @@ viewavis () {
     echo $AVIS $MKVS $MFVS $MPFS $WEBMS | xargs vlc
 }
 
+bscommit () {
+  git add . && git commit -m "$(date)"
+}
+
 # Syntax highlighting
 source ~/.zshlex/zsh-syntax-highlighting.zsh
 
@@ -387,6 +395,9 @@ PROMPT='%B[%b%F{cyan}%2~%f%F{red}$(ggit-branch)%f%B]%b %F{green}%#%f '
 RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 # RPROMPT='%n@%M'
 REPORTTIME=3
+EDITOR=vim
+# export PATH=$HOME/.cabal/bin:$PATH
+. ~/.profile
 
 # OPAM configuration
 . /home/pharpend/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
