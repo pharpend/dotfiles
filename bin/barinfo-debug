@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+# -*- mode: Ruby -*-
+
+require 'json'
+
+def update
+   STDOUT.write "#{JSON::pretty_generate($info)},"
+end
+
+$info = []
+$update_interval = 5
+CFG_PATH="~/.barinfo"
+
+STDOUT.write "{\"version\":1}\n"
+STDOUT.write "[[],"
+
+begin
+  load File.expand_path(CFG_PATH)
+rescue Exception => e
+  error_msg = { full_text: "THERE IS AN ERROR IN #{CFG_PATH}. FIX IT!",
+                color: "#ff"}
+  STDOUT.write "[#{JSON.pretty_generate error_msg}],"
+  berrs = "\n" + Time.now.to_s + "\n" + e.backtrace.join("\n")
+  STDERR.write(berrs)
+  $update_interval=1
+end

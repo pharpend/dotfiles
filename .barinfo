@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # -*- mode: Ruby; coding: utf-8 -*-
 
 def active_window_name
@@ -37,9 +38,9 @@ def cpu_color
   end
 end
 
-# def governor
-#   `cpupower frequency-info | grep "The governor"`.split('"')[1].capitalize
-# end
+def governor
+  `cpufreq-info | grep "The governor"`.split('"')[1].capitalize
+end
 
 def ping_speed
   begin
@@ -72,7 +73,7 @@ def battery_pcts
 end
 
 def battery_color(pct)
-  case pct[1].to_i
+  case 100 - pct[1].to_i
     when 90..100
       "#50f040"
     when 80..89
@@ -92,7 +93,7 @@ def battery_color(pct)
     when 10..19
       "#d02040"
     when 0..9
-      "#f00020"
+      "#ff60ee"
   end
 end
 
@@ -100,16 +101,16 @@ $update_interval = 0.05
 $white = "#eeeeee"
 
 def locust
-  if `hostname`.strip == "locust"
+  if `hostname`.strip == "picklet"
     [
      {
-       full_text: "#{battery_pct[0]}: #{battery_pct[1]}%",
-       color: battery_color(battery_pct)
-     } #,
-     #{
-     #  full_text: "G: #{governor}",
-     #  color: $white
-     #}
+       full_text: "#{battery_pcts[0]}, #{battery_pcts[1].gsub(',', '')}",
+       color: battery_color(battery_pcts)
+     } ,
+     {
+      full_text: "G: #{governor}",
+      color: $white
+     }
     ]
   else
     []
@@ -164,5 +165,18 @@ date = {  full_text: Time.now.strftime("%a %-d %b %Y, %-I:%M:%S %p %Z"),
 blank = { full_text: "",
           color: $white }
 
-$info = [win] + locust + [bat0, bat1, cputemp, cpughz, ram, date, blank]
+$info = [win] +
+        # [
+        #   bat0,
+        #   bat1,
+        # ] +
+        locust +
+        [
+          cputemp,
+          cpughz,
+          ram,
+          date,
+          blank
+        ]
+
 update

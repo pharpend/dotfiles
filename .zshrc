@@ -25,7 +25,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias dud='du --max-depth=1 -B 1024M'
 alias cpuinfo='cat /proc/cpuinfo | grep MHz'
-alias cpuset='sudo cpupower frequency-set'
+alias cpuset='sudo cpufreq-set'
 alias zi='zile'
 alias irb='irb --simple-prompt'
 alias pd='pandoc'
@@ -319,6 +319,7 @@ bullshit-commit () {
     git add .
     git commit -m "$(date)"
 }
+alias bscommit=bullshit-commit
 
 gitcc () {
     git rev-list HEAD --count

@@ -17,6 +17,7 @@ STDOUT.write "[[],"
 while true
   begin
     load File.expand_path(CFG_PATH)
+    update
   rescue Exception => e
     error_msg = { full_text: "THERE IS AN ERROR IN #{CFG_PATH}. FIX IT!",
                   color: "#ff"}

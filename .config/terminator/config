@@ -1,9 +1,10 @@
 [global_config]
-  title_inactive_bg_color = "#373b41"
-  title_inactive_fg_color = "#c5c8c6"
-  title_transmit_bg_color = "#282a2e"
-  title_transmit_fg_color = "#c5c8c6"
+  title_inactive_bg_color = "#5a7b8c"
+  title_inactive_fg_color = "#7ea2b4"
+  title_transmit_bg_color = "#161b1d"
+  title_transmit_fg_color = "#7ea2b4"
 [keybindings]
+  layout_launcher = None
 [layouts]
   [[default]]
     [[[child1]]]
@@ -16,9 +17,9 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#ffffdd"
-    cursor_color = "#c5c8c6"
-    font = Ubuntu Mono 12
-    foreground_color = "#000000"
-    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    background_color = "#161b1d"
+    cursor_color = "#7ea2b4"
+    font = Fantasque Sans Mono 12
+    foreground_color = "#7ea2b4"
+    palette = "#161b1d:#d22d72:#568c3b:#8a8a0f:#257fad:#5d5db1:#2d8f6f:#7ea2b4:#5a7b8c:#d22d72:#568c3b:#8a8a0f:#257fad:#5d5db1:#2d8f6f:#ebf8ff"
     use_system_font = False
