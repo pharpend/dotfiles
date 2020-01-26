@@ -22,7 +22,7 @@ set $alt Mod1
 # font pango:DejaVu Sans Mono 10
 # font pango: Monospace 10
 # font pango: Monospace 10
-font pango: Input Mono Condensed 12
+font pango: Ubuntu Mono 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -188,7 +188,11 @@ exec xset r rate 1000 30
 # The big screen, with a small vertical screen to the left.
 # exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --auto --rotate left --left-of DVI-D-2)
 # The big screen vertical
-exec (xrandr --output DVI-D-2 --auto --rotate left)
+# exec (xrandr --output DVI-D-2 --auto --rotate left)
+
+# BIG DVI-D-1 small dvi-d-2
+# The big screen, with a small horizontal screen to the right.
+exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
 
 # ALTER $PATH
 exec (export PATH=$HOME/.cabal/bin:$PATH)
@@ -217,7 +221,7 @@ exec (export PATH=$HOME/.cabal/bin:$PATH)
 #     }
 # }
 bar {
-    output DVI-D-2
+    output DVI-D-1
     position top
     status_command $HOME/bin/barinfo
     tray_output DVI-D-2
@@ -238,7 +242,7 @@ bar {
     }
 }
 bar {
-    output DVI-D-1
+    output DVI-D-2
     position top
     status_command $HOME/bin/barinfo2
     tray_output DVI-D-2
@@ -268,9 +272,9 @@ bar {
 }
 
 # Application keybindings
-bindsym $mod+Shift+c exec chromium
-bindsym $mod+c exec firefox
+bindsym $mod+c exec brave-browser
 bindsym Control+$mod+c exec google-chrome-stable
+bindsym Control+$mod+f exec firefox
 bindsym Control+$mod+p exec system-config-printer
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
@@ -346,6 +350,8 @@ exec mpd
 exec nitrogen --restore
 # exec offlineimap
 exec redshift -l 41:112
+# Connect to logi mx sound speakers (mac address)
+exec bt-device -c 'C0:28:8D:3F:CD:86'
 
 # # Solarized
 ##client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
@@ -362,19 +368,28 @@ exec redshift -l 41:112
 #client.unfocused        #222222         #222222     #555555     #93a1a1
 #client.urgent           #ee0000         #ee0000     #ffffff     #93a1a1
 
-# Blue
+## Blue
+##                       BorderFrame     Border      Title       NextWindowGoesHere
+##---------------------------------------------------------------------------------
+#client.focused          #20e0f0         #20e0f0     #505050     #60e020
+#client.focused_inactive #105060         #105060     #c0c0c0     #90a0a0
+#client.unfocused        #202020         #202020     #505050     #90a0a0
+#client.urgent           #e00000         #e00000     #f0f0f0     #90a0a0
+
+# Orange
 #                       BorderFrame     Border      Title       NextWindowGoesHere
 #---------------------------------------------------------------------------------
-client.focused          #20e0f0         #20e0f0     #505050     #60e020
-client.focused_inactive #105060         #105060     #c0c0c0     #90a0a0
-client.unfocused        #202020         #202020     #505050     #90a0a0
-client.urgent           #e00000         #e00000     #f0f0f0     #90a0a0
+client.focused          #000000         #ff8844     #222222     #8080c0
+client.focused_inactive #000000         #5f4894     #c0c0c0     #90a0a0
+client.unfocused        #000000         #202020     #505050     #90a0a0
+client.urgent           #000000         #e00000     #f0f0f0     #90a0a0
+
 #gaps inner 10
 #gaps outer 10
 
 focus_follows_mouse no
 
-for_window [class="^.*"] border pixel 15
+for_window [class="^.*"] border pixel 10
 new_window 1pixel
 # border toggle
 # gaps inner 30
