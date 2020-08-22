@@ -192,10 +192,18 @@ exec xset r rate 1000 30
 
 # BIG DVI-D-1 small dvi-d-2
 # The big screen, with a small horizontal screen to the right.
-exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
+# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
+# BIG DVI-D-2 small dvi-d-1
+# The big screen, with a small horizontal screen to the left.
+# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --rotate left --auto --left-of DVI-D-2)
+# V V
+# exec (xrandr --output DVI-D-2 --auto --rotate left --pos 0x0 && xrandr --output DVI-D-1 --left --right-of DVI-D-2 --pos 2160x1920)
+# Just the small monitor (DVI-D-2)
+exec (xrandr --output DVI-D-2 --auto --rotate normal)
 
 # ALTER $PATH
 exec (export PATH=$HOME/.cabal/bin:$PATH)
+exec (export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH)
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
 # # finds out, if available)
@@ -221,55 +229,55 @@ exec (export PATH=$HOME/.cabal/bin:$PATH)
 #     }
 # }
 bar {
-    output DVI-D-1
+    output DVI-D-2
     position top
     status_command $HOME/bin/barinfo
     tray_output DVI-D-2
     mode dock
 
     colors {
-        background #222222
-        focused_workspace  #222222 #222222 #eeeeee
-        active_workspace   #222222 #222222 #cccccc
-        inactive_workspace #222222 #222222 #aaaaaa
-        urgent_workspace   #ee0000 #ee0000 #ffffff
-        # # Solarized
-        # background #073642
-        # focused_workspace  #073642 #073642 #eee8d5
-        # active_workspace   #073642 #073642 #2aa198
-        # inactive_workspace #073642 #073642 #268bd2
-        # urgent_workspace   #dc322f #dc322f #fdf6e3
+        # background #222222
+        # focused_workspace  #222222 #222222 #eeeeee
+        # active_workspace   #222222 #222222 #cccccc
+        # inactive_workspace #222222 #222222 #aaaaaa
+        # urgent_workspace   #ee0000 #ee0000 #ffffff
+        # Solarized
+        background #073642
+        focused_workspace  #073642 #073642 #eee8d5
+        active_workspace   #073642 #073642 #2aa198
+        inactive_workspace #073642 #073642 #268bd2
+        urgent_workspace   #dc322f #dc322f #fdf6e3
     }
 }
-bar {
-    output DVI-D-2
-    position top
-    status_command $HOME/bin/barinfo2
-    tray_output DVI-D-2
-    mode dock
-
-    # These are the colors for the window borders, so I'm going to apply them here
-    #                       BorderFrame     Border      Title       NextWindowGoesHere
-    #---------------------------------------------------------------------------------
-    # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
-    # client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
-    # client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
-    # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
-
-    colors {
-        background #222222
-        focused_workspace  #222222 #222222 #eeeeee
-        active_workspace   #222222 #222222 #cccccc
-        inactive_workspace #222222 #222222 #aaaaaa
-        urgent_workspace   #ee0000 #ee0000 #ffffff
-        # # Solarized
-        # background #073642
-        # focused_workspace  #073642 #073642 #eee8d5
-        # active_workspace   #073642 #073642 #2aa198
-        # inactive_workspace #073642 #073642 #268bd2
-        # urgent_workspace   #dc322f #dc322f #fdf6e3
-    }
-}
+# bar {
+#     output DVI-D-1
+#     position top
+#     status_command $HOME/bin/barinfo2
+#     tray_output DVI-D-2
+#     mode dock
+# 
+#     # These are the colors for the window borders, so I'm going to apply them here
+#     #                       BorderFrame     Border      Title       NextWindowGoesHere
+#     #---------------------------------------------------------------------------------
+#     # client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
+#     # client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
+#     # client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
+#     # client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
+# 
+#     colors {
+#         background #222222
+#         focused_workspace  #222222 #222222 #eeeeee
+#         active_workspace   #222222 #222222 #cccccc
+#         inactive_workspace #222222 #222222 #aaaaaa
+#         urgent_workspace   #ee0000 #ee0000 #ffffff
+#         # # Solarized
+#         # background #073642
+#         # focused_workspace  #073642 #073642 #eee8d5
+#         # active_workspace   #073642 #073642 #2aa198
+#         # inactive_workspace #073642 #073642 #268bd2
+#         # urgent_workspace   #dc322f #dc322f #fdf6e3
+#     }
+# }
 
 # Application keybindings
 bindsym $mod+c exec brave-browser
@@ -280,10 +288,8 @@ bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
 bindsym Control+$mod+i exec google-chrome-stable --incognito
 bindsym $mod+e exec thunar
-bindsym $mod+m exec emacs
-bindsym $mod+s exec thunderbird
+# bindsym $mod+m exec emacs26
 bindsym $mod+r exec pavucontrol
-bindsym $mod+v exec pavucontrol
 bindsym $mod+b exec blueman-manager
 bindsym $mod+equal exec guake
 
@@ -345,7 +351,7 @@ exec synapse -s
 # Non-panel things
 # exec compton
 exec dunst
-# exec emacs --daemon
+exec emacs --daemon
 exec mpd
 exec nitrogen --restore
 # exec offlineimap
@@ -353,20 +359,20 @@ exec redshift -l 41:112
 # Connect to logi mx sound speakers (mac address)
 exec bt-device -c 'C0:28:8D:3F:CD:86'
 
-# # Solarized
-##client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
-#client.focused          #f336a2         #f336a2     #fdf6e3     #93a1a1
-#client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
-#client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
-#client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
+# Solarized
+#client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
+client.focused          #f336a2         #f336a2     #fdf6e3     #93a1a1
+client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
+client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
+client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 #
-# Grayscale
-#                       BorderFrame     Border      Title       NextWindowGoesHere
-#---------------------------------------------------------------------------------
-#client.focused          #ffffff         #ffffff     #555555     #93a1a1
-#client.focused_inactive #666666         #666666     #cccccc     #93a1a1
-#client.unfocused        #222222         #222222     #555555     #93a1a1
-#client.urgent           #ee0000         #ee0000     #ffffff     #93a1a1
+# # Grayscale
+# #                       BorderFrame     Border      Title       NextWindowGoesHere
+# #---------------------------------------------------------------------------------
+# client.focused          #000000         #ffffff     #555555     #93a1a1
+# client.focused_inactive #666666         #666666     #cccccc     #93a1a1
+# client.unfocused        #222222         #222222     #555555     #93a1a1
+# client.urgent           #ee0000         #ee0000     #ffffff     #93a1a1
 
 ## Blue
 ##                       BorderFrame     Border      Title       NextWindowGoesHere
@@ -376,13 +382,13 @@ exec bt-device -c 'C0:28:8D:3F:CD:86'
 #client.unfocused        #202020         #202020     #505050     #90a0a0
 #client.urgent           #e00000         #e00000     #f0f0f0     #90a0a0
 
-# Orange
-#                       BorderFrame     Border      Title       NextWindowGoesHere
-#---------------------------------------------------------------------------------
-client.focused          #000000         #ff8844     #222222     #8080c0
-client.focused_inactive #000000         #5f4894     #c0c0c0     #90a0a0
-client.unfocused        #000000         #202020     #505050     #90a0a0
-client.urgent           #000000         #e00000     #f0f0f0     #90a0a0
+## Orange
+##                       BorderFrame     Border      Title       NextWindowGoesHere
+##---------------------------------------------------------------------------------
+#client.focused          #000000         #ff8844     #222222     #8080c0
+#client.focused_inactive #000000         #5f4894     #c0c0c0     #90a0a0
+#client.unfocused        #000000         #202020     #505050     #90a0a0
+#client.urgent           #000000         #e00000     #f0f0f0     #90a0a0
 
 #gaps inner 10
 #gaps outer 10

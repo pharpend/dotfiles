@@ -55,6 +55,8 @@ alias a='aptitude'
 alias sa='sudo aptitude'
 alias enw='emacs -nw'
 alias prys='pry --simple-prompt'
+alias pwdxcl='pwd | xcl'
+alias cdxcl='cd $(xcl -o)'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
@@ -372,17 +374,23 @@ avifiles () {
 }
 
 viewavis () {
-    AVIS=$(find . -name '*.avi' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | tr '\n' ' ')
-    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | xargs vlc
+    AVIS=$(find . -name '*.avi' | sed -e 's/.\+/"&"/g'   | shuf | tr '\n' ' ')
+    MKVS=$(find . -name '*.mkv' | sed -e 's/.\+/"&"/g'   | shuf | tr '\n' ' ')
+    MFVS=$(find . -name '*.m4v' | sed -e 's/.\+/"&"/g'   | shuf | tr '\n' ' ')
+    MPFS=$(find . -name '*.mp4' | sed -e 's/.\+/"&"/g'   | shuf | tr '\n' ' ')
+    WEBMS=$(find . -name '*.webm' | sed -e 's/.\+/"&"/g' | shuf | tr '\n' ' ')
+    echo $AVIS $MKVS $MFVS $MPFS $WEBMS | xargs mpv
 }
 
 bscommit () {
   git add . && git commit -m "$(date)"
 }
+
+my3lock() {
+  i3lock -i ~/Pictures/wallpaper/2019-08-26-101324_3840x2160_scrot.png
+}
+
+
 
 # Syntax highlighting
 source ~/.zshlex/zsh-syntax-highlighting.zsh
@@ -401,3 +409,4 @@ EDITOR=vim
 
 # OPAM configuration
 . /home/pharpend/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. ~/.erts/23.0.3/activate
