@@ -198,41 +198,43 @@ exec xset r rate 1000 30
 # exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --rotate left --auto --left-of DVI-D-2)
 # V V
 # exec (xrandr --output DVI-D-2 --auto --rotate left --pos 0x0 && xrandr --output DVI-D-1 --left --right-of DVI-D-2 --pos 2160x1920)
-# Just the small monitor (DVI-D-2)
-exec (xrandr --output DVI-D-2 --auto --rotate normal)
+# # Just the small monitor (DVI-D-2)
+# exec (xrandr --output DVI-D-2 --auto --rotate normal)
+# Just the big monitor (DVI-D-1)
+exec (xrandr --output DVI-D-1 --auto --rotate left)
 
 # ALTER $PATH
 exec (export PATH=$HOME/.cabal/bin:$PATH)
 exec (export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH)
 
-# # Start i3bar to display a workspace bar (plus the system information i3status
-# # finds out, if available)
-# bar {
-#     output VGA-1
-#     position top
-#     status_command cat
-#     tray_output DVI-D-1
-#     mode dock
-# 
-#     colors {
-#         background #222222
-#         focused_workspace  #222222 #222222 #eeeeee
-#         active_workspace   #222222 #222222 #cccccc
-#         inactive_workspace #222222 #222222 #aaaaaa
-#         urgent_workspace   #ee0000 #ee0000 #ffffff
-#         # # Solarized
-#         # background #073642
-#         # focused_workspace  #073642 #073642 #eee8d5
-#         # active_workspace   #073642 #073642 #2aa198
-#         # inactive_workspace #073642 #073642 #268bd2
-#         # urgent_workspace   #dc322f #dc322f #fdf6e3
-#     }
-# }
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
 bar {
     output DVI-D-2
-    position top
+    position bottom
+    status_command cat
+    tray_output DVI-D-1
+    mode dock
+
+    colors {
+        # background #222222
+        # focused_workspace  #222222 #222222 #eeeeee
+        # active_workspace   #222222 #222222 #cccccc
+        # inactive_workspace #222222 #222222 #aaaaaa
+        # urgent_workspace   #ee0000 #ee0000 #ffffff
+        # Solarized
+        background #073642
+        focused_workspace  #073642 #073642 #eee8d5
+        active_workspace   #073642 #073642 #2aa198
+        inactive_workspace #073642 #073642 #268bd2
+        urgent_workspace   #dc322f #dc322f #fdf6e3
+    }
+}
+bar {
+    output DVI-D-1
+    tray_output DVI-D-1
+    position bottom
     status_command $HOME/bin/barinfo
-    tray_output DVI-D-2
     mode dock
 
     colors {
@@ -287,8 +289,8 @@ bindsym Control+$mod+p exec system-config-printer
 bindsym Control+$mod+n exec google-chrome-stable netflix.com
 bindsym Control+$mod+a exec google-chrome-stable https://www.amazon.com/Prime-Video/b?node=2676882011
 bindsym Control+$mod+i exec google-chrome-stable --incognito
-bindsym $mod+e exec thunar
-# bindsym $mod+m exec emacs26
+bindsym $mod+e exec nemo
+bindsym $mod+m exec emacs26
 bindsym $mod+r exec pavucontrol
 bindsym $mod+b exec blueman-manager
 bindsym $mod+equal exec guake
@@ -353,7 +355,7 @@ exec synapse -s
 exec dunst
 exec emacs --daemon
 exec mpd
-exec nitrogen --restore
+# exec nitrogen --restore
 # exec offlineimap
 exec redshift -l 41:112
 # Connect to logi mx sound speakers (mac address)
@@ -395,7 +397,7 @@ client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 
 focus_follows_mouse no
 
-for_window [class="^.*"] border pixel 10
+for_window [class="^.*"] border pixel 3
 new_window 1pixel
 # border toggle
 # gaps inner 30

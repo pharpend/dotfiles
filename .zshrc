@@ -400,7 +400,7 @@ setopt auto_pushd
 CONFIG="~/.config"
 PROMPT='%B[%b%F{cyan}%2~%f%F{red}$(ggit-branch)%f%B]%b %F{green}%#%f '
 # PROMPT='[%2~$(ggit-branch)] %# '
-RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
+# RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 # RPROMPT='%n@%M'
 REPORTTIME=3
 EDITOR=vim
