@@ -1,0 +1,34 @@
+#!/usr/bin/gawk -f
+# -*- mode: awk -*-
+
+
+BEGIN {
+    FS=","
+}
+
+NR==1 {
+    split($0, colnames)
+}
+
+# col not defined, print column names
+!col && (NR==1) {
+    for (idx in colnames)
+        print(colnames[idx])
+}
+
+# col defined, figure out which column corresponds to correct column
+col && (NR==1) {
+    # printf("col is %s\n", col)
+    correct_idx = 0
+    for (idx in colnames)
+    {
+        this_colname = colnames[idx]
+        if (this_colname == col)
+            correct_idx = idx
+    }
+}
+
+col && (NR>1) {
+    split($0, cols)
+    print cols[correct_idx]
+}

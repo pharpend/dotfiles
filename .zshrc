@@ -29,7 +29,10 @@ alias cpuset='sudo cpufreq-set'
 alias zi='zile'
 alias irb='irb --simple-prompt'
 alias pd='pandoc'
-alias ipy='ipython3'
+# Because I manually installed python3.8 and pip3.8 install ipython
+alias ipy='ipython'
+alias ipython3.8='ipython'
+alias ipy3.8='ipython3.8'
 alias fehb='feh --bg-fill'
 alias sbcl='rlwrap sbcl'
 alias ec='emacsclient'
@@ -57,6 +60,7 @@ alias enw='emacs -nw'
 alias prys='pry --simple-prompt'
 alias pwdxcl='pwd | xcl'
 alias cdxcl='cd $(xcl -o)'
+# alias dk3='dkselect3'
 
 # Openvpn fails a lot, so here
 alias ropev='sysd restart openvpn@openvpn'
@@ -82,6 +86,8 @@ alias pmsyu='sudo pacman -Syu'
 alias pmss='pacman -Ss'
 alias pmsi='pacman -Si'
 alias pmrm='sudo pacman -Rsn'
+
+alias ipinfo='nmcli dev show enp40s0| grep IP4'
 
 # Other functions
 sprunge () {
@@ -400,7 +406,7 @@ setopt auto_pushd
 CONFIG="~/.config"
 PROMPT='%B[%b%F{cyan}%2~%f%F{red}$(ggit-branch)%f%B]%b %F{green}%#%f '
 # PROMPT='[%2~$(ggit-branch)] %# '
-# RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
+RPROMPT='%F{red}%n%f%B@%b%F{magenta}%M%f'
 # RPROMPT='%n@%M'
 REPORTTIME=3
 EDITOR=vim
@@ -410,3 +416,7 @@ EDITOR=vim
 # OPAM configuration
 . /home/pharpend/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 . ~/.erts/23.0.3/activate
+
+PATH=$HOME/src/coastline/dkselect/bin:$PATH
+PATH=$HOME/src/coastline/dkselect3/bin:$PATH
+PATH=$HOME/src/coastline/retrospec20/bin:$PATH

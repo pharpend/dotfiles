@@ -30,7 +30,8 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec urxvt
 # bindsym $mod+Return exec mrxvt
-bindsym $mod+Return exec terminator
+# bindsym $mod+Return exec terminator
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+n kill
@@ -167,41 +168,7 @@ exec xset r rate 1000 30
 
 
 # Monitor configurations
-# V H
-# exec (xrandr --output DVI-D-0 --auto --rotate left && xrandr --output DVI-D-1 --auto --rotate right --right-of DVI-D-0)
-# H V
-# exec (xrandr --output DVI-D-0 --auto --rotate normal && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
-# V V
-# exec (xrandr --output DVI-D-0 --auto --rotate left && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
-# H H
-# exec (xrandr --output DVI-D-0 --auto && xrandr --output DVI-D-1 --auto --right-of DVI-D-0)
-# V H V
-# exec (xrandr --output DVI-D-0 --auto --rotate normal && xrandr --output VGA-1 --auto --rotate left --left-of DVI-D-0 && xrandr --output DVI-D-1 --auto --rotate left --right-of DVI-D-0)
-# Just the big screen
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --off)
-# The big screen, with a small vertical screen to the left.
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --left-of DVI-D-1)
-# The big screen, with a small horizontal screen to the left.
-# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --auto --left-of DVI-D-2)
-# # The big screen, with a small vertical screen to the right.
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output VGA-1 --off && xrandr --output DVI-D-0 --auto --rotate left --right-of DVI-D-1)
-# The big screen, with a small vertical screen to the left.
-# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --auto --rotate left --left-of DVI-D-2)
-# The big screen vertical
-# exec (xrandr --output DVI-D-2 --auto --rotate left)
-
-# BIG DVI-D-1 small dvi-d-2
-# The big screen, with a small horizontal screen to the right.
-# exec (xrandr --output DVI-D-1 --auto --rotate normal && xrandr --output DVI-D-2 --auto --right-of DVI-D-1)
-# BIG DVI-D-2 small dvi-d-1
-# The big screen, with a small horizontal screen to the left.
-# exec (xrandr --output DVI-D-2 --auto --rotate normal && xrandr --output DVI-D-1 --rotate left --auto --left-of DVI-D-2)
-# V V
-# exec (xrandr --output DVI-D-2 --auto --rotate left --pos 0x0 && xrandr --output DVI-D-1 --left --right-of DVI-D-2 --pos 2160x1920)
-# # Just the small monitor (DVI-D-2)
-# exec (xrandr --output DVI-D-2 --auto --rotate normal)
-# Just the big monitor (DVI-D-1)
-exec (xrandr --output DVI-D-1 --auto --rotate left)
+exec (xrandr --output DVI-D-2 --auto --rotate left && xrandr --output HDMI-1 --auto --rotate left --right-of DVI-D-2)
 
 # ALTER $PATH
 exec (export PATH=$HOME/.cabal/bin:$PATH)
@@ -213,7 +180,6 @@ bar {
     output DVI-D-2
     position bottom
     status_command cat
-    tray_output DVI-D-1
     mode dock
 
     colors {
@@ -231,10 +197,10 @@ bar {
     }
 }
 bar {
-    output DVI-D-1
-    tray_output DVI-D-1
+    output HDMI-1
     position bottom
     status_command $HOME/bin/barinfo
+    tray_output HDMI-1
     mode dock
 
     colors {
@@ -361,13 +327,14 @@ exec redshift -l 41:112
 # Connect to logi mx sound speakers (mac address)
 exec bt-device -c 'C0:28:8D:3F:CD:86'
 
-# Solarized
-#client.focused          #268bd2         #268bd2     #fdf6e3     #93a1a1
-client.focused          #f336a2         #f336a2     #fdf6e3     #93a1a1
-client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
-client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
-client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
-#
+# # Solarized
+# #                       BorderFrame     Border      Title       NextWindowGoesHere
+# #---------------------------------------------------------------------------------
+# client.focused          #f336a2         #f336a2     #fdf6e3     #93a1a1
+# client.focused_inactive #002b36         #002b36     #d0d0d0     #93a1a1
+# client.unfocused        #002b36         #002b36     #d0d0d0     #93a1a1
+# client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
+
 # # Grayscale
 # #                       BorderFrame     Border      Title       NextWindowGoesHere
 # #---------------------------------------------------------------------------------
@@ -384,20 +351,21 @@ client.urgent           #dc322f         #dc322f     #fdf6e3     #cb4b16
 #client.unfocused        #202020         #202020     #505050     #90a0a0
 #client.urgent           #e00000         #e00000     #f0f0f0     #90a0a0
 
-## Orange
-##                       BorderFrame     Border      Title       NextWindowGoesHere
-##---------------------------------------------------------------------------------
-#client.focused          #000000         #ff8844     #222222     #8080c0
-#client.focused_inactive #000000         #5f4894     #c0c0c0     #90a0a0
-#client.unfocused        #000000         #202020     #505050     #90a0a0
-#client.urgent           #000000         #e00000     #f0f0f0     #90a0a0
+# Orange
+#                       BorderFrame     Border      Title       NextWindowGoesHere
+#---------------------------------------------------------------------------------
+client.focused          #000000         #ff8844     #222222     #8080c0
+client.focused_inactive #000000         #5f4894     #c0c0c0     #90a0a0
+client.unfocused        #000000         #202020     #505050     #90a0a0
+client.urgent           #000000         #e00000     #f0f0f0     #90a0a0
 
 #gaps inner 10
 #gaps outer 10
 
 focus_follows_mouse no
 
-for_window [class="^.*"] border pixel 3
+# normal to 'pixel' to get rid of headers
+for_window [class="^.*"] border normal 3
 new_window 1pixel
 # border toggle
 # gaps inner 30

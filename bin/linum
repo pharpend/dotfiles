@@ -1,0 +1,6 @@
+#!/usr/bin/gawk -f
+# -*- mode: awk -*-
+
+{
+    printf("%d %s\n", NR, $0)
+}
